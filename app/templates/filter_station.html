@@ -1,0 +1,28 @@
+<button type="button" class="collapsible_s" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by station</button>
+<div class="content_s" style="display: none">
+    <div class="col" id="checks_station"></div>
+</div>
+
+<script>
+    collapse_section("collapsible_s")
+
+    var select= document.getElementById("station");
+    var option = document.createElement("option");
+    for (i=0; i<stations_directions_list.length; i++) {
+        record = document.createElement("div")
+        record.className = 'row'
+        checks_area = document.getElementById('checks_station')
+        checks_area.appendChild(record)
+
+        label = document.createElement("div")
+        label.style.width = "150px"
+        label.innerHTML = stations_directions_list[i][1]
+        record.appendChild(label)
+
+        input = document.createElement("input")
+        input.type = "checkbox"
+        input.id = stations_directions_list[i][0]
+        input.onclick = "station_direction_changed()"
+        record.appendChild(input)
+        }
+</script>

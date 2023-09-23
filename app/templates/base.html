@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.5/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        {% block script %}{% endblock %}
+    </head>
+    <body onload="onLoad()" style="background-color:#CDCDCD;">
+        <div class="container-fluid mx-auto">
+            <div class="row header_band" id="header_band"><a href="#" style="color:white; text-decoration: none;" onclick="go_home()" class="mx-auto">The Pub Crawls</a></div>
+            <div class="row header_band" style="margin-top: 5px"><a class="mx-auto" style="color:white;">{% block sub_heading %}{% endblock %}</a></div>
+            <div class="row" style="margin: 0 0 0 0;">{% block controls %}{% endblock %}</div>
+            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block main %}{% endblock %}</div>
+            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block filters %}{% endblock %}</div>
+            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block left %}{% endblock %}</div>
+            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block right %}{% endblock %}</div>
+            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block centre %}{% endblock %}</div>
+            <div class="row top-buffer" style="margin: 0 0 0 0;">
+                <div class="col-md-6 mx-auto">
+                    {% block counter %}{% endblock %}
+                    {% include "buttons.html" %}
+                    {% include "footer.html" %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    document.getElementById("header_band").style = "font-size: 32px; font-weight: bold; font-family:Verdana; color: white; padding: 5px 0 0 0; text-align: center;"
+</script>

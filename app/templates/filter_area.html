@@ -1,0 +1,29 @@
+<button type="button" class="collapsible_a" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by area</button>
+<div class="content_a" id="content_a" style="display: none">
+    <div class="col" id="checks_area"></div>
+</div>
+
+<script>
+    collapse_section("collapsible_a")
+
+    var select= document.getElementById("direction");
+    var option = document.createElement("option");
+    for (i=0; i<directions_list.length; i++) {
+        record = document.createElement("div")
+        record.className = 'row'
+        checks_area = document.getElementById('checks_area')
+        checks_area.appendChild(record)
+
+        label = document.createElement("div")
+        label.style.width = "150px"
+        label.innerHTML = directions_list[i][1]
+        record.appendChild(label)
+
+        input = document.createElement("input")
+        input.type = "checkbox"
+        input.id = directions_list[i][0]
+        input.onclick = "home_direction_changed()"
+        record.appendChild(input)
+        }
+
+</script>

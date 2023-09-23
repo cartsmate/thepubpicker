@@ -1,0 +1,14 @@
+<button type="button" class="collapsible_week" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by day</button>
+<div class="content_week" style="display: none">
+    <input type="text" id="day" style="display: none" value="all">
+    <select class="form-control" id="pub_week" name="pub_week" onchange="check_week_home();" style="font-size:12px; background-color: #FFFFFF; width:200px;">
+        <option value="all">Day of week</option>
+        {% for day in diary_headers %}
+            <option value={{day}}>{{day}}</option>
+        {% endfor %}
+    </select>
+</div>
+
+<script>
+    collapse_section("collapsible_week")
+</script>

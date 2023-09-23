@@ -1,0 +1,32 @@
+<div class="row justify-content-center">
+    <a href="/pub/areas" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">Search pubs by area</a>
+</div>
+<div class="row justify-content-center">
+    <select class="form-control" id="direction" name="direction" onchange="home_direction_changed();" style="font-size:12px; background-color: #FFFFFF; width:140px;">
+        <option value="all">Area</option>
+        {% for direction in directions_list %}
+            <option value={{direction[0]}}>{{direction[1]}}</option>
+        {% endfor %}
+    </select>
+    <select class="form-control" id="station" name="station" onchange="home_station_changed();" style="font-size:12px; background-color: #FFFFFF; width:140px;">
+        <option value="all">Tube/Train Station</option>
+        {% for station in stations_directions_list %}
+            <option value={{station[0]}}>{{station[1]}}</option>
+        {% endfor %}
+    </select>
+    <div id="search_map">
+        <input id="search-input-navbar" type="search" placeholder="Search" aria-label="Search" style="line-height:30px; font-size:12px; background-color: #FFFFFF; width:200px;">
+     </div>
+    <a><img src="/static/icons/buttons/arrow.png" onClick="click_list()" class="button_size"></a>
+</div>
+
+<script>
+function removeOptions(selectElement) {
+    console.log('remove dropdown options')
+    var i, L = selectElement.options.length - 1;
+    for(i = L; i >= 0; i--) {
+        selectElement.remove(i);
+    }
+}
+
+</script>

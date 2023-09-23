@@ -1,0 +1,17 @@
+<button type="button" class="collapsible_feature" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by feature</button>
+<div class="content" id="home_features" style="display: none" >
+    <div class="col">
+    {% for k, field in review_obj.__dict__.items() %}
+        {% if field.name in total_list_obj['icon_list'] %}
+            <div class="row">
+                <div style="width:100px">{{field.name}}</div>
+                <input type="checkbox" id="{{field.name}}" name="{{field.name}}" onclick="feature_click('{{field.name}}')">
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+<script>
+    collapse_section("collapsible_feature")
+</script>

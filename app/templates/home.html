@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block script %}
+    {% include "scripts.html" %}
+    {% include "import_variables.html" %}
+    <input type="text" class="hide_x_boxes" id="form_type" value="home">
+<script>
+let markersArray = []
+
+function onLoad(){
+    var on_line = map_load('{{google_key}}')
+}
+
+function runner() {
+    page_layout('home')
+    /*
+    if ('{{pub_id}}' == '0') {
+        click_home(all_data, 'all')
+    } else {
+        click_pub('{{pub_id}}')
+    */
+    display_counter('{{counter}}');
+}
+
+function initMap_none() {
+    runner()
+}
+
+function initMap() {
+    console.log("INIT MAP");
+    map = show_map(51.52, -0.127, document.getElementById('map'))
+    var markersArray = []
+    if (window.navigator.onLine == true) {
+        document.getElementById('search_map').style.display = 'block'
+        var new_data = [{pub_name: "placeholder", pub_latitude: 51.52, pub_longitude: -0.127, colour: "#000000"}]
+        add_markers(map, new_data)
+        var defaultBounds = new google.maps.LatLngBounds(
+          new google.maps.LatLng(51.68, 0.3),      // N, E
+          new google.maps.LatLng(51.40, -0.549));  // S, W
+
+        const input = document.getElementById("search-input-navbar");
+        const searchBox = new google.maps.places.SearchBox(input, {
+            bounds: defaultBounds
+        });
+        listen_search(map, searchBox);
+    }
+    runner()
+}
+</script>
+{% endblock %}
+
+{% block sub_heading %}
+<div id="list_header">
+    <div id="search_header"></div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="home_page">
+    <div class="col-md-12 mx-auto" id="main" style="width: 720px;">
+        {% include "home_intro.html" %}
+    </div>
+</div>
+{% endblock %}
+
+{% block filters %}
+<div style="block">
+<div class="col-md-12 mx-auto" style="width: 720px">
+    <button type="button" class="collapsible_filters btn-block" style="width:720px; font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filters</button>
+    <div class="content_filters" style="display: none">
+        <div class="col">
+            <div class="row"><div class="col">{% include "filter_area.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_station.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_search.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_week.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_features.html" %}</div></div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    collapse_section("collapsible_filters")
+</script>
+{% endblock %}
+
+{% block left %}
+    {% include "list_map.html" %}
+{% endblock %}
+
+{% block right %}
+<div id="list_page2">
+    <div id="dynamic_table"></div>
+</div>
+{% endblock %}
+
+{% block centre %}
+<form id="pub_form" method="post" style="display: none">
+    <div class="form-group row">
+        <div class="col" id="pub_read">
+            {% include "home_features.html" %}
+            {% include "pub_form.html" %}
+            {% include "pub_diary.html" %}
+            {% include "pub_form_submit.html" %}
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block counter %}
+    {% include "counter.html" %}
+{% endblock %}
