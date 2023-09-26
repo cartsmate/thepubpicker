@@ -6,13 +6,13 @@ function filter_by_station(filtered_data) {
         var filtered_data = filtered_data.filter(function(pub) {
             return pub.station_identity == document.getElementById('station').value
             });
-        pre_header = station_name + " Pubs"
+        //pre_header = station_name + " Pubs"
     } else if (document.getElementById("direction").value != 'all') {
         console.log('NOT ALL DIRECTION: ' + document.getElementById('direction').value)
         var filtered_data =  filtered_data.filter(function(pub) {
             return pub.direction_identity == document.getElementById('direction').value
             });
-        pre_header = direction_name + " Pubs"
+        //pre_header = direction_name + " Pubs"
     } else {
         console.log('NO STATION & NO DIRECTION & NO SEARCH')
     }

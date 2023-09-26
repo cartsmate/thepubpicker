@@ -3,8 +3,10 @@ function column_filter() {
     console.log('visible')
     console.log(visible)
     diary_headers = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
-    station = document.getElementById('station').value
-    day = document.getElementById('day').value
+    //station = document.getElementById('station').value
+    station = 'all'
+    //day = document.getElementById('day').value
+    day = 'all'
     if (document.getElementById('search-input-navbar').value != '') {
         console.log('search selected')
         for (let i = 0; i < diary_headers.length; i++) {
@@ -17,7 +19,7 @@ function column_filter() {
         const isIndex = (element) => element == 'distance'
         order = headers.findIndex(isIndex);
         asc_desc = 'asc'
-    } else if (document.getElementById('station').value != 'all' && document.getElementById('day').value != 'all') {
+    } else if (station != 'all' && day != 'all') {
         console.log('station and day selected')
         for (let i = 0; i < diary_headers.length; i++) {
             visible[diary_headers[i]] = 'false'
@@ -31,7 +33,7 @@ function column_filter() {
         order = headers.findIndex(isIndex);
         asc_desc = 'desc'
         //filter_table(headers, visible, order)
-    } else if (document.getElementById('station').value != 'all') {
+    } else if (station != 'all') {
         console.log('station only selected')
         for (let i = 0; i < diary_headers.length; i++) {
             visible[diary_headers[i]] = 'false'
@@ -44,7 +46,7 @@ function column_filter() {
         order = headers.findIndex(isIndex);
         asc_desc = 'desc'
         //filter_table(headers, visible, order)
-    } else if (document.getElementById('day').value != 'all') {
+    } else if (day != 'all') {
         console.log('day only selected')
         for (let i = 0; i < diary_headers.length; i++) {
             visible[diary_headers[i]] = 'false'

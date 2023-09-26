@@ -1,14 +1,39 @@
-<button type="button" class="collapsible_s" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by station</button>
-<div class="content_s" style="display: none">
+<button type="button" id="button_stat" class="collapsible_s" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by station</button>
+<div class="content_s" id="content_stat" style="display: none; height:200px; overflow-x:scroll;">
     <div class="col" id="checks_station"></div>
 </div>
 
 <script>
-    collapse_section("collapsible_s")
+    //collapse_section("collapsible_s")
+    var button_stat = document.getElementById('button_stat')
+    var content_area = document.getElementById('content_area')
+    var content_stat = document.getElementById('content_stat')
+    var content_week = document.getElementById('content_week')
+    var content_feat = document.getElementById('content_feat')
+
+    button_stat.addEventListener("click", function() {
+        if (content_stat.style.display === "none") {
+            content_stat.style.display = "flex";
+            content_area.style.display = "none"
+            content_week.style.display = "none"
+            content_feat.style.display = "none"
+        } else {
+            content_stat.style.display = "none"
+
+        }
+    })
+
+    console.log('stations_directions_list')
+    console.log(stations_directions_list)
 
     var select= document.getElementById("station");
     var option = document.createElement("option");
     for (i=0; i<stations_directions_list.length; i++) {
+        filtered_data = {{ all_data | tojson }}
+        var filtered_data = filtered_data.filter(function(pub) {
+            return pub.station_identity == stations_directions_list[i][0]
+        })
+
         record = document.createElement("div")
         record.className = 'row'
         checks_area = document.getElementById('checks_station')
@@ -16,7 +41,7 @@
 
         label = document.createElement("div")
         label.style.width = "150px"
-        label.innerHTML = stations_directions_list[i][1]
+        label.innerHTML = stations_directions_list[i][1] + "( " + filtered_data.length + " )"
         record.appendChild(label)
 
         input = document.createElement("input")
@@ -25,4 +50,9 @@
         input.onclick = "station_direction_changed()"
         record.appendChild(input)
         }
+
+function get_value() {
+
+}
+
 </script>
