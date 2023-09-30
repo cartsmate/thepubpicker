@@ -1,11 +1,11 @@
 function create_table(pubs_selection) {
     console.log('CREATE_TABLE')
-    console.log('pubs_selection')
-    console.log(pubs_selection)
+    console.log('pubs_selection received')
+    console.log(pubs_selection.length)
     //console.log(pubs_selection[0]['address'])
     //console.log(pubs_selection[0]['distance'])
-    console.log('visible')
-    console.log(visible)
+    //console.log('visible')
+    //console.log(visible)
     //console.log('all_data')
     //console.log(all_data)
     //var tbl = document.getElementById('pub_list');
@@ -76,6 +76,7 @@ function create_table(pubs_selection) {
     tbl.appendChild(tblBody);
   // appends <table> into <body>
   //document.body.appendChild(tbl);
+    document.getElementById('dynamic_table').visible = false
     document.getElementById('dynamic_table').appendChild(tbl)
   // sets the border attribute of tbl to '2'
     tbl.setAttribute("border", "2");

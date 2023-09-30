@@ -1,0 +1,24 @@
+<button type="button" id="button_direction" class="collapsible_a" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by area</button>
+<div class="content_a" id="content_direction" style="display: none">
+    <div class="col" id="checks_direction"></div>
+</div>
+
+<script>
+    var button_direction = document.getElementById('button_direction')
+    var content_direction = document.getElementById('content_direction')
+    var content_stat = document.getElementById('content_stat')
+    var content_week = document.getElementById('content_week')
+    var content_feat = document.getElementById('content_feat')
+
+    button_direction.addEventListener("click", function() {
+        if (content_direction.style.display === "none") {
+            content_direction.style.display = "flex";
+            content_stat.style.display = "none"
+            content_week.style.display = "none"
+            content_feat.style.display = "none"
+        } else {
+            content_direction.style.display = "none"
+        }
+    })
+
+</script>

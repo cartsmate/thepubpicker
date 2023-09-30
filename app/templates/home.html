@@ -13,7 +13,7 @@ function onLoad(){
     var on_line = map_load('{{google_key}}')
 }
 
-function runner() {
+function runner(map) {
     page_layout('home')
     /*
     if ('{{pub_id}}' == '0') {
@@ -22,6 +22,25 @@ function runner() {
         click_pub('{{pub_id}}')
     */
     display_counter('{{counter}}');
+    data = {{ all_data | tojson }}
+    populate_direction(data)
+    populate_station(data)
+    populate_feature(data)
+    table_setup(data)
+    //add_markers(map, data)
+    if (data.length > 0 && data.length <= 50) {
+        console.log('<= 50 pubs to show')
+        add_markers(map, data)
+    } else {
+        console.log('> 50 pubs')
+        //console.log('all directions')
+        json_array = calculate_directions_count(data)
+        add_markers_2(map, json_array)
+    //} else {
+    //    console.log('one direction')
+    //    json_array_stations = calculate_stations_count(data)
+    //    add_markers_3(map, json_array_stations)
+    }
 }
 
 function initMap_none() {
@@ -33,7 +52,8 @@ function initMap() {
     map = show_map(51.52, -0.127, document.getElementById('map'))
     var markersArray = []
     if (window.navigator.onLine == true) {
-        document.getElementById('search_map').style.display = 'block'
+        document.getElementById('the_map').style.display = 'block'
+        document.getElementById('map').style.display = 'block'
         var new_data = [{pub_name: "placeholder", pub_latitude: 51.52, pub_longitude: -0.127, colour: "#000000"}]
         add_markers(map, new_data)
         var defaultBounds = new google.maps.LatLngBounds(
@@ -46,7 +66,7 @@ function initMap() {
         });
         listen_search(map, searchBox);
     }
-    runner()
+    runner(map)
 }
 </script>
 {% endblock %}
@@ -71,7 +91,7 @@ function initMap() {
     <button type="button" class="collapsible_filters btn-block" style="width:720px; font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filters</button>
     <div class="content_filters" style="display: none">
         <div class="col">
-            <div class="row"><div class="col">{% include "filter_area.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_direction.html" %}</div></div>
             <div class="row"><div class="col">{% include "filter_station.html" %}</div></div>
             <div class="row"><div class="col">{% include "filter_search.html" %}</div></div>
             <div class="row"><div class="col">{% include "filter_week.html" %}</div></div>
@@ -96,9 +116,9 @@ function initMap() {
 {% endblock %}
 
 {% block centre %}
-<form id="pub_form" method="post" style="display: none">
+<form id="pub_form" method="post">
     <div class="form-group row">
-        <div class="col" id="pub_read">
+        <div class="col" id="pub_read" style="display: none">
             {% include "home_features.html" %}
             {% include "pub_form.html" %}
             {% include "pub_diary.html" %}

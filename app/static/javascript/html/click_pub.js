@@ -36,7 +36,7 @@ function click_pub(id) {
     for (let i = 0; i < diary_headers.length; i++) {
         document.getElementById(diary_headers[i]).setAttribute('readonly', 'true')
     }
-    document.getElementById("station").value = filtered_data[0]['station_identity']
+    //document.getElementById("station").value = filtered_data[0]['station_identity']
     //document.getElementById("x_station_name").value = filtered_data[0]['station_name']
     //document.getElementById("station_2").value = document.getElementById("x_station").value;
 

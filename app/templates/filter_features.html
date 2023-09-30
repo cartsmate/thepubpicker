@@ -1,21 +1,12 @@
 <button type="button" id="button_feat" class="collapsible_feature" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by feature</button>
 <div class="content" id="content_feat" style="display: none" >
-    <div class="col">
-    {% for k, field in review_obj.__dict__.items() %}
-        {% if field.name in total_list_obj['icon_list'] %}
-            <div class="row">
-                <div style="width:100px">{{field.name}}</div>
-                <input type="checkbox" id="{{field.name}}" name="{{field.name}}" onclick="feature_click('{{field.name}}')">
-            </div>
-        {% endif %}
-    {% endfor %}
-    </div>
+    <div class="col" id="checks_feature"></div>
 </div>
 
 <script>
     //collapse_section("collapsible_feature")
     var button_feat = document.getElementById('button_feat')
-    var content_area = document.getElementById('content_area')
+    var content_direction = document.getElementById('content_direction')
     var content_stat = document.getElementById('content_stat')
     var content_week = document.getElementById('content_week')
     var content_feat = document.getElementById('content_feat')
@@ -23,7 +14,7 @@
     button_feat.addEventListener("click", function() {
         if (content_feat.style.display === "none") {
             content_feat.style.display = "flex";
-            content_area.style.display = "none"
+            content_direction.style.display = "none"
             content_stat.style.display = "none"
             content_week.style.display = "none"
         } else {
@@ -31,4 +22,5 @@
 
         }
     })
+
 </script>

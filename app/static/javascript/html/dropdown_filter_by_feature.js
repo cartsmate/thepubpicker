@@ -1,4 +1,4 @@
-function filter_by_feature(filtered_data) {
+function dropdown_filter_by_feature(filtered_data) {
     console.log('FILTER_BY_FEATURE')
     var review_list = ['brunch', 'dart', 'entertain', 'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport']
     for (let i = 0; i < review_list.length; i++) {

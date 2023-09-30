@@ -1,12 +1,13 @@
-<button type="button" id="button_week" class="collapsible_week" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by day</button>
-<div class="content_week" id="content_week" style="display: none">
+<button type="button" id="button_week" class="collapsible_week" style="display:none; font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by day</button>
+<div class="content_week" id="content_week" style="display:none">
     <div class="col" id="checks_week"></div>
 </div>
 
 <script>
     //collapse_section("collapsible_week")
+
     var button_week = document.getElementById('button_week')
-    var content_area = document.getElementById('content_area')
+    var content_direction = document.getElementById('content_direction')
     var content_stat = document.getElementById('content_stat')
     var content_week = document.getElementById('content_week')
     var content_feat = document.getElementById('content_feat')
@@ -14,7 +15,7 @@
     button_week.addEventListener("click", function() {
         if (content_week.style.display === "none") {
             content_week.style.display = "flex";
-            content_area.style.display = "none"
+            content_direction.style.display = "none"
             content_stat.style.display = "none"
             content_feat.style.display = "none"
         } else {
@@ -27,8 +28,8 @@
     for (i=0; i<diary_headers.length; i++) {
         record = document.createElement("div")
         record.className = 'row'
-        checks_area = document.getElementById('checks_week')
-        checks_area.appendChild(record)
+        checks_week = document.getElementById('checks_week')
+        checks_week.appendChild(record)
 
         label = document.createElement("div")
         label.style.width = "150px"

@@ -1,4 +1,4 @@
-function filter_by_station(filtered_data) {
+function dropdown_filter_by_station(filtered_data) {
     console.log('FILTER_BY_STATION')
     console.log('station value: ' + document.getElementById('station').value)
     if (document.getElementById('station').value != 'all') {

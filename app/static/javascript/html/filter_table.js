@@ -4,8 +4,8 @@ function addJson(headers, visible) {
         json_list.push({target: i, visible: visible[headers[i]], searchable: true, })
         //console.log(headers[i] + " : " + visible[headers[i]])
     }
-    console.log('json_list')
-    console.log(json_list)
+    //console.log('json_list')
+    //console.log(json_list)
     return json_list
 }
 

@@ -1,7 +1,7 @@
 function column_filter() {
     console.log('COLUMN_FILTER')
-    console.log('visible')
-    console.log(visible)
+    //console.log('visible')
+    //console.log(visible)
     diary_headers = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     //station = document.getElementById('station').value
     station = 'all'
@@ -74,9 +74,9 @@ function column_filter() {
         //filter_table(headers, visible, order)
     }
     //visible['pub_identity'] = true
-    console.log('visible')
-    console.log(visible)
-    console.log('order')
-    console.log(order)
+    //console.log('visible')
+    //console.log(visible)
+    //console.log('order')
+    //console.log(order)
     return [visible, order, asc_desc]
 }
