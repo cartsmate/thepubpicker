@@ -1,4 +1,5 @@
-function eventFunc() {
+function on_click() {
+    console.log('ON_CLICK')
     page_layout('home')
     data = filter_all_data(all_data)
     //populate_direction(data)

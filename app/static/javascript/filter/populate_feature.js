@@ -47,7 +47,7 @@ function populate_feature(data) {
         input = document.createElement("input")
         input.type = "checkbox"
         input.id = total_list_obj['icon_list'][i]
-        input.onclick = function() { eventFunc() }
+        input.onclick = function() { on_click() }
         record.appendChild(input)
 
     }

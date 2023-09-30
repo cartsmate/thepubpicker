@@ -28,7 +28,7 @@ function populate_direction(data) {
             input.id = directions_list[i][0]
             //input.checked = true
             //var xx = directions_list[i][1]
-            input.onclick = function() { eventFunc() }
+            input.onclick = function() { on_click() }
             record.appendChild(input)
         }
     })(i, data)

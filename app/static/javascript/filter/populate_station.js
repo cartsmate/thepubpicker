@@ -24,7 +24,7 @@ function populate_station(data) {
             input.type = "checkbox"
             input.id = stations_directions_list[i][0]
             //input.checked = true
-            input.onclick = function() { eventFunc() }
+            input.onclick = function() { on_click() }
             //input.onclick = "filter_direction_changed()"
             record.appendChild(input)
         }
