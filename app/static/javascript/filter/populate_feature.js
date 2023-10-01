@@ -31,8 +31,8 @@ function populate_feature(data) {
     filter_clear('checks_feature')
     for (i=0; i<total_list_obj['icon_list'].length; i++) {
         var filtered_data = data.filter(function(pub) {
-                return pub[total_list_obj['icon_list'][i]] == 'true'
-                })
+            return pub[total_list_obj['icon_list'][i]] == 'true'
+        })
 
         record = document.createElement("div")
         record.className = 'row'
@@ -41,6 +41,7 @@ function populate_feature(data) {
 
         label = document.createElement("div")
         label.style.width = "150px"
+        label.id = total_list_obj['icon_list'][i] + "_id"
         label.innerHTML = total_list_obj['icon_list'][i] + "( " + filtered_data.length + " )"
         record.appendChild(label)
 

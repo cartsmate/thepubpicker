@@ -25,7 +25,7 @@ function populate_station(data) {
             input.type = "checkbox"
             input.id = stations_directions_list[i][0]
             //input.checked = true
-            input.onclick = function() { on_click() }
+            input.onclick = function() { on_click_station() }
             //input.onclick = "filter_direction_changed()"
             record.appendChild(input)
         }
@@ -37,6 +37,9 @@ function f_b_d(xx) {
     console.log('i got it right: ' + xx)
     }
 
+function on_click_station() {
+    on_click()
+}
 /*
 function eventFunc() {
     page_layout('home')
