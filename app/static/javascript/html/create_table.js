@@ -15,7 +15,7 @@ function create_table(pubs_selection) {
     tbl.setAttribute("id", "pub_list");
     tbl.style.cssText = 'font-size:14px;'
     tbl.className = "table table-striped";
-    tbl.width = "720px"
+    tbl.width = "350px"
 
     var tblBody = document.createElement("tbody");
     var header = tbl.createTHead();
