@@ -4,7 +4,15 @@ function filter_by_station(data) {
     //var filtered_data = {{ all_data | tojson }}
     console.log('received data')
     console.log(data.length)
+
     for (i=0; i<stations_directions_list.length; i++) {
+        console.log('out: ' + stations_directions_list[i][1])
+        if (document.getElementById(stations_directions_list[i][0]).checked) {
+            console.log('in: ' + stations_directions_list[i])
+            ticked_list.push(stations_directions_list[i][0])
+        }
+    }
+    /*
         if (typeof document.getElementById(directions_list[i]) === 'undefined') {
             console.log('ujndefinted here')
         } else {
@@ -16,6 +24,7 @@ function filter_by_station(data) {
             }
         }
     }
+    */
 
     ticked_data = []
     if (ticked_list.length>0) {

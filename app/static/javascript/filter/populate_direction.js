@@ -28,7 +28,7 @@ function populate_direction(data) {
             input.id = directions_list[i][0]
             //input.checked = true
             //var xx = directions_list[i][1]
-            input.onclick = function() { on_click() }
+            input.onclick = function() { on_click_direction() }
             record.appendChild(input)
         }
     })(i, data)
@@ -38,6 +38,19 @@ function f_b_d(xx) {
     console.log('inside f_b_d')
     console.log('i got it right: ' + xx)
     }
+
+function on_click_direction() {
+    for (i=0; i<stations_directions_list.length; i++) {
+        if ( document.getElementById(stations_directions_list[i][2]).checked) {
+            document.getElementById(stations_directions_list[i][0]).style.display = 'block'
+            document.getElementById(stations_directions_list[i][0] + "_id").style.display = 'block'
+        } else {
+            document.getElementById(stations_directions_list[i][0]).style.display = 'none'
+            document.getElementById(stations_directions_list[i][0] + "_id").style.display = 'none'
+        }
+    }
+    on_click()
+}
 
 /*
 function eventFunc() {
