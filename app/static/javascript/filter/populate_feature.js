@@ -40,7 +40,7 @@ function populate_feature(data) {
         checks_feature.appendChild(record)
 
         label = document.createElement("div")
-        label.style.width = "150px"
+        label.style.width = "200px"
         label.id = total_list_obj['icon_list'][i] + "_id"
         label.innerHTML = total_list_obj['icon_list'][i] + "( " + filtered_data.length + " )"
         record.appendChild(label)

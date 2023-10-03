@@ -19,7 +19,7 @@ function populate_direction(data) {
             checks_direction.appendChild(record)
 
             label = document.createElement("div")
-            label.style.width = "150px"
+            label.style.width = "200px"
             label.id = directions_list[i][0] + "_id"
             label.innerHTML = directions_list[i][1] + "( " + filtered_data.length + " )"
             record.appendChild(label)
