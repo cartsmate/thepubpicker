@@ -36,6 +36,7 @@ function click_pub(id) {
             }
         }
     }
+    diary_headers = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     for (let i = 0; i < diary_headers.length; i++) {
         document.getElementById(diary_headers[i]).setAttribute('readonly', 'true')
     }

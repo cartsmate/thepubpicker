@@ -33,12 +33,12 @@
 
         label = document.createElement("div")
         label.style.width = "150px"
-        label.innerHTML = diary_headers[i]
+        label.innerHTML = diary_headers[i] + "_id"
         record.appendChild(label)
 
         input = document.createElement("input")
         input.type = "checkbox"
-        input.id = diary_headers[i]
+        input.id = diary_headers[i] + "_filter"
         input.onclick = "home_direction_changed()"
         record.appendChild(input)
         }

@@ -15,7 +15,6 @@ function onLoad(){
     //runner()
 }
 
-
 function runner(map) {
     page_layout('home')
     document.getElementById('all_filters').style.display = "block"
@@ -29,21 +28,6 @@ function runner(map) {
         populate_feature(data)
         document.getElementById('button_count').innerHTML = data.length
         table_setup(data)
-
-        if (data.length > 0 && data.length <= 50) {
-            console.log('<= 50 pubs to show')
-            add_markers(map, data)
-        } else {
-            console.log('> 50 pubs')
-            //console.log('all directions')
-            json_array = calculate_directions_count(data)
-            add_markers_2(map, json_array)
-        //} else {
-        //    console.log('one direction')
-        //    json_array_stations = calculate_stations_count(data)
-        //    add_markers_3(map, json_array_stations)
-        }
-
     } else {
         console.log('pub_id == ' + {{pub_id}})
         click_pub('{{pub_id}}')
@@ -51,6 +35,7 @@ function runner(map) {
 }
 
 function initMap_none() {
+    console.log('INIT_MAP_NONE')
     runner()
 }
 
@@ -74,6 +59,19 @@ function initMap() {
         listen_search(map, searchBox);
     }
     runner(map)
+    if (data.length > 0 && data.length <= 50) {
+        console.log('<= 50 pubs to show')
+        add_markers(map, data)
+    } else {
+        console.log('> 50 pubs')
+        //console.log('all directions')
+        json_array = calculate_directions_count(data)
+        add_markers_2(map, json_array)
+    //} else {
+    //    console.log('one direction')
+    //    json_array_stations = calculate_stations_count(data)
+    //    add_markers_3(map, json_array_stations)
+    }
 }
 
 </script>
