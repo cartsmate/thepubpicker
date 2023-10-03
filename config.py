@@ -33,4 +33,5 @@ class Configurations:
             "bucket_name": os.environ.get("BUCKET_NAME"),
             "env": "prod"
         }
+        print('config2: ' + str(config2))
         return config2

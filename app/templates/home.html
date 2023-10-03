@@ -18,7 +18,7 @@ function onLoad(){
 
 function runner(map) {
     page_layout('home')
-
+    document.getElementById('collapsible_filters').style.display = "block"
     if ('{{pub_id}}' == '0') {
         //click_home(all_data, 'all')
         console.log('pub_id == 0')

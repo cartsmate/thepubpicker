@@ -5,6 +5,8 @@ function click_pub(id) {
     page_layout('read')
     filter_reset()
     document.getElementById('collapsible_filters').click()
+    document.getElementById('collapsible_filters').style.display = "none"
+
     filtered_data = populate_pub(id)
     pubs_selection = filtered_data
     //update_data(filtered_data)
