@@ -7,12 +7,15 @@ function on_click() {
     //populate_feature(data)
     console.log('data')
     console.log(data)
+
     for (i=0; i<total_list_obj['icon_list'].length; i++) {
         var filtered_data = data.filter(function(pub) {
             return pub[total_list_obj['icon_list'][i]] == 'true'
         })
-        document.getElementById(total_list_obj['icon_list'][i] + "_id").innerHTML = filtered_data   
+        document.getElementById(total_list_obj['icon_list'][i] + "_id").innerHTML = total_list_obj['icon_list'][i] + " (" + filtered_data.length + ")"
     }
+
+    document.getElementById('button_count').innerHTML = data.length
     table_setup(data)
     if (data.length > 0 && data.length <= 50) {
         console.log('<= 50 pubs to show')

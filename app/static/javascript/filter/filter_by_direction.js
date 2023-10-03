@@ -6,9 +6,9 @@ function filter_by_direction(data) {
     console.log(data.length)
     for (i=0; i<directions_list.length; i++) {
         //console.log('inside loop: ' + directions_list[i][1])
-        if (document.getElementById(directions_list[i][0]) !== null) {
+        if (document.getElementById(directions_list[i][0] + "_filter") !== null) {
             //console.log('not null: ' + directions_list[i])
-            if (document.getElementById(directions_list[i][0]).checked) {
+            if (document.getElementById(directions_list[i][0] + "_filter").checked) {
                 //console.log('checked at: ' + directions_list[i][1])
                 ticked_list.push(directions_list[i][0])
             } else {

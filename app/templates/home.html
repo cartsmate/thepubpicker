@@ -15,31 +15,34 @@ function onLoad(){
 
 function runner(map) {
     page_layout('home')
-    /*
+
     if ('{{pub_id}}' == '0') {
-        click_home(all_data, 'all')
+        //click_home(all_data, 'all')
+        console.log('pub_id == 0')
+        display_counter('{{counter}}');
+        data = {{ all_data | tojson }}
+        populate_direction(data)
+        populate_station(data)
+        populate_feature(data)
+        document.getElementById('button_count').innerHTML = data.length
+        table_setup(data)
+        //add_markers(map, data)
+        if (data.length > 0 && data.length <= 50) {
+            console.log('<= 50 pubs to show')
+            add_markers(map, data)
+        } else {
+            console.log('> 50 pubs')
+            //console.log('all directions')
+            json_array = calculate_directions_count(data)
+            add_markers_2(map, json_array)
+        //} else {
+        //    console.log('one direction')
+        //    json_array_stations = calculate_stations_count(data)
+        //    add_markers_3(map, json_array_stations)
+        }
     } else {
+        console.log('pub_id == ' + {{pub_id}})
         click_pub('{{pub_id}}')
-    */
-    display_counter('{{counter}}');
-    data = {{ all_data | tojson }}
-    populate_direction(data)
-    populate_station(data)
-    populate_feature(data)
-    table_setup(data)
-    //add_markers(map, data)
-    if (data.length > 0 && data.length <= 50) {
-        console.log('<= 50 pubs to show')
-        add_markers(map, data)
-    } else {
-        console.log('> 50 pubs')
-        //console.log('all directions')
-        json_array = calculate_directions_count(data)
-        add_markers_2(map, json_array)
-    //} else {
-    //    console.log('one direction')
-    //    json_array_stations = calculate_stations_count(data)
-    //    add_markers_3(map, json_array_stations)
     }
 }
 
@@ -81,6 +84,7 @@ function initMap() {
 <div id="home_page">
     <div class="col-md-12 mx-auto" id="main" style="width: 350px;">
         {% include "home_intro.html" %}
+        {% include "filter_00_count.html" %}
     </div>
 </div>
 {% endblock %}
@@ -91,11 +95,12 @@ function initMap() {
     <button type="button" class="collapsible_filters btn-block" style="width:350px; font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filters</button>
     <div class="content_filters" style="display: none">
         <div class="col">
+            <div class="row"><div class="col">{% include "filter_01_reset.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_search.html" %}</div></div>
             <div class="row"><div class="col">{% include "filter_direction.html" %}</div></div>
             <div class="row"><div class="col">{% include "filter_station.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_search.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_week.html" %}</div></div>
             <div class="row"><div class="col">{% include "filter_features.html" %}</div></div>
+            <div class="row"><div class="col">{% include "filter_week.html" %}</div></div>
         </div>
     </div>
 </div>

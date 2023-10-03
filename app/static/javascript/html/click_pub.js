@@ -3,7 +3,7 @@ function click_pub(id) {
     //console.log('id: ' + id)
     //form_type = 'read'
     page_layout('read')
-
+    filter_reset()
     filtered_data = populate_pub(id)
     pubs_selection = filtered_data
     //update_data(filtered_data)

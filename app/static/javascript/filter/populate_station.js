@@ -23,7 +23,7 @@ function populate_station(data) {
 
             input = document.createElement("input")
             input.type = "checkbox"
-            input.id = stations_directions_list[i][0]
+            input.id = stations_directions_list[i][0] + "_filter"
             //input.checked = true
             input.onclick = function() { on_click_station() }
             //input.onclick = "filter_direction_changed()"
@@ -38,6 +38,13 @@ function f_b_d(xx) {
     }
 
 function on_click_station() {
+
+    for (i=0; i<total_list_obj['icon_list'].length; i++) {
+        var filtered_data = data.filter(function(pub) {
+            return pub[total_list_obj['icon_list'][i]] == 'true'
+        })
+        document.getElementById(total_list_obj['icon_list'][i] + "_id").innerHTML = total_list_obj['icon_list'][i] + " (" + filtered_data.length + ")"
+    }
     on_click()
 }
 /*

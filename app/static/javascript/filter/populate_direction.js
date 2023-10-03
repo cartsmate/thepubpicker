@@ -20,12 +20,13 @@ function populate_direction(data) {
 
             label = document.createElement("div")
             label.style.width = "150px"
+            label.id = directions_list[i][0] + "_id"
             label.innerHTML = directions_list[i][1] + "( " + filtered_data.length + " )"
             record.appendChild(label)
 
             input = document.createElement("input")
             input.type = "checkbox"
-            input.id = directions_list[i][0]
+            input.id = directions_list[i][0] + "_filter"
             //input.checked = true
             //var xx = directions_list[i][1]
             input.onclick = function() { on_click_direction() }

@@ -6,9 +6,9 @@ function filter_by_station(data) {
     console.log(data.length)
 
     for (i=0; i<stations_directions_list.length; i++) {
-        console.log('out: ' + stations_directions_list[i][1])
-        if (document.getElementById(stations_directions_list[i][0]).checked) {
-            console.log('in: ' + stations_directions_list[i])
+        //console.log('out: ' + stations_directions_list[i][1])
+        if (document.getElementById(stations_directions_list[i][0] + "_filter").checked) {
+            //console.log('in: ' + stations_directions_list[i])
             ticked_list.push(stations_directions_list[i][0])
         }
     }
