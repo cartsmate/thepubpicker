@@ -7,11 +7,14 @@
     {% include "import_variables.html" %}
     <input type="text" class="hide_x_boxes" id="form_type" value="home">
 <script>
+
 let markersArray = []
 
 function onLoad(){
-    var on_line = map_load('{{google_key}}')
+    //var on_line = map_load('{{google_key}}')
+    runner()
 }
+
 
 function runner(map) {
     page_layout('home')
@@ -26,7 +29,7 @@ function runner(map) {
         populate_feature(data)
         document.getElementById('button_count').innerHTML = data.length
         table_setup(data)
-        //add_markers(map, data)
+        /*
         if (data.length > 0 && data.length <= 50) {
             console.log('<= 50 pubs to show')
             add_markers(map, data)
@@ -40,6 +43,7 @@ function runner(map) {
         //    json_array_stations = calculate_stations_count(data)
         //    add_markers_3(map, json_array_stations)
         }
+        */
     } else {
         console.log('pub_id == ' + {{pub_id}})
         click_pub('{{pub_id}}')
@@ -71,7 +75,9 @@ function initMap() {
     }
     runner(map)
 }
+
 </script>
+
 {% endblock %}
 
 {% block sub_heading %}
