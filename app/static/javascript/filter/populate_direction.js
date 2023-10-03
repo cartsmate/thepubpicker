@@ -42,7 +42,8 @@ function f_b_d(xx) {
 
 function on_click_direction() {
     for (i=0; i<stations_directions_list.length; i++) {
-        if ( document.getElementById(stations_directions_list[i][2]).checked) {
+        //console.log(document.getElementById(stations_directions_list[i][2]))
+        if (document.getElementById(stations_directions_list[i][2] + "_filter").checked) {
             document.getElementById(stations_directions_list[i][0]).style.display = 'block'
             document.getElementById(stations_directions_list[i][0] + "_id").style.display = 'block'
         } else {
