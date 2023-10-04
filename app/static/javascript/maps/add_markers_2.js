@@ -79,10 +79,10 @@ function add_markers_2(map, data) {
 
         google.maps.event.addListener(marker, 'click', (function (marker, key) {
             return function () {
-                console.log('listener click')
-                document.getElementById('x_direction').value = data[key].direction_identity.toString()
-                document.getElementById('x_direction_name').value = data[key].direction_name.toString()
-                click_direction()
+                console.log('add_markers_2 - listener click')
+                //document.getElementById('x_direction').value = data[key].direction_identity.toString()
+                //document.getElementById('x_direction_name').value = data[key].direction_name.toString()
+                click_direction(data[key].direction_identity.toString())
                 }
             })(marker, key))
         /*

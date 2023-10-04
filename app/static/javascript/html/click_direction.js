@@ -1,6 +1,6 @@
-function click_direction() {
+function click_direction(id) {
     console.log("CLICK_DIRECTION")
-    id = document.getElementById('x_direction').value
+    //id = document.getElementById('x_direction').value
     /*
     delete_table()
 
