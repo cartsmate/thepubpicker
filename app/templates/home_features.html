@@ -1,4 +1,4 @@
-<div id="home_features" class="row justify-content-center" style="display:flex; align-items:center;">
+<div id="home_features" class="row justify-content-center" style="width: 350px; display:flex; align-items:center;">
 {% for k, field in review_obj.__dict__.items() %}
     {% if field.name in total_list_obj['icon_list'] %}
         <div style="text-align:center; padding:5px; width:60px" id="{{field.name}}_col">
