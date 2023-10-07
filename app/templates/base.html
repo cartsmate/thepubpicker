@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %}{% endblock %}</title>
+        <title>thepubpicker.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-
-
-        {% block script %}{% endblock %}
+        {% include "script.html" %}
     </head>
-    <body onload="onLoad()" style="background-color:#CDCDCD;">
+    <body onload="onLoad()" style="background-color:#CDCDCD; width: 360px">
         <div class="container-fluid mx-auto">
-            <div class="row header_band" id="header_band"><a href="#" style="color:white; text-decoration: none;" onclick="go_home()" class="mx-auto">thepubpicker.com</a></div>
-            <div class="row header_band" style="margin-top: 5px"><a class="mx-auto" style="color:white;">{% block sub_heading %}{% endblock %}</a></div>
-            <div class="row" style="margin: 0 0 0 0;">{% block controls %}{% endblock %}</div>
-            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block main %}{% endblock %}</div>
-            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block filters %}{% endblock %}</div>
-            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block left %}{% endblock %}</div>
-            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block right %}{% endblock %}</div>
-            <div class="row top-buffer" style="margin: 0 0 0 0; display: flex; justify-content: center;">{% block centre %}{% endblock %}</div>
-            <div class="row top-buffer" style="margin: 0 0 0 0;">
-                <div class="col-md-6 mx-auto">
-                    {% block counter %}{% endblock %}
-                    {% include "buttons.html" %}
-                    {% include "footer.html" %}
-                </div>
-            </div>
+            <div class="row header_band">{% include "header.html" %}</div>
+            <div class="row header_band" style="margin-top: 5px" id="list_header">{% include "header_sub.html" %}</div>
+            <div class="row top-buffer trim-center">{% include "intro.html" %}</div>
+            <div class="row top-buffer trim-center">{% include "filter.html" %}</div>
+            <div class="row top-buffer trim-center">{% include "map.html" %}</div>
+            <div class="row top-buffer trim-center">{% include "table.html" %}</div>
+            <div class="row top-buffer trim-center">{% include "pub.html" %}</div>
+            <div class="row top-buffer">{% include "footer.html" %}</div>
         </div>
     </body>
 </html>
 
 <script>
-    document.getElementById("header_band").style = "font-size: 32px; font-weight: bold; font-family:Verdana; color: white; padding: 5px 0 0 0; text-align: center;"
+document.getElementById("header_band").style = "font-size: 32px; font-weight: bold; font-family:Verdana; color: white; padding: 5px 0 0 0; text-align: center;"
+
 </script>

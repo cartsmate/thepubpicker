@@ -216,3 +216,33 @@ input:checked + .slider:before {
 .show_button {
     display:block;
 }
+.trim-center {
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.parent {
+  position: relative;
+}
+.child {
+  display:flex;
+  top: 50%;
+  height: 50px;
+  margin-top: -25px; /* account for padding and border if not using box-sizing: border-box; */
+}
+.p1 {
+  position: relative;
+}
+.p2 {
+  position: absolute;
+  top: 50%;
+  height: 30px;
+  margin-top: 5px; /* account for padding and border if not using box-sizing: border-box; */
+}

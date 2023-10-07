@@ -39,6 +39,8 @@ def home():
 
     if request.method == 'GET':
         print('home/: GET')
+        print("config2['google_key']")
+        print(config2['google_key'])
         return render_template('home.html', pub_id='0',
                                all_data=all_data_json,
                                headers=headers,
@@ -56,6 +58,8 @@ def home():
     if request.method == 'POST':
         pub_id = request.args.get('pub_id')
         print('home/: POST: ' + pub_id)
+        print("config2['google_key']")
+        print(config2['google_key'])
         return render_template('home.html', pub_id=pub_id,
                                all_data=all_data_json,
                                stations_directions_list=stations_directions_list,

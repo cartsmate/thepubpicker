@@ -20,6 +20,7 @@ class Pub:
                  address=Address(), pub_latitude=PubLatitude(), pub_longitude=PubLongitude(), category=Category(),
                  rank=Rank(), station_identity=StationIdentity(), area_identity=AreaIdentity(), pub_identity=PubIdentity(),
                  colour=Colour(), detail=Detail()):
+        self.rank = rank
         self.pub_identity = pub_identity
         self.address = address
         self.area_identity = area_identity
@@ -31,7 +32,7 @@ class Pub:
         self.pub_latitude = pub_latitude
         self.pub_longitude = pub_longitude
         self.pub_name = pub_name
-        self.rank = rank
+
         self.station_identity = station_identity
         self.detail = detail
 

@@ -1,0 +1,43 @@
+{% for field in total_list_obj['fields_list'] %}
+    {% if field not in total_list_obj['icon_list'] %}
+        {% if field in total_list_obj['form_visible_list'] %}
+            <div class="form-group row" id="row_{{field}}" style="margin-top: 5px; display:flex; justify-content: center;">
+                <div class="col" style="width:100px; padding:0px;">
+                    <label class="col-form-label" style="height: 30px; font-size:12px; width:75px; padding:0px; margin:0px;" for="{{field}}" >{{alias[field]}}</label>
+                </div>
+                <div class="col" id="div_{{field}}" style="width:260px; text-align:left; visibility:visible; display:flex; text-align:left" >
+                    {% if field in total_list_obj['dropdown_list'] %}
+                        {% include "control_dropdown.html" %}
+                    {% elif field in total_list_obj['star_list'] %}
+                        {% include "pub_03_form_star.html" %}
+                    {% elif field in total_list_obj['slider_list'] %}
+                        {% include "control_slider.html" %}
+                    {% elif field in total_list_obj['date_list'] %}
+                        {% include "control_date.html" %}
+                    {% elif field in total_list_obj['input_list'] %}
+                        <input style="font-size:12px; overflow-y: scroll; resize: none; height: 30px; text-align:left; visibility:visible; display:block; width:250px;" class="form-control" type='textarea' name="{{field}}" id="{{field}}">
+                    {% endif %}
+                    {% if field in total_list_obj['required_list'] %}
+                        <script>document.getElementById("{{field}}").required = true</script>
+                    {% endif %}
+                </div>
+                <!--
+                <div class="col" style="padding:0px; margin:0px;" >
+                    {% if form_type == 'read' %}
+                        <img id="edit_{{field}}" src="/static/icons/buttons/edit.png" onclick="editClick('{{field}}')" style="width:30px; height:30px; margin:0px; padding:0px;">
+                    {% endif %}
+                </div>
+                -->
+            </div>
+        {% else %}
+            <div class="form-group row" id="row_{{field}}" style="display: none;">
+                <div class="col">
+                    <label class="col-form-label" for="{{field}}" style="display: none;"></label>
+                </div>
+                <div class="col" id="div_{{field}}">
+                    <input class="form-control" type='text' name="{{field}}" id="{{field}}" style="display: none;">
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
