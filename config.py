@@ -1,5 +1,7 @@
 import os
 import json
+from dotenv import load_dotenv
+from pathlib import Path
 from configparser import ConfigParser
 
 
@@ -25,6 +27,17 @@ class Configurations:
         #         "env": "qual"
         #     }
         # except:
+        path = os.getcwd()
+        # print('path')
+        # print(path)
+        total_path = path + '/.env'
+        dotenv_path = Path(total_path)
+        load_dotenv(dotenv_path=dotenv_path)
+        # load_dotenv()
+        # GOOGLE_KEY = os.getenv("HEROKU_GOOGLE_API")
+        # print('GOOGLE_KEY')
+        # print(GOOGLE_KEY)
+        # MY_ENV_VAR = os.getenv('MY_ENV_VAR')
         config2 = {
             "directory_path": os.getcwd(),
             "google_key": os.getenv("HEROKU_GOOGLE_API"),
@@ -33,5 +46,5 @@ class Configurations:
             "bucket_name": os.environ.get("BUCKET_NAME"),
             "env": "prod"
         }
-        print('config2: ' + str(config2))
+        # print('config2: ' + str(config2))
         return config2
