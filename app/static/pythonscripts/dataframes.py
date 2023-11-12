@@ -7,6 +7,10 @@ config2 = Configurations().get_config2()
 
 class Dataframes:
 
+    def series_to_dict(self, series):
+        series_dict = series.to_dict()
+        return series_dict
+
     def df_to_dict(self, df):
         df_dict = df.to_dict(orient='records')
         return df_dict

@@ -2,13 +2,15 @@ function populate_direction(data) {
     console.log('POPULATE_DIRECTION')
     console.log('received data')
     console.log(data.length)
+    console.log(data)
     var select= document.getElementById("direction");
     var option = document.createElement("option");
     filter_clear('checks_direction')
     for (i=0; i<directions_list.length; i++) (function(i, data){
-        //console.log('filtered data inside loop')
-        //console.log(filtered_data)
-        //console.log(directions_list[i])
+        console.log('filtered data inside loop')
+        console.log(directions_list[i][0])
+        console.log(data)
+        console.log(directions_list[i])
         var filtered_data = data.filter(function(pub) {
             return pub.direction_identity == directions_list[i][0]
         })
@@ -18,19 +20,26 @@ function populate_direction(data) {
             checks_direction = document.getElementById('checks_direction')
             checks_direction.appendChild(record)
 
+            col1 = document.createElement("div")
+            //col1.ClassName("col-1")
+            record.appendChild(col1)
+
+            col2 = document.createElement("div")
+            //col2.ClassName("col-11")
+            record.appendChild(col2)
+
             label = document.createElement("div")
             label.style.width = "200px"
+            label.style.font = "10px"
             label.id = directions_list[i][0] + "_id"
-            label.innerHTML = directions_list[i][1] + "( " + filtered_data.length + " )"
-            record.appendChild(label)
+            label.innerHTML = directions_list[i][1] + " (" + filtered_data.length + ")"
+            col2.appendChild(label)
 
             input = document.createElement("input")
             input.type = "checkbox"
             input.id = directions_list[i][0] + "_filter"
-            //input.checked = true
-            //var xx = directions_list[i][1]
             input.onclick = function() { on_click_direction() }
-            record.appendChild(input)
+            label.appendChild(input)
         }
     })(i, data)
 }

@@ -2,7 +2,7 @@ from app.static.pythonscripts.uuid import Uuid
 
 
 class ReviewIdentity:
-    def __init__(self, name='review_identity', alias="Review Id", alias2="", required='false', form_visible='false',
+    def __init__(self, name='review_identity', alias="Review Identity", alias2="", required='false', form_visible='false',
                  table_visible='false', value=Uuid().generate_uuid(), control='none', icon='none'):
         self.name = name
         self.alias = alias

@@ -1,7 +1,7 @@
 
 
 class History:
-    def __init__(self, name="history", alias="history", alias2="venue", required='true', form_visible='false',
+    def __init__(self, name="history", alias="Review History", alias2="venue", required='true', form_visible='false',
                  table_visible='false', value='false', control="check", icon="history.png"):
         self.name = name
         self.alias = alias

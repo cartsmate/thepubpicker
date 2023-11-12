@@ -1,6 +1,6 @@
 
 class AreaName:
-    def __init__(self, name='area_name', alias="Area", required='true', form_visible='false',
+    def __init__(self, name='area_name', alias="Area Name", required='true', form_visible='false',
                  table_visible='false', value="", control="input"):
         self.name = name
         self.alias = alias

@@ -59,7 +59,7 @@
     margin: 0 5px 10px 5px;
 }
 .map_height {
-    width: 350px;
+    width: 310px;
     height: 150px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -245,4 +245,13 @@ input:checked + .slider:before {
   top: 50%;
   height: 30px;
   margin-top: 5px; /* account for padding and border if not using box-sizing: border-box; */
+}
+.filter_header {
+    margin: 0px;
+    padding: 2px;
+    font-size: 12px;
+    background-color:#0275d8;
+    color: white;
+    text-decoration: none;
+    text-align: left;
 }

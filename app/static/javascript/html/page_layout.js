@@ -1,5 +1,6 @@
 function page_layout(page) {
     console.log('PAGE_LAYOUT')
+    /*
     if (page == 'home') {
         console.log('page layout - home')
         document.getElementById('form_type').value = 'home'
@@ -48,4 +49,5 @@ function page_layout(page) {
         document.getElementById('edit_button').style.display = 'none'
         document.getElementById('station_button').style.display = 'none'
     }
+    */
 }

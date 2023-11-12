@@ -1,6 +1,6 @@
 
 class PubLongitude:  # define child class
-    def __init__(self, name='pub_longitude', alias="Longitude", required='true', form_visible='false',
+    def __init__(self, name='pub_longitude', alias="Pub Longitude", required='true', form_visible='false',
                  table_visible='false', value=0, control='false', rank=0):
         self.name = name
         self.alias = alias

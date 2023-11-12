@@ -1,4 +1,5 @@
 function collapse_section(class_name) {
+    console.log('COLLAPSE_SECTION')
     //document.getElementById('content_a').style.display = "none"
     var coll = document.getElementsByClassName(class_name);
     var i;

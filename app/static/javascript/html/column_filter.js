@@ -61,13 +61,19 @@ function column_filter() {
         asc_desc = 'desc'
         //filter_table(headers, visible, order)
     } else {
+        console.log('default table')
+        //for (var key of Object.keys(visible)) {
+        //    console.log(key + " -> " + visible[key])
+        //}
+
         for (let i = 0; i < diary_headers.length; i++) {
             visible[diary_headers[i]] = 'false'
             }
         visible['station_name'] = 'true'
         visible['rank'] = 'true'
         visible['pub_name'] = 'true'
-        visible['distance'] = 'false'
+        //visible['distance'] = 'false'
+
         const isIndex = (element) => element == 'rank';
         order = headers.findIndex(isIndex);
         asc_desc = 'desc'

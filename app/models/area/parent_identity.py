@@ -1,6 +1,6 @@
 
 class ParentIdentity:
-    def __init__(self, name='parent_identity', alias="Id", required='false', form_visible='false',
+    def __init__(self, name='parent_identity', alias="Parent Identity", required='false', form_visible='false',
                  table_visible='false', value=0, control='none'):
         self.name = name
         self.alias = alias

@@ -10,14 +10,14 @@ function map_load(google_key) {
         console.log('on-line')
         js.setAttribute("defer", "defer");
         var google_string = 'https://maps.googleapis.com/maps/api/js?key=' + google_key + '&libraries=places&callback=initMap'
-        console.log('google_string')
-        console.log(google_string)
+        //console.log('google_string')
+        //console.log(google_string)
         js.src = google_string
         document.head.appendChild(js)
         //document.getElementById('search_map').style.display = 'block'
         //add_markers(all_data)
-        on_line = 'true'
-        console.log(on_line)
+        //on_line = 'true'
+        //console.log(on_line)
     } else {
         console.log('off-line')
 //        var elem = document.createElement("img");

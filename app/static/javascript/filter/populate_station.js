@@ -18,16 +18,14 @@ function populate_station(data) {
             label = document.createElement("div")
             label.style.width = "200px"
             label.id = stations_directions_list[i][0] + "_id"
-            label.innerHTML = stations_directions_list[i][1] + "( " + filtered_data.length + " )"
+            label.innerHTML = stations_directions_list[i][1] + " (" + filtered_data.length + ")"
             record.appendChild(label)
 
             input = document.createElement("input")
             input.type = "checkbox"
             input.id = stations_directions_list[i][0] + "_filter"
-            //input.checked = true
             input.onclick = function() { on_click_station() }
-            //input.onclick = "filter_direction_changed()"
-            record.appendChild(input)
+            label.appendChild(input)
         }
     }
 }

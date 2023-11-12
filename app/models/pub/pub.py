@@ -12,6 +12,7 @@ from app.models.pub.colour import Colour
 from app.models.pub.detail import Detail
 from app.models.area.area_identity import AreaIdentity
 from app.models.station.station_identity import StationIdentity
+from app.models.photo.photo_identity import PhotoIdentity
 
 
 class Pub:
@@ -19,7 +20,7 @@ class Pub:
     def __init__(self, pub_deletion=PubDeletion(), place=Place(), pub_name=PubName(),
                  address=Address(), pub_latitude=PubLatitude(), pub_longitude=PubLongitude(), category=Category(),
                  rank=Rank(), station_identity=StationIdentity(), area_identity=AreaIdentity(), pub_identity=PubIdentity(),
-                 colour=Colour(), detail=Detail()):
+                 colour=Colour(), detail=Detail(), photo_identity=PhotoIdentity()):
         self.rank = rank
         self.pub_identity = pub_identity
         self.address = address
@@ -28,11 +29,10 @@ class Pub:
         self.place = place
         self.colour = colour
         self.pub_deletion = pub_deletion
-
         self.pub_latitude = pub_latitude
         self.pub_longitude = pub_longitude
         self.pub_name = pub_name
-
+        self.photo_identity = photo_identity
         self.station_identity = station_identity
         self.detail = detail
 

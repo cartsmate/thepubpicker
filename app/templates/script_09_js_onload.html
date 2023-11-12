@@ -5,22 +5,20 @@ let markersArray = []
 function onLoad(){
     console.log('ONLOAD')
     total_list_obj = {{ total_list_obj | tojson }}
-    console.log('{{google_key}}')
+    //console.log('{{google_key}}')
     var on_line = map_load('{{google_key}}')
 }
 
 function runner(map) {
-    page_layout('home')
+    //page_layout('home')
+    console.log('RUNNER')
     document.getElementById('all_filters').style.display = "block"
     if ('{{pub_id}}' == '0') {
-        //click_home(all_data, 'all')
-        console.log('pub_id == 0')
-        display_counter('{{counter}}');
-        data = {{ all_data | tojson }}
-        populate_direction(data)
-        populate_station(data)
-        populate_feature(data)
-        document.getElementById('button_count').innerHTML = data.length
+        //display_counter('{{counter}}');
+        data = get_flask_data({{all_data | tojson}})
+        //console.log(data)
+        populate_all_filters(data)
+
         table_setup(data)
     } else {
         console.log('pub_id == ' + {{pub_id}})

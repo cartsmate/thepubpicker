@@ -1,6 +1,6 @@
 
 class AreaLongitude:
-    def __init__(self, name='area_longitude', alias="Longitude", required='false', form_visible='false',
+    def __init__(self, name='area_longitude', alias="Area Longitude", required='false', form_visible='false',
                  table_visible='false', value="", control='none'):
         self.name = name
         self.alias = alias

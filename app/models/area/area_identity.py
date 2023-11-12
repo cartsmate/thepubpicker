@@ -2,7 +2,7 @@ from app.static.pythonscripts.uuid import Uuid
 
 
 class AreaIdentity:
-    def __init__(self, name='area_identity', alias="Id", required='false', form_visible='false',
+    def __init__(self, name='area_identity', alias="Area Identity", required='false', form_visible='false',
                  table_visible='false', value=0, control='none'):
         self.name = name
         self.alias = alias

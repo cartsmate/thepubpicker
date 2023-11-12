@@ -1,5 +1,7 @@
 function filter_clear(selectElement) {
     console.log('FILTER_CLEAR')
+    console.log('selectElement')
+    console.log(selectElement)
     var e = document.getElementById(selectElement);
 
         //e.firstElementChild can be used.

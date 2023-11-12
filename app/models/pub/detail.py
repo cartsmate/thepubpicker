@@ -2,7 +2,7 @@ from app.static.pythonscripts.uuid import Uuid
 
 
 class Detail:
-    def __init__(self, name="detail", alias="extra info", alias2="", required='false', form_visible='true',
+    def __init__(self, name="detail", alias="Pub Detail", alias2="", required='false', form_visible='true',
                  table_visible='false', value="TBC", control="input", icon='none', rank=3):
         self.name = name
         self.alias = alias

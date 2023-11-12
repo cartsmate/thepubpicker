@@ -1,6 +1,6 @@
 
 class Category:
-    def __init__(self, name='category', alias="Category", required='true', form_visible='false',
+    def __init__(self, name='category', alias="Pub Category", required='true', form_visible='false',
                  table_visible='false', value="", control="dropdown", rank=0):
         self.name = name
         self.alias = alias

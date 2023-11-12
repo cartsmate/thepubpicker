@@ -1,19 +1,35 @@
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/collapse_section.js') }}"></script>
 
-<div style="block">
-<div class="col-md-12 mx-auto" id="all_filters" style="width: 350px; margin: 0px; padding: 0px;">
-    <button type="button" id="collapsible_filters" class="collapsible_filters btn-block" style="margin: 0px; padding: 0px; width:350px; font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filters</button>
+<div id="all_filters">
+    <button type="button" id="collapsible_filters" class="collapsible_filters btn-block filter_header">+ Filters</button>
     <div class="content_filters" id="content_filters" style="display: none">
         <div class="col">
-            <div class="row"><div class="col">{% include "filter_01_reset.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_02_direction.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_03_station.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_04_features.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_05_week.html" %}</div></div>
-            <div class="row"><div class="col">{% include "filter_06_search.html" %}</div></div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11">{% include "filter_02_direction.html" %}</div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11">{% include "filter_03_station.html" %}</div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11">{% include "filter_04_features.html" %}</div>
+            </div>
+            <div class="row" style="display: none">
+                <div class="col-1"></div>
+                <div class="col-11">{% include "filter_05_week.html" %}</div>
+            </div>
+            <div class="row" style="display: none">
+                <div class="col-1"></div>
+                <div class="col-11">{% include "filter_06_search.html" %}</div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11">{% include "filter_01_reset.html" %}</div>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <script>

@@ -17,7 +17,7 @@ function show_map(lat, lng, mapLoc) {
             strictBounds: false,
         }
     });
-    console.log('map - in show_map')
-    console.log(map)
+    //console.log('map - in show_map')
+    //console.log(map)
     return map
 }

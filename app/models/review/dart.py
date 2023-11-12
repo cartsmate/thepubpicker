@@ -1,7 +1,7 @@
 
 
 class Dart:
-    def __init__(self, name='dart', alias="darts", alias2="board", required='true', form_visible='false',
+    def __init__(self, name='dart', alias="Review Darts", alias2="board", required='true', form_visible='false',
                  table_visible='false', value='false', control="check", icon="dart.png"):
         self.name = name
         self.alias = alias

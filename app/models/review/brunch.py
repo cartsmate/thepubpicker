@@ -1,7 +1,7 @@
 
 
 class Brunch:
-    def __init__(self, name="brunch", alias="brunch", alias2="bottomless",  required='false', form_visible='false',
+    def __init__(self, name="brunch", alias="Review Brunch", alias2="bottomless",  required='false', form_visible='false',
                  table_visible='false', value='false', control="check", icon="brunch.png"):
         self.name = name
         self.alias = alias

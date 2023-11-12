@@ -1,0 +1,7 @@
+.front-center {
+    display: flex;
+    justify-content: center;
+}
+.top-buffer {
+    margin-top:20px;
+}

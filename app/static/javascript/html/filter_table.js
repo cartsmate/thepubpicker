@@ -1,11 +1,12 @@
-function addJson(headers, visible) {
+//function addJson(headers, visible) {
+function addJson(visible) {
     json_list = []
     for (i=0; i<headers.length; i++) {
+    //for (var key of Object.keys(visible)) {
+        //console.log(key + " -> " + visible[key])
         json_list.push({target: i, visible: visible[headers[i]], searchable: true, })
-        //console.log(headers[i] + " : " + visible[headers[i]])
+        //json_list.push({target: i, visible: visible[key], searchable: true, })
     }
-    //console.log('json_list')
-    //console.log(json_list)
     return json_list
 }
 
@@ -20,7 +21,7 @@ function filter_table(visible, order, asc_desc) {
     console.log('FILTER_TABLE')
     //console.log('headers')
     //console.log(headers)
-    //console.log('pre-visible')
+    //console.log('visible')
     //console.log(visible)
     for (const key in visible) {
         let trueStr = visible[key]
@@ -40,7 +41,8 @@ function filter_table(visible, order, asc_desc) {
             info: false,
             //order: [[order, 'asc']],
             order: [[order, asc_desc]],
-            columnDefs: addJson(headers, visible)
+            //columnDefs: addJson(headers, visible)
+            columnDefs: addJson(visible)
         });
     });
     //console.log('end of filter table')

@@ -13,9 +13,9 @@ function create_table(pubs_selection) {
   // creates a <table> element and a <tbody> element
     var tbl = document.createElement("table");
     tbl.setAttribute("id", "pub_list");
-    tbl.style.cssText = 'font-size:14px;'
+    tbl.style.cssText = 'font-size:12px;'
     tbl.className = "table table-striped";
-    tbl.width = "350px"
+    tbl.width = "310px"
 
     var tblBody = document.createElement("tbody");
     var header = tbl.createTHead();
@@ -31,6 +31,7 @@ function create_table(pubs_selection) {
         var row = document.createElement("tr");
 
         for (let j = 0; j < headers.length; j++) {
+            console.log('header: ' + headers[j])
             /*
             if (headers[j] == 'distance') {
                 console.log('headers[j]')
@@ -62,6 +63,8 @@ function create_table(pubs_selection) {
                     row.appendChild(cell);
                 } else {
                     text_ref = pubs_selection[i][headers[j]]
+                    //console.log('else')
+                    //console.log(pubs_selection[i][headers[j]])
                     const cellText = document.createTextNode(text_ref);
                     cell.appendChild(cellText)
                     row.appendChild(cell);

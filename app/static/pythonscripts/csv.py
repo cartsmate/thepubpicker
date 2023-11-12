@@ -51,8 +51,13 @@ class Csv:
 
         df_diary = self.go_get_diary()
         df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
+        # df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
 
-        df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
+        df_photos = self.go_get_photos()
+        print('df_photos')
+        print(df_photos)
+        df_with_photos = pd.merge(df_pb_rev_st_dir_dry, df_photos, on='pub_identity', how='left')
+        df_pb_rev_st_dir_dry = df_with_photos.fillna('')
 
         return df_pb_rev_st_dir_dry
 
@@ -83,12 +88,17 @@ class Csv:
 
     def go_get_stations(self):
         df_station = pd.read_csv(directory_path + '/files/stations.csv',
-                              dtype={'station_identity': str, 'station_deletion': str, 'station_name': str,
-                                     'station_latitude': float, 'station_longitude': float, 'zone': str,
-                                     'postcode': str, 'direction_identity': str})
+                                 dtype={'station_identity': str, 'station_deletion': str, 'station_name': str,
+                                        'station_latitude': float, 'station_longitude': float, 'zone': str,
+                                        'postcode': str, 'direction_identity': str})
         return df_station
 
     def go_get_directions(self):
         df_directions = pd.read_csv(directory_path + '/files/directions.csv',
                                     dtype={'direction_identity': str, 'direction_name': str, 'direction_deletion': str})
         return df_directions
+
+    def go_get_photos(self):
+        df_photos = pd.read_csv(directory_path + '/files/photos.csv',
+                                dtype={'photo_identity': str, 'pub_identity': str, 'photo_deletion': str})
+        return df_photos
