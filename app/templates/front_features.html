@@ -93,7 +93,11 @@ for (i=0; i<list.length; i++) {
         return function () {
             alert(marker)
             var base_url = window.location.hostname
-            var url = "http://" + base_url + ":5000/front_home/"
+            if (config2['env'] == 'prod') {
+                var url = "http://" + base_url + "/front_home/"
+            } else {
+                var url = "http://" + base_url + ":5000/front_home/"
+            }
             const myUrlWithParams = new URL(url);
             myUrlWithParams.searchParams.append('feature', marker);
             window.location.replace(myUrlWithParams.href);
