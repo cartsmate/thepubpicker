@@ -1,6 +1,6 @@
 import os
 import json
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from pathlib import Path
 from configparser import ConfigParser
 
@@ -32,7 +32,7 @@ class Configurations:
         # print(path)
         total_path = path + '/.env'
         dotenv_path = Path(total_path)
-        load_dotenv(dotenv_path=dotenv_path)
+        # load_dotenv(dotenv_path=dotenv_path)
         # load_dotenv()
         # GOOGLE_KEY = os.getenv("HEROKU_GOOGLE_API")
         # print('GOOGLE_KEY')
