@@ -20,6 +20,7 @@ from app.models.review.review import Review
 @app.route("/front/", methods=['GET'])
 def front():
     config2 = Configurations().get_config2()
+
     total_list_obj = ControlsList().go_get_control_list()
     print('front/: ')
     df_pubs = Csv().go_get_pubs()
