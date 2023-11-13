@@ -91,8 +91,9 @@ for (i=0; i<list.length; i++) {
     var marker = list[i]
     document.getElementById(marker).addEventListener('click', (function (marker) {
         return function () {
-            alert(marker)
+            alert(marker + ' : ' + config2['env'])
             var base_url = window.location.hostname
+
             if (config2['env'] == 'prod') {
                 var url = "http://" + base_url + "/front_home/"
             } else {

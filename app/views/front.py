@@ -19,6 +19,7 @@ from app.models.review.review import Review
 @app.route("/", methods=['GET', 'POST'])
 @app.route("/front/", methods=['GET'])
 def front():
+    config2 = Configurations().get_config2()
     total_list_obj = ControlsList().go_get_control_list()
     print('front/: ')
     df_pubs = Csv().go_get_pubs()
@@ -34,5 +35,6 @@ def front():
     # print(config2['google_key'])
     return render_template('front.html',
                            diary_headers=diary_headers,
+                           config2=config2,
                            total_list_obj=total_list_obj,
                            random_pub_id=_dict_random_pub)
