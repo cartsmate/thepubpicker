@@ -31,7 +31,7 @@ function create_table(pubs_selection) {
         var row = document.createElement("tr");
 
         for (let j = 0; j < headers.length; j++) {
-            console.log('header: ' + headers[j])
+            //console.log('header: ' + headers[j])
             /*
             if (headers[j] == 'distance') {
                 console.log('headers[j]')

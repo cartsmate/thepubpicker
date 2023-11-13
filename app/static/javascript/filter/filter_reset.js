@@ -29,5 +29,5 @@ function filter_reset() {
         document.getElementById(total_list_obj['icon_list'][i] + "_id").style.display = 'block'
         document.getElementById(total_list_obj['icon_list'][i] + "_id").innerHTML = total_list_obj['icon_list'][i] + " (" + filtered_data.length + ")"
     }
-    document.getElementById('button_count').innerHTML = all_data.length
+    //document.getElementById('button_count').innerHTML = all_data.length
 }

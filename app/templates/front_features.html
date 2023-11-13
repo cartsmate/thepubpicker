@@ -75,23 +75,13 @@ function view_all_pubs() {
     const myUrlWithParams = new URL(url);
     window.location.replace(myUrlWithParams.href);
 }
-/*
-            google.maps.event.addListener(marker, 'click', (function (marker, key) {
-                return function () {
-                    set=data[key].pub_name.trim().replace(/%20/g, " ");
-                    infowindow.x = set;
-                    infowindow.setContent("<p><b>" + set + "</b></p>" +
-                        "<a href='#' onclick='click_pub()'>" + set + "</a>");
-                    infowindow.open(map, marker);
-                    }
-                })(marker, key));
-*/
+
 list = ['brunch','dart','entertain','favourite','garden','history','late','music','pool','quiz','roast','sport']
 for (i=0; i<list.length; i++) {
     var marker = list[i]
     document.getElementById(marker).addEventListener('click', (function (marker) {
         return function () {
-            alert(marker + ' : ' + config2['env'])
+            //alert(marker + ' : ' + config2['env'])
             var base_url = window.location.hostname
 
             if (config2['env'] == 'prod') {
@@ -105,39 +95,5 @@ for (i=0; i<list.length; i++) {
             }
         })(marker))
 }
-/*
-document.getElementById('smile_1').addEventListener('click', ()=>{
-    alert('smile_1')
-})
-document.getElementById('smile_2').addEventListener('click', ()=>{
-    alert('smile_2')
-})
-document.getElementById('smile_3').addEventListener('click', ()=>{
-    alert('smile_3')
-})
-document.getElementById('smile_4').addEventListener('click', ()=>{
-    alert('smile_4')
-})
-document.getElementById('smile_5').addEventListener('click', ()=>{
-    alert('smile_5')
-})
-document.getElementById('smile_6').addEventListener('click', ()=>{
-    alert('smile_6')
-})
-document.getElementById('smile_7').addEventListener('click', ()=>{
-    alert('smile_7')
-})
-document.getElementById('smile_8').addEventListener('click', ()=>{
-    alert('smile_8')
-})
-document.getElementById('smile_9').addEventListener('click', ()=>{
-    alert('smile_9')
-})
-document.getElementById('smile_10').addEventListener('click', ()=>{
-    alert('smile_10')
-})
-document.getElementById('smile_11').addEventListener('click', ()=>{
-    alert('smile_11')
-})
-*/
+
 </script>

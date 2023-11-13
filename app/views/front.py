@@ -14,6 +14,7 @@ from app.static.pythonscripts.objects import Objects
 from app.static.pythonscripts.controls_list import ControlsList
 from app.static.pythonscripts.compress import Compress
 from app.models.review.review import Review
+from dotenv import load_dotenv
 
 
 @app.route("/", methods=['GET', 'POST'])
