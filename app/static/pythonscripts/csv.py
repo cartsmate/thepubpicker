@@ -36,13 +36,23 @@ class Csv:
         stations_directions_list = df_stations_directions_trunc.values.tolist()
         return stations_directions_list
 
-    def go_get_all_data(self):
+    def go_get_feature(self, feature):
+        df_all = self.go_get_all()
+        # print('feature')
+        # print(feature)
+        # print('df_all')
+        # print(df_all[['pub_identity', 'pub_deletion', 'brunch', 'history']])
+        df_feature = df_all.loc[df_all[feature] == "true"]
+        return df_feature
+
+    def go_get_all(self):
+        df_pubs = self.go_get_pubs()
         df_reviews = self.go_get_reviews()
         df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
-
-        df_pubs = self.go_get_pubs()
         df_pb_rev = pd.merge(df_pubs, df_rev_no_dupes, on='pub_identity', how='left')
+        return df_pb_rev
 
+    def go_get_data(self, df_pb_rev):
         df_stations = self.go_get_stations()
         df_pb_rev_st = pd.merge(df_pb_rev, df_stations, on='station_identity', how='left')
 

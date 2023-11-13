@@ -17,14 +17,14 @@
                         <div class="row">
                             <div class="col" style="text-align:center; background-color: grey; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-                                    <img src="/static/images/{{total_list_obj['icon_list'][item*4]}}.jpeg" height="75px" width="95px" alt="Live Music">
+                                    <img id="{{total_list_obj['icon_list'][item*4]}}" src="/static/images/{{total_list_obj['icon_list'][item*4]}}.jpeg" height="75px" width="95px" alt="Live Music">
                                 </div>
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                     {{total_list_obj['icon_list'][item*4]}}</div>
                             </div>
                             <div class="col" style="text-align:center; background-color: grey; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-                                    <img src="/static/images/{{total_list_obj['icon_list'][(item*4)+1]}}.jpeg" height="75px" width="95px" alt="Open Late">
+                                    <img id="{{total_list_obj['icon_list'][(item*4)+1]}}" src="/static/images/{{total_list_obj['icon_list'][(item*4)+1]}}.jpeg" height="75px" width="95px" alt="Open Late">
                                 </div>
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                     {{total_list_obj['icon_list'][(item*4)+1]}}</div>
@@ -33,14 +33,14 @@
                         <div class="row">
                             <div class="col" style="text-align:center; background-color: grey; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-                                    <img src="/static/images/{{total_list_obj['icon_list'][(item*4)+2]}}.jpeg" height="75px" width="95px" alt="Quiz">
+                                    <img id="{{total_list_obj['icon_list'][(item*4)+2]}}" src="/static/images/{{total_list_obj['icon_list'][(item*4)+2]}}.jpeg" height="75px" width="95px" alt="Quiz">
                                 </div>
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                     {{total_list_obj['icon_list'][(item*4)+2]}}</div>
                             </div>
                             <div class="col" style="text-align:center; background-color: grey; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-                                    <img src="/static/images/{{total_list_obj['icon_list'][(item*4)+3]}}.jpeg" height="75px" width="95px" alt="Roast">
+                                    <img id="{{total_list_obj['icon_list'][(item*4)+3]}}" src="/static/images/{{total_list_obj['icon_list'][(item*4)+3]}}.jpeg" height="75px" width="95px" alt="Roast">
                                 </div>
                                 <div class="row" style="justify-content: center; background-color: green; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
                                     {{total_list_obj['icon_list'][(item*4)+3]}}</div>
@@ -68,11 +68,71 @@
 </div>
 
 <script>
-    function view_all_pubs() {
-        //alert('pressed button')
-        var base_url = window.location.hostname
-        var url = "http://" + base_url + ":5000/front_home/"
-        const myUrlWithParams = new URL(url);
-        window.location.replace(myUrlWithParams.href);
-    }
+function view_all_pubs() {
+    //alert('pressed button')
+    var base_url = window.location.hostname
+    var url = "http://" + base_url + ":5000/front_home/"
+    const myUrlWithParams = new URL(url);
+    window.location.replace(myUrlWithParams.href);
+}
+/*
+            google.maps.event.addListener(marker, 'click', (function (marker, key) {
+                return function () {
+                    set=data[key].pub_name.trim().replace(/%20/g, " ");
+                    infowindow.x = set;
+                    infowindow.setContent("<p><b>" + set + "</b></p>" +
+                        "<a href='#' onclick='click_pub()'>" + set + "</a>");
+                    infowindow.open(map, marker);
+                    }
+                })(marker, key));
+*/
+list = ['brunch','dart','entertain','favourite','garden','history','late','music','pool','quiz','roast','sport']
+for (i=0; i<list.length; i++) {
+    var marker = list[i]
+    document.getElementById(marker).addEventListener('click', (function (marker) {
+        return function () {
+            alert(marker)
+            var base_url = window.location.hostname
+            var url = "http://" + base_url + ":5000/front_home/"
+            const myUrlWithParams = new URL(url);
+            myUrlWithParams.searchParams.append('feature', marker);
+            window.location.replace(myUrlWithParams.href);
+            }
+        })(marker))
+}
+/*
+document.getElementById('smile_1').addEventListener('click', ()=>{
+    alert('smile_1')
+})
+document.getElementById('smile_2').addEventListener('click', ()=>{
+    alert('smile_2')
+})
+document.getElementById('smile_3').addEventListener('click', ()=>{
+    alert('smile_3')
+})
+document.getElementById('smile_4').addEventListener('click', ()=>{
+    alert('smile_4')
+})
+document.getElementById('smile_5').addEventListener('click', ()=>{
+    alert('smile_5')
+})
+document.getElementById('smile_6').addEventListener('click', ()=>{
+    alert('smile_6')
+})
+document.getElementById('smile_7').addEventListener('click', ()=>{
+    alert('smile_7')
+})
+document.getElementById('smile_8').addEventListener('click', ()=>{
+    alert('smile_8')
+})
+document.getElementById('smile_9').addEventListener('click', ()=>{
+    alert('smile_9')
+})
+document.getElementById('smile_10').addEventListener('click', ()=>{
+    alert('smile_10')
+})
+document.getElementById('smile_11').addEventListener('click', ()=>{
+    alert('smile_11')
+})
+*/
 </script>

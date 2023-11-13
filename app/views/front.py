@@ -21,7 +21,8 @@ from app.models.review.review import Review
 def front():
     total_list_obj = ControlsList().go_get_control_list()
     print('front/: ')
-    df_all_data = Csv().go_get_all_data()
+    df_pubs = Csv().go_get_pubs()
+    df_all_data = Csv().go_get_data(df_pubs)
     no_of_pubs = df_all_data.shape[0]
     random_index = random.randrange(0, no_of_pubs)
     series_random_pub = df_all_data.iloc[random_index]

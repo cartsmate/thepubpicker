@@ -20,21 +20,31 @@ config2 = Configurations().get_config2()
 
 @app.route("/front_home/", methods=['GET', 'POST'])
 def front_home():
+# @app.route("/front_home/<feature>", methods=['GET', 'POST'])
+# def front_home(feature):
 
     total_list_obj = ControlsList().go_get_control_list()
 
     counter = S3().go_get_counter()
 
     # dataframe
-    df_all_data = Csv().go_get_all_data()
-    _dict = Dataframes().df_to_dict(df_all_data)
 
+    feature = request.args.get('feature')
+    print('feature')
+    print(feature)
+    if feature is not None:
+        df_pubs = Csv().go_get_feature(feature)
+    else:
+        df_pubs = Csv().go_get_all()
+
+    df_all_data = Csv().go_get_data(df_pubs)
+    _dict = Dataframes().df_to_dict(df_all_data)
     all_data_json = _dict
 
     headers = list(df_all_data.columns)
 
-    print('headers')
-    print(headers)
+    # print('headers')
+    # print(headers)
     # headers.append('distance')
 
     stations_directions_list = Csv().go_get_stations_directions_list()
