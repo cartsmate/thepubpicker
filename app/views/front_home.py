@@ -23,6 +23,7 @@ def front_home():
 # @app.route("/front_home/<feature>", methods=['GET', 'POST'])
 # def front_home(feature):
 
+    config2 = Configurations().get_config2()
     total_list_obj = ControlsList().go_get_control_list()
 
     counter = S3().go_get_counter()
