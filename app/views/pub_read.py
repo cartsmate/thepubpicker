@@ -30,16 +30,15 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-# @app.route("/pub/<pub_id>", methods=['GET', 'POST'])
-# def pub_read(pub_id):
 @app.route("/pub/", methods=['GET', 'POST'])
 def pub_read():
-    # if session.get('logged_in') != True:
-    #     return redirect(url_for('login'))
 
     print('pub_read')
 
-    pub_id = request.args.get('pub_id')
+    config2 = Configurations().get_config2()
+
+    total_list_obj = ControlsList().go_get_control_list()
+    pub_id = request.args.get('id')
     station = request.args.get('station')
     day = request.args.get('day')
 
@@ -57,10 +56,6 @@ def pub_read():
 
     total_list_obj = ControlsList().go_get_control_list()
 
-    # df_areas = Csv().get_areas()
-    # areas_json = Dataframes().df_to_dict(df_areas)
-
-    # df_stations = Csv().get_stations()
     df_stations = Csv().go_get_stations()
     stations_json = Dataframes().df_to_dict(df_stations)
 
@@ -69,7 +64,7 @@ def pub_read():
     if request.method == 'GET':
         print('pub_read: GET')
         df_pub_review = EntitiesSingle().get_pub_review(pub_id)
-        df_pub_review['colour'] = total_list_obj['selected_pub_colour']
+        # df_pub_review['colour'] = total_list_obj['selected_pub_colour']
         pub_review_json = Dataframes().df_to_dict(df_pub_review)
 
         selected_station = df_pub_review['station_identity'].values[0]
@@ -77,7 +72,7 @@ def pub_read():
 
         pub_review_list = df_pub_review['pub_identity'].tolist()
         df_pubs_reviews = EntitiesMulti().get_pubs_reviews()
-        df_pubs_reviews['colour'] = total_list_obj['other_pub_colour']
+        # df_pubs_reviews['colour'] = total_list_obj['other_pub_colour']
         df_pubs_reviews2 = df_pubs_reviews[~df_pubs_reviews['pub_identity'].isin([pub_review_list])]
         pubs_reviews_json = Dataframes().df_to_dict(df_pubs_reviews2)
 
@@ -90,7 +85,8 @@ def pub_read():
         df_diary_selected = df_diary_selected.fillna('')
         diary_json = Dataframes().df_to_dict(df_diary_selected)
 
-        return render_template("pub_read.html", form_type='read', google_key=config2['google_key'],
+        return render_template("pub.html", form_type='read', google_key=config2['google_key'],
+                               total_list_obj=total_list_obj,
                                pubs_selection=pub_review_json, config=config, config2=config2,
                                map_lat=review_lat, map_lng=review_long,
                                alias=alias, diary_headers=diary_headers,

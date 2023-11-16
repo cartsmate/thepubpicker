@@ -1,6 +1,6 @@
 
 class Address:
-    def __init__(self, name='address', alias="Pub Address", required='true', form_visible='true',
+    def __init__(self, name='address', alias="Address", required='true', form_visible='true',
                  table_visible='false', value="", control='input', rank=1):
         self.name = name
         self.alias = alias

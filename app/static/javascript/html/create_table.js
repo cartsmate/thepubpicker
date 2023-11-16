@@ -55,7 +55,7 @@ function create_table(pubs_selection) {
                 row.appendChild(cell);
                 } else if (headers[j] == 'pub_name') {
                     href.setAttribute("href", "#");
-                    href.setAttribute("onclick", "click_pub('" + pubs_selection[i]['pub_identity'] + "',)");
+                    href.setAttribute("onclick", "click_front_pub('" + pubs_selection[i]['pub_identity'] + "',)");
                     text_ref = pubs_selection[i][headers[j]]
                     const cellText = document.createTextNode(text_ref);
                     href.appendChild(cellText);

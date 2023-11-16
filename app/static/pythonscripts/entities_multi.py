@@ -29,7 +29,7 @@ class EntitiesMulti:
 
     def get_pubs_area(self):
         df_pubs = Csv().get_pubs()
-        df_areas = Csv().get_areas()
+        # df_areas = Csv().get_areas()
         # df_pubs = S3().get_s3_pubs()
         # df_areas = S3().get_s3_areas()
         df_stations = df_areas[['area_identity', 'area_name']]
@@ -44,15 +44,15 @@ class EntitiesMulti:
         return df_pubs_new
 
     def get_pubs_reviews_stations(self):
-        df_reviews = Csv().get_reviews()
-        df_pubs_reviews = pd.merge(self.get_pubs_station(), df_reviews, how='left', on='pub_identity')
+        df_reviews = Csv().go_get_reviews()
+        df_pubs_reviews = pd.merge(Csv().go_get_pubs()(), df_reviews, how='left', on='pub_identity')
         df_pubs_reviews.fillna(0, inplace=True)
         return df_pubs_reviews
 
     def get_pubs_reviews(self):
-        df_reviews = Csv().get_reviews()
+        df_reviews = Csv().go_get_reviews()
         # df_reviews = S3().get_s3_reviews()
-        df_pubs_reviews = pd.merge(self.get_pubs_station(), df_reviews, how='left', on='pub_identity')
+        df_pubs_reviews = pd.merge(Csv().go_get_pubs(), df_reviews, how='left', on='pub_identity')
         # df_pubs_reviews = df_pubs_reviews.loc[(df_pubs_reviews['pub_deletion'] == 'False')]
         # df_pubs_reviews['score'] = round(df_pubs_reviews.loc[:, config['review']['score']].mean(axis=1) * 10)
         df_pubs_reviews.fillna(False, inplace=True)

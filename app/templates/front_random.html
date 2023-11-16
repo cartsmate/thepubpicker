@@ -4,7 +4,7 @@
     </div>
     <div class="row" id="random_name" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">name here</div>
     <div class="row" id="random_rank" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">rank here</div>
-    <div class="row" id="random_description" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">description here</div>
+    <div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">description here</a></div>
     <div class="row" id="button" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
         <button onclick="pub_of_the_week()">View pub of the week</button>
     </div>
@@ -24,8 +24,10 @@
     }
 
     function pub_of_the_week() {
-        alert('pressed button')
-        var id = '6d9c8d4e-fa1d-433d-aea4-ff3f5c36cb64'
+        //alert(document.getElementById('random_name').text)
+        //var id = '6d9c8d4e-fa1d-433d-aea4-ff3f5c36cb64'
+        var id = document.getElementById('random_description').text
+        //alert('pub_id: ' + id)
         click_front_pub(id)
         /*
         var base_url = window.location.hostname
@@ -35,7 +37,7 @@
         window.location.replace(myUrlWithParams.href);
 
         href.setAttribute("href", "#");
-        href.setAttribute("onclick", "click_pub('" + pubs_selection[i]['pub_identity'] + "',)");
+        href.setAttribute("onclick", "click_front_pub('" + pubs_selection[i]['pub_identity'] + "',)");
         */
     }
 </script>

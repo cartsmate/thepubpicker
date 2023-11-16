@@ -1,12 +1,9 @@
-<div class="col">
-    <form id="pub_form" method="post">
-        <div class="form-group row">
-            <div class="col" id="pub_read" style="display: none">
-                {% include "pub_01_features.html" %}
-                {% include "pub_02_form.html" %}
-                {% include "pub_04_diary.html" %}
-                {% include "pub_05_form_submit.html" %}
-            </div>
-        </div>
-    </form>
-</div>
+{% extends 'base_front.html' %}
+
+{% block script %}{% endblock %}
+
+{% block on_load %}<body onload="" style="background-color:grey">{% endblock %}
+
+{% block block_1 %}{% include "map.html" %}{% endblock %}
+
+{% block block_2 %}{% include "pub_read.html" %}{% endblock %}

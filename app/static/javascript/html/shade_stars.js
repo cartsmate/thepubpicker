@@ -1,5 +1,8 @@
 function shadeStars(star, num, where){
     console.log('shadeStars')
+    console.log('star: ' + star)
+    console.log('num: ' + num)
+    console.log('where: ' + where)
     //console.log('shade stars from ' + where)
     //console.log('rating: ' + num)
     //console.log(star)

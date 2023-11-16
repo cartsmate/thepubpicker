@@ -1,7 +1,7 @@
 
 
 class Entertain:
-    def __init__(self, name="entertain", alias="Review Fun", alias2="games", required='true', form_visible='false',
+    def __init__(self, name="entertain", alias="Fun", alias2="games", required='true', form_visible='false',
                  table_visible='false', value='false',
                  control="check", icon="theatre.png"):
         self.name = name

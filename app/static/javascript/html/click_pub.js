@@ -2,7 +2,9 @@ function click_pub(id) {
     console.log("CLICK_PUB")
     //console.log('id: ' + id)
     //form_type = 'read'
-    page_layout('read')
+    //page_layout('read')
+
+
     filter_reset()
     document.getElementById('collapsible_filters').click()
     document.getElementById('all_filters').style.display = "none"
@@ -44,4 +46,14 @@ function click_pub(id) {
     //document.getElementById("x_station_name").value = filtered_data[0]['station_name']
     //document.getElementById("station_2").value = document.getElementById("x_station").value;
 
+
+    var base_url = window.location.hostname
+    if (config2['env'] == 'qual') {
+        var url = "http://" + base_url + ":5000/pub/"
+    } else {
+        var url = "http://" + base_url + "/pub/"
+    }
+    const myUrlWithParams = new URL(url);
+    myUrlWithParams.searchParams.append('pub', id);
+    window.location.replace(myUrlWithParams.href);
 }
