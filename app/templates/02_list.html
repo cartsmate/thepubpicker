@@ -1,0 +1,15 @@
+{% extends '00_template.html' %}
+
+{% block script %}
+    <script>pub = {{ pub | tojson }}</script>
+{% endblock %}
+
+{% block on_load %}
+    <body onload="map_load('{{env_vars['google_key']}}', pub)" style="background-color:grey">
+{% endblock %}
+
+{% block heading %}{% endblock %}
+
+{% block map %}{% include "9_map.html" %}{% endblock %}
+
+{% block block_3 %}{% include "9_list.html" %}{% endblock %}

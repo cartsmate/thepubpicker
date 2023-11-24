@@ -38,10 +38,6 @@ class Csv:
 
     def go_get_feature(self, feature):
         df_all = self.go_get_all()
-        # print('feature')
-        # print(feature)
-        # print('df_all')
-        # print(df_all[['pub_identity', 'pub_deletion', 'brunch', 'history']])
         df_feature = df_all.loc[df_all[feature] == "true"]
         return df_feature
 
@@ -59,7 +55,7 @@ class Csv:
         df_directions = self.go_get_directions()
         df_pb_rev_st_dir = pd.merge(df_pb_rev_st, df_directions, on='direction_identity', how='left')
 
-        df_diary = self.go_get_diary()
+        df_diary = self.go_get_diarys()
         df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
         # df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
 
@@ -89,12 +85,12 @@ class Csv:
                                                                   'roast': str, 'sport': str})
         return df_reviews
 
-    def go_get_diary(self):
-        df_diary = pd.read_csv(directory_path + '/files/diary.csv', dtype={'pub_identity': str, 'monday': str,
+    def go_get_diarys(self):
+        df_diarys = pd.read_csv(directory_path + '/files/diary.csv', dtype={'pub_identity': str, 'monday': str,
                                                                        'tuesday': str, 'wednesday': str,
                                                                        'thursday': str, 'friday': str,
                                                                        'saturday': str, 'sunday': str})
-        return df_diary
+        return df_diarys
 
     def go_get_stations(self):
         df_station = pd.read_csv(directory_path + '/files/stations.csv',

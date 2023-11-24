@@ -17,7 +17,6 @@ from app.models.review.review import Review
 from dotenv import load_dotenv
 
 
-@app.route("/", methods=['GET', 'POST'])
 @app.route("/front/", methods=['GET'])
 def front():
     config2 = Configurations().get_config2()

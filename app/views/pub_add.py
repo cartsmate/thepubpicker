@@ -149,7 +149,7 @@ def pub_add():
 
     diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
-    return render_template("pub_read.html", form_type='add', google_key=config2['google_key'],
+    return render_template("pub.html", form_type='add', google_key=config2['google_key'],
                            config=config, config2=config2, diary_body=diary_json,
                            map_lat=review_lat, map_lng=review_long,
                            pubs_selection=pub_json, show_other_pubs=True,

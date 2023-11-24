@@ -1,6 +1,6 @@
 function click_pub(id) {
     console.log("CLICK_PUB")
-    //console.log('id: ' + id)
+    console.log('id: ' + id)
     //form_type = 'read'
     //page_layout('read')
 

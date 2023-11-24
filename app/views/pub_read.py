@@ -61,12 +61,16 @@ def pub_read():
 
     diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
+    stations_directions_list = Csv().go_get_stations_directions_list()
+    directions_list = Csv().go_get_directions_list()
+
     if request.method == 'GET':
         print('pub_read: GET')
         df_pub_review = EntitiesSingle().get_pub_review(pub_id)
         # df_pub_review['colour'] = total_list_obj['selected_pub_colour']
         pub_review_json = Dataframes().df_to_dict(df_pub_review)
-
+        print('pub_review_json')
+        print(pub_review_json)
         selected_station = df_pub_review['station_identity'].values[0]
         station = selected_station
 
@@ -85,13 +89,15 @@ def pub_read():
         df_diary_selected = df_diary_selected.fillna('')
         diary_json = Dataframes().df_to_dict(df_diary_selected)
 
-        return render_template("pub.html", form_type='read', google_key=config2['google_key'],
+        return render_template("pub_read.html", form_type='read', google_key=config2['google_key'],
                                total_list_obj=total_list_obj,
-                               pubs_selection=pub_review_json, config=config, config2=config2,
+                               all_data=pub_review_json, config=config, config2=config2,
                                map_lat=review_lat, map_lng=review_long,
                                alias=alias, diary_headers=diary_headers,
                                station=station, diary_body=diary_json,
                                pubs_reviews=pubs_reviews_json, stations=stations_json,
+                               stations_directions_list=stations_directions_list,
+                               directions_list=directions_list,
                                # areas=areas_json, fields_list=fields_list,
                                # star_list=star_list, dropdown_list=dropdown_list, input_list=input_list,
                                # check_list=check_list, slider_list=slider_list, date_list=date_list,
