@@ -1,0 +1,12 @@
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_setup.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_delete.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_create.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_columns.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_filter.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_addjson.js') }}"></script>
+{% endblock %}
+
+<div id="list_page2">
+    <div id="dynamic_table"></div>
+</div>

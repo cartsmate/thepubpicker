@@ -19,8 +19,8 @@ config = Configurations().get_config()
 config2 = Configurations().get_config2()
 
 
-@app.route("/list/", methods=['GET', 'POST'])
-def list():
+@app.route("/collection/", methods=['GET', 'POST'])
+def collection():
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -30,12 +30,21 @@ def list():
     # # # GET ALL PUBS WITH FEATURE
     feature = request.args.get('feature')
     if feature is not None:
+        txt = "For only {price:.2f} dollars!"
+        print('{} has been selected'.format(feature))
         df_data = CsvFeature().go_get_1_feature(feature)
 
     # # # OR GET ALL PUBS
     else:
+        print('no feature')
         df_data = Csv().go_get_all()
+
+    # # # FOR TESTING PURPOSES ONLY
+    print('df_data')
     print(df_data)
+    # newdf = df_data.transpose()
+    # print(newdf)
+
     pub_json = Dataframes().df_to_dict(df_data)
 
     headers = df_data.columns
@@ -45,11 +54,9 @@ def list():
     alias = Objects().go_get_alias()
     diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
-    # # # FOR TESTING PURPOSES ONLY
-    print('alias')
-    print(alias)
-
-    return render_template('02_list.html',
+    return render_template('02_collection.html',
                            pub=pub_json,
                            env_vars=env_vars,
-                           model_formats=model_formats)
+                           model_formats=model_formats,
+                           alias=alias,
+                           visible=visible)

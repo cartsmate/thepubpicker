@@ -1,0 +1,20 @@
+{% extends '00_template.html' %}
+
+{% block script %}
+    <script>pub = {{ pub | tojson }}</script>
+    <script>alias = {{ alias | tojson }}</script>
+    <script>visible = {{ visible | tojson }}</script>
+    <script>env_vars = {{ env_vars | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/list_onload.js') }}"></script>
+
+{% endblock %}
+
+{% block on_load %}
+    <body onload="list_onload('{{env_vars['google_key']}}', pub)" style="background-color:grey">
+{% endblock %}
+
+{% block heading %}{% endblock %}
+
+{% block map %}{% include "9_map.html" %}{% endblock %}
+
+{% block list %}{% include "9_list.html" %}{% endblock %}

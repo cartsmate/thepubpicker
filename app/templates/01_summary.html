@@ -2,10 +2,11 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
+    <script>env_vars = {{ env_vars | tojson }}</script>
 {% endblock %}
 
 {% block on_load %}
-    <body onload="map_load('{{env_vars['google_key']}}', pub)" style="background-color:grey">
+    <body onload="map_load()" style="background-color:grey">
 {% endblock %}
 
 {% block heading %}{% endblock %}
@@ -21,4 +22,3 @@
 {% block carousel %}
     {% include "9_carousel.html" %}
 {% endblock %}
-
