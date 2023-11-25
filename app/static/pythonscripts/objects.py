@@ -1,11 +1,11 @@
 from flask import render_template, request
-from app.models.pub.pub import Pub
+from app.models.detail.pub import Pub
 from app.models.review.review import Review
 from app.models.area.area import Area
 from app.models.station.station import Station
 from app.models.direction.direction import Direction
 from app.models.photo.photo import Photo
-from app.models.diary.week import Week
+from app.models.diary.diary import Diary
 
 
 class Objects:
@@ -39,8 +39,8 @@ class Objects:
             else:
                 visible[k] = v.table_visible
 
-        diary_week = Week().__dict__.items()
-        for k, v in diary_week:
+        diary = Diary().__dict__.items()
+        for k, v in diary:
             visible[k] = 'false'
 
         return visible
@@ -52,8 +52,8 @@ class Objects:
         for k, v in inst_pub_review.__dict__.items():
             alias[k] = v.alias
 
-        diary_week = Week().__dict__.items()
-        for k, v in diary_week:
+        diary = Diary().__dict__.items()
+        for k, v in diary:
             alias[k] = k
         alias['distance'] = 'distance'
         return alias

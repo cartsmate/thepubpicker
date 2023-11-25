@@ -3,9 +3,9 @@ import pandas as pd
 from flask import request
 from config import Configurations
 # from app.models.pub import *
-from app.models.pub.place import Place
-from app.models.pub.pub_identity import PubIdentity
-from app.models.pub.pub import Pub
+from app.models.detail.place import Place
+from app.models.detail.pub_identity import PubIdentity
+from app.models.detail.pub import Pub
 from app.models.review.review import Review
 from app.models.diary.week import Week
 from app.static.pythonscripts.uuid import Uuid

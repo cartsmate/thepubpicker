@@ -9,7 +9,9 @@
     <body onload="map_load()" style="background-color:grey">
 {% endblock %}
 
-{% block heading %}{% endblock %}
+{% block header %}
+<script>document.getElementById("template_header").style.display = "none"</script>
+{% endblock %}
 
 {% block map %}
     {% include "9_map.html" %}
@@ -21,4 +23,8 @@
 
 {% block carousel %}
     {% include "9_carousel.html" %}
+{% endblock %}
+
+{% block list %}
+<script>document.getElementById("template_list").style.display = "none"</script>
 {% endblock %}

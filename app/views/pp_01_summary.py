@@ -28,19 +28,19 @@ def summary():
     model_formats = ControlsList().go_get_control_list()
 
     # # # GET RANDOM PUB
-    df_pubs = Csv().go_get_pubs()
+    df_details = Csv().go_get_details()
 
-    no_of_pubs = df_pubs.shape[0]
-    random_index = random.randrange(0, no_of_pubs)
-    series_random_pub = df_pubs.iloc[random_index]
+    no_of_details = df_details.shape[0]
+    random_index = random.randrange(0, no_of_details)
+    series_random_pub = df_details.iloc[random_index]
 
     random_pub_id = series_random_pub['pub_identity']
-    df_data = CsvSingle().go_get_1_data(random_pub_id)
-    pub_json = Dataframes().df_to_dict(df_data)
+    df_pub = CsvSingle().go_get_1_pub(random_pub_id)
+    pub_json = Dataframes().df_to_dict(df_pub)
 
     # # # FOR TESTING PURPOSES ONLY
-    newdf = df_data.transpose()
-    print(newdf)
+    newdf = df_pub.transpose()
+    # print(newdf)
 
     return render_template('01_summary.html',
                            pub=pub_json,

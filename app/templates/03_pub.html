@@ -1,0 +1,35 @@
+{% extends '00_template.html' %}
+
+{% block script %}
+    <script>pub = {{ pub | tojson }}</script>
+    <script>env_vars = {{ env_vars | tojson }}</script>
+    <script>model_formats = {{ model_formats | tojson }}</script>
+    <script>alias = {{ alias | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_detail.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_pub.js') }}"></script>
+{% endblock %}
+
+{% block on_load %}
+    <body onload="onload_pub()" style="background-color:grey">
+{% endblock %}
+
+{% block header %}
+<script>document.getElementById("template_header").style.display = "none"</script>
+{% endblock %}
+
+{% block map %}{% include "9_map.html" %}{% endblock %}
+
+{% block pub_summary %}
+<script>document.getElementById("template_summary").style.display = "none"</script>
+{% endblock %}
+
+{% block carousel %}
+<script>document.getElementById("template_carousel").style.display = "none"</script>
+{% endblock %}
+
+{% block list %}
+<script>document.getElementById("template_list").style.display = "none"</script>
+{% endblock %}
+
+{% block pub %}{% include "9_pub.html" %}{% endblock %}

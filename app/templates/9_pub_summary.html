@@ -1,3 +1,9 @@
+{% block script %}
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_setup.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/buttons/pub_of_the_week.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub.js') }}"></script>
+{% endblock %}
+
 <div class="col" style="background-color: black; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
     {% if pub[0]['photo_identity'] == '' %}
         <div class="row" id="pic" style="display:none; justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">

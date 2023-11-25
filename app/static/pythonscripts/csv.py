@@ -10,7 +10,7 @@ directory_path = config2['directory_path']
 class Csv:
 
     def go_get_stations_directions(self):
-        df_pub_with_station = pd.merge(self.go_get_pubs(), self.go_get_stations(), on='station_identity',
+        df_pub_with_station = pd.merge(self.go_get_details(), self.go_get_stations(), on='station_identity',
                                        how='left').sort_values(
                                        by='station_name')
         unique_station_identity_list = df_pub_with_station['station_identity'].unique()
@@ -42,39 +42,39 @@ class Csv:
         return df_feature
 
     def go_get_all(self):
-        df_pubs = self.go_get_pubs()
+        df_details = self.go_get_details()
         df_reviews = self.go_get_reviews()
-        df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
-        df_pb_rev = pd.merge(df_pubs, df_rev_no_dupes, on='pub_identity', how='left')
-        return df_pb_rev
+        df_reviews_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
+        df_detaill_reviews = pd.merge(df_details, df_reviews_no_dupes, on='pub_identity', how='left')
+        return df_detaill_reviews
 
-    def go_get_data(self, df_pb_rev):
+    def go_get_pubs(self, df_detail_reviews):
         df_stations = self.go_get_stations()
-        df_pb_rev_st = pd.merge(df_pb_rev, df_stations, on='station_identity', how='left')
+        df_details_reviews_station = pd.merge(df_detail_reviews, df_stations, on='station_identity', how='left')
 
         df_directions = self.go_get_directions()
-        df_pb_rev_st_dir = pd.merge(df_pb_rev_st, df_directions, on='direction_identity', how='left')
+        df_detail_reviews_station_direction = pd.merge(df_details_reviews_station, df_directions, on='direction_identity', how='left')
 
         df_diary = self.go_get_diarys()
-        df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
-        # df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
+        df_detail_reviews_station_direction_diary = pd.merge(df_detail_reviews_station_direction, df_diary, on='pub_identity', how='left')
+        # df_detail_reviews_station_direction_diary = df_detail_reviews_station_direction_diary.fillna('')
 
         df_photos = self.go_get_photos()
         print('df_photos')
         print(df_photos)
-        df_with_photos = pd.merge(df_pb_rev_st_dir_dry, df_photos, on='pub_identity', how='left')
-        df_pb_rev_st_dir_dry = df_with_photos.fillna('')
+        df_pubs = pd.merge(df_detail_reviews_station_direction_diary, df_photos, on='pub_identity', how='left')
+        df_pubs = df_pubs.fillna('')
 
-        return df_pb_rev_st_dir_dry
+        return df_pubs
 
-    def go_get_pubs(self):
-        df_pubs = pd.read_csv(directory_path + '/files/pubs.csv', dtype={'pub_identity': str, 'area_identity': str,
+    def go_get_details(self):
+        df_details = pd.read_csv(directory_path + '/files/details.csv', dtype={'pub_identity': str, 'area_identity': str,
                                                                'station_identity': str, 'pub_deletion': str,
                                                                'pub_name': str, 'address': str, 'category': str,
                                                                'colour': str, 'place': str, 'pub_latitude': float,
                                                                'pub_longitude': float, 'rank': float,
                                                                'detail': str})
-        return df_pubs
+        return df_details
 
     def go_get_reviews(self):
         df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_deletion': str, 'brunch': str,

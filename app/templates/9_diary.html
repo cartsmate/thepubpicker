@@ -1,0 +1,12 @@
+{% for key, field in diary.__dict__.items() %}
+    {% if key != "pub_identity" %}
+        <div class="form-group row" id="row_{{field.name}}" style="margin-top: 5px; display:flex; justify-content: center;">
+            <div class="col" style="width:60px; padding:0px;">
+                <label class="col-form-label" for="{{key}}" style="font-size:12px; width:60px; padding:0px; margin:0px;" >{{key}}</label>
+            </div>
+            <div class="col" id="div_{{key}}" style="width:220px; text-align:left; visibility:visible; display:block; text-align:left" >
+                <input style="font-size:12px; overflow-y: scroll; resize: none; height: 30px; text-align:left; visibility:visible; display:block; width:190px;" class="form-control" type='textarea' name="{{key}}" id="{{key}}" >
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

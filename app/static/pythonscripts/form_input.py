@@ -1,6 +1,6 @@
 from flask import request
 from config import Configurations
-from app.models.pub.pub import Pub
+from app.models.detail.pub import Pub
 from app.models.review.review import Review
 from app.models.diary.week import Week
 from app.static.pythonscripts.controls_list import ControlsList

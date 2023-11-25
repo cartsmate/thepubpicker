@@ -1,4 +1,4 @@
-class Week:
+class Diary:
 
     def __init__(self, pub_identity=None, monday=None, tuesday=None, wednesday=None, thursday=None,
                  friday=None, saturday=None, sunday=None):

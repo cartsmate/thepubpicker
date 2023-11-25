@@ -1,6 +1,6 @@
 from app.models.photo.photo_deletion import PhotoDeletion
 from app.models.photo.photo_identity import PhotoIdentity
-from app.models.pub.pub_identity import PubIdentity
+from app.models.detail.pub_identity import PubIdentity
 
 
 class Photo:

@@ -12,14 +12,14 @@ class CsvFeature:
 
 
     def go_get_1_feature(self, feature):
-        df_pubs = Csv().go_get_pubs()
+        df_details = Csv().go_get_details()
 
         df_reviews = Csv().go_get_reviews()
 
         df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
         df_feature = df_rev_no_dupes.loc[df_rev_no_dupes[feature] == "true"]
 
-        df_feat_pub = pd.merge(df_feature, df_pubs, on='pub_identity', how='left')
+        df_feat_pub = pd.merge(df_feature, df_details, on='pub_identity', how='left')
 
         df_stations = Csv().go_get_stations()
         df_pb_rev_st = pd.merge(df_feat_pub, df_stations, on='station_identity', how='left')

@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import uuid
 from config import Configurations
-from app.models.pub.pub import Pub
+from app.models.detail.pub import Pub
 from app.models.review.review import Review
 from app.models.area.area import Area
 from app.models.station.station import Station

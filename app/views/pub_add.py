@@ -3,8 +3,8 @@ import pandas as pd
 from datetime import datetime
 from flask import render_template, request
 from app import app
-from app.models.pub.pub import Pub
-from app.models.pub.pub_identity import PubIdentity
+from app.models.detail.pub import Pub
+from app.models.detail.pub_identity import PubIdentity
 from app.models.review.review import Review
 from app.models.area.area import Area
 from app.models.photo.photo import Photo

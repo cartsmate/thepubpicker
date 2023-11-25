@@ -12,7 +12,7 @@ from app.models.review.review_deletion import ReviewDeletion
 from app.models.review.roast import Roast
 from app.models.review.sport import Sport
 from app.models.review.review_identity import ReviewIdentity
-from app.models.pub.pub_identity import PubIdentity
+from app.models.detail.pub_identity import PubIdentity
 
 
 class Review:

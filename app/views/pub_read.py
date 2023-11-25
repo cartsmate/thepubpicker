@@ -12,7 +12,7 @@ from app.static.pythonscripts.s3 import S3
 from app.static.pythonscripts.entities_multi import EntitiesMulti
 from app.static.pythonscripts.entities_single import EntitiesSingle
 from app.static.pythonscripts.controls_list import ControlsList
-from app.models.pub.pub import Pub
+from app.models.detail.pub import Pub
 from app.models.review.review import Review
 from app.models.diary.week import Week
 from app.models.station.station import Station
@@ -30,7 +30,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@app.route("/pub/", methods=['GET', 'POST'])
+@app.route("/pub_read/", methods=['GET', 'POST'])
 def pub_read():
 
     print('pub_read')
