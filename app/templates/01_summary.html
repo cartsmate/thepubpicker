@@ -2,11 +2,13 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
+    <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_summary.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
-    <body onload="map_load()" style="background-color:grey">
+    <body onload="onload_summary()" style="background-color:grey">
 {% endblock %}
 
 {% block header %}

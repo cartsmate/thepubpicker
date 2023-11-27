@@ -53,7 +53,7 @@ function list_create() {
                 row.appendChild(cell);
                 } else if (key == 'pub_name') {
                     href.setAttribute("href", "#");
-                    href.setAttribute("onclick", "click_front_pub('" + pub[i]['pub_identity'] + "',)");
+                    href.setAttribute("onclick", "redirect_pub('" + pub[i]['pub_identity'] + "',)");
                     text_ref = pub[i][key]
                     const cellText = document.createTextNode(text_ref);
                     href.appendChild(cellText);

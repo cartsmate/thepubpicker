@@ -1,9 +1,5 @@
 function redirect_pub(id) {
     console.log("redirect_pub")
-    //console.log('id: ' + id)
-    //form_type = 'read'
-    //page_layout('read')
-
 
     var base_url = window.location.hostname
     if (env_vars['env'] == 'qual') {

@@ -4,12 +4,13 @@
     <script>pub = {{ pub | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
     <script>visible = {{ visible | tojson }}</script>
+    <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_list.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_collection.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
-    <body onload="onload_list('{{env_vars['google_key']}}', pub)" style="background-color:grey">
+    <body onload="onload_collection('{{env_vars['google_key']}}', pub)" style="background-color:grey">
 {% endblock %}
 
 {% block header %}
