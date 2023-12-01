@@ -1,9 +1,6 @@
-from app.static.pythonscripts.uuid import Uuid
-
-
 class PhotoIdentity:
     def __init__(self, name='photo_identity', alias='Photo Identity', required='false', form_visible='false', table_visible='false',
-                 value=Uuid().generate_uuid(), control='none'):
+                 value=0, control='none'):
         self.name = name
         self.alias = alias
         self.required = required

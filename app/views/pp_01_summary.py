@@ -21,6 +21,7 @@ from config import Configurations
 @app.route("/", methods=['GET'])
 @app.route("/summary/", methods=['GET'])
 def summary():
+    print('START summary')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -41,7 +42,7 @@ def summary():
     # # # FOR TESTING PURPOSES ONLY
     newdf = df_pub.transpose()
     # print(newdf)
-
+    print('END summary')
     return render_template('01_summary.html',
                            pub=pub_json,
                            env_vars=env_vars,

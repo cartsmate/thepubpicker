@@ -6,9 +6,16 @@ function map_load() {
     if (window.navigator.onLine == true) {
         console.log('on-line')
         js.setAttribute("defer", "defer");
-        js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init'
-        document.head.appendChild(js)
+        console.log('pub_latitude : ' + pub[0].pub_latitude)
+        console.log('pub_length : ' + pub.length)
         console.log(pub)
+        if (pub.length == 1 && pub[0].pub_latitude == 0) {
+            js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init_blank'
+        } else {
+            js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init_1'
+        }
+
+        document.head.appendChild(js)
     } else {
         console.log('off-line')
         map_init_none()

@@ -1,0 +1,148 @@
+.page-background {
+    background-color:grey;
+}
+.top-buffer {
+    margin: 5px 0px 0px 0px;
+}
+.bottom-buffer {
+    margin: 0px 0px 5px 0px;
+}
+.orange {
+    background-color:white;
+    padding:0px;
+    margin:1px 0px 1px 0px;
+}
+.black {
+    background-color: white;
+    padding:5px 0px;
+    margin:0px;
+}
+.pink {
+    justify-content: center;
+    background-color: white;
+    padding:0px;
+    margin:0px;
+}
+.green {
+    justify-content: center;
+    background-color: white;
+    padding:0px;
+    margin:0px;
+    font-size: 12px;
+    color: black;
+}
+.grey {
+    text-align:center;
+    background-color: grey;
+    padding:0px;
+    margin:5px;
+}
+.stars {
+    width: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+.star {
+    color: #A9A9A9;
+    position: relative;
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px
+}
+.half_star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    color: #0275d8;
+    overflow: hidden;
+}
+.no_star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    color: #0275d8;
+    overflow: hidden;
+}
+.click {
+    font-size:12px;
+    color: black;
+    background-color: light grey;
+    margin: 0px 5px;
+    padding: 0px 5px;
+}
+.click sm {
+    width: 50px;
+}
+.carousel_pic {
+    height:75px;
+    width:140px;
+}
+.heading {
+    font-size: 16px;
+    font-weight: bold;
+}
+.sub-heading {
+    font-size: 14px;
+    font-weight: bold;
+}
+.photo {
+    height:150px;
+    width:290px;
+}
+.details {
+    margin:0px;
+    padding:0px;
+    display:flex;
+    justify-content: center;
+}
+.label {
+    width:60px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
+.col-data {
+    width:220px;
+    text-align:left;
+    visibility:visible;
+    display:flex;
+    text-align:left"
+}
+.input-data {
+    overflow-y: scroll;
+    resize: none;
+    display:block;
+}
+.details-data {
+    margin: 0px;
+    padding: 0px;
+    width:220px;
+    text-align:left;
+    visibility:visible;
+    display:flex;
+    text-align:left"
+}
+.details-input {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:220px;"
+}
+.details-label {
+    width:60px;
+    padding:0px;
+    margin:0px;
+}
+.no-show {
+    display: none;
+}
+

@@ -1,18 +1,23 @@
 from app import app
+import uuid
+import pandas as pd
 from flask import render_template, request
 from app.static.pythonscripts.csv import Csv
+from app.models.detail.pub import Pub
+from app.models.detail.rank import Rank
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.static.pythonscripts.csv_single import CsvSingle
+from app.static.pythonscripts.new_pub import NewPub
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
 from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
 
-@app.route("/pub/", methods=['GET'])
-def pub():
-    print('START pub')
+@app.route("/add/", methods=['GET'])
+def add():
+    print('START add')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -22,20 +27,24 @@ def pub():
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
 
-    # # # GET REQUESTED PUB
-    pub_id = request.args.get('id')
-    df_pub = CsvSingle().go_get_1_pub(pub_id)
+    # # # GET NEW BLANK PUB TEMPLATE
+    df_new_pub = NewPub().go_new_pub()
+    pub_json = Dataframes().df_to_dict(df_new_pub)
 
-    pub_json = Dataframes().df_to_dict(df_pub)
+    # # # GET LIST OF STATIONS
+    df_stations = Csv().go_get_stations()
+    stations_json = Dataframes().df_to_dict(df_stations)
 
     # # # FOR TESTING PURPOSES ONLY
-    newdf = df_pub.transpose()
-    # print(newdf)
-    print('END pub')
-    return render_template('03_pub.html',
+    newdf = df_new_pub.transpose()
+    print(newdf)
+    print('END add')
+
+    return render_template('04_add.html',
                            pub=pub_json,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
                            review=Review(),
-                           diary=Diary())
+                           diary=Diary(),
+                           stations=stations_json)

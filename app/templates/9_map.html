@@ -1,13 +1,19 @@
 {% block script %}
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/nearest_station.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/listener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_1.js') }}"></script>
     <script>
-        function map_init() {
-            console.log('MAP INIT')
-            map = map_create()
+        function map_init_1() {
+            console.log('MAP INIT 1')
+            map = map_create(pub[0].pub_latitude, pub[0].pub_longitude)
             marker_add_1(map)
-
+        }
+        function map_init_blank() {
+            console.log('MAP INIT BLANK')
+            map = map_create(51.5, -0.11)
+            map_listener_click(map)
         }
     </script>
     <script>
@@ -16,13 +22,10 @@
             document.getElementById('template_map').style.display = 'none'
         }
     </script>
-<style>
-.box {
-  width: 300px;
-  height: 150px;
-  border: 1px solid black;
-}
-</style>
 {% endblock %}
 
-<div class="box" id="map"></div>
+<div class="col black">
+    <div class="row pink" id="pic">
+        <div class="box green" id="map"></div>
+    </div>
+</div>

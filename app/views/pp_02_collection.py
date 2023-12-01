@@ -21,6 +21,7 @@ config2 = Configurations().get_config2()
 
 @app.route("/collection/", methods=['GET', 'POST'])
 def collection():
+    print('START collection')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -30,7 +31,6 @@ def collection():
     # # # GET ALL PUBS WITH FEATURE
     feature = request.args.get('feature')
     if feature is not None:
-        txt = "For only {price:.2f} dollars!"
         print('{} has been selected'.format(feature))
         df_data = CsvFeature().go_get_1_feature(feature)
 
@@ -53,7 +53,7 @@ def collection():
     visible = Objects().go_get_visible()
     alias = Objects().go_get_alias()
     diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-
+    print('END collection')
     return render_template('02_collection.html',
                            pub=pub_json,
                            env_vars=env_vars,

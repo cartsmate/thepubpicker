@@ -1,6 +1,3 @@
-from app.static.pythonscripts.uuid import Uuid
-
-
 class Detail:
     def __init__(self, name="detail", alias="Detail", alias2="", required='false', form_visible='true',
                  table_visible='false', value="TBC", control="input", icon='none', rank=3):

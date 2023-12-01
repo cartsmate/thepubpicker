@@ -10,7 +10,12 @@
 {% endblock %}
 
 {% block on_load %}
-    <body onload="onload_collection('{{env_vars['google_key']}}', pub)" style="background-color:grey">
+    <body onload="onload_collection('{{env_vars['google_key']}}', pub)" class="page-background-color">
+{% endblock %}
+
+{% block title %}
+    {% include "9_title.html" %}
+    {% include "9_pub_filter.html" %}
 {% endblock %}
 
 {% block header %}
@@ -28,3 +33,15 @@
 {% endblock %}
 
 {% block list %}{% include "9_list.html" %}{% endblock %}
+
+{% block add %}
+    {% include "9_pub_add.html" %}
+{% endblock %}
+
+{% block edit %}
+<script>document.getElementById("template_edit").style.display = "none"</script>
+{% endblock %}
+
+{% block pub %}
+<script>document.getElementById("template_pub").style.display = "none"</script>
+{% endblock %}

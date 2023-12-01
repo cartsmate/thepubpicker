@@ -4,20 +4,12 @@
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub.js') }}"></script>
 {% endblock %}
 
-<div class="col" style="background-color: black; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-    {% if pub[0]['photo_identity'] == '' %}
-        <div class="row" id="pic" style="display:none; justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-
-        </div>
-    {% else %}
-        <div class="row" id="pic" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-            <img src="{{ url_for('static',filename='images/venue/{}.jpeg'.format(pub[0]['photo_identity']) ) }}" id="random_photo" height="170px" width="260px" alt="pub">
-        </div>
-    {% endif %}
-    <div class="row" id="random_name" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">{{ pub[0]['pub_name'] }}</div>
-    <div class="row" id="random_rank" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">{% include "9_stars.html" %}</div>
-    <div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">{{ pub[0]['pub_identity'] }}</a></div>
-    <div class="row" id="button" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-        <button onclick="pub_of_the_week()">View pub of the week</button>
+<div class="col black">
+    <div class="row pink" id="pic">{% include "9_photo.html" %}</div>
+    <div class="row pink sub-heading" id="random_name">{{ pub[0]['pub_name'] }}</div>
+    <div class="row pink" id="random_rank">{% include "9_stars.html" %}</div>
+    <!--<div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">{{ pub[0]['pub_identity'] }}</a></div>-->
+    <div class="row pink bottom-buffer" id="button">
+        <button onclick="pub_of_the_week('{{ pub[0]['pub_identity'] }}')" class="btn click" >View pub of the week</button>
     </div>
 </div>

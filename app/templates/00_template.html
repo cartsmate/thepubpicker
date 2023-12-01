@@ -7,16 +7,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/front-layout.css') }}">
-
-        <style>
-.box {
-  width: 200px;
-  height: 100px;
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
-}
-</style>
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -26,15 +17,23 @@
 
     </head>
     {% block on_load %}{% endblock %}
-        <div class="container-fluid" style="background-color:white; width:360px;">
-            <div class="row" id="template_title" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px">{% include "9_title.html" %}</div>
-            <div class="row" id="template_header" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px">{% block header %}{% endblock %}</div>
-            <div class="row" id="template_map" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px">{% block map %}{% endblock %}</div>
-            <div class="row" id="template_summary" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px">{% block pub_summary %}{% endblock %}</div>
-            <div class="row" id="template_carousel" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px">{% block carousel %}{% endblock %}</div>
-            <div class="row" id="template_list" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px 5px 5px">{% block list %}{% endblock %}</div>
-            <div class="row" id="template_pub" style="background-color:orange; padding:5px 5px 5px 5px; margin:10px 5px 5px 5px">{% block pub %}{% endblock %}</div>
+        <div class="container-fluid" style="background-color:grey; width:360px;">
+            <div class="row orange" id="template_title">
+                <div class="col black">
+                    <div class="row pink">
+                        {% block title %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+            <div class="row orange" id="template_header">{% block header %}{% endblock %}</div>
+            <div class="row orange" id="template_add">{% block add %}{% endblock %}</div>
+            <div class="row orange" id="template_edit">{% block edit %}{% endblock %}</div>
+            <div class="row orange" id="template_map">{% block map %}{% endblock %}</div>
+            <div class="row orange" id="template_summary">{% block pub_summary %}{% endblock %}</div>
+            <div class="row orange" id="template_carousel">{% block carousel %}{% endblock %}</div>
+            <div class="row orange" id="template_list">{% block list %}{% endblock %}</div>
+            <div class="row orange" id="template_pub">{% block pub %}{% endblock %}</div>
         </div>
-        <div id="googleMap" style="width:100%, height:400px;"></div>
+        <!--<div id="googleMap" style="width:100%, height:400px;"></div>-->
     </body>
 </html>

@@ -1,21 +1,21 @@
 {% for field in model_formats['fields_list'] %}
     {% if field not in model_formats['icon_list'] %}
         {% if field in model_formats['form_visible_list'] %}
-            <div class="form-group row" id="row_{{field}}" style="margin-top: 5px; display:flex; justify-content: center;">
-                <div class="col" style="width:60px; padding:0px;">
-                    <label class="col-form-label" style="height: 30px; font-size:12px; width:60px; padding:0px; margin:0px;" for="{{field}}" >{{alias[field]}}</label>
+            <div class="form-group row details" id="row_{{field}}" >
+                <div class="col details-label" >
+                    <label class="col-form-label label" for="{{field}}" >{{alias[field]}}</label>
                 </div>
-                <div class="col" id="div_{{field}}" style="width:220px; text-align:left; visibility:visible; display:flex; text-align:left" >
+                <div class="col details-data" id="div_{{field}}" >
                     {% if field in model_formats['dropdown_list'] %}
                         {% include "control_dropdown.html" %}
                     {% elif field in model_formats['star_list'] %}
-                        {% include "pub_03_form_star.html" %}
+                        {% include "9_stars.html" %}
                     {% elif field in model_formats['slider_list'] %}
                         {% include "control_slider.html" %}
                     {% elif field in model_formats['date_list'] %}
                         {% include "control_date.html" %}
                     {% elif field in model_formats['input_list'] %}
-                        <input style="font-size:12px; overflow-y: scroll; resize: none; height: 30px; text-align:left; visibility:visible; display:block; width:220px;" class="form-control" type='textarea' name="{{field}}" id="{{field}}">
+                        <input class="form-control details-input" type='textarea' name="{{field}}" id="{{field}}" readonly>
                     {% endif %}
                     {% if field in model_formats['required_list'] %}
                         <script>document.getElementById("{{field}}").required = true</script>
@@ -24,12 +24,12 @@
 
             </div>
         {% else %}
-            <div class="form-group row" id="row_{{field}}" style="display: none;">
+            <div class="form-group row no-show" id="row_{{field}}">
                 <div class="col">
-                    <label class="col-form-label" for="{{field}}" style="display: none;"></label>
+                    <label class="col-form-label no-show" for="{{field}}"></label>
                 </div>
                 <div class="col" id="div_{{field}}">
-                    <input class="form-control" type='text' name="{{field}}" id="{{field}}" style="display: none;">
+                    <input class="form-control no-show" type='text' name="{{field}}" id="{{field}}">
                 </div>
             </div>
         {% endif %}

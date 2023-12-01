@@ -1,4 +1,4 @@
-<div id="home_features" class="row justify-content-center" style="display:flex; flex-wrap: wrap; align-items:center;">
+<div id="home_features" class="row" style="width: 290px; display:flex; flex-wrap: wrap; ">
 {% for k, field in review.__dict__.items() %}
     {% if field.name in model_formats['icon_list'] %}
         <div style="text-align:center; margin:0px; padding:5px; width:40px" id="{{field.name}}_col">
@@ -15,7 +15,6 @@
         </div>
         <script>
             document.getElementById("{{field.name}}_caption").innerHTML = "{{field.alias}}"
-            document.getElementById("{{field.name}}_caption").style.fontSize = "x-small";
             document.getElementById("{{field.name}}_caption").style.fontWeight = "bold";
         </script>
     {% endif %}

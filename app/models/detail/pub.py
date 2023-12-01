@@ -20,7 +20,7 @@ class Pub:
     def __init__(self, pub_deletion=PubDeletion(), place=Place(), pub_name=PubName(),
                  address=Address(), pub_latitude=PubLatitude(), pub_longitude=PubLongitude(), category=Category(),
                  rank=Rank(), station_identity=StationIdentity(), area_identity=AreaIdentity(), pub_identity=PubIdentity(),
-                 colour=Colour(), detail=Detail(), photo_identity=PhotoIdentity()):
+                 colour=Colour(), detail=Detail()):
         self.rank = rank
         self.pub_identity = pub_identity
         self.address = address
@@ -32,10 +32,26 @@ class Pub:
         self.pub_latitude = pub_latitude
         self.pub_longitude = pub_longitude
         self.pub_name = pub_name
-        self.photo_identity = photo_identity
         self.station_identity = station_identity
         self.detail = detail
 
+    # def to_dict(self):
+    #     return {
+    #         'rank': self.rank,
+    #         'pub_identity': self.pub_identity,
+    #         'address': self.address,
+    #         'area_identity': self.area_identity,
+    #         'category': self.category,
+    #         'place': self.place,
+    #         'colour': self.colour,
+    #         'pub_deletion': self.pub_deletion,
+    #         'pub_latitude': self.pub_latitude,
+    #         'pub_longitude': self.pub_longitude,
+    #         'pub_name': self.pub_name,
+    #         'photo_identity': self.photo_identity,
+    #         'station_identity': self.station_identity,
+    #         'detail': self.detail,
+    #     }
 
     def reprJSON(self):
         return dict(pub_identity=self.pub_identity, pub_deletion=self.pub_deletion, area_identity=self.area_identity,

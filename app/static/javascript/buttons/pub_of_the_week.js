@@ -1,8 +1,10 @@
-function pub_of_the_week() {
+function pub_of_the_week(id) {
     //alert(document.getElementById('random_name').text)
     //var id = '6d9c8d4e-fa1d-433d-aea4-ff3f5c36cb64'
-    var id = document.getElementById('random_description').text
+    //var id = document.getElementById('random_description').text
     //alert('pub_id: ' + id)
+    console.log('id from summary')
+    console.log(id)
     redirect_pub(id)
     /*
     var base_url = window.location.hostname

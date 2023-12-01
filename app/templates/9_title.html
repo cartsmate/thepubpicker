@@ -1,19 +1,12 @@
-<div class="col" style="background-color: black; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">
-    <div onclick="back_home()"class="row" id="description" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px">thepubpicker.com</div>
+{% block script %}
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_home.js') }}"></script>
+{% endblock %}
+
+<div class="col-6">
+    <div onclick="redirect_home()" class="row pink heading" id="description">thepubpicker.com</div>
 </div>
 
-<script>
-
-function back_home() {
-    console.log('env: ' + env_vars['env'])
-    var base_url = window.location.hostname
-    if (env_vars['env'] == 'qual') {
-        var url = "http://" + base_url + ":5000/"
-    } else {
-        var url = "http://" + base_url
-    }
-    const myUrlWithParams = new URL(url);
-    window.location.replace(myUrlWithParams.href);
-}
-
-</script>
+<div class="col black">
+    <div class="row pink">
+    </div>
+</div>

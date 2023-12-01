@@ -1,7 +1,7 @@
 
 class PhotoDeletion:
     def __init__(self, name='photo_deletion', alias="Photo Deletion", required='false', form_visible='false', table_visible='false',
-                 value="", control='none'):
+                 value='false', control='none'):
         self.name = name
         self.alias = alias
         self.required = required
