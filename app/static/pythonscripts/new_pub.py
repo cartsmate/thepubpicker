@@ -6,7 +6,6 @@ from app.static.pythonscripts.csv import Csv
 
 from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
-from app.models.area.area_identity import AreaIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 from app.static.pythonscripts.new_detail import NewDetail
 from app.static.pythonscripts.new_review import NewReview

@@ -1,17 +1,21 @@
 function list_columns() {
     console.log('COLUMN_FILTER')
-    //console.log('visible')
-    //console.log(visible)
-    var headers = []
+
+    pub_attributes = []
+    visible = {}
     for (var key in pub[0]) {
-        headers.push(key)
+        pub_attributes.push(key)
+        visible[key] = false
     }
 
-    diary_headers = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
-    //station = document.getElementById('station').value
-    station = 'all'
-    //day = document.getElementById('day').value
-    day = 'all'
+    var count = 0;
+    for(var prop in visible) {
+        if(visible.hasOwnProperty(prop))
+            ++count;
+    }
+    console.log('count')
+    console.log(count)
+
     /*
     if (document.getElementById('search-input-navbar').value != '') {
         console.log('search selected')
@@ -25,9 +29,7 @@ function list_columns() {
         const isIndex = (element) => element == 'distance'
         order = headers.findIndex(isIndex);
         asc_desc = 'asc'
-    } else
-    */
-    if (station != 'all' && day != 'all') {
+    } elif (station != 'all' && day != 'all') {
         console.log('station and day selected')
         for (let i = 0; i < diary_headers.length; i++) {
             visible[diary_headers[i]] = 'false'
@@ -68,29 +70,30 @@ function list_columns() {
         order = headers.findIndex(isIndex);
         asc_desc = 'desc'
         //filter_table(headers, visible, order)
+
     } else {
-        console.log('default table')
-        //for (var key of Object.keys(visible)) {
-        //    console.log(key + " -> " + visible[key])
-        //}
 
-        for (let i = 0; i < diary_headers.length; i++) {
-            visible[diary_headers[i]] = 'false'
-            }
-        visible['station_name'] = 'true'
-        visible['rank'] = 'true'
-        visible['pub_name'] = 'true'
-        //visible['distance'] = 'false'
+    console.log('default table')
 
-        const isIndex = (element) => element == 'rank';
-        order = headers.findIndex(isIndex);
-        asc_desc = 'desc'
-        //filter_table(headers, visible, order)
-    }
-    //visible['pub_identity'] = true
-    //console.log('visible')
-    //console.log(visible)
-    //console.log('order')
-    //console.log(order)
+    for (let i = 0; i < diary_headers.length; i++) {
+        visible[diary_headers[i]] = 'false'
+        }
+    */
+    visible['station_name'] = true
+    visible['rank'] = true
+    visible['pub_name'] = true
+    console.log('list-columns visible')
+    console.log(visible)
+    const isIndex = (element) => element == 'rank';
+
+    order = pub_attributes.findIndex(isIndex);
+    asc_desc = 'desc'
+    //console.log(headers)
+//    console.log('visible')
+//    console.log(visible)
+//    console.log('order')
+//    console.log(order)
+//    console.log('asc_desc')
+//    console.log(asc_desc)
     return [visible, order, asc_desc]
 }

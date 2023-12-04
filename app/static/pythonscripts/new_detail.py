@@ -3,20 +3,20 @@ import uuid
 import pandas as pd
 from config import Configurations
 from app.static.pythonscripts.csv import Csv
-from app.models.detail.pub import Pub
+from app.models.detail.detail import Detail
 from app.models.detail.rank import Rank
-from app.models.detail.pub_deletion import PubDeletion
+from app.models.detail.detail_deletion import DetailDeletion
 from app.models.detail.detail import Detail
 from app.models.detail.place import Place
 from app.models.detail.colour import Colour
 from app.models.detail.category import Category
-from app.models.detail.pub_name import PubName
-from app.models.detail.pub_longitude import PubLongitude
-from app.models.detail.pub_latitude import PubLatitude
+from app.models.detail.detail_name import DetailName
+from app.models.detail.detail_longitude import DetailLongitude
+from app.models.detail.detail_latitude import DetailLatitude
+from app.models.detail.extra import Extra
 from app.models.detail.address import Address
 from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
-from app.models.area.area_identity import AreaIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 config = Configurations().get_config()
@@ -27,11 +27,11 @@ directory_path = config2['directory_path']
 class NewDetail:
 
     def go_get_new_detail(self, pub_id):
-        new_detail = Pub(pub_identity=pub_id, rank=Rank().value, place=Place().value, pub_deletion=PubDeletion().value,
-                         pub_name=PubName().value, address=Address().value,
-                         pub_latitude=PubLatitude().value, pub_longitude=PubLongitude().value,
+        new_detail = Detail(pub_identity=pub_id, rank=Rank().value, place=Place().value, detail_deletion=DetailDeletion().value,
+                         detail_name=DetailName().value, address=Address().value,
+                         detail_latitude=DetailLatitude().value, detail_longitude=DetailLongitude().value,
                          station_identity=StationIdentity().value,
-                         area_identity=AreaIdentity().value, category=Category().value,
-                         colour=Colour().value, detail=Detail().value)
+                         category=Category().value,
+                         colour=Colour().value, extra=Extra().value)
         df_new_detail = pd.DataFrame([new_detail.__dict__])
         return df_new_detail

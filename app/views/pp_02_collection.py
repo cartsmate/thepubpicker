@@ -37,6 +37,7 @@ def collection():
     # # # OR GET ALL PUBS
     else:
         print('no feature')
+        feature = 'none'
         df_data = Csv().go_get_all()
 
     # # # FOR TESTING PURPOSES ONLY
@@ -53,10 +54,19 @@ def collection():
     visible = Objects().go_get_visible()
     alias = Objects().go_get_alias()
     diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    review_list = []
+    for k, v in Review().__dict__.items():
+        review_list.append(v.name)
+
     print('END collection')
     return render_template('02_collection.html',
                            pub=pub_json,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
-                           visible=visible)
+                           visible=visible,
+                           feature=feature,
+                           review=Review(),
+                           review2=Review().__dict__.items(),
+                           review_list=review_list
+                           )

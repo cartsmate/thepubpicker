@@ -3,7 +3,7 @@ import uuid
 import pandas as pd
 from flask import render_template, request
 from app.static.pythonscripts.csv import Csv
-from app.models.detail.pub import Pub
+from app.models.detail.extra import Extra
 from app.models.detail.rank import Rank
 from app.models.review.review import Review
 from app.models.diary.diary import Diary

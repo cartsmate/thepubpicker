@@ -6,11 +6,14 @@
     <script>visible = {{ visible | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
+    <script>feature = {{ feature | tojson}}</script>
+    <script>review_list = {{ review_list | tojson}}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_review.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_collection.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
-    <body onload="onload_collection('{{env_vars['google_key']}}', pub)" class="page-background-color">
+    <body onload="onload_collection('{{review}}')" class="page-background-color">
 {% endblock %}
 
 {% block title %}
@@ -24,24 +27,9 @@
 
 {% block map %}{% include "9_map.html" %}{% endblock %}
 
-{% block pub_summary %}
-<script>document.getElementById("template_summary").style.display = "none"</script>
-{% endblock %}
-
-{% block carousel %}
-<script>document.getElementById("template_carousel").style.display = "none"</script>
+{% block pub %}
+<div class="col black"><div class="row pink">{% include "9_features.html" %}</div></div>
 {% endblock %}
 
 {% block list %}{% include "9_list.html" %}{% endblock %}
 
-{% block add %}
-    {% include "9_pub_add.html" %}
-{% endblock %}
-
-{% block edit %}
-<script>document.getElementById("template_edit").style.display = "none"</script>
-{% endblock %}
-
-{% block pub %}
-<script>document.getElementById("template_pub").style.display = "none"</script>
-{% endblock %}

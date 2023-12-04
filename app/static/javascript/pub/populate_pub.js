@@ -1,5 +1,5 @@
-function populate_detail(){
-    console.log('POPULATE_DETAIL')
+function populate_pub(){
+    console.log('POPULATE_PUB')
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
         //console.log('fields_list[i]')

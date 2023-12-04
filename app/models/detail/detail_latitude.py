@@ -1,6 +1,7 @@
-class AreaIdentity:
-    def __init__(self, name='area_identity', alias="Area Identity", required='false', form_visible='false',
-                 table_visible='false', value=0, control='none'):
+
+class DetailLatitude:
+    def __init__(self, name="detail_latitude", alias="Latitude", required='true', form_visible='false',
+                 table_visible='false', value=0, control='false', rank=0):
         self.name = name
         self.alias = alias
         self.required = required
@@ -8,3 +9,4 @@ class AreaIdentity:
         self.table_visible = table_visible
         self.value = value
         self.control = control
+        self.rank = rank

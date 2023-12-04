@@ -12,7 +12,6 @@ from app.models.station.zone import Zone
 from app.models.station.postcode import Postcode
 from app.models.direction.direction_identity import DirectionIdentity
 from app.models.photo.photo_identity import PhotoIdentity
-from app.models.area.area_identity import AreaIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 config = Configurations().get_config()

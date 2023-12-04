@@ -1,5 +1,5 @@
-function populate_detail(){
-    console.log('POPULATE_DETAIL')
+function populate_diary(){
+    console.log('POPULATE_DIARY')
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
         //console.log('fields_list[i]')

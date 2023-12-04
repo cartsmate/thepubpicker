@@ -3,9 +3,8 @@ import json
 import pandas as pd
 import uuid
 from config import Configurations
-from app.models.detail.pub import Pub
+from app.models.detail.detail import Detail
 from app.models.review.review import Review
-from app.models.area.area import Area
 from app.models.station.station import Station
 
 config = Configurations().get_config()
@@ -21,7 +20,7 @@ class ControlsList:
         for item in list_of_lists:
             total_list_obj[item] = []
 
-        class_list = [Pub(), Review(), Area(), Station()]
+        class_list = [Detail(), Review(), Station()]
         for cl in class_list:
             for k, v in cl.__dict__.items():
                 total_list_obj['fields_list'].append(v.name)

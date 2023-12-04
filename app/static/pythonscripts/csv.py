@@ -45,8 +45,22 @@ class Csv:
         df_details = self.go_get_details()
         df_reviews = self.go_get_reviews()
         df_reviews_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
-        df_detaill_reviews = pd.merge(df_details, df_reviews_no_dupes, on='pub_identity', how='left')
-        return df_detaill_reviews
+        df_detail_reviews = pd.merge(df_details, df_reviews_no_dupes, on='pub_identity', how='left')
+
+        df_stations = self.go_get_stations()
+        df_det_rev_sts = pd.merge(df_detail_reviews, df_stations, on='station_identity', how='left')
+
+        df_directions = self.go_get_directions()
+        df_pb_rev_st_dirs = pd.merge(df_det_rev_sts, df_directions, on='direction_identity', how='left')
+
+        df_diarys = self.go_get_diarys()
+        df_pb_rev_st_dir_drys = pd.merge(df_pb_rev_st_dirs, df_diarys, on='pub_identity', how='left')
+
+        df_photos = self.go_get_photos()
+        df_with_photos = pd.merge(df_pb_rev_st_dir_drys, df_photos, on='pub_identity', how='left')
+        df_pb_rev_st_dir_drys = df_with_photos.fillna('')
+
+        return df_pb_rev_st_dir_drys
 
     def go_get_pubs(self, df_detail_reviews):
         df_stations = self.go_get_stations()
@@ -68,7 +82,7 @@ class Csv:
         return df_pubs
 
     def go_get_details(self):
-        df_details = pd.read_csv(directory_path + '/files/details.csv', dtype={'pub_identity': str, 'area_identity': str,
+        df_details = pd.read_csv(directory_path + '/files/details.csv', dtype={'pub_identity': str,
                                                                'station_identity': str, 'pub_deletion': str,
                                                                'pub_name': str, 'address': str, 'category': str,
                                                                'colour': str, 'place': str, 'pub_latitude': float,
@@ -77,7 +91,8 @@ class Csv:
         return df_details
 
     def go_get_reviews(self):
-        df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_deletion': str, 'brunch': str,
+        df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_identity': str, 'pub_identity':str,
+            'review_deletion': str, 'brunch': str,
                                                                   'dart': str, 'entertain': str,
                                                                   'favourite': str, 'garden': str,
                                                                   'history': str, 'late': str,

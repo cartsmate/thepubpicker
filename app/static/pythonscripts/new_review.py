@@ -22,7 +22,6 @@ from app.models.detail.pub_identity import PubIdentity
 
 from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
-from app.models.area.area_identity import AreaIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 config = Configurations().get_config()
