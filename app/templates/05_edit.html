@@ -1,0 +1,30 @@
+{% extends '00_template.html' %}
+
+{% block script %}
+    <script>pub = {{ pub | tojson }}</script>
+    <script>env_vars = {{ env_vars | tojson }}</script>
+    <script>model_formats = {{ model_formats | tojson }}</script>
+    <script>alias = {{ alias | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_submit.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_detail.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_edit.js') }}"></script>
+{% endblock %}
+
+{% block on_load %}
+    <body onload="onload_edit()" class="page-background">
+{% endblock %}
+
+{% block title %}
+    {% include "9_title.html" %}
+{% endblock %}
+
+{% block header %}
+<script>document.getElementById("template_header").style.display = "none"</script>
+{% endblock %}
+
+{% block map %}{% include "9_map.html" %}{% endblock %}
+
+{% block pub %}{% include "9_pub_edit.html" %}{% endblock %}

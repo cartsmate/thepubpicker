@@ -5,9 +5,9 @@ from config import Configurations
 # from app.models.pub import *
 from app.models.detail.place import Place
 from app.models.detail.pub_identity import PubIdentity
-from app.models.detail.pub import Pub
+from app.models.detail.detail import Detail
 from app.models.review.review import Review
-from app.models.diary.week import Week
+from app.models.diary.diary import Diary
 from app.static.pythonscripts.uuid import Uuid
 
 config = Configurations().get_config()
@@ -16,11 +16,11 @@ config = Configurations().get_config()
 class FormNew:
 
     def get_pub(self, pub_id):
-        new_pub = Pub(pub_identity=pub_id, place=request.form['place'], pub_deletion=False,
-                      pub_name=request.form['pub_name'], address=request.form['address'],
-                      pub_latitude=request.form['pub_latitude'], pub_longitude=request.form['pub_longitude'],
+        new_pub = Detail(pub_identity=pub_id, place=request.form['place'], detail_deletion=False,
+                      detail_name=request.form['pub_name'], address=request.form['address'],
+                      detail_latitude=request.form['pub_latitude'], detail_longitude=request.form['pub_longitude'],
                       station_identity=request.form['station_identity'],
-                      area_identity=request.form['area_identity'], category=request.form['category'].lower(),
+                      category=request.form['category'].lower(),
                       rank=request.form['rank'], colour=request.form['colour'])
         df_new_pub = pd.DataFrame([new_pub.__dict__])
         print('new pub from new: df_new_pub:')

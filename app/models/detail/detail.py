@@ -15,23 +15,22 @@ from app.models.photo.photo_identity import PhotoIdentity
 
 
 class Detail:
-
-    def __init__(self, detail_deletion=DetailDeletion(), place=Place(), detail_name=DetailName(),
-                 address=Address(), detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), category=Category(),
-                 rank=Rank(), station_identity=StationIdentity(), pub_identity=PubIdentity(),
-                 colour=Colour(), extra=Extra()):
-        self.rank = rank
+    def __init__(self, pub_identity=PubIdentity(), station_identity=StationIdentity(), detail_name=DetailName(),
+                 address=Address(), category=Category(), colour=Colour(), detail_deletion=DetailDeletion(),
+                 detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(), place=Place(),
+                 rank=Rank()):
         self.pub_identity = pub_identity
+        self.station_identity = station_identity
+        self.detail_name = detail_name
         self.address = address
         self.category = category
-        self.place = place
         self.colour = colour
         self.detail_deletion = detail_deletion
         self.detail_latitude = detail_latitude
         self.detail_longitude = detail_longitude
-        self.detail_name = detail_name
-        self.station_identity = station_identity
         self.extra = extra
+        self.place = place
+        self.rank = rank
 
     # def to_dict(self):
     #     return {

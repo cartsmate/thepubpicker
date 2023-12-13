@@ -1,8 +1,12 @@
 from app import app
 from flask import render_template, request
 from app.static.pythonscripts.csv import Csv
+from app.models.detail.detail import Detail
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
+from app.models.station.station import Station
+from app.models.direction.direction import Direction
+from app.models.photo.photo import Photo
 from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
@@ -10,7 +14,7 @@ from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
 
-@app.route("/pub/", methods=['GET'])
+@app.route("/pub/", methods=['GET', 'POST'])
 def pub():
     print('START pub')
     # # # GET ENVIRONMENTAL VARIABLES
@@ -30,12 +34,16 @@ def pub():
 
     # # # FOR TESTING PURPOSES ONLY
     newdf = df_pub.transpose()
-    # print(newdf)
+    print(newdf)
     print('END pub')
     return render_template('03_pub.html',
                            pub=pub_json,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
+                           detail=Detail(),
                            review=Review(),
-                           diary=Diary())
+                           diary=Diary(),
+                           station=Station(),
+                           direction=Direction(),
+                           photo=Photo())

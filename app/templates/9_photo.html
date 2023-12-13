@@ -1,5 +1,10 @@
-{% if pub[0]['photo_identity'] == '' %}
-    <img class="photo" src="{{ url_for('static',filename='images/venue/0a8a43f0-000e-4a88-9874-d13926e71eed.jpeg') }}" id="random_photo">
-{% else %}
-    <img class="photo" src="{{ url_for('static',filename='images/venue/{}.jpeg'.format(pub[0]['photo_identity']) ) }}" id="random_photo">
-{% endif %}
+<script>console.log('CREATING PHOTO FIELDS')</script>
+{% for k, field in photo.__dict__.items() %}
+    {% if field.name in model_formats['form_visible_list'] %}
+        {% if pub[0]['photo_identity'] == '' %}
+            <img class="photo" src="{{ url_for('static',filename='images/venue/0a8a43f0-000e-4a88-9874-d13926e71eed.jpeg') }}" id={{field.name}}>
+        {% else %}
+            <img class="photo" src="{{ url_for('static',filename='images/venue/{}.jpeg'.format(pub[0]['photo_identity']) ) }}" id={{field.name}}>
+        {% endif %}
+    {% endif %}
+{% endfor %}

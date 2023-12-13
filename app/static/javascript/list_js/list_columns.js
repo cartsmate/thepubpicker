@@ -1,5 +1,5 @@
 function list_columns() {
-    console.log('COLUMN_FILTER')
+    console.log('list columns')
 
     pub_attributes = []
     visible = {}
@@ -8,13 +8,21 @@ function list_columns() {
         visible[key] = false
     }
 
-    var count = 0;
-    for(var prop in visible) {
-        if(visible.hasOwnProperty(prop))
-            ++count;
-    }
-    console.log('count')
-    console.log(count)
+    visible['station_name'] = true
+    visible['rank'] = true
+    visible['detail_name'] = true
+
+    const isIndex = (element) => element == 'rank';
+
+    order = pub_attributes.findIndex(isIndex);
+    asc_desc = 'desc'
+
+    return [visible, order, asc_desc]
+}
+
+
+//    console.log('count')
+//    console.log(count)
 
     /*
     if (document.getElementById('search-input-navbar').value != '') {
@@ -79,21 +87,3 @@ function list_columns() {
         visible[diary_headers[i]] = 'false'
         }
     */
-    visible['station_name'] = true
-    visible['rank'] = true
-    visible['pub_name'] = true
-    console.log('list-columns visible')
-    console.log(visible)
-    const isIndex = (element) => element == 'rank';
-
-    order = pub_attributes.findIndex(isIndex);
-    asc_desc = 'desc'
-    //console.log(headers)
-//    console.log('visible')
-//    console.log(visible)
-//    console.log('order')
-//    console.log(order)
-//    console.log('asc_desc')
-//    console.log(asc_desc)
-    return [visible, order, asc_desc]
-}

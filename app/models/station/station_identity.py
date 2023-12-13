@@ -2,7 +2,7 @@
 
 class StationIdentity:
     def __init__(self, name='station_identity', alias="Station Identity", required='false', form_visible='false',
-                 table_visible='false', value=0, control='none'):
+                 table_visible='false', value='ssssssss-ssss-ssss-ssss-ssssssssssss', control='none'):
         self.name = name
         self.alias = alias
         self.required = required

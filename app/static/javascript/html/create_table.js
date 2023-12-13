@@ -4,8 +4,8 @@ function create_table(pubs_selection) {
     console.log(pubs_selection.length)
     //console.log(pubs_selection[0]['address'])
     //console.log(pubs_selection[0]['distance'])
-    //console.log('visible')
-    //console.log(visible)
+    console.log('alias')
+    console.log(alias)
     //console.log('all_data')
     //console.log(all_data)
     //var tbl = document.getElementById('pub_list');

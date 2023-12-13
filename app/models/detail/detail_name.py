@@ -1,6 +1,6 @@
 
 class DetailName:
-    def __init__(self, name='pub_name', alias="Name", required='true', form_visible='true',
+    def __init__(self, name='detail_name', alias="Name", required='true', form_visible='false',
                  table_visible='true', value="", control='input', rank=0):
         self.name = name
         self.alias = alias

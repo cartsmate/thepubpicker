@@ -30,15 +30,19 @@ def collection():
 
     # # # GET ALL PUBS WITH FEATURE
     feature = request.args.get('feature')
-    if feature is not None:
-        print('{} has been selected'.format(feature))
-        df_data = CsvFeature().go_get_1_feature(feature)
+    station = request.args.get('station_id')
 
-    # # # OR GET ALL PUBS
-    else:
-        print('no feature')
-        feature = 'none'
-        df_data = Csv().go_get_all()
+    # if feature is not None:
+    #     print('{} has been selected'.format(feature))
+    #     df_data = CsvFeature().go_get_1_feature(feature)
+    #
+    # # # # OR GET ALL PUBS
+    # else:
+    #     print('no feature')
+    #     feature = 'none'
+    #     df_data = Csv().go_get_all()
+
+    df_data = Csv().go_get_all()
 
     # # # FOR TESTING PURPOSES ONLY
     print('df_data')
@@ -66,7 +70,9 @@ def collection():
                            alias=alias,
                            visible=visible,
                            feature=feature,
+                           station=station,
+                           review_list=review_list,
                            review=Review(),
-                           review2=Review().__dict__.items(),
-                           review_list=review_list
+                           directions_list=directions_list,
+                           stations_directions_list=stations_directions_list
                            )

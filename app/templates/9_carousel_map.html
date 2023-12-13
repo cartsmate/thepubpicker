@@ -1,0 +1,27 @@
+{% block script %}
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listeners.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection.js') }}"></script>
+{% endblock %}
+
+<div class="col black">
+    <div class="row pink">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                </div>
+                <div class="carousel-item">
+
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon" ></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </div>
+</div>

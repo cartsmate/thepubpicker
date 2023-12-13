@@ -1,4 +1,4 @@
-<button type="button" id="button_feat" class="collapsible_feature filter_header">+ Filter by feature</button>
+<button type="button" id="button_feat" class="collapsible_diary btn click">by feature</button>
 <div class="content" id="content_feat" style="display: none" >
     <div class="col" id="checks_feature"></div>
 </div>
@@ -12,6 +12,7 @@
     var content_feat = document.getElementById('content_feat')
 
     button_feat.addEventListener("click", function() {
+        console.log('feature filter click')
         if (content_feat.style.display === "none") {
             content_feat.style.display = "flex";
             content_direction.style.display = "none"

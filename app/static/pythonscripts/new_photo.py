@@ -16,6 +16,6 @@ directory_path = config2['directory_path']
 class NewPhoto:
 
     def go_get_new_photo(self, id, pub_id):
-        new_diary = Photo(photo_identity=id, photo_deletion='false', identity=pub_id)
+        new_diary = Photo(photo_identity=id, photo_deletion='false', pub_identity=pub_id)
         df_new_diary = pd.DataFrame([new_diary.__dict__])
         return df_new_diary

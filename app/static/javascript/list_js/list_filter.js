@@ -1,5 +1,6 @@
 function list_filter(visible, order, asc_desc) {
-    console.log('FILTER_TABLE')
+    console.log('list filter')
+//    console.log('pub count: ' + pub.length)
     //console.log('headers')
     //console.log(headers)
 

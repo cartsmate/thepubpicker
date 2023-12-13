@@ -1,0 +1,31 @@
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/collapse_section.js') }}"></script>
+
+<div id="all_filters">
+    <button type="button" id="collapsible_filters" class="collapsible_filters btn click">Filters</button>
+    <div class="content_filters" id="content_filters" style="display: none">
+        <div class="col">
+            <div class="row">
+                {% include "9_filter_direction.html" %}
+            </div>
+            <div class="row">
+                {% include "9_filter_station.html" %}
+            </div>
+            <div class="row">
+                {% include "9_filter_features.html" %}
+            </div>
+            <div class="row">
+                {% include "9_filter_diary.html" %}
+            </div>
+            <div class="row">
+                {% include "9_filter_search.html" %}
+            </div>
+            <div class="row">
+                {% include "9_button_filter_reset.html" %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    collapse_section("collapsible_filters")
+</script>

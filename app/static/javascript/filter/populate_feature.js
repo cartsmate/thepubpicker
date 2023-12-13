@@ -1,11 +1,14 @@
-function populate_feature(data) {
-    console.log('POPULATE_FEATURE')
-    console.log('received data')
-    console.log(data.length)
+function populate_feature(pub_filtered) {
+    console.log('populate feature')
+//    console.log('received data')
+//    console.log('pub count: ' + pub.length)
+    document.getElementById('button_feat').innerHTML = '<a>by feature (' + pub_filtered.length + ')</a>'
     filter_clear('checks_feature')
-    for (i=0; i<total_list_obj['icon_list'].length; i++) {
-        var filtered_data = data.filter(function(pub) {
-            return pub[total_list_obj['icon_list'][i]] == 'true'
+    for (i=0; i<model_formats['icon_list'].length; i++) {
+//        console.log(pub_filtered)
+//        console.log(model_formats['icon_list'][i])
+        var filtered_data = pub_filtered.filter(function(x) {
+            return x[model_formats['icon_list'][i]] == 'true'
         })
 
         record = document.createElement("div")
@@ -15,24 +18,30 @@ function populate_feature(data) {
 
         label = document.createElement("div")
         label.style.width = "200px"
-        label.id = total_list_obj['icon_list'][i] + "_id"
-        label.innerHTML = total_list_obj['icon_list'][i] + " (" + filtered_data.length + ")"
+        label.style.font = "8px"
+        label.id = model_formats['icon_list'][i] + "_id"
+        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + model_formats['icon_list'][i] + " (" + filtered_data.length + ")" + "</a>"
         record.appendChild(label)
 
         input = document.createElement("input")
         input.type = "checkbox"
-        input.id = total_list_obj['icon_list'][i] + "_filter"
-        input.onclick = function() { on_click() }
+        input.id = model_formats['icon_list'][i] + "_filter"
+        input.onclick = function() { filter_by_feature_menu() }
+        if (filtered_data.length > 0) {
+            label.style.display = "block"
+        } else {
+            label.style.display = "none"
+        }
         label.appendChild(input)
 
     }
 
 }
 
-function f_b_d(xx) {
-    console.log('inside f_b_d')
-    console.log('i got it right: ' + xx)
-    }
+//functionion f_b_d(xx) {
+//    console.log('inside f_b_d')
+//    console.log('i got it right: ' + xx)
+//    }
 
 /*
 function eventFunc() {

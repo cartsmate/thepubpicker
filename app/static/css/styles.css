@@ -145,4 +145,19 @@
 .no-show {
     display: none;
 }
-
+.station-box {
+    height:200px;
+}
+.button_size {
+    width:40px;
+    height:40px;
+    display: block;
+    margin: 0 auto;
+}
+.button_caption {
+    color: black;
+    font-weight: bold;
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px
+}

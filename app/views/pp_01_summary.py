@@ -15,6 +15,7 @@ from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
+from app.models.photo.photo import Photo
 from config import Configurations
 
 
@@ -41,9 +42,10 @@ def summary():
 
     # # # FOR TESTING PURPOSES ONLY
     newdf = df_pub.transpose()
-    # print(newdf)
+    print(newdf)
     print('END summary')
     return render_template('01_summary.html',
                            pub=pub_json,
                            env_vars=env_vars,
-                           model_formats=model_formats)
+                           model_formats=model_formats,
+                           photo=Photo())

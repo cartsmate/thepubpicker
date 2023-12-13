@@ -1,18 +1,18 @@
-function populate_direction(data) {
-    console.log('POPULATE_DIRECTION')
-    console.log('received data')
-    console.log(data.length)
-    console.log(data)
+function populate_direction(pub_filtered) {
+    console.log('populate direction')
+//    console.log('pub_filtered data: ' + pub_filtered.length)
+//    console.log('pub count: ' + pub.length)
+    document.getElementById('button_direction').innerHTML = '<a>by area (' + pub_filtered.length + ')</a>'
     var select= document.getElementById("direction");
     var option = document.createElement("option");
     filter_clear('checks_direction')
-    for (i=0; i<directions_list.length; i++) (function(i, data){
-        console.log('filtered data inside loop')
-        console.log(directions_list[i][0])
-        console.log(data)
-        console.log(directions_list[i])
-        var filtered_data = data.filter(function(pub) {
-            return pub.direction_identity == directions_list[i][0]
+    for (i=0; i<directions_list.length; i++) (function(i, pub_filtered){
+        //console.log('filtered data inside loop')
+        //console.log(directions_list[i][0])
+        //console.log(pub)
+//        console.log(directions_list[i])
+        var filtered_data = pub_filtered.filter(function(x) {
+            return x.direction_identity == directions_list[i][0]
         })
         if (filtered_data.length > -1) {
             record = document.createElement("div")
@@ -30,37 +30,62 @@ function populate_direction(data) {
 
             label = document.createElement("div")
             label.style.width = "200px"
-            label.style.font = "10px"
+            label.style.padding = "0px"
+            label.style.margin = "0px"
+            //label.style.font-size = "20px"
+            //label.classList.add("mystyle");
+
             label.id = directions_list[i][0] + "_id"
-            label.innerHTML = directions_list[i][1] + " (" + filtered_data.length + ")"
+            label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + filtered_data.length + ")" + "</a>"
             col2.appendChild(label)
 
             input = document.createElement("input")
             input.type = "checkbox"
             input.id = directions_list[i][0] + "_filter"
             input.onclick = function() { on_click_direction() }
+            /*
+            if (filtered_data.length > 0) {
+                label.style.display = "block"
+            } else {
+                label.style.display = "none"
+            }
+            */
             label.appendChild(input)
         }
-    })(i, data)
+    })(i, pub_filtered)
 }
 
-function f_b_d(xx) {
-    console.log('inside f_b_d')
-    console.log('i got it right: ' + xx)
-    }
+//function f_b_d(xx) {
+//    console.log('inside f_b_d')
+//    console.log('i got it right: ' + xx)
+//    }
 
 function on_click_direction() {
-    for (i=0; i<stations_directions_list.length; i++) {
+    console.log('ON CLICK DIRECTION')
+    pub_filtered = filter_all_data(pub)
+    list_setup(pub_filtered)
+
+    populate_station(pub_filtered)
+    populate_feature(pub_filtered)
+    populate_review(pub_filtered)
+    //filter_direction_change()
+    populate_header(pub_filtered.length)
+    //document.getElementById('pub_length').innerHTML = "<a>" + "Number of pubs: " + pub_filtered.length + "</a>"
+    /*
+    for (i=0; i<directions_list.length; i++) {
+        console.log('on click')
+        console.log(directions_list[i][0])
         //console.log(document.getElementById(stations_directions_list[i][2]))
-        if (document.getElementById(stations_directions_list[i][2] + "_filter").checked) {
-            document.getElementById(stations_directions_list[i][0] + "_filter").style.display = 'block'
-            document.getElementById(stations_directions_list[i][0] + "_id").style.display = 'block'
+        if (document.getElementById(directions_list[i][0] + "_filter").checked) {
+            document.getElementById(directions_list[i][0] + "_filter").style.display = 'block'
+            document.getElementById(directions_list[i][0] + "_id").style.display = 'block'
         } else {
-            document.getElementById(stations_directions_list[i][0] + "_filter").style.display = 'none'
-            document.getElementById(stations_directions_list[i][0] + "_id").style.display = 'none'
+            document.getElementById(directions_list[i][0] + "_filter").style.display = 'none'
+            document.getElementById(directions_list[i][0] + "_id").style.display = 'none'
         }
     }
-    on_click()
+    */
+    //on_click()
 }
 
 /*

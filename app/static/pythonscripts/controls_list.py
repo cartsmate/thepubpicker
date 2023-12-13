@@ -4,6 +4,9 @@ import pandas as pd
 import uuid
 from config import Configurations
 from app.models.detail.detail import Detail
+from app.models.diary.diary import Diary
+from app.models.direction.direction import Direction
+from app.models.photo.photo import Photo
 from app.models.review.review import Review
 from app.models.station.station import Station
 
@@ -20,9 +23,11 @@ class ControlsList:
         for item in list_of_lists:
             total_list_obj[item] = []
 
-        class_list = [Detail(), Review(), Station()]
+        class_list = [Detail(), Diary(), Direction(), Photo(), Review(), Station()]
         for cl in class_list:
+            print('class: ' + str(cl))
             for k, v in cl.__dict__.items():
+                print('key: ' + k)
                 total_list_obj['fields_list'].append(v.name)
                 if v.form_visible == 'true':
                     total_list_obj['form_visible_list'].append(v.name)

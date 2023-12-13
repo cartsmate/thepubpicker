@@ -14,6 +14,9 @@ class Objects:
         inst_review = Review()
         inst_pub.__dict__.update(inst_review.__dict__)
 
+        inst_diary = Diary()
+        inst_pub.__dict__.update(inst_diary.__dict__)
+
         inst_station = Station()
         inst_pub.__dict__.update(inst_station.__dict__)
 
@@ -49,8 +52,10 @@ class Objects:
         for k, v in inst_pub_review.__dict__.items():
             alias[k] = v.alias
 
-        diary = Diary().__dict__.items()
-        for k, v in diary:
-            alias[k] = k
-        alias['distance'] = 'distance'
+        # diary = Diary().__dict__.items()
+        # for k, v in diary:
+        #     alias[k] = k
+        # alias['distance'] = 'distance'
+        print('alias')
+        print(alias)
         return alias

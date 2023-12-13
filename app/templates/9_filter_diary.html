@@ -1,31 +1,31 @@
-<button type="button" id="button_week" class="collapsible_week" style="display:none; font-weight: bold; font-size: 14px; color: #000000; text-decoration: none;">+ Filter by day</button>
-<div class="content_week" id="content_week" style="display:none">
-    <div class="col" id="checks_week"></div>
+<button type="button" id="button_diary" class="collapsible_feature btn click">by day</button>
+<div class="content" id="content_diary" style="display: none" >
+    <div class="col" id="checks_diary"></div>
 </div>
 
 
 <script>
-    diary_headers = {{ diary_headers | tojson }}
+    diary_headers = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
 
     //collapse_section("collapsible_week")
 
-    var button_week = document.getElementById('button_week')
+    var button_diary = document.getElementById('button_diary')
     var content_direction = document.getElementById('content_direction')
     var content_stat = document.getElementById('content_stat')
-    var content_week = document.getElementById('content_week')
+    var content_diary = document.getElementById('content_diary')
     var content_feat = document.getElementById('content_feat')
 
-    button_week.addEventListener("click", function() {
-        if (content_week.style.display === "none") {
-            content_week.style.display = "flex";
+    button_diary.addEventListener("click", function() {
+        if (content_diary.style.display === "none") {
+            content_diary.style.display = "flex";
             content_direction.style.display = "none"
             content_stat.style.display = "none"
             content_feat.style.display = "none"
         } else {
-            content_week.style.display = "none"
+            content_diary.style.display = "none"
         }
     })
-
+/*
     var select= document.getElementById("direction");
     var option = document.createElement("option");
     for (i=0; i<diary_headers.length; i++) {
@@ -45,5 +45,5 @@
         input.onclick = "home_direction_changed()"
         record.appendChild(input)
         }
-
+*/
 </script>

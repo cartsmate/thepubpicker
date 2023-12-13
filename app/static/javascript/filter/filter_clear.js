@@ -1,7 +1,6 @@
 function filter_clear(selectElement) {
-    console.log('FILTER_CLEAR')
-    console.log('selectElement')
-    console.log(selectElement)
+    console.log('filter clear')
+//    console.log('pub count: ' + pub.length)
     var e = document.getElementById(selectElement);
 
         //e.firstElementChild can be used.

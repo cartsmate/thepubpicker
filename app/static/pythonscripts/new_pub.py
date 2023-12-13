@@ -8,6 +8,7 @@ from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 from app.static.pythonscripts.new_detail import NewDetail
+from app.static.pythonscripts.files_detail import FilesDetail
 from app.static.pythonscripts.new_review import NewReview
 from app.static.pythonscripts.new_station import NewStation
 from app.static.pythonscripts.new_direction import NewDirection
@@ -23,7 +24,9 @@ class NewPub:
 
     def go_new_pub(self):
         new_pub_id = UuidGenerator().get_new_uuid()
-        df_detail = NewDetail().go_get_new_detail(pub_id=new_pub_id)
+        # df_detail = NewDetail().go_get_new_detail(pub_id=new_pub_id)
+        df_detail = FilesDetail().new_detail(pub_id=new_pub_id)
+
         df_review = NewReview().go_get_new_review(id=UuidGenerator().get_new_uuid(), pub_id=new_pub_id)
         df_detail_review = pd.merge(df_detail, df_review, on='pub_identity', how='left')
 

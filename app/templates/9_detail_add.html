@@ -1,0 +1,36 @@
+<script>console.log('CREATING DETAIL FIELDS - ADD')</script>
+{% for k, field in detail.__dict__.items() %}
+    {% if (field.name in model_formats['form_visible_list']) or (field.name == 'detail_name') or (field.name == 'extra') %}
+        <div class="form-group row details" id=row_{{field.name}} >
+            <div class="col details-label" >
+                <label class="col-form-label label" for={{field.name}} >{{alias[field.name]}}</label>
+            </div>
+            <div class="col details-data" id=div_{{field.name}} >
+                {% if field.name in model_formats['dropdown_list'] %}
+                    {% include "control_dropdown.html" %}
+                {% elif field.name in model_formats['star_list'] %}
+                    {% include "9_stars.html" %}
+                {% elif field.name in model_formats['slider_list'] %}
+                    {% include "control_slider.html" %}
+                {% elif field.name in model_formats['date_list'] %}
+                    {% include "control_date.html" %}
+                {% else %}
+                    <input class="form-control details-input" type='textarea' name={{field.name}} id={{field.name}}>
+                {% endif %}
+                {% if field.name in model_formats['required_list'] %}
+                    <script>document.getElementById("{{field.name}}").required = true</script>
+                {% endif %}
+            </div>
+
+        </div>
+    {% else %}
+        <div class="form-group row no-show" id=row_{{field.name}}>
+            <div class="col">
+                <label class="col-form-label no-show" for={{field.name}}></label>
+            </div>
+            <div class="col" id=div_{{field.name}}>
+                <input class="form-control no-show" type='text' name={{field.name}} id={{field.name}}>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

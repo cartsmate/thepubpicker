@@ -15,10 +15,12 @@ class CsvSingle:
         df_detail = CsvSingle().go_get_1_detail(pub_id)
         print(df_detail)
         df_review = CsvSingle().go_get_1_review(pub_id)
+        print(df_review)
         df_detail_review = pd.merge(df_detail, df_review, on='pub_identity', how='left')
 
         station_id = df_detail['station_identity'].iloc[0]
         df_station = self.go_get_1_station(station_id)
+        print(df_station)
         df_det_rev_st = pd.merge(df_detail_review, df_station, on='station_identity', how='left')
 
         direction_id = df_station['direction_identity'].iloc[0]
@@ -27,6 +29,7 @@ class CsvSingle:
 
         df_diary = self.go_get_1_diary(pub_id)
         df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
+        # print(df_pb_rev_st_dir_dry)
 
         df_photo = self.go_get_1_photo(pub_id)
         df_with_photo = pd.merge(df_pb_rev_st_dir_dry, df_photo, on='pub_identity', how='left')
@@ -37,6 +40,7 @@ class CsvSingle:
     def go_get_1_detail(self, pub_id):
         df_details = Csv().go_get_details()
         df_1_detail = df_details.loc[df_details['pub_identity'] == pub_id]
+        print('Get one detail pub')
         return df_1_detail
 
     def go_get_1_review(self, pub_id):

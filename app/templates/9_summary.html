@@ -6,8 +6,9 @@
 
 <div class="col black">
     <div class="row pink" id="pic">{% include "9_photo.html" %}</div>
-    <div class="row pink sub-heading" id="random_name">{{ pub[0]['pub_name'] }}</div>
+    <div class="row pink sub-heading" id="random_name">{{ pub[0]['detail_name'] }}</div>
     <div class="row pink" id="random_rank">{% include "9_stars.html" %}</div>
+    <div class="row pink" id="extra" style="font-size:12px; ">{{ pub[0]['extra'] }}</div>
     <!--<div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">{{ pub[0]['pub_identity'] }}</a></div>-->
     <div class="row pink bottom-buffer" id="button">
         <button onclick="pub_of_the_week('{{ pub[0]['pub_identity'] }}')" class="btn click" >View pub of the week</button>

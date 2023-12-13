@@ -7,29 +7,54 @@
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>feature = {{ feature | tojson}}</script>
+    <script>station = {{ station | tojson}}</script>
     <script>review_list = {{ review_list | tojson}}</script>
+    <script>directions_list = {{ directions_list | tojson}}</script>
+    <script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_search.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_direction_change.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_reset.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_feature.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_direction.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_all_data.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_clear.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_header.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_all_filters.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_feature.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_direction.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_diary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_review.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_collection.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
-    <body onload="onload_collection('{{review}}')" class="page-background-color">
+    <body onload="onload_collection()" class="page-background">
 {% endblock %}
 
 {% block title %}
-    {% include "9_title.html" %}
-    {% include "9_pub_filter.html" %}
+    <div class="col-10">{% include "9_title.html" %}</div>
+    <div class="col-2">{% include "9_menu_search.html" %}</div>
 {% endblock %}
 
 {% block header %}
-<script>document.getElementById("template_header").style.display = "none"</script>
+    <div class="col">
+        <div class="row" style="background-color:#0275D8;">
+            <div id="pub_length"></div>
+        </div>
+        <div class="row">
+            <div>{% include "9_button_filter.html" %}</div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block map %}{% include "9_map.html" %}{% endblock %}
 
 {% block pub %}
-<div class="col black"><div class="row pink">{% include "9_features.html" %}</div></div>
+<div class="col black"><div class="row pink">{% include "9_pub_features.html" %}</div></div>
 {% endblock %}
 
 {% block list %}{% include "9_list.html" %}{% endblock %}
-

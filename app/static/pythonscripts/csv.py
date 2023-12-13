@@ -83,11 +83,13 @@ class Csv:
 
     def go_get_details(self):
         df_details = pd.read_csv(directory_path + '/files/details.csv', dtype={'pub_identity': str,
-                                                               'station_identity': str, 'pub_deletion': str,
-                                                               'pub_name': str, 'address': str, 'category': str,
-                                                               'colour': str, 'place': str, 'pub_latitude': float,
-                                                               'pub_longitude': float, 'rank': float,
-                                                               'detail': str})
+                                                               'station_identity': str, 'detail_deletion': str,
+                                                               'detail_name': str, 'address': str, 'category': str,
+                                                               'colour': str, 'place': str, 'detail_latitude': float,
+                                                               'detail_longitude': float, 'rank': float,
+                                                               'extra': str})
+        print(df_details)
+        print('details csv file downloaded')
         return df_details
 
     def go_get_reviews(self):
@@ -98,6 +100,8 @@ class Csv:
                                                                   'history': str, 'late': str,
                                                                   'music': str, 'pool': str, 'quiz': str,
                                                                   'roast': str, 'sport': str})
+        print(df_reviews)
+        print('reviews csv file downloaded')
         return df_reviews
 
     def go_get_diarys(self):
@@ -105,6 +109,8 @@ class Csv:
                                                                        'tuesday': str, 'wednesday': str,
                                                                        'thursday': str, 'friday': str,
                                                                        'saturday': str, 'sunday': str})
+        print(df_diarys)
+        print('diarys csv file downloaded')
         return df_diarys
 
     def go_get_stations(self):
