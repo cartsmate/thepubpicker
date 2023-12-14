@@ -4,7 +4,11 @@
     {% if field.name in model_formats['icon_list'] %}
         <div style="text-align:center; margin:0px; padding:5px; width:40px" id="{{field.name}}_col">
             <div>
-                <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="filter_by_feature_icon('{{field.name}}')">
+                {% if name == "readonly" %}
+                    <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="filter_by_feature_icon('{{field.name}}')">
+                {% else %}
+                    <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="set_feature_icon_colour('{{field.name}}')">
+                {% endif %}
             </div>
             <div>
                 <label for="{{field.name}}" style="margin:0px; padding:0px" >
@@ -12,7 +16,7 @@
                          style="opacity: 1;">
                 </label>
             </div>
-            <div class="caption" id="{{field.name}}_caption" style="font-size: 8px; padding:0px; margin:0px; opacity:1;"></div>
+            <div class="caption" id="{{field.name}}_caption" style="font-weight: bold; font-size: 8px; padding:0px; margin:0px; opacity:1;">"{{field.alias}}"</div>
         </div>
     {% else %}
         <div class="form-group row no-show" id=row_{{field.name}}>
@@ -25,9 +29,6 @@
             <div class="caption no-show" id="{{field.name}}_caption" style="font-size: 8px; padding:0px; margin:0px; opacity:1;"></div>
         </div>
     {% endif %}
-    <script>
-        document.getElementById("{{field.name}}_caption").innerHTML = "{{field.alias}}"
-        document.getElementById("{{field.name}}_caption").style.fontWeight = "bold";
-    </script>
+
 {% endfor %}
 </div>

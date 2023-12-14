@@ -36,6 +36,7 @@ def pub():
     newdf = df_pub.transpose()
     print(newdf)
     print('END pub')
+    name = "readonly"
     return render_template('03_pub.html',
                            pub=pub_json,
                            env_vars=env_vars,
@@ -46,4 +47,5 @@ def pub():
                            diary=Diary(),
                            station=Station(),
                            direction=Direction(),
-                           photo=Photo())
+                           photo=Photo(),
+                           name=name)

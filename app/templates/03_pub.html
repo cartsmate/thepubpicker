@@ -5,6 +5,7 @@
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_stations.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_edit.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
@@ -18,16 +19,14 @@
 
 {% block title %}
     <div class="col-10">{% include "9_title.html" %}</div>
-    <div class="col-2">{% include "9_menu_edit.html" %}</div>
+    <div class="col-2">{% include "9_icon_edit.html" %}</div>
 {% endblock %}
 
 {% block header %}
 {% endblock %}
 
-{% block map %}{% include "9_map.html" %}{% endblock %}
-
 {% block pub %}{% include "9_pub.html" %}{% endblock %}
 
 {% block menu %}
-    {% include "9_menu_station.html" %}
+    {% include "9_icon_station.html" %}
 {% endblock %}

@@ -44,8 +44,14 @@ def summary():
     newdf = df_pub.transpose()
     print(newdf)
     print('END summary')
+    redirect = "redirect_add()"
+    text = "Add"
+    name = "readonly"
     return render_template('01_summary.html',
                            pub=pub_json,
                            env_vars=env_vars,
                            model_formats=model_formats,
-                           photo=Photo())
+                           photo=Photo(),
+                           redirect=redirect,
+                           text=text,
+                           name=name)

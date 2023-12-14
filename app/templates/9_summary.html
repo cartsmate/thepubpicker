@@ -5,7 +5,9 @@
 {% endblock %}
 
 <div class="col black">
-    <div class="row pink" id="pic">{% include "9_photo.html" %}</div>
+    <div class="row pink" id="pic">
+        {% include "9_carousel_map.html" %}
+    </div>
     <div class="row pink sub-heading" id="random_name">{{ pub[0]['detail_name'] }}</div>
     <div class="row pink" id="random_rank">{% include "9_stars.html" %}</div>
     <div class="row pink" id="extra" style="font-size:12px; ">{{ pub[0]['extra'] }}</div>

@@ -1,12 +1,28 @@
 <script>console.log('CREATING PHOTO FIELDS')</script>
 {% for k, field in photo.__dict__.items() %}
+    <script>console.log('{{field.name}}')</script>
     {% if field.name in model_formats['form_visible_list'] %}
-        {% if pub[0]['photo_identity'] == '' %}
-            <img class="photo" src="{{ url_for('static',filename='images/venue/0a8a43f0-000e-4a88-9874-d13926e71eed.jpeg') }}" id={{field.name}}>
+        <script>console.log('{{field.name}} - visible')</script>
+        {% if name == "readonly" %}
+            {% if pub[0]['photo_identity'] == '' %}
+                <img class="photo" height="100" src="{{ url_for('static',filename='icons/buttons/photo.png') }}" id={{field.name}}>
+            {% else %}
+                <img class="photo" src="{{ url_for('static',filename='images/venue/{}.jpeg'.format(pub[0]['photo_identity']) ) }}" id={{field.name}}>
+            {% endif %}
         {% else %}
-            <img class="photo" src="{{ url_for('static',filename='images/venue/{}.jpeg'.format(pub[0]['photo_identity']) ) }}" id={{field.name}}>
+            <div class="form-group row">
+                <input class="form-control no-show" type='text' name={{field.name}} id={{field.name}}>
+                <div style="font-size: 12px; font-weight: bold">Select a photo to upload</div>
+                <form method="post" action="{{ url_for('photo', pub_identity=pub_identity)}}" enctype="multipart/form-data">
+                    <dl>
+                        <p><input type="file" name="file" class="form-control" autocomplete="off" required></p>
+                    </dl>
+                    <button id="submit" type="submit" class="btn btn-primary btn-block" name="submit" value="submit">Submit</button>
+                </form>
+            </div>
         {% endif %}
     {% else %}
+        <script>console.log('{{field.name}} - NOT visible')</script>
         <input class="form-control no-show" type='text' name={{field.name}} id={{field.name}}>
     {% endif %}
 {% endfor %}

@@ -1,5 +1,7 @@
 <div class="col black">
-    <div class="row pink">{% include "9_pub_photo.html" %}</div>
+    <div class="row pink" id="pic">
+        {% include "9_carousel_map.html" %}
+    </div>
     <div class="row pink sub-heading">{{ pub[0]['detail_name'] }}</div>
     <div class="row pink" id="random_rank">{% include "9_stars.html" %}</div>
     <div class="row pink sub-heading" style="font-size:12px;font-weight:normal; ">{{ pub[0]['extra'] }}</div>

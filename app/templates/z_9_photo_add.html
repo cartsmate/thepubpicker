@@ -1,0 +1,19 @@
+{% if pub[0]['photo_identity'] == '' %}
+    <img class="photo" src="{{ url_for('static',filename='images/venue/0a8a43f0-000e-4a88-9874-d13926e71eed.jpeg') }}" id="random_photo">
+{% else %}
+    <img class="photo" src="{{ url_for('static',filename='images/venue/{}.jpeg'.format(pub[0]['photo_identity']) ) }}" id="random_photo">
+{% endif %}
+
+<div class="form-group row">
+    <h4>Select a photo to upload</h4>
+    <form method="post" action="{{ url_for('photo_upload', pub_identity=pub_identity)}}" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-info">
+        </p>
+    </form>
+</div>

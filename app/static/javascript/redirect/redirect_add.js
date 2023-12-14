@@ -1,5 +1,5 @@
 function redirect_add() {
-    console.log("redirect_add")
+    console.log("USER INPUT: redirect_add")
 
     var base_url = window.location.hostname
     if (env_vars['env'] == 'qual') {

@@ -1,5 +1,5 @@
-<script>console.log('CREATING STATION FIELDS')</script>
-{% for k, field in station.__dict__.items() %}
+<script>console.log('CREATING DETAIL FIELDS')</script>
+{% for k, field in detail.__dict__.items() %}
     {% if field.name in model_formats['form_visible_list'] %}
         <div class="form-group row details" id=row_{{field.name}} >
             <div class="col details-label" >
@@ -21,7 +21,6 @@
                     <script>document.getElementById("{{field.name}}").required = true</script>
                 {% endif %}
             </div>
-
         </div>
     {% else %}
         <div class="form-group row no-show" id=row_{{field.name}}>
@@ -33,5 +32,4 @@
             </div>
         </div>
     {% endif %}
-
 {% endfor %}

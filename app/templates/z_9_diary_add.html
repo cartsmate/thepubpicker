@@ -1,3 +1,4 @@
+<script>console.log('ADD DIARY FIELDS')</script>
 {% for key, field in diary.__dict__.items() %}
     {% if key != "pub_identity" %}
         <div class="form-group row details" id="row_{{field.name}}">

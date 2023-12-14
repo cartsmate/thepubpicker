@@ -6,7 +6,11 @@
                 <label class="col-form-label label" for="{{key}}">{{field.alias}}</label>
             </div>
             <div class="col details-data" id="div_{{key}}" >
-                <input class="form-control details-input" type='textarea' name="{{key}}" id="{{key}}" readonly>
+                {% if name == "readonly" %}
+                    <input class="form-control details-input" type='textarea' name="{{key}}" id="{{key}}" readonly>
+                {% else %}
+                    <input class="form-control details-input" type='textarea' name="{{key}}" id="{{key}}" >
+                {% endif %}
             </div>
         </div>
     {% endif %}

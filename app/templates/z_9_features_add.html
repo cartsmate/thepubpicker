@@ -1,3 +1,4 @@
+<script>console.log('CREATING REVIEW FIELDS')</script>
 <div id="home_features" class="row" style="width: 290px; display:flex; flex-wrap: wrap; ">
 {% for k, field in review.__dict__.items() %}
     {% if field.name in model_formats['icon_list'] %}

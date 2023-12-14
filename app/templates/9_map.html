@@ -19,7 +19,17 @@
     <script>
         function map_init_none() {
             console.log("INIT MAP NONE");
-            document.getElementById('template_map').style.display = 'none'
+            //document.getElementById('template_map').style.display = 'none'
+            //document.getElementById('map').style.background-color = 'green'
+            //.style.height = '400px;'
+            map_elem = document.getElementById('map');
+            map_elem.className = "photo"
+
+            var elem = document.createElement("img");
+            elem.src = "/static/icons/no-wifi.png"
+            elem.height = "100"
+
+            map_elem.appendChild(elem)
         }
     </script>
 {% endblock %}
