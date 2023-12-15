@@ -1,6 +1,6 @@
 
 class Rank:
-    def __init__(self, name='rank', alias="Rating", required='false', form_visible='false',
+    def __init__(self, name='rank', alias="Rank", required='false', form_visible='false',
                  table_visible='true', value=0, control='star', rank=4):
         self.name = name
         self.alias = alias

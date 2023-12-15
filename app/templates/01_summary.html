@@ -4,6 +4,7 @@
     <script>pub = {{ pub | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_add.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_search.js') }}"></script>
@@ -23,6 +24,10 @@
 
 {% block pub_summary %}
     {% include "9_summary.html" %}
+{% endblock %}
+
+{% block map %}
+    {% include "9_map.html" %}
 {% endblock %}
 
 {% block carousel %}
