@@ -2,9 +2,9 @@
     <div class="row pink" id="pic">
         {% include "9_carousel_map.html" %}
     </div>
-    <div class="row pink sub-heading">{{ pub[0]['detail_name'] }}</div>
-    <div class="row pink" id="random_rank">{% include "9_stars.html" %}</div>
-    <div class="row pink sub-heading" style="font-size:12px;font-weight:normal; ">{{ pub[0]['extra'] }}</div>
+    <div class="row pink" style="color: black;" >{{ pub[0]['detail_name'] }}</div>
+    <div class="row pink" id="random_rank" style="padding-bottom:5px;">{% include "9_stars.html" %}</div>
+    <div class="row pink" style="font-size:12px;font-weight:normal; color: black; ">{{ pub[0]['extra'] }}</div>
 
     <div style="font-size: 12px; font-weight: bold">What's it about ... ?</div>
     <div class="row pink">{% include "9_pub_features.html" %}</div>

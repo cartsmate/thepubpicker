@@ -1,3 +1,11 @@
+{% block script %}
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_add.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_edit.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection.js') }}"></script>
+{% endblock %}
+
 <style>
   /*
  * Made by Erik Terwan
@@ -185,9 +193,15 @@ body
     but hey, it's pure CSS magic.
     -->
     <ul id="menu">
-      <a href="#"><li>Home</li></a>
+      <a href="#" onclick="redirect_summary()"><li>Home</li></a>
+      <a href="#" onclick="redirect_pub('{{ daily_id }}')" ><li>Pub of the day</li></a>
+      <a href="#" onclick="redirect_collection()"><li>All pubs</li></a>
+      {% if pub|length == 1 %}
+        <a href="#" onclick="redirect_stations()"><li>Same station pubs</li></a>
+      {% endif %}
       <a href="#" onclick="redirect_add()"><li>Add new pub</li></a>
-      <a href="#" onclick="pub_of_the_week('{{ pub[0]['pub_identity'] }}')" ><li>Pub of the day</li></a>
-      <a href="#" onclick="redirect_collection()"><li>View all pubs</li></a>
+      {% if pub|length == 1 %}
+        <a href="#" onclick="redirect_edit('{{pub[0]['pub_identity']}}')"><li>Edit pub</li></a>
+      {% endif %}
     </ul>
   </div>

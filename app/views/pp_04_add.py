@@ -32,6 +32,10 @@ def add():
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
 
+    # # # GET DAILY PUB
+    df_details = Csv().go_get_details_daily()
+    daily_id = df_details.iloc[0]['pub_identity']
+
     # # # GET NEW BLANK PUB TEMPLATE
     df_new_pub = NewPub().go_new_pub()
     pub_json = Dataframes().df_to_dict(df_new_pub)
@@ -47,6 +51,7 @@ def add():
 
     return render_template('04_add.html',
                            pub=pub_json,
+                           daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

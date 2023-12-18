@@ -19,7 +19,6 @@ from app.models.photo.photo import Photo
 from config import Configurations
 
 
-@app.route("/", methods=['GET'])
 @app.route("/summary/", methods=['GET'])
 def summary():
     print('START summary')
@@ -29,15 +28,19 @@ def summary():
     # # # GET MODEL DISPLAY FORMATS
     model_formats = ControlsList().go_get_control_list()
 
-    # # # GET RANDOM PUB
-    df_details = Csv().go_get_details()
+    # # # GET DAILY PUB
+    df_details = Csv().go_get_details_daily()
+    daily_id = df_details.iloc[0]['pub_identity']
 
-    no_of_details = df_details.shape[0]
-    random_index = random.randrange(0, no_of_details)
-    series_random_pub = df_details.iloc[random_index]
+        # # # GET RANDOM PUB
+        # df_details = Csv().go_get_details()
 
-    random_pub_id = series_random_pub['pub_identity']
-    df_pub = CsvSingle().go_get_1_pub(random_pub_id)
+        # no_of_details = df_details.shape[0]
+        # random_index = random.randrange(0, no_of_details)
+        # series_random_pub = df_details.iloc[random_index]
+
+        # pub_id = series_random_pub['pub_identity']
+    df_pub = CsvSingle().go_get_1_pub(daily_id)
     pub_json = Dataframes().df_to_dict(df_pub)
 
     # # # FOR TESTING PURPOSES ONLY
@@ -49,6 +52,7 @@ def summary():
     name = "readonly"
     return render_template('01_summary.html',
                            pub=pub_json,
+                           daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            photo=Photo(),

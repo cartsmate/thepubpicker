@@ -20,38 +20,11 @@ from config import Configurations
 
 
 @app.route("/", methods=['GET'])
-@app.route("/summary/", methods=['GET'])
-def summary():
-    print('START summary')
+def home():
+    print('START home')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
+    print('END home')
 
-    # # # GET MODEL DISPLAY FORMATS
-    model_formats = ControlsList().go_get_control_list()
-
-    # # # GET RANDOM PUB
-    df_details = Csv().go_get_details()
-
-    no_of_details = df_details.shape[0]
-    random_index = random.randrange(0, no_of_details)
-    series_random_pub = df_details.iloc[random_index]
-
-    random_pub_id = series_random_pub['pub_identity']
-    df_pub = CsvSingle().go_get_1_pub(random_pub_id)
-    pub_json = Dataframes().df_to_dict(df_pub)
-
-    # # # FOR TESTING PURPOSES ONLY
-    newdf = df_pub.transpose()
-    print(newdf)
-    print('END summary')
-    redirect = "redirect_add()"
-    text = "Add"
-    name = "readonly"
-    return render_template('01_summary.html',
-                           pub=pub_json,
-                           env_vars=env_vars,
-                           model_formats=model_formats,
-                           photo=Photo(),
-                           redirect=redirect,
-                           text=text,
-                           name=name)
+    return render_template('00_title_page.html',
+                           env_vars=env_vars)

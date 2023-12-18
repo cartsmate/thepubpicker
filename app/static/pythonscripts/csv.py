@@ -81,6 +81,12 @@ class Csv:
 
         return df_pubs
 
+    def go_get_details_daily(self):
+        df_details = pd.read_csv(directory_path + '/files/details_day.csv', dtype={'pub_identity': str})
+        print(df_details)
+        print('details csv file downloaded')
+        return df_details
+
     def go_get_details(self):
         df_details = pd.read_csv(directory_path + '/files/details.csv', dtype={'pub_identity': str,
                                                                'station_identity': str, 'detail_deletion': str,

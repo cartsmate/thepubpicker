@@ -20,7 +20,8 @@ function list_filter(visible, order, asc_desc) {
             paging: true,
             info: false,
             order: [[order, asc_desc]],
-            columnDefs: list_addjson(visible)
+            columnDefs: list_addjson(visible),
+            searching: false
         });
     });
     //console.log('end of filter table')

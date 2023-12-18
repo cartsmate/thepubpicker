@@ -4,10 +4,12 @@
     <script>pub = {{ pub | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listener_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_add.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_search.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
@@ -15,26 +17,15 @@
 {% endblock %}
 
 {% block title %}
-    <div class="col-10">{% include "9_title.html" %}</div>
+    <div class="col-2">{% include "9_icon_burger.html" %}</div>
+    <div class="col-8">{% include "9_title.html" %}</div>
     <div class="col-2">{% include "9_icon_search.html" %}</div>
-{% endblock %}
-
-{% block header %}
 {% endblock %}
 
 {% block pub_summary %}
     {% include "9_summary.html" %}
 {% endblock %}
 
-{% block map %}
-    {% include "9_map.html" %}
-{% endblock %}
-
 {% block carousel %}
     {% include "9_carousel.html" %}
-{% endblock %}
-
-{% block menu %}
-    {% include "9_button.html" %}
-    {% include "9_button_view_all.html" %}
 {% endblock %}

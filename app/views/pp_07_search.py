@@ -28,6 +28,10 @@ def search():
     # # # GET MODEL DISPLAY FORMATS
     model_formats = ControlsList().go_get_control_list()
 
+    # # # GET DAILY PUB
+    df_details = Csv().go_get_details_daily()
+    daily_id = df_details.iloc[0]['pub_identity']
+
     # # # GET ALL PUBS WITH FEATURE
     feature = request.args.get('feature')
     station = request.args.get('station_id')
@@ -65,6 +69,7 @@ def search():
     print('END collection')
     return render_template('07_search.html',
                            pub=pub_json,
+                           daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

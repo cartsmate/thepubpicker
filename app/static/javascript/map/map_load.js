@@ -3,7 +3,7 @@ function map_load() {
     var js = document.createElement("script");
     js.type = "text/javascript";
     console.log('internet connection status: ' + window.navigator.onLine)
-    /*
+
     if (window.navigator.onLine == true) {
         console.log('on-line')
         js.setAttribute("defer", "defer");
@@ -24,6 +24,6 @@ function map_load() {
         console.log('no map')
         map_init_none()
     }
-    */
-    map_init_none()
+
+    //map_init_none()
 }

@@ -26,6 +26,10 @@ def edit():
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
 
+    # # # GET DAILY PUB
+    df_details = Csv().go_get_details_daily()
+    daily_id = df_details.iloc[0]['pub_identity']
+
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
     df_pub = CsvSingle().go_get_1_pub(pub_id)
@@ -38,6 +42,7 @@ def edit():
     print('END pub')
     return render_template('05_edit.html',
                            pub=pub_json,
+                           daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

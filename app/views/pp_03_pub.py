@@ -23,6 +23,10 @@ def pub():
     # # # GET MODEL DISPLAY FORMATS
     model_formats = ControlsList().go_get_control_list()
 
+    # # # GET DAILY PUB
+    df_details = Csv().go_get_details_daily()
+    daily_id = df_details.iloc[0]['pub_identity']
+
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
 
@@ -39,6 +43,7 @@ def pub():
     name = "readonly"
     return render_template('03_pub.html',
                            pub=pub_json,
+                           daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
