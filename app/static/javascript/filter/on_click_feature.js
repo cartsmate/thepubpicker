@@ -27,6 +27,7 @@ function update_filters() {
     list_setup(pub_filtered)
     populate_review(pub_filtered)
     populate_header(pub_filtered.length)
+    map_load_collection(pub_filtered)
 }
 function set_feature_icon_colour(check_item) {
     console.log('set feature icon colour')

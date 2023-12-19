@@ -22,7 +22,7 @@ function map_load_summary() {
 }
 
 function map_load_collection(pub_filtered) {
-    console.log('MAP_LOAD')
+    console.log('MAP LOAD COLLECTION')
     var js = document.createElement("script");
     js.type = "text/javascript";
     console.log('internet connection status: ' + window.navigator.onLine)

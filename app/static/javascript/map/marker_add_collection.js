@@ -17,10 +17,10 @@ function marker_add_collection(map, pub_filtered) {
 
     //console.log(markersArray.length)
     //console.log(data.length)
-    //var pinSVGHole = "M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z";
-    //var labelOriginHole = new google.maps.Point(12,15);
-    var pinSVGFilled = "M 12,2 C 8.1340068,2 5,5.1340068 5,9 c 0,5.25 7,13 7,13 0,0 7,-7.75 7,-13 0,-3.8659932 -3.134007,-7 -7,-7 z";
-    var labelOriginFilled =  new google.maps.Point(12,9);
+    var pinSVGHole = "M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z";
+    var labelOriginHole = new google.maps.Point(12,15);
+    //var pinSVGFilled = "M 12,2 C 8.1340068,2 5,5.1340068 5,9 c 0,5.25 7,13 7,13 0,0 7,-7.75 7,-13 0,-3.8659932 -3.134007,-7 -7,-7 z";
+    //var labelOriginFilled =  new google.maps.Point(12,9);
     var infowindow = new google.maps.InfoWindow();
     var marker, i, j;
     var bounds = new google.maps.LatLngBounds();
@@ -37,7 +37,7 @@ function marker_add_collection(map, pub_filtered) {
         var pinColor = "coral"
         //console.log('colour: ' + pinColor)
         //if (true == false) {
-        var pin = pinSVGFilled
+        var pin = pinSVGHole
 
 //        var label = {
 //            text: pub.count.toString(),
@@ -62,7 +62,7 @@ function marker_add_collection(map, pub_filtered) {
             strokeWeight: 2,
             strokeColor: "white",
             scale: 2,
-            labelOrigin: labelOriginFilled
+            labelOrigin: labelOriginHole
         };
         /*
         if (typeof data[key].name != "undefined") {
@@ -78,17 +78,14 @@ function marker_add_collection(map, pub_filtered) {
             icon: markerImage
         })
 
-        google.maps.event.addListener(marker, 'click', (function (marker, key) {
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
                         infowindow.x = pub_filtered[i].detail_name;
                         infowindow.setContent("<p><b>" + pub_filtered[i].detail_name + "</b></p>" +
-                            "<p>address : " + pub_filtered[i].address + "</p>" +
-                            "<p>rank : " + pub_filtered[i].rank + "</p>" +
-                            "<p>station : " + pub_filtered[i].station_name + "</p>" +
-                            "<a href='/pub/?id/=" + pub_filtered[i].pub_identity + "'>click for more details</a>");
+                            "<a href='/pub/?id=" + pub_filtered[i].pub_identity + "'>click for details</a>");
                         infowindow.open(map, marker);
                     }
-                })(marker, key));
+                })(marker, i));
 //
 //        google.maps.event.addListener(marker, 'click', (function (marker, key) {
 //            return function () {
