@@ -34,7 +34,7 @@ function marker_add_collection(map, pub_filtered) {
         //console.log('data[key].count')
         //console.log(data[key].count)
         //var pinColor = data[key].colour
-        var pinColor = "#0275d8"
+        var pinColor = "coral"
         //console.log('colour: ' + pinColor)
         //if (true == false) {
         var pin = pinSVGFilled
@@ -77,6 +77,18 @@ function marker_add_collection(map, pub_filtered) {
             map: map,
             icon: markerImage
         })
+
+        google.maps.event.addListener(marker, 'click', (function (marker, key) {
+                    return function () {
+                        infowindow.x = pub_filtered[i].detail_name;
+                        infowindow.setContent("<p><b>" + pub_filtered[i].detail_name + "</b></p>" +
+                            "<p>address : " + pub_filtered[i].address + "</p>" +
+                            "<p>rank : " + pub_filtered[i].rank + "</p>" +
+                            "<p>station : " + pub_filtered[i].station_name + "</p>" +
+                            "<a href='/pub/?id/=" + pub_filtered[i].pub_identity + "'>click for more details</a>");
+                        infowindow.open(map, marker);
+                    }
+                })(marker, key));
 //
 //        google.maps.event.addListener(marker, 'click', (function (marker, key) {
 //            return function () {

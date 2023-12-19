@@ -10,16 +10,14 @@ function onload_collection() {
     //************
 
     populate_all_filters(pub)
+    pre_populate(feature, station)
+    pub_filtered = filter_all_data()
+    populate_all_filters_collection(pub_filtered)
 
-    pub_filtered = calculate_filters(feature, station)
-    console.log('pub_filtered')
-    console.log(pub_filtered)
-
-    map_load_collection()
+    //map_load_collection()
     list_setup(pub_filtered)
     //populate_review(pub_filtered)
-    populate_all_filters_collection(pub_filtered)
-    //marker_add_collection(pub_filtered)
+
     populate_header(pub_filtered.length)
 
 }

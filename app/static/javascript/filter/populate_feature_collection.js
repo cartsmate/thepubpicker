@@ -1,6 +1,6 @@
 function populate_feature_collection(pub_filtered) {
     console.log('populate feature collection')
-    console.log('received data')
+    console.log('pub_filtered')
     console.log(pub_filtered.length)
     document.getElementById('button_feat').innerHTML = '<a>by feature (' + pub_filtered.length + ')</a>'
     filter_clear('checks_feature')
@@ -28,9 +28,11 @@ function populate_feature_collection(pub_filtered) {
         input.onclick = function() { filter_by_feature_menu() }
         if (filtered_data.length > 0) {
             label.style.display = "block"
-            input.checked = true
         } else {
             label.style.display = "none"
+        }
+        if (filtered_data.length == pub_filtered.length) {
+            input.checked = true
         }
         label.appendChild(input)
 

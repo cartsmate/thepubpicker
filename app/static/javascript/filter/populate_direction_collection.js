@@ -44,10 +44,14 @@ function populate_direction_collection(pub_filtered) {
         input.onclick = function() { on_click_direction() }
         if (filtered_data.length > 0) {
             label.style.display = "block"
-            input.checked = true
+
         } else {
             label.style.display = "none"
         }
+        if (filtered_data.length == pub_filtered.length) {
+            input.checked = true
+        }
+
         label.appendChild(input)
     })(i, pub_filtered)
 }

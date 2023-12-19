@@ -22,7 +22,8 @@ function update_feature_menu(check_item) {
 }
 function update_filters() {
     console.log('update filters')
-    pub_filtered = filter_all_data(pub)
+    pub_filtered = filter_all_data()
+    populate_all_filters_collection(pub_filtered)
     list_setup(pub_filtered)
     populate_review(pub_filtered)
     populate_header(pub_filtered.length)

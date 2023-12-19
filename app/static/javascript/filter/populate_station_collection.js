@@ -30,10 +30,12 @@ function populate_station_collection(pub_filtered) {
         input.onclick = function() { on_click_station() }
         if (filtered_data.length > 0) {
             label.style.display = "block"
-            input.checked = true
             station_options++
         } else {
             label.style.display = "none"
+        }
+        if (filtered_data.length == pub_filtered.length) {
+            input.checked = true
         }
         label.appendChild(input)
     }
