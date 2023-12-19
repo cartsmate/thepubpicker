@@ -5,7 +5,7 @@ function redirect_edit(id) {
     if (env_vars['env'] == 'qual') {
         var url = "http://" + base_url + ":5000/edit/"
     } else {
-        var url = "http://" + base_url + "/add/"
+        var url = "http://" + base_url + "/edit/"
     }
     const myUrlWithParams = new URL(url);
     myUrlWithParams.searchParams.append('id', id);
