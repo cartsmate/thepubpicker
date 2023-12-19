@@ -113,7 +113,7 @@
     text-align:left;
     visibility:visible;
     display:flex;
-    text-align:left"
+    text-align:left;
 }
 .input-data {
     overflow-y: scroll;
@@ -164,4 +164,11 @@
     font-size: 8px;
     margin: 0px;
     padding: 0px
+}
+.map_words {
+    color: coral;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 5px;
 }

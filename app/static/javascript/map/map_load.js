@@ -29,16 +29,16 @@ function map_load_collection(pub_filtered) {
 
     if (window.navigator.onLine == true) {
         console.log('on-line')
-        console.log('pub_length : ' + pub_filtered|length)
-        if (pub_filtered|length < 10) {
-            console.log('less than 10')
-            js.setAttribute("defer", "defer");
-            js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init_collection'
-            document.head.appendChild(js)
-        } else {
-            console.log('10 or more')
-            map_init_too_many()
-        }
+        //console.log('pub_length : ' + pub_filtered|length)
+        //if (pub_filtered|length < 10) {
+        console.log('less than 10')
+        js.setAttribute("defer", "defer");
+        js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init_collection'
+        document.head.appendChild(js)
+        //} else {
+        //    console.log('10 or more')
+        //    map_init_too_many()
+        //}
     } else {
         console.log('off-line')
         console.log('no map')

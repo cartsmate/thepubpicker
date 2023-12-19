@@ -2,7 +2,7 @@
 <div id="home_features" class="row" style="width: 290px; display:flex; flex-wrap: wrap; ">
 {% for k, field in review.__dict__.items() %}
     {% if field.name in model_formats['icon_list'] %}
-        <div style="text-align:center; margin:0px; padding:5px; width:40px" id="{{field.name}}_col">
+        <div style="text-align:center; margin:0px; padding:0px; width:40px; height: 48px; border-radius: 50%; border: 2px solid coral;" id="{{field.name}}_col">
             <div>
                 {% if name == "readonly" %}
                     <script>console.log('filter by feature icon')</script>

@@ -19,7 +19,7 @@ function populate_pub(){
                 var feature_img = model_formats['fields_list'][i] + "_img"
                 var feature_col = model_formats['fields_list'][i] + "_col"
                 var feature_caption = model_formats['fields_list'][i] + "_caption"
-                document.getElementById(feature_col).style.background = "#0275D8";
+                document.getElementById(feature_col).style.background = "coral";
                 document.getElementById(feature_caption).style.color = "white";
             } else {
                 //console.log('false')

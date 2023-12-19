@@ -1,4 +1,4 @@
-<div class="photo" id="new_map"></div>
+<div class="col" id="col_map"><div class="photo" id="new_map"></div></div>
 
 {% block script %}
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/nearest_station.js') }}"></script>
@@ -24,8 +24,13 @@
             console.log(pub_filtered.length)
             if (pub_filtered.length <= 10) {
                 marker_add_collection(map, pub_filtered)
-                }
-
+            } else {
+                map_elem = document.getElementById('col_map');
+                var elem = document.createElement("div");
+                elem.innerHTML = 'Too many pubs to show on map';
+                elem.className = "map_words"
+                map_elem.appendChild(elem)
+            }
         }
         function map_init_1() {
             console.log('MAP INIT 1')
