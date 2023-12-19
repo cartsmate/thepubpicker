@@ -13,6 +13,7 @@ from app.models.review.roast import Roast
 from app.models.review.sport import Sport
 from app.models.review.review_identity import ReviewIdentity
 from app.models.detail.pub_identity import PubIdentity
+from app.models.review.no_feature import NoFeature
 
 
 class Review:
@@ -20,7 +21,7 @@ class Review:
     def __init__(self, review_deletion=ReviewDeletion(), sport=Sport(), garden=Garden(), music=Music(), roast=Roast(),
                  brunch=Brunch(), late=Late(), quiz=Quiz(), pool=Pool(), dart=Dart(), entertain=Entertain(),
                  history=History(), favourite=Favourite(), pub_identity=PubIdentity(),
-                 review_identity=ReviewIdentity()):
+                 review_identity=ReviewIdentity(), no_feature=NoFeature()):
         self.review_identity = review_identity
         self.review_deletion = review_deletion
         self.pub_identity = pub_identity
@@ -36,3 +37,4 @@ class Review:
         self.quiz = quiz
         self.roast = roast
         self.sport = sport
+        self.no_feature = no_feature

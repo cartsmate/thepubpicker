@@ -1,5 +1,5 @@
-function marker_add_1(map) {
-    console.log('MARKER ADD 1')
+function marker_add_summary(map) {
+    console.log('MARKER ADD SUMMARY')
     console.log('lat: ' + pub[0].detail_latitude)
     console.log('lat: ' + pub[0].detail_longitude)
     marker = new google.maps.Marker({

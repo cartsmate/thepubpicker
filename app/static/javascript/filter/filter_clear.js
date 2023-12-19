@@ -1,5 +1,5 @@
 function filter_clear(selectElement) {
-    console.log('filter clear')
+    //console.log('filter clear')
 //    console.log('pub count: ' + pub.length)
     var e = document.getElementById(selectElement);
 

@@ -4,13 +4,7 @@
     {% if field.name in model_formats['icon_list'] %}
         <div style="text-align:center; margin:0px; padding:5px; width:40px" id="{{field.name}}_col">
             <div>
-                {% if name == "readonly" %}
-                    <script>console.log('filter by feature icon')</script>
-                    <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="filter_by_feature_icon('{{field.name}}')">
-                {% else %}
-                    <script>console.log('set feature icon color')</script>
-                    <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="set_feature_icon_colour('{{field.name}}')">
-                {% endif %}
+                <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="set_feature_icon_colour('{{field.name}}')">
             </div>
             <div>
                 <label for="{{field.name}}" style="margin:0px; padding:0px" >

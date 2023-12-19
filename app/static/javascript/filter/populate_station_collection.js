@@ -1,5 +1,5 @@
-function populate_station(pub_filtered) {
-    console.log('populate station')
+function populate_station_collection(pub_filtered) {
+    console.log('populate station collection')
 //    console.log('pub filtered: ' + pub_filtered.length)
 //    console.log('pub count: ' + pub.length)
     //pub = pub_filtered
@@ -30,6 +30,7 @@ function populate_station(pub_filtered) {
         input.onclick = function() { on_click_station() }
         if (filtered_data.length > 0) {
             label.style.display = "block"
+            input.checked = true
             station_options++
         } else {
             label.style.display = "none"
@@ -47,7 +48,7 @@ function populate_station(pub_filtered) {
 //    }
 
 function on_click_station() {
-    console.log('USER INPUT - ON CLICK STATION')
+    console.log('USER INPUT - on click station')
     pub_filtered = filter_all_data(pub)
     list_setup(pub_filtered)
     populate_feature(pub_filtered)

@@ -1,28 +1,16 @@
 function populate_review(pub_filtered){
     console.log('populate review')
-//    console.log('pub filtered: ' + pub_filtered.length)
-//    console.log('pub count: ' + pub.length)
-//    console.log('pub_filtered:')
-//    console.log(pub_filtered)
-//    pub = pub_filtered
-    //console.log(pub)
-    //{% for k, field in review.__dict__.items() %}
-    //{% if field.name in model_formats['icon_list'] %}
-    //review = {{ review | tojson }}
-    //for (key in review_list) {
+//    SKIP THIS SECTION
+/*
     for (i = 0; i < review_list.length; i++) {
 
         if (model_formats['check_list'].includes(review_list[i])) {
-//            console.log(review_list[i])
             var counter = 0
             for (let j = 0; j < pub_filtered.length; j++) {
                 if (pub_filtered[j][review_list[i]] == 'true') {
                     counter++
                 }
             }
-            //console.log(pub.length)
-            //console.log(review_list[i])
-            //console.log(counter)
             var feature_img = review_list[i] + "_img"
             var feature_col = review_list[i] + "_col"
             var feature_caption = review_list[i] + "_caption"
@@ -48,4 +36,5 @@ function populate_review(pub_filtered){
             }
         }
     }
+    */
 }

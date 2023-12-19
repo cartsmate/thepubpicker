@@ -1,12 +1,32 @@
-
 <div class="photo" id="new_map"></div>
+
 {% block script %}
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/nearest_station.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/listener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_1.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_summary.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_collection.js') }}"></script>
     <script>
+        function map_init_summary() {
+            console.log('MAP INIT SUMMARY')
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            marker_add_summary(map)
+        }
+        function map_init_collection() {
+            console.log('MAP INIT COLLECTION')
+            //console.log(pub[0].detail_latitude)
+            //console.log(pub[0].detail_longitude)
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            pub_filtered = filter_all_data_collection(pub)
+            console.log('pub_filtered')
+            console.log(pub_filtered)
+            console.log(pub_filtered|length)
+            console.log(pub_filtered.length)
+            if (pub_filtered.length <= 10) {
+                marker_add_collection(map, pub_filtered)
+                }
+        }
         function map_init_1() {
             console.log('MAP INIT 1')
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
@@ -17,20 +37,23 @@
             map = map_create(51.5, -0.11)
             map_listener_click(map)
         }
-    </script>
-    <script>
+        function map_init_too_many() {
+            console.log("INIT MAP TOO MANY");
+            map_elem = document.getElementById('new_map');
+            map_elem.className = "photo"
+            var elem = document.createElement("img");
+            elem.src = "/static/icons/no-map.png"
+            elem.height = "100"
+            map_elem.appendChild(elem)
+        }
         function map_init_none() {
             console.log("INIT MAP NONE");
-            /*
-            map_elem = document.getElementById('map');
+            map_elem = document.getElementById('new_map');
             map_elem.className = "photo"
-
             var elem = document.createElement("img");
             elem.src = "/static/icons/no-wifi.png"
             elem.height = "100"
-
             map_elem.appendChild(elem)
-            */
         }
     </script>
 {% endblock %}

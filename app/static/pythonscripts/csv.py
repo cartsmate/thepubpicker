@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import numpy as np
 from config import Configurations
 
 config = Configurations().get_config()
@@ -8,6 +9,22 @@ directory_path = config2['directory_path']
 
 
 class Csv:
+
+    def add_no_feature(self, df_data):
+        df_data['no_feature'] = np.where((df_data['brunch'] == 'true') | \
+                                        (df_data['dart'] == 'true') | \
+                                        (df_data['entertain'] == 'true') | \
+                                        (df_data['favourite'] == 'true') | \
+                                        (df_data['garden'] == 'true') | \
+                                        (df_data['history'] == 'true') | \
+                                        (df_data['late'] == 'true') | \
+                                        (df_data['music'] == 'true') | \
+                                        (df_data['pool'] == 'true') | \
+                                        (df_data['quiz'] == 'true') | \
+                                        (df_data['roast'] == 'true') | \
+                                        (df_data['sport'] == 'true') \
+                                        , 'false', 'true')
+        return df_data
 
     def go_get_stations_directions(self):
         df_pub_with_station = pd.merge(self.go_get_details(), self.go_get_stations(), on='station_identity',
@@ -107,6 +124,7 @@ class Csv:
                                                                   'music': str, 'pool': str, 'quiz': str,
                                                                   'roast': str, 'sport': str})
         print(df_reviews)
+        df_reviews = self.add_no_feature(df_reviews)
         print('reviews csv file downloaded')
         return df_reviews
 

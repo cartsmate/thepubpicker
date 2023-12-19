@@ -1,7 +1,7 @@
-function populate_feature(pub_filtered) {
-    console.log('populate feature')
-//    console.log('received data')
-//    console.log('pub count: ' + pub.length)
+function populate_feature_collection(pub_filtered) {
+    console.log('populate feature collection')
+    console.log('received data')
+    console.log(pub_filtered.length)
     document.getElementById('button_feat').innerHTML = '<a>by feature (' + pub_filtered.length + ')</a>'
     filter_clear('checks_feature')
     for (i=0; i<model_formats['icon_list'].length; i++) {
@@ -28,6 +28,7 @@ function populate_feature(pub_filtered) {
         input.onclick = function() { filter_by_feature_menu() }
         if (filtered_data.length > 0) {
             label.style.display = "block"
+            input.checked = true
         } else {
             label.style.display = "none"
         }

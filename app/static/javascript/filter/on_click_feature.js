@@ -9,10 +9,14 @@ function filter_by_feature_icon(check_item) {
 }
 function update_feature_menu(check_item) {
     console.log('USER INPUT: click on feature to SELECT ICON and FILTER')
+    console.log(check_item)
     set_feature_icon_colour(check_item)
+    var checkBox = document.getElementById(check_item);
     if (checkBox.checked == true) {
+        console.log('true')
         document.getElementById(check_item + "_filter").checked = true
     } else {
+        console.log('false')
         document.getElementById(check_item + "_filter").checked = false
     }
 }

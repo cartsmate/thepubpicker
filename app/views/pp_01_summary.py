@@ -41,6 +41,7 @@ def summary():
 
         # pub_id = series_random_pub['pub_identity']
     df_pub = CsvSingle().go_get_1_pub(daily_id)
+
     pub_json = Dataframes().df_to_dict(df_pub)
 
     # # # FOR TESTING PURPOSES ONLY

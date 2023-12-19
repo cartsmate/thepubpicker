@@ -4,13 +4,7 @@
     {% if field.name in model_formats['icon_list'] %}
         <div style="text-align:center; margin:0px; padding:5px; width:40px" id="{{field.name}}_col">
             <div>
-                {% if name == "readonly" %}
-                    <script>console.log('filter by feature icon')</script>
-                    <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="filter_by_feature_icon('{{field.name}}')">
-                {% else %}
-                    <script>console.log('set feature icon color')</script>
-                    <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="set_feature_icon_colour('{{field.name}}')">
-                {% endif %}
+                <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="filter_by_feature_icon('{{field.name}}')">
             </div>
             <div>
                 <label for="{{field.name}}" style="margin:0px; padding:0px" >
@@ -33,4 +27,16 @@
     {% endif %}
 
 {% endfor %}
+</div>
+<div style="text-align:center; margin:0px; padding:5px; width:40px" id="no_feature_col">
+    <div>
+        <input type="checkbox" id="no_feature" name="no_feature" style="display:none" onclick="filter_by_feature_icon('no_feature')">
+    </div>
+    <div>
+        <label for="no_feature" style="margin:0px; padding:0px" >
+            <img src="{{ url_for('static', filename='icons/features/no_feature.png' ) }}" id="no_feature_img" width="27" height="25"
+                 style="opacity: 1;">
+        </label>
+    </div>
+    <div class="caption" id="no_feature_caption" style="font-weight: bold; font-size: 8px; padding:0px; margin:0px; opacity:1;">None</div>
 </div>

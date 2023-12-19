@@ -3,6 +3,7 @@ import gzip
 import uuid
 import json
 import binascii
+import numpy as np
 from flask import render_template, request, make_response
 from app import app
 from config import Configurations
@@ -47,6 +48,7 @@ def collection():
     #     df_data = Csv().go_get_all()
 
     df_data = Csv().go_get_all()
+
 
     # # # FOR TESTING PURPOSES ONLY
     print('df_data')
