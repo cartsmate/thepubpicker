@@ -23,7 +23,7 @@ class ControlsList:
         for item in list_of_lists:
             total_list_obj[item] = []
 
-        class_list = [Detail(), Diary(), Direction(), Photo(), Review(), Station()]
+        class_list = [Detail(), Diary(), Direction(), Review(), Station()]
         for cl in class_list:
             print('class: ' + str(cl))
             for k, v in cl.__dict__.items():

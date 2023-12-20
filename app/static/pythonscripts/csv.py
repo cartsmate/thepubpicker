@@ -91,8 +91,8 @@ class Csv:
         # df_detail_reviews_station_direction_diary = df_detail_reviews_station_direction_diary.fillna('')
 
         df_photos = self.go_get_photos()
-        print('df_photos')
-        print(df_photos)
+        # print('df_photos')
+        # print(df_photos)
         df_pubs = pd.merge(df_detail_reviews_station_direction_diary, df_photos, on='pub_identity', how='left')
         df_pubs = df_pubs.fillna('')
 
@@ -100,18 +100,17 @@ class Csv:
 
     def go_get_details_daily(self):
         df_details = pd.read_csv(directory_path + '/files/details_day.csv', dtype={'pub_identity': str})
-        print(df_details)
+        # print(df_details)
         print('details csv file downloaded')
         return df_details
 
     def go_get_details(self):
-        df_details = pd.read_csv(directory_path + '/files/details.csv', dtype={'pub_identity': str,
-                                                               'station_identity': str, 'detail_deletion': str,
-                                                               'detail_name': str, 'address': str, 'category': str,
-                                                               'colour': str, 'place': str, 'detail_latitude': float,
-                                                               'detail_longitude': float, 'rank': float,
-                                                               'extra': str})
-        print(df_details)
+        df_details = pd.read_csv(directory_path + '/files/details.csv',
+                                 dtype={'pub_identity': str, 'station_identity': str, 'detail_name': str,
+                                        'address': str, 'category': str, 'colour': str, 'detail_deletion': str,
+                                        'detail_latitude': float, 'detail_longitude': float, 'extra': str, 'place': str,
+                                        'rank': float, 'website': str, 'url': str})
+        # print(df_details)
         print('details csv file downloaded')
         return df_details
 
@@ -123,7 +122,7 @@ class Csv:
                                                                   'history': str, 'late': str,
                                                                   'music': str, 'pool': str, 'quiz': str,
                                                                   'roast': str, 'sport': str})
-        print(df_reviews)
+        # print(df_reviews)
         df_reviews = self.add_no_feature(df_reviews)
         print('reviews csv file downloaded')
         return df_reviews
@@ -133,7 +132,7 @@ class Csv:
                                                                        'tuesday': str, 'wednesday': str,
                                                                        'thursday': str, 'friday': str,
                                                                        'saturday': str, 'sunday': str})
-        print(df_diarys)
+        # print(df_diarys)
         print('diarys csv file downloaded')
         return df_diarys
 
@@ -150,6 +149,6 @@ class Csv:
         return df_directions
 
     def go_get_photos(self):
-        df_photos = pd.read_csv(directory_path + '/files/photos.csv',
-                                dtype={'photo_identity': str, 'pub_identity': str, 'photo_deletion': str})
+        df_photos = pd.read_csv(directory_path + '/files/photos_api.csv',
+                                dtype={'photo_identity': str, 'photo_deletion': str, 'pub_identity': str})
         return df_photos

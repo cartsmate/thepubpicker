@@ -2,7 +2,6 @@ function populate_pub(){
     console.log('POPULATE_PUB')
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
-//        console.log(model_formats['fields_list'][i])
         //console.log('fields_list[i]')
         //console.log(fields_list[i])
         //console.log(check_list)
@@ -27,6 +26,9 @@ function populate_pub(){
         //} else if (model_formats['star_list'].includes(model_formats['fields_list'][i])) {
             //populate_stars(model_formats['fields_list'][i], pub[0][model_formats['fields_list'][i]], 'populate')
         } else {
+            console.log('else........')
+            console.log(model_formats['fields_list'][i])
+            console.log(pub[0][model_formats['fields_list'][i]])
             //console.log(model_formats['fields_list'][i])
             document.getElementById(model_formats['fields_list'][i]).value = pub[0][model_formats['fields_list'][i]];
         }

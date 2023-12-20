@@ -8,11 +8,10 @@
     <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
         <div class="sub-heading"><a href="#" style="color: white;" >Featured Pub Of The Day</a></div>
     </div>
-    <div class="row pink" style="padding-top: 5px;">
-        {% include "9_carousel_map.html" %}
-    </div>
-    <div class="row pink" style="color: black;" id="random_name">{{ pub[0]['detail_name'] }}</div>
-    <div class="row pink" id="random_rank" style="padding-bottom:5px;">{% include "9_stars.html" %}</div>
-    <div class="row pink bottom-buffer" id="extra" style="color: black; font-size:12px; ">{{ pub[0]['extra'] }}</div>
+    <div class="row pink" style="color: black; padding-top:5px;" id="random_name">{{ pub[0]['detail_name'] }}</div>
+    <div class="row pink" id="random_rank">{% include "9_stars.html" %}</div>
+    <div class="row pink" id="extra" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; ">{{ pub[0]['extra'] }}</div>
+    <div class="row pink" style="padding-top: 5px;">{% include "9_map.html" %}</div>
+    <div class="row pink" style="padding-top: 5px;">{% include "9_pub_photo.html" %}</div>
     <!--<div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">{{ pub[0]['pub_identity'] }}</a></div>-->
 </div>

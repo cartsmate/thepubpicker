@@ -17,6 +17,8 @@ from app.models.detail.detail_longitude import DetailLongitude
 from app.models.detail.detail_latitude import DetailLatitude
 from app.models.detail.extra import Extra
 from app.models.detail.address import Address
+from app.models.detail.url import Url
+from app.models.detail.website import Website
 from app.models.station.station_identity import StationIdentity
 from app.static.pythonscripts.controls_list import ControlsList
 from app.models.photo.photo_identity import PhotoIdentity
@@ -36,7 +38,7 @@ class FilesDetail:
                             colour=Colour().value, detail_deletion=DetailDeletion().value,
                             detail_latitude=DetailLatitude().value,
                             detail_longitude=DetailLongitude().value, extra=Extra().value,
-                            place=Place().value, rank=Rank().value)
+                            place=Place().value, rank=Rank().value, website=Website().value, url=Url().value)
         df_new_detail = pd.DataFrame([new_detail.__dict__])
         return df_new_detail
 
@@ -48,14 +50,15 @@ class FilesDetail:
                             colour=request.form['colour'], detail_deletion=request.form['detail_deletion'],
                             detail_latitude=request.form['detail_latitude'],
                             detail_longitude=request.form['detail_longitude'], extra=request.form['extra'],
-                            place=request.form['place'], rank=request.form['rank'])
+                            place=request.form['place'], rank=request.form['rank'], website=request['website'],
+                            url=request.form['url'])
         df_new_pub = pd.DataFrame([new_detail.__dict__])
         return df_new_pub
 
     def update_detail_df(self, df_details, pub_id):
         print('UPDATE edit detail')
+        print('pub_id received: ' + pub_id)
         for detail in list(Detail().__dict__.keys()):
-            print(detail)
             print(detail + ' : ' + request.form[detail])
             df_details.loc[df_details['pub_identity'] == pub_id, detail] = request.form[detail]
         print('details model updated with form data')
@@ -69,7 +72,7 @@ class FilesDetail:
 
     def update_detail_csv(self, df_updated_details):
         print('updating detail csv')
-        print(df_updated_details)
+        # print(df_updated_details)
         df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
-        print('csv updated')
+        print('detail csv updated')
         return df_updated_details

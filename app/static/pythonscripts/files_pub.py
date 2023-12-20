@@ -41,8 +41,8 @@ class FilesPub:
         df_diary = NewDiary().go_get_new_diary(pub_id=new_pub_id)
         df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
 
-        df_photo = NewPhoto().go_get_new_photo(id=UuidGenerator().get_new_uuid(), pub_id=new_pub_id)
-        df_with_photo = pd.merge(df_pb_rev_st_dir_dry, df_photo, on='pub_identity', how='left')
-        df_pb_rev_st_dir_dry = df_with_photo.fillna('')
+        # df_photo = NewPhoto().go_get_new_photo(id=UuidGenerator().get_new_uuid(), pub_id=new_pub_id)
+        # df_with_photo = pd.merge(df_pb_rev_st_dir_dry, df_photo, on='pub_identity', how='left')
+        df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
 
         return df_pb_rev_st_dir_dry

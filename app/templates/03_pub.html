@@ -2,6 +2,7 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
+    <script>photos = {{ photos | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
@@ -11,6 +12,8 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_edit.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_detail.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_pub.js') }}"></script>
 {% endblock %}
 

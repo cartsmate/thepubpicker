@@ -26,6 +26,8 @@ function populate_detail(){
         } else if (model_formats['star_list'].includes(model_formats['fields_list'][i])) {
             //populate_stars(model_formats['fields_list'][i], pub[0][model_formats['fields_list'][i]], 'populate')
         } else {
+            console.log(model_formats['fields_list'][i])
+            console.log(pub[0][model_formats['fields_list'][i]])
             document.getElementById(model_formats['fields_list'][i]).value = pub[0][model_formats['fields_list'][i]];
         }
     }

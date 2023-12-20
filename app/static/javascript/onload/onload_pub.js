@@ -3,4 +3,6 @@ function onload_pub() {
 
     console.log('populate pub details')
     populate_pub()
+    populate_photo()
+    //populate_detail()
 }

@@ -63,12 +63,12 @@ class FilesReview:
         print('UPDATE edit review')
         for review in list(Review().__dict__.keys()):
             if review in model_formats['icon_list']:
-                print(review + ' : ' + str(request.form.get(review)))
+                # print(review + ' : ' + str(request.form.get(review)))
                 df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = 'true' \
                     if request.form.get(review) == 'on' \
                     else 'false'
             else:
-                print(review + ' : ' + str(request.form.get(review)))
+                # print(review + ' : ' + str(request.form.get(review)))
                 df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = request.form[review]
         print('details model updated with form data')
         return df_reviews
@@ -81,7 +81,7 @@ class FilesReview:
 
     def update_review_csv(self, df_updated_reviews):
         print('updating review csv')
-        print(df_updated_reviews)
+        # print(df_updated_reviews)
         df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
-        print('csv updated')
+        print('review csv updated')
         return df_updated_reviews

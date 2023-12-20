@@ -57,10 +57,11 @@ class FilesDiary:
         return df_new_pub
 
     def update_diary_df(self, df_diary, pub_id):
-        print('UPDATE edit diary')
+        print('UPDATE/EDIT diary')
+        print('pub_id: ' + pub_id)
         for diary in list(Diary().__dict__.keys()):
             df_diary.loc[df_diary['pub_identity'] == pub_id, diary] = request.form[diary]
-            print(diary + ' : ' + request.form[diary])
+            # print(diary + ' : ' + request.form[diary])
         print('diary model updated with form data')
         return df_diary
 
@@ -72,7 +73,7 @@ class FilesDiary:
 
     def update_diary_csv(self, df_updated_diary):
         print('updating diary csv')
-        print(df_updated_diary)
+        # print(df_updated_diary)
         df_updated_diary.to_csv(directory_path + '/files/diary.csv', index=False, sep=',', encoding='utf-8')
-        print('csv updated')
+        print('diary csv updated')
         return df_updated_diary

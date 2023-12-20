@@ -13,14 +13,14 @@ class CsvSingle:
 
     def go_get_1_pub(self, pub_id):
         df_detail = CsvSingle().go_get_1_detail(pub_id)
-        print(df_detail)
+        # print(df_detail)
         df_review = CsvSingle().go_get_1_review(pub_id)
-        print(df_review)
+        # print(df_review)
         df_detail_review = pd.merge(df_detail, df_review, on='pub_identity', how='left')
 
         station_id = df_detail['station_identity'].iloc[0]
         df_station = self.go_get_1_station(station_id)
-        print(df_station)
+        # print(df_station)
         df_det_rev_st = pd.merge(df_detail_review, df_station, on='station_identity', how='left')
 
         direction_id = df_station['direction_identity'].iloc[0]
@@ -31,9 +31,9 @@ class CsvSingle:
         df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
         # print(df_pb_rev_st_dir_dry)
 
-        df_photo = self.go_get_1_photo(pub_id)
-        df_with_photo = pd.merge(df_pb_rev_st_dir_dry, df_photo, on='pub_identity', how='left')
-        df_pb_rev_st_dir_dry = df_with_photo.fillna('')
+        # df_photo = self.go_get_1_photo(pub_id)
+        # df_with_photo = pd.merge(df_pb_rev_st_dir_dry, df_photo, on='pub_identity', how='left')
+        df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
 
         return df_pb_rev_st_dir_dry
 
@@ -67,4 +67,5 @@ class CsvSingle:
     def go_get_1_photo(self, pub_id):
         df_photos = Csv().go_get_photos()
         df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
+        print(df_1_photo)
         return df_1_photo

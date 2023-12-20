@@ -32,11 +32,17 @@ def submit():
     # df_pub = CsvSingle().go_get_1_pub(pub_id)
 
     df_details_current = Csv().go_get_details()
+    rslt_df = df_details_current[df_details_current['pub_identity'] == pub_id]
+    newdf1 = rslt_df.transpose()
+    print('CURRENT')
+    print(newdf1)
+
+
     df_reviews_current = Csv().go_get_reviews()
     df_diarys_current = Csv().go_get_diarys()
 
     newdf1 = df_details_current.transpose()
-    print(newdf1)
+    # print(newdf1)
     # df_detail_current = CsvSingle().go_get_1_detail(pub_id)
 
     config2 = Configurations().get_config2()
@@ -50,27 +56,29 @@ def submit():
         print('# add new pub - due to ADD')
         df_new_detail = FilesDetail().form_detail()
         newdf1 = df_new_detail.transpose()
-        print(newdf1)
+        # print(newdf1)
         df_updated_details = FilesDetail().add_detail_df(df_details_current, df_new_detail)
         newdf1 = df_updated_details.transpose()
-        print(newdf1)
+        # print(newdf1)
 
         df_new_review = FilesReview().form_review()
-        print(df_new_review)
+        # print(df_new_review)
         df_updated_reviews = FilesReview().add_review_df(df_reviews_current, df_new_review)
-        print(df_updated_reviews)
+        # print(df_updated_reviews)
 
         df_new_diary = FilesDiary().form_diary()
-        print(df_new_diary)
+        # print(df_new_diary)
         df_updated_diarys = FilesDiary().add_diary_df(df_diarys_current, df_new_diary)
-        print(df_updated_diarys)
+        # print(df_updated_diarys)
 
     else:
 
         # IF PUB IDENTITY IS IN FILE
         print('# update current pub - due to EDIT')
         df_updated_details = FilesDetail().update_detail_df(df_details_current, pub_id)
-        newdf1 = df_updated_details.transpose()
+        rslt_df = df_updated_details[df_updated_details['pub_identity'] == pub_id]
+        newdf1 = rslt_df.transpose()
+        print('POST UPDATE')
         print(newdf1)
         # df_updated_details = EditDetail().update_edit_detail(df_details_current, pub_id)
         df_updated_reviews = FilesReview().update_review_df(df_reviews_current, pub_id)
