@@ -73,9 +73,9 @@ class Csv:
         df_diarys = self.go_get_diarys()
         df_pb_rev_st_dir_drys = pd.merge(df_pb_rev_st_dirs, df_diarys, on='pub_identity', how='left')
 
-        df_photos = self.go_get_photos()
-        df_with_photos = pd.merge(df_pb_rev_st_dir_drys, df_photos, on='pub_identity', how='left')
-        df_pb_rev_st_dir_drys = df_with_photos.fillna('')
+        # df_photos = self.go_get_photos()
+        # df_with_photos = pd.merge(df_pb_rev_st_dir_drys, df_photos, on='pub_identity', how='left')
+        df_pb_rev_st_dir_drys = df_pb_rev_st_dir_drys.fillna('')
 
         return df_pb_rev_st_dir_drys
 
