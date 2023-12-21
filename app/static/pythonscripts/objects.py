@@ -41,8 +41,8 @@ class Objects:
         diary = Diary().__dict__.items()
         for k, v in diary:
             visible[k] = 'false'
-        print('visible')
-        print(visible)
+        # print('visible')
+        # print(visible)
         return visible
 
     def go_get_alias(self):
@@ -56,6 +56,6 @@ class Objects:
         # for k, v in diary:
         #     alias[k] = k
         # alias['distance'] = 'distance'
-        print('alias')
-        print(alias)
+        # print('alias')
+        # print(alias)
         return alias

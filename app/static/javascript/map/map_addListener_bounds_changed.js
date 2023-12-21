@@ -5,8 +5,7 @@ function map_addListener_bounds_changed(map, pubs_reviews, searchBox) {
         var bounds = map.getBounds();
         searchBox.setBounds(map.getBounds());
 //        console.log(bounds)
-        add_marker_bounds(map, bounds, pubs_reviews)
+        marker_add_bounds(map, bounds, pubs_reviews)
         });
 //    return bounds
 }
-

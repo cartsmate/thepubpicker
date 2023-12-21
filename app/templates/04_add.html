@@ -2,12 +2,14 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
+    <script>pub_new = {{ pub_new | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
+    <script>stations = {{ stations | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
-    <script>stations = {{ stations | tojson }}</script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub_add.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_detail.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_add.js') }}"></script>
@@ -27,6 +29,9 @@
 <script>document.getElementById("template_header").style.display = "none"</script>
 {% endblock %}
 
-{% block map %}{% include "9_map.html" %}{% endblock %}
+{% block map %}
+{% include "9_map.html" %}
+<input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+{% endblock %}
 
 {% block pub %}{% include "9_pub_add.html" %}{% endblock %}

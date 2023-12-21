@@ -1,5 +1,5 @@
 function onload_add() {
-    map_load()
+    map_load_add()
     console.log('populate pub details')
-    populate_pub()
+    populate_pub_add()
 }

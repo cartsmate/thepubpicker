@@ -50,7 +50,7 @@ class FilesDetail:
                             colour=request.form['colour'], detail_deletion=request.form['detail_deletion'],
                             detail_latitude=request.form['detail_latitude'],
                             detail_longitude=request.form['detail_longitude'], extra=request.form['extra'],
-                            place=request.form['place'], rank=request.form['rank'], website=request['website'],
+                            place=request.form['place'], rank=request.form['rank'], website=request.form['website'],
                             url=request.form['url'])
         df_new_pub = pd.DataFrame([new_detail.__dict__])
         return df_new_pub

@@ -5,7 +5,7 @@ function clearOverlays() {
   }
   markersArray.length = 0;
 }
-function add_marker_bounds(map, bounds, data) {
+function marker_add_bounds(map, bounds, data) {
     console.log('ADD MARKERS INSIDE BOUNDS')
     clearOverlays();
     map_elem = document.getElementById('msg_map');

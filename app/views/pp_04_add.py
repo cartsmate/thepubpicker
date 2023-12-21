@@ -32,26 +32,36 @@ def add():
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
 
+    # # # GET ALL PUBS
+    df_data = Csv().go_get_all()
+    pub_json = Dataframes().df_to_dict(df_data)
+
     # # # GET DAILY PUB
-    df_details = Csv().go_get_details_daily()
-    daily_id = df_details.iloc[0]['pub_identity']
+    # df_details = Csv().go_get_details_daily()
+    # daily_id = df_details.iloc[0]['pub_identity']
 
     # # # GET NEW BLANK PUB TEMPLATE
     df_new_pub = NewPub().go_new_pub()
-    pub_json = Dataframes().df_to_dict(df_new_pub)
+    df_detail_all = Csv().go_get_details()
+    avg_latitude = df_detail_all.loc[:, 'detail_latitude'].mean()
+    avg_longitude = df_detail_all.loc[:, 'detail_longitude'].mean()
+    df_new_pub['detail_latitude'] = avg_latitude
+    df_new_pub['detail_longitude'] = avg_longitude
+    pub_new_json = Dataframes().df_to_dict(df_new_pub)
 
     # # # GET LIST OF STATIONS
     df_stations = Csv().go_get_stations()
     stations_json = Dataframes().df_to_dict(df_stations)
 
     # # # FOR TESTING PURPOSES ONLY
-    newdf = df_new_pub.transpose()
-    print(newdf)
+    # newdf = df_new_pub.transpose()
+    # print(newdf)
     print('END add')
 
     return render_template('04_add.html',
                            pub=pub_json,
-                           daily_id=daily_id,
+                           pub_new=pub_new_json,
+                           # daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

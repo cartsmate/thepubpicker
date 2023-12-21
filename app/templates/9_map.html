@@ -5,18 +5,33 @@
 
 {% block script %}
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/nearest_station.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/listener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_summary.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_collection.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
     <script>
         function map_init_summary() {
             console.log('MAP INIT SUMMARY')
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
             marker_add_summary(map)
+        }
+        function map_init_add() {
+            console.log('MAP INIT ADD')
+
+            const arrMarks = pub.map(x => x.latitude); // get all the marks.
+            console.log('arrMarks')
+            console.log(arrMarks)
+
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            const input = document.getElementById("search-input-navbar");
+            const searchBox = new google.maps.places.SearchBox(input);
+            searchbox_addListener_places_changed(map, searchBox);
+            map_addListener_bounds_changed(map, pub, searchBox);
+            map_addListener_click_add(map)
         }
         function map_init_search() {
             console.log('MAP INIT SEARCH')
@@ -26,6 +41,7 @@
             searchbox_addListener_places_changed(map, searchBox);
             map_addListener_bounds_changed(map, pub, searchBox);
             //map_addListener_bounds_changed(map, pub);
+            map_addListener_click_placeid(map)
         }
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')

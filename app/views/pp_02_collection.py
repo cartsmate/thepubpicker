@@ -33,29 +33,12 @@ def collection():
     df_details = Csv().go_get_details_daily()
     daily_id = df_details.iloc[0]['pub_identity']
 
-    # # # GET ALL PUBS WITH FEATURE
+    # # # DETECT REQUEST FOR FEATURE OR STATION
     feature = request.args.get('feature')
     station = request.args.get('station_id')
 
-    # if feature is not None:
-    #     print('{} has been selected'.format(feature))
-    #     df_data = CsvFeature().go_get_1_feature(feature)
-    #
-    # # # # OR GET ALL PUBS
-    # else:
-    #     print('no feature')
-    #     feature = 'none'
-    #     df_data = Csv().go_get_all()
-
+    # # # GET ALL PUBS
     df_data = Csv().go_get_all()
-
-
-    # # # FOR TESTING PURPOSES ONLY
-    print('df_data')
-    print(df_data)
-    # newdf = df_data.transpose()
-    # print(newdf)
-
     pub_json = Dataframes().df_to_dict(df_data)
 
     headers = df_data.columns
