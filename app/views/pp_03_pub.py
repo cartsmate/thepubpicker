@@ -36,9 +36,9 @@ def pub():
 
     pub_json = Dataframes().df_to_dict(df_pub)
 
-    df_photo = CsvSingle().go_get_1_photo(pub_id)
-    photo_json = Dataframes().df_to_dict(df_photo)
-
+    # df_photo = CsvSingle().go_get_1_photo(pub_id)
+    # photo_json = Dataframes().df_to_dict(df_photo)
+    photos_list = CsvSingle().go_get_1_photo_request(pub_id)
     # # # FOR TESTING PURPOSES ONLY
     newdf = df_pub.transpose()
     print(newdf)
@@ -46,7 +46,7 @@ def pub():
     name = "readonly"
     return render_template('03_pub.html',
                            pub=pub_json,
-                           photos=photo_json,
+                           photos_list=photos_list,
                            daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,

@@ -1,7 +1,9 @@
 function populate_photo() {
     console.log('POPULATE_PHOTO')
-    for (i = 0; i < photos.length; i++) {
+    for (i = 0; i < photos_list.length; i++) {
         var elem = 'photo_identity_' + i
-        document.getElementById(elem).src = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photo_reference=' + photos[i]['photo_identity'] + '&key=AIzaSyCbb6tdoROEQuBKLZXybG5cNIB4UTc6A20'
+        texty = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=' + photos_list[i] + '&key=' + env_vars['google_key']
+        console.log(texty)
+        document.getElementById(elem).src = texty
         }
 }

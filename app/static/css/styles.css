@@ -91,6 +91,10 @@
     color: white;
     text-decoration: none;
 }
+.photo9 {
+    max-width:290px;
+    object-fit:contain;
+}
 .photo {
     height:150px;
     width:290px;

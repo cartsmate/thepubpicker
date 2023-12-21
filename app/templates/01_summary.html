@@ -2,7 +2,7 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
-    <script>photos = {{ photos | tojson }}</script>
+    <script>photos_list = {{ photos_list | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>

@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import requests
 from config import Configurations
 from app.static.pythonscripts.csv import Csv
 
@@ -69,3 +70,30 @@ class CsvSingle:
         df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
         print(df_1_photo)
         return df_1_photo
+
+    def go_get_place_id(self, pub_id):
+        df_detail = self.go_get_1_detail(pub_id)
+        print(df_detail)
+        df_place_id = df_detail.iloc[0]['place']
+        print('df_place_id')
+        print(df_place_id)
+        return df_place_id
+
+    def go_get_1_photo_request(self, pub_id):
+        place_id = self.go_get_place_id(pub_id)
+        print(place_id)
+        base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
+        # key = 'AIzaSyCbb6tdoROEQuBKLZXybG5cNIB4UTc6A20'
+        keyw = config2['google_key']
+
+        fields = 'name,photos'
+        # place_id = 'ChIJKZfgUMoEdkgRjRIYygsCkSY'
+        full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
+        print(full_url)
+        response = requests.get(full_url)
+        photo_ids = response.json()['result']['photos']
+        photo_list = []
+        for x in photo_ids:
+            photo_list.append(x['photo_reference'])
+
+        return photo_list
