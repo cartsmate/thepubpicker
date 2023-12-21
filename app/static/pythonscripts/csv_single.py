@@ -86,10 +86,11 @@ class CsvSingle:
 
         keyw = env_vars['places_key']
         print(keyw)
+
         fields = 'name,photos'
-        # place_id = 'ChIJKZfgUMoEdkgRjRIYygsCkSY'
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
         print(full_url)
+
         response = requests.get(full_url)
         print(response.json())
         photo_ids = response.json()['result']['photos']
