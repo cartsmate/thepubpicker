@@ -16,7 +16,7 @@
     <script>
         function map_init_summary() {
             console.log('MAP INIT SUMMARY')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             marker_add_summary(map)
         }
         function map_init_add() {
@@ -26,7 +26,7 @@
             console.log('arrMarks')
             console.log(arrMarks)
 
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            map = map_create(pub_new[0].detail_latitude, pub_new[0].detail_longitude, 19)
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);
@@ -35,18 +35,17 @@
         }
         function map_init_search() {
             console.log('MAP INIT SEARCH')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);
             map_addListener_bounds_changed(map, pub, searchBox);
-            //map_addListener_bounds_changed(map, pub);
             map_addListener_click_placeid(map)
         }
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')
 
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             pub_filtered = filter_all_data()
             console.log('pub_filtered')
             console.log(pub_filtered)
@@ -64,12 +63,12 @@
         }
         function map_init_1() {
             console.log('MAP INIT 1')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude)
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             marker_add_1(map)
         }
         function map_init_blank() {
             console.log('MAP INIT BLANK')
-            map = map_create(51.5, -0.11)
+            map = map_create(51.5, -0.11, 15)
             map_listener_click(map)
         }
         function map_init_too_many() {

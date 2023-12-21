@@ -14,7 +14,7 @@ function map_addListener_click_placeid(map) {
             //console.log('You clicked on place:' + event.placeId + ', location: ' + event.latLng);
             // add pop up box with info and do you want to add this pub?
 
-            infowindow.setContent("<p><b><a href='/pub/add/'>Add Venue</a></b></p>")
+            infowindow.setContent("<p><b><a href='/add/?place_id=" + event.placeId + "'>Add Venue</a></b></p>")
             infowindow.open(map, marker);
         }
     })

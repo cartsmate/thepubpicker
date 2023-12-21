@@ -40,13 +40,63 @@ def add():
     # df_details = Csv().go_get_details_daily()
     # daily_id = df_details.iloc[0]['pub_identity']
 
-    # # # GET NEW BLANK PUB TEMPLATE
     df_new_pub = NewPub().go_new_pub()
-    df_detail_all = Csv().go_get_details()
-    avg_latitude = df_detail_all.loc[:, 'detail_latitude'].mean()
-    avg_longitude = df_detail_all.loc[:, 'detail_longitude'].mean()
-    df_new_pub['detail_latitude'] = avg_latitude
-    df_new_pub['detail_longitude'] = avg_longitude
+    # # # GET REQUESTED PUB (from place id)
+    place_id = request.args.get('place_id')
+    print('place_id')
+    print(place_id)
+    if place_id is not 'none':
+        places_facits = CsvSingle().go_get_places(place_id, env_vars)
+        try:
+            df_new_pub['detail_name'] = places_facits['name']
+        except:
+            df_new_pub['detail_name'] = ""
+        try:
+            df_new_pub['website'] = places_facits['website']
+        except:
+            df_new_pub['website'] = ""
+        try:
+            df_new_pub['url'] = places_facits['url']
+        except:
+            df_new_pub['url'] = ""
+        try:
+            df_new_pub['address'] = places_facits['formatted_address']
+        except:
+            df_new_pub['address'] = ""
+        try:
+            df_new_pub['extra'] = places_facits['editorial_summary']['overview']
+        except:
+            df_new_pub['extra'] = ""
+        try:
+            df_new_pub['rank'] = places_facits['rating']
+        except:
+            df_new_pub['extra'] = ""
+        try:
+            df_new_pub['detail_latitude'] = places_facits['geometry']['location']['lat']
+        except:
+            df_new_pub['detail_latitude'] = 0
+        try:
+            df_new_pub['detail_longitude'] = places_facits['geometry']['location']['lng']
+        except:
+            df_new_pub['detail_longitude'] = 0
+        try:
+            if 'bar' in places_facits['types']:
+                df_new_pub['category'] = 'bar'
+            elif 'restaurant' in places_facits['types']:
+                df_new_pub['category'] = 'restaurant'
+            else:
+                df_new_pub['category'] = 'other'
+        except:
+            df_new_pub['category'] = ""
+    else:
+        # # # GET NEW BLANK PUB TEMPLATE
+
+        df_detail_all = Csv().go_get_details()
+        avg_latitude = df_detail_all.loc[:, 'detail_latitude'].mean()
+        avg_longitude = df_detail_all.loc[:, 'detail_longitude'].mean()
+        df_new_pub['detail_latitude'] = avg_latitude
+        df_new_pub['detail_longitude'] = avg_longitude
+
     pub_new_json = Dataframes().df_to_dict(df_new_pub)
 
     # # # GET LIST OF STATIONS
@@ -54,8 +104,8 @@ def add():
     stations_json = Dataframes().df_to_dict(df_stations)
 
     # # # FOR TESTING PURPOSES ONLY
-    # newdf = df_new_pub.transpose()
-    # print(newdf)
+    newdf = df_new_pub.transpose()
+    print(newdf)
     print('END add')
 
     return render_template('04_add.html',

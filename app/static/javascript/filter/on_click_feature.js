@@ -40,7 +40,7 @@ function set_feature_icon_colour(check_item) {
         image.style.opacity = "1.0"
         caption.style.opacity = "1.0"
         caption.style.color = "white"
-        checkCol.style.background = "#0275D8"
+        checkCol.style.background = "coral"
         checkCol.style.border = "thin solid #0275D8";
     } else {
         console.log('checkbox is false')

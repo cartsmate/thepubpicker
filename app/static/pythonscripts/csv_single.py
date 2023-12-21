@@ -79,6 +79,29 @@ class CsvSingle:
         # print(df_place_id)
         return df_place_id
 
+    def go_get_places(self, place_id, env_vars):
+        base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
+        print('go_get_places')
+        print('place_id')
+        print(place_id)
+        print('env_vars')
+        print(env_vars)
+        keyw = env_vars['places_key']
+        # keyw = 'AIzaSyC-ahu79RXn_YAU1hZb_OdTQp5xpAGMY0A'
+        # place_id = 'ChIJy2QpfVUDdkgR_ZjHMTwf28A'
+        fields = 'name,photos,website,url,formatted_address,editorial_summary,geometry,ratings,types'
+        full_url = base_url + "place_id=" + place_id + "&key=" + keyw
+        # 'https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJHXmjKEgDdkgR0OQXsme2Io8&key=AIzaSyC-ahu79RXn_YAU1hZb_OdTQp5xpAGMY0A
+                   # + "&fields=" + fields
+        print(full_url)
+        # 'https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJy2QpfVUDdkgR_ZjHMTwf28A&key=AIzaSyC-ahu79RXn_YAU1hZb_OdTQp5xpAGMY0A&fields=name,photos,website,url,formatted_address,editorial_summary'
+        response = requests.get(full_url)
+        print('response')
+        print(response)
+        # print(response.json())
+        pub_facits = response.json()['result']
+        return pub_facits
+
     def go_get_1_photo_request(self, pub_id, env_vars):
         place_id = self.go_get_place_id(pub_id)
         print(place_id)
@@ -88,6 +111,7 @@ class CsvSingle:
         print(keyw)
 
         fields = 'name,photos'
+        'https://maps.googleapis.com/maps/api/place/details/json?ChIJy2QpfVUDdkgR_ZjHMTwf28A'
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
         print(full_url)
 

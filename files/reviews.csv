@@ -1245,4 +1245,5 @@ ddcfb5fe-fc3b-4e9c-a281-dd327cc27e53,false,92c49a14-f650-4acc-a74f-b6fb96760631,
 32d863f6-c352-4819-a445-fd8473e61c00,false,c913df3d-acdc-40e4-ad1e-4ae57c250834,false,true,false,false,false,false,false,false,false,false,false,true,false
 d7035012-429b-4457-b65c-442e0e9114c8,false,0bc4e7cf-fcb5-4918-a784-8cc0116727da,false,false,false,false,false,false,false,false,false,false,false,false,true
 11111111-aaaa-1111-aaaa-222222222222,false,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,false,false,false,false,false,false,false,false,false,true,false,false,false
-7b1e9ae3-ce9e-4fe0-8c4a-486874efbc15,false,1019d777-a718-4923-b1fb-57c20ce1e6ce,false,false,false,false,false,false,false,false,false,false,false,false,<app.models.review.no_feature.NoFeature object at 0x7fac519c9dc0>
+7b1e9ae3-ce9e-4fe0-8c4a-486874efbc15,false,1019d777-a718-4923-b1fb-57c20ce1e6ce,false,false,false,false,false,false,false,false,false,false,false,false,true
+a29583f3-a0a8-45e4-a3e9-1a7197d67e19,false,114bc5bc-8f6d-44d6-9c6b-003658cf7904,false,false,false,false,false,false,true,false,true,false,false,true,true

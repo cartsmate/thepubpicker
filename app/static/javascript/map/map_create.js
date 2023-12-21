@@ -1,10 +1,10 @@
-function map_create(lat, lng) {
+function map_create(lat, lng, zoom) {
     console.log("map create");
     console.log('lat: ' + lat)
     console.log('lng: ' + lng)
     var map_prop = {
         center: new google.maps.LatLng(lat, lng),
-        zoom:15,
+        zoom:zoom,
         zoomControl: true,
         //fullScreenControl: false,
         controlSize: 20
