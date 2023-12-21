@@ -24,7 +24,7 @@ def summary():
     print('START summary')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
-
+    print(env_vars)
     # # # GET MODEL DISPLAY FORMATS
     model_formats = ControlsList().go_get_control_list()
 
@@ -44,7 +44,7 @@ def summary():
 
     pub_json = Dataframes().df_to_dict(df_pub)
 
-    photos_list = CsvSingle().go_get_1_photo_request(daily_id)
+    photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
     # photo_json = Dataframes().df_to_dict(df_photo)
     # # # FOR TESTING PURPOSES ONLY
     # newdf = df_pub.transpose()

@@ -41,6 +41,7 @@ class Configurations:
         config2 = {
             "directory_path": os.getcwd(),
             "google_key": os.environ.get("HEROKU_GOOGLE_API"),
+            "places_key": os.environ.get("HEROKU_PLACES_API"),
             "access_id": os.environ.get("ACCESS_ID"),
             "access_key": os.environ.get("ACCESS_KEY"),
             "bucket_name": os.environ.get("BUCKET_NAME"),

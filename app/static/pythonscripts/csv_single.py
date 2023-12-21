@@ -79,13 +79,13 @@ class CsvSingle:
         # print(df_place_id)
         return df_place_id
 
-    def go_get_1_photo_request(self, pub_id):
+    def go_get_1_photo_request(self, pub_id, env_vars):
         place_id = self.go_get_place_id(pub_id)
         print(place_id)
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
-        # key = 'AIzaSyCbb6tdoROEQuBKLZXybG5cNIB4UTc6A20'
-        keyw = config2['google_key']
 
+        keyw = env_vars['places_key']
+        print(keyw)
         fields = 'name,photos'
         # place_id = 'ChIJKZfgUMoEdkgRjRIYygsCkSY'
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields

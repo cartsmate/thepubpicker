@@ -25,9 +25,9 @@ class ControlsList:
 
         class_list = [Detail(), Diary(), Direction(), Review(), Station()]
         for cl in class_list:
-            print('class: ' + str(cl))
+            # print('class: ' + str(cl))
             for k, v in cl.__dict__.items():
-                print('key: ' + k)
+                # print('key: ' + k)
                 total_list_obj['fields_list'].append(v.name)
                 if v.form_visible == 'true':
                     total_list_obj['form_visible_list'].append(v.name)
