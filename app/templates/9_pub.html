@@ -4,7 +4,9 @@
         <div class="sub-heading"><a style="color: white;" >{{ pub[0]['detail_name'] }}</a></div>
     </div>
 
-    <div class="row pink" id="random_rank" style="padding-bottom:5px;">{% include "9_stars.html" %}</div>
+    <div class="row pink" id="random_rank" style="padding-bottom:5px;">
+        <a href="{{pub[0]['url']}}" target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a>
+    </div>
     <div class="row pink" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; ">{{ pub[0]['extra'] }}</div>
 
     <div style="font-size: 12px; font-weight: bold; padding-top:5px;">What's it features ... ?</div>
