@@ -1,3 +1,25 @@
+function map_load_search() {
+    console.log('MAP_LOAD_SEARCH')
+    var js = document.createElement("script");
+    js.type = "text/javascript";
+    console.log('internet connection status: ' + window.navigator.onLine)
+
+    if (window.navigator.onLine == true) {
+        console.log('on-line')
+        js.setAttribute("defer", "defer");
+//        console.log('pub_latitude : ' + pub[0].detail_latitude)
+//        console.log('pub_length : ' + pub.length)
+//        console.log(pub)
+        js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init_search'
+        document.head.appendChild(js)
+    } else {
+        console.log('off-line')
+        console.log('no map')
+        map_init_none()
+    }
+
+    //map_init_none()
+}
 function map_load_summary() {
     console.log('MAP_LOAD')
     var js = document.createElement("script");

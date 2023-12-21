@@ -1,7 +1,7 @@
 function onload_search() {
     console.log('ONLOAD SEARCH')
-    console.log('feature')
-    console.log(feature)
+//    console.log('feature')
+//    console.log(feature)
     //console.log(pub)
     //console.log(env_vars)
     //console.log('review_list')
@@ -10,7 +10,7 @@ function onload_search() {
     //************
     // PRE POPULATE A FILTER WITH FEATURE
     //************
-
+    /*
     if (feature != 'none' && feature != null) {
         populate_all_filters(pub)
         document.getElementById(feature + "_filter").checked = true
@@ -22,8 +22,11 @@ function onload_search() {
     } else {
         pub_filtered = pub
     }
+    */
+    list_setup_search(pub)
 
-    list_setup_search(pub_filtered)
+    map_load_search()
+
 //    populate_review(pub_filtered)
 //    populate_all_filters(pub_filtered)
 //    populate_header(pub_filtered.length)
