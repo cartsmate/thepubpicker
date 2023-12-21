@@ -73,10 +73,10 @@ class CsvSingle:
 
     def go_get_place_id(self, pub_id):
         df_detail = self.go_get_1_detail(pub_id)
-        print(df_detail)
+        # print(df_detail)
         df_place_id = df_detail.iloc[0]['place']
-        print('df_place_id')
-        print(df_place_id)
+        # print('df_place_id')
+        # print(df_place_id)
         return df_place_id
 
     def go_get_1_photo_request(self, pub_id):
@@ -91,6 +91,7 @@ class CsvSingle:
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
         print(full_url)
         response = requests.get(full_url)
+        print(response.json())
         photo_ids = response.json()['result']['photos']
         photo_list = []
         for x in photo_ids:
