@@ -45,8 +45,10 @@ def add():
     place_id = request.args.get('place_id')
     print('place_id')
     print(place_id)
-    if place_id is not 'none':
+    if place_id is not None:
+        print('call places api to get details from place_id')
         places_facits = CsvSingle().go_get_places(place_id, env_vars)
+        df_new_pub['pub_identity'] = uuid.uui4()
         try:
             df_new_pub['detail_name'] = places_facits['name']
         except:
@@ -90,7 +92,7 @@ def add():
             df_new_pub['category'] = ""
     else:
         # # # GET NEW BLANK PUB TEMPLATE
-
+        print('get empty new pub')
         df_detail_all = Csv().go_get_details()
         avg_latitude = df_detail_all.loc[:, 'detail_latitude'].mean()
         avg_longitude = df_detail_all.loc[:, 'detail_longitude'].mean()
