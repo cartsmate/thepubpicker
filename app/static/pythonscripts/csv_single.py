@@ -66,12 +66,14 @@ class CsvSingle:
         return df_1_photo
 
     def go_get_1_photo(self, pub_id):
+        print('go_get_1_photo')
         df_photos = Csv().go_get_photos()
         df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
         print(df_1_photo)
         return df_1_photo
 
     def go_get_place_id(self, pub_id):
+        print('go_get_place_id')
         df_detail = self.go_get_1_detail(pub_id)
         # print(df_detail)
         df_place_id = df_detail.iloc[0]['place']
@@ -80,6 +82,7 @@ class CsvSingle:
         return df_place_id
 
     def go_get_places(self, place_id, env_vars):
+        print('go_get_places')
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
         print('go_get_places')
         print('place_id')
@@ -87,14 +90,12 @@ class CsvSingle:
         print('env_vars')
         print(env_vars)
         keyw = env_vars['places_key']
-        # keyw = 'AIzaSyC-ahu79RXn_YAU1hZb_OdTQp5xpAGMY0A'
-        # place_id = 'ChIJy2QpfVUDdkgR_ZjHMTwf28A'
+
         fields = 'name,photos,website,url,formatted_address,editorial_summary,geometry,ratings,types'
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw
-        # 'https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJHXmjKEgDdkgR0OQXsme2Io8&key=AIzaSyC-ahu79RXn_YAU1hZb_OdTQp5xpAGMY0A
-                   # + "&fields=" + fields
+
         print(full_url)
-        # 'https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJy2QpfVUDdkgR_ZjHMTwf28A&key=AIzaSyC-ahu79RXn_YAU1hZb_OdTQp5xpAGMY0A&fields=name,photos,website,url,formatted_address,editorial_summary'
+
         response = requests.get(full_url)
         print('response')
         print(response)
@@ -103,6 +104,7 @@ class CsvSingle:
         return pub_facits
 
     def go_get_1_photo_request(self, pub_id, env_vars):
+        print('go_get_1_photo_request')
         place_id = self.go_get_place_id(pub_id)
         print(place_id)
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
@@ -111,7 +113,7 @@ class CsvSingle:
         print(keyw)
 
         fields = 'name,photos'
-        'https://maps.googleapis.com/maps/api/place/details/json?ChIJy2QpfVUDdkgR_ZjHMTwf28A'
+
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
         print(full_url)
 
