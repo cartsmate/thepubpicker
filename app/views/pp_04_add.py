@@ -20,7 +20,7 @@ from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
 
-@app.route("/add/", methods=['GET'])
+@app.route("/add/", methods=['GET', 'POST'])
 def add():
     print('START add')
     # # # GET ENVIRONMENTAL VARIABLES
