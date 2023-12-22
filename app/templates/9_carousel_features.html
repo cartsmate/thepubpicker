@@ -1,0 +1,161 @@
+{% block script %}
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listeners.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection.js') }}"></script>
+{% endblock %}
+<style>
+    .carousel-inner {
+        display: flex;
+    }
+    .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/2)
+    }
+</style>
+<div class="col black">
+    <div class="row pink" style="background-color: coral; text-color: white; padding: 5px;">
+        <div class="sub-heading">Search Pubs By Special Interest</div>
+    </div>
+    <div class="row pink">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="col">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;" id="brunch">
+                                <img class="carousel_pic" src="/static/images/brunch.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bottomless Brunch</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 18rem;" id="dart">
+                                <img class="carousel_pic" src="/static/images/dart.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dart Board</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;" id="entertain">
+                                <img class="carousel_pic" src="/static/images/entertain.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Entertainment</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 18rem;" id="favourite">
+                                <img class="carousel_pic" src="/static/images/favourite.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pub Picker Favourite</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;" id="garden">
+                                <img class="carousel_pic" src="/static/images/garden.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beer Garden</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 18rem;" id="history">
+                                <img class="carousel_pic" src="/static/images/history.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Historic Pub</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;" id="late">
+                                <img class="carousel_pic" src="/static/images/late.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Late Opening</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 18rem;" id="music">
+                                <img class="carousel_pic" src="/static/images/music.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Live Music</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;" id="pool">
+                                <img class="carousel_pic" src="/static/images/pool.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pool Table</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 18rem;" id="quiz">
+                                <img class="carousel_pic" src="/static/images/quiz.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Quiz Night</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;" id="roast">
+                                <img class="carousel_pic" src="/static/images/roast.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sunday Roast</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 18rem;" id="sport">
+                                <img class="carousel_pic" src="/static/images/sport.jpeg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Live Sport on TV</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+        </div>
+    </div>
+</div>

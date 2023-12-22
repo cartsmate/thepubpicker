@@ -48,7 +48,7 @@ def add():
     if place_id is not None:
         print('call places api to get details from place_id')
         places_facits = CsvSingle().go_get_places(place_id, env_vars)
-        df_new_pub['pub_identity'] = uuid.uui4()
+        df_new_pub['pub_identity'] = uuid.uuid4()
         try:
             df_new_pub['detail_name'] = places_facits['name']
         except:
