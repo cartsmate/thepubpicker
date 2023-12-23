@@ -40,7 +40,7 @@
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);
             map_addListener_bounds_changed(map, pub, searchBox);
-            //map_addListener_click_placeid(map)
+            map_addListener_click_placeid(map)
         }
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')
