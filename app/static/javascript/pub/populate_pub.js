@@ -5,8 +5,9 @@ function populate_pub(){
     populate_diary();
     populate_station();
     populate_direction();
-
+    populate_photo();
 }
+
 /*
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
