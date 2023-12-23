@@ -1,5 +1,10 @@
-function populate_review(pub_filtered){
-    console.log('populate review')
+function populate_review(){
+    console.log('POPULATE REVIEW')
+    for (i=0; i < review_list.length; i++) {
+
+        document.getElementById(review_list[i]).value = pub[0][review_list[i]];
+    }
+}
 //    SKIP THIS SECTION
 /*
     for (i = 0; i < review_list.length; i++) {
@@ -36,5 +41,6 @@ function populate_review(pub_filtered){
             }
         }
     }
-    */
+
 }
+*/

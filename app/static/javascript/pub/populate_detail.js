@@ -1,7 +1,14 @@
 function populate_detail(){
     console.log('POPULATE_DETAIL')
     //console.log(pub)
-    for (i = 0; i < model_formats['fields_list'].length; i++) {
+
+    for (i=0; i < detail_list.length; i++) {
+
+        document.getElementById(detail_list[i]).value = pub[0][detail_list[i]];
+    }
+}
+/*
+//    for (i = 0; i < model_formats['fields_list'].length; i++) {
         //console.log('fields_list[i]')
         //console.log(fields_list[i])
         //console.log(check_list)
@@ -32,3 +39,4 @@ function populate_detail(){
         }
     }
 }
+*/

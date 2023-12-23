@@ -45,6 +45,21 @@ def pub():
     print(newdf)
     print('END pub')
     name = "readonly"
+    detail_list = []
+    review_list = []
+    diary_list = []
+    station_list = []
+    direction_list = []
+    for k, v in Detail().__dict__.items():
+        detail_list.append(v.name)
+    for k, v in Review().__dict__.items():
+        review_list.append(v.name)
+    for k, v in Diary().__dict__.items():
+        diary_list.append(v.name)
+    for k, v in Station().__dict__.items():
+        station_list.append(v.name)
+    for k, v in Direction().__dict__.items():
+        direction_list.append(v.name)
     return render_template('03_pub.html',
                            pub=pub_json,
                            photos_list=photos_list,
@@ -53,9 +68,14 @@ def pub():
                            model_formats=model_formats,
                            alias=alias,
                            detail=Detail(),
+                           detail_list=detail_list,
                            review=Review(),
+                           review_list=review_list,
                            diary=Diary(),
+                           diary_list=diary_list,
                            station=Station(),
+                           station_list=station_list,
                            direction=Direction(),
+                           direction_list=direction_list,
                            photo=Photo(),
                            name=name)

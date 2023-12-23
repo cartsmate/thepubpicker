@@ -2,7 +2,7 @@
 
 class Roast:
     def __init__(self, name="roast", alias="Roast", alias2="", required='true', form_visible='false',
-                 table_visible='false', value='false', control="check", icon="chicken.png"):
+                 table_visible='false', value='false', control="check", icon="roast.png"):
         self.name = name
         self.alias = alias
         self.alias2 = alias2

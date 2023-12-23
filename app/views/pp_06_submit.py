@@ -103,7 +103,8 @@ def submit():
     print(newdf)
     print('END submit')
     # return redirect(url_for('home', pub_id=pub_id), code=307)
-    return redirect(url_for('pub', id=pub_id), code=307)
+    return redirect(url_for('pub', id=pub_id))
+    # return render_template('03_pub.html', id=pub_id)
 
     # , pub=pub_json)
                     # env_vars=env_vars,

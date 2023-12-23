@@ -1,4 +1,4 @@
-<script>console.log('CREATING DETAIL FIELDS - ADD/EDIT')</script>
+<script>console.log('CREATING DETAIL FIELDS')</script>
 {% for k, field in detail.__dict__.items() %}
     {% if name == "readonly" and field.name in model_formats['form_visible_list'] %}
         <div class="form-group row details" id=row_{{field.name}} >

@@ -2,7 +2,7 @@
 
 class Sport:
     def __init__(self, name='sport', alias="Sport", alias2="sports", required='true', form_visible='false',
-                 table_visible='false', value='false', control="check", icon="tv.png"):
+                 table_visible='false', value='false', control="check", icon="sport.png"):
         self.name = name
         self.alias = alias
         self.alias2 = alias2

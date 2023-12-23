@@ -1,5 +1,13 @@
 function populate_pub(){
     console.log('POPULATE_PUB')
+    populate_detail();
+    populate_review();
+    populate_diary();
+    populate_station();
+    populate_direction();
+
+}
+/*
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
         //console.log('fields_list[i]')
@@ -33,4 +41,6 @@ function populate_pub(){
             document.getElementById(model_formats['fields_list'][i]).value = pub[0][model_formats['fields_list'][i]];
         }
     }
+    console.log('end of populate pub')
 }
+*/

@@ -1,5 +1,11 @@
 function populate_diary(){
     console.log('POPULATE_DIARY')
+        for (i=0; i < diary_list.length; i++) {
+
+        document.getElementById(diary_list[i]).value = pub[0][diary_list[i]];
+    }
+}
+/*
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
         //console.log('fields_list[i]')
@@ -30,3 +36,4 @@ function populate_diary(){
         }
     }
 }
+*/
