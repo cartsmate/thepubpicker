@@ -5,6 +5,8 @@ function map_addListener_click_placeid(map) {
         // If the event is a POI
         if (event.placeId) {
             console.log('USER INPUT - place id clicked')
+            console.log('event - placeid')
+            console.log(event.placeId)
             //console.log(event)
             // Call event.stop() on the event to prevent the default info window from showing.
             event.stop();

@@ -1,0 +1,121 @@
+{% block script %}
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listeners.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection.js') }}"></script>
+{% endblock %}
+
+<div class="col black">
+    <div class="row pink" style="background-color: coral; text-color: white; padding: 5px;">
+        <div class="sub-heading">Search Pubs By Special Interest</div>
+    </div>
+    <div class="row pink">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="col">
+                        <div class="row">
+                            <div id="brunch" class="col grey">
+                                <div class="row green"><img class="carousel_pic" src="/static/images/brunch.jpeg"></div>
+                                <div class="row green">Bottomless Brunch</div>
+                            </div>
+                            <div id="dart" class="col grey">
+                                <div class="row green"><img class="carousel_pic" src="/static/images/dart.jpeg"> </div>
+                                <div class="row green">Dart Board</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="entertain" class="col grey">
+                                <div class="row green"><img class="carousel_pic" src="/static/images/entertain.jpeg"></div>
+                                <div class="row green">Entertain</div>
+                            </div>
+                            <div id="favourite" class="col grey">
+                                <div class="row green"><img class="carousel_pic" src="/static/images/favourite.jpeg"></div>
+                                <div class="row green">Favourite</div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="carousel-item active">
+                    <div class="col">
+                        <div class="row">
+                            <div id="{{model_formats['icon_list'][item*4]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][item*4]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][item*4]}}</div>
+                            </div>
+                            <div id="{{model_formats['icon_list'][(item*4)+1]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][(item*4)+1]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][(item*4)+1]}}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="{{model_formats['icon_list'][(item*4)+2]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][(item*4)+2]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][(item*4)+2]}}</div>
+                            </div>
+                            <div id="{{model_formats['icon_list'][(item*4)+3]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][(item*4)+3]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][(item*4)+3]}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="col">
+                        <div class="row">
+                            <div id="{{model_formats['icon_list'][item*4]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][item*4]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][item*4]}}</div>
+                            </div>
+                            <div id="{{model_formats['icon_list'][(item*4)+1]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][(item*4)+1]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][(item*4)+1]}}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="{{model_formats['icon_list'][(item*4)+2]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][(item*4)+2]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][(item*4)+2]}}</div>
+                            </div>
+                            <div id="{{model_formats['icon_list'][(item*4)+3]}}" class="col grey">
+                                <div class="row green">
+                                    <img class="carousel_pic" src="/static/images/{{model_formats['icon_list'][(item*4)+3]}}.jpeg">
+                                </div>
+                                <div class="row green">
+                                    {{model_formats['icon_list'][(item*4)+3]}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon" ></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </div>
+</div>

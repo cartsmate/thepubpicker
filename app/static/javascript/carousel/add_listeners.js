@@ -10,6 +10,7 @@ function add_listeners() {
             var marker = model_format[field]
             document.getElementById(marker).addEventListener('click', (function (marker) {
                 return function () {
+                    console.log('carousel listener triggered')
                     var base_url = window.location.hostname
                     if (env_vars['env'] == 'qual') {
                         var url = "http://" + base_url + ":5000/collection/"
