@@ -37,7 +37,6 @@ def submit():
     print('CURRENT')
     print(newdf1)
 
-
     df_reviews_current = Csv().go_get_reviews()
     df_diarys_current = Csv().go_get_diarys()
 
@@ -52,9 +51,11 @@ def submit():
 
     # df_pub_review = EntitiesSingle().get_pub_review(pub_id)
     if df_pub_submit.empty:
+        print('pub_id from url: ' + pub_id)
         # IF PUB IDENTITY NOT FOUND IN FILE
         print('# add new pub - due to ADD')
         df_new_detail = FilesDetail().form_detail()
+        print('pub_id from newDetails: ' + df_new_detail['pub_identity'])
         newdf1 = df_new_detail.transpose()
         # print(newdf1)
         df_updated_details = FilesDetail().add_detail_df(df_details_current, df_new_detail)
