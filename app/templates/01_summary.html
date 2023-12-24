@@ -2,13 +2,13 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
-    <script>photos_list = {{ photos_list | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_direction.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/calculate_pubs.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listener_summary.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listeners.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_add.js') }}"></script>
@@ -32,13 +32,7 @@
     {% include "9_summary.html" %}
 {% endblock %}
 
-{% block carousel %}
-    <div class="col black">
-        <div class="row pink" style="background-color: coral; text-color: white; padding: 5px;">
-            <div class="sub-heading">Search Pubs By Special Interest</div>
-        </div>
-        <div class="row pink">
-            {% include "9_carousel.html" %}
-        </div>
-</div>
+{% block carousel5 %}
+{% include "9_carousel_50.html" %}
+
 {% endblock %}

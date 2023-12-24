@@ -44,7 +44,7 @@ def summary():
 
     pub_json = Dataframes().df_to_dict(df_pub)
 
-    photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
+    # photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
     # photo_json = Dataframes().df_to_dict(df_photo)
     # # # FOR TESTING PURPOSES ONLY
     # newdf = df_pub.transpose()
@@ -55,7 +55,7 @@ def summary():
     name = "readonly"
     return render_template('01_summary.html',
                            pub=pub_json,
-                           photos_list=photos_list,
+                           # photos_list=photos_list,
                            daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
