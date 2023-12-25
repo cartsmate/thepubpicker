@@ -53,12 +53,14 @@
             console.log(pub_filtered.length)
             if (pub_filtered.length <= 10) {
                 marker_add_collection(map, pub_filtered)
+                document.getElementById('msg_map').innerHTML = ''
             } else {
-                map_elem = document.getElementById('col_map');
-                var elem = document.createElement("div");
-                elem.innerHTML = 'Too many pubs to show on map';
-                elem.className = "map_words"
-                map_elem.appendChild(elem)
+                document.getElementById('msg_map').innerHTML = 'Too many pubs to show on map';
+                //map_elem = document.getElementById('col_map');
+                //var elem = document.createElement("div");
+                //elem.innerHTML = 'Too many pubs to show on map';
+                //elem.className = "map_words"
+                //map_elem.appendChild(elem)
             }
         }
         function map_init_1() {
