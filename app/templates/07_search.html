@@ -43,24 +43,28 @@
 {% block title %}
     <div class="col-2">{% include "9_icon_burger.html" %}</div>
     <div class="col-8">{% include "9_title.html" %}</div>
-    <div class="col-2"></div>
+    <div class="col-2" style="padding: 0px; margin: 0px;">{% include "9_icon_slider.html" %}</div>
 {% endblock %}
 
 {% block map %}{% endblock %}
 
 {% block list %}
-    <div class="col black">
-        <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-            <div class="sub-heading">Search Map</div>
+    <div id="search-map" style="display: none;">
+        <div class="col black">
+            <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
+                <div class="sub-heading">Search Map</div>
+            </div>
         </div>
+        {% include "9_map_double.html" %}
+        <input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     </div>
-    {% include "9_map.html" %}
-    <input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
-    <div class="col black">
-        <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-            <div class="sub-heading">Search Pubs Database</div>
+    <div id="search-table" style="display: block;">
+        <div class="col black">
+            <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
+                <div class="sub-heading">Search Pubs Database</div>
+            </div>
         </div>
+        {% include "9_list.html" %}
     </div>
-    {% include "9_list.html" %}
 {% endblock %}
