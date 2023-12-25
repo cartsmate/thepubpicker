@@ -11,11 +11,11 @@ function marker_add_bounds(map, bounds, data) {
     map_elem = document.getElementById('msg_map');
     map_elem.innerHTML = '';
 
-    console.log('map')
-    console.log(map)
-    console.log('bounds')
-    console.log(bounds)
-    console.log('data')
+//    console.log('map')
+//    console.log(map)
+//    console.log('bounds')
+//    console.log(bounds)
+//    console.log('data')
     //console.log(data)
     marker_counter = 0
     var infowindow = new google.maps.InfoWindow();
@@ -67,7 +67,7 @@ function marker_add_bounds(map, bounds, data) {
             }
             */
             if (data[i].detail_latitude > south && data[i].detail_latitude < north && data[i].detail_longitude > west && data[i].detail_longitude < east) {
-                console.log("inside if statement")
+//                console.log("inside if statement")
                 marker_counter++
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(data[i].detail_latitude, data[i].detail_longitude),

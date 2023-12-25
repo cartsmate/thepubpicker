@@ -4,6 +4,7 @@ function list_create(pub_filtered) {
     // creates a <table> element and a <tbody> element
     var tbl = document.createElement("table");
     tbl.setAttribute("id", "pub_list");
+    document.getElementById('pub_table').visible = false
     tbl.style.cssText = 'font-size:12px;'
     tbl.className = "table table-striped";
     tbl.width = "310px"
@@ -82,7 +83,7 @@ function list_create(pub_filtered) {
     tbl.appendChild(tblBody);
   // appends <table> into <body>
   //document.body.appendChild(tbl);
-    document.getElementById('pub_table').visible = false
+
     document.getElementById('pub_table').appendChild(tbl)
   // sets the border attribute of tbl to '2'
     tbl.setAttribute("border", "2");

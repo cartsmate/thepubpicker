@@ -6,12 +6,14 @@
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="#">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/front-layout.css') }}">
         <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="{{ url_for('static', filename='jquery/js/jquery.dataTables.min.js') }}"></script>
+
         {% block script %}{% endblock %}
     </head>
     {% block on_load %}{% endblock %}
@@ -32,15 +34,7 @@
             <div class="row orange" id="template_pub">{% block pub %}{% endblock %}</div>
             <div class="row orange" id="template_list">{% block list %}{% endblock %}</div>
             <div class="row orange" id="template_menu">{% block menu %}{% endblock %}</div>
-        </div>
-        <div class="container-fluid" style="background-color:grey; width:360px;">
-            <div class="row orange">
-                <div class="row black">
-                    <div class="row pink">
-                        {% block carousel5 %}{% endblock %}
-                    </div>
-                </div>
-            </div>
+            <div class="row orange" id="template_test">{% block test %}{% endblock %}</div>
         </div>
         <!--<div id="googleMap" style="width:100%, height:400px;"></div>-->
     </body>

@@ -40,18 +40,14 @@ function filter_table(visible, order, asc_desc) {
     //console.log(order)
     $(document).ready(function () {
         $('#pub_list').DataTable({
-            "paging": true,
+
+            paging: true,
             //pagingType: 'first_last_numbers',
-            "info": false,
+            info: false,
             //order: [[order, 'asc']],
-            "order": [[order, asc_desc]],
-            "columnDefs": addJson(visible),
-            "rowCallback": function () {
-                console.log('hello world');
-            },
-            "drawCallback": function() {
-                console.log('hello world');
-            }
+            order: [[order, asc_desc]],
+            //columnDefs: addJson(headers, visible)
+            columnDefs: addJson(visible)
     });
     /*
     $(document).ready(function() {
@@ -86,13 +82,7 @@ $(document).ready(function () {
         order: [[order, asc_desc]],
         //columnDefs: addJson(headers, visible)
         columnDefs: addJson(visible),
-        "drawCallBack": function() {
-            if (!this.api().rows().data().any()) {
-                $('#table').children().hide();
-            } else {
-                $('#table').children().show();
-            }
-        }
+        snapshot: null
     });
 
 });
