@@ -18,6 +18,23 @@
             console.log('MAP INIT SUMMARY')
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             marker_add_summary(map)
+            /*
+            const input = document.getElementById("search-input-navbar");
+            const searchBox = new google.maps.places.SearchBox(input);
+            searchbox_addListener_places_changed(map, searchBox);
+            map_addListener_bounds_changed(map, pub, searchBox);
+
+            var select = document.getElementById("selectNumber");
+            var options = ["1", "2", "3", "4", "5"];
+
+            for(var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+            }
+            */
         }
         function map_init_add() {
             console.log('MAP INIT ADD')
