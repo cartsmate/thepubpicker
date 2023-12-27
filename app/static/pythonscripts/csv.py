@@ -1,4 +1,6 @@
 import os
+import random
+from datetime import datetime, timedelta, date
 import pandas as pd
 import numpy as np
 from config import Configurations
@@ -99,10 +101,58 @@ class Csv:
         return df_pubs
 
     def go_get_details_daily(self):
-        df_details = pd.read_csv(directory_path + '/files/details_day.csv', dtype={'pub_identity': str})
-        # print(df_details)
-        print('details csv file downloaded')
-        return df_details
+        print('go_get_details_daily')
+        df_details_day = pd.read_csv(directory_path + '/files/details_day.csv',
+                                     dtype={'pub_identity': str, 'timestamp': str})
+        # print(df_details_day)
+
+        # read value of date
+        df_lastline = df_details_day.tail(1)
+        print('df_lastline')
+        print(df_lastline)
+        previous_timestamp_str = df_lastline.iloc[0]['timestamp']
+        print('previous_timestamp_str: ' + previous_timestamp_str)
+        # format_data = "%d/%m/%y %H:%M:%S.%f"
+        # format_data = "%Y-%m-%d"
+        # previous_timestamp = datetime.strptime(previous_timestamp_str, format_data)
+        # print('previous_timestamp: ' + str(previous_timestamp))
+
+        new_timestamp = datetime.now()
+        new_timestamp_str = datetime.today().strftime('%Y-%m-%d')
+        # new_timestamp = datetime.date.today()
+        # print('new_timestamp_str: ' + new_timestamp_str)
+
+        # if ((current_timestamp - daily_pub_timestamp) > timedelta(days=1)
+        #         or current_timestamp.weekday() != daily_pub_timestamp.weekday()):
+        if new_timestamp_str == previous_timestamp_str:
+            print("same day")
+            df_details_day = df_details_day
+
+        else:
+            print("next day")
+            # # # GET RANDOM PUB
+            df_details = Csv().go_get_details()
+
+            no_of_details = df_details.shape[0]
+            random_index = random.randrange(0, no_of_details)
+            df_random_pub = df_details.iloc[random_index]
+            # print(df_random_pub)
+            random_pub_id = df_random_pub['pub_identity']
+            # print(random_pub_id)
+
+            data = {'pub_identity': [random_pub_id], 'timestamp': [new_timestamp_str]}
+
+            df_new = pd.DataFrame(data)
+
+            # daily_pub_list = ['pub_identity', random_pub_id, 'timestamp', new_timestamp_str]
+            # df_new = pd.DataFrame(daily_pub_list)
+            # print(df_details_day)
+            print(df_new)
+            df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
+            print(df_appended)
+            df_appended.to_csv(directory_path + '/files/details_day.csv', index=False, sep=',', encoding='utf-8')
+            df_details_day = df_new
+        return df_details_day
 
     def go_get_details(self):
         df_details = pd.read_csv(directory_path + '/files/details.csv',
