@@ -1,3 +1,18 @@
+.ui-autocomplete-input {
+    padding: 0px;
+    margin: 0px;
+    width: 300px;
+}
+ul.ui-autocomplete {
+    list-style: none;
+    background-color: white;
+    width: 300px;
+}
+.ui-menu-item .ui-menu-item-wrapper.ui-state-active {
+    background: coral !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+}
 .page-background {
     background-color:grey;
 }
@@ -100,7 +115,7 @@
     width:290px;
 }
 .photo_double {
-    height:300px;
+    height:400px;
     width:290px;
 }
 .details {

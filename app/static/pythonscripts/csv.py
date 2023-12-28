@@ -147,9 +147,9 @@ class Csv:
             # daily_pub_list = ['pub_identity', random_pub_id, 'timestamp', new_timestamp_str]
             # df_new = pd.DataFrame(daily_pub_list)
             # print(df_details_day)
-            print(df_new)
+            # print(df_new)
             df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
-            print(df_appended)
+            # print(df_appended)
             df_appended.to_csv(directory_path + '/files/details_day.csv', index=False, sep=',', encoding='utf-8')
             df_details_day = df_new
         return df_details_day

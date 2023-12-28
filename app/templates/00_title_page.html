@@ -2,7 +2,15 @@
 
 {% block script %}
     <script>env_vars = {{ env_vars | tojson }}</script>
+    <script>states_list = {{ states_list | tojson }}</script>
+    <script>pub_list = {{ pub_list | tojson }}</script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_title.js') }}"></script>
+
+{% endblock %}
+
+{% block on_load %}
+    <body onload="onload_title()" class="page-background">
 {% endblock %}
 
 {% block title %}
@@ -15,7 +23,8 @@
             </div>
         </div>
     </div>
-    <div style="text-align: center; padding: 25px 15px 200px 15px; font-size: 14px; font-weight: bold;" class="row">Search for the pub that matches with everything you're looking for.</div>
-    <div style="text-align: center; padding: 25px 15px 100px 15px; font-size: 10px; font-weight: bold;" class="row">Version 23.12.27.1</div>
+    <div style="text-align: center; padding: 25px 15px 20px 15px; font-size: 14px; font-weight: bold;" class="row">Search for the pub that matches with everything you're looking for.</div>
+
+    <div style="text-align: center; padding: 25px 15px 100px 15px; font-size: 10px; font-weight: bold;" class="row">Version 23.12.27.2</div>
 </div>
 {% endblock %}

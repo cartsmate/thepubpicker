@@ -2,6 +2,7 @@
 
 {% block script %}
     <script>pub = {{ pub | tojson }}</script>
+    <script>pub_list = {{ pub_list | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>
@@ -16,6 +17,7 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_stations.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_autocomplete.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
@@ -30,7 +32,9 @@
 
 {% block pub_summary %}
     {% include "9_summary.html" %}
-
+    <div style="margin-left: 10px;">
+        <input id="selector" type="text" placeholder="search all pubs...">
+    </div>
 {% endblock %}
 
 {% block carousel %}

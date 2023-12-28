@@ -25,12 +25,13 @@ def summary():
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
     print(env_vars)
+    print('env_vars')
     # # # GET MODEL DISPLAY FORMATS
     model_formats = ControlsList().go_get_control_list()
 
     # # # GET DAILY PUB
-    df_details = Csv().go_get_details_daily()
-    daily_id = df_details.iloc[0]['pub_identity']
+    df_details_daily = Csv().go_get_details_daily()
+    daily_id = df_details_daily.iloc[0]['pub_identity']
 
         # # # GET RANDOM PUB
         # df_details = Csv().go_get_details()
@@ -43,6 +44,16 @@ def summary():
     df_pub = CsvSingle().go_get_1_pub(daily_id)
 
     pub_json = Dataframes().df_to_dict(df_pub)
+    pub_list = []
+    df_details = Csv().go_get_details()
+    for index, row in df_details.iterrows():
+        # print('row')
+        # print(row)
+        # draft_list = [row['pub_identity'], row['detail_name']]
+        draft_obj = {'value': row['pub_identity'], 'label': row['detail_name']}
+        pub_list.append(draft_obj)
+
+    # detail_json = Dataframes().df_to_dict(df_details)
 
     # photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
     # photo_json = Dataframes().df_to_dict(df_photo)
@@ -55,6 +66,7 @@ def summary():
     name = "readonly"
     return render_template('01_summary.html',
                            pub=pub_json,
+                           pub_list=pub_list,
                            # photos_list=photos_list,
                            daily_id=daily_id,
                            env_vars=env_vars,

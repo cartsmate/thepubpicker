@@ -1,9 +1,7 @@
 function list_setup_search(pub_filtered) {
     console.log('list setup search')
-//    console.log('pub filtered received: ' + pub_filtered.length)
-//    console.log('pub: ' + pub.length)
 
-    list_delete()
+//    list_delete()
 
     list_create(pub_filtered)
 
