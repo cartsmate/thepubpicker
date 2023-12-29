@@ -6,7 +6,9 @@
                 <label class="col-form-label label" for={{field.name}} >{{alias[field.name]}}</label>
             </div>
             <div class="col details-data" id=div_{{field.name}} >
-                {% if field.name in model_formats['dropdown_list'] %}
+                {% if field.name == 'website' %}
+                    <div id={{field.name}}></div>
+                {% elif field.name in model_formats['dropdown_list'] %}
                     {% include "control_dropdown.html" %}
                 {% elif field.name in model_formats['star_list'] %}
                     {% include "9_stars_add.html" %}

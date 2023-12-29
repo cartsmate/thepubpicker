@@ -3,8 +3,13 @@ function populate_detail(){
     //console.log(pub)
 
     for (i=0; i < detail_list.length; i++) {
+        if (detail_list[i] == 'website') {
+            document.getElementById(detail_list[i]).innerHTML = "<a style='color:coral; font-size:12px;' href='" + pub[0][detail_list[i]] + "' target='_blank' rel='noopener noreferrer'>Link to pub website</a>"
+        } else {
+            document.getElementById(detail_list[i]).value = pub[0][detail_list[i]];
+        }
 
-        document.getElementById(detail_list[i]).value = pub[0][detail_list[i]];
+
     }
 }
 /*
