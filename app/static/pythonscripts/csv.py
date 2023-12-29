@@ -3,6 +3,7 @@ import random
 from datetime import datetime, timedelta, date
 import pandas as pd
 import numpy as np
+from app.static.pythonscripts.s3 import S3
 from config import Configurations
 
 config = Configurations().get_config()
@@ -102,9 +103,11 @@ class Csv:
 
     def go_get_details_daily(self):
         print('go_get_details_daily')
-        df_details_day = pd.read_csv(directory_path + '/files/details_day.csv',
-                                     dtype={'pub_identity': str, 'timestamp': str})
-        # print(df_details_day)
+        # df_details_day = pd.read_csv(directory_path + '/files/featured.csv',
+        #                              dtype={'pub_identity': str, 'timestamp': str})
+
+        attribute_list = ['pub_identity', 'timestamp']
+        df_details_day = S3().s3_read('featured', attribute_list)
 
         # read value of date
         df_lastline = df_details_day.tail(1)
@@ -150,18 +153,27 @@ class Csv:
             # print(df_new)
             df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
             # print(df_appended)
-            df_appended.to_csv(directory_path + '/files/details_day.csv', index=False, sep=',', encoding='utf-8')
+            # df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
+            s3_resp = S3().s3_write(df_appended, 'featured.csv')
+            print(s3_resp)
             df_details_day = df_new
         return df_details_day
 
     def go_get_details(self):
-        df_details = pd.read_csv(directory_path + '/files/details.csv',
-                                 dtype={'pub_identity': str, 'station_identity': str, 'detail_name': str,
-                                        'address': str, 'category': str, 'colour': str, 'detail_deletion': str,
-                                        'detail_latitude': float, 'detail_longitude': float, 'extra': str, 'place': str,
-                                        'rank': float, 'website': str, 'url': str})
-        # print(df_details)
-        print('details csv file downloaded')
+        print('CSV - go get details')
+        # df_details = pd.read_csv(directory_path + '/files/details.csv',
+        #                          dtype={'pub_identity': str, 'station_identity': str, 'detail_name': str,
+        #                                 'address': str, 'category': str, 'colour': str, 'detail_deletion': str,
+        #                                 'detail_latitude': float, 'detail_longitude': float, 'extra': str,
+        #                                 'place': str, 'rank': float, 'website': str, 'url': str})
+        #
+        attribute_list = ['pub_identity', 'station_identity', 'detail_name', 'address', 'category', 'colour',
+                    'detail_deletion', 'detail_latitude', 'detail_longitude', 'extra', 'place', 'rank', 'website',
+                    'url']
+        df_details = S3().s3_read('details', attribute_list)
+        # df = S3().s3_read_new()
+        print(df_details)
+        # print('details csv file downloaded')
         return df_details
 
     def go_get_reviews(self):
@@ -173,6 +185,10 @@ class Csv:
                                                                   'music': str, 'pool': str, 'quiz': str,
                                                                   'roast': str, 'sport': str})
         # print(df_reviews)
+        attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'brunch', 'dart', 'entertain',
+                          'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport',
+                          'no_feature']
+        df_reviews = S3().s3_read('reviews', attribute_list)
         df_reviews = self.add_no_feature(df_reviews)
         print('reviews csv file downloaded')
         return df_reviews
@@ -183,6 +199,9 @@ class Csv:
                                                                        'thursday': str, 'friday': str,
                                                                        'saturday': str, 'sunday': str})
         # print(df_diarys)
+        attribute_list = ['pub_identity', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
+                          'sunday']
+        df_diarys = S3().s3_read('diary', attribute_list)
         print('diarys csv file downloaded')
         return df_diarys
 
@@ -191,11 +210,16 @@ class Csv:
                                  dtype={'station_identity': str, 'station_deletion': str, 'station_name': str,
                                         'station_latitude': float, 'station_longitude': float, 'zone': str,
                                         'postcode': str, 'direction_identity': str})
+        attribute_list = ['station_identity', 'station_deletion', 'station_name', 'station_latitude',
+                          'station_longitude', 'zone', 'postcode', 'direction_identity']
+        df_station = S3().s3_read('station', attribute_list)
         return df_station
 
     def go_get_directions(self):
         df_directions = pd.read_csv(directory_path + '/files/directions.csv',
                                     dtype={'direction_identity': str, 'direction_name': str, 'direction_deletion': str})
+        attribute_list = ['direction_identity', 'direction_name', 'direction_deletion']
+        df_directions = S3().s3_read('direction', attribute_list)
         return df_directions
 
     def go_get_photos(self):

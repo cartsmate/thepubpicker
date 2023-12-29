@@ -39,6 +39,21 @@ def edit():
     # # # FOR TESTING PURPOSES ONLY
     newdf = df_pub.transpose()
     # print(newdf)
+    detail_list = []
+    review_list = []
+    diary_list = []
+    station_list = []
+    direction_list = []
+    for k, v in Detail().__dict__.items():
+        detail_list.append(v.name)
+    for k, v in Review().__dict__.items():
+        review_list.append(v.name)
+    for k, v in Diary().__dict__.items():
+        diary_list.append(v.name)
+    for k, v in Station().__dict__.items():
+        station_list.append(v.name)
+    for k, v in Direction().__dict__.items():
+        direction_list.append(v.name)
     print('END pub')
     return render_template('05_edit.html',
                            pub=pub_json,
@@ -51,4 +66,10 @@ def edit():
                            diary=Diary(),
                            photo=Photo(),
                            station=Station(),
-                           direction=Direction())
+                           direction=Direction(),
+                           detail_list=detail_list,
+                           review_list=review_list,
+                           diary_list=diary_list,
+                           station_list=station_list,
+                           direction_list=direction_list,
+                           )

@@ -4,6 +4,7 @@ import pandas as pd
 from flask import request
 from config import Configurations
 from app.static.pythonscripts.csv import Csv
+from app.static.pythonscripts.s3 import S3
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.detail.rank import Rank
@@ -73,6 +74,14 @@ class FilesDetail:
     def update_detail_csv(self, df_updated_details):
         print('updating detail csv')
         # print(df_updated_details)
-        df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
+        df_details = Csv().go_get_details()
+        pre_count = df_details.shape[0]
+        post_count = df_updated_details.shape[0]
+        if post_count == pre_count + 1:
+            df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
+            s3_resp = S3().s3_write(df_updated_details, 'details.csv')
+            print(s3_resp)
+        else:
+            print('error in processing')
         print('detail csv updated')
         return df_updated_details

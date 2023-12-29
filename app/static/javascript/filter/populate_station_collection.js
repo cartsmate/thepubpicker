@@ -54,7 +54,7 @@ function on_click_station() {
     pub_filtered = filter_all_data(pub)
     list_setup(pub_filtered)
     populate_feature(pub_filtered)
-    populate_review(pub_filtered)
+    //populate_review(pub_filtered)
     populate_header(pub_filtered.length)
 //    document.getElementById('pub_length').innerHTML = "<a>" + "Number of pubs: " + pub_filtered.length + "</a>"
 

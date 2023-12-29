@@ -5,6 +5,12 @@
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
+    <script>detail_list = {{ detail_list | tojson }}</script>
+    <script>review_list = {{ review_list | tojson }}</script>
+    <script>diary_list = {{ diary_list | tojson }}</script>
+    <script>station_list = {{ station_list | tojson }}</script>
+    <script>direction_list = {{ direction_list | tojson }}</script>
+    <script>photos_list = {{ photos_list | tojson }}</script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_submit.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>

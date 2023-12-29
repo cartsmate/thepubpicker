@@ -45,7 +45,14 @@ function marker_add_bounds(map, bounds, data) {
         if (marker_counter < 10) {
 //    for (var key in data) {
         //var pinColor = '#0275d8'
-            var pinColor = "coral"
+            console.log(data[i]['detail_name'])
+            console.log(data[i]['colour'])
+            if (i==0) {
+                var pinColor = "coral"
+            } else {
+                var pinColor = data[i]['colour']
+            }
+
             var markerImage = {  // https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerLabel
                 path: pinHole,
                 anchor: new google.maps.Point(12,17),

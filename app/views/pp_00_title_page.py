@@ -22,7 +22,7 @@ from config import Configurations
 
 @app.route("/", methods=['GET'])
 def home():
-    print('START home')
+    print('START title')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
     states_list = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',

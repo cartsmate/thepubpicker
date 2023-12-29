@@ -69,7 +69,7 @@ function on_click_direction() {
 
     populate_station(pub_filtered)
     populate_feature(pub_filtered)
-    populate_review(pub_filtered)
+    //populate_review(pub_filtered)
     //filter_direction_change()
     populate_header(pub_filtered.length)
     //document.getElementById('pub_length').innerHTML = "<a>" + "Number of pubs: " + pub_filtered.length + "</a>"

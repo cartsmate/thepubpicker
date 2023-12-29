@@ -17,7 +17,15 @@
         function map_init_summary() {
             console.log('MAP INIT SUMMARY')
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
-            marker_add_summary(map)
+            //marker_add_summary(map)
+
+            const input = document.getElementById("search-input-navbar");
+            const searchBox = new google.maps.places.SearchBox(input);
+            searchbox_addListener_places_changed(map, searchBox);
+            map_addListener_bounds_changed(map, pub, searchBox);
+
+
+            //marker_add_collection(map, pub_list)
             /*
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);

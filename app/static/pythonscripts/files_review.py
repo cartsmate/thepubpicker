@@ -4,6 +4,7 @@ import pandas as pd
 from flask import request
 from config import Configurations
 from app.static.pythonscripts.csv import Csv
+from app.static.pythonscripts.s3 import S3
 from app.models.review.review import Review
 from app.models.review.brunch import Brunch
 from app.models.review.dart import Dart
@@ -82,6 +83,14 @@ class FilesReview:
     def update_review_csv(self, df_updated_reviews):
         print('updating review csv')
         # print(df_updated_reviews)
-        df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
+        df_review = Csv().go_get_details()
+        pre_count = df_review.shape[0]
+        post_count = df_updated_reviews.shape[0]
+        if post_count == pre_count + 1:
+            df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
+            s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
+            print(s3_resp)
+        else:
+            print('error in processing')
         print('review csv updated')
         return df_updated_reviews

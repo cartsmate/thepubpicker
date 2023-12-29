@@ -15,6 +15,7 @@ from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
+from app.static.pythonscripts.s3 import S3
 from app.models.photo.photo import Photo
 from config import Configurations
 
@@ -31,6 +32,9 @@ def summary():
 
     # # # GET DAILY PUB
     df_details_daily = Csv().go_get_details_daily()
+    # det_list_day = ['pub_identity', 'timestamp']
+    # df_details_daily = S3().s3_read('details', det_list_day)
+
     daily_id = df_details_daily.iloc[0]['pub_identity']
 
         # # # GET RANDOM PUB
@@ -46,14 +50,22 @@ def summary():
     pub_json = Dataframes().df_to_dict(df_pub)
     pub_list = []
     df_details = Csv().go_get_details()
+    # det_list = ['pub_identity','station_identity','detail_name','address','category','colour','detail_deletion','detail_latitude','detail_longitude','extra','place','rank','website','url']
+    # df_details = S3().s3_read('details', det_list)
+    print(df_details)
     for index, row in df_details.iterrows():
+        df_details['colour'] = '#005B8F'
         # print('row')
         # print(row)
         # draft_list = [row['pub_identity'], row['detail_name']]
         draft_obj = {'value': row['pub_identity'], 'label': row['detail_name']}
         pub_list.append(draft_obj)
 
-    # detail_json = Dataframes().df_to_dict(df_details)
+    df_details.loc[df_details['pub_identity'] == daily_id, 'colour'] = "#FF7F50"
+    df2 = df_details.loc[df_details['pub_identity'] == daily_id]
+    pub_json = Dataframes().df_to_dict(df_details)
+    newdf = df2.transpose()
+    print(newdf)
 
     # photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
     # photo_json = Dataframes().df_to_dict(df_photo)
