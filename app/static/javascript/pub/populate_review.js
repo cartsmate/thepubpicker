@@ -1,8 +1,18 @@
 function populate_review(){
     console.log('POPULATE REVIEW')
     for (i=0; i < review_list.length; i++) {
-
-        document.getElementById(review_list[i]).value = pub[0][review_list[i]];
+        if (review_list[i] != "pub_identity") {
+            document.getElementById(review_list[i]).value = pub[0][review_list[i]];
+            console.log(review_list[i])
+            console.log(pub[0][review_list[i]])
+            if (pub[0][review_list[i]] == 'true') {
+                document.getElementById(review_list[i] + '_col').style.background = "coral";
+                document.getElementById(review_list[i] + '_caption').style.color = "white";
+            } else {
+                document.getElementById(review_list[i] + '_col').style.background = "white";
+                document.getElementById(review_list[i] + '_caption').style.color = "black";
+            }
+        }
     }
 }
 //    SKIP THIS SECTION

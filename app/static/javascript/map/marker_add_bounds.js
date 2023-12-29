@@ -41,12 +41,12 @@ function marker_add_bounds(map, bounds, data) {
     var east = north_east_str[1]
     var west = south_west_str[1]
     for (var i = 0; i < data.length; i++) {
-        console.log('marker_counter: ' + marker_counter)
+        //console.log('marker_counter: ' + marker_counter)
         if (marker_counter < 10) {
 //    for (var key in data) {
         //var pinColor = '#0275d8'
-            console.log(data[i]['detail_name'])
-            console.log(data[i]['colour'])
+            //console.log(data[i]['detail_name'])
+            //console.log(data[i]['colour'])
             if (i==0) {
                 var pinColor = "coral"
             } else {
