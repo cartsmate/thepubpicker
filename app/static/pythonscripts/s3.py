@@ -44,7 +44,7 @@ class S3:
         csv_content = response['Body'].read().decode('utf-8')
 
         df = pd.read_csv(io.StringIO(csv_content))
-        print(df.head(5))
+        # print(df.head(5))
 
         # # Print out bucket names
         # for bucket in s3.buckets.all():
@@ -64,14 +64,14 @@ class S3:
         # print(df)
 
     def s3_read(self, prefix, list_of_columns):
-        print('S3 - s3 read')
-        print('prefix')
-        print(prefix)
+        # print('S3 - s3 read')
+        # print('prefix')
+        # print(prefix)
         # print(list_of_columns)
         # print('s3_read')
         env_vars = Configurations().get_config2()
-        print('env_vars')
-        print(env_vars)
+        # print('env_vars')
+        # print(env_vars)
         # s3 = None
         s3 = boto3.resource('s3', aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
             # boto3.resource('s3',
@@ -79,10 +79,10 @@ class S3:
             #                 aws_secret_access_key=config2['access_key'])
         # my_bucket = s3.Bucket(config2['bucket_name'])
         my_bucket = s3.Bucket(env_vars['bucket_name'])
-        print('my_bucket')
-        print(my_bucket)
+        # print('my_bucket')
+        # print(my_bucket)
         bucket_list = []
-        print(my_bucket.objects)
+        # print(my_bucket.objects)
         for obj in my_bucket.objects.filter(Prefix=prefix):  # .all():
             if obj.key.find(".csv") != -1:
                 bucket_list.append(obj.key)

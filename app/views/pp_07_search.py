@@ -21,7 +21,7 @@ config2 = Configurations().get_config2()
 
 @app.route("/search/", methods=['GET', 'POST'])
 def search():
-    print('START search')
+    print('start SEARCH')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -30,7 +30,7 @@ def search():
 
     # # # GET DAILY PUB
     df_details = Csv().go_get_details_daily()
-    daily_id = df_details.iloc[0]['pub_identity']
+    # daily_id = df_details.iloc[0]['pub_identity']
 
     # # # GET ALL PUBS WITH FEATURE
     feature = request.args.get('feature')
@@ -49,27 +49,27 @@ def search():
     df_data = Csv().go_get_all()
 
     # # # FOR TESTING PURPOSES ONLY
-    print('df_data')
-    print(df_data)
+    # print('df_data')
+    # print(df_data)
     # newdf = df_data.transpose()
     # print(newdf)
 
     pub_json = Dataframes().df_to_dict(df_data)
 
-    headers = df_data.columns
+    # headers = df_data.columns
     stations_directions_list = Csv().go_get_stations_directions_list()
     directions_list = Csv().go_get_directions_list()
     visible = Objects().go_get_visible()
     alias = Objects().go_get_alias()
-    diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    # diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     review_list = []
     for k, v in Review().__dict__.items():
         review_list.append(v.name)
 
-    print('END collection')
+    print('end SEARCH')
     return render_template('07_search.html',
                            pub=pub_json,
-                           daily_id=daily_id,
+                           # daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

@@ -6,11 +6,11 @@
 
 <div class="col black" id="pub_summary_test">
     <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-        <div class="sub-heading" onclick="redirect_pub('{{pub[0]['pub_identity']}}')"><a href="#" style="color: white;" >Featured Pub Of The Day</a></div>
+        <div class="sub-heading" onclick="redirect_pub(daily_id)"><a href="#" style="color: white;" >Featured Pub Of The Day</a></div>
     </div>
-    <div class="row pink" onclick="redirect_pub('{{pub[0]['pub_identity']}}')" style="color: black; padding-top:5px;" id="random_name"><a href="#" style="color: black;" >{{ pub[0]['detail_name'] }}</a></div>
-    <div class="row pink" id="random_rank"><a href="{{pub[0]['url']}}" target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a></div>
-    <div class="row pink" onclick="redirect_pub('{{pub[0]['pub_identity']}}')" id="extra" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; "><a href="#" style="color: black;">{{ pub[0]['extra'] }}</a></div>
+    <div class="row pink" onclick="redirect_pub(daily_id)" style="color: black; padding-top:5px;" id="summary_name"><a href="#" style="color: black;" ></a></div>
+    <div class="row pink" id="random_rank"><a target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a></div>
+    <div class="row pink" onclick="redirect_pub(daily_id)" id="summary_extra" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; "><a href="#" style="color: black;"></a></div>
     <div class="row pink" style="padding-top: 5px;">{% include "9_map.html" %}</div>
     <!--<div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">{{ pub[0]['pub_identity'] }}</a></div>-->
 </div>

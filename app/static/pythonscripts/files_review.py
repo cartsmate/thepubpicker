@@ -63,15 +63,21 @@ class FilesReview:
     def update_review_df(self, df_reviews, pub_id):
         print('UPDATE edit review')
         for review in list(Review().__dict__.keys()):
-            if review in model_formats['icon_list']:
-                # print(review + ' : ' + str(request.form.get(review)))
-                df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = 'true' \
-                    if request.form.get(review) == 'on' \
-                    else 'false'
-            else:
-                # print(review + ' : ' + str(request.form.get(review)))
-                df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = request.form[review]
-        print('details model updated with form data')
+            print(review)
+            if review != 'pub_identity':
+                if review in model_formats['icon_list']:
+                    print('if')
+                    print(review + ' : ' + str(request.form.get(review + "_check")))
+                    df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = 'true' \
+                        if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == 'true')\
+                        else 'false'
+                else:
+                    print('else')
+                    print(review + ' : ' + str(request.form.get(review + "_check")))
+                    df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = request.form[review + "_check"]
+        print('df_reviews')
+        df2 = df_reviews.loc[df_reviews['pub_identity'] == pub_id]
+        print(df2.transpose())
         return df_reviews
 
     def add_review_df(self, df_reviews, df_new):
@@ -80,17 +86,33 @@ class FilesReview:
         # df_full = pd.merge(df_details, df_new, on='pub_identity')
         return df_appended
 
-    def update_review_csv(self, df_updated_reviews):
+    def update_review_csv(self, df_updated_reviews, type):
         print('updating review csv')
         # print(df_updated_reviews)
-        df_review = Csv().go_get_details()
-        pre_count = df_review.shape[0]
-        post_count = df_updated_reviews.shape[0]
-        if post_count == pre_count + 1:
+        df_reviews = Csv().go_get_reviews()
+        print('pre_count: ' + str(df_reviews.shape[0]))
+        print('post_count: ' + str(df_updated_reviews.shape[0]))
+
+        if (df_updated_reviews.shape[0] == df_reviews.shape[0] + 1) and (type == 'add'):
+            df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
+            s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
+
+            print(s3_resp)
+            print('Review csv/s3 added to')
+        else:
+            print('Review csv/s3 did not add to')
+
+        if (df_updated_reviews.shape[0] == df_reviews.shape[0]) and (type == 'edit'):
+            print('INSIDE REVIEW AND EDIT')
+            idid = 'd010138e-02c3-492d-ada2-df1478095d2d'
+            df2 = df_updated_reviews.loc[df_updated_reviews['pub_identity'] == idid]
+            print(df2.transpose())
+
             df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
             s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
             print(s3_resp)
+            print('Review csv/s3 updated')
         else:
-            print('error in processing')
-        print('review csv updated')
+            print('Review csv/s3 did not update')
+
         return df_updated_reviews

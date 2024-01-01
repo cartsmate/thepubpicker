@@ -63,7 +63,7 @@ class FilesDiary:
         for diary in list(Diary().__dict__.keys()):
             df_diary.loc[df_diary['pub_identity'] == pub_id, diary] = request.form[diary]
             # print(diary + ' : ' + request.form[diary])
-        print('diary model updated with form data')
+        print(df_diary)
         return df_diary
 
     def add_diary_df(self, df_diary, df_new):
@@ -72,17 +72,26 @@ class FilesDiary:
         # df_full = pd.merge(df_details, df_new, on='pub_identity')
         return df_appended
 
-    def update_diary_csv(self, df_updated_diary):
+    def update_diary_csv(self, df_updated_diary, type):
         print('updating diary csv')
         # print(df_updated_diary)
-        df_diary = Csv().go_get_details()
-        pre_count = df_diary.shape[0]
-        post_count = df_updated_diary.shape[0]
-        if post_count == pre_count + 1:
+        df_diarys = Csv().go_get_diarys()
+        print('pre_count: ' + str(df_diarys.shape[0]))
+        print('post_count: ' + str(df_updated_diary.shape[0]))
+        if (df_updated_diary.shape[0] == df_diarys.shape[0] + 1) and (type == 'add'):
             df_updated_diary.to_csv(directory_path + '/files/diary.csv', index=False, sep=',', encoding='utf-8')
             s3_resp = S3().s3_write(df_updated_diary, 'diary.csv')
             print(s3_resp)
+            print('Diary csv/s3 added to')
         else:
-            print('error in processing')
-        print('diary csv updated')
+            print('Diary csv/s3 did not add to')
+
+        if (df_updated_diary.shape[0] == df_diarys.shape[0]) and (type == 'edit'):
+            df_updated_diary.to_csv(directory_path + '/files/diary.csv', index=False, sep=',', encoding='utf-8')
+            s3_resp = S3().s3_write(df_updated_diary, 'diary.csv')
+            print(s3_resp)
+            print('Diary csv/s3 updated')
+        else:
+            print('Diary csv/s3 did not update')
+
         return df_updated_diary

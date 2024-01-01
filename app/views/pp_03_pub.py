@@ -24,8 +24,8 @@ def pub():
     model_formats = ControlsList().go_get_control_list()
 
     # # # GET DAILY PUB
-    df_details = Csv().go_get_details_daily()
-    daily_id = df_details.iloc[0]['pub_identity']
+    # df_details = Csv().go_get_details_daily()
+    # daily_id = df_details.iloc[0]['pub_identity']
 
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
@@ -33,16 +33,16 @@ def pub():
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
     df_pub = CsvSingle().go_get_1_pub(pub_id)
-
+    print(df_pub.transpose())
     pub_json = Dataframes().df_to_dict(df_pub)
 
     # df_photo = CsvSingle().go_get_1_photo(pub_id)
     # photo_json = Dataframes().df_to_dict(df_photo)
     photos_list = CsvSingle().go_get_1_photo_request(pub_id, env_vars)
-    print(photos_list)
+    # print(photos_list)
     # # # FOR TESTING PURPOSES ONLY
-    newdf = df_pub.transpose()
-    print(newdf)
+    # newdf = df_pub.transpose()
+    # print(newdf)
     print('END pub')
     name = "readonly"
     detail_list = []
@@ -63,7 +63,7 @@ def pub():
     return render_template('03_pub.html',
                            pub=pub_json,
                            photos_list=photos_list,
-                           daily_id=daily_id,
+                           # daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

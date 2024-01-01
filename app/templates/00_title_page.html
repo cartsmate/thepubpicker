@@ -2,8 +2,6 @@
 
 {% block script %}
     <script>env_vars = {{ env_vars | tojson }}</script>
-    <script>states_list = {{ states_list | tojson }}</script>
-    <script>pub_list = {{ pub_list | tojson }}</script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_title.js') }}"></script>
 

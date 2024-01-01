@@ -1,8 +1,9 @@
 function onload_summary() {
+    console.log('onload summary')
+
+    populate_summary()
+    populate_autocomplete()
     map_load_summary()
     add_listeners()
-    populate_autocomplete()
 
-//    add_listener_summary()
-      // caro_test()
 }

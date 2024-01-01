@@ -16,7 +16,7 @@ from config import Configurations
 
 @app.route("/edit/", methods=['GET'])
 def edit():
-    print('START pub')
+    print('start EDIT')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -27,8 +27,8 @@ def edit():
     alias = Objects().go_get_alias()
 
     # # # GET DAILY PUB
-    df_details = Csv().go_get_details_daily()
-    daily_id = df_details.iloc[0]['pub_identity']
+    # df_details = Csv().go_get_details_daily()
+    # daily_id = df_details.iloc[0]['pub_identity']
 
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
@@ -54,10 +54,10 @@ def edit():
         station_list.append(v.name)
     for k, v in Direction().__dict__.items():
         direction_list.append(v.name)
-    print('END pub')
+    print('end EDIT')
     return render_template('05_edit.html',
                            pub=pub_json,
-                           daily_id=daily_id,
+                           # daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,

@@ -1,4 +1,4 @@
 function onload_pub() {
-    map_load_summary()
+    map_load_pub()
     populate_pub()
 }

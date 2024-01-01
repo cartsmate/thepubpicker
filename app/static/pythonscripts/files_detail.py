@@ -71,17 +71,28 @@ class FilesDetail:
         # df_full = pd.merge(df_details, df_new, on='pub_identity')
         return df_appended
 
-    def update_detail_csv(self, df_updated_details):
+    def update_detail_csv(self, df_updated_details, type):
         print('updating detail csv')
         # print(df_updated_details)
         df_details = Csv().go_get_details()
-        pre_count = df_details.shape[0]
-        post_count = df_updated_details.shape[0]
-        if post_count == pre_count + 1:
+
+        print('pre_count: ' + str(df_details.shape[0]))
+        print('post_count: ' + str(df_updated_details.shape[0]))
+
+        if (df_updated_details.shape[0] == df_details.shape[0] + 1) and (type == 'add'):
             df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
             s3_resp = S3().s3_write(df_updated_details, 'details.csv')
             print(s3_resp)
+            print('Detail csv/s3 added to')
         else:
-            print('error in processing')
-        print('detail csv updated')
+            print('Detail csv/s3 did not add to')
+
+        if (df_updated_details.shape[0] == df_details.shape[0]) and (type == 'edit'):
+            df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
+            s3_resp = S3().s3_write(df_updated_details, 'details.csv')
+            print(s3_resp)
+            print('Detail csv/s3 updated')
+        else:
+            print('Detail csv/s3 did not update')
+
         return df_updated_details

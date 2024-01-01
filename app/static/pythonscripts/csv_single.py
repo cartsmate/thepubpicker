@@ -11,12 +11,13 @@ directory_path = config2['directory_path']
 
 class CsvSingle:
 
-
     def go_get_1_pub(self, pub_id):
+        print('Go Get 1 Pub')
         df_detail = CsvSingle().go_get_1_detail(pub_id)
         # print(df_detail)
         df_review = CsvSingle().go_get_1_review(pub_id)
-        # print(df_review)
+        print('df_review')
+        print(df_review)
         df_detail_review = pd.merge(df_detail, df_review, on='pub_identity', how='left')
 
         station_id = df_detail['station_identity'].iloc[0]
@@ -39,37 +40,42 @@ class CsvSingle:
         return df_pb_rev_st_dir_dry
 
     def go_get_1_detail(self, pub_id):
+        print('Go get 1 detail')
         df_details = Csv().go_get_details()
         df_1_detail = df_details.loc[df_details['pub_identity'] == pub_id]
-        print('Get one detail pub')
         return df_1_detail
 
     def go_get_1_review(self, pub_id):
+        print('Go get 1 review')
         df_reviews = Csv().go_get_reviews()
         df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
         df_1_review = df_rev_no_dupes.loc[df_rev_no_dupes['pub_identity'] == pub_id]
+        print(df_1_review.transpose())
         return df_1_review
 
     def go_get_1_station(self, station_id):
+        print('Go get 1 station')
         df_stations = Csv().go_get_stations()
         df_1_station = df_stations.loc[df_stations['station_identity'] == station_id]
         return df_1_station
 
     def go_get_1_direction(self, direction_id):
+        print('Go get 1 direction')
         df_directions = Csv().go_get_directions()
         df_1_direction = df_directions.loc[df_directions['direction_identity'] == direction_id]
         return df_1_direction
 
     def go_get_1_diary(self, pub_id):
-        df_photos = Csv().go_get_diarys()
-        df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
-        return df_1_photo
+        print('Go get 1 diary')
+        df_diarys = Csv().go_get_diarys()
+        df_1_diary = df_diarys.loc[df_diarys['pub_identity'] == pub_id]
+        return df_1_diary
 
     def go_get_1_photo(self, pub_id):
-        print('go_get_1_photo')
+        print('Go get 1 photo')
         df_photos = Csv().go_get_photos()
         df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
-        print(df_1_photo)
+        # print(df_1_photo)
         return df_1_photo
 
     def go_get_place_id(self, pub_id):
@@ -106,19 +112,19 @@ class CsvSingle:
     def go_get_1_photo_request(self, pub_id, env_vars):
         print('go_get_1_photo_request')
         place_id = self.go_get_place_id(pub_id)
-        print(place_id)
+        # print(place_id)
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
 
         keyw = env_vars['places_key']
-        print(keyw)
+        # print(keyw)
 
         fields = 'name,photos'
 
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
-        print(full_url)
+        # print(full_url)
 
         response = requests.get(full_url)
-        print(response.json())
+        # print(response.json())
         photo_ids = response.json()['result']['photos']
         photo_list = []
         for x in photo_ids:

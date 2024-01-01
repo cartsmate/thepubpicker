@@ -65,6 +65,8 @@ function map_addListener_click_add(map) {
                     document.getElementById("address").value = place.formatted_address
                     if(place.hasOwnProperty('editorial_summary')){
                         document.getElementById("extra").value = place.editorial_summary.overview
+                        } else {
+                        document.getElementById("extra").value = 'No detail available'
                         }
                     if(place.hasOwnProperty('website')){
                         document.getElementById("website").value = place.website

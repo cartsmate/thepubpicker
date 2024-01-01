@@ -4,18 +4,17 @@
     <script>console.log('{{field.name}}')</script>
     {% if field.name != "pub_identity" %}
         {% if field.name in model_formats['icon_list'] %}
-            <div style="text-align:center; margin:0px; padding:0px; width:40px; height: 48px; border-radius: 50%; border: 2px solid coral;" id="{{field.name}}_col">
+            <div style="opacity: 0.5; text-align:center; margin:0px; padding:0px; width:40px; height: 48px; border-radius: 50%; border: 2px solid coral;" id="{{field.name}}_col">
                 <div>
                     {% if name == "readonly" %}
-                        <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="filter_by_feature_icon('{{field.name}}')">
+                        <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display:none">
                     {% else %}
-                        <input type="checkbox" id="{{field.name}}" name="{{field.name}}" style="display:none" onclick="set_feature_icon_colour('{{field.name}}')">
+                        <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display:block" onclick="set_feature_icon_colour('{{field.name}}')">
                     {% endif %}
                 </div>
                 <div>
-                    <label for="{{field.name}}" style="margin:0px; padding:0px" >
-                        <img src="{{ url_for('static', filename='icons/features/' + field.icon ) }}" id="{{field.name}}_img" width="27" height="25"
-                             style="opacity: 1;">
+                    <label for="{{field.name}}_check" style="margin:0px; padding:0px" >
+                        <img src="{{ url_for('static', filename='icons/features/' + field.icon ) }}" id="{{field.name}}_img" width="27" height="25">
                     </label>
                 </div>
                 <div class="caption" id="{{field.name}}_caption" style="font-weight: bold; font-size: 8px; padding:0px; margin:0px; opacity:1;">{{field.alias}}</div>
@@ -23,9 +22,9 @@
         {% else %}
             <div style="display: none;" id="{{field.name}}_col">
                 <div>
-                    <label class="col-form-label no-show" for={{field.name}}></label>
-                    <input class="form-control no-show" type='text' name={{field.name}} id={{field.name}}>
-                    <div class="caption no-show" id="{{field.name}}_caption" style="font-size: 8px; padding:0px; margin:0px; opacity:1;"></div>
+                    <label class="col-form-label" for="{{field.name}}_check"></label>
+                    <input class="form-control" type='text' name="{{field.name}}_check" id="{{field.name}}_check">
+                    <div class="caption" id="{{field.name}}_caption" style="font-size: 8px; padding:0px; margin:0px; opacity:1;"></div>
                 </div>
             </div>
         {% endif %}

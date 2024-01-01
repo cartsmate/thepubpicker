@@ -1,5 +1,5 @@
 class ReviewIdentity:
-    def __init__(self, name='review_identity', alias="Review Identity", alias2="", required='false', form_visible='false',
+    def __init__(self, name='review_identity', alias="Review Identity", alias2="", required='false', form_visible='true',
                  table_visible='false', value=0, control='none', icon='none'):
         self.name = name
         self.alias = alias

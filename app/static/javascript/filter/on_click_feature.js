@@ -31,7 +31,7 @@ function update_filters() {
 }
 function set_feature_icon_colour(check_item) {
     console.log('set feature icon colour')
-    var checkBox = document.getElementById(check_item);
+    var checkBox = document.getElementById(check_item + "_check");
     var image = document.getElementById(check_item + "_img");
     var caption = document.getElementById(check_item + "_caption");
     var checkCol = document.getElementById(check_item + "_col");
@@ -41,13 +41,15 @@ function set_feature_icon_colour(check_item) {
         caption.style.opacity = "1.0"
         caption.style.color = "white"
         checkCol.style.background = "coral"
-        checkCol.style.border = "thin solid #0275D8";
+        checkCol.style.border = "thin solid coral";
+        checkBox.value = true
     } else {
         console.log('checkbox is false')
-        image.style.opacity = "1.0"
-        caption.style.opacity = "1.0"
+        image.style.opacity = "0.5"
+        caption.style.opacity = "0.5"
         caption.style.color = "black"
         checkCol.style.background = "white"
-        checkCol.style.border = "thin solid white";
+        checkCol.style.border = "thin solid coral";
+        checkBox.value = false
     }
 }

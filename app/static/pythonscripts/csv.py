@@ -108,13 +108,13 @@ class Csv:
 
         attribute_list = ['pub_identity', 'timestamp']
         df_details_day = S3().s3_read('featured', attribute_list)
-
+        # print(df_details_day)
         # read value of date
         df_lastline = df_details_day.tail(1)
-        print('df_lastline')
-        print(df_lastline)
+        # print('df_lastline')
+        # print(df_lastline)
         previous_timestamp_str = df_lastline.iloc[0]['timestamp']
-        print('previous_timestamp_str: ' + previous_timestamp_str)
+        # print('previous_timestamp_str: ' + previous_timestamp_str)
         # format_data = "%d/%m/%y %H:%M:%S.%f"
         # format_data = "%Y-%m-%d"
         # previous_timestamp = datetime.strptime(previous_timestamp_str, format_data)
@@ -129,7 +129,7 @@ class Csv:
         #         or current_timestamp.weekday() != daily_pub_timestamp.weekday()):
         if new_timestamp_str == previous_timestamp_str:
             print("same day")
-            df_details_day = df_details_day
+            df_details_day = df_lastline
 
         else:
             print("next day")
@@ -155,7 +155,7 @@ class Csv:
             # print(df_appended)
             # df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
             s3_resp = S3().s3_write(df_appended, 'featured.csv')
-            print(s3_resp)
+            # print(s3_resp)
             df_details_day = df_new
         return df_details_day
 
@@ -172,11 +172,12 @@ class Csv:
                     'url']
         df_details = S3().s3_read('details', attribute_list)
         # df = S3().s3_read_new()
-        print(df_details)
+        # print(df_details)
         # print('details csv file downloaded')
         return df_details
 
     def go_get_reviews(self):
+        print('go get reviews')
         df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_identity': str, 'pub_identity':str,
             'review_deletion': str, 'brunch': str,
                                                                   'dart': str, 'entertain': str,
@@ -189,11 +190,11 @@ class Csv:
                           'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport',
                           'no_feature']
         df_reviews = S3().s3_read('reviews', attribute_list)
-        df_reviews = self.add_no_feature(df_reviews)
-        print('reviews csv file downloaded')
+        # df_reviews = self.add_no_feature(df_reviews)
         return df_reviews
 
     def go_get_diarys(self):
+        print('go get diarys')
         df_diarys = pd.read_csv(directory_path + '/files/diary.csv', dtype={'pub_identity': str, 'monday': str,
                                                                        'tuesday': str, 'wednesday': str,
                                                                        'thursday': str, 'friday': str,
@@ -202,10 +203,10 @@ class Csv:
         attribute_list = ['pub_identity', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
                           'sunday']
         df_diarys = S3().s3_read('diary', attribute_list)
-        print('diarys csv file downloaded')
         return df_diarys
 
     def go_get_stations(self):
+        print('go get stations')
         df_station = pd.read_csv(directory_path + '/files/stations.csv',
                                  dtype={'station_identity': str, 'station_deletion': str, 'station_name': str,
                                         'station_latitude': float, 'station_longitude': float, 'zone': str,
@@ -216,6 +217,7 @@ class Csv:
         return df_station
 
     def go_get_directions(self):
+        print('go get directions')
         df_directions = pd.read_csv(directory_path + '/files/directions.csv',
                                     dtype={'direction_identity': str, 'direction_name': str, 'direction_deletion': str})
         attribute_list = ['direction_identity', 'direction_name', 'direction_deletion']
@@ -223,6 +225,7 @@ class Csv:
         return df_directions
 
     def go_get_photos(self):
+        print('go get photos')
         df_photos = pd.read_csv(directory_path + '/files/photos_api.csv',
                                 dtype={'photo_identity': str, 'photo_deletion': str, 'pub_identity': str})
         return df_photos

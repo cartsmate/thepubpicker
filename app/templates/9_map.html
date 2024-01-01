@@ -14,35 +14,50 @@
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
     <script>
+        function map_init_pub() {
+            console.log('MAP INIT PUB')
+
+            pub_lat = pub[0]['detail_latitude']
+            pub_lng = pub[0]['detail_longitude']
+
+            map = map_create(pub_lat, pub_lng, 15)
+
+            marker_add_summary(map)
+
+        }
         function map_init_summary() {
             console.log('MAP INIT SUMMARY')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
+            let x_pub = pub.filter((x) => {
+                return x.pub_identity == '{{daily_id}}';
+            });
+            console.log('x_pub')
+            console.log(x_pub)
+            pub_lat = x_pub[0]['detail_latitude']
+            pub_lng = x_pub[0]['detail_longitude']
+
+            map = map_create(pub_lat, pub_lng, 15)
+
             //marker_add_summary(map)
 
-            const input = document.getElementById("search-input-navbar");
-            const searchBox = new google.maps.places.SearchBox(input);
-            searchbox_addListener_places_changed(map, searchBox);
-            map_addListener_bounds_changed(map, pub, searchBox);
-
-
-            //marker_add_collection(map, pub_list)
-            /*
-            const input = document.getElementById("search-input-navbar");
-            const searchBox = new google.maps.places.SearchBox(input);
-            searchbox_addListener_places_changed(map, searchBox);
-            map_addListener_bounds_changed(map, pub, searchBox);
-
-            var select = document.getElementById("selectNumber");
-            var options = ["1", "2", "3", "4", "5"];
-
-            for(var i = 0; i < options.length; i++) {
-                var opt = options[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
+            records = []
+            for (let i = 0; i < pub.length; i++) {
+                lat_diff = Math.abs(pub[i]['detail_latitude'] - pub_lat)
+                lng_diff = Math.abs(pub[i]['detail_longitude'] - pub_lng)
+                tot_diff = lat_diff + lng_diff
+                var record = { detail_name: pub[i]['detail_name'], pub_identity: pub[i]['pub_identity'], detail_longitude: pub[i]['detail_longitude'], detail_latitude: pub[i]['detail_latitude'], distance: tot_diff}
+                records.push(record);
             }
-            */
+            records = records.sort((a, b) => {
+                if (a.distance < b.distance) {
+                    return -1;
+                }
+            });
+            console.log('records')
+            console.log(records)
+            const input = document.getElementById("search-input-navbar");
+            const searchBox = new google.maps.places.SearchBox(input);
+            searchbox_addListener_places_changed(map, searchBox);
+            map_addListener_bounds_changed(map, records, searchBox);
         }
         function map_init_add() {
             console.log('MAP INIT ADD')

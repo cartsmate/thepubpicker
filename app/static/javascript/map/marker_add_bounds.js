@@ -40,6 +40,8 @@ function marker_add_bounds(map, bounds, data) {
     var south = south_west_str[0]
     var east = north_east_str[1]
     var west = south_west_str[1]
+    console.log('data')
+    console.log(data)
     for (var i = 0; i < data.length; i++) {
         //console.log('marker_counter: ' + marker_counter)
         if (marker_counter < 10) {
@@ -50,7 +52,8 @@ function marker_add_bounds(map, bounds, data) {
             if (i==0) {
                 var pinColor = "coral"
             } else {
-                var pinColor = data[i]['colour']
+                var pinColor = "#005B8F"
+                //data[i]['colour']
             }
 
             var markerImage = {  // https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerLabel
