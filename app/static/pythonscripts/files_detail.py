@@ -29,6 +29,7 @@ config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
 model_formats = ControlsList().go_get_control_list()
+env_vars = Configurations().get_config2()
 
 class FilesDetail:
 
@@ -81,16 +82,18 @@ class FilesDetail:
 
         if (df_updated_details.shape[0] == df_details.shape[0] + 1) and (type == 'add'):
             df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_updated_details, 'details.csv')
-            print(s3_resp)
+            if env_vars['source'] == 'csv':
+                s3_resp = S3().s3_write(df_updated_details, 'details.csv')
+                print(s3_resp)
             print('Detail csv/s3 added to')
         else:
             print('Detail csv/s3 did not add to')
 
         if (df_updated_details.shape[0] == df_details.shape[0]) and (type == 'edit'):
             df_updated_details.to_csv(directory_path + '/files/details.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_updated_details, 'details.csv')
-            print(s3_resp)
+            if env_vars['source'] == 'csv':
+                s3_resp = S3().s3_write(df_updated_details, 'details.csv')
+                print(s3_resp)
             print('Detail csv/s3 updated')
         else:
             print('Detail csv/s3 did not update')

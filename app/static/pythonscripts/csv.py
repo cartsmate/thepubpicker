@@ -156,9 +156,12 @@ class Csv:
             # print(df_new)
             df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
             # print(df_appended)
-            # df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_appended, 'featured.csv')
-            # print(s3_resp)
+
+            if env_vars['source'] == 'csv':
+                df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
+            else:
+                s3_resp = S3().s3_write(df_appended, 'featured.csv')
+                print(s3_resp)
             df_details_day = df_new
         return df_details_day
 

@@ -27,6 +27,7 @@ config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
 model_formats = ControlsList().go_get_control_list()
+env_vars = Configurations().get_config2()
 
 class FilesDiary:
 
@@ -80,16 +81,18 @@ class FilesDiary:
         print('post_count: ' + str(df_updated_diary.shape[0]))
         if (df_updated_diary.shape[0] == df_diarys.shape[0] + 1) and (type == 'add'):
             df_updated_diary.to_csv(directory_path + '/files/diary.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_updated_diary, 'diary.csv')
-            print(s3_resp)
+            if env_vars['source'] == 'csv':
+                s3_resp = S3().s3_write(df_updated_diary, 'diary.csv')
+                print(s3_resp)
             print('Diary csv/s3 added to')
         else:
             print('Diary csv/s3 did not add to')
 
         if (df_updated_diary.shape[0] == df_diarys.shape[0]) and (type == 'edit'):
             df_updated_diary.to_csv(directory_path + '/files/diary.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_updated_diary, 'diary.csv')
-            print(s3_resp)
+            if env_vars['source'] == 'csv':
+                s3_resp = S3().s3_write(df_updated_diary, 'diary.csv')
+                print(s3_resp)
             print('Diary csv/s3 updated')
         else:
             print('Diary csv/s3 did not update')

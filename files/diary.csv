@@ -1,33 +1,33 @@
 pub_identity,monday,tuesday,wednesday,thursday,friday,saturday,sunday
 efcf3870-da4d-4a44-9c1b-3d5be38edeaa,no events,no events,no events,no events,no events,no events,no events
 fd1f6053-8868-419a-a445-fd24a21e8b99,no events,no events,no events,no events,no events,no events,no events
-0027d4bf-8c57-473e-aa7e-33a3b1b1d95b,no events,no events,no events,7.30pm quiz,no events,no events,no events
+0027d4bf-8c57-473e-aa7e-33a3b1b1d95b,no events,no events,no events,Quiz 7.30pm,no events,no events,no events
 00578cd5-83ea-4e42-941e-347298312015,no events,no events,no events,no events,no events,no events,no events
 0070a010-95c5-494b-878f-47bcae4be933,no events,no events,no events,no events,no events,no events,Closed
 008849b1-87fd-4453-90f8-9b0089e78063,Ukelele jamming,Irish music,no events,Live piano,no events,no events,Live folk music
 013c54a0-e7d1-4da6-bce1-995d7be626c9,no events,no events,no events,no events,no events,no events,no events
-01e4fc21-05fd-4289-aa17-8b6f1ecbaff1,8pm quiz,no events,no events,no events,no events,no events,no events
-0252299e-ca2a-4dad-941f-c48bd96d99b6,no events,7.30pm quiz,no events,no events,no events,no events,no events
+01e4fc21-05fd-4289-aa17-8b6f1ecbaff1,Quiz 8pm,no events,no events,no events,no events,no events,no events
+0252299e-ca2a-4dad-941f-c48bd96d99b6,no events,Quiz 7.30pm,no events,no events,no events,no events,no events
 027f706e-bd89-4b8e-861e-c9b0f3c21779,Live jazz music brunch,Live jazz music brunch,Live jazz music brunch,Live jazz music brunch,Live jazz music brunch,Live jazz music brunch,no events
 02a020c2-6a22-426a-87ec-06d7b7be54ad,no events,no events,no events,no events,no events,no events,no events
-02d0238e-4c9e-4b8b-a3d7-75932572cd2b,8pm quiz,no events,no events,no events,11pm live music,11pm live music,no events
+02d0238e-4c9e-4b8b-a3d7-75932572cd2b,Quiz 8pm,no events,no events,no events,11pm live music,11pm live music,no events
 030c2476-0498-4cdf-8368-5a55a1e8f902,Closed,Closed,Closed,no events,Live music,no events,Live music
-034f929e-3ec9-4e3d-b7aa-ecaf4ecab4a7,no events,no events,7pm quiz,no events,no events,no events,no events
+034f929e-3ec9-4e3d-b7aa-ecaf4ecab4a7,no events,no events,Quiz 7pm,no events,no events,no events,no events
 03720287-a239-42f8-9919-ba66747271b4,no events,no events,no events,no events,no events,no events,no events
 038b9ae5-c670-4797-ae52-571c8eea95f1,Closed,no events,no events,no events,no events,no events,Closed
 039eff8c-6227-49b2-be8a-36126274addf,no events,no events,no events,Quiz 8pm,no events,no events,no events
-04738700-75a2-4d5c-864d-de41c81995db,no events,7pm quiz,no events,no events,no events,no events,live jazz
+04738700-75a2-4d5c-864d-de41c81995db,no events,Quiz 7pm,no events,no events,no events,no events,live jazz
 04972c65-d348-4b94-b7c4-d22f6ae9578b,no events,no events,no events,no events,no events,no events,no events
 04ea139a-05b9-42ee-8bd0-3f3271c750e1,Bingo,no events,no events,no events,no events,no events,no events
 05493a89-5d8f-407c-b5ca-d269f6d5af55,no events,no events,no events,no events,no events,Brunch at noon,no events
 059d6c74-dbe3-4b7b-96cf-baa93595976c,no events,no events,no events,no events,no events,no events,no events
 05f4d08e-e2cc-4597-9964-96bc3fd9c799,Closed,no events,no events,no events,no events,Live music,no events
-060e9c82-2b9f-4547-bd1e-eb313934bc6b,no events,no events,no events,7.30pm quiz,no events,no events,no events
+060e9c82-2b9f-4547-bd1e-eb313934bc6b,no events,no events,no events,Quiz 7.30pm,no events,no events,no events
 068816e9-c598-43e3-a324-2e79bbdbe25f,no events,no events,no events,no events,no events,no events,no events
-06d84519-d68f-4037-a943-fb10361b023d,no events,no events,8pm quiz,no events,no events,no events,no events
+06d84519-d68f-4037-a943-fb10361b023d,no events,no events,Quiz 8pm,no events,no events,no events,no events
 06e2e2ca-8d55-41ac-bf73-855d9019d6f1,Closed,Closed,no events,no events,no events,no events,no events
 06f154c0-d04f-45a7-9c9b-2832b779a411,no events,no events,no events,no events,no events,no events,no events
-0748c729-9d48-488a-b224-f6bcec262442,no events,8pm quiz,no events,no events,no events,no events,no events
+0748c729-9d48-488a-b224-f6bcec262442,no events,Quiz 8pm,no events,no events,no events,no events,no events
 0749dc1d-64cb-4c59-b900-82481ccb3fc4,no events,no events,no events,no events,no events,no events,no events
 07880a7e-e71d-474e-9919-a5d0401ffd8b,no events,no events,no events,no events,no events,no events,no events
 0789f736-9172-4748-8736-6d71f3d9b4e4,no events,no events,no events,no events,no events,no events,no events
@@ -38,9 +38,9 @@ fd1f6053-8868-419a-a445-fd24a21e8b99,no events,no events,no events,no events,no 
 08d5404b-ae5c-4e66-b7d3-b3b50958895e,no events,no events,no events,no events,no events,no events,no events
 096d7663-cbd1-446f-8c85-6760d22b7599,no events,no events,no events,no events,no events,no events,no events
 09e133c1-5f81-4792-bbad-8cb3e30d75f7,Closed,no events,no events,no events,no events,no events,no events
-0a0b64ce-badb-49b7-b4e6-2a725d564598,no events,board games,no events,no events,DJs,DJs,8pm quiz
+0a0b64ce-badb-49b7-b4e6-2a725d564598,no events,board games,no events,no events,DJs,DJs,Quiz 8pm
 0a1f8e69-4020-4dad-8a4a-a3925e7d03ce,no events,no events,no events,no events,no events,no events,no events
-0a8a43f0-000e-4a88-9874-d13926e71eed,no events,no events,no events,7.30pm quiz,no events,no events,no events
+0a8a43f0-000e-4a88-9874-d13926e71eed,no events,no events,no events,Quiz 7.30pm,no events,no events,no events
 0b077dca-28af-4973-88c4-39ffe0b4f2cf,no events,no events,no events,no events,no events,no events,no events
 0b1ef52c-4497-4de4-b606-305b2ee1911e,no events,no events,quiz,no events,no events,live music,no events
 0b938518-efd3-47e3-bdc8-5c276cf701ef,no events,no events,no events,no events,no events,no events,no events
@@ -49,7 +49,7 @@ fd1f6053-8868-419a-a445-fd24a21e8b99,no events,no events,no events,no events,no 
 0c448145-6d59-4bd8-abe8-ab0327021ea6,no events,no events,no events,no events,no events,no events,no events
 0d0566ca-beb3-41be-8a22-5415fcf79d43,no events,Comedy,no events,no events,no events,Comedy,Comedy
 0d2fa8e4-7e01-405e-91be-f59cfbd35277,TBC,TBC,TBC,TBC,TBC,TBC,TBC
-0d4dd558-590d-4046-a40d-87b1475fb44a,no events,7.30pm quiz,no events,no events,no events,no events,no events
+0d4dd558-590d-4046-a40d-87b1475fb44a,no events,Quiz 7.30pm,no events,no events,no events,no events,no events
 0f215e66-e989-484c-a456-e2c06e807d29,no events,no events,no events,no events,no events,no events,no events
 0f579ca8-06f4-427a-ab4d-ae685bc3a473,no events,no events,no events,no events,no events,no events,no events
 0f955e0b-e77a-4a59-8c8d-3297abca1313,no events,quiz,no events,no events,no events,no events,live music
@@ -65,24 +65,24 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 11e6a9b3-c9bb-4074-99b3-ac719ffcd1ff,Closed,no events,no events,no events,no events,no events,no events
 1271097e-084d-4fe9-a4fa-753df9ad1268,no events,no events,no events,no events,no events,no events,no events
 128ebbec-59a4-431c-9473-fc011f0210ca,no events,no events,no events,no events,no events,no events,no events
-12a39cf2-449c-4e3e-b7ca-40622cf386aa,no events,7.30pm quiz,no events,no events,no events,no events,no events
+12a39cf2-449c-4e3e-b7ca-40622cf386aa,no events,Quiz 7.30pm,no events,no events,no events,no events,no events
 12b05c98-b08f-4df2-850e-76180a358f48,no events,no events,no events,Steak night,no events,no events,no events
 1305f2b9-18f3-4e05-964c-000407d6dc88,no events,no events,no events,no events,no events,no events,no events
-13177ee7-67ff-42b4-8bd1-4c1f7a91598f,comedy,no events,8pm quiz,no events,no events,no events,no events
+13177ee7-67ff-42b4-8bd1-4c1f7a91598f,comedy,no events,Quiz 8pm,no events,no events,no events,no events
 132ae07c-5a77-4646-b439-efb23e4ae3cf,no events,no events,no events,no events,no events,no events,no events
 1342830d-e087-49e6-8266-71ea278355b2,no events,no events,no events,no events,no events,no events,no events
 139bde09-27ac-4b94-a94e-9a030fffa1a8,no events,no events,no events,no events,no events,no events,no events
 13fb6723-9762-460f-95e1-0da7c5a12f52,no events,no events,no events,no events,no events,no events,no events
 1403808e-3733-4107-bb1b-9ec444a34484,no events,no events,no events,no events,no events,no events,no events
 143ea7fa-72e7-47a9-b034-8f95a5465e62,no events,no events,no events,no events,no events,no events,quiz
-144c41db-e6f0-4b3f-b6d1-5b6b5b2e5fcb,no events,no events,no events,7.30pm quiz,no events,no events,no events
+144c41db-e6f0-4b3f-b6d1-5b6b5b2e5fcb,no events,no events,no events,Quiz 7.30pm,no events,no events,no events
 1496934f-16e7-4848-b686-504957119989,no events,no events,no events,Live music,Live music,Live music,no events
 14ca1c76-ccbf-48b7-aa3f-d0276cb0e0dd,no events,no events,no events,no events,no events,no events,no events
 1524dcfa-ec35-4518-8373-45b6a1d702c8,no events,no events,no events,no events,no events,no events,no events
 152d53a2-07ed-4b5b-8cc4-ef9ab45c57e3,no events,no events,no events,no events,no events,no events,no events
 15ea92fa-f9d6-43b6-b2aa-3d58139d18fe,no events,no events,no events,no events,no events,no events,Closed
 1605a183-1c79-44a6-905a-aab6d109bfbf,Closed,Closed,no events,no events,no events,no events,no events
-162dd12d-330c-429f-a3e1-12661ebfb5c7,no events,no events,8.30pm quiz,no events,no events,no events,no events
+162dd12d-330c-429f-a3e1-12661ebfb5c7,no events,no events,Quiz 8.30pm,no events,no events,no events,no events
 169e21f6-c32f-4ad6-862c-db0712ee1fb0,no events,no events,no events,no events,no events,no events,no events
 16f76f29-ae95-49a7-8591-27ab87dd1bf4,no events,no events,no events,no events,no events,no events,no events
 17168dd2-1b21-4175-a60f-ae9324c45d2c,no events,no events,no events,no events,no events,no events,no events
@@ -91,7 +91,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 180f2d7c-ac08-4db1-88a7-ffb8f4d0029d,no events,no events,no events,no events,no events,no events,no events
 182940a3-51d2-4bf5-aa13-e4d5e3770660,no events,no events,no events,no events,no events,no events,no events
 19058774-95fa-44a4-9dc3-ba8c1bf54c5e,no events,no events,no events,no events,no events,no events,no events
-1add98b7-8cca-4c6e-9a8a-a35e3b4e41ec,8.30pm quiz,no events,no events,no events,no events,no events,no events
+1add98b7-8cca-4c6e-9a8a-a35e3b4e41ec,Quiz 8.30pm,no events,no events,no events,no events,no events,no events
 1b258b22-a853-4d64-947e-5ef4ade978be,no events,no events,no events,no events,no events,no events,no events
 1b463e1c-9190-4275-a39c-d694eb42d636,no events,no events,no events,no events,no events,no events,Closed
 1b4ccd05-d381-4acd-9a01-5001e177af45,no events,no events,no events,no events,no events,no events,no events
@@ -105,7 +105,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 1f0559e7-d494-4404-8d53-e093ba2091b6,Closed,no events,no events,no events,no events,no events,Live music
 1fe108f3-ae4e-4182-b744-b04fe60c2e5c,no events,no events,no events,no events,no events,no events,no events
 20206090-61e3-4258-9023-955f54ed7ebc,no events,no events,no events,no events,no events,no events,no events
-20a2785f-94a0-474f-ac6b-284bd9366bf7,no events,no events,7.30pm quiz,bingo,no events,no events,no events
+20a2785f-94a0-474f-ac6b-284bd9366bf7,no events,no events,Quiz 7.30pm,bingo,no events,no events,no events
 2126582f-d4b3-44d2-afe2-5bed8420088a,no events,no events,no events,no events,no events,no events,no events
 2187101a-c4ba-4e73-abba-01f094808673,no events,no events,no events,no events,no events,no events,no events
 21ba3669-2407-4fa3-928f-3ab6943c4917,no events,no events,no events,no events,no events,no events,no events
@@ -113,7 +113,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 225ccf9c-41d4-4a1d-8316-a50397a1776f,no events,no events,no events,no events,no events,no events,no events
 22646d9c-ddb7-4170-86d6-d54993e70a20,Closed,no events,no events,no events,no events,no events,no events
 22a054c1-2fa8-43e4-8e8b-d871ef06775e,no events,no events,no events,no events,no events,no events,no events
-23a49eca-7ba3-4e8e-acc1-24a6ef5bb145,no events,no events,7.30pm quiz,no events,no events,no events,no events
+23a49eca-7ba3-4e8e-acc1-24a6ef5bb145,no events,no events,Quiz 7.30pm,no events,no events,no events,no events
 24011888-8956-4721-bd31-16e25befa503,no events,no events,no events,no events,no events,no events,no events
 24f5f284-5c7b-41cf-bcec-56e7db601464,no events,no events,quiz,no events,no events,no events,no events
 24f986b5-187e-42fc-b67e-0727cdea5e21,no events,no events,no events,no events,no events,no events,no events
@@ -132,41 +132,41 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 2adfb24e-f964-4a76-8c4f-799f7c704096,no events,no events,no events,no events,no events,no events,Open mic nightc
 2b58e4be-e0f8-492d-9637-6faa0ca4f6fc,no events,no events,no events,no events,no events,no events,no events
 2b918e0e-447b-4939-97ae-023c542b46d2,no events,no events,no events,no events,no events,no events,no events
-2b99f168-e63b-445e-a7dc-7f8bf76da331,no events,no events,no events,no events,no events,no events,7pm quiz
+2b99f168-e63b-445e-a7dc-7f8bf76da331,no events,no events,no events,no events,no events,no events,Quiz 7pm
 2be39d69-a818-4c2d-9b58-bec09e585032,no events,no events,no events,no events,no events,no events,no events
 2c42f683-4123-446b-8d5e-53abbe613dcf,no events,no events,no events,no events,no events,no events,no events
 2c9b2177-cd36-4de3-9604-52e27b68e587,no events,no events,no events,no events,no events,no events,no events
-2cd9035f-af04-41dd-b63c-f47b75c90a8f,no events,no events,7.30pm quiz,no events,no events,no events,no events
-2dbf12b8-120a-46fd-ab1a-d1bb0a6ea778,no events,no events,no events,no events,no events,no events,7.30pm quiz
+2cd9035f-af04-41dd-b63c-f47b75c90a8f,no events,no events,Quiz 7.30pm,no events,no events,no events,no events
+2dbf12b8-120a-46fd-ab1a-d1bb0a6ea778,no events,no events,no events,no events,no events,no events,Quiz 7.30pm
 2dc38644-2fce-446f-a813-a2ba3e18eedf,no events,no events,no events,no events,no events,no events,no events
 2e0207c5-32bf-4556-a37e-955b214d8757,no events,no events,no events,no events,no events,no events,no events
 2e161f42-7d5a-4ff5-80c9-daa6f53f61c8,no events,no events,no events,no events,no events,no events,no events
 2e367eb2-c546-4db2-b71c-c3446b63889f,no events,no events,no events,no events,no events,no events,no events
-2ee54ca1-e1cf-4d1f-bc86-89c2136cbeae,no events,8pm quiz,no events,no events,no events,no events,no events
+2ee54ca1-e1cf-4d1f-bc86-89c2136cbeae,no events,Quiz 8pm,no events,no events,no events,no events,no events
 2ee6f921-269c-4977-a1d9-f59d1efb3871,no events,no events,no events,no events,no events,no events,no events
 2f149ce3-29c5-4f29-b3cc-de9f72f917b3,no events,no events,no events,no events,no events,no events,no events
 2fe38cf3-b1e4-4dcf-9c57-dfd3b99604b2,TBC,TBC,TBC,TBC,TBC,TBC,TBC
 30076bbc-f118-4716-a74c-156b7ec256a5,quiz,no events,live music and DJs,live music and DJs,live music and DJs,live music and DJs,live music and DJs
 3058f233-ea9e-4eb7-98cb-68dda69d344d,no events,1st tuesday of month quiz,no events,no events,no events,no events,no events
 30f4c88f-c2da-49ec-9671-a7e2c7cfda2e,no events,no events,no events,no events,no events,no events,no events
-31578bef-e1d2-4852-a548-beda55ab792c,7.30pm quiz,board games,7pm live folk music,no events,no events,no events,no events
-31661734-bb83-4bf4-8c68-0b7afd4f8d48,no events,no events,no events,7.30pm quiz,no events,no events,no events
+31578bef-e1d2-4852-a548-beda55ab792c,Quiz 7.30pm,board games,7pm live folk music,no events,no events,no events,no events
+31661734-bb83-4bf4-8c68-0b7afd4f8d48,no events,no events,no events,Quiz 7.30pm,no events,no events,no events
 31de6bf0-9819-4cad-81fc-6d787312acc3,no events,no events,no events,no events,no events,no events,no events
-3227e6fa-c80b-44d7-abb9-2b8c5d9dc817,no events,7.30pm quiz,no events,no events,no events,no events,no events
+3227e6fa-c80b-44d7-abb9-2b8c5d9dc817,no events,Quiz 7.30pm,no events,no events,no events,no events,no events
 32930f07-b607-4816-a44e-56538f01ca60,no events,no events,no events,no events,no events,no events,no events
 32a17618-9e23-450c-b921-a6bab0dfdd6f,no events,no events,no events,no events,no events,no events,no events
 32db5c41-cb6f-4836-8db1-aa6824536274,no events,no events,no events,no events,no events,no events,no events
 33a2aa89-d62a-4962-9655-e21e1ddb2348,no events,no events,no events,no events,no events,no events,no events
 33e2d423-03c7-4afa-af3f-8cc716675346,no events,no events,no events,no events,no events,no events,no events
 33ed0695-3eaa-46b5-9edf-29531eb2952d,no events,no events,no events,no events,no events,no events,no events
-34309755-2f23-4ca1-9364-121e9c9c13cb,no events,no events,no events,no events,no events,no events,7pm quiz
+34309755-2f23-4ca1-9364-121e9c9c13cb,no events,no events,no events,no events,no events,no events,Quiz 7pm
 345fea34-709f-4da4-b05b-531340ceca92,TBC,TBC,TBC,TBC,TBC,TBC,TBC
 348549ff-4830-4c4f-906f-90a84e1cfb96,no events,no events,no events,no events,no events,no events,no events
 34884411-b1fd-4746-9d3d-790d803464ed,no events,no events,no events,no events,no events,no events,no events
 34cf8a86-8ad8-4a9a-b8ca-0569b43de2db,no events,no events,no events,no events,no events,no events,no events
-350d77be-b4c5-4984-ab2f-6d2de41415e0,7.30pm quiz,no events,no events,no events,no events,no events,no events
+350d77be-b4c5-4984-ab2f-6d2de41415e0,Quiz 7.30pm,no events,no events,no events,no events,no events,no events
 35562c4e-3c2f-4a4f-add6-e8c7f407bcf9,no events,no events,no events,no events,no events,no events,no events
-35ce64f3-76a5-4b65-a8a8-88324cbb95a0,no events,8.30pm quiz,no events,Live music,no events,Live music,Live music
+35ce64f3-76a5-4b65-a8a8-88324cbb95a0,no events,Quiz 8.30pm,no events,Live music,no events,Live music,Live music
 365a5ea5-03c6-4caa-8424-7a33339d0642,no events,no events,no events,Live jazz music,no events,no events,no events
 36f830c1-9a7a-481a-a77e-18c2d9ee15ac,no events,Poker night,Darts competition,no events,Karaoke,no events,Games night
 376cd451-32f0-4895-8f0e-ce61fb413b6d,Quiz 9pm,no events,no events,no events,no events,no events,no events
@@ -187,7 +187,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 3b57f89c-3f4b-4557-8410-ddaa82637220,Closed,Closed,Closed,Closed,Live music & DJs,Live music & DJs,Closed
 3b8f956e-0a9a-4a8e-9a30-afb90e73eae8,no events,no events,no events,no events,no events,no events,no events
 3be7b977-74f7-4aac-ac24-387e4eeafb4f,no events,no events,no events,no events,no events,no events,no events
-3c0e13d2-57f5-4e20-85da-8c49873b9224,no events,7pm quiz,no events,no events,free beer,no events,dog day
+3c0e13d2-57f5-4e20-85da-8c49873b9224,no events,Quiz 7pm,no events,no events,free beer,no events,dog day
 3c5d3d3d-05d0-415e-8b19-9229f77932b1,no events,Quiz,no events,no events,no events,no events,no events
 3c88a054-9473-4368-b392-af38c73e9797,no events,no events,no events,no events,no events,no events,no events
 3caa5c02-ee38-4a1d-9c2b-39bfcae80981,,,,,,,
@@ -251,15 +251,15 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 51735582-57d4-4609-9d86-1cda1d9e0e9a,Closed,Live music,no events,no events,Drag bingo,Closed,Closed
 5195d970-0ad2-4437-84a1-6cf4c3724f8e,no events,no events,no events,no events,no events,no events,no events
 51e49abc-e21e-4865-8a49-304f8babc3de,no events,no events,no events,no events,no events,no events,no events
-525a8c71-6eb6-422a-870c-2f66d5d65808,no events,no events,no events,no events,no events,no events,7.30pm quiz
+525a8c71-6eb6-422a-870c-2f66d5d65808,no events,no events,no events,no events,no events,no events,Quiz 7.30pm
 526bc553-5443-4d0c-a0b5-99ac6117857b,no events,no events,no events,no events,no events,no events,no events
 528783f6-5ba8-4207-9de5-ba7bcfa50cae,no events,no events,no events,no events,no events,no events,no events
 52af26bd-dc00-4812-8766-f2e791d62a50,no events,no events,no events,no events,no events,no events,no events
 53314102-b77d-423c-bd03-6deb04941105,no events,no events,no events,no events,no events,no events,no events
 537c84a3-b54b-488e-9f55-652409df94b0,no events,no events,no events,no events,no events,no events,no events
-540826ee-31c9-4644-bbbd-b3ef0d47b08b,no events,8pm quiz,no events,no events,no events,no events,no events
+540826ee-31c9-4644-bbbd-b3ef0d47b08b,no events,Quiz 8pm,no events,no events,no events,no events,no events
 542030c6-7749-45ca-8705-44a741296f1e,no events,no events,no events,no events,no events,no events,no events
-54de95e5-16b1-48a3-b00b-7f53c85a0745,no events,no events,no events,no events,no events,no events,7pm quiz
+54de95e5-16b1-48a3-b00b-7f53c85a0745,no events,no events,no events,no events,no events,no events,Quiz 7pm
 55160e29-789d-4ec1-ae2c-07ae7dd30194,no events,no events,no events,no events,no events,no events,no events
 554bc650-de83-4db6-ad33-e74e8950d1e4,Board games,no events,no events,no events,no events,no events,no events
 556a9b24-a44a-4136-8f14-2b963e276d15,TBC,TBC,TBC,TBC,TBC,TBC,TBC
@@ -298,7 +298,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 5e4874a1-4ac4-426d-92da-51c761d527cb,no events,no events,no events,no events,no events,no events,no events
 5e4d6137-ef10-4c8b-ae38-aeceaa89dc59,no events,no events,no events,no events,no events,no events,no events
 5e6c0404-de66-4167-8f0c-63779e77f5e6,no events,no events,no events,no events,no events,no events,no events
-5e775625-fe5c-49b8-9648-d9f7929eb241,no events,no events,no events,no events,no events,no events,7pm quiz
+5e775625-fe5c-49b8-9648-d9f7929eb241,no events,no events,no events,no events,no events,no events,Quiz 7pm
 5ecb233a-4a34-4013-ba6b-be9131cf4587,no events,no events,no events,no events,no events,no events,no events
 5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,Comedy,Comedy,Comedy,Comedy,Comedy,Comedy,no events
 5f2a04c4-4825-44b1-a0f6-fdd99fed8df2,no events,no events,no events,no events,no events,no events,no events
@@ -373,7 +373,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 77b9faed-deb3-45be-b880-9d6ca3727a53,no events,Quiz 7.30pm,no events,no events,no events,no events,no events
 77e33190-8e85-464c-8b0a-c0e4412ca130,no events,no events,no events,no events,no events,no events,no events
 780320eb-cec1-4f3c-a538-c357426b7aa3,no events,no events,no events,no events,no events,no events,no events
-781b0d4c-788a-4bcb-8cec-c4384c566b57,8pm quiz,no events,no events,no events,no events,Live music,Live music
+781b0d4c-788a-4bcb-8cec-c4384c566b57,Quiz 8pm,no events,no events,no events,no events,Live music,Live music
 78295944-cac8-4b2c-b9cb-0a439fef22b2,Comedy 7pm,Quiz,no events,no events,Live music,no events,no events
 7845221c-b025-44fd-a07c-894ef7c42cf2,no events,no events,no events,no events,no events,no events,no events
 78684f18-9f18-40ec-8737-2c89671fd73a,no events,no events,no events,no events,no events,no events,Closed
@@ -395,7 +395,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,no events,no events,no events,no events,no events,no events,no events
 7eb2bc28-8b0c-4409-be4a-13cd97394d9b,no events,no events,no events,no events,no events,no events,no events
 7ed3290f-bf8c-4f62-af6e-0e17a7cfa872,no events,no events,no events,no events,no events,no events,no events
-7edc3e66-7f68-4a09-a085-5bf2b778831c,no events,7pm quiz,no events,no events,no events,Dinner with DJs,Dinner with DJs
+7edc3e66-7f68-4a09-a085-5bf2b778831c,no events,Quiz 7pm,no events,no events,no events,Dinner with DJs,Dinner with DJs
 7fee2378-ec80-4632-8309-b6dd60094fd8,Comedy,Comedy,Comedy,no events,no events,no events,no events
 80639f64-eda8-42d2-9710-8b3778d23b1c,no events,no events,no events,no events,no events,no events,no events
 80aeb850-5686-44ac-8e1b-424ef9cea747,no events,no events,no events,no events,no events,no events,no events
@@ -409,7 +409,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 85734c01-6261-4784-b024-637b12b8d4f4,no events,no events,no events,no events,no events,no events,no events
 859eb4d9-ba6e-43d6-b14b-275cf2a0b5ad,Closed,no events,no events,no events,no events,no events,no events
 85c71873-b209-4b30-a592-5054413b6d84,Closed,Closed,no events,no events,no events,no events,Closed
-85f36fdf-63f5-4b98-ad76-21b2ba5ef8dd,no events,no events,no events,no events,DJs,Live music,7.30pm quiz
+85f36fdf-63f5-4b98-ad76-21b2ba5ef8dd,no events,no events,no events,no events,DJs,Live music,Quiz 7.30pm
 861aa935-2abd-4e2f-8ae9-a66b046e75c9,no events,no events,no events,no events,no events,no events,no events
 863b8b33-da71-4a22-a68f-4a676e39cfbe,no events,no events,no events,1st Thursday of the month quiz,Disco,Disco,8pm live jazz
 8667fb3f-bfb6-4985-b33a-dbb9a5137a47,no events,no events,no events,no events,no events,no events,no events
@@ -482,7 +482,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 9a568f0a-5ac4-4223-ac0f-aa40b9e80213,no events,no events,no events,no events,no events,no events,no events
 9a80a623-9382-462c-babf-009110a1d804,no events,no events,no events,no events,no events,no events,no events
 9b12f0b5-d10c-4d43-8f44-b5601fa510be,no events,no events,no events,no events,no events,no events,no events
-9b132499-96eb-417c-af3d-9f364172ef33,no events,8.30pm quiz,no events,no events,Live music,Live music,Live music
+9b132499-96eb-417c-af3d-9f364172ef33,no events,Quiz 8.30pm,no events,no events,Live music,Live music,Live music
 9b2e6647-660e-43d8-9e27-a5f06b0ddb54,no events,Board games,no events,no events,no events,no events,no events
 9b5c6aa8-437d-4ea5-8464-315a27f9d6a8,no events,no events,no events,no events,no events,no events,no events
 9b7c0aba-1eb5-4006-887b-d7903b0a566d,no events,no events,no events,no events,no events,no events,no events
@@ -491,7 +491,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 9c740bf3-dcaa-41e7-8783-c1658f369c19,no events,no events,no events,no events,no events,no events,no events
 9c8bcfc9-5b8e-40a1-9772-86dcb8eac3da,no events,no events,no events,no events,no events,no events,no events
 9c93bcb5-03c4-4b75-9138-70659d32544b,no events,no events,no events,no events,no events,no events,no events
-9cbd4a94-74c1-4848-a59d-26bf708c61db,no events,no events,no events,no events,no events,no events,7pm quiz
+9cbd4a94-74c1-4848-a59d-26bf708c61db,no events,no events,no events,no events,no events,no events,Quiz 7pm
 9cc8f7a4-28c9-4e3e-9a03-b2d78ab4f09f,no events,no events,no events,no events,no events,no events,no events
 9cd250f7-f340-4f1b-a8bd-452d2489fdc7,no events,no events,no events,no events,no events,no events,no events
 9cfa8cef-6b6d-4908-8a49-26dc32ae9cc0,no events,no events,no events,no events,no events,no events,no events
@@ -499,7 +499,7 @@ f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,no events,no events,no events,no events,no 
 9d834e48-f83d-4419-9899-e4b3b9a3dc69,no events,no events,no events,no events,no events,no events,no events
 9db877d6-295c-4dd5-a43d-542c3d5be25e,no events,no events,no events,no events,no events,no events,no events
 9dca8f6b-f963-4d79-979b-d468162ed14b,no events,no events,no events,no events,no events,no events,no events
-9e6a558a-b9ba-49c4-ab9b-a15419070fde,no events,no events,no events,no events,no events,no events,7pm quiz
+9e6a558a-b9ba-49c4-ab9b-a15419070fde,no events,no events,no events,no events,no events,no events,Quiz 7pm
 9e9a798f-92a8-4846-9d34-e04ab3e820d5,no events,no events,no events,no events,no events,no events,no events
 9ec7097c-39ac-42b0-8135-3817ce8b581f,no events,no events,no events,no events,no events,no events,no events
 9ed0b369-18f3-45e5-b53e-028a2747cfa8,no events,no events,no events,no events,no events,no events,no events
@@ -553,15 +553,15 @@ b088ce95-c5f2-4afe-a1d4-9245e5690ac6,no events,no events,no events,no events,no 
 b0d3a863-f1fa-4d58-9936-c09995a3c636,TBC,TBC,TBC,TBC,TBC,TBC,TBC
 b20e073f-f317-40d8-9bfc-6b873e64ed9d,no events,no events,no events,no events,no events,no events,Closed
 b22a8a03-1b58-4aba-b2c8-1098315cfeda,no events,no events,no events,no events,no events,no events,no events
-b29eb1ff-292d-425a-bdca-d017c819f7f8,no events,no events,no events,no events,no events,no events,8pm quiz
+b29eb1ff-292d-425a-bdca-d017c819f7f8,no events,no events,no events,no events,no events,no events,Quiz 8pm
 b2d52630-79bf-457d-98f8-e7bf1de62b39,no events,no events,no events,no events,no events,no events,no events
-b3535775-8013-4c4e-b5ff-a83d05668a2c,no events,no events,no events,Open mic night,no events,Live music,7pm quiz
+b3535775-8013-4c4e-b5ff-a83d05668a2c,no events,no events,no events,Open mic night,no events,Live music,Quiz 7pm
 b38678b1-85a6-418e-8741-4957ee3f7f5c,Closed,Closed,no events,no events,no events,no events,no events
 b45e6e65-2243-42a6-870f-e94cc00e0c19,no events,no events,no events,no events,no events,no events,no events
 b47419d0-3ac1-4cce-b89c-d8ff486c24eb,no events,no events,no events,no events,no events,no events,no events
 b4bfcf5b-a2f7-4a22-ba3d-6acacb40d59a,no events,no events,no events,no events,no events,no events,no events
 b4c949fd-a94d-49e1-997e-659ac70f6081,no events,no events,no events,no events,no events,no events,no events
-b5a20b56-13dc-4707-a4b2-f381927d863b,no events,no events,no events,no events,no events,no events,7pm quiz
+b5a20b56-13dc-4707-a4b2-f381927d863b,no events,no events,no events,no events,no events,no events,Quiz 7pm
 b5a2c34a-55bc-4845-8a76-6e98db66aaf8,no events,no events,no events,no events,no events,no events,no events
 b6547495-27e9-4562-9b13-89d0be8007c0,no events,no events,no events,no events,no events,no events,no events
 b661c685-8e84-46d3-8c88-4bebf01edacb,no events,no events,Quiz 7.30pm,no events,no events,no events,no events
@@ -585,7 +585,7 @@ bb7965da-eb3b-4807-a947-5f3291f4a4af,no events,no events,no events,no events,no 
 bc32e738-6d62-4be7-bf42-a447723bf076,no events,no events,no events,no events,no events,no events,no events
 bcb5569d-e16c-4959-985e-0e52ab7d293f,Quiz 7.45pm,no events,no events,no events,no events,no events,no events
 bcc7baad-dc82-445e-9fd1-8016f441f5a1,no events,no events,no events,no events,no events,no events,no events
-bd3d76b8-8795-4321-85f9-39a8397e5fdb,no events,no events,no events,no events,no events,no events,7pm quiz
+bd3d76b8-8795-4321-85f9-39a8397e5fdb,no events,no events,no events,no events,no events,no events,Quiz 7pm
 bd3e47c7-f76a-4998-9bbd-167e68d1ee42,no events,no events,no events,no events,no events,no events,no events
 bd91ccd3-b983-4477-a300-f8916dc45c1d,no events,no events,no events,no events,no events,no events,no events
 be392cbb-c520-4bf8-b2bc-af0185a610e1,Quiz 7pm,no events,no events,no events,no events,no events,no events
@@ -600,7 +600,7 @@ bedb5f88-f233-497d-8e1c-f8e553a47d67,no events,no events,no events,no events,no 
 bf525a4f-4c2f-42cb-9ecd-1513e1decf68,no events,Pottery,no events,no events,no events,no events,Live music
 bf961439-ab47-47bc-a3f0-b1aba8ffaa4f,no events,no events,no events,no events,no events,no events,no events
 bfbc7812-741b-443c-b9d7-a737434aee94,no events,no events,no events,no events,no events,no events,no events
-bfe9cb5f-28a3-45b0-94dd-9e0a55860a1e,no events,Open mic night,no events,no events,no events,no events,8pm quiz
+bfe9cb5f-28a3-45b0-94dd-9e0a55860a1e,no events,Open mic night,no events,no events,no events,no events,Quiz 8pm
 bffe873c-6ab4-44b2-9dbe-7711388e05eb,no events,no events,no events,no events,no events,no events,no events
 c00317f7-3f5a-4b01-9f11-4833c28b0d2a,no events,no events,no events,no events,no events,no events,no events
 c0120f51-ab4c-476d-bd91-4d5f246e9074,Closed,Closed,no events,no events,no events,no events,Closed
@@ -621,10 +621,10 @@ c5ec367b-daee-471d-9d22-052771185713,no events,no events,no events,no events,no 
 c650c468-2d0a-4c47-910c-131f0ad077e9,no events,no events,Live jazz music 9.30pm,Live jazz music 9.30pm,no events,no events,no events
 c6593047-e70c-4bd2-a82e-c0ed8f250269,no events,no events,no events,no events,no events,no events,no events
 c6a3924f-4677-41aa-8abb-b6f330655602,no events,no events,no events,no events,no events,no events,no events
-c6dc0911-17ad-48e9-8574-4aa107f434c4,no events,8pm poker,no events,8.30pm quiz,no events,no events,Live music
+c6dc0911-17ad-48e9-8574-4aa107f434c4,no events,8pm poker,no events,Quiz 8.30pm,no events,no events,Live music
 c7223326-661e-49ed-a0b2-da5bd4758508,no events,no events,no events,no events,no events,no events,no events
 c73c73e4-aefa-48fd-aaa7-c2abdae3aaf5,no events,no events,Quiz 8pm,no events,no events,no events,no events
-c7e41c6b-81d4-411c-b051-3447583813fe,no events,no events,8pm quiz,Live music,no events,no events,Live jazz
+c7e41c6b-81d4-411c-b051-3447583813fe,no events,no events,Quiz 8pm,Live music,no events,no events,Live jazz
 c842ceb4-a74b-43d4-8441-3adbbd4daf8d,no events,Games night,Quiz,no events,Live music,Live music,no events
 c850db37-4d0b-41de-8e41-eb3f812a2e4b,no events,no events,no events,no events,no events,no events,no events
 c85d9111-5376-444d-aadd-6959fe11f72d,no events,no events,no events,no events,no events,Live music,no events
@@ -634,7 +634,7 @@ c94d0f45-43a1-4653-9c13-3ccd1c5945f1,no events,no events,no events,no events,no 
 c966c188-cb5e-4d6f-9e1a-c6e73f8dfbc5,no events,no events,no events,no events,no events,no events,no events
 c997af44-8b84-43df-b0d4-91a4479649ca,no events,Quiz night,no events,no events,no events,no events,no events
 c9a47e3c-2575-4575-a2c0-869a98cdfb6e,no events,no events,no events,no events,no events,no events,no events
-c9cb2f10-838b-400b-aaa9-a2a2a4defe64,no events,no events,8pm quiz,no events,no events,no events,Live jazz
+c9cb2f10-838b-400b-aaa9-a2a2a4defe64,no events,no events,Quiz 8pm,no events,no events,no events,Live jazz
 c9f7df01-abab-4555-a88e-26b323912bb7,Quiz 7.30pm,no events,no events,no events,no events,no events,no events
 cb8b3078-6cff-48dc-a629-5b562730874c,no events,no events,no events,no events,no events,no events,no events
 cb9c11de-61f1-4583-a8eb-4b7a9d89f912,no events,no events,no events,no events,no events,no events,no events
@@ -667,7 +667,7 @@ d272b768-d040-401f-b3e4-f6f70bce1896,no events,no events,no events,no events,no 
 d27344c5-c1f5-4d13-b79f-057b14a0a360,no events,no events,no events,no events,no events,no events,no events
 d324bef0-4d75-438b-8a2a-9be977c67942,no events,no events,Live jazz music 9.30pm,Live jazz music 9.30pm,no events,no events,no events
 d32da59a-43c2-4478-a9a0-70e724acc75a,no events,no events,no events,no events,Karaoke hire,Karaoke hire,no events
-d345a6b6-b95e-4f35-9cda-66e75badb7a9,Open mic night,no events,no events,Karaoke,Live music,Live music,8.30pm quiz
+d345a6b6-b95e-4f35-9cda-66e75badb7a9,Open mic night,no events,no events,Karaoke,Live music,Live music,Quiz 8.30pm
 d39aa0b0-e9c3-4146-9925-ca1c517d068a,no events,no events,no events,no events,no events,no events,no events
 d3a1324e-92ef-46d4-bcbe-5a616bfe8cee,no events,no events,no events,no events,no events,no events,no events
 d3b6ad54-f464-4c7c-ad22-703c699ae5ec,no events,Quiz 7.30pm,no events,no events,no events,no events,no events
@@ -677,9 +677,9 @@ d5337a02-d51d-448a-8cce-608673fffdfd,no events,no events,no events,no events,no 
 d5518e94-d024-4dec-a5ae-7ce30ef25743,no events,Quiz,no events,no events,no events,no events,no events
 d5cd1760-b22e-49e8-832e-6eb5cab180f3,no events,no events,no events,no events,no events,no events,no events
 d5ec18cc-ae6f-4138-a904-a0a68b98adf5,no events,Drag bingo last Tuesday of the month,no events,Quiz 8pm,no events,no events,no events
-d604559d-1c53-4314-b5d8-f8d24caf1c9d,no events,no events,no events,no events,no events,no events,8pm quiz
+d604559d-1c53-4314-b5d8-f8d24caf1c9d,no events,no events,no events,no events,no events,no events,Quiz 8pm
 d64e6319-ccb2-4ec1-a06a-e651ca038283,no events,no events,no events,no events,no events,no events,no events
-d6bce8f4-f1db-4b8b-8bcf-c12cb7581e81,Open mic night,no events,no events,no events,no events,no events,7.30pm quiz
+d6bce8f4-f1db-4b8b-8bcf-c12cb7581e81,Open mic night,no events,no events,no events,no events,no events,Quiz 7.30pm
 d6c545ff-cbe9-46d7-bfb5-bd8ec038dd3a,no events,no events,no events,no events,no events,no events,no events
 d7bbec93-b3c4-4e47-aba4-2edcb9598a21,no events,no events,no events,no events,no events,no events,no events
 d7dccf30-51e4-4766-b25f-34b4eec401c7,no events,no events,no events,no events,no events,no events,no events
@@ -689,7 +689,7 @@ d8845018-5e5e-4ad1-8e81-b28760224920,no events,no events,no events,no events,no 
 d8ac6e40-18aa-4cd2-bad9-c24097babf0d,no events,no events,no events,no events,no events,no events,no events
 d8b030ff-fb74-4f72-9cf4-8a3ec8434007,no events,no events,no events,no events,no events,no events,no events
 d99dfb84-5486-422d-9698-cec02a5bb71a,no events,no events,no events,no events,no events,no events,no events
-d9eddec9-79ea-451a-8281-2633fa3e0d7f,no events,no events,no events,no events,no events,no events,7.30pm quiz
+d9eddec9-79ea-451a-8281-2633fa3e0d7f,no events,no events,no events,no events,no events,no events,Quiz 7.30pm
 da4e463a-461e-4c5a-acbe-6d72ecac2119,no events,no events,no events,no events,no events,no events,no events
 da97ad9b-7ee1-4822-a788-85ede5f580b1,no events,no events,no events,no events,no events,no events,no events
 dabc295c-96f2-44fc-afe0-7b30338e8714,no events,no events,no events,no events,no events,no events,no events
@@ -723,7 +723,7 @@ e600a80e-b8d6-49d9-b528-d9186c22fc1c,no events,no events,no events,no events,no 
 e620aa52-3217-4d9c-b733-36b8e5fe71d6,no events,no events,no events,no events,no events,no events,no events
 e660f5e3-b9f5-4dd8-90ef-0ecc6c87a15c,no events,no events,no events,no events,no events,no events,no events
 e6adbab2-cc94-4d90-a2ac-4265aec986ef,no events,no events,no events,no events,no events,no events,no events
-e742eaeb-ca3a-4b61-bf87-186aec8dd672,Closed,Closed,Closed,Closed,no events,no events,7.30pm quiz
+e742eaeb-ca3a-4b61-bf87-186aec8dd672,Closed,Closed,Closed,Closed,no events,no events,Quiz 7.30pm
 e74bdf25-8684-46f9-879b-4c756f8408c8,no events,no events,no events,no events,no events,no events,no events
 e77e436f-d231-42f2-b45a-cae75e3219d8,no events,no events,no events,no events,no events,no events,no events
 e7a5873d-e2ce-45d0-bbd3-f3a37575a672,no events,no events,no events,no events,no events,no events,no events
@@ -789,7 +789,7 @@ fa24fedf-0c19-4e57-8870-90101bc42aa1,Closed,Closed,Closed,Closed,no events,no ev
 facd8fad-fc62-4519-9751-bbb0d06b01fe,no events,no events,no events,no events,no events,no events,no events
 fb633682-9d29-47d1-81cd-a1848becebb0,Quiz 7.30pm every other,no events,no events,Live jazz music last of the month,no events,no events,no events
 fbfe14ab-a48b-424f-b09d-6c1478f0edcb,no events,Quiz,Karaoke,Race night,no events,no events,no events
-fc458d09-1661-41da-bad9-867e49c720ce,no events,no events,no events,no events,no events,no events,7pm quiz
+fc458d09-1661-41da-bad9-867e49c720ce,no events,no events,no events,no events,no events,no events,Quiz 7pm
 fc6df57e-c8a2-456c-9675-df227c91fbe9,no events,no events,no events,no events,no events,no events,no events
 fc6e5974-2c14-407d-8272-71c9c95e8faf,no events,no events,no events,no events,no events,no events,no events
 ,no events,no events,no events,no events,no events,no events,no events

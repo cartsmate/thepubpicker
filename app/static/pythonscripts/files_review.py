@@ -29,6 +29,7 @@ config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
 model_formats = ControlsList().go_get_control_list()
+env_vars = Configurations().get_config2()
 
 class FilesReview:
 
@@ -45,18 +46,19 @@ class FilesReview:
         print('get review form')
         new_review = Review(review_identity=request.form['review_identity'],
                             review_deletion=request.form['review_deletion'], pub_identity=request.form['pub_identity'],
-                            brunch='true' if request.form.get('brunch') == 'on' else 'false',
-                            dart='true' if request.form.get('dart') == 'on' else 'false',
-                            entertain='true' if request.form.get('entertain') == 'on' else 'false',
-                            favourite='true' if request.form.get('favourite') == 'on' else 'false',
-                            garden='true' if request.form.get('garden') == 'on' else 'false',
-                            history='true' if request.form.get('history') == 'on' else 'false',
-                            late='true' if request.form.get('late') == 'on' else 'false',
-                            music='true' if request.form.get('music') == 'on' else 'false',
-                            pool='true' if request.form.get('pool') == 'on' else 'false',
-                            quiz='true' if request.form.get('quiz') == 'on' else 'false',
-                            roast='true' if request.form.get('roast') == 'on' else 'false',
-                            sport='true' if request.form.get('sport') == 'on' else 'false')
+                            brunch='1' if request.form.get('brunch') == 'on' else '0',
+                            dart='1' if request.form.get('dart') == 'on' else '0',
+                            entertain='1' if request.form.get('entertain') == 'on' else '0',
+                            favourite='1' if request.form.get('favourite') == 'on' else '0',
+                            garden='1' if request.form.get('garden') == 'on' else '0',
+                            history='1' if request.form.get('history') == 'on' else '0',
+                            late='1' if request.form.get('late') == 'on' else '0',
+                            music='1' if request.form.get('music') == 'on' else '0',
+                            pool='1' if request.form.get('pool') == 'on' else '0',
+                            quiz='1' if request.form.get('quiz') == 'on' else '0',
+                            roast='1' if request.form.get('roast') == 'on' else '0',
+                            sport='1' if request.form.get('sport') == 'on' else '0',
+                            no_feature='1' if request.form.get('sport') == 'on' else '0')
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 
@@ -68,9 +70,9 @@ class FilesReview:
                 if review in model_formats['icon_list']:
                     print('if')
                     print(review + ' : ' + str(request.form.get(review + "_check")))
-                    df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = 'true' \
-                        if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == 'true')\
-                        else 'false'
+                    df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = '1' \
+                        if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == '1')\
+                        else '0'
                 else:
                     print('else')
                     print(review + ' : ' + str(request.form.get(review + "_check")))
@@ -95,9 +97,9 @@ class FilesReview:
 
         if (df_updated_reviews.shape[0] == df_reviews.shape[0] + 1) and (type == 'add'):
             df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
-
-            print(s3_resp)
+            if env_vars['source'] == 'csv':
+                s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
+                print(s3_resp)
             print('Review csv/s3 added to')
         else:
             print('Review csv/s3 did not add to')
@@ -109,8 +111,9 @@ class FilesReview:
             print(df2.transpose())
 
             df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
-            s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
-            print(s3_resp)
+            if env_vars['source'] == 'csv':
+                s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
+                print(s3_resp)
             print('Review csv/s3 updated')
         else:
             print('Review csv/s3 did not update')
