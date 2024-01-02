@@ -11,20 +11,13 @@ function filter_direction_change() {
         }
         filteredArray.push(filteredArray)
     }
-    console.log('filteredArray')
-    console.log(filteredArray.length)
-    console.log(filteredArray)
 
     newlist = []
     for (a=0; a<filteredArray.length; a++){
         newlist.push(filteredArray[a][0])
     }
-    console.log(newlist)
-
-//    filteredArray = stations_directions_list.filter(item => item[2] == value);
 
     for (i=0; i<stations_directions_list.length; i++) {
-        //console.log('newlist: ' + newlist)
         filtered_data = []
         if (newlist.includes(stations_directions_list[i][0])) {
             //console.log('station: ' + stations_directions_list[i][0])
@@ -34,14 +27,6 @@ function filter_direction_change() {
 //        } else {
 //            filtered_data.length = 0
         }
-        //console.log(filtered_data)
-//        console.log('i: ' + i)
-//        var filtered_data = pub['station_identity'].filter(item => filteredArray[0].includes(item))
-
-//        var filtered_data = pub.filter(function(x) {
-////            return x.station_identity == filteredArray[i][0]
-//            return x.station_identity == filteredArray[i][0]
-//        })
 
         record = document.createElement("div")
         record.className = 'row'

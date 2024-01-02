@@ -1,13 +1,13 @@
 function populate_station_collection(pub_filtered) {
     console.log('populate station collection')
-//    console.log('pub filtered: ' + pub_filtered.length)
+    console.log('data in: ' + pub_filtered.length)
 //    console.log('pub count: ' + pub.length)
     //pub = pub_filtered
-    document.getElementById('button_stat').innerHTML = '<a>by station (' + pub_filtered.length + ')</a>'
+    document.getElementById('button_station').innerHTML = '<a>by station (' + pub_filtered.length + ')</a>'
     var select= document.getElementById("station");
     var option = document.createElement("option");
     filter_clear('checks_station')
-    document.getElementById('content_stat').classList.remove("station-box");
+    document.getElementById('content_station').classList.remove("station-box");
     var station_options = 0
     for (i=0; i<stations_directions_list.length; i++) {
         var filtered_data = pub_filtered.filter(function(x) {
@@ -40,40 +40,14 @@ function populate_station_collection(pub_filtered) {
         label.appendChild(input)
     }
     if (station_options.length > 6) {
-        document.getElementById('content_stat').classList.add("station-box");
+        document.getElementById('content_station').classList.add("station-box");
     }
 }
 
-//function f_b_d(xx) {
-//    console.log('inside f_b_d')
-//    console.log('i got it right: ' + xx)
-//    }
-
 function on_click_station() {
-    console.log('USER INPUT - on click station')
+    console.log('USER INPUT - on click station COLLECTION')
     pub_filtered = filter_all_data(pub)
     list_setup(pub_filtered)
     populate_feature(pub_filtered)
-    //populate_review(pub_filtered)
     populate_header(pub_filtered.length)
-//    document.getElementById('pub_length').innerHTML = "<a>" + "Number of pubs: " + pub_filtered.length + "</a>"
-
-//    for (i=0; i<total_list_obj['icon_list'].length; i++) {
-//        var filtered_data = data.filter(function(pub) {
-//            return pub[total_list_obj['icon_list'][i]] == 'true'
-//        })
-//        document.getElementById(total_list_obj['icon_list'][i] + "_id").innerHTML = total_list_obj['icon_list'][i] + " (" + filtered_data.length + ")"
-//    }
-//    on_click()
 }
-/*
-function eventFunc() {
-    page_layout('home')
-    data = filter_all_data(all_data)
-    //populate_direction(data)
-    //populate_station(data)
-    //populate_feature(data)
-    table_setup(data)
-
-    }
-*/

@@ -45,6 +45,7 @@ class Configurations:
             "access_id": os.environ.get("ACCESS_ID"),
             "access_key": os.environ.get("ACCESS_KEY"),
             "bucket_name": os.environ.get("BUCKET_NAME"),
+            "source": os.environ.get("SOURCE"),
             "env": os.environ.get("ENV")
         }
         # print('config2: ' + str(config2))

@@ -1,6 +1,6 @@
 function populate_diary(pub_filtered) {
-    console.log('populate direction')
-//    console.log('pub_filtered data: ' + pub_filtered.length)
+    console.log('populate diary')
+    console.log('data in: ' + pub_filtered.length)
 //    console.log('pub count: ' + pub.length)
 
     document.getElementById('button_diary').innerHTML = '<a>by day (' + pub_filtered.length + ')</a>'
@@ -60,48 +60,8 @@ function populate_diary(pub_filtered) {
     })(i, pub_filtered)
 }
 
-//function f_b_d(xx) {
-//    console.log('inside f_b_d')
-//    console.log('i got it right: ' + xx)
-//    }
-
 function on_click_diary() {
-    console.log('ON CLICK DIARY')
+    console.log('USER INPUT - on click diary')
 
-    //pub_filtered = filter_all_data(pub)
     list_setup_diary(pub_filtered)
-    /*
-    populate_station(pub_filtered)
-    populate_feature(pub_filtered)
-    populate_review(pub_filtered)
-    populate_header(pub_filtered.length)
-    */
-    //document.getElementById('pub_length').innerHTML = "<a>" + "Number of pubs: " + pub_filtered.length + "</a>"
-    /*
-    for (i=0; i<directions_list.length; i++) {
-        console.log('on click')
-        console.log(directions_list[i][0])
-        //console.log(document.getElementById(stations_directions_list[i][2]))
-        if (document.getElementById(directions_list[i][0] + "_filter").checked) {
-            document.getElementById(directions_list[i][0] + "_filter").style.display = 'block'
-            document.getElementById(directions_list[i][0] + "_id").style.display = 'block'
-        } else {
-            document.getElementById(directions_list[i][0] + "_filter").style.display = 'none'
-            document.getElementById(directions_list[i][0] + "_id").style.display = 'none'
-        }
-    }
-    */
-    //on_click()
 }
-
-/*
-function eventFunc() {
-    page_layout('home')
-    data = filter_all_data(all_data)
-    //populate_direction(data)
-    //populate_station(data)
-    //populate_feature(data)
-    table_setup(data)
-
-    }
-*/

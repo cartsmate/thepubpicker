@@ -9,7 +9,7 @@
                     {% if name == "readonly" %}
                         <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display:none">
                     {% else %}
-                        <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display:block" onclick="set_feature_icon_colour('{{field.name}}')">
+                        <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display:none" onclick="set_feature_icon_colour('{{field.name}}')">
                     {% endif %}
                 </div>
                 <div>

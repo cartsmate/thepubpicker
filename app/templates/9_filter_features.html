@@ -1,25 +1,26 @@
-<button type="button" id="button_feat" class="collapsible_diary btn click">by feature</button>
-<div class="content" id="content_feat" style="display: none" >
+<button type="button" id="button_feature" class="collapsible btn click">by feature</button>
+<div class="content_feature" id="content_feature" style="display: none" >
     <div class="col" id="checks_feature"></div>
 </div>
 
 <script>
     //collapse_section("collapsible_feature")
-    var button_feat = document.getElementById('button_feat')
+    var button_feature = document.getElementById('button_feature')
     var content_direction = document.getElementById('content_direction')
-    var content_stat = document.getElementById('content_stat')
+    var content_station = document.getElementById('content_station')
     var content_diary = document.getElementById('content_diary')
-    var content_feat = document.getElementById('content_feat')
+    var content_feature = document.getElementById('content_feature')
 
-    button_feat.addEventListener("click", function() {
-        console.log('feature filter click')
-        if (content_feat.style.display === "none") {
-            content_feat.style.display = "flex";
+    button_feature.addEventListener("click", function() {
+        if (content_feature.style.display === "none") {
+            console.log('9 filter feature - click - FLEX')
+            content_feature.style.display = "flex";
             content_direction.style.display = "none"
-            content_stat.style.display = "none"
+            content_station.style.display = "none"
             content_diary.style.display = "none"
         } else {
-            content_feat.style.display = "none"
+            console.log('9 filter feature - click - NONE')
+            content_feature.style.display = "none"
 
         }
     })

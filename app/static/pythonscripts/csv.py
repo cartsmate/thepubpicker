@@ -9,6 +9,8 @@ from config import Configurations
 config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
+# # # GET ENVIRONMENTAL VARIABLES
+env_vars = Configurations().get_config2()
 
 
 class Csv:
@@ -103,11 +105,12 @@ class Csv:
 
     def go_get_details_daily(self):
         print('go_get_details_daily')
-        # df_details_day = pd.read_csv(directory_path + '/files/featured.csv',
-        #                              dtype={'pub_identity': str, 'timestamp': str})
-
-        attribute_list = ['pub_identity', 'timestamp']
-        df_details_day = S3().s3_read('featured', attribute_list)
+        if env_vars['source'] == 'csv':
+            df_details_day = pd.read_csv(directory_path + '/files/featured.csv',
+                                         dtype={'pub_identity': str, 'timestamp': str})
+        else:
+            attribute_list = ['pub_identity', 'timestamp']
+            df_details_day = S3().s3_read('featured', attribute_list)
         # print(df_details_day)
         # read value of date
         df_lastline = df_details_day.tail(1)
@@ -161,16 +164,17 @@ class Csv:
 
     def go_get_details(self):
         print('CSV - go get details')
-        # df_details = pd.read_csv(directory_path + '/files/details.csv',
-        #                          dtype={'pub_identity': str, 'station_identity': str, 'detail_name': str,
-        #                                 'address': str, 'category': str, 'colour': str, 'detail_deletion': str,
-        #                                 'detail_latitude': float, 'detail_longitude': float, 'extra': str,
-        #                                 'place': str, 'rank': float, 'website': str, 'url': str})
-        #
-        attribute_list = ['pub_identity', 'station_identity', 'detail_name', 'address', 'category', 'colour',
-                    'detail_deletion', 'detail_latitude', 'detail_longitude', 'extra', 'place', 'rank', 'website',
-                    'url']
-        df_details = S3().s3_read('details', attribute_list)
+        if env_vars['source'] == 'csv':
+            df_details = pd.read_csv(directory_path + '/files/details.csv',
+                                     dtype={'pub_identity': str, 'station_identity': str, 'detail_name': str,
+                                            'address': str, 'category': str, 'colour': str, 'detail_deletion': str,
+                                            'detail_latitude': float, 'detail_longitude': float, 'extra': str,
+                                            'place': str, 'rank': float, 'website': str, 'url': str})
+        else:
+            attribute_list = ['pub_identity', 'station_identity', 'detail_name', 'address', 'category', 'colour',
+                        'detail_deletion', 'detail_latitude', 'detail_longitude', 'extra', 'place', 'rank', 'website',
+                        'url']
+            df_details = S3().s3_read('details', attribute_list)
         # df = S3().s3_read_new()
         # print(df_details)
         # print('details csv file downloaded')
@@ -178,54 +182,64 @@ class Csv:
 
     def go_get_reviews(self):
         print('go get reviews')
-        df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_identity': str, 'pub_identity':str,
-            'review_deletion': str, 'brunch': str,
-                                                                  'dart': str, 'entertain': str,
-                                                                  'favourite': str, 'garden': str,
-                                                                  'history': str, 'late': str,
-                                                                  'music': str, 'pool': str, 'quiz': str,
-                                                                  'roast': str, 'sport': str})
-        # print(df_reviews)
-        attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'brunch', 'dart', 'entertain',
-                          'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport',
-                          'no_feature']
-        df_reviews = S3().s3_read('reviews', attribute_list)
+        if env_vars['source'] == 'csv':
+            df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_identity': str, 'pub_identity':str,
+                'review_deletion': str, 'brunch': str,
+                                                                      'dart': str, 'entertain': str,
+                                                                      'favourite': str, 'garden': str,
+                                                                      'history': str, 'late': str,
+                                                                      'music': str, 'pool': str, 'quiz': str,
+                                                                      'roast': str, 'sport': str})
+        else:
+            attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'brunch', 'dart', 'entertain',
+                              'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport',
+                              'no_feature']
+            df_reviews = S3().s3_read('reviews', attribute_list)
         # df_reviews = self.add_no_feature(df_reviews)
         return df_reviews
 
     def go_get_diarys(self):
         print('go get diarys')
-        df_diarys = pd.read_csv(directory_path + '/files/diary.csv', dtype={'pub_identity': str, 'monday': str,
-                                                                       'tuesday': str, 'wednesday': str,
-                                                                       'thursday': str, 'friday': str,
-                                                                       'saturday': str, 'sunday': str})
-        # print(df_diarys)
-        attribute_list = ['pub_identity', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
-                          'sunday']
-        df_diarys = S3().s3_read('diary', attribute_list)
+        if env_vars['source'] == 'csv':
+            df_diarys = pd.read_csv(directory_path + '/files/diary.csv', dtype={'pub_identity': str, 'monday': str,
+                                                                           'tuesday': str, 'wednesday': str,
+                                                                           'thursday': str, 'friday': str,
+                                                                           'saturday': str, 'sunday': str})
+            # print(df_diarys)
+        else:
+            attribute_list = ['pub_identity', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
+                              'sunday']
+            df_diarys = S3().s3_read('diary', attribute_list)
         return df_diarys
 
     def go_get_stations(self):
         print('go get stations')
-        df_station = pd.read_csv(directory_path + '/files/stations.csv',
-                                 dtype={'station_identity': str, 'station_deletion': str, 'station_name': str,
-                                        'station_latitude': float, 'station_longitude': float, 'zone': str,
-                                        'postcode': str, 'direction_identity': str})
-        attribute_list = ['station_identity', 'station_deletion', 'station_name', 'station_latitude',
-                          'station_longitude', 'zone', 'postcode', 'direction_identity']
-        df_station = S3().s3_read('station', attribute_list)
+        if env_vars['source'] == 'csv':
+            df_station = pd.read_csv(directory_path + '/files/stations.csv',
+                                     dtype={'station_identity': str, 'station_deletion': str, 'station_name': str,
+                                            'station_latitude': float, 'station_longitude': float, 'zone': str,
+                                            'postcode': str, 'direction_identity': str})
+        else:
+            attribute_list = ['station_identity', 'station_deletion', 'station_name', 'station_latitude',
+                              'station_longitude', 'zone', 'postcode', 'direction_identity']
+            df_station = S3().s3_read('station', attribute_list)
         return df_station
 
     def go_get_directions(self):
         print('go get directions')
-        df_directions = pd.read_csv(directory_path + '/files/directions.csv',
-                                    dtype={'direction_identity': str, 'direction_name': str, 'direction_deletion': str})
-        attribute_list = ['direction_identity', 'direction_name', 'direction_deletion']
-        df_directions = S3().s3_read('direction', attribute_list)
+        if env_vars['source'] == 'csv':
+            df_directions = pd.read_csv(directory_path + '/files/directions.csv',
+                                        dtype={'direction_identity': str, 'direction_name': str, 'direction_deletion': str})
+        else:
+            attribute_list = ['direction_identity', 'direction_name', 'direction_deletion']
+            df_directions = S3().s3_read('direction', attribute_list)
         return df_directions
 
     def go_get_photos(self):
         print('go get photos')
-        df_photos = pd.read_csv(directory_path + '/files/photos_api.csv',
-                                dtype={'photo_identity': str, 'photo_deletion': str, 'pub_identity': str})
+        if env_vars['source'] == 'csv':
+            df_photos = pd.read_csv(directory_path + '/files/photos_api.csv',
+                                    dtype={'photo_identity': str, 'photo_deletion': str, 'pub_identity': str})
+        else:
+            df_photos = None
         return df_photos

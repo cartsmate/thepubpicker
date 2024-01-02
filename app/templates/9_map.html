@@ -87,20 +87,13 @@
 
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             pub_filtered = filter_all_data()
-            console.log('pub_filtered')
-            console.log(pub_filtered)
-            console.log(pub_filtered|length)
-            console.log(pub_filtered.length)
+            console.log('data in: ' + pub_filtered.length)
+
             if (pub_filtered.length <= 10) {
                 marker_add_collection(map, pub_filtered)
                 document.getElementById('msg_map').innerHTML = ''
             } else {
                 document.getElementById('msg_map').innerHTML = 'Too many pubs to show on map';
-                //map_elem = document.getElementById('col_map');
-                //var elem = document.createElement("div");
-                //elem.innerHTML = 'Too many pubs to show on map';
-                //elem.className = "map_words"
-                //map_elem.appendChild(elem)
             }
         }
         function map_init_1() {

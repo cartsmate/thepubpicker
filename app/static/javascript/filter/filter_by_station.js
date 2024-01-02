@@ -1,7 +1,6 @@
 function filter_by_station(data) {
     console.log('FILTER_BY_STATION')
-    console.log('received data')
-    console.log(data)
+    console.log('data in: ' + data.length)
     ticked_list = []
 
     for (i=0; i<stations_directions_list.length; i++) {

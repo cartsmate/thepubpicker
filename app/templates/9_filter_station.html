@@ -1,23 +1,23 @@
-<button type="button" id="button_stat" class="collapsible_s btn click" >by station</button>
-<div class="content_s" id="content_stat" style="display: none; overflow-x:scroll;">
+<button type="button" id="button_station" class="collapsible btn click" >by station</button>
+<div class="content_station" id="content_station" style="display: none; overflow-x:scroll;">
     <div class="col" id="checks_station"></div>
 </div>
 
 <script>
-    var button_stat = document.getElementById('button_stat')
+    var button_station = document.getElementById('button_station')
     var content_direction = document.getElementById('content_direction')
-    var content_stat = document.getElementById('content_stat')
+    var content_station = document.getElementById('content_station')
     var content_diary = document.getElementById('content_diary')
-    var content_feat = document.getElementById('content_feat')
+    var content_feature = document.getElementById('content_feature')
 
-    button_stat.addEventListener("click", function() {
-        if (content_stat.style.display === "none") {
-            content_stat.style.display = "flex";
+    button_station.addEventListener("click", function() {
+        if (content_station.style.display === "none") {
+            content_station.style.display = "flex";
             content_direction.style.display = "none"
             content_diary.style.display = "none"
-            content_feat.style.display = "none"
+            content_feature.style.display = "none"
         } else {
-            content_stat.style.display = "none"
+            content_station.style.display = "none"
         }
     })
 

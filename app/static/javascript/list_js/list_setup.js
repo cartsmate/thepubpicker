@@ -1,7 +1,7 @@
 function list_setup(pub_filtered) {
     console.log('list setup')
 //    console.log('pub filtered received: ' + pub_filtered.length)
-//    console.log('pub: ' + pub.length)
+    console.log('data in: ' + pub_filtered.length)
 
     list_delete()
 
