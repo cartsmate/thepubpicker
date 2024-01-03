@@ -1,14 +1,14 @@
 <div class="col black">
     <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
         <div class="col-2">{% include "9_icon_back.html" %}</div>
-        <div class="col-8" onclick="redirect_pub(daily_id, document.title)"><a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" >{{ pub[0]['detail_name'] }}</a></div>
+        <div class="col-8" onclick="redirect_pub(daily_id, document.title)" id="summary_name"><a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" ></a></div>
         <div class="col-2">{% include "9_icon_forward.html" %}</div>
     </div>
 
     <div class="row pink" id="random_rank" style="padding-bottom:5px;">
         <a href="{{pub[0]['url']}}" target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a>
     </div>
-    <div class="row pink" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; ">{{ pub[0]['extra'] }}</div>
+    <div class="row pink" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; " id="summary_extra" ></div>
 
     <div style="font-size: 12px; font-weight: bold; padding-top:5px;">What's it features ... ?</div>
     <div class="row pink">{% include "9_pub_features.html" %}</div>
