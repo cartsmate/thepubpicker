@@ -21,6 +21,7 @@ from config import Configurations
 
 
 @app.route("/", methods=['GET'])
+@app.route("/home/", methods=['GET'])
 def home():
     print('start TITLE')
     # # # GET ENVIRONMENTAL VARIABLES

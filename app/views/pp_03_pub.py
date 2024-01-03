@@ -17,6 +17,8 @@ from config import Configurations
 @app.route("/pub/", methods=['GET', 'POST'])
 def pub():
     print('START pub')
+    back = request.args.get('back')
+    if back == None: back = 'none'
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -78,4 +80,5 @@ def pub():
                            direction=Direction(),
                            direction_list=direction_list,
                            photo=Photo(),
-                           name=name)
+                           name=name,
+                           back=back)

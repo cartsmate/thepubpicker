@@ -1,6 +1,7 @@
 {% extends '00_template.html' %}
 
 {% block script %}
+    <title>summary</title>
     <script>pub = {{ pub | tojson }}</script>
     <script>pub_list = {{ pub_list | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>

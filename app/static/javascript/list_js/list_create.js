@@ -43,7 +43,7 @@ function list_create(pub_filtered) {
             const href = document.createElement("a");
             if (pub_attributes[j] == 'station_name') {
                 href.setAttribute("href", "#");
-                href.setAttribute("onclick", "redirect_station('" + pub_filtered[i]['station_identity'] + "')");
+                href.setAttribute("onclick", "redirect_station('" + pub_filtered[i]['station_identity'] + "', 'collection')");
                 text_ref = pub_filtered[i][pub_attributes[j]].toString().substring(0,11)
                 const cellText = document.createTextNode(text_ref);
                 href.appendChild(cellText);
@@ -51,7 +51,7 @@ function list_create(pub_filtered) {
                 row.appendChild(cell);
                 } else if (pub_attributes[j] == 'detail_name') {
                     href.setAttribute("href", "#");
-                    href.setAttribute("onclick", "redirect_pub('" + pub_filtered[i]['pub_identity'] + "',)");
+                    href.setAttribute("onclick", "redirect_pub('" + pub_filtered[i]['pub_identity'] + "', 'collection')");
 
 //                    console.log('LOOK HERE !!!')
 //                    console.log(pub_filtered)

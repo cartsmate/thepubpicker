@@ -17,6 +17,8 @@ from config import Configurations
 @app.route("/edit/", methods=['GET'])
 def edit():
     print('start EDIT')
+    back = request.args.get('back')
+    if back == None: back = 'none'
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -72,4 +74,5 @@ def edit():
                            diary_list=diary_list,
                            station_list=station_list,
                            direction_list=direction_list,
+                           back=back
                            )

@@ -19,6 +19,7 @@ function add_listeners() {
                     }
                     const myUrlWithParams = new URL(url);
                     myUrlWithParams.searchParams.append('feature', marker);
+                    myUrlWithParams.searchParams.append('back', document.title);
                     window.location.replace(myUrlWithParams.href);
                     }
                 })(marker))

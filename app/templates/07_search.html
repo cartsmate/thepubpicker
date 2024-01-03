@@ -1,6 +1,7 @@
 {% extends '00_template.html' %}
 
 {% block script %}
+    <title>search</title>
     <script>pub = {{ pub | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
     <script>visible = {{ visible | tojson }}</script>
@@ -52,7 +53,9 @@
     <div id="search-map" style="display: none;">
         <div class="col black">
             <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-                <div class="sub-heading">Search Map</div>
+                <div class="col-2">{% include "9_icon_back.html" %}</div>
+                <div class="col-8"><a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" >Search Map</a></div>
+                <div class="col-2">{% include "9_icon_forward.html" %}</div>
             </div>
         </div>
         {% include "9_map_double.html" %}
@@ -62,7 +65,9 @@
     <div id="search-table" style="display: block;">
         <div class="col black">
             <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-                <div class="sub-heading">Search Pubs Database</div>
+                <div class="col-2">{% include "9_icon_back.html" %}</div>
+                <div class="col-8"><a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" >Search Pubs Database</a></div>
+                <div class="col-2">{% include "9_icon_forward.html" %}</div>
             </div>
         </div>
         {% include "9_list.html" %}

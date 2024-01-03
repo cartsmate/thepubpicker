@@ -7,16 +7,6 @@
 {% endblock %}
 
 <style>
-  /*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
 
 body
 {
@@ -167,10 +157,6 @@ body
 
 </style>
 
-<!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--        MIT License        -->
-
   <div id="menuToggle">
     <!--
     A fake / hidden checkbox is used as click reciever,
@@ -193,15 +179,19 @@ body
     but hey, it's pure CSS magic.
     -->
     <ul id="menu">
-      <a href="#" onclick="redirect_summary()"><li>Home</li></a>
-      <a href="#" onclick="redirect_pub('{{ daily_id }}')" ><li>Pub of the day</li></a>
-      <a href="#" onclick="redirect_collection()"><li>All pubs</li></a>
+      <a href="#" onclick="redirect_summary(document.title)"><li>Home</li></a>
+      <a href="#" onclick="redirect_pub('{{ daily_id }}', document.title)" ><li>Pub of the day</li></a>
       {% if pub|length == 1 %}
-        <a href="#" onclick="redirect_stations()"><li>Same station pubs</li></a>
+        <a href="#" onclick="redirect_collection_id(document.title, pub[0]['pub_identity'])"><li>All pubs</li></a>
+      {% else %}
+        <a href="#" onclick="redirect_collection(document.title)"><li>All pubs</li></a>
       {% endif %}
-      <a href="#" onclick="redirect_add()"><li>Add new pub</li></a>
       {% if pub|length == 1 %}
-        <a href="#" onclick="redirect_edit('{{pub[0]['pub_identity']}}')"><li>Edit pub</li></a>
+        <a href="#" onclick="redirect_stations(document.title)"><li>Same station pubs</li></a>
+      {% endif %}
+      <a href="#" onclick="redirect_add(document.title)"><li>Add new pub</li></a>
+      {% if pub|length == 1 %}
+        <a href="#" onclick="redirect_edit('{{pub[0]['pub_identity']}}', document.title)"><li>Edit pub</li></a>
       {% endif %}
     </ul>
   </div>

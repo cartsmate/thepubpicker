@@ -23,6 +23,8 @@ from config import Configurations
 @app.route("/add/", methods=['GET', 'POST'])
 def add():
     print('START add')
+    back = request.args.get('back')
+    if back == None: back = 'none'
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -123,4 +125,5 @@ def add():
                            station=Station(),
                            direction=Direction(),
                            photo=Photo(),
-                           stations=stations_json)
+                           stations=stations_json,
+                           back=back)

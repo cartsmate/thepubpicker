@@ -1,4 +1,4 @@
-function redirect_summary() {
+function redirect_summary(back) {
     console.log("redirect_summary")
 
     var base_url = window.location.hostname
@@ -8,5 +8,13 @@ function redirect_summary() {
         var url = "http://" + base_url + "/summary/"
     }
     const myUrlWithParams = new URL(url);
+    myUrlWithParams.searchParams.append('back', back);
     window.location.replace(myUrlWithParams.href);
+}
+
+function redirect_summarys(test) {
+    console.log("redirect_summary")
+    console.log('test')
+    console.log(test)
+
 }

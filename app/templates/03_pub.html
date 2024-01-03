@@ -1,6 +1,7 @@
 {% extends '00_template.html' %}
 
 {% block script %}
+    <title>pub</title>
     <script>pub = {{ pub | tojson }}</script>
     <script>detail_list = {{ detail_list | tojson }}</script>
     <script>review_list = {{ review_list | tojson }}</script>
@@ -11,6 +12,8 @@
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection_id.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_stations.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>

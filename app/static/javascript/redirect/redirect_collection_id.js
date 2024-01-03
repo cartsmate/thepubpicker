@@ -1,5 +1,5 @@
-function redirect_collection(back) {
-    console.log("redirect_collection")
+function redirect_collection_id(back, back_id) {
+    console.log("redirect_collection_id")
 
     var base_url = window.location.hostname
     if (env_vars['env'] == 'qual') {
@@ -9,6 +9,7 @@ function redirect_collection(back) {
     }
     const myUrlWithParams = new URL(url);
     myUrlWithParams.searchParams.append('back', back);
+    myUrlWithParams.searchParams.append('back_id', back_id);
 
     window.location.replace(myUrlWithParams.href);
 }

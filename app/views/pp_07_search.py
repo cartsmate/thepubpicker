@@ -22,6 +22,8 @@ config2 = Configurations().get_config2()
 @app.route("/search/", methods=['GET', 'POST'])
 def search():
     print('start SEARCH')
+    back = request.args.get('back')
+    if back == None: back = 'none'
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -79,5 +81,6 @@ def search():
                            review_list=review_list,
                            review=Review(),
                            directions_list=directions_list,
-                           stations_directions_list=stations_directions_list
+                           stations_directions_list=stations_directions_list,
+                           back=back
                            )

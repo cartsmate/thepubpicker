@@ -1,4 +1,4 @@
-function redirect_stations() {
+function redirect_stations(back) {
     console.log("redirect stations")
 
     var base_url = window.location.hostname
@@ -9,5 +9,6 @@ function redirect_stations() {
     }
     const myUrlWithParams = new URL(url);
     myUrlWithParams.searchParams.append('station_id', pub[0]['station_identity']);
+    myUrlWithParams.searchParams.append('back', back);
     window.location.replace(myUrlWithParams.href);
 }

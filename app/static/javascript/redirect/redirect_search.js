@@ -1,4 +1,4 @@
-function redirect_search() {
+function redirect_search(back) {
     console.log("redirect_search")
 
     var base_url = window.location.hostname
@@ -8,5 +8,6 @@ function redirect_search() {
         var url = "http://" + base_url + "/search/"
     }
     const myUrlWithParams = new URL(url);
+    myUrlWithParams.searchParams.append('back', back);
     window.location.replace(myUrlWithParams.href);
 }

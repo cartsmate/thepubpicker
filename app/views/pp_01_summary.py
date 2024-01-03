@@ -10,7 +10,7 @@
 # send to html page
 import random
 from app import app
-from flask import render_template
+from flask import render_template, request
 from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
@@ -23,6 +23,8 @@ from config import Configurations
 @app.route("/summary/", methods=['GET'])
 def summary():
     print('start SUMMARY')
+    back = request.args.get('back')
+    if back == None: back = 'none'
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -86,4 +88,5 @@ def summary():
                            photo=Photo(),
                            redirect=redirect,
                            text=text,
-                           name=name)
+                           name=name,
+                           back=back)

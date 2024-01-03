@@ -1,4 +1,4 @@
-function redirect_add() {
+function redirect_add(back) {
     console.log("USER INPUT: redirect_add")
 
     var base_url = window.location.hostname
@@ -8,5 +8,6 @@ function redirect_add() {
         var url = "http://" + base_url + "/add/"
     }
     const myUrlWithParams = new URL(url);
+    myUrlWithParams.searchParams.append('back', back);
     window.location.replace(myUrlWithParams.href);
 }

@@ -1,6 +1,7 @@
 {% extends '00_template.html' %}
 
 {% block script %}
+    <title>collection</title>
     <script>pub = {{ pub | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
     <script>visible = {{ visible | tojson }}</script>
@@ -52,8 +53,10 @@
 
 {% block header %}
     <div class="col">
-        <div class="row" style="background-color:coral; text-align: center; justify-content: center; text-color: black;">
-            <div id="pub_length"></div>
+        <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
+            <div class="col-2">{% include "9_icon_back.html" %}</div>
+            <div class="col-8" id="pub_length"></div>
+            <div class="col-2">{% include "9_icon_forward.html" %}</div>
         </div>
         <div class="row">
             <div>{% include "9_filter.html" %}</div>
