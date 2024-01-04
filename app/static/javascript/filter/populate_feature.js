@@ -40,7 +40,11 @@ function on_click_feature() {
     console.log('USER INPUT - on click feature')
     pub_filtered = filter_all_data(pub)
     list_setup(pub_filtered)
+
+    populate_direction(pub_filtered)
+    populate_station(pub_filtered)
+
     populate_feature(pub_filtered)
-    //populate_diary(pub_filtered)
     populate_header(pub_filtered.length)
+    map_load_collection(pub_filtered)
 }

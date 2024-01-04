@@ -89,12 +89,22 @@
             pub_filtered = filter_all_data()
             console.log('data in: ' + pub_filtered.length)
 
+            pub_filtered = pub_filtered.sort((a, b) => {
+                if (a.rank > b.rank) {
+                    return -1;
+                }
+            });
+            const slicedArray = pub_filtered.slice(0, 10);
+
+            marker_add_collection(map, slicedArray)
+            /*
             if (pub_filtered.length <= 10) {
                 marker_add_collection(map, pub_filtered)
                 document.getElementById('msg_map').innerHTML = ''
             } else {
                 document.getElementById('msg_map').innerHTML = 'Too many pubs to show on map';
             }
+            */
         }
         function map_init_1() {
             console.log('MAP INIT 1')
