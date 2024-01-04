@@ -82,9 +82,11 @@ ul.ui-autocomplete {
     overflow: hidden;
 }
 .click {
+    padding-left:10px;
     font-size:12px;
-    color: white;
-    background-color: coral;
+    color: black;
+    border-right: 5px solid coral;
+    //background-color: coral;
     margin: 0px 5px;
     padding: 0px 5px;
 }

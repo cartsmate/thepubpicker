@@ -4,5 +4,6 @@ function populate_all_filters_collection(pub_filtered) {
     populate_direction_collection(pub_filtered)
     populate_station_collection(pub_filtered)
     populate_feature_collection(pub_filtered)
-    populate_diary_collection(pub_filtered)
+    //populate_diary_collection(pub_filtered)
+    populate_diary_collection2(pub_filtered)
     }

@@ -4,6 +4,6 @@ function populate_all_filters(pub_filtered) {
     populate_direction(pub_filtered)
     populate_station(pub_filtered)
     populate_feature(pub_filtered)
-    populate_diary(pub_filtered)
-
-    }
+    //populate_diary(pub_filtered)
+    populate_diary2(pub_filtered)
+}

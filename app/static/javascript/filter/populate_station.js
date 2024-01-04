@@ -3,7 +3,7 @@ function populate_station(pub_filtered) {
     console.log('data in: ' + pub_filtered.length)
 //    console.log('pub count: ' + pub.length)
     //pub = pub_filtered
-    document.getElementById('button_station').innerHTML = '<a>by station (' + pub_filtered.length + ')</a>'
+    //document.getElementById('button_station').innerHTML = '<a>by station (' + pub_filtered.length + ')</a>'
     var select= document.getElementById("station");
     var option = document.createElement("option");
     filter_clear('checks_station')

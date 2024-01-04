@@ -1,4 +1,4 @@
-function list_columns_diary() {
+function list_columns_diary(clicked_day) {
     console.log('list columns diary')
 
     pub_attributes = []
@@ -10,16 +10,24 @@ function list_columns_diary() {
 
     diary_headers = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     for (i=0; i<diary_headers.length; i++) {
-        if (document.getElementById(diary_headers[i] + "_filter").checked) {
-//            console.log('ticked')
-//            console.log(diary_headers[i])
-            visible[diary_headers[i]] = true
-        } else {
-//            console.log('UN - ticked')
-//            console.log(diary_headers[i])
-        }
+        //console.log(diary_headers[i])
+        visible[diary_headers[i]] = false
+    }
+    //console.log(clicked_day)
+    if (clicked_day == 'none') {
+        visible['station_name'] = true
+    } else {
+        visible[clicked_day] = true
     }
 
+    /*
+        if (document.getElementById(diary_headers[i] + "_filter").checked) {
+            visible[diary_headers[i]] = true
+        } else {
+
+        }
+    }
+    */
 
     visible['rank'] = true
     visible['detail_name'] = true

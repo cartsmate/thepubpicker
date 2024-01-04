@@ -14,27 +14,36 @@ function populate_direction(pub_filtered) {
         record.className = 'row'
         record.style.padding = "0px;"
         record.style.margin = "0px;"
-        checks_direction = document.getElementById('checks_direction')
-        checks_direction.appendChild(record)
 
-        label = document.createElement("div")
-        label.style.width = "200px"
-        label.style.padding = "0px"
-        label.style.margin = "0px"
-
-        label.id = directions_list[i][0] + "_id"
-        label.innerHTML = "<a style='font-family: Verdana, sans-serif; font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + filtered_data.length + ")" + "</a>"
-        record.appendChild(label)
 
         input = document.createElement("input")
         input.type = "checkbox"
         input.id = directions_list[i][0] + "_filter"
         input.onclick = function() { on_click_direction() }
+        record.appendChild(input)
+
+        label = document.createElement("label")
+        label.htmlFor = directions_list[i][0] + "_filter")
+        label.innerHTML = "<a>" + directions_list[i][1] + " (" + filtered_data.length + "</a>"
+        record.appendChild(label)
+
+        /*
+        label = document.createElement("div")
+        label.style.width = "200px"
+        label.style.padding = "0px"
+        label.style.margin = "0px"
+        label.id = directions_list[i][0] + "_id"
+        label.innerHTML = "<a style='font-family: Verdana, sans-serif; font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + filtered_data.length + ")" + "</a>"
+        record.appendChild(label)
+        */
+
+        checks_direction = document.getElementById('checks_direction')
+        checks_direction.appendChild(record)
 
         if (filtered_data.length > 0) {
-            label.style.display = "block"
+            record.style.display = "block"
         } else {
-            label.style.display = "none"
+            record.style.display = "none"
         }
         if (filtered_data.length == pub_filtered.length) {
             input.checked = true
@@ -45,7 +54,7 @@ function populate_direction(pub_filtered) {
 }
 
 function on_click_direction() {
-    console.log('USER INPUT - on click direction COLLECTION')
+    console.log('USER INPUT - on click direction')
 
     pub_filtered = filter_all_data(pub)
     console.log(pub_filtered.length)
