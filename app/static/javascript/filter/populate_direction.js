@@ -11,17 +11,12 @@ function populate_direction(pub_filtered) {
             return x.direction_identity == directions_list[i][0]
         })
         record = document.createElement("div")
-        record.className = 'row'
-        record.style.padding = "0px;"
-        record.style.margin = "0px;"
+        record.className = "row"
         checks_direction = document.getElementById('checks_direction')
         checks_direction.appendChild(record)
 
         label = document.createElement("div")
-        label.style.width = "200px"
-        label.style.padding = "0px"
-        label.style.margin = "0px"
-
+        label.style.width = "230px"
         label.id = directions_list[i][0] + "_id"
         label.innerHTML = "<a style='font-family: Verdana, sans-serif; font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + filtered_data.length + ")" + "</a>"
         record.appendChild(label)

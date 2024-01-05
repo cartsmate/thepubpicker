@@ -1,8 +1,18 @@
-<button type="button" id="button_direction" class="collapsible btn click">by area</button>
-<div class="content_direction" id="content_direction" style="display: none">
+<button type="button" id="button_direction" class="collapsible btn click text-left" >by area</button>
+<div class="content_direction" id="content_direction" style="display: none; background: #F5F5F5;">
     <div class="col" id="checks_direction"></div>
 </div>
-
+<style>
+#content_direction{
+  position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //top: 75px;
+  left: 80px;
+  //transform: translate(-50%,-50%);
+  //-ms-transform: translate(-50%,-50%);
+}
+</style>
 <script>
     var button_direction = document.getElementById('button_direction')
     var content_direction = document.getElementById('content_direction')

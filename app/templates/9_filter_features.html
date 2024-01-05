@@ -1,8 +1,18 @@
-<button type="button" id="button_feature" class="collapsible btn click">by feature</button>
-<div class="content_feature" id="content_feature" style="display: none" >
+<button type="button" id="button_feature" class="collapsible btn click text-left" >by feature</button>
+<div class="content_feature" id="content_feature" style="display: none; background: #F5F5F5;" >
     <div class="col" id="checks_feature"></div>
 </div>
-
+<style>
+#content_feature{
+  position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //top: 75px;
+  left: 80px;
+  //transform: translate(-50%,-50%);
+  //-ms-transform: translate(-50%,-50%);
+}
+</style>
 <script>
     //collapse_section("collapsible_feature")
     var button_feature = document.getElementById('button_feature')

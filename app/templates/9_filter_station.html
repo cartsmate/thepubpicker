@@ -1,8 +1,18 @@
-<button type="button" id="button_station" class="collapsible btn click" >by station</button>
-<div class="content_station" id="content_station" style="display: none; overflow-x:scroll;">
+<button type="button" id="button_station" class="collapsible btn click text-left" >by station</button>
+<div class="content_station" id="content_station" style="display: none; overflow-x:scroll; background: #F5F5F5;">
     <div class="col" id="checks_station"></div>
 </div>
-
+<style>
+#content_station{
+  position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //top: 75px;
+  left: 80px;
+  //transform: translate(-50%,-50%);
+  //-ms-transform: translate(-50%,-50%);
+}
+</style>
 <script>
     var button_station = document.getElementById('button_station')
     var content_direction = document.getElementById('content_direction')

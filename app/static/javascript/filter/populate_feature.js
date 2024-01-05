@@ -13,7 +13,7 @@ function populate_feature(pub_filtered) {
         checks_feature = document.getElementById("checks_feature")
 
         label = document.createElement("div")
-        label.style.width = "200px"
+        label.style.width = "230px"
         label.style.font = "8px"
         label.id = model_formats['icon_list'][i] + "_id"
         label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + model_formats['icon_list'][i] + " (" + filtered_data.length + ")" + "</a>"
