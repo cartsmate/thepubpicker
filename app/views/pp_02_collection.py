@@ -27,6 +27,7 @@ def collection():
     back_id = request.args.get('back_id')
     if back == None: back = 'none'
 
+    filters = request.args.get('filters')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -69,5 +70,5 @@ def collection():
                            review=Review(),
                            directions_list=directions_list,
                            stations_directions_list=stations_directions_list,
-                           back=back, back_id=back_id
+                           back=back, back_id=back_id, filters=filters
                            )

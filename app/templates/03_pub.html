@@ -3,11 +3,14 @@
 {% block script %}
     <title>pub</title>
     <script>pub = {{ pub | tojson }}</script>
+    <script>filters = {{ filters | tojson }}</script>
     <script>detail_list = {{ detail_list | tojson }}</script>
     <script>review_list = {{ review_list | tojson }}</script>
     <script>diary_list = {{ diary_list | tojson }}</script>
     <script>station_list = {{ station_list | tojson }}</script>
     <script>direction_list = {{ direction_list | tojson }}</script>
+    <script>directions_list = {{ direction_list | tojson }}</script>
+    <script>stations_directions_list = {{ stations_directions_list | tojson }}</script>
     <script>photos_list = {{ photos_list | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
@@ -28,6 +31,7 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_direction.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_search_back.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_pub.js') }}"></script>
 {% endblock %}
 

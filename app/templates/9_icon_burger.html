@@ -180,7 +180,6 @@ body
     -->
     <ul id="menu">
       <a href="#" onclick="redirect_summary(document.title)"><li>Home</li></a>
-      <a href="#" onclick="redirect_pub('{{ daily_id }}', document.title)" ><li>Pub of the day</li></a>
       <a href="#" onclick="redirect_collection(document.title)"><li>All pubs</li></a>
       {% if pub|length == 1 %}
         <a href="#" onclick="redirect_stations(document.title)"><li>Same station pubs</li></a>

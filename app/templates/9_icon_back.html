@@ -1,36 +1,26 @@
-<div onclick="redirect_back('{{back}}')">
-    {% if back == "none" %}
-        <a style="font-family: Verdana, sans-serif; font-weight: bold; text-decoration: none; color: white;">
+<div onclick="redirect_back('{{filters}}')">
+    {% if filter == "dl,sl,fl" %}
+        <a style="padding: 0px; margin: 0px; font-size: 14px; font-weight: bold; text-decoration: none; color: white;">
     {% else %}
-        <a href="#" style="font-family: Verdana, sans-serif; font-weight: bold; text-decoration: none; color: white;">
+        <a href="#" style="padding: 0px; margin: 0px; font-size: 14px; font-weight: bold; text-decoration: none; color: white;">
     {% endif %}
         <<
     </a>
 </div>
 
 <script>
-    function redirect_back(back) {
+    function redirect_back() {
         console.log("redirect_back")
-        if (back == "pub") {
-            var base_url = window.location.hostname
-            if (env_vars['env'] == 'qual') {
-                var url = "http://" + base_url + ":5000/pub/"
-            } else {
-                var url = "http://" + base_url + "/pub/"
-            }
-            const myUrlWithParams = new URL(url);
-            myUrlWithParams.searchParams.append('id', '{{back_id}}');
-            window.location.replace(myUrlWithParams.href);
+        var filters = document.getElementById('search_back').textContent;
+        console.log(filters)
+        var base_url = window.location.hostname
+        if (env_vars['env'] == 'qual') {
+            var url = "http://" + base_url + ":5000/collection/"
+        } else {
+            var url = "http://" + base_url + "/collection/"
         }
-        if (back != "none") {
-            var base_url = window.location.hostname
-            if (env_vars['env'] == 'qual') {
-                var url = "http://" + base_url + ":5000/" + back + "/"
-            } else {
-                var url = "http://" + base_url + "/" + back + "/"
-            }
-            const myUrlWithParams = new URL(url);
-            window.location.replace(myUrlWithParams.href);
-        }
+        const myUrlWithParams = new URL(url);
+        myUrlWithParams.searchParams.append('filters', filters);
+        window.location.replace(myUrlWithParams.href);
     }
 </script>

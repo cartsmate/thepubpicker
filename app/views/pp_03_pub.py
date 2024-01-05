@@ -19,6 +19,10 @@ def pub():
     print('START pub')
     back = request.args.get('back')
     if back == None: back = 'none'
+
+    filters = request.args.get('filters')
+    print('filters')
+    print(filters)
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -62,6 +66,8 @@ def pub():
         station_list.append(v.name)
     for k, v in Direction().__dict__.items():
         direction_list.append(v.name)
+    stations_directions_list = Csv().go_get_stations_directions_list()
+    directions_list = Csv().go_get_directions_list()
     return render_template('03_pub.html',
                            pub=pub_json,
                            photos_list=photos_list,
@@ -79,6 +85,9 @@ def pub():
                            station_list=station_list,
                            direction=Direction(),
                            direction_list=direction_list,
+                           directions_list=directions_list,
+                           stations_directions_list=stations_directions_list,
                            photo=Photo(),
                            name=name,
-                           back=back)
+                           back=back,
+                           filters=filters)

@@ -1,7 +1,6 @@
 <script>console.log('CREATING REVIEW FIELDS')</script>
 <div id="home_features" class="row" style="width: 290px; display:flex; flex-wrap: wrap; ">
 {% for k, field in review.__dict__.items() %}
-    <script>console.log('{{field.name}}')</script>
     {% if field.name != "pub_identity" %}
         {% if field.name in model_formats['icon_list'] %}
             <div style="opacity: 0.5; text-align:center; margin:0px; padding:0px; width:40px; height: 48px; border-radius: 50%; border: 2px solid coral;" id="{{field.name}}_col">

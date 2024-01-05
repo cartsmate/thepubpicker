@@ -51,7 +51,7 @@ function list_create(pub_filtered) {
                 row.appendChild(cell);
                 } else if (pub_attributes[j] == 'detail_name') {
                     href.setAttribute("href", "#");
-                    href.setAttribute("onclick", "redirect_pub('" + pub_filtered[i]['pub_identity'] + "', 'collection')");
+                    href.setAttribute("onclick", "redirect_pub_search('" + pub_filtered[i]['pub_identity'] + "', 'collection')");
 
 //                    console.log('LOOK HERE !!!')
 //                    console.log(pub_filtered)

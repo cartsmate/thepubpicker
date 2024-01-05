@@ -9,6 +9,7 @@
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>feature = {{ feature | tojson}}</script>
     <script>station = {{ station | tojson}}</script>
+    <script>filters = {{ filters | tojson}}</script>
     <script>review_list = {{ review_list | tojson}}</script>
     <script>directions_list = {{ directions_list | tojson}}</script>
     <script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
@@ -31,13 +32,6 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_direction.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/pre_populate.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_all_filters_collection.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_feature_collection.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_station_collection.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_direction_collection.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_diary_collection.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_diary_collection2.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_diary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_diary2.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_review.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_collection.js') }}"></script>
@@ -56,9 +50,9 @@
 {% block header %}
     <div class="col">
         <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-            <div class="col-2">{% include "9_icon_back.html" %}</div>
-            <div class="col-8" id="pub_length"></div>
-            <div class="col-2">{% include "9_icon_forward.html" %}</div>
+            <div class="col-2"></div>
+            <div class="col-8" style="align-items: center; justify-content: center;" id="pub_length"></div>
+            <div class="col-2"></div>
         </div>
         <div class="row">
             {% include "9_filter_overlay.html" %}
