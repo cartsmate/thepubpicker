@@ -1,11 +1,9 @@
 <div onclick="redirect_back('{{filters}}')">
-    {% if filter == "dl,sl,fl" %}
-        <a style="padding: 0px; margin: 0px; font-size: 14px; font-weight: bold; text-decoration: none; color: white;">
+    {% if filters != 'none' %}
+        <a href="#" style="padding: 0px; margin: 0px; font-size: 16px; font-weight: bold; text-decoration: none; color: white;"><<<</a>
     {% else %}
-        <a href="#" style="padding: 0px; margin: 0px; font-size: 14px; font-weight: bold; text-decoration: none; color: white;">
+        <a></a>
     {% endif %}
-        <<
-    </a>
 </div>
 
 <script>

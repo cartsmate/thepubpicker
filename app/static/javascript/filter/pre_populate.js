@@ -34,6 +34,7 @@ function pre_populate(feature, station, filters_str) {
 
         d_list = filters_list.slice(d_obj['start']+1,s_obj['start'])
         for (i=0; i < d_list.length; i++) {
+            console.log(d_list[i])
             document.getElementById(d_list[i] + "_filter").checked = true
         }
 

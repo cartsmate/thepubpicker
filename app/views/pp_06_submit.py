@@ -33,18 +33,18 @@ def submit():
 
     df_details_current = Csv().go_get_details()
     df_detail_current = df_details_current[df_details_current['pub_identity'] == pub_id]
-    print('current DETAIL')
-    print(df_detail_current.transpose())
+    # print('current DETAIL')
+    # print(df_detail_current.transpose())
 
     df_reviews_current = Csv().go_get_reviews()
     df_review_current = df_reviews_current[df_reviews_current['pub_identity'] == pub_id]
-    print('current REVIEW')
-    print(df_review_current.transpose())
+    # print('current REVIEW')
+    # print(df_review_current.transpose())
 
     df_diarys_current = Csv().go_get_diarys()
     df_diary_current = df_diarys_current[df_diarys_current['pub_identity'] == pub_id]
-    print('current DIARY')
-    print(df_diary_current.transpose())
+    # print('current DIARY')
+    # print(df_diary_current.transpose())
 
     # df_detail_current = CsvSingle().go_get_1_detail(pub_id)
 
@@ -98,7 +98,7 @@ def submit():
     # print(newdf)
     print('end SUBMIT')
     # return redirect(url_for('home', pub_id=pub_id), code=307)
-    return redirect(url_for('pub', id=pub_id))
+    return redirect(url_for('pub', id=pub_id, filters='none'))
     # return render_template('03_pub.html', id=pub_id)
 
     # , pub=pub_json)

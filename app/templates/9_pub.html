@@ -1,7 +1,7 @@
 <div class="col black">
     <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
         <div class="col-2">{% include "9_icon_back.html" %}</div>
-        <div class="col-8" onclick="redirect_pub(daily_id, document.title)" id="summary_name"><a style="text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" ></a></div>
+        <div class="col-8" align="center" onclick="redirect_pub(daily_id)" id="summary_name"><a style="text-align: center; text-decoration: none; font-size: 14px; font-weight: bold; color: white;" href="#" ></a></div>
         <div class="col-2"></div>
     </div>
 
@@ -26,5 +26,5 @@
 
     <div style="font-size: 12px; font-weight: bold; padding-top:5px;">What it looks like ... ?</div>
     <div class="row pink">{% include "9_pub_photo.html" %}</div>
-    <div class="row" style="display:hidden; background-color: white; border:1px solid black;" id="search_back">xxx</div>
+    <div class="row" style="display:none; background-color: white; border:1px solid black;" id="search_back">xxx</div>
 </div>

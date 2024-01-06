@@ -1,4 +1,4 @@
-function redirect_pub(id, back) {
+function redirect_pub(id) {
     console.log("redirect_pub")
 
     var base_url = window.location.hostname
@@ -9,6 +9,6 @@ function redirect_pub(id, back) {
     }
     const myUrlWithParams = new URL(url);
     myUrlWithParams.searchParams.append('id', id);
-    myUrlWithParams.searchParams.append('back', back);
+    myUrlWithParams.searchParams.append('filters', 'none');
     window.location.replace(myUrlWithParams.href);
 }

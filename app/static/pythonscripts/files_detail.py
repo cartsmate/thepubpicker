@@ -46,6 +46,20 @@ class FilesDetail:
 
     def form_detail(self):
         print('get detail form')
+        print(request.form['pub_identity'])
+        print(request.form['station_identity'])
+        print(request.form['detail_name'])
+        print(request.form['address'])
+        print(request.form['category'].lower())
+        print(request.form['colour'])
+        print(request.form['detail_deletion'])
+        print(request.form['detail_latitude'])
+        print(request.form['detail_longitude'])
+        print(request.form['extra'])
+        print(request.form['place'])
+        print(request.form['rank'])
+        print(request.form['website'])
+        print(request.form['url'])
         new_detail = Detail(pub_identity=request.form['pub_identity'],
                             station_identity=request.form['station_identity'], detail_name=request.form['detail_name'],
                             address=request.form['address'], category=request.form['category'].lower(),
@@ -55,13 +69,15 @@ class FilesDetail:
                             place=request.form['place'], rank=request.form['rank'], website=request.form['website'],
                             url=request.form['url'])
         df_new_pub = pd.DataFrame([new_detail.__dict__])
+        newdf1 = df_new_pub.transpose()
+        print(newdf1)
         return df_new_pub
 
     def update_detail_df(self, df_details, pub_id):
         print('UPDATE edit detail')
-        print('pub_id received: ' + pub_id)
+        # print('pub_id received: ' + pub_id)
         for detail in list(Detail().__dict__.keys()):
-            print(detail + ' : ' + request.form[detail])
+            # print(detail + ' : ' + request.form[detail])
             df_details.loc[df_details['pub_identity'] == pub_id, detail] = request.form[detail]
         print('details model updated with form data')
         return df_details

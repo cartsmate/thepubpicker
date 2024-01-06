@@ -37,16 +37,16 @@ function set_feature_icon_colour(check_item) {
     var checkCol = document.getElementById(check_item + "_col");
     if (checkBox.checked == true) {
         console.log('checkbox is true')
-        image.style.opacity = "1.0"
-        caption.style.opacity = "1.0"
+        checkCol.style.opacity = "1.0"
+        //caption.style.opacity = "1.0"
         caption.style.color = "white"
         checkCol.style.background = "coral"
         checkCol.style.border = "thin solid coral";
         checkBox.value = true
     } else {
         console.log('checkbox is false')
-        image.style.opacity = "0.5"
-        caption.style.opacity = "0.5"
+        checkCol.style.opacity = "0.5"
+        //caption.style.opacity = "0.5"
         caption.style.color = "black"
         checkCol.style.background = "white"
         checkCol.style.border = "thin solid coral";

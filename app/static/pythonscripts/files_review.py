@@ -44,8 +44,24 @@ class FilesReview:
 
     def form_review(self):
         print('get review form')
-        new_review = Review(review_identity=request.form['review_identity'],
-                            review_deletion=request.form['review_deletion'], pub_identity=request.form['pub_identity'],
+        # print(request.form['review_identity'])
+        # print(request.form['review_deletion'])
+        # print(request.form['pub_identity'])
+        # print(request.form.get('brunch'))
+        # print(request.form.get('dart'))
+        # print(request.form.get('entertain'))
+        # print(request.form.get('favourite'))
+        # print(request.form.get('garden'))
+        # print(request.form.get('history'))
+        # print(request.form.get('late'))
+        # print(request.form.get('music'))
+        # print(request.form.get('pool'))
+        # print(request.form.get('quiz'))
+        # print(request.form.get('roast'))
+        # print(request.form.get('sport'))
+        # print(request.form.get('no_feature'))
+        new_review = Review(review_identity=UuidGenerator().get_new_uuid(),
+                            review_deletion='false', pub_identity=request.form['pub_identity'],
                             brunch='1' if request.form.get('brunch') == 'on' else '0',
                             dart='1' if request.form.get('dart') == 'on' else '0',
                             entertain='1' if request.form.get('entertain') == 'on' else '0',
@@ -58,7 +74,7 @@ class FilesReview:
                             quiz='1' if request.form.get('quiz') == 'on' else '0',
                             roast='1' if request.form.get('roast') == 'on' else '0',
                             sport='1' if request.form.get('sport') == 'on' else '0',
-                            no_feature='1' if request.form.get('sport') == 'on' else '0')
+                            no_feature='1' if request.form.get('no_feature') == 'on' else '0')
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 
@@ -71,7 +87,7 @@ class FilesReview:
                     print('if')
                     print(review + ' : ' + str(request.form.get(review + "_check")))
                     df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = '1' \
-                        if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == '1')\
+                        if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == 'true')\
                         else '0'
                 else:
                     print('else')
