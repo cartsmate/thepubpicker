@@ -1,5 +1,11 @@
 function pre_populate(feature, station, filters_str) {
     console.log('pre_populate')
+    console.log('feature')
+    console.log(feature)
+    console.log('station')
+    console.log(station)
+    console.log('filters_str')
+    console.log(filters_str)
     if (feature != 'none' && feature != null) {
         document.getElementById(feature + "_filter").checked = true
     } else if (station != 'none' && station != null) {

@@ -1,3 +1,22 @@
+{% block script %}
+    <script>feature = {{ feature | tojson}}</script>
+    <script>station = {{ station | tojson}}</script>
+    <script>filters = {{ filters | tojson}}</script>
+    <script>directions_list = {{ directions_list | tojson}}</script>
+    <script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/pre_populate.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_clear.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_all_filters.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_feature.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_direction.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_diary2.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_all_data.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_feature.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_direction.js') }}"></script>
+{% endblock %}
+
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/collapse_section.js') }}"></script>
 <style>
 #overlay {

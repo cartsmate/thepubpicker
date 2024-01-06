@@ -1,0 +1,23 @@
+<div onclick="redirect_back_collection('{{feature}}')">
+    {% if feature != ''%}
+        <a href="#" style="padding: 0px; margin: 0px; font-size: 16px; font-weight: bold; text-decoration: none; color: white;"><<<</a>
+    {% else %}
+        <a></a>
+    {% endif %}
+</div>
+
+<script>
+    function redirect_back_collection() {
+        console.log("redirect_back_collection")
+        console.log(feature)
+        var base_url = window.location.hostname
+        if (env_vars['env'] == 'qual') {
+            var url = "http://" + base_url + ":5000/collection/"
+        } else {
+            var url = "http://" + base_url + "/collection/"
+        }
+        const myUrlWithParams = new URL(url);
+        myUrlWithParams.searchParams.append('feature', feature);
+        window.location.replace(myUrlWithParams.href);
+    }
+</script>

@@ -6,8 +6,9 @@ function add_listeners() {
     model_format = model_formats['icon_list']
     for (field in model_format) {
         var marker = model_format[field]
-        if (marker != 'no_feature') {
-            var marker = model_format[field]
+        if (marker != 'nofeature') {
+            var marker = model_format[field] + "_carousel"
+            console.log(marker)
             document.getElementById(marker).addEventListener('click', (function (marker) {
                 return function () {
                     console.log('carousel listener triggered')
@@ -18,8 +19,9 @@ function add_listeners() {
                         var url = "http://" + base_url + "/collection/"
                     }
                     const myUrlWithParams = new URL(url);
-                    myUrlWithParams.searchParams.append('feature', marker);
-                    myUrlWithParams.searchParams.append('back', document.title);
+                    underscore = marker.indexOf("_");
+                    attr_marker = marker.substr(0,underscore);
+                    myUrlWithParams.searchParams.append('feature', attr_marker);
                     window.location.replace(myUrlWithParams.href);
                     }
                 })(marker))

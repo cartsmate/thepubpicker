@@ -3,7 +3,8 @@ function onload_summary() {
 
     populate_summary(daily_id)
     populate_autocomplete()
-    map_load_summary()
+    //map_load_summary()
     add_listeners()
+    onload_collection()
 
 }
