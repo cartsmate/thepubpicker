@@ -7,7 +7,7 @@ function populate_feature(pub_filtered) {
         var filtered_data = pub_filtered.filter(function(x) {
             return x[model_formats['icon_list'][i]] == '1'
         })
-        //console.log(model_formats['icon_list'][i] + " : " + filtered_data.length)
+        console.log(model_formats['icon_list'][i] + " : " + filtered_data.length)
         record = document.createElement("div")
         record.className = 'row'
         checks_feature = document.getElementById("checks_feature")

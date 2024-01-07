@@ -3,7 +3,7 @@ function filter_by_feature(filtered_data) {
     console.log('data in: ' + filtered_data.length)
     console.log(filtered_data)
     for (i=0; i<model_formats['icon_list'].length; i++) {
-        if (model_formats['icon_list'][i] != 'nofeature') {
+        //if (model_formats['icon_list'][i] != 'nofeature') {
             console.log(model_formats['icon_list'][i])
             if (document.getElementById(model_formats['icon_list'][i] + "_filter").checked) {
                 console.log('checked')
@@ -19,7 +19,7 @@ function filter_by_feature(filtered_data) {
                     });
             }
             console.log(filtered_data.length)
-        }
+        //}
     }
     console.log('data out: ' + filtered_data.length)
     return filtered_data

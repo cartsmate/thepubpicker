@@ -35,6 +35,7 @@ def summary():
     # # # GET DAILY PUB
     df_details_daily = Csv().go_get_details_daily()
     daily_id = df_details_daily.iloc[0]['pub_identity']
+    photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
 
     pub_list = []
     df_details = Csv().go_get_details()
@@ -66,7 +67,7 @@ def summary():
     return render_template('01_summary.html',
                            pub=pub_json,
                            pub_list=pub_list,
-                           # photos_list=photos_list,
+                           photos_list=photos_list,
                            daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,

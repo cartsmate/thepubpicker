@@ -4,6 +4,7 @@
     <title>summary</title>
     <script>pub = {{ pub | tojson }}</script>
     <script>pub_list = {{ pub_list | tojson }}</script>
+    <script>photos_list = {{ photos_list | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>daily_id = {{ daily_id | tojson }}</script>
@@ -42,22 +43,4 @@
 
 {% block carousel %}
     {% include "9_carousel_50.html" %}
-{% endblock %}
-
-{% block list %}
-    <div class="col">
-        <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-            <div class="col-2"></div>
-            <div class="col-8" style="text-align: center;" id="pub_length"></div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            {% include "9_filter_overlay.html" %}
-        </div>
-    </div>
-    {% include "9_map.html" %}
-    <div style="margin-left: 10px;">
-        <input id="selector" type="text" placeholder="search all pubs...">
-    </div>
-    {% include "9_list.html" %}
 {% endblock %}
