@@ -1,0 +1,146 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+    .car1 .carousel-inner .carousel-item.active,
+    .car1 .carousel-inner .carousel-item-next,
+    .car1 .carousel-inner .carousel-item-prev {
+        display: flex;
+        }
+    .car1 .carousel-inner .carousel-item-end.active,
+    .car1 .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+        }
+    .car1 .carousel-inner .carousel-item-start.active,
+    .car1 .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+        }
+    .car1 .carousel { overflow: hidden; padding-bottom: 4rem; }
+    .car1 .carousel-inner { overflow: visible;}
+    .car1 .carousel .carousel-indicators {
+      color: grey;
+      width: 25px;
+      height: 10px;
+    }
+    .car1 .carousel .carousel-indicators .active {
+      background: coral;
+      width: 25px;
+      height: 10px;
+    }
+    .car1 .carousel-control-next {
+        width: 30px;
+        height: 240px;}
+    .car1 .carousel-control-next-icon {
+        width: 30px;
+        background-color: coral;}
+    .car1 .carousel-control-prev {
+        width: 30px;
+        height: 240px;}
+    .car1 .carousel-control-prev-icon {
+        width: 30px;
+        background-color: coral;}
+
+</style>
+
+<div class="col black">
+    <div class="row pink">
+        <div class="car1">
+            <div class="carousel" data-bs-ride="carousel" id="carouselExample" style="position: relative; height: 240px;">
+                <div class="carousel-indicators" style="position: absolute; width: 200px;">
+                    <button style="width: 25px; height: 10px;" type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button style="width: 25px; height: 10px;" type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button style="width: 25px; height: 10px;" type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button style="width: 25px; height: 10px;" type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button style="width: 25px; height: 10px;" type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button style="width: 25px; height: 10px;" type="button" data-bs-target="#carouselExample" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner" >
+                    <div class="carousel-item active" style="padding: 0px, margin: 0px;">
+                        <div class="col-md-6" style="padding: 0px, margin: 0px;" >
+                            <div id="brunch_carousel">
+                                <div>
+                                    <img src="/static/images/brunch.jpeg" class="carousel_pic"  >
+                                </div>
+                                <div style="text-align: center; font-size: 12px; font-weight: bold;">
+                                    Bottomless Brunch
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <div class="col-md-6" style="padding: 0px, margin: 0px;">
+                            <div id="entertain_carousel">
+                                <div>
+                                    <img src="/static/images/entertain.jpeg" class="carousel_pic" >
+                                </div>
+                                <div style="text-align: center; font-size: 12px; font-weight: bold;">
+                                    Entertainment
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <div class="col-md-6" style="padding: 0px, margin: 0px;" >
+                            <div id="garden_carousel">
+                                <div>
+                                    <img src="/static/images/garden.jpeg" class="carousel_pic"  >
+                                </div>
+                                <div style="text-align: center; font-size: 12px; font-weight: bold;">
+                                    Beer Garden
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item"  style="padding: 0px, margin: 0px;">
+                        <div class="col-md-6" style="padding: 0px, margin: 0px;">
+                            <div id="late_carousel">
+                                <div>
+                                    <img src="/static/images/late.jpeg" class="carousel_pic"  >
+                                </div>
+                                <div style="text-align: center; font-size: 12px; font-weight: bold;">
+                                    Opens Late
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item"  style="padding: 0px, margin: 0px;">
+                        <div class="col-md-6" style="padding: 0px, margin: 0px;">
+                            <div id="pool_carousel">
+                                <div>
+                                    <img src="/static/images/pool.jpeg" class="carousel_pic"  >
+                                </div>
+                                <div style="text-align: center; font-size: 12px; font-weight: bold;">
+                                    Pool Table
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item"  style="padding: 0px, margin: 0px;">
+                        <div class="col-md-6" style="padding: 0px, margin: 0px;">
+                            <div id="roast_carousel">
+                                <div>
+                                    <img src="/static/images/roast.jpeg" class="carousel_pic"  >
+                                </div>
+                                <div style="text-align: center; font-size: 12px; font-weight: bold;">
+                                    Sunday Roast
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

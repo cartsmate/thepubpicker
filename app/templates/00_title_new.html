@@ -1,0 +1,46 @@
+{% extends '00_template.html' %}
+
+{% block script %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script>env_vars = {{ env_vars | tojson }}</script>
+    <script>model_formats = {{ model_formats | tojson }}</script>
+    <script>daily_id = {{ daily_id | tojson }}</script>
+    <script>pub = {{ pub | tojson }}</script>
+    <script>photos_list = {{ photos_list | tojson }}</script>
+    <script>filters = {{ filters | tojson}}</script>
+    <script>directions_list = {{ directions_list | tojson}}</script>
+    <script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_title.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_title2.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_summary.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_collection.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listeners.js') }}"></script>
+
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_autocomplete.js') }}"></script>
+{% endblock %}
+
+{% block on_load %}
+    <body onload="onload_title2()" class="page-background">
+{% endblock %}
+
+{% block title %}
+<div class="col-2">{% include "9_icon_burger.html" %}</div>
+    <div class="col-8" align="center" >{% include "9_title.html" %}</div>
+    <div class="col-2">{% include "9_icon_search.html" %}</div>
+{% endblock %}
+
+{% block header %}
+    <div><input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
+    <div>{% include "9_filter.html" %}</div>
+    <div>{% include "9_carousel_double3.html" %}</div>
+    {% include "9_map.html" %}
+    {% include "9_list.html" %}
+{% endblock %}
+
+{% block pub_summary %}
+    {% include "9_summary.html" %}
+    {% include "9_pub_photo.html" %}
+{% endblock %}

@@ -7,7 +7,7 @@ function add_listeners() {
     for (field in model_format) {
         var marker = model_format[field]
         if (marker != 'nofeature') {
-            var marker = model_format[field] + "_carousel"
+            var marker = model_format[field] + "_carousel2"
             console.log(marker)
             document.getElementById(marker).addEventListener('click', (function (marker) {
                 return function () {

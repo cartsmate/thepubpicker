@@ -1,0 +1,124 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+    .car2 .carousel {
+        height: 50px;
+        }
+    .car2 .carousel-inner .carousel-item.active,
+    .car2 .carousel-inner .carousel-item-next,
+    .car2 .carousel-inner .carousel-item-prev {
+        display: flex;
+        }
+    .car2 .carousel-inner .carousel-item-end.active,
+    .car2 .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+        }
+    .car2 .carousel-inner .carousel-item-start.active,
+    .car2 .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+        }
+    .car2 .carousel { overflow: hidden; padding-bottom: 4rem; }
+    .car2 .carousel-inner { overflow: visible;}
+    .car2 .carousel .carousel-indicators {
+      color: grey;
+      width: 25px;
+      height: 10px;
+    }
+    .car2 .carousel .carousel-indicators .active {
+      background: blue;
+      width: 25px;
+      height: 10px;
+    }
+    .car2 .carousel-control-next {
+        width: 30px;
+        height: 50px;
+}
+    .car2 .carousel-control-next-icon {
+        width: 30px;
+        background-color: blue;}
+    .car2 .carousel-control-prev {
+        width: 30px;
+        height: 50px;
+}
+    .car2 .carousel-control-prev-icon {
+        width: 30px;
+        background-color: blue;}
+
+</style>
+
+<div class="col black">
+    <div class="row pink">
+        <div class="car2">
+            <div class="carousel slide" data-bs-ride="carousel" id="carouselExample2">
+                <div class="carousel-inner" >
+                    <div id="brunch_carousel2" class="carousel-item active" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/brunch.png" height="50" width="50">
+                    </div>
+                    <div  id="dart_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/dart.png" height="50" width="50">
+                    </div>
+                    <div id="entertain_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/entertain.png" height="50" width="50">
+                    </div>
+                    <div id="favourite_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/favourite.png"  height="50" width="50">
+                    </div>
+                    <div id="garden_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/garden.png" height="50" width="50"  >
+                    </div>
+                    <div id="history_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/history.png" height="50" width="50"  >
+                    </div>
+                    <div id="late_carousel2" class="carousel-item"  style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/late.png" height="50" width="50"  >
+                    </div>
+                    <div id="music_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/music.png" height="50" width="50"  >
+                    </div>
+                    <div id="pool_carousel2" class="carousel-item"   style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/pool.png" height="50" width="50" >
+                    </div>
+                    <div id="quiz_carousel2" class="carousel-item"  style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/quiz.png" height="50" width="50" >
+                    </div>
+                    <div id="roast_carousel2" class="carousel-item"  style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/roast.png" height="50" width="50" >
+                    </div>
+                    <div id="sport_carousel2" class="carousel-item" style="padding: 0px, margin: 0px;">
+                        <img src="/static/icons/features/sport.png" height="50" width="50" >
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    var items = document.querySelectorAll('.car2 .carousel .carousel-inner .carousel-item');
+    items.forEach((e)=>{
+        const slide = 6;
+        let next = e.nextElementSibling;
+        for (var i=0; i < slide; i++){
+            if(!next){
+                next = items[0]
+            }
+            let clonechild = next.cloneNode(true)
+            e.appendChild(clonechild.children[0])
+            next = next.nextElementSibling
+        }
+    })
+
+</script>

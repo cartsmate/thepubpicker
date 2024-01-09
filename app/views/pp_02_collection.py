@@ -46,12 +46,12 @@ def collection():
     df_data = Csv().go_get_all()
     pub_json = Dataframes().df_to_dict(df_data)
 
-    headers = df_data.columns
+    # headers = df_data.columns
     stations_directions_list = Csv().go_get_stations_directions_list()
     directions_list = Csv().go_get_directions_list()
     visible = Objects().go_get_visible()
     alias = Objects().go_get_alias()
-    diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    # diary_headers = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     review_list = []
     for k, v in Review().__dict__.items():
         review_list.append(v.name)

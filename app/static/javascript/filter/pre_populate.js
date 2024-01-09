@@ -1,16 +1,9 @@
-function pre_populate(feature, station, filters_str) {
+//function pre_populate(feature, station, filters_str) {
+function pre_populate(filters_str) {
     console.log('pre_populate')
-    console.log('feature')
-    console.log(feature)
-    console.log('station')
-    console.log(station)
     console.log('filters_str')
     console.log(filters_str)
-    if (feature != 'none' && feature != null) {
-        document.getElementById(feature + "_filter").checked = true
-    } else if (station != 'none' && station != null) {
-        document.getElementById(station + "_filter").checked = true
-    } else if (filters_str != 'dl,sl,fl' && filters_str != null) {
+    if (filters_str != 'dl,sl,fl' && filters_str != null) {
         var filters_list = filters_str.split(',');
         d_list = []
         d_obj = {}

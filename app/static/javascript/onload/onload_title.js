@@ -3,4 +3,5 @@ function onload_title() {
     //startAuto()
     //startTypa();
     //startTypb();
+    add_listeners()
 }

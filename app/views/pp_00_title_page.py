@@ -26,7 +26,10 @@ def home():
     print('start TITLE')
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
+    # # # GET MODEL DISPLAY FORMATS
+    model_formats = ControlsList().go_get_control_list()
     print('end TITLE')
 
     return render_template('00_title_page.html',
-                           env_vars=env_vars)
+                           env_vars=env_vars,
+                           model_formats=model_formats,)

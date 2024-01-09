@@ -132,7 +132,7 @@ class Csv:
         #         or current_timestamp.weekday() != daily_pub_timestamp.weekday()):
         if new_timestamp_str == previous_timestamp_str:
             print("same day")
-            df_details_day = df_lastline
+            daily_id = df_lastline.iloc[0]['pub_identity']
 
         else:
             print("next day")
@@ -162,8 +162,9 @@ class Csv:
             else:
                 s3_resp = S3().s3_write(df_appended, 'featured.csv')
                 print(s3_resp)
-            df_details_day = df_new
-        return df_details_day
+            # df_details_day = df_new
+            daily_id = df_new.iloc[0]['pub_identity']
+        return daily_id
 
     def go_get_details(self):
         print('CSV - go get details')

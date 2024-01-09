@@ -81,10 +81,10 @@ class CsvSingle:
     def go_get_place_id(self, pub_id):
         print('go_get_place_id')
         df_detail = self.go_get_1_detail(pub_id)
-        # print(df_detail)
+        print(df_detail.transpose())
         df_place_id = df_detail.iloc[0]['place']
-        # print('df_place_id')
-        # print(df_place_id)
+        print('df_place_id')
+        print(df_place_id)
         return df_place_id
 
     def go_get_places(self, place_id, env_vars):
