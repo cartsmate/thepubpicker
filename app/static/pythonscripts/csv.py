@@ -81,6 +81,7 @@ class Csv:
         # df_photos = self.go_get_photos()
         # df_with_photos = pd.merge(df_pb_rev_st_dir_drys, df_photos, on='pub_identity', how='left')
         df_pb_rev_st_dir_drys = df_pb_rev_st_dir_drys.fillna('')
+        df_pb_rev_st_dir_drys['distance'] = 0
 
         return df_pb_rev_st_dir_drys
 

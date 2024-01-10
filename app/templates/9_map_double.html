@@ -10,9 +10,12 @@
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_summary.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_collection.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds_beta.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed_beta.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/sort_by_distance.js') }}"></script>
     <script>
         function map_init_summary() {
             console.log('MAP INIT SUMMARY')
@@ -35,22 +38,23 @@
         }
         function map_init_search() {
             console.log('MAP INIT SEARCH')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
+            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 13)
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);
-            map_addListener_bounds_changed(map, pub, searchBox);
+            map_addListener_bounds_changed_beta(map, pub, searchBox);
             map_addListener_click_placeid(map)
         }
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')
-
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             pub_filtered = filter_all_data()
             console.log('pub_filtered')
             console.log(pub_filtered)
             console.log(pub_filtered|length)
             console.log(pub_filtered.length)
+            marker_add_collection(map, pub_filtered)
+            /*
             if (pub_filtered.length <= 10) {
                 marker_add_collection(map, pub_filtered)
                 document.getElementById('msg_map').innerHTML = ''
@@ -62,6 +66,7 @@
                 //elem.className = "map_words"
                 //map_elem.appendChild(elem)
             }
+            */
         }
         function map_init_1() {
             console.log('MAP INIT 1')

@@ -1,5 +1,5 @@
 function map_addListener_click_placeid(map) {
-    console.log('add_listen_click')
+    console.log('map click listener added')
     var infowindow = new google.maps.InfoWindow();
     map.addListener('click', function (event) {
         // If the event is a POI

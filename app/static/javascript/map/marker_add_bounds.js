@@ -7,6 +7,7 @@ function clearOverlays() {
 }
 function marker_add_bounds(map, bounds, data) {
     console.log('ADD MARKERS INSIDE BOUNDS')
+    console.log('data in: ' + data.length)
     clearOverlays();
     map_elem = document.getElementById('msg_map');
     map_elem.innerHTML = '';
@@ -40,8 +41,8 @@ function marker_add_bounds(map, bounds, data) {
     var south = south_west_str[0]
     var east = north_east_str[1]
     var west = south_west_str[1]
-    console.log('data')
-    console.log(data)
+    //console.log('data')
+    //console.log(data)
     for (var i = 0; i < data.length; i++) {
         //console.log('marker_counter: ' + marker_counter)
         if (marker_counter < 10) {

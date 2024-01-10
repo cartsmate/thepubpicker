@@ -2,7 +2,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
     console.log('searchbox addListener places changed ADDED')
     let markers = [];
     searchBox.addListener("places_changed", () => {
-        //show map
+        console.log('search box has chnaged place')
         document.getElementById('col_map').style.display = "block";
         //get place name from searchbox
         const places = searchBox.getPlaces();
