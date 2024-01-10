@@ -1,4 +1,4 @@
-<div class="col" id="col_map">
+<div class="col" id="col_map" style="display: none;">
     <div class="photo" id="new_map"></div>
     <div class="map_words" id="msg_map"></div>
 </div>
@@ -81,6 +81,7 @@
             searchbox_addListener_places_changed(map, searchBox);
             map_addListener_bounds_changed(map, pub, searchBox);
             map_addListener_click_placeid(map)
+
         }
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')

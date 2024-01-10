@@ -1,4 +1,4 @@
-function onload_title2() {
+function onload_new() {
 
     populate_all_filters(pub)
     //add_listeners()

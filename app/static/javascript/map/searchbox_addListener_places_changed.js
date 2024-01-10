@@ -2,6 +2,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
     console.log('searchbox addListener places changed ADDED')
     let markers = [];
     searchBox.addListener("places_changed", () => {
+        document.getElementById('col_map').style.display = "block";
         const places = searchBox.getPlaces();
         if (places.length == 0) {
             return;
@@ -110,4 +111,5 @@ function searchbox_addListener_places_changed(map, searchBox) {
         //document.getElementById("name").value = document.getElementById("search-input-navbar").value
 //        document.getElementById("search-input-navbar").value = "Search"
     });
+
 }

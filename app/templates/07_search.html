@@ -12,6 +12,7 @@
     <script>review_list = {{ review_list | tojson}}</script>
     <script>directions_list = {{ directions_list | tojson}}</script>
     <script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_new.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_addjson_search.js') }}"></script>

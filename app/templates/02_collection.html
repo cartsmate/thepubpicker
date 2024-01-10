@@ -37,14 +37,8 @@
 
 {% block header %}
     <div class="col">
-        <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
-            <div class="col-2"></div>
-            <div class="col-8" style="text-align: center;" id="pub_length"></div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            {% include "9_filter_overlay.html" %}
-        </div>
+        {% include "9_pub_header.html" % }
+        {% include "9_filter_overlay.html" %}
     </div>
 {% endblock %}
 
@@ -52,4 +46,6 @@
     {% include "9_map.html" %}
 {% endblock %}
 
-{% block list %}{% include "9_list.html" %}{% endblock %}
+{% block list %}
+    {% include "9_list.html" %}
+{% endblock %}
