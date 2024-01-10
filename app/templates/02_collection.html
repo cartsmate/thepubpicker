@@ -13,6 +13,7 @@
     <script>review_list = {{ review_list | tojson}}</script>
     <script>directions_list = {{ directions_list | tojson}}</script>
     <script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_new.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_search.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/calculate_pubs.js') }}"></script>
@@ -37,13 +38,13 @@
 
 {% block header %}
     <div class="col">
-        {% include "9_pub_header.html" % }
+        {% include "9_pub_header.html" %}
         {% include "9_filter_overlay.html" %}
     </div>
 {% endblock %}
 
-{% block map %}
-    {% include "9_map.html" %}
+{% block pub_summary %}
+    {% include "9_map_summary.html" %}
 {% endblock %}
 
 {% block list %}

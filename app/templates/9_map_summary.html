@@ -1,7 +1,8 @@
-<div class="col black" id="col_map">
-    <div class="row pink photo" id="new_map">
+<div class="col" id="col_map">
+    <div class="photo" id="new_map"></div>
     <div class="map_words" id="msg_map"></div>
 </div>
+
 {% block script %}
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/nearest_station.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>

@@ -33,8 +33,9 @@ def summary():
     model_formats = ControlsList().go_get_control_list()
 
     # # # GET DAILY PUB
-    df_details_daily = Csv().go_get_details_daily()
-    daily_id = df_details_daily.iloc[0]['pub_identity']
+    # df_details_daily = Csv().go_get_details_daily()
+    # daily_id = df_details_daily.iloc[0]['pub_identity']
+    daily_id = Csv().go_get_details_daily()
     photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
 
     pub_list = []

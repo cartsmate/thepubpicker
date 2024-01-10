@@ -1,0 +1,67 @@
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/beta/populate_photo_beta.js') }}"></script>
+
+<style>
+
+
+	.qqq .carousel-inner .carousel-item.active,
+	.qqq .carousel-inner .carousel-item-next,
+	.qqq .carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	.qqq .carousel-inner .carousel-item-end.active,
+	.qqq .carousel-inner .carousel-item-next {
+		transform: translateX(25%);
+	}
+
+	.qqq .carousel-inner .carousel-item-start.active,
+	.qqq .carousel-inner .carousel-item-prev {
+		transform: translateX(-25%);
+	}
+
+	.qqq .carousel-inner .carousel-item-end,
+	.qqq .carousel-inner .carousel-item-start {
+		transform: translateX(0);
+	}
+
+    .qqq .carousel-control-next {
+        width: 30px;
+        height: 50px;
+}
+    .qqq .carousel-control-next-icon {
+        width: 30px;
+        background-color: blue;}
+    .qqq .carousel-control-prev {
+        width: 30px;
+        height: 50px;
+}
+    .qqq .carousel-control-prev-icon {
+        width: 30px;
+        background-color: blue;}
+</style>
+
+<div class="container text-center my-3">
+  <div class="row qqq mx-auto my-auto justify-content-center">
+    <div id="carouselExampleFade" class="slide carousel-fade" >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/static/images/coming_soon.jpg" id="image_0" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/images/coming_soon.jpg" id="image_1" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/images/coming_soon.jpg" id="image_2" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>

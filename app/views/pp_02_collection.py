@@ -35,8 +35,9 @@ def collection():
     model_formats = ControlsList().go_get_control_list()
 
     # # # GET DAILY PUB
-    df_details = Csv().go_get_details_daily()
-    daily_id = df_details.iloc[0]['pub_identity']
+    daily_id = Csv().go_get_details_daily()
+    # df_details = Csv().go_get_details_daily()
+    # daily_id = df_details.iloc[0]['pub_identity']
 
     # # # DETECT REQUEST FOR FEATURE OR STATION
     feature = request.args.get('feature')
