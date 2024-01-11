@@ -1,7 +1,7 @@
-function add_listeners_carousel_features() {
+function add_listeners_multi_cards() {
     //model_format = {{model_formats | tojson}}['icon_list']
     //env_vars['google_key']
-    console.log('ADD LISTENERS')
+    console.log('ADD LISTENERS multi cards')
 
     model_format = model_formats['icon_list']
     for (field in model_format) {

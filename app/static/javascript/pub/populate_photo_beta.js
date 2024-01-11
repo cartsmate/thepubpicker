@@ -1,5 +1,5 @@
 function populate_photo_beta() {
-    console.log('POPULATE_PHOTO')
+    console.log('POPULATE_PHOTO beta')
     for (i = 0; i < photos_list.length; i++) {
         var elem = 'photo_' + i
         console.log(photos_list[i])

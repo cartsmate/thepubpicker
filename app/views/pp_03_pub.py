@@ -45,6 +45,7 @@ def pub():
     # df_photo = CsvSingle().go_get_1_photo(pub_id)
     # photo_json = Dataframes().df_to_dict(df_photo)
     photos_list = CsvSingle().go_get_1_photo_request(pub_id, env_vars)
+
     # print(photos_list)
     # # # FOR TESTING PURPOSES ONLY
     # newdf = df_pub.transpose()

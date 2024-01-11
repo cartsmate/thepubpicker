@@ -5,4 +5,5 @@ function onload_pub() {
     console.log('filters')
     console.log(filters)
     populate_search_back(filters)
+    populate_photo_beta()
 }

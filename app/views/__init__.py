@@ -1,4 +1,5 @@
 from .pp_00_beta import beta
+from .pp_00_title_new_carousel import new_carousel
 from .pp_00_title_new import new
 from .pp_00_title_page import home
 from .pp_01_summary import summary
