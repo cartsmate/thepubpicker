@@ -1,0 +1,22 @@
+<button type="button" id="button_reset" style="background-color: white;" class="btn click text-left">reset</button>
+<style>
+#button_reset:hover{
+    background-color: coral;
+}
+</style>
+<script>
+    var button_reset = document.getElementById('button_reset')
+
+    button_reset.addEventListener("click", function() {
+
+        filter_reset()
+        console.log('USER INPUT: reset click')
+        console.log('pub length: ' + pub.length)
+        pub_filtered = pub
+        list_setup(pub_filtered)
+        //populate_review(pub_filtered)
+        populate_all_filters(pub_filtered)
+        populate_header(pub_filtered.length)
+        map_load_collection(pub_filtered)
+    })
+</script>
