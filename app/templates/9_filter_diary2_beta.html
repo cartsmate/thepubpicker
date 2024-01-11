@@ -1,18 +1,13 @@
 <button type="button" id="button_diary2" class="collapsible_diary btn click text-left">by day</button>
 <div class="content" id="content_diary2" style="display: none; background: #F5F5F5;" >
     <div class="col">
-        <div class="row">
-            <label id="monday_filter_label" style="width: 200px; font-size: 12px; padding: 0px; margin: 0px;">
-                <input id="filter_monday" type="checkbox" class="radio" value="monday" name="fooby[1][]" />
-                Monday
-            </label>
-        </div>
-        <div class="row"><label id="tuesday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;"><input id="tuesday_filter" type="checkbox" class="radio" value="tuesday" name="fooby[1][]" />Tuesday</label></div>
-        <div class="row"><label id="wednesday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;"><input id="wednesday_filter" type="checkbox" class="radio" value="wednesday" name="fooby[1][]" />Wednesday</label></div>
-        <div class="row"><label id="thursday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;"><input id="thursday_filter" type="checkbox" class="radio" value="thursday" name="fooby[1][]" />Thursday</label></div>
-        <div class="row"><label id="friday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;"><input id="friday_filter" type="checkbox" class="radio" value="friday" name="fooby[1][]" />Friday</label></div>
-        <div class="row"><label id="saturday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;"><input id="saturday_filter" type="checkbox" class="radio" value="saturday" name="fooby[1][]" />Saturday</label></div>
-        <div class="row"><label id="sunday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;"><input id="sunday_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" />Sunday</label></div>
+        <div class="row"><label id="monday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Monday<input id="filter_monday" type="checkbox" class="radio" value="monday" name="fooby[1][]" /></label></div>
+        <div class="row"><label id="tuesday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Tuesday<input id="tuesday_filter" type="checkbox" class="radio" value="tuesday" name="fooby[1][]" /></label></div>
+        <div class="row"><label id="wednesday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Wednesday<input id="wednesday_filter" type="checkbox" class="radio" value="wednesday" name="fooby[1][]" /></label></div>
+        <div class="row"><label id="thursday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Thursday<input id="thursday_filter" type="checkbox" class="radio" value="thursday" name="fooby[1][]" /></label></div>
+        <div class="row"><label id="friday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Friday<input id="friday_filter" type="checkbox" class="radio" value="friday" name="fooby[1][]" /></label></div>
+        <div class="row"><label id="saturday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Saturday<input id="saturday_filter" type="checkbox" class="radio" value="saturday" name="fooby[1][]" /></label></div>
+        <div class="row"><label id="sunday_filter_label" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Sunday<input id="sunday_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" /></label></div>
     </div>
 </div>
 <style>
@@ -25,6 +20,14 @@
   background-color: #F5F5F5;
   //transform: translate(-50%,-50%);
   //-ms-transform: translate(-50%,-50%);
+}
+#button_diary2:hover{
+    background-color: coral;
+    color: white;
+    border-left: 5px solid coral;
+    border-bottom: 5px solid coral;
+    border-right: 5px solid coral;
+    border-top: 5px solid coral;
 }
 </style>
 

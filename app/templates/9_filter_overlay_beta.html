@@ -12,6 +12,7 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_feature.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_direction.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_reset.js') }}"></script>
 {% endblock %}
 
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/collapse_section.js') }}"></script>
@@ -27,28 +28,41 @@
   cursor: pointer; /* Add a pointer on hover */
 }
 #content_filters{
-  position: absolute;
-  //top: 50%;
-  //left: 50%;
-  top: 75px;
-  left: 40px;
-  z-index: 2;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+    position: absolute;
+    top: 105px;
+    left:30px;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+#collapsible_filters {
+    font-size:12px;
+    color: black;
+    background-color: white;
+    border-left: 5px solid coral;
+    border-bottom: 5px solid coral;
+    border-right: 5px solid white;
+    border-top: 5px solid white;
+    width: 75px;
+}
+#collapsible_filters:hover{
+    background-color: coral;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    color: white;
 }
 #all_filters{
     position: relative;
     right: 5px;
 }
-#collapsible_filters:hover{
-    background-color: coral;
-    color: white
-}
+
 
 </style>
     <div id="overlay" onclick="off()"></div>
     <div id="all_filters">
-        <button type="button" onclick="on()" id="collapsible_filters" class="collapsible_filters btn click">Filters</button>
+        <button type="button" onclick="on()" id="collapsible_filters" class="collapsible_filters btn">Filters</button>
         <div class="content_filters" id="content_filters" style="display: none">
             <div class="col">
                 <div class="row">

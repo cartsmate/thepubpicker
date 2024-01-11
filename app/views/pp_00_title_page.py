@@ -20,7 +20,6 @@ from app.models.photo.photo import Photo
 from config import Configurations
 
 
-@app.route("/", methods=['GET'])
 @app.route("/home/", methods=['GET'])
 def home():
     print('start TITLE')

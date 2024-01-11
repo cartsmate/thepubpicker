@@ -1,13 +1,11 @@
 function populate_feature(pub_filtered) {
     console.log('populate feature')
     console.log('data in: ' + pub_filtered.length)
-    //document.getElementById('button_feature').innerHTML = '<a>by feature (' + pub_filtered.length + ')</a>'
     filter_clear('checks_feature')
     for (i=0; i<model_formats['icon_list'].length; i++) {
         var filtered_data = pub_filtered.filter(function(x) {
             return x[model_formats['icon_list'][i]] == '1'
         })
-        //console.log(model_formats['icon_list'][i] + " : " + filtered_data.length)
         record = document.createElement("div")
         record.className = 'row'
         checks_feature = document.getElementById("checks_feature")

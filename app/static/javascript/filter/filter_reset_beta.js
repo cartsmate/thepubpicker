@@ -2,9 +2,6 @@ function filter_reset() {
     console.log('FILTER_RESET')
     console.log('pub count: ' + pub.length)
     all_data = pub
-    document.getElementById('pub_table').style.display = "none"
-    document.getElementById('col_map').style.display = "none"
-    col_map
     for (i=0; i<directions_list.length; i++) {
         var filtered_data = all_data.filter(function(pub) {
             return pub.direction_identity == directions_list[i][0]

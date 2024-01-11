@@ -12,6 +12,7 @@ from app.models.photo.photo import Photo
 from config import Configurations
 
 
+@app.route("/", methods=['GET'])
 @app.route("/new/", methods=['GET'])
 def new():
     print('start TITLE NEW')
