@@ -39,7 +39,7 @@
 </div>
 <button class="button button_wrapL" id="forwards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;"><<</a></button>
 <button class="button button_wrapR" id="rewards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;">>></a></button>
-
+<div id="touchsurface_words">xxxxxx</div>
 <script src="/static/javascript/carousel/spinner.js"></script>
 
 <script>
@@ -72,7 +72,7 @@ window.addEventListener('load', function(){
         }
     }
 
-    //var touchsurface_words = document.getElementById('touchsurface_words');
+    var touchsurface_words = document.getElementById('touchsurface_words');
     var touchsurface = document.getElementById('the_carousel'),
         startX,
         startY,
@@ -86,13 +86,12 @@ window.addEventListener('load', function(){
         if (isrightswipe > 0) {
             let stepReward = count -= stepCount;
             nextStep(stepReward);
-            //touchsurface_words.innerHTML = 'Congrats, you\'ve made a <span style="color:red">right swipe!</span>'
+            touchsurface_words.innerHTML = 'Swiped right: ' + isrightswipe
             }
         else{
             let stepForward = count += stepCount;
             nextStep(stepForward);
-
-            //touchsurface_words.innerHTML = 'Condition for right swipe not met yet'
+            touchsurface_words.innerHTML = 'Swiped left: ' + isrightswipe
         }
     }
 
