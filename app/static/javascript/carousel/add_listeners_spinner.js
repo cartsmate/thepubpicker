@@ -37,7 +37,11 @@ function add_listeners_spinner() {
                     var center = new google.maps.LatLng(pubs_sorted[0]['detail_latitude'], pubs_sorted[0]['detail_longitude']);
                     console.log('center: ' + center)
                     map.panTo(center);
+                    populate_header(pubs_sorted.length)
+//                    map_load_collection(pubs_sorted)
+//                    list_setup(pubs_sorted)
                     document.getElementById('col_map').style.display = "block";
+                    document.getElementById('pub_table').style.display = "block";
 //                    var base_url = window.location.hostname
 //                    if (env_vars['env'] == 'qual') {
 //                        var url = "http://" + base_url + ":5000/collection/"

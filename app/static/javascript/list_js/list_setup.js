@@ -11,4 +11,5 @@ function list_setup(pub_filtered) {
 
     list_filter(new_visible, new_order, new_asc_desc)
 
+    document.getElementById('pub_table').style.display = "block"
 }

@@ -141,28 +141,35 @@
                     <div class="col-8" align="center">
                         <a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" >
                             Search For Pub
-                        </a></div>
+                        </a>
+                    </div>
                     <div class="col-2"></div>
                 </div>
                 <div class="row pink">
-                    <div class="col-9"><input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
+                    <div class="col-9"><input style="margin-top: 5px; margin-left: -5px;" id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
                     <div class="col-3 d-flex justify-content-center">{% include "9_filter_overlay_beta.html" %}</div>
                     <!--<div><button onclick="findPubs()" type="button">Search</button></div>-->
                 </div>
                 <div class="row pink">
-                </div>
-                <div class="row pink">
                     {% include "9_carousel_spinner.html" %}
                 </div>
-                <button class="button button_wrapL" id="forwards"><a style="font-size: 16px; font-weight: bold; font-color: coral; position: relative; top: 2px;"><<</a></button>
-                <button class="button button_wrapR" id="rewards"><a style="font-size: 16px; font-weight: bold; font-color: coral; position: relative; top: 2px;">>></a></button>
-                </div>
-                <div class="row pink" id="pub_header" style="background-color: coral; color: white; padding: 5px; display: none;">
-                    {% include "9_pub_header.html" %}
-                </div>
+
+            </div>
+        </div>
+        <div class="row orange" id="template_header">
+            <div class="col black" >
+                {% include "9_pub_header.html" %}
+            </div>
+        </div>
+        <div class="row orange" id="template_map">
+            <div class="col black" >
                 <div class="row pink">
                     {% include "9_map_double.html" %}
                 </div>
+            </div>
+        </div>
+        <div class="row orange" id="template_list">
+            <div class="col black" >
                 <div class="row pink">
                     {% include "9_list.html" %}
                 </div>
@@ -175,7 +182,6 @@
                 </div>
                 <div class="row pink" style="margin-bottom: 50px;">
                     {% include "9_carousel_photo.html" %}
-
                 </div>
             </div>
         </div>

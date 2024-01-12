@@ -136,45 +136,44 @@
 
 /* ::::>>>> buttons <<<<::::*/
 .button_wrapL{
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  left: -120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -125px;
 }
 .button_wrapR{
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  left: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 125px;
 }
 .button{
-    top: 25px;
-    margin-bottom: 70px;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border-color: coral;
-  color:rgb(235, 235, 235);
+    top: 15px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    width: 40px;
+    height: 50px;
+    background-color: coral;
+    //border-radius: 50%;
+    border-color: coral;
+    color:rgb(235, 235, 235);
 
-  text-shadow:
-  -1px -1px 1px white,
-  1px 1px 1px rgba(0, 0, 0, 0.6),
-  -2px -2px 2px white,
-  2px 2px 2px rgba(0, 0, 0, 0.6);
+    text-shadow:
+    -1px -1px 1px white,
+    1px 1px 1px rgba(0, 0, 0, 0.6),
+    -2px -2px 2px white,
+    2px 2px 2px rgba(0, 0, 0, 0.6);
 
-  background-image:
-  radial-gradient(
-  whitesmoke 60%, grey, black);
-  box-shadow:
-  0rem 0.1rem 0.6rem black;
+    //background-image:
+    //radial-gradient(
+    //whitesmoke 60%, grey, black);
+    box-shadow:
+    0rem 0.1rem 0.6rem black;
 }
 .button:active{
-  font-size: 2.6rem;
-  background-image:
-  radial-gradient(
+    font-size: 2.6rem;
+    background-image:
+    radial-gradient(
     whitesmoke 45%,
     grey 55%,
     whitesmoke 65%,
