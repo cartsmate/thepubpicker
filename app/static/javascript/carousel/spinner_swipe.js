@@ -11,6 +11,7 @@
     let count = 0;
 
    $slider.on( "swipeleft", function(){ // show next image on swipe left
+
         let stepForward = count += stepCount;
         nextStep(stepForward);
     }).on( "swiperight", function(){ // show prev image on swipe right
