@@ -37,12 +37,12 @@ function populate_station(pub_filtered) {
     }
 }
 
-function on_click_station() {
-    console.log('USER INPUT - on click station')
-    pub_filtered = filter_all_data(pub)
-    list_setup(pub_filtered)
-    populate_feature(pub_filtered)
-    populate_header(pub_filtered.length)
-    map_load_collection(pub_filtered)
-
-}
+//function on_click_station() {
+//    console.log('USER INPUT - on click station')
+//    pub_filtered = filter_all_data(pub)
+//    list_setup(pub_filtered)
+//    populate_feature(pub_filtered)
+//    populate_header(pub_filtered.length)
+//    map_load_collection(pub_filtered)
+//
+//}

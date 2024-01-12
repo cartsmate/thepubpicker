@@ -8,7 +8,7 @@ function map_addListener_bounds_changed_beta(map, pubs, searchBox) {
         pubs_reviews = filter_all_data(pubs)
         pubs_sorted = sort_by_distance(pubs_reviews, map)
         marker_add_bounds_beta(map, bounds, pubs_sorted)
-        list_setup(pubs_sorted)
+        list_setup_beta(pubs_sorted)
         populate_header(pubs_sorted.length)
         });
 //    return bounds

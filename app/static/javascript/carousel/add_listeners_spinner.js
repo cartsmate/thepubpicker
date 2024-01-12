@@ -62,7 +62,7 @@ function add_listeners_spinner() {
                         console.log('pubs_reviews: ' + pubs_reviews.length)
                         pubs_sorted = sort_by_distance(pubs_reviews, map)
                         var center = new google.maps.LatLng(pubs_sorted[0]['detail_latitude'], pubs_sorted[0]['detail_longitude']);
-                        console.log('center: ' + center)
+                        //console.log('center: ' + center)
                         map.panTo(center);
     //                    populate_header(pubs_sorted.length)
     //                    map_load_collection(pubs_sorted)

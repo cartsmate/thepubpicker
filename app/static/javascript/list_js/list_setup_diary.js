@@ -9,6 +9,6 @@ function list_setup_diary(clicked_day) {
 
     const [new_visible, new_order, new_asc_desc] = list_columns_diary(clicked_day)
 
-    list_filter(new_visible, new_order, new_asc_desc)
+    list_filter_beta(new_visible, new_order, new_asc_desc)
 
 }

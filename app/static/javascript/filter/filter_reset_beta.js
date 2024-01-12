@@ -1,4 +1,4 @@
-function filter_reset() {
+function filter_reset_beta() {
     console.log('FILTER_RESET')
     console.log('pub count: ' + pub.length)
     all_data = pub

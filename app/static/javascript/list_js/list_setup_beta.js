@@ -7,10 +7,10 @@ function list_setup_beta(pub_filtered) {
 
     list_create(pub_filtered)
 
-    //const [new_visible, new_order, new_asc_desc] = list_columns()
-    new_visible = list_columns()
-    //list_filter(new_visible, new_order, new_asc_desc)
-    list_filter_beta(new_visible)
+    const [new_visible, new_order, new_asc_desc] = list_columns_beta()
+    //new_visible = list_columns_beta()
+    list_filter_beta(new_visible, new_order, new_asc_desc)
+    //list_filter_beta(new_visible)
 
-    document.getElementById('pub_table').style.display = "block"
+    //document.getElementById('pub_table').style.display = "block"
 }

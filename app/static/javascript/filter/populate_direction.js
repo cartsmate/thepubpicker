@@ -40,18 +40,18 @@ function populate_direction(pub_filtered) {
     })(i, pub_filtered)
 }
 
-function on_click_direction() {
-    console.log('USER INPUT - on click direction COLLECTION')
-
-    pub_filtered = filter_all_data(pub)
-    console.log(pub_filtered.length)
-    list_setup(pub_filtered)
-
-    populate_station(pub_filtered)
-    populate_feature(pub_filtered)
-
-    populate_header(pub_filtered.length)
-
-    map_load_collection(pub_filtered)
-
-}
+//function on_click_direction() {
+//    console.log('USER INPUT - on click direction COLLECTION')
+//
+//    pub_filtered = filter_all_data(pub)
+//    console.log(pub_filtered.length)
+//    list_setup(pub_filtered)
+//
+//    populate_station(pub_filtered)
+//    populate_feature(pub_filtered)
+//
+//    populate_header(pub_filtered.length)
+//
+//    map_load_collection(pub_filtered)
+//
+//}

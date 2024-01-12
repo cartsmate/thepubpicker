@@ -1,5 +1,5 @@
 //function list_filter(visible, order, asc_desc) {
-function list_filter_beta(visible) {
+function list_filter_beta(visible, order, asc_desc) {
     console.log('list filter BETA')
 //    console.log('pub count: ' + pub.length)
     //console.log('headers')
@@ -20,7 +20,7 @@ function list_filter_beta(visible) {
         $('#pub_list').DataTable({
             paging: true,
             info: false,
-            //order: [[order, asc_desc]],
+            order: [[order, asc_desc]],
             columnDefs: list_addjson(visible),
             searching: false
         });
