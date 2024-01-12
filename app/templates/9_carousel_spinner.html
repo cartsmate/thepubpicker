@@ -39,6 +39,7 @@
 </div>
 <button class="button button_wrapL" id="forwards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;"><<</a></button>
 <button class="button button_wrapR" id="rewards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;">>></a></button>
+
 <div class="box"></div>
 <script src="/static/javascript/carousel/spinner.js"></script>
 
@@ -51,5 +52,26 @@ $(function(){
   function swipeleftHandler( event ){
     $( event.target ).addClass( "swipeleft" );
   }
+});
+
+$(function(){
+    let faceCount = 12;
+    let stepCount = 360 / faceCount;
+    let count = 0;
+
+    $( "div._carousel" ).on( "swipeleft", swipeleftHandler );
+    function swipeleftHandler(){
+        let stepForward = count += stepCount;
+        nextStep(stepForward);
+    }
+    function nextStep(x){
+        if(x <= 0){
+            x *= -1; //turn to positive number again
+            carousel.style.transform = `rotateY(${x}deg)`;
+        } else if( x >= 0){
+            carousel.style.transform = `rotateY(-${x}deg)`;
+        }
+    }
+
 });
 </script>
