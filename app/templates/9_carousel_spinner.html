@@ -58,6 +58,21 @@ $(function(){
 
 window.addEventListener('load', function(){
 
+    const carousel = document.querySelector('._carousel');
+
+    let faceCount = 12;
+    let stepCount = 360 / faceCount;
+    let count = 0;
+
+    function nextStep(x){
+        if(x <= 0){
+            x *= -1; //turn to positive number again
+            carousel.style.transform = `rotateY(${x}deg)`;
+        } else if( x >= 0){
+            carousel.style.transform = `rotateY(-${x}deg)`;
+        }
+    }
+
     var touchsurface_words = document.getElementById('touchsurface_words');
     var touchsurface = document.getElementById('the_carousel'),
         startX,
@@ -69,9 +84,14 @@ window.addEventListener('load', function(){
         startTime
 
     function handleswipe(isrightswipe){
-        if (isrightswipe)
+        if (isrightswipe) {
+            let stepForward = count += stepCount;
+            nextStep(stepForward);
             touchsurface_words.innerHTML = 'Congrats, you\'ve made a <span style="color:red">right swipe!</span>'
+            }
         else{
+            let stepReward = count -= stepCount;
+            nextStep(stepReward);
             touchsurface_words.innerHTML = 'Condition for right swipe not met yet'
         }
     }
