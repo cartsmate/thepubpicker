@@ -48,25 +48,15 @@
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
+
+            const input = document.getElementById("search-input-navbar");
+            const searchBox = new google.maps.places.SearchBox(input);
+            searchbox_addListener_places_changed(map, searchBox);
+            map_addListener_bounds_changed_beta(map, pub, searchBox);
+            map_addListener_click_placeid(map)
+
             pub_filtered = filter_all_data()
-            console.log('pub_filtered')
-            console.log(pub_filtered)
-            console.log(pub_filtered|length)
-            console.log(pub_filtered.length)
             marker_add_collection(map, pub_filtered)
-            /*
-            if (pub_filtered.length <= 10) {
-                marker_add_collection(map, pub_filtered)
-                document.getElementById('msg_map').innerHTML = ''
-            } else {
-                document.getElementById('msg_map').innerHTML = 'Too many pubs to show on map';
-                //map_elem = document.getElementById('col_map');
-                //var elem = document.createElement("div");
-                //elem.innerHTML = 'Too many pubs to show on map';
-                //elem.className = "map_words"
-                //map_elem.appendChild(elem)
-            }
-            */
         }
         function map_init_1() {
             console.log('MAP INIT 1')

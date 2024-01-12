@@ -2,7 +2,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
     console.log('searchbox addListener places changed ADDED')
     let markers = [];
     searchBox.addListener("places_changed", () => {
-        console.log('search box has chnaged place')
+        console.log('search box has changed place')
         document.getElementById('col_map').style.display = "block";
         //get place name from searchbox
         const places = searchBox.getPlaces();
@@ -31,6 +31,9 @@ function searchbox_addListener_places_changed(map, searchBox) {
         });
         //move map to new location
         map.setCenter({lat:lat1, lng:lng1});
+        document.getElementById('template_map').style.display = "block"
+        document.getElementById('template_list').style.display = "block"
+        document.getElementById('template_header').style.display = "block"
         //map.setZoom(19);
     });
 

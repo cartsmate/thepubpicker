@@ -8,7 +8,8 @@ function on_click_feature() {
 
     populate_feature(pub_filtered)
     populate_header(pub_filtered.length)
-    map_load_collection(pub_filtered)
+    map_load_collection()
+    //map_load_search(pub_filtered)
 
 
 }
@@ -18,7 +19,8 @@ function on_click_station() {
     list_setup_beta(pub_filtered)
     populate_feature(pub_filtered)
     populate_header(pub_filtered.length)
-    map_load_collection(pub_filtered)
+    map_load_collection()
+    //map_load_search(pub_filtered)
 
 }
 
@@ -34,7 +36,11 @@ function on_click_direction() {
 
     populate_header(pub_filtered.length)
 
-    map_load_collection(pub_filtered)
+    map_load_collection()
+    //map_load_search(pub_filtered)
+    document.getElementById('template_map').style.display = "block"
+    document.getElementById('template_list').style.display = "block"
+    document.getElementById('template_header').style.display = "block"
 
 }
 
