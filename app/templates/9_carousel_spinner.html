@@ -40,10 +40,10 @@
 <button class="button button_wrapL" id="forwards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;"><<</a></button>
 <button class="button button_wrapR" id="rewards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;">>></a></button>
 
-<div class="box"></div>
 <script src="/static/javascript/carousel/spinner.js"></script>
 
 <script>
+/*
 $(function(){
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $( "div.box" ).on( "swipeleft", swipeleftHandler );
@@ -53,14 +53,16 @@ $(function(){
     $( event.target ).addClass( "swipeleft" );
   }
 });
-
+*/
 $(function(){
-    let faceCount = 12;
-    let stepCount = 360 / faceCount;
-    let count = 0;
+
 
     $( "div._carousel" ).on( "swipeleft", swipeleftHandler );
+
     function swipeleftHandler(){
+        let faceCount = 12;
+        let stepCount = 360 / faceCount;
+        let count = 0;
         let stepForward = count += stepCount;
         nextStep(stepForward);
     }
