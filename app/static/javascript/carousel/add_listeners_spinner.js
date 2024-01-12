@@ -16,20 +16,55 @@ function add_listeners_spinner() {
                     underscore = marker.indexOf("_");
                     attr_marker = marker.substr(0,underscore);
                     //console.log(attr_marker)
+                    for (i=0; i<model_formats['icon_list'].length; i++) {
+                        console.log(model_formats['icon_list'][i])
+                        if (model_formats['icon_list'][i] != 'nofeature') {
+                            document.getElementById(model_formats['icon_list'][i] + "_filter").checked = false;
+                            document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "black"
+                            document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
+                        }
+                    }
+                    /*
                     document.getElementById("brunch_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("dart_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("entertain_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("favourite_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("garden_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("history_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("late_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("music_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("pool_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("quiz_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById(marker).style.backgroundColor = "white"
                     document.getElementById("roast_filter").checked = false;
+                    document.getElementById(attr_marker + "_word").style.color = "black"
+                    document.getElementById("sport_carousel").style.backgroundColor = "white"
                     document.getElementById("sport_filter").checked = false;
-
+                    document.getElementById("sport_word").style.color = "black"
+                    document.getElementById("sport_carousel").style.backgroundColor = "white"
+                    */
                     document.getElementById(attr_marker + "_filter").checked = true;
+                    document.getElementById(attr_marker + "_word").style.color = "white"
+                    document.getElementById(marker).style.backgroundColor = "coral"
 
                     pubs_reviews = filter_all_data()
                     console.log('pubs_reviews: ' + pubs_reviews.length)
@@ -37,11 +72,12 @@ function add_listeners_spinner() {
                     var center = new google.maps.LatLng(pubs_sorted[0]['detail_latitude'], pubs_sorted[0]['detail_longitude']);
                     console.log('center: ' + center)
                     map.panTo(center);
-                    populate_header(pubs_sorted.length)
+//                    populate_header(pubs_sorted.length)
 //                    map_load_collection(pubs_sorted)
 //                    list_setup(pubs_sorted)
-                    document.getElementById('col_map').style.display = "block";
-                    document.getElementById('pub_table').style.display = "block";
+                    document.getElementById('template_map').style.display = "block";
+                    document.getElementById('template_list').style.display = "block";
+                    document.getElementById('template_header').style.display = "block";
 //                    var base_url = window.location.hostname
 //                    if (env_vars['env'] == 'qual') {
 //                        var url = "http://" + base_url + ":5000/collection/"

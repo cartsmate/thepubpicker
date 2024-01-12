@@ -18,6 +18,7 @@ function list_columns() {
     asc_desc = 'desc'
 
     return [visible, order, asc_desc]
+    //return [visible]
 }
 
 

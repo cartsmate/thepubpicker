@@ -53,5 +53,5 @@ function on_click_direction() {
     populate_header(pub_filtered.length)
 
     map_load_collection(pub_filtered)
-    list_setup(pub_filtered)
+
 }
