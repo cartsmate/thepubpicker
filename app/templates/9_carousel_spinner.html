@@ -83,7 +83,7 @@ window.addEventListener('load', function(){
         startTime
 
     function handleswipe(isrightswipe){
-        if (isrightswipe) {
+        if (isrightswipe > 0) {
             let stepReward = count -= stepCount;
             nextStep(stepReward);
             //touchsurface_words.innerHTML = 'Congrats, you\'ve made a <span style="color:red">right swipe!</span>'
@@ -115,8 +115,8 @@ window.addEventListener('load', function(){
         dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
         elapsedTime = new Date().getTime() - startTime // get time elapsed
         // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
-        var swiperightBol = (elapsedTime <= allowedTime && Math.abs(touchobj.pageY - startY) <= 100)
-        handleswipe(swiperightBol)
+        var swiperightBol = (elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchobj.pageY - startY) <= 100)
+        handleswipe(dist)
         e.preventDefault()
     }, false)
 
