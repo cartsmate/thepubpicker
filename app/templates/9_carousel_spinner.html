@@ -60,6 +60,7 @@ $(function(){
     $( "div.face" ).on( "swipeleft", swipeleftHandler );
 
     function swipeleftHandler(){
+        const carousel = document.querySelector('._carousel');
         let faceCount = 12;
         let stepCount = 360 / faceCount;
         let count = 0;
