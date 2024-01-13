@@ -3,32 +3,40 @@ function map_addListener_click_placeid(map) {
     var infowindow = new google.maps.InfoWindow();
     map.addListener('click', function (event) {
         // If the event is a POI
+        console.log('event')
+        console.log(JSON.stringify(event))
         if (event.placeId) {
             console.log('USER INPUT - place id clicked')
-            getPlaceInformation(event.placeId);
 
-            console.log('event - placeid')
-            console.log(event.placeId)
-            //console.log(event)
-            // Call event.stop() on the event to prevent the default info window from showing.
-            event.stop();
-            infowindow.close();
-            infowindow.setPosition(event.latLng);
-            // do any other stuff you want to do
-            //console.log('You clicked on place:' + event.placeId + ', location: ' + event.latLng);
-            // add pop up box with info and do you want to add this pub?
+            var request = {
+                placeId: event.placeId,
+            };
+            var find_request = {
+                placeId: event.placeId,
+            };
+            var service = new google.maps.places.PlacesService(map);
+            service.getDetails(request, function(place, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    console.log('place')
+                    console.log(place)
+                    event.stop();
+                    infowindow.close();
+                    infowindow.setPosition(event.latLng);
+        //            infowindow.setContent("<p><b><a href='/add/?place_id=" + event.placeId + "'>Add Venue</a></b></p>")
+                    infowindow.setContent("<p>" + place.name + "</p><p><b><a href='/add/?place_id=" + event.placeId + "'>Add Venue</a></b></p>")
+                    infowindow.open(map);
+                    //document.getElementById("detail_name").value = place.name
+                    //document.getElementById("address").value = place.formatted_address
+                }
+            });
 
-            infowindow.setContent("<p><b><a href='/add/?place_id=" + event.placeId + "'>Add Venue</a></b></p>")
-            infowindow.open(map, marker);
 
 
         }
 
 
     })
-//    getPlaceInformation(placeId: string) {
-//        alert('hello: ' +placeId )
-//    }
+
 }
 
 
@@ -84,6 +92,7 @@ function map_addListener_click_add(map) {
                     if(place.hasOwnProperty('url')){
                         document.getElementById("url").value = place.url
                         }
+
                     //populate_stars('rank', ranking, 'map')
                     place_text = String(place.types)
 

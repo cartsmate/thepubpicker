@@ -64,7 +64,7 @@ def submit():
         # print(newdf1)
 
         df_new_review = FilesReview().form_review()
-        # print(df_new_review)
+        print(df_new_review)
         df_updated_reviews = FilesReview().add_review_df(df_reviews_current, df_new_review)
         # print(df_updated_reviews)
 

@@ -45,7 +45,7 @@ class FilesReview:
 
     def form_review(self):
         print('get review form')
-        # print(request.form['review_identity'])
+        # print(request.form['review_identity_check'])
         # print(request.form['review_deletion'])
         # print(request.form['pub_identity'])
         # print(request.form.get('brunch'))
@@ -60,22 +60,22 @@ class FilesReview:
         # print(request.form.get('quiz'))
         # print(request.form.get('roast'))
         # print(request.form.get('sport'))
-        # print(request.form.get('no_feature'))
+        # print(request.form.get('nofeature'))
         new_review = Review(review_identity=UuidGenerator().get_new_uuid(),
-                            review_deletion=request.form['pub_identity'], pub_identity=request.form['pub_identity'],
-                            brunch='1' if request.form.get('brunch') == 'on' else '0',
-                            dart='1' if request.form.get('dart') == 'on' else '0',
-                            entertain='1' if request.form.get('entertain') == 'on' else '0',
-                            favourite='1' if request.form.get('favourite') == 'on' else '0',
-                            garden='1' if request.form.get('garden') == 'on' else '0',
-                            history='1' if request.form.get('history') == 'on' else '0',
-                            late='1' if request.form.get('late') == 'on' else '0',
-                            music='1' if request.form.get('music') == 'on' else '0',
-                            pool='1' if request.form.get('pool') == 'on' else '0',
-                            quiz='1' if request.form.get('quiz') == 'on' else '0',
-                            roast='1' if request.form.get('roast') == 'on' else '0',
-                            sport='1' if request.form.get('sport') == 'on' else '0',
-                            nofeature='1' if request.form.get('nofeature') == 'on' else '0')
+                            review_deletion=request.form['review_deletion' + "_check"], pub_identity=request.form['pub_identity'],
+                            brunch='1' if request.form.get('brunch' + "_check") == 'on' else '0',
+                            dart='1' if request.form.get('dart' + "_check") == 'on' else '0',
+                            entertain='1' if request.form.get('entertain' + "_check") == 'on' else '0',
+                            favourite='1' if request.form.get('favourite' + "_check") == 'on' else '0',
+                            garden='1' if request.form.get('garden' + "_check") == 'on' else '0',
+                            history='1' if request.form.get('history' + "_check") == 'on' else '0',
+                            late='1' if request.form.get('late' + "_check") == 'on' else '0',
+                            music='1' if request.form.get('music' + "_check") == 'on' else '0',
+                            pool='1' if request.form.get('pool' + "_check") == 'on' else '0',
+                            quiz='1' if request.form.get('quiz' + "_check") == 'on' else '0',
+                            roast='1' if request.form.get('roast' + "_check") == 'on' else '0',
+                            sport='1' if request.form.get('sport' + "_check") == 'on' else '0',
+                            nofeature='1' if request.form.get('nofeature' + "_check") == 'on' else '0')
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 
