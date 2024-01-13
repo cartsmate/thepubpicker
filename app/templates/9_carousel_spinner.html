@@ -39,7 +39,6 @@
 </div>
 <button class="button button_wrapL" id="forwards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;"><<</a></button>
 <button class="button button_wrapR" id="rewards"><a style="font-size: 16px; font-weight: bold; color: white; position: relative; top: 10px;">>></a></button>
-<div id="touchsurface_words"></div>
 <script src="/static/javascript/carousel/spinner.js"></script>
 
 <script>
@@ -72,7 +71,7 @@ window.addEventListener('load', function(){
         }
     }
 
-    var touchsurface_words = document.getElementById('touchsurface_words');
+    //var touchsurface_words = document.getElementById('touchsurface_words');
     var touchsurface = document.getElementById('the_carousel'),
         startX,
         startY,
@@ -92,12 +91,12 @@ window.addEventListener('load', function(){
 
             let stepReward = count -= movement;
             nextStep(stepReward);
-            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round + "-" + movement
+            //touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round + "-" + movement
             }
         else{
             let stepForward = count += movement;
             nextStep(stepForward);
-            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round + "-" + movement
+            //touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round + "-" + movement
         }
     }
 
