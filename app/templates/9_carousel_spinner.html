@@ -87,17 +87,17 @@ window.addEventListener('load', function(){
         speed_round = Math.ceil(speed_abs)
         speed_pow = speed_round * speed_round
 
-        movement = stepCount * speed
+        movement = stepCount * speed_pow
         if (isrightswipe > 0) {
 
             let stepReward = count -= movement;
             nextStep(stepReward);
-            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_round + "-" + speed_pow
+            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_round + "-" + speed_pow + "-" + movement
             }
         else{
             let stepForward = count += movement;
             nextStep(stepForward);
-            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_round + "-" + speed_pow
+            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_round + "-" + speed_pow + "-" + movement
         }
     }
 
