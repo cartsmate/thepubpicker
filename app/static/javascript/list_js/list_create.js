@@ -40,6 +40,8 @@ function list_create(pub_filtered) {
         var row = document.createElement("tr");
         for (let j = 0; j < pub_attributes.length; j++) {
             const cell = document.createElement("td");
+
+
             const href = document.createElement("a");
             if (pub_attributes[j] == 'station_name') {
                 href.setAttribute("href", "#");

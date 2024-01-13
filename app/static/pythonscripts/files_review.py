@@ -19,6 +19,7 @@ from app.models.review.quiz import Quiz
 from app.models.review.review_deletion import ReviewDeletion
 from app.models.review.roast import Roast
 from app.models.review.sport import Sport
+from app.models.review.nofeature import NoFeature
 from app.models.review.review_identity import ReviewIdentity
 from app.models.detail.pub_identity import PubIdentity
 from app.static.pythonscripts.controls_list import ControlsList
@@ -38,7 +39,7 @@ class FilesReview:
                             sport=Sport().value, garden=Garden().value, music=Music().value, roast=Roast().value,
                             brunch=Brunch().value, late=Late().value, quiz=Quiz().value, pool=Pool().value,
                             dart=Dart().value, entertain=Entertain().value, history=History().value,
-                            favourite=Favourite().value)
+                            favourite=Favourite().value, noreview=NoFeature().value)
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 
@@ -61,7 +62,7 @@ class FilesReview:
         # print(request.form.get('sport'))
         # print(request.form.get('no_feature'))
         new_review = Review(review_identity=UuidGenerator().get_new_uuid(),
-                            review_deletion='false', pub_identity=request.form['pub_identity'],
+                            review_deletion=request.form['pub_identity'], pub_identity=request.form['pub_identity'],
                             brunch='1' if request.form.get('brunch') == 'on' else '0',
                             dart='1' if request.form.get('dart') == 'on' else '0',
                             entertain='1' if request.form.get('entertain') == 'on' else '0',
@@ -74,7 +75,7 @@ class FilesReview:
                             quiz='1' if request.form.get('quiz') == 'on' else '0',
                             roast='1' if request.form.get('roast') == 'on' else '0',
                             sport='1' if request.form.get('sport') == 'on' else '0',
-                            no_feature='1' if request.form.get('no_feature') == 'on' else '0')
+                            nofeature='1' if request.form.get('nofeature') == 'on' else '0')
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 

@@ -43,6 +43,7 @@ def add():
     # daily_id = df_details.iloc[0]['pub_identity']
 
     df_new_pub = NewPub().go_new_pub()
+    # print(df_new_pub.transpose())
     # # # GET REQUESTED PUB (from place id)
     place_id = request.args.get('place_id')
     print('place_id')
@@ -50,7 +51,6 @@ def add():
     if place_id is not None:
         print('call places api to get details from place_id')
         places_facits = CsvSingle().go_get_places(place_id, env_vars)
-        df_new_pub['pub_identity'] = uuid.uuid4()
         try:
             df_new_pub['detail_name'] = places_facits['name']
         except:
@@ -101,6 +101,7 @@ def add():
         df_new_pub['detail_latitude'] = avg_latitude
         df_new_pub['detail_longitude'] = avg_longitude
 
+    print(df_new_pub.transpose())
     pub_new_json = Dataframes().df_to_dict(df_new_pub)
 
     # # # GET LIST OF STATIONS
@@ -108,8 +109,24 @@ def add():
     stations_json = Dataframes().df_to_dict(df_stations)
 
     # # # FOR TESTING PURPOSES ONLY
-    newdf = df_new_pub.transpose()
-    print(newdf)
+    # newdf = df_new_pub.transpose()
+    # print(newdf)
+    detail_list = []
+    review_list = []
+    diary_list = []
+    station_list = []
+    direction_list = []
+    for k, v in Detail().__dict__.items():
+        detail_list.append(v.name)
+    for k, v in Review().__dict__.items():
+        review_list.append(v.name)
+    for k, v in Diary().__dict__.items():
+        diary_list.append(v.name)
+    for k, v in Station().__dict__.items():
+        station_list.append(v.name)
+    for k, v in Direction().__dict__.items():
+        direction_list.append(v.name)
+
     print('END add')
 
     return render_template('04_add.html',
@@ -126,4 +143,10 @@ def add():
                            direction=Direction(),
                            photo=Photo(),
                            stations=stations_json,
-                           back=back)
+                           back=back,
+detail_list=detail_list,
+                           review_list=review_list,
+                           diary_list=diary_list,
+                           station_list=station_list,
+                           direction_list=direction_list,
+)

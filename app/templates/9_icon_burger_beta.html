@@ -184,8 +184,6 @@ body
         <a href="#" onclick="redirect_stations()"><li>Same station pubs</li></a>
       {% endif %}
       <a href="#" onclick="redirect_add()"><li>Add new pub</li></a>
-      {% if pub|length == 1 %}
-        <a href="#" onclick="redirect_edit('{{pub[0]['pub_identity']}}')"><li>Edit pub</li></a>
-      {% endif %}
+
     </ul>
   </div>

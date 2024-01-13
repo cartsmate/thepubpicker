@@ -2,7 +2,7 @@
 
 class Entertain:
     def __init__(self, name="entertain", alias="Fun", alias2="games", required='true', form_visible='false',
-                 table_visible='false', value='false',
+                 table_visible='false', value='0',
                  control="check", icon="entertain.png"):
         self.name = name
         self.alias = alias

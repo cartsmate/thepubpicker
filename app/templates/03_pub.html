@@ -32,6 +32,7 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_direction.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo_beta.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_search_back.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_pub.js') }}"></script>
 {% endblock %}
@@ -41,9 +42,9 @@
 {% endblock %}
 
 {% block title %}
-    <div class="col-2">{% include "9_icon_burger.html" %}</div>
+    <div class="col-2">{% include "9_icon_burger_beta.html" %}</div>
     <div class="col-8">{% include "9_title.html" %}</div>
-    <div class="col-2">{% include "9_icon_search.html" %}</div>
+    <div class="col-2">{% include "9_icon_edit.html" %}</div>
 {% endblock %}
 
 {% block pub %}{% include "9_pub.html" %}{% endblock %}

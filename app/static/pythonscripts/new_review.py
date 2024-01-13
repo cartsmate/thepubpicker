@@ -17,6 +17,7 @@ from app.models.review.quiz import Quiz
 from app.models.review.review_deletion import ReviewDeletion
 from app.models.review.roast import Roast
 from app.models.review.sport import Sport
+from app.models.review.nofeature import NoFeature
 from app.models.review.review_identity import ReviewIdentity
 from app.models.detail.pub_identity import PubIdentity
 
@@ -36,6 +37,6 @@ class NewReview:
                             sport=Sport().value, garden=Garden().value, music=Music().value, roast=Roast().value,
                             brunch=Brunch().value, late=Late().value, quiz=Quiz().value, pool=Pool().value,
                             dart=Dart().value, entertain=Entertain().value, history=History().value,
-                            favourite=Favourite().value)
+                            favourite=Favourite().value, nofeature=NoFeature().value)
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review

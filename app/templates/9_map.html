@@ -15,13 +15,11 @@
     <script>
         function map_init_pub() {
             console.log('MAP INIT PUB')
+            console.log(pub[0]['detail_latitude'], pub[0]['detail_longitude'])
 
-            pub_lat = pub[0]['detail_latitude']
-            pub_lng = pub[0]['detail_longitude']
+            map = map_create(pub[0]['detail_latitude'], pub[0]['detail_longitude'], 15)
 
-            map = map_create(pub_lat, pub_lng, 15)
-
-            marker_add_summary(map)
+            marker_add_summary(map, pub[0]['detail_latitude'], pub[0]['detail_longitude'])
 
         }
         function map_init_summary() {

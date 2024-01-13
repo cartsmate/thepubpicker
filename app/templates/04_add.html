@@ -8,12 +8,23 @@
     <script>stations = {{ stations | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>
+    <script>detail_list = {{ detail_list | tojson }}</script>
+    <script>review_list = {{ review_list | tojson }}</script>
+    <script>diary_list = {{ diary_list | tojson }}</script>
+    <script>station_list = {{ station_list | tojson }}</script>
+    <script>direction_list = {{ direction_list | tojson }}</script>
+    <!--<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>-->
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub_add.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_detail.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_review.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_diary.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_direction.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_add.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature_add.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed_beta_add.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}
@@ -26,12 +37,8 @@
     <div class="col-2"></div>
 {% endblock %}
 
-{% block header %}
-<script>document.getElementById("template_header").style.display = "none"</script>
-{% endblock %}
-
 {% block map %}
-{% include "9_map.html" %}
+{% include "9_map_double.html" %}
 <input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 {% endblock %}
 

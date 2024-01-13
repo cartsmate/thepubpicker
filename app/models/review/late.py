@@ -2,7 +2,7 @@
 
 class Late:
     def __init__(self, name="late", alias="Late", alias2="open", required='true', form_visible='false',
-                 table_visible='false', value='false', control="check", icon="late.png"):
+                 table_visible='false', value='0', control="check", icon="late.png"):
         self.name = name
         self.alias = alias
         self.alias2 = alias2

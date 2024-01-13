@@ -5,6 +5,8 @@ function map_addListener_click_placeid(map) {
         // If the event is a POI
         if (event.placeId) {
             console.log('USER INPUT - place id clicked')
+            getPlaceInformation(event.placeId);
+
             console.log('event - placeid')
             console.log(event.placeId)
             //console.log(event)
@@ -18,9 +20,17 @@ function map_addListener_click_placeid(map) {
 
             infowindow.setContent("<p><b><a href='/add/?place_id=" + event.placeId + "'>Add Venue</a></b></p>")
             infowindow.open(map, marker);
+
+
         }
+
+
     })
+//    getPlaceInformation(placeId: string) {
+//        alert('hello: ' +placeId )
+//    }
 }
+
 
 function map_addListener_click_add(map) {
     console.log('map addListener click')
@@ -128,7 +138,7 @@ function map_addListener_click_add(map) {
         }
     })
 }
-
+/*
 function listener_click(map) {
     console.log('listener_click')
     var infowindow = new google.maps.InfoWindow();
@@ -149,3 +159,27 @@ function listener_click(map) {
 function myFunction(event) {
     alert('placeId: ' + event.placeId)
 }
+*/
+/*
+  function getPlaceInformation(placeId) {
+    const me = this;
+    this.placesService = new google.maps.places.PlacesService(map);
+    this.placesService.getDetails({ placeId: placeId }, (place, status) => {
+      if (
+        status === "OK" &&
+        place &&
+        place.geometry &&
+        place.geometry.location
+      ) {
+        me.infowindow.close();
+        me.infowindow.setPosition(place.geometry.location);
+        me.infowindowContent.children["place-icon"].src = place.icon;
+        me.infowindowContent.children["place-name"].textContent = place.name;
+        me.infowindowContent.children["place-id"].textContent = place.place_id;
+        me.infowindowContent.children["place-address"].textContent =
+          place.formatted_address;
+        me.infowindow.open(me.map);
+      }
+    });
+  }
+  */

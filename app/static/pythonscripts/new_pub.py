@@ -28,8 +28,8 @@ class NewPub:
         df_detail = FilesDetail().new_detail(pub_id=new_pub_id)
 
         df_review = NewReview().go_get_new_review(id=UuidGenerator().get_new_uuid(), pub_id=new_pub_id)
+
         df_detail_review = pd.merge(df_detail, df_review, on='pub_identity', how='left')
-        df_detail_review['no_feature'] = 'true'
         # station_id = df_detail['station_identity'].iloc[0]
         # df_station = NewStation().go_get_new_station()
         # df_det_rev_st = pd.merge(df_detail_review, df_station, on='station_identity', how='left')

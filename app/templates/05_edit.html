@@ -11,8 +11,8 @@
     <script>diary_list = {{ diary_list | tojson }}</script>
     <script>station_list = {{ station_list | tojson }}</script>
     <script>direction_list = {{ direction_list | tojson }}</script>
+    <script>photos_list = {{ photos_list | tojson }}</script>
 
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_submit.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
 
@@ -22,7 +22,9 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_review.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_detail.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo_beta.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_edit.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}

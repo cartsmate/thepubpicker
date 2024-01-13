@@ -1,13 +1,21 @@
-function populate_pub(){
+function populate_pub(show_pub){
     console.log('POPULATE_PUB')
-    populate_detail();
-    populate_review();
-    populate_diary();
-    populate_station();
-    populate_direction();
-    populate_photo();
+    populate_detail(show_pub);
+    populate_review(show_pub);
+    populate_diary(show_pub);
+    populate_station(show_pub);
+    populate_direction(show_pub);
 }
 
+function populate_pub_add_beta(show_pub){
+    console.log('POPULATE_PUB BETA')
+    populate_detail(show_pub);
+    populate_review(show_pub);
+    populate_diary(show_pub);
+    populate_station(show_pub);
+    populate_direction(show_pub);
+    //populate_photo();
+}
 /*
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {

@@ -7,13 +7,15 @@ function populate_review(){
                     console.log('inside TRUE')
                     document.getElementById(review_list[i] + '_check').checked = true;
                     document.getElementById(review_list[i] + '_col').style.opacity = "1.0";
-                    document.getElementById(review_list[i] + '_col').style.background = "coral";
+                    //document.getElementById(review_list[i] + '_col').style.background = "coral";
+                    document.getElementById(review_list[i] + '_face').style.background = "coral";
                     document.getElementById(review_list[i] + '_caption').style.color = "white";
                 } else {
                     console.log('inside FALSE')
                     document.getElementById(review_list[i] + '_check').checked = false;
                     document.getElementById(review_list[i] + '_col').style.opacity = "0.5";
-                    document.getElementById(review_list[i] + '_col').style.background = "white";
+                    //document.getElementById(review_list[i] + '_col').style.background = "white";
+                    document.getElementById(review_list[i] + '_face').style.background = "white";
                     document.getElementById(review_list[i] + '_caption').style.color = "black";
                 }
             } else {

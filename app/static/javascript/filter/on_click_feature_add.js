@@ -1,0 +1,29 @@
+
+function set_feature_icon_colour(check_item) {
+    console.log('set feature icon colour')
+    var checkBox = document.getElementById(check_item + "_check");
+    var image = document.getElementById(check_item + "_img");
+    var caption = document.getElementById(check_item + "_caption");
+    var checkCol = document.getElementById(check_item + "_col");
+    var checkFace = document.getElementById(check_item + "_face");
+    if (checkBox.checked == true) {
+        console.log('checkbox is true')
+        checkCol.style.opacity = "1.0"
+        //caption.style.opacity = "1.0"
+        caption.style.color = "white"
+        //checkCol.style.background = "coral"
+        checkFace.style.background = "coral"
+        //checkCol.style.border = "thin solid coral";
+        checkBox.value = true
+    } else {
+        console.log('checkbox is false')
+        checkCol.style.opacity = "0.5"
+        //caption.style.opacity = "0.5"
+        caption.style.color = "black"
+        //checkCol.style.background = "white"
+        checkFace.style.background = "white"
+        //checkCol.style.border = "thin solid coral";
+        checkFace.style.border = "thin solid coral";
+        checkBox.value = false
+    }
+}

@@ -2,8 +2,9 @@ function filter_reset() {
     console.log('FILTER_RESET')
     console.log('pub count: ' + pub.length)
     all_data = pub
-    document.getElementById('pub_table').style.display = "none"
-    document.getElementById('col_map').style.display = "none"
+    document.getElementById('template_map').style.display = "none"
+    document.getElementById('template_list').style.display = "none"
+    document.getElementById('template_header').style.display = "none"
     col_map
     for (i=0; i<directions_list.length; i++) {
         var filtered_data = all_data.filter(function(pub) {
@@ -29,10 +30,15 @@ function filter_reset() {
         var filtered_data = all_data.filter(function(pub) {
             return pub[model_formats['icon_list'][i]] == 'true'
         })
+        console.log(model_formats['icon_list'][i])
         document.getElementById(model_formats['icon_list'][i] + "_filter").style.display = 'block'
         document.getElementById(model_formats['icon_list'][i] + "_filter").checked = false
         document.getElementById(model_formats['icon_list'][i] + "_id").style.display = 'block'
         document.getElementById(model_formats['icon_list'][i] + "_id").innerHTML = model_formats['icon_list'][i] + " (" + filtered_data.length + ")"
+        if (model_formats['icon_list'][i] != 'nofeature') {
+            document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "black"
+            document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
+        }
     }
-    //document.getElementById('button_count').innerHTML = all_data.length
+    off()
 }

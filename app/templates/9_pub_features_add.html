@@ -1,0 +1,54 @@
+<style>
+.face{
+
+  height: 55px;
+  width: 50px;
+
+  text-align: center;
+
+  border-radius: 1.2rem;
+  border-style: solid;
+  border-color: coral;
+  border-width: thin;
+
+}
+.icon_word {
+    position: relative;
+    top: 5px;
+    font-size: 8px;
+    font-weight: bold;
+}
+.icon_style {
+    position: relative;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+}
+</style>
+<script>console.log('CREATING REVIEW FIELDS')</script>
+<div id="home_features" style="display:flex; flex-wrap: wrap; ">
+{% for k, field in review.__dict__.items() %}
+    {% if field.name != "pub_identity" %}
+        {% if field.name in model_formats['icon_list'] %}
+            <div style="opacity: 0.5; text-align:center; margin:0px; padding:0px;" id="{{field.name}}_col">
+                {% if name == "readonly" %}
+                    <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display: none;">
+                {% else %}
+                    <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display: none;" onclick="set_feature_icon_colour('{{field.name}}')">
+                {% endif %}
+                <label for="{{field.name}}_check" style="margin:0px; padding:0px" >
+                    <div class="face" id="{{field.name}}_face"><div><img class="icon_style" src="{{ url_for('static', filename='icons/features/' + field.icon ) }}" id="{{field.name}}_img" ><div class="icon_word" id="{{field.name}}_caption">{{field.alias}}</div></div></div>
+                </label>
+            </div>
+        {% else %}
+            <div style="display: none;" id="{{field.name}}_col">
+                <div>
+                    <label class="col-form-label" for="{{field.name}}_check"></label>
+                    <input class="form-control" type='text' name="{{field.name}}_check" id="{{field.name}}_check">
+                    <div class="caption" id="{{field.name}}_caption" ></div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</div>

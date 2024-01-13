@@ -1,8 +1,8 @@
-function populate_diary(){
+function populate_diary(show_pub){
     console.log('POPULATE_DIARY')
         for (i=0; i < diary_list.length; i++) {
 
-        document.getElementById(diary_list[i]).value = pub[0][diary_list[i]];
+        document.getElementById(diary_list[i]).value = show_pub[0][diary_list[i]];
     }
 }
 /*

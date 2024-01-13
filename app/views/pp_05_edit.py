@@ -35,7 +35,7 @@ def edit():
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
     df_pub = CsvSingle().go_get_1_pub(pub_id)
-
+    print(df_pub.transpose())
     pub_json = Dataframes().df_to_dict(df_pub)
 
     # # # FOR TESTING PURPOSES ONLY
@@ -56,9 +56,12 @@ def edit():
         station_list.append(v.name)
     for k, v in Direction().__dict__.items():
         direction_list.append(v.name)
+
+    photos_list = CsvSingle().go_get_1_photo_request(pub_id, env_vars)
     print('end EDIT')
     return render_template('05_edit.html',
                            pub=pub_json,
+                           photos_list=photos_list,
                            # daily_id=daily_id,
                            env_vars=env_vars,
                            model_formats=model_formats,

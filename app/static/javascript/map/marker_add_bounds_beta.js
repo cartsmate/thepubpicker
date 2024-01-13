@@ -39,10 +39,10 @@ function marker_add_bounds_beta(map, bounds, data) {
     for (var i = 0; i < data.length; i++) {
         if (i==0) {
             var pinColor = "coral"
-            var pinIndex = 2
+            var pinIndex = 20
         } else {
             var pinColor = "#005B8F"
-            var pinIndex = 1
+            var pinIndex = 0
             //data[i]['colour']
         }
 

@@ -89,10 +89,12 @@
     collapse_section("collapsible_filters")
 
     function on() {
+        console.log('ON')
       document.getElementById("overlay").style.display = "block";
     }
 
     function off() {
+        console.log('OFF')
         document.getElementById("overlay").style.display = "none";
         content_direction.style.display = "none"
         content_station.style.display = "none"

@@ -2,7 +2,7 @@
 
 class Pool:
     def __init__(self, name="pool", alias="Pool", alias2="table", required='true', form_visible='false',
-                 table_visible='false', value='false', control="check", icon="pool.png"):
+                 table_visible='false', value='0', control="check", icon="pool.png"):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
