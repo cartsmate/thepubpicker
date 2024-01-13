@@ -83,18 +83,20 @@ window.addEventListener('load', function(){
         startTime
 
     function handleswipe(isrightswipe, speed){
-
+        speed_abs = Math.abs(speed)
+        speed_pow = Math.pow(speed_abs)
+        speed_round = Math.ceil(speed_pow)
         movement = stepCount * speed
         if (isrightswipe > 0) {
 
             let stepReward = count -= movement;
             nextStep(stepReward);
-            touchsurface_words.innerHTML = 'Swiped right: + ' + speed
+            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round
             }
         else{
             let stepForward = count += movement;
             nextStep(stepForward);
-            touchsurface_words.innerHTML = 'Swiped left: - ' + speed
+            touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round
         }
     }
 
@@ -118,7 +120,7 @@ window.addEventListener('load', function(){
         elapsedTime = new Date().getTime() - startTime // get time elapsed
         // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
         var swiperightBol = (elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchobj.pageY - startY) <= 100)
-        var speed = Math.ceil(Math.pow(Math.abs(dist/elapsedTime)))
+        var speed = dist/elapsedTime
         handleswipe(dist, speed)
         e.preventDefault()
     }, false)
