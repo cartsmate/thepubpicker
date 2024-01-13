@@ -84,7 +84,7 @@ window.addEventListener('load', function(){
 
     function handleswipe(isrightswipe, speed){
         speed_abs = Math.abs(speed)
-        speed_pow = Math.pow(speed_abs)
+        speed_pow = speed_abs * speed_abs
         speed_round = Math.ceil(speed_pow)
         movement = stepCount * speed
         if (isrightswipe > 0) {
