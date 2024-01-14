@@ -45,7 +45,8 @@ function list_create(pub_filtered) {
             const href = document.createElement("a");
             if (pub_attributes[j] == 'station_name') {
                 href.setAttribute("href", "#");
-                href.setAttribute("onclick", "redirect_station('" + pub_filtered[i]['station_identity'] + "', 'collection')");
+                //href.setAttribute("onclick", "redirect_station('" + pub_filtered[i]['station_identity'] + "', 'collection')");
+                href.setAttribute("onclick", "update_station('" + pub_filtered[i]['station_identity'] + "')");
                 text_ref = pub_filtered[i][pub_attributes[j]].toString().substring(0,11)
                 const cellText = document.createTextNode(text_ref);
                 href.appendChild(cellText);
