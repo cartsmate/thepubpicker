@@ -40,8 +40,10 @@ function add_listeners_spinner() {
                         //document.getElementById(marker + "_word").style.color = "black"
                         //document.getElementById(marker + "_carousel").style.backgroundColor = "white"
                         pub_filtered = filter_all_data(pub)
-                        list_setup_beta(pub_filtered)
-                        populate_feature(pub_filtered)
+                        populate_all_filters(pub_filtered)
+                        pubs_sorted = sort_by_distance(pub_filtered, map)
+                        list_setup_beta(pubs_sorted)
+//                        populate_feature(pub_filtered)
                         populate_header(pub_filtered.length)
                         map_load_collection()
 
@@ -68,10 +70,11 @@ function add_listeners_spinner() {
                         document.getElementById(marker + "_carousel").style.backgroundColor = "coral"
 
                         pub_filtered = filter_all_data(pub)
-                        pubs_sorted = sort_by_distance(pubs_reviews, map)
+                        populate_all_filters(pub_filtered)
+                        pubs_sorted = sort_by_distance(pub_filtered, map)
                         list_setup_beta(pubs_sorted)
 
-                        populate_feature(pub_filtered)
+//                        populate_feature(pub_filtered)
                         populate_header(pub_filtered.length)
                         map_load_collection()
 
