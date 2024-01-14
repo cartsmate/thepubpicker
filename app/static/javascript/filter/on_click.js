@@ -2,15 +2,13 @@ function on_click_feature() {
     console.log('USER INPUT - on click feature')
     pub_filtered = filter_all_data(pub)
     list_setup_beta(pub_filtered)
-
-    //populate_direction(pub_filtered)
-    //populate_station(pub_filtered)
-
     populate_feature(pub_filtered)
     populate_header(pub_filtered.length)
     map_load_collection()
     //map_load_search(pub_filtered)
-
+    document.getElementById('template_map').style.display = "block"
+    document.getElementById('template_list').style.display = "block"
+    document.getElementById('template_header').style.display = "block"
 
 }
 function on_click_station() {
@@ -21,7 +19,9 @@ function on_click_station() {
     populate_header(pub_filtered.length)
     map_load_collection()
     //map_load_search(pub_filtered)
-
+    document.getElementById('template_map').style.display = "block"
+    document.getElementById('template_list').style.display = "block"
+    document.getElementById('template_header').style.display = "block"
 }
 
 function on_click_direction() {
