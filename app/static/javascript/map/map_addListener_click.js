@@ -53,7 +53,6 @@ function map_addListener_click_add(map) {
                 placeId: event.placeId,
                 //fields: ['name','geometry','formatted_address','rating','reviews','user_ratings_total','editorial_summary']
             };
-            var phone_request = '+16502530000'
             var find_request = {
                 placeId: event.placeId,
                 //fields: ['name','geometry','formatted_address','rating','reviews','user_ratings_total','editorial_summary']

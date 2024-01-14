@@ -40,6 +40,7 @@ function filter_reset() {
             document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
         }
     }
+    document.getElementById('active_filter_count').value = '0'
     document.getElementById('active_filter_count').style.display = "none"
     off()
 }

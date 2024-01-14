@@ -74,7 +74,7 @@ def add():
         try:
             df_new_pub['rank'] = places_facits['rating']
         except:
-            df_new_pub['extra'] = ""
+            df_new_pub['rank'] = ""
         try:
             df_new_pub['detail_latitude'] = places_facits['geometry']['location']['lat']
         except:

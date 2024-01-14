@@ -39,9 +39,18 @@ function add_listeners_spinner() {
                         //document.getElementById(marker + "_filter").checked = false;
                         //document.getElementById(marker + "_word").style.color = "black"
                         //document.getElementById(marker + "_carousel").style.backgroundColor = "white"
-                        document.getElementById('template_map').style.display = "none";
-                        document.getElementById('template_list').style.display = "none";
-                        document.getElementById('template_header').style.display = "none";
+                        pub_filtered = filter_all_data(pub)
+                        list_setup_beta(pub_filtered)
+                        populate_feature(pub_filtered)
+                        populate_header(pub_filtered.length)
+                        map_load_collection()
+
+                        console.log(document.getElementById('active_filter_count').textContent)
+                        if (document.getElementById('active_filter_count').textContent == '0') {
+                            document.getElementById('template_map').style.display = "none";
+                            document.getElementById('template_list').style.display = "none";
+                            document.getElementById('template_header').style.display = "none";
+                        }
                     } else {
                         console.log(marker)
                         console.log('was blank - make HIGHLIGHT')
@@ -58,9 +67,17 @@ function add_listeners_spinner() {
                         document.getElementById(marker + "_word").style.color = "white"
                         document.getElementById(marker + "_carousel").style.backgroundColor = "coral"
 
-                        pubs_reviews = filter_all_data()
-                        console.log('pubs_reviews: ' + pubs_reviews.length)
+                        pub_filtered = filter_all_data(pub)
                         pubs_sorted = sort_by_distance(pubs_reviews, map)
+                        list_setup_beta(pubs_sorted)
+
+                        populate_feature(pub_filtered)
+                        populate_header(pub_filtered.length)
+                        map_load_collection()
+
+//                        pubs_reviews = filter_all_data()
+//                        console.log('pubs_reviews: ' + pubs_reviews.length)
+//                        pubs_sorted = sort_by_distance(pubs_reviews, map)
                         var center = new google.maps.LatLng(pubs_sorted[0]['detail_latitude'], pubs_sorted[0]['detail_longitude']);
                         //console.log('center: ' + center)
                         map.panTo(center);
