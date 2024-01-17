@@ -6,7 +6,7 @@ function clearOverlays() {
   markersArray.length = 0;
 }
 //function marker_add_bounds_beta(map, bounds, data) {
-function marker_add_bounds_gamma(data, theme) {
+function marker_add_bounds_gamma(data) {
     console.log('add markers inside bounds GAMMA')
     console.log('data in: ' + data.length)
     //clearOverlays();
@@ -56,10 +56,11 @@ function marker_add_bounds_gamma(data, theme) {
         //console.log(i)
 
         if (i==0) {
-            var pinColor = theme
+            var pinColor = '#808000'
             var pinIndex = 20
         } else {
-            var pinColor = "#005B8F"
+            //var pinColor = "#005B8F"
+            var pinColor = "#808000"
             var pinIndex = 0
             //data[i]['colour']
         }

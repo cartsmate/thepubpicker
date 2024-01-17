@@ -20,12 +20,12 @@ ul.ui-autocomplete {
 
 /* iPHONE 13 mini */
 @media only screen
-    and (width: 375px)
-    and (height: 812px)
-    and (-webkit-device-pixel-ratio: 3)
+    and (max-width: 375px)
+    /*and (height: 812px)
+    and (-webkit-device-pixel-ratio: 3)*/
 {
     .screen-reactor {
-        width:350px;
+        width:300px;
 
     }
 }
