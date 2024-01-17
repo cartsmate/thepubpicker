@@ -16,9 +16,34 @@ ul.ui-autocomplete {
 .page-background {
     background-color:grey;
 }
-.screen-reactor {
-    width:360px;
+/* 1080×2340 pixels at 476ppi */
+
+/* iPHONE 13 mini */
+@media only screen
+    and (width: 375px)
+    and (height: 812px)
+    and (-webkit-device-pixel-ratio: 3)
+{
+    .screen-reactor {
+        width:360px;
+    }
 }
+
+/* IPAD */
+@media only screen
+    and (width: 768px)
+    and (height: 1024px)
+    and (-webkit-device-pixel-ratio: 3)
+{
+    .screen-reactor {
+        width:550px;
+    }
+}
+
+/* ALL OTHER PHONE TYPES */
+.screen-reactor {
+        width:400px;
+        }
 .top-buffer {
     margin: 5px 0px 0px 0px;
 }
