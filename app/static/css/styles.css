@@ -37,7 +37,7 @@ ul.ui-autocomplete {
     and (-webkit-device-pixel-ratio: 3)
 {
     .screen-reactor {
-        width:550px;
+        width:500px;
     }
 }
 
