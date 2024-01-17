@@ -8,7 +8,7 @@ function map_create(lat, lng, zoom) {
         zoom:zoom,
         zoomControl: true,
         //fullScreenControl: false,
-        controlSize: 20,
+        controlSize: 25,
         minZoom: 11
         }
     map = new google.maps.Map(document.getElementById('new_map'), map_prop)

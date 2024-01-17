@@ -12,6 +12,10 @@
 */
 
 
+.f_ {
+  transform: rotateY(0deg)
+  translateZ(var(--translateZ));
+}
 .f_01, .back_01{
   transform:
   rotateY(0deg)
