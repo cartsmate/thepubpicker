@@ -100,55 +100,17 @@
   background-color: rgb(235, 235, 235);
 }
 
-/* ::::>>>> buttons <<<<::::*/
-@media only screen
-    and (width: 375px)
-    and (height: 812px)
-    and (-webkit-device-pixel-ratio: 3)
-{
-    .button_wrapL{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        left: -140px;
-    }
-    .button_wrapR{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        left: 140px;
-    }
-}
-/* IPAD */
-@media only screen
-    and (width: 768px)
-    and (height: 1024px)
-    and (-webkit-device-pixel-ratio: 3)
-{
-    .button_wrapL{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        left: -150px;
-    }
-    .button_wrapR{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        left: 150px;
-    }
-}
 .button_wrapL{
     position: relative;
     display: flex;
     justify-content: center;
-    left: -160px;
+    left: -135px;
 }
 .button_wrapR{
     position: relative;
     display: flex;
     justify-content: center;
-    left: 160px;
+    left: 135px;
 }
 :root {
   --brand_colour: #808000;
