@@ -26,6 +26,7 @@ ul.ui-autocomplete {
 {
     .screen-reactor {
         width:360px;
+        overflow-x: hidden;
     }
 }
 
