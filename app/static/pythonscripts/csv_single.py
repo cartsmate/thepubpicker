@@ -14,15 +14,11 @@ class CsvSingle:
     def go_get_1_pub(self, pub_id):
         print('Go Get 1 Pub')
         df_detail = CsvSingle().go_get_1_detail(pub_id)
-        # print(df_detail)
         df_review = CsvSingle().go_get_1_review(pub_id)
-        print('df_review')
-        print(df_review)
         df_detail_review = pd.merge(df_detail, df_review, on='pub_identity', how='left')
 
         station_id = df_detail['station_identity'].iloc[0]
         df_station = self.go_get_1_station(station_id)
-        # print(df_station)
         df_det_rev_st = pd.merge(df_detail_review, df_station, on='station_identity', how='left')
 
         direction_id = df_station['direction_identity'].iloc[0]
@@ -31,10 +27,6 @@ class CsvSingle:
 
         df_diary = self.go_get_1_diary(pub_id)
         df_pb_rev_st_dir_dry = pd.merge(df_pb_rev_st_dir, df_diary, on='pub_identity', how='left')
-        # print(df_pb_rev_st_dir_dry)
-
-        # df_photo = self.go_get_1_photo(pub_id)
-        # df_with_photo = pd.merge(df_pb_rev_st_dir_dry, df_photo, on='pub_identity', how='left')
         df_pb_rev_st_dir_dry = df_pb_rev_st_dir_dry.fillna('')
 
         return df_pb_rev_st_dir_dry
@@ -50,7 +42,6 @@ class CsvSingle:
         df_reviews = Csv().go_get_reviews()
         df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
         df_1_review = df_rev_no_dupes.loc[df_rev_no_dupes['pub_identity'] == pub_id]
-        print(df_1_review.transpose())
         return df_1_review
 
     def go_get_1_station(self, station_id):
@@ -75,31 +66,21 @@ class CsvSingle:
         print('Go get 1 photo')
         df_photos = Csv().go_get_photos()
         df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
-        # print(df_1_photo)
         return df_1_photo
 
     def go_get_place_id(self, pub_id):
         print('go_get_place_id')
         df_detail = self.go_get_1_detail(pub_id)
-        print(df_detail.transpose())
         df_place_id = df_detail.iloc[0]['place']
-        print('df_place_id')
-        print(df_place_id)
         return df_place_id
 
     def go_get_places(self, place_id, env_vars):
         print('go_get_places')
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
-        print('go_get_places')
-        print('place_id')
-        print(place_id)
-        print('env_vars')
-        print(env_vars)
         keyw = env_vars['places_key']
 
         fields = 'name,photos,website,url,formatted_address,editorial_summary,geometry,ratings,types'
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw
-
         print(full_url)
 
         response = requests.get(full_url)
@@ -112,22 +93,21 @@ class CsvSingle:
     def go_get_1_photo_request(self, pub_id, env_vars):
         print('go_get_1_photo_request')
         place_id = self.go_get_place_id(pub_id)
-        # print(place_id)
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
 
         keyw = env_vars['places_key']
-        # print(keyw)
-
         fields = 'name,photos'
 
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
-        # print(full_url)
+        print(full_url)
 
         response = requests.get(full_url)
-        # print(response.json())
-        photo_ids = response.json()['result']['photos']
+        print(response.json())
         photo_list = []
-        for x in photo_ids:
-            photo_list.append(x['photo_reference'])
-
+        try:
+            photo_ids = response.json()['result']['photos']
+            for x in photo_ids:
+                photo_list.append(x['photo_reference'])
+        except KeyError:
+            pass
         return photo_list

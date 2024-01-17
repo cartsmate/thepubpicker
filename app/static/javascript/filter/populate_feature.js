@@ -1,6 +1,6 @@
-function populate_feature(pub_filtered) {
-    console.log('populate feature')
-    console.log('data in: ' + pub_filtered.length)
+function populate_feature(pub_filtered, theme) {
+    console.log('-- populate feature')
+    //console.log('data in: ' + pub_filtered.length)
     filter_clear('checks_feature')
     for (i=0; i<model_formats['icon_list'].length; i++) {
         var filtered_data = pub_filtered.filter(function(x) {
@@ -21,30 +21,28 @@ function populate_feature(pub_filtered) {
         input = document.createElement("input")
         input.type = "checkbox"
         input.id = model_formats['icon_list'][i] + "_filter"
-        input.onclick = function() { on_click_feature() }
+        input.onclick = function() { on_click_feature(theme) }
         if (filtered_data.length > 0) {
+            //console.log(model_formats['icon_list'][i] + ' >0')
             label.style.display = "block"
+            if (model_formats['icon_list'][i] != 'nofeature') {
+                document.getElementById(model_formats['icon_list'][i] + '_carousel').style.opacity = '1.0'
+                document.getElementById(model_formats['icon_list'][i] + '_icon').style.opacity = '1.0'
+                document.getElementById(model_formats['icon_list'][i] + '_word').style.opacity = '1.0'
+            }
         } else {
+            console.log(model_formats['icon_list'][i] + ' <0')
             label.style.display = "none"
+            if (model_formats['icon_list'][i] != 'nofeature') {
+                document.getElementById(model_formats['icon_list'][i] + '_carousel').style.opacity = '0.5'
+                document.getElementById(model_formats['icon_list'][i] + '_icon').style.opacity = '0.5'
+                document.getElementById(model_formats['icon_list'][i] + '_word').style.opacity = '0.5'
+            }
         }
         if (filtered_data.length == pub_filtered.length) {
             input.checked = true
         }
         label.appendChild(input)
+
     }
 }
-
-//function on_click_feature() {
-//    console.log('USER INPUT - on click feature')
-//    pub_filtered = filter_all_data(pub)
-//    list_setup(pub_filtered)
-//
-//    //populate_direction(pub_filtered)
-//    //populate_station(pub_filtered)
-//
-//    populate_feature(pub_filtered)
-//    populate_header(pub_filtered.length)
-//    map_load_collection(pub_filtered)
-//
-//
-//}

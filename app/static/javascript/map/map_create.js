@@ -1,3 +1,4 @@
+
 function map_create(lat, lng, zoom) {
     console.log("map create");
 //    console.log('lat: ' + lat)
@@ -10,6 +11,9 @@ function map_create(lat, lng, zoom) {
         controlSize: 20,
         minZoom: 11
         }
-    var map = new google.maps.Map(document.getElementById('new_map'), map_prop)
+    map = new google.maps.Map(document.getElementById('new_map'), map_prop)
+    //bounds = map.getBounds()
+    //var bounds = new google.maps.LatLngBounds();
+
     return map
 }

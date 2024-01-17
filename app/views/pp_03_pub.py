@@ -39,7 +39,6 @@ def pub():
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
     df_pub = CsvSingle().go_get_1_pub(pub_id)
-    print(df_pub.transpose())
     pub_json = Dataframes().df_to_dict(df_pub)
 
     # df_photo = CsvSingle().go_get_1_photo(pub_id)

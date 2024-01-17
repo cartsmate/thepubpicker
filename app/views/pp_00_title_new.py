@@ -16,7 +16,8 @@ from config import Configurations
 @app.route("/new/", methods=['GET'])
 def new():
     print('start TITLE NEW')
-
+    # theme = 'coral'
+    theme = '#808000'
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 

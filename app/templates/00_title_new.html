@@ -26,7 +26,10 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_new.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/carousel/add_listeners_spinner.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo_beta.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_header.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds_gamma.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed_gamma.js') }}"></script>
 
     <script>daily_id = {{ daily_id | tojson }}</script>
     <script>pub = {{ pub | tojson }}</script>
@@ -34,6 +37,13 @@
     <script>filters = {{ filters | tojson}}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>env_vars = {{ env_vars | tojson }}</script>
+
+
+    <script>
+        var map;
+        var bounds;
+        var theme =model_formats['theme'];
+    </script>
     <style>
         .card-title {
             font-size: 10px;
@@ -83,15 +93,12 @@
 
   border-radius: 1.2rem;
   border-style: solid;
-  border-color: coral;
+  border-color: {{model_formats['theme']}};
   border-width: thin;
   /* optional: backface-visibility: hidden; */
   background-color: black;
   box-shadow: inset
-  //0rem 0rem 0.2rem coral,
-  //0rem 0rem 0.2rem coral;
-  //0rem 0rem 0.2rem rgba(255, 0, 0, 0.6),
-  //0rem 0rem 0.2rem rgba(255, 0, 0, 0.6);
+
 }
 
 .backface{
@@ -122,7 +129,7 @@
     </style>
 </head>
 
-<body onload="onload_new()" class="page-background">
+<body onload="onload_new(theme=model_formats['theme'])" class="page-background">
     <div class="container-fluid" style="background-color:grey; width:360px;">
         <div class="row orange" id="template_title">
             <div class="col black">
@@ -130,14 +137,14 @@
                     <div class="col-2">{% include "9_icon_burger_beta.html" %}</div>
                     <div class="col-8" align="center" >{% include "9_title.html" %}</div>
                     <div class="col-2" align="center" style="margin: 0px; padding:0px; font-size:10px; font-weight: bold; text-align: center;">
-                        version 24.114.5
+                        version 24.115.1
                     </div>
                 </div>
             </div>
         </div>
         <div class="row orange" id="template_search">
             <div class="col black">
-                <div class="row pink" style="background-color: coral; color: white; padding: 5px;">
+                <div class="row pink elem-theme" style="background-color: {{model_formats['theme']}}; color: white; padding: 5px;">
                     <div class="col-2"></div>
                     <div class="col-8" align="center">
                         <a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" >
@@ -189,7 +196,6 @@
     </div>
 
 <!-- pure css javascript carousel basic: -->
-
 
 
 </body>

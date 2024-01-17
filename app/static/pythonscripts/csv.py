@@ -97,8 +97,7 @@ class Csv:
         # df_detail_reviews_station_direction_diary = df_detail_reviews_station_direction_diary.fillna('')
 
         df_photos = self.go_get_photos()
-        # print('df_photos')
-        # print(df_photos)
+
         df_pubs = pd.merge(df_detail_reviews_station_direction_diary, df_photos, on='pub_identity', how='left')
         df_pubs = df_pubs.fillna('')
 
@@ -112,58 +111,37 @@ class Csv:
         else:
             attribute_list = ['pub_identity', 'timestamp']
             df_details_day = S3().s3_read('featured', attribute_list)
-        # print(df_details_day)
-        # read value of date
+
         df_lastline = df_details_day.tail(1)
-        # print('df_lastline')
-        # print(df_lastline)
+
         previous_timestamp_str = df_lastline.iloc[0]['timestamp']
-        # print('previous_timestamp_str: ' + previous_timestamp_str)
-        # format_data = "%d/%m/%y %H:%M:%S.%f"
-        # format_data = "%Y-%m-%d"
-        # previous_timestamp = datetime.strptime(previous_timestamp_str, format_data)
-        # print('previous_timestamp: ' + str(previous_timestamp))
+
 
         new_timestamp = datetime.now()
         new_timestamp_str = datetime.today().strftime('%Y-%m-%d')
-        # new_timestamp = datetime.date.today()
-        # print('new_timestamp_str: ' + new_timestamp_str)
 
-        # if ((current_timestamp - daily_pub_timestamp) > timedelta(days=1)
-        #         or current_timestamp.weekday() != daily_pub_timestamp.weekday()):
         if new_timestamp_str == previous_timestamp_str:
-            print("same day")
             daily_id = df_lastline.iloc[0]['pub_identity']
-
         else:
-            print("next day")
             # # # GET RANDOM PUB
             df_details = Csv().go_get_details()
 
             no_of_details = df_details.shape[0]
             random_index = random.randrange(0, no_of_details)
             df_random_pub = df_details.iloc[random_index]
-            # print(df_random_pub)
             random_pub_id = df_random_pub['pub_identity']
-            # print(random_pub_id)
-
             data = {'pub_identity': [random_pub_id], 'timestamp': [new_timestamp_str]}
 
             df_new = pd.DataFrame(data)
 
-            # daily_pub_list = ['pub_identity', random_pub_id, 'timestamp', new_timestamp_str]
-            # df_new = pd.DataFrame(daily_pub_list)
-            # print(df_details_day)
-            # print(df_new)
             df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
-            # print(df_appended)
 
             if env_vars['source'] == 'csv':
                 df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
             else:
                 s3_resp = S3().s3_write(df_appended, 'featured.csv')
                 print(s3_resp)
-            # df_details_day = df_new
+
             daily_id = df_new.iloc[0]['pub_identity']
         return daily_id
 
@@ -180,9 +158,7 @@ class Csv:
                         'detail_deletion', 'detail_latitude', 'detail_longitude', 'extra', 'place', 'rank', 'website',
                         'url']
             df_details = S3().s3_read('details', attribute_list)
-        # df = S3().s3_read_new()
-        # print(df_details)
-        # print('details csv file downloaded')
+
         return df_details
 
     def go_get_reviews(self):
@@ -200,7 +176,7 @@ class Csv:
                               'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport',
                               'no_feature']
             df_reviews = S3().s3_read('reviews', attribute_list)
-        # df_reviews = self.add_no_feature(df_reviews)
+
         return df_reviews
 
     def go_get_diarys(self):
@@ -210,7 +186,6 @@ class Csv:
                                                                            'tuesday': str, 'wednesday': str,
                                                                            'thursday': str, 'friday': str,
                                                                            'saturday': str, 'sunday': str})
-            # print(df_diarys)
         else:
             attribute_list = ['pub_identity', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
                               'sunday']

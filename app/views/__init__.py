@@ -1,5 +1,3 @@
-from .pp_00_beta import beta
-from .pp_00_title_new_carousel import new_carousel
 from .pp_00_title_new import new
 from .pp_00_title_page import home
 from .pp_01_summary import summary
@@ -9,4 +7,3 @@ from .pp_04_add import add
 from .pp_05_edit import edit
 from .pp_06_submit import submit
 from .pp_07_search import search
-from .pp_08_photo import photo

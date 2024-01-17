@@ -1,5 +1,5 @@
 
-function set_feature_icon_colour(check_item) {
+function set_feature_icon_colour(check_item, theme) {
     console.log('set feature icon colour')
     var checkBox = document.getElementById(check_item + "_check");
     var image = document.getElementById(check_item + "_img");
@@ -12,7 +12,8 @@ function set_feature_icon_colour(check_item) {
         //caption.style.opacity = "1.0"
         caption.style.color = "white"
         //checkCol.style.background = "coral"
-        checkFace.style.background = "coral"
+        //checkFace.style.background = "coral"
+        checkFace.style.background = theme
         //checkCol.style.border = "thin solid coral";
         checkBox.value = true
     } else {
@@ -23,7 +24,8 @@ function set_feature_icon_colour(check_item) {
         //checkCol.style.background = "white"
         checkFace.style.background = "white"
         //checkCol.style.border = "thin solid coral";
-        checkFace.style.border = "thin solid coral";
+        //checkFace.style.border = "thin solid coral";
+        checkFace.style.border = "thin solid #808000";
         checkBox.value = false
     }
 }

@@ -1,6 +1,6 @@
 function filter_by_direction(data) {
-    console.log('FILTER_BY_DIRECTION')
-    console.log('data in: ' + data.length)
+    console.log('-- filter by direction')
+    //console.log('data in: ' + data.length)
     ticked_list = []
     //var filtered_data = {{ all_data | tojson }}
     for (i=0; i<directions_list.length; i++) {

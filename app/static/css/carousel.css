@@ -101,23 +101,28 @@
     position: relative;
     display: flex;
     justify-content: center;
-    left: -125px;
+    left: -140px;
 }
 .button_wrapR{
     position: relative;
     display: flex;
     justify-content: center;
-    left: 125px;
+    left: 140px;
+}
+:root {
+  --brand_colour: #808000;
 }
 .button{
-    top: 15px;
-    margin-bottom: 40px;
+    top: -65px;
+    //margin-bottom: 40px;
     cursor: pointer;
-    width: 40px;
+    width: 25px;
     height: 50px;
-    background-color: coral;
+    background-color: var(--brand_colour);;
+    //background-color: var(--{{theme}});
     //border-radius: 50%;
-    border-color: coral;
+    //border-color: var(--{{theme}});
+    border-color: var(--brand_colour);
     color:rgb(235, 235, 235);
 
     text-shadow:

@@ -1,6 +1,6 @@
 function filter_by_feature(filtered_data) {
-    console.log('FILTER BY FEATURE')
-    console.log('data in: ' + filtered_data.length)
+    console.log('-- filter by feature')
+    //console.log('data in: ' + filtered_data.length)
     //console.log(filtered_data)
     for (i=0; i<model_formats['icon_list'].length; i++) {
         //if (model_formats['icon_list'][i] != 'nofeature') {

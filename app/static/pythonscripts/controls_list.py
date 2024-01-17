@@ -22,7 +22,7 @@ class ControlsList:
                          'fields_list']
         for item in list_of_lists:
             total_list_obj[item] = []
-
+        total_list_obj['theme'] = '#808000'
         class_list = [Detail(), Diary(), Direction(), Review(), Station()]
         for cl in class_list:
             # print('class: ' + str(cl))

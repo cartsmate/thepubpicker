@@ -81,12 +81,16 @@ ul.ui-autocomplete {
     color: black;
     overflow: hidden;
 }
+:root {
+  --brand_colour: #808000;
+}
 .click {
     //padding-left:10px;
     font-size:12px;
     color: black;
-    border-left: 5px solid coral;
-    border-bottom: 5px solid coral;
+    border-left: 5px solid var(--brand_colour);
+    //border-bottom: 5px solid coral;
+    border-bottom: 5px solid var(--brand_colour);
     background-color: white;
     margin: 0px 0px;
     padding: 0px 0px;

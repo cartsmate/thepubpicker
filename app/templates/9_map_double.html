@@ -17,6 +17,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/sort_by_distance.js') }}"></script>
     <script>
+
         function map_init_summary() {
             console.log('MAP INIT SUMMARY')
             map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
@@ -51,10 +52,32 @@
             map_addListener_click_placeid(map)
             //map_addListener_click_add(map)
         }
+        var markersArray =[];
+        function clearOverlays() {
+            for (var i = 0; i < markersArray.length; i++ ) {
+                markersArray[i].setMap(null);
+            }
+            markersArray.length = 0;
+        }
+        function map_repopulate(pub_filtered) {
+            console.log('map_repopulate')
+
+            clearOverlays();
+            pub_filtered = filter_all_data()
+            marker_add_bounds_gamma(pub_filtered, theme)
+        }
+        function map_init_gamma() {
+            console.log('map init GAMMA')
+            map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
+            const input = document.getElementById("search-input-navbar");
+            const searchBox = new google.maps.places.SearchBox(input);
+            searchbox_addListener_places_changed(map, searchBox);
+            //map_addListener_bounds_changed_gamma(map, pub, searchBox);
+            map_addListener_click_placeid(map)
+        }
         function map_init_collection() {
             console.log('MAP INIT COLLECTION')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
-
+            map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);

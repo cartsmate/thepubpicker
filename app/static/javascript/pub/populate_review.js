@@ -1,4 +1,4 @@
-function populate_review(){
+function populate_review(pub, theme){
     console.log('POPULATE REVIEW')
     for (i=0; i < review_list.length; i++) {
         if (review_list[i] != "pub_identity") {
@@ -8,7 +8,7 @@ function populate_review(){
                     document.getElementById(review_list[i] + '_check').checked = true;
                     document.getElementById(review_list[i] + '_col').style.opacity = "1.0";
                     //document.getElementById(review_list[i] + '_col').style.background = "coral";
-                    document.getElementById(review_list[i] + '_face').style.background = "coral";
+                    document.getElementById(review_list[i] + '_face').style.background = theme;
                     document.getElementById(review_list[i] + '_caption').style.color = "white";
                 } else {
                     console.log('inside FALSE')
