@@ -30,10 +30,13 @@ function searchbox_addListener_places_changed(map, searchBox) {
             }
         });
         //move map to new location
+
         map.setCenter({lat:lat1, lng:lng1});
-        document.getElementById('template_map').style.display = "block"
-        document.getElementById('template_list').style.display = "block"
-        document.getElementById('template_header').style.display = "block"
+        update_results()
+
+//        document.getElementById('template_map').style.display = "block"
+//        document.getElementById('template_list').style.display = "block"
+//        document.getElementById('template_header').style.display = "block"
         //map.setZoom(19);
     });
 

@@ -19,8 +19,10 @@ function marker_add_bounds_gamma(data, theme) {
     var pinSVGHole = "M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z";
     //var pinSVGFilled = "M 12,2 C 8.1340068,2 5,5.1340068 5,9 c 0,5.25 7,13 7,13 0,0 7,-7.75 7,-13 0,-3.8659932 -3.134007,-7 -7,-7 z";
     var pinHole = pinSVGHole
-    /*
-    bounds = map.getBounds()
+
+
+    var bounds = new google.maps.LatLngBounds();
+    //bounds = map.getBounds()
     console.log('bounds')
     console.log(bounds)
     let ne = bounds.getNorthEast(); // Coords of the northeast corner
@@ -33,7 +35,7 @@ function marker_add_bounds_gamma(data, theme) {
     var south = south_west_str[0]
     var east = north_east_str[1]
     var west = south_west_str[1]
-    */
+
     //console.log('map')
     //console.log(map)
     //console.log('bounds')
@@ -46,7 +48,10 @@ function marker_add_bounds_gamma(data, theme) {
 //        minZoom: 11
 //        }
 //    map2 = new google.maps.Map(document.getElementById('new_map'), map_prop)
-    var bounds = new google.maps.LatLngBounds();
+
+    //bounds = map.getBounds();
+    console.log('bounds')
+    console.log(bounds)
     for (var i = 0; i < data.length; i++) {
         //console.log(i)
 
@@ -94,5 +99,5 @@ function marker_add_bounds_gamma(data, theme) {
         //}
 
     }
-    map.fitBounds(bounds);
+    //map.fitBounds(bounds);
 }
