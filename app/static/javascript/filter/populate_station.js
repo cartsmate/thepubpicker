@@ -17,7 +17,7 @@ function populate_station(pub_filtered) {
         label = document.createElement("div")
         label.style.width = "230px"
         label.id = stations_directions_list[i][0] + "_id"
-        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + stations_directions_list[i][1] + " (" + filtered_data.length + ")" + "</a>"
+        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + stations_directions_list[i][1] + " (" + filtered_data.length + ") " + "</a>"
         record.appendChild(label)
 
         input = document.createElement("input")

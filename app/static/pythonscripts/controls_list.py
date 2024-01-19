@@ -40,15 +40,15 @@ class ControlsList:
                         total_list_obj['icon_list'].append(v.name)
                 except:
                     pass
-                try:
-                    if v.alias1:
-                        alias_json = {v.name: v.alias1 + " " + v.alias2}
-                        total_list_obj['alias_list'].append(alias_json)
-                    else:
-                        alias_json = {v.name: v.alias}
-                        total_list_obj['alias_list'].append(alias_json)
-                except:
-                    pass
+                # try:
+                #     if v.alias1:
+                #         alias_json = {v.name: v.alias1 + " " + v.alias2}
+                #         total_list_obj['alias_list'].append(alias_json)
+                #     else:
+                #         alias_json = {v.name: v.alias}
+                #         total_list_obj['alias_list'].append(alias_json)
+                # except:
+                #     pass
                 if v.control == "dropdown":
                     total_list_obj['dropdown_list'].append(v.name)
                 if v.control == "star":
