@@ -1,5 +1,5 @@
 class Tuesday:
-    def __init__(self, name='tuesday', alias="Tue", required='false', form_visible='true',
+    def __init__(self, name='tuesday', alias="Tuesday", required='false', form_visible='true',
                  table_visible='false', value="", control='false', rank=0):
         self.name = name
         self.alias = alias

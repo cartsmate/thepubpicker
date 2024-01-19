@@ -1,7 +1,7 @@
 
 
 class Favourite:
-    def __init__(self, name="favourite", alias="Fav", alias2="favourites", required='true', form_visible='false',
+    def __init__(self, name="favourite", alias="Favourites", alias2="favourites", required='true', form_visible='false',
                  table_visible='false', value='0', control="check", icon="favourite.png"):
         self.name = name
         self.alias = alias

@@ -3,7 +3,7 @@
     {% if name == "readonly" and field.name in model_formats['form_visible_list'] %}
         <div class="form-group row details" id=row_{{field.name}} >
             <div class="col details-label" >
-                <label class="col-form-label label" for={{field.name}} >{{alias[field.name]}}</label>
+                <label style="margin-left: 10px;" class="col-form-label label" for={{field.name}} >{{alias[field.name]}}</label>
             </div>
             <div class="col details-data" align="left" id=div_{{field.name}} >
                 {% if field.name == 'website' %}
