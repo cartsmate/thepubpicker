@@ -31,7 +31,7 @@ function populate_feature(pub_filtered, theme) {
                 document.getElementById(model_formats['icon_list'][i] + '_word').style.opacity = '1.0'
             }
         } else {
-            console.log(model_formats['icon_list'][i] + ' <0')
+            //console.log(model_formats['icon_list'][i] + ' <0')
             label.style.display = "none"
             if (model_formats['icon_list'][i] != 'nofeature') {
                 document.getElementById(model_formats['icon_list'][i] + '_carousel').style.opacity = '0.5'

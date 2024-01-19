@@ -39,11 +39,13 @@ function pre_populate(filters_str) {
 
         s_list = filters_list.slice(s_obj['start']+1, f_obj['start'])
         for (i=0; i < s_list.length; i++) {
+            console.log(s_list[i])
             document.getElementById(s_list[i] + "_filter").checked = true
         }
 
         f_list = filters_list.slice(f_obj['start']+1)
         for (i=0; i < f_list.length; i++) {
+            console.log(f_list[i])
             document.getElementById(f_list[i] + "_filter").checked = true
         }
 

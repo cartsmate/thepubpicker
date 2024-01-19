@@ -4,8 +4,28 @@
     <link rel="stylesheet" href="/static/css/beta.css">
     <link rel="stylesheet" href="/static/css/carousel.css">
 </style>
+<style>
+.btn-primary {
+    color: white;
+    background-color: #808000;
+    border-color: white;
+}
+.btn-primary:hover {
+    color: #808000;
+    background-color: white;
+    border-color: #808000;
+}
+.btn-primary:focus {
+    color: white;
+    background-color: #6c7054;
+    border-color: white;
+}
+
+
+
+</style>
 <div class="col black">
-    <form action="/submit/?id={{pub[0]['pub_identity']}}" method="post">
+    <form action="/submit/?id={{pub[0]['pub_identity']}}&filters={{filters}}" method="post">
         <div style="font-size: 12px; font-weight: bold">What's it about ... </div>
         <div class="row pink">{% include "9_pub_detail.html" %}</div>
         <div class="row pink">{% include "9_pub_features_add.html" %}</div>

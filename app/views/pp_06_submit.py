@@ -28,6 +28,7 @@ def submit():
 
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
+    filters = request.args.get('filters')
     print('id from url: ' + pub_id)
     # df_pub = CsvSingle().go_get_1_pub(pub_id)
 
@@ -98,7 +99,7 @@ def submit():
     # print(newdf)
     print('end SUBMIT')
     # return redirect(url_for('home', pub_id=pub_id), code=307)
-    return redirect(url_for('pub', id=pub_id, filters='none'))
+    return redirect(url_for('pub', id=pub_id, filters=filters))
     # return render_template('03_pub.html', id=pub_id)
 
     # , pub=pub_json)

@@ -15,3 +15,21 @@ function redirect_pub_search(id) {
     window.location.replace(myUrlWithParams.href);
 
 }
+
+function redirect_pub_search_edit(id, filters) {
+    console.log("redirect_pub_search_edit")
+
+    //filters = get_filter_values()
+
+    var base_url = window.location.hostname
+    if (env_vars['env'] == 'qual') {
+        var url = "http://" + base_url + ":5000/edit/"
+    } else {
+        var url = "http://" + base_url + "/edit/"
+    }
+    const myUrlWithParams = new URL(url);
+    myUrlWithParams.searchParams.append('id', id);
+    myUrlWithParams.searchParams.append('filters', filters);
+    window.location.replace(myUrlWithParams.href);
+
+}

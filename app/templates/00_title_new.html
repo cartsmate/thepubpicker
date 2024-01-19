@@ -29,6 +29,8 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_header.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds_gamma.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub_search.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/get_filter_values.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed_gamma.js') }}"></script>
 
     <script>daily_id = {{ daily_id | tojson }}</script>
@@ -81,7 +83,6 @@
                 <div class="row pink">
                     <div class="col-9"><input style="margin-top: 5px; margin-left: -5px;" id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></div>
                     <div class="col-3 d-flex justify-content-center">{% include "9_filter_overlay_beta.html" %}</div>
-                    <!--<div><button onclick="findPubs()" type="button">Search</button></div>-->
                 </div>
                 <div class="row pink">
                     {% include "9_carousel_spinner.html" %}

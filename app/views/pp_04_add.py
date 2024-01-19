@@ -109,8 +109,8 @@ def add():
     stations_json = Dataframes().df_to_dict(df_stations)
 
     # # # FOR TESTING PURPOSES ONLY
-    # newdf = df_new_pub.transpose()
-    # print(newdf)
+    newdf = df_new_pub.transpose()
+    print(newdf)
     detail_list = []
     review_list = []
     diary_list = []

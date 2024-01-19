@@ -35,7 +35,7 @@
             console.log('arrMarks')
             console.log(arrMarks)
 
-            map = map_create(pub_new[0].detail_latitude, pub_new[0].detail_longitude, 15)
+            map = map_create(pub_new[0].detail_latitude, pub_new[0].detail_longitude, 17)
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);
@@ -68,7 +68,7 @@
         }
         function map_init_gamma() {
             console.log('map init GAMMA')
-            map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
+            map_create(pub[0].detail_latitude, pub[0].detail_longitude, 14)
             const input = document.getElementById("search-input-navbar");
             const searchBox = new google.maps.places.SearchBox(input);
             searchbox_addListener_places_changed(map, searchBox);

@@ -9,17 +9,17 @@ function populate_pub(show_pub, theme){
 }
 
 //function populate_pub_add_beta(show_pub){
-function populate_pub_add_beta(theme){
+function populate_pub_add_beta(show_pub, theme){
     console.log('POPULATE_PUB BETA')
     //populate_detail(show_pub);
-    populate_detail();
-    populate_review(theme);
+    populate_detail(show_pub);
+    populate_review(show_pub, theme);
     //populate_diary(show_pub);
-    populate_diary();
+    populate_diary(show_pub);
     //populate_station(show_pub);
-    populate_station();
+    populate_station(show_pub);
+    //populate_direction(show_pub);
     populate_direction(show_pub);
-    populate_direction();
     //populate_photo();
 }
 /*
