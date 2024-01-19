@@ -32,6 +32,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
         //move map to new location
 
         map.setCenter({lat:lat1, lng:lng1});
+        map.setZoom(16)
         update_results()
 
 //        document.getElementById('template_map').style.display = "block"
