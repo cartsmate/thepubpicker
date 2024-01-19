@@ -6,14 +6,14 @@
 {% endblock %}
 
 <div class="col black" id="pub_summary_test">
-    <div class="row pink" style="background-color: {{model_formats['theme']}}; color: white; padding: 5px;">
+    <div class="row pink" id="summary_heading" style="background-color: {{model_formats['theme']}}; color: white; padding: 5px;">
         <div class="col-2"></div>
         <div class="col-8" align="center" onclick="redirect_pub(daily_id)"><a style="font-family: Verdana, sans-serif; text-align: center; text-decoration: none; font-size: 12px; font-weight: bold; color: white;" href="#" >Featured Pub Of The Day</a></div>
         <div class="col-2"></div>
     </div>
 
-    <div class="row pink" onclick="redirect_pub(daily_id)" style="text-align: center; color: black; padding-top:5px;" id="summary_name"><a href="#" style="color: black;" ></a></div>
-    <div class="row pink" id="random_rank"><a target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a></div>
-    <div class="row pink" onclick="redirect_pub(daily_id)" id="summary_extra" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; "><a href="#" style="color: black;"></a></div>
+    <div class="row pink" id="summary_name" onclick="redirect_pub(daily_id)" style="text-align: center; color: black; padding-top:5px;" ><a href="#" style="color: black;" ></a></div>
+    <div class="row pink" id="summary_rank"><a target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a></div>
+    <div class="row pink" id="summary_extra" onclick="redirect_pub(daily_id)" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; "><a href="#" style="color: black;"></a></div>
     <!--<div class="row" style="justify-content: center;background-color: pink; padding:5px 5px 5px 5px; margin:5px 5px 5px 5px"><a id="random_description">{{ pub[0]['pub_identity'] }}</a></div>-->
 </div>

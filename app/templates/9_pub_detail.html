@@ -1,13 +1,46 @@
+<style>
+    .col-diary-label {
+        width: 75px;
+        margin: 0px;
+        margin-left: 10px;
+        padding: 0px;
+    }
+    .col-diary-item {
+        width: 200px;
+        margin: 0px;
+        margin-right: 10px;
+        padding: 0px;
+    }
+    .item-diary-label {
+        width:75px;
+        padding:0px;
+        margin:0px;
+        height: 30px;
+        font-size:12px;
+    }
+    .item-diary-input {
+        margin:0px;
+        padding: 0px;
+        font-size:12px;
+        overflow-y: scroll;
+        resize: none;
+        height: 30px;
+        text-align:left;
+        visibility:visible;
+        display:block;
+        width:200px;"
+    }
+</style>
 <script>console.log('CREATING DETAIL FIELDS')</script>
 {% for k, field in detail.__dict__.items() %}
     {% if name == "readonly" and field.name in model_formats['form_visible_list'] %}
         <div class="form-group row details" id=row_{{field.name}} >
-            <div class="col details-label" >
-                <label style="margin-left: 10px;" class="col-form-label label" for={{field.name}} >{{alias[field.name]}}</label>
+            <div class="col col-diary-label">
+                <label class="col-form-label item-diary-label" for={{field.name}} >{{alias[field.name]}}</label>
             </div>
-            <div class="col details-data" align="left" id=div_{{field.name}} >
+            <div class="col col-diary-item" align="left" id=div_{{field.name}} >
                 {% if field.name == 'website' %}
-                    <div id={{field.name}}></div>
+                    <input class="form-control item-diary-input" type='url' name={{field.name}} id={{field.name}} readonly>
                 {% elif field.name in model_formats['dropdown_list'] %}
                     {% include "control_dropdown.html" %}
                 {% elif field.name in model_formats['star_list'] %}
@@ -17,7 +50,7 @@
                 {% elif field.name in model_formats['date_list'] %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control details-input" type='textarea' name={{field.name}} id={{field.name}} readonly>
+                    <input class="form-control item-diary-input" type='textarea' name={{field.name}} id={{field.name}} readonly>
                 {% endif %}
                 {% if field.name in model_formats['required_list'] %}
                     <script>document.getElementById("{{field.name}}").required = true</script>

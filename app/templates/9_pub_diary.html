@@ -1,15 +1,48 @@
+<style>
+    .col-diary-label {
+        width: 75px;
+        margin: 0px;
+        margin-left: 10px;
+        padding: 0px;
+    }
+    .col-diary-item {
+        width: 200px;
+        margin: 0px;
+        margin-right: 10px;
+        padding: 0px;
+    }
+    .item-diary-label {
+        width:75px;
+        padding:0px;
+        margin:0px;
+        height: 30px;
+        font-size:12px;
+    }
+    .item-diary-input {
+        margin:0px;
+        padding: 0px;
+        font-size:12px;
+        overflow-y: scroll;
+        resize: none;
+        height: 30px;
+        text-align:left;
+        visibility:visible;
+        display:block;
+        width:200px;"
+    }
+</style>
 <script>console.log('CREATING DIARY FIELDS')</script>
 {% for key, field in diary.__dict__.items() %}
     {% if key != "pub_identity" %}
         <div class="form-group row details" id="row_{{field.name}}">
-            <div class="col details-label">
-                <label style="margin-left: 10px;" class="col-form-label label" for="{{key}}">{{field.alias}}</label>
+            <div class="col col-diary-label" >
+                <label class="col-form-label item-diary-label" for="{{key}}">{{field.alias}}</label>
             </div>
-            <div class="col details-data" id="div_{{key}}" >
+            <div class="col col-diary-item" id="div_{{key}}" >
                 {% if name == "readonly" %}
-                    <input class="form-control details-input" type='textarea' name="{{key}}" id="{{key}}" readonly>
+                    <input class="form-control item-diary-input" type='textarea' name="{{key}}" id="{{key}}" readonly>
                 {% else %}
-                    <input class="form-control details-input" type='textarea' name="{{key}}" id="{{key}}" >
+                    <input class="form-control item-diary-input" type='textarea' name="{{key}}" id="{{key}}" >
                 {% endif %}
             </div>
         </div>

@@ -1,5 +1,5 @@
 <div class="col" id="col_map">
-    <div style="height:200px; width:310px;" id="new_map">
+    <div style="height:200px; width:300px; border: thin solid #808000" id="new_map"></div>
     <div class="map_words" id="msg_map"></div>
 </div>
 {% block script %}
@@ -9,7 +9,6 @@
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_summary.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_collection.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
     <script>
