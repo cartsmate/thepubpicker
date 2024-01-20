@@ -14,6 +14,10 @@
     <script>station_list = {{ station_list | tojson }}</script>
     <script>direction_list = {{ direction_list | tojson }}</script>
     <!--<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature.js') }}"></script>-->
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature_add.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed_beta_add.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_add.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub_add.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
@@ -22,10 +26,6 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_diary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_direction.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_add.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click_feature_add.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_bounds_changed_beta_add.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}

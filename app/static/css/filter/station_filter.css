@@ -1,0 +1,21 @@
+:root {
+    --theme: var(--color)
+}
+#content_station{
+    position: absolute;
+    left: -250px;
+    background-color: #F5F5F5;
+    border: 5px solid var(--theme);
+}
+#button_station {
+    width: 95px;
+    height: 35px;
+}
+#button_station:hover{
+    background-color: var(--theme);
+    color: white;
+    border-left: 5px solid var(--theme);
+    border-bottom: 5px solid var(--theme);
+    border-right: 5px solid var(--theme);
+    border-top: 5px solid var(--theme);
+}

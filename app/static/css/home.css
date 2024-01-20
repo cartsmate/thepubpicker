@@ -1,0 +1,10 @@
+.version {
+    margin: 0px;
+    padding:0px;
+    font-size:10px;
+    font-weight: bold;
+    text-align: center;
+    }
+.pointer {
+    cursor: pointer;
+    }

@@ -1,22 +1,4 @@
-<button type="button" id="button_reset" class="btn click text-right">reset</button>
-<style>
-#button_reset:hover{
-    background-color: {{model_formats['theme']}};
-}
-#button_reset{
-    width: 95px;
-    height: 35px;
-}
-#button_reset:hover{
-    background-color: {{model_formats['theme']}};
-    color: white;
-    border-left: 5px solid {{model_formats['theme']}};
-    border-bottom: 5px solid {{model_formats['theme']}};
-    border-right: 5px solid {{model_formats['theme']}};
-    border-top: 5px solid {{model_formats['theme']}};
-}
-</style>
-<script>
+function toggle_diary() {
     var button_reset = document.getElementById('button_reset')
 
     button_reset.addEventListener("click", function() {
@@ -35,4 +17,4 @@
         document.getElementById('template_header').style.display = 'none'
 
     })
-</script>
+}

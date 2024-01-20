@@ -12,8 +12,9 @@ from app.models.station.station import Station
 from app.models.direction.direction import Direction
 from app.models.photo.photo import Photo
 from app.static.pythonscripts.csv_single import CsvSingle
-from app.static.pythonscripts.new_pub import NewPub
+# from app.static.pythonscripts.new_pub import NewPub
 from app.static.pythonscripts.files_detail import FilesDetail
+from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
 from app.static.pythonscripts.objects import Objects
@@ -42,7 +43,7 @@ def add():
     # df_details = Csv().go_get_details_daily()
     # daily_id = df_details.iloc[0]['pub_identity']
 
-    df_new_pub = NewPub().go_new_pub()
+    df_new_pub = FilesPub().go_new_pub()
     # print(df_new_pub.transpose())
     # # # GET REQUESTED PUB (from place id)
     place_id = request.args.get('place_id')

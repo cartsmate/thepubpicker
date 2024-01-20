@@ -31,8 +31,8 @@ function update_results() {
         populate_all_filters(pub_filtered)
         pubs_sorted = sort_by_distance(pub_filtered, map)
         list_setup_beta(pubs_sorted)
-        populate_header(pub_filtered.length)
-        map_repopulate(pub_filtered)
+        populate_header(pubs_sorted.length)
+        map_repopulate(pubs_sorted)
         display_results('block')
     } else {
         display_results('none')

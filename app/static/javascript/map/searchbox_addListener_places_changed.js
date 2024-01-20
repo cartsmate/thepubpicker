@@ -1,11 +1,20 @@
 function searchbox_addListener_places_changed(map, searchBox) {
     console.log('searchbox addListener places changed ADDED')
+
     let markers = [];
+    div_waiting = document.getElementById('spin_waiting')
+    //searchBox.addListener("places_changed", (div_waiting) => {
+    //google..addListener(marker, 'click', (function (marker, i) {
+    //searchBox.addListener("places_changed", (function (div_waiting) {
+
     searchBox.addListener("places_changed", () => {
+    //searchBox.addListener("change", () => {
         console.log('search box has changed place')
-        document.getElementById('col_map').style.display = "block";
+
         //get place name from searchbox
         const places = searchBox.getPlaces();
+        console.log('places')
+        console.log(places)
         if (places.length == 0) {
             return;
         }
@@ -32,13 +41,17 @@ function searchbox_addListener_places_changed(map, searchBox) {
         //move map to new location
 
         map.setCenter({lat:lat1, lng:lng1});
-        map.setZoom(16)
+        map.setZoom(15)
         update_results()
 
-//        document.getElementById('template_map').style.display = "block"
-//        document.getElementById('template_list').style.display = "block"
-//        document.getElementById('template_header').style.display = "block"
-        //map.setZoom(19);
+
+    //        document.getElementById('template_map').style.display = "block"
+    //        document.getElementById('template_list').style.display = "block"
+    //        document.getElementById('template_header').style.display = "block"
+            //map.setZoom(19);
     });
+    //})(div_waiting));
+    //})(marker, i));
+    //}(div_waiting));
 
 }

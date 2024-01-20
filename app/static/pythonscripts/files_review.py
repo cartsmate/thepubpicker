@@ -32,37 +32,23 @@ directory_path = config2['directory_path']
 model_formats = ControlsList().go_get_control_list()
 env_vars = Configurations().get_config2()
 
+
 class FilesReview:
 
-    def new_review(self, id, pub_id):
-        new_review = Review(review_identity=id, pub_identity=pub_id, review_deletion=ReviewDeletion().value,
+    def new_review(self, rev_id, pub_id):
+        new_review = Review(review_identity=rev_id, pub_identity=pub_id, review_deletion=ReviewDeletion().value,
                             sport=Sport().value, garden=Garden().value, music=Music().value, roast=Roast().value,
                             brunch=Brunch().value, late=Late().value, quiz=Quiz().value, pool=Pool().value,
                             dart=Dart().value, entertain=Entertain().value, history=History().value,
-                            favourite=Favourite().value, noreview=NoFeature().value)
+                            favourite=Favourite().value, nofeature=NoFeature().value)
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 
     def form_review(self):
         print('get review form')
-        # print(request.form['review_identity_check'])
-        # print(request.form['review_deletion'])
-        # print(request.form['pub_identity'])
-        # print(request.form.get('brunch'))
-        # print(request.form.get('dart'))
-        # print(request.form.get('entertain'))
-        # print(request.form.get('favourite'))
-        # print(request.form.get('garden'))
-        # print(request.form.get('history'))
-        # print(request.form.get('late'))
-        # print(request.form.get('music'))
-        # print(request.form.get('pool'))
-        # print(request.form.get('quiz'))
-        # print(request.form.get('roast'))
-        # print(request.form.get('sport'))
-        # print(request.form.get('nofeature'))
         new_review = Review(review_identity=UuidGenerator().get_new_uuid(),
-                            review_deletion=request.form['review_deletion' + "_check"], pub_identity=request.form['pub_identity'],
+                            review_deletion=request.form['review_deletion' + "_check"],
+                            pub_identity=request.form['pub_identity'],
                             brunch='1' if request.form.get('brunch' + "_check") == 'on' else '0',
                             dart='1' if request.form.get('dart' + "_check") == 'on' else '0',
                             entertain='1' if request.form.get('entertain' + "_check") == 'on' else '0',

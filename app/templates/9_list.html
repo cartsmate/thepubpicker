@@ -1,21 +1,19 @@
 {% block script %}
     <script>alias = {{ alias | tojson }}</script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_header.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/get_filter_values.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_setup_diary.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_setup.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_setup_beta.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_delete.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_create.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_columns_diary.js') }}"></script>
-    <!--<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_columns.js') }}"></script>-->
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_columns_beta.js') }}"></script>
-    <!--<script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_filter.js') }}"></script>-->
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_filter_beta.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/list_js/list_addjson.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub_search.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/update_station.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/get_filter_values.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_header.js') }}"></script>
 {% endblock %}
 
 <div style="margin: 0 auto; position: relative;">

@@ -7,9 +7,9 @@
 </div>
 
 <script>
-    function redirect_back() {
+    function redirect_back(filters) {
         console.log("redirect_back")
-        var filters = document.getElementById('search_back').textContent;
+        //var filters = document.getElementById('search_back').textContent;
         console.log(filters)
         var base_url = window.location.hostname
         if (env_vars['env'] == 'qual') {

@@ -1,0 +1,33 @@
+:root {
+    --theme: var(--color)
+}
+#content_diary{
+    position: absolute;
+    //top: 50%;
+    //left: 50%;
+    //top: 75px;
+    left: -250px;
+    background-color: #F5F5F5;
+    border: 5px solid var(--theme);
+    //transform: translate(-50%,-50%);
+    //-ms-transform: translate(-50%,-50%);
+}
+#button_diary {
+    width: 95px;
+    height: 35px;
+}
+#button_diary:hover{
+    background-color: var(--theme);
+    color: white;
+    border-left: 5px solid var(--theme);
+    border-bottom: 5px solid var(--theme);
+    border-right: 5px solid var(--theme);
+    border-top: 5px solid var(--theme);
+}
+.diary_row {
+    background-color: white;
+    width: 200px;
+    font-size: 12px;
+    padding: 0px;
+    margin: 5px 0px
+}

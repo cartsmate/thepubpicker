@@ -15,18 +15,8 @@
     <script>env_vars = {{ env_vars | tojson }}</script>
     <script>model_formats = {{ model_formats | tojson }}</script>
     <script>alias = {{ alias | tojson }}</script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_new.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_collection_id.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_same_stations.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_stations.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_search.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_edit.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_reviews.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub_search.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/get_filter_values.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_pub.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_stars.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_summary.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_pub.js') }}"></script>
@@ -36,7 +26,15 @@
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_station.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_direction.js') }}"></script>
     <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_photo_beta.js') }}"></script>
-    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_pub.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_new.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_summary.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_same_stations.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_stations.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_station.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_search.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_edit.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_reviews.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_pub_search.js') }}"></script>
 {% endblock %}
 
 {% block on_load %}

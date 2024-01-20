@@ -40,7 +40,7 @@ def new():
     filters = request.args.get('filters')
     print('end TITLE')
 
-    return render_template('00_title_new.html',
+    return render_template('02_home_.html',
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
