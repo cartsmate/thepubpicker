@@ -28,16 +28,13 @@
   translateZ(var(--translateZ));
 }
 .f_n1 {
-  transform: rotateY(calc(30 * 1deg))
-  translateZ(var(--translateZ));
+  transform: rotateY(calc(30 * 1deg)) translateZ(var(--translateZ));
 }
 .f_n2 {
-  transform: rotateY(calc(30 * 2deg))
-  translateZ(var(--translateZ));
+  transform: rotateY(calc(30 * 2deg)) translateZ(var(--translateZ));
 }
 .f_n3 {
-  transform: rotateY(calc(30deg * 3))
-  translateZ(var(--translateZ));
+  transform: rotateY(calc(30deg * 3)) translateZ(var(--translateZ));
 }
 .f_n4, .back_05 {
   transform: rotateY(calc(30deg * 4))

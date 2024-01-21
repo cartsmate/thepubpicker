@@ -23,7 +23,7 @@ function add_listeners_spinner() {
                         update_results()
                     } else {
                         console.log(marker)
-                        console.log('was blank - make HIGHLIGHT')
+                        console.log(marker + ': was blank - make HIGHLIGHT')
                         for (i=0; i<model_formats['icon_list'].length; i++) {
                         //console.log(model_formats['icon_list'][i])
                             if (model_formats['icon_list'][i] != 'nofeature') {

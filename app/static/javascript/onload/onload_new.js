@@ -26,6 +26,7 @@ function onload_new() {
     populate_all_filters(pub_filtered)
 
     spinner_load()
+    spinner_classes()
     add_listeners_spinner()
     populate_photo_carousel()
     map_load_gamma()

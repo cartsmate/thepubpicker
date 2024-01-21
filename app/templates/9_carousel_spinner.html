@@ -5,7 +5,7 @@
                 {% if field.name != "pub_identity" %}
                     {% if field.name in model_formats['icon_list'] %}
                         {% if field.name != "nofeature" %}
-                            <div class="face f_n{{field.indx}} carousel_off" id="{{field.name}}_carousel">
+                            <div class="face carousel_off" id="{{field.name}}_carousel">
                                 <div>
                                     <img class="icon_style" id="{{field.name}}_icon" src="/static/icons/features/{{field.name}}.png">
                                     <div class="icon_word" id="{{field.name}}_word">'{{field.alias}}'</div>
