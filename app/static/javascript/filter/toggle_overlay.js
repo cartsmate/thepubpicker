@@ -12,7 +12,7 @@ function off() {
     content_direction.style.display = "none"
     content_station.style.display = "none"
     content_feature.style.display = "none"
-    content_diary2.style.display = "none"
+    content_diary.style.display = "none"
     parent_btn = document.getElementById('content_filters')
     parent_btn.style.display = "none";
 }

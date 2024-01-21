@@ -12,21 +12,6 @@ config2 = Configurations().get_config2()
 
 class S3:
 
-    def go_get_counter(self):
-        directory_path = config2['directory_path']
-        if config2['env'] == 'prod':
-            obj_df = pd.read_csv(directory_path + '/files/counter_prod.csv')
-        else:
-            obj_df = pd.read_csv(directory_path + '/files/counter_qual.csv')
-        obj_df["pub_counter"] = obj_df["pub_counter"] + 1
-
-        if config2['env'] == 'prod':
-            obj_df.to_csv(directory_path + '/files/counter_prod.csv', sep=',', encoding='utf-8', index=False)
-        else:
-            obj_df.to_csv(directory_path + '/files/counter_qual.csv', sep=',', encoding='utf-8', index=False)
-        counter = str(obj_df["pub_counter"].values[0]).zfill(6)
-        return counter
-
     def s3_read_new(self):
         print('s3 - s3 read new')
         env_vars = Configurations().get_config2()
@@ -82,7 +67,7 @@ class S3:
         # print('my_bucket')
         # print(my_bucket)
         bucket_list = []
-        # print(my_bucket.objects)
+
         for obj in my_bucket.objects.filter(Prefix=prefix):  # .all():
             if obj.key.find(".csv") != -1:
                 bucket_list.append(obj.key)
@@ -121,3 +106,29 @@ class S3:
         # s3_resp = client.head_object(Bucket=env_vars['bucket_name'], Key=s3_obj_name)
 
         return status
+
+    def go_get_counter(self, prefix, list_of_columns):
+        env_vars = Configurations().get_config2()
+        s3 = boto3.resource('s3', aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
+        my_bucket = s3.Bucket(env_vars['bucket_name'])
+        bucket_list = []
+        for obj in my_bucket.objects.filter(Prefix=prefix):  # .all():
+            if obj.key.find(".csv") != -1:
+                bucket_list.append(obj.key)
+        if len(bucket_list) == 1:
+            list_of_objects = []  # Initializing empty list of dataframes
+            for bucket in bucket_list:  # pubs.csv
+                obj = s3.Object(env_vars['bucket_name'], bucket)
+                data = obj.get()['Body'].read()
+                list_of_objects.append(pd.read_csv(io.BytesIO(data), header=0, delimiter=",", low_memory=False))
+            obj_df = pd.DataFrame(columns=list_of_columns)
+            # print(obj_df)
+            for obj in list_of_objects:
+                temp_df = pd.DataFrame(data=obj)
+                # print(temp_df)
+                obj_df = pd.DataFrame(np.concatenate([obj_df.values, temp_df.values]), columns=obj_df.columns)
+                counter = obj_df["pub_counter"].values[0]
+        else:
+            obj_df = None
+            print('error in processing')
+        return counter

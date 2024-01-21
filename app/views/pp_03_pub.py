@@ -68,7 +68,7 @@ def pub():
         direction_list.append(v.name)
     stations_directions_list = Csv().go_get_stations_directions_list()
     directions_list = Csv().go_get_directions_list()
-    return render_template('03_pub.html',
+    return render_template('03_pub_.html',
                            pub=pub_json,
                            photos_list=photos_list,
                            # daily_id=daily_id,

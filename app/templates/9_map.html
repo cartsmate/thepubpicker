@@ -1,137 +1,18 @@
 <div class="col" id="col_map">
-    <div style="height:200px; width:300px; border: thin solid #808000" id="new_map"></div>
+    <div id="new_map"></div>
     <div class="map_words" id="msg_map"></div>
 </div>
-{% block script %}
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/nearest_station.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_summary.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_collection.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
-    <script>
-        function map_init_pub() {
-            console.log('MAP INIT PUB')
-            console.log(pub[0]['detail_latitude'], pub[0]['detail_longitude'])
 
-            map = map_create(pub[0]['detail_latitude'], pub[0]['detail_longitude'], 15)
+<link rel="stylesheet" href="/static/css/map/map.css">
 
-            marker_add_summary(map, pub[0]['detail_latitude'], pub[0]['detail_longitude'])
-
-        }
-        function map_init_summary() {
-            console.log('MAP INIT SUMMARY')
-            let x_pub = pub.filter((x) => {
-                return x.pub_identity == '{{daily_id}}';
-            });
-            console.log('x_pub')
-            console.log(x_pub)
-            pub_lat = x_pub[0]['detail_latitude']
-            pub_lng = x_pub[0]['detail_longitude']
-
-            map = map_create(pub_lat, pub_lng, 15)
-
-            marker_add_summary(map, pub_lat, pub_lng)
-
-            /*
-            records = []
-            for (let i = 0; i < pub.length; i++) {
-                lat_diff = Math.abs(pub[i]['detail_latitude'] - pub_lat)
-                lng_diff = Math.abs(pub[i]['detail_longitude'] - pub_lng)
-                tot_diff = lat_diff + lng_diff
-                var record = { detail_name: pub[i]['detail_name'], pub_identity: pub[i]['pub_identity'], detail_longitude: pub[i]['detail_longitude'], detail_latitude: pub[i]['detail_latitude'], distance: tot_diff}
-                records.push(record);
-            }
-            records = records.sort((a, b) => {
-                if (a.distance < b.distance) {
-                    return -1;
-                }
-            });
-            console.log('records')
-            console.log(records)
-            */
-            //const input = document.getElementById("search-input-navbar");
-            //const searchBox = new google.maps.places.SearchBox(input);
-            //searchbox_addListener_places_changed(map, searchBox);
-            //map_addListener_bounds_changed(map, records, searchBox);
-        }
-        function map_init_add() {
-            console.log('MAP INIT ADD')
-
-            const arrMarks = pub.map(x => x.latitude); // get all the marks.
-            console.log('arrMarks')
-            console.log(arrMarks)
-
-            map = map_create(pub_new[0].detail_latitude, pub_new[0].detail_longitude, 19)
-            const input = document.getElementById("search-input-navbar");
-            const searchBox = new google.maps.places.SearchBox(input);
-            searchbox_addListener_places_changed(map, searchBox);
-            map_addListener_bounds_changed(map, pub, searchBox);
-            map_addListener_click_add(map)
-        }
-        function map_init_search() {
-            console.log('MAP INIT SEARCH')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
-            const input = document.getElementById("search-input-navbar");
-            const searchBox = new google.maps.places.SearchBox(input);
-            searchbox_addListener_places_changed(map, searchBox);
-            map_addListener_bounds_changed(map, pub, searchBox);
-            map_addListener_click_placeid(map)
-
-        }
-        function map_init_collection() {
-            console.log('MAP INIT COLLECTION')
-
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
-            pub_filtered = filter_all_data()
-            console.log('data in: ' + pub_filtered.length)
-
-            pub_filtered = pub_filtered.sort((a, b) => {
-                if (a.rank > b.rank) {
-                    return -1;
-                }
-            });
-            const slicedArray = pub_filtered.slice(0, 10);
-
-            marker_add_collection(map, slicedArray)
-            /*
-            if (pub_filtered.length <= 10) {
-                marker_add_collection(map, pub_filtered)
-                document.getElementById('msg_map').innerHTML = ''
-            } else {
-                document.getElementById('msg_map').innerHTML = 'Too many pubs to show on map';
-            }
-            */
-        }
-        function map_init_1() {
-            console.log('MAP INIT 1')
-            map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 15)
-            marker_add_1(map)
-        }
-        function map_init_blank() {
-            console.log('MAP INIT BLANK')
-            map = map_create(51.5, -0.11, 15)
-            map_listener_click(map)
-        }
-        function map_init_too_many() {
-            console.log("INIT MAP TOO MANY");
-            map_elem = document.getElementById('new_map');
-            map_elem.className = "photo"
-            var elem = document.createElement("img");
-            elem.src = "/static/icons/no-map.png"
-            elem.height = "100"
-            map_elem.appendChild(elem)
-        }
-        function map_init_none() {
-            console.log("INIT MAP NONE");
-            map_elem = document.getElementById('new_map');
-            map_elem.className = "photo"
-            var elem = document.createElement("img");
-            elem.src = "/static/icons/no-wifi.png"
-            elem.height = "100"
-            map_elem.appendChild(elem)
-        }
-    </script>
-{% endblock %}
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_summary.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_collection.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds_beta.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/sort_by_distance.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_initiate.js') }}"></script>

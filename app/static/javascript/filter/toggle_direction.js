@@ -2,7 +2,7 @@ function toggle_direction() {
     var button_direction = document.getElementById('button_direction')
     var content_direction = document.getElementById('content_direction')
     var content_station = document.getElementById('content_station')
-    var content_diary = document.getElementById('content_diary2')
+    var content_diary = document.getElementById('content_diary')
     var content_feature = document.getElementById('content_feature')
 
     button_direction.addEventListener("click", function() {

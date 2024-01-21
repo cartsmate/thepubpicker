@@ -37,3 +37,12 @@ function map_init_add() {
     map_addListener_bounds_changed_beta_add(map, pub, searchBox);
     map_addListener_click_add(map)
 }
+function map_init_pub() {
+    console.log('MAP INIT PUB')
+    console.log(pub[0]['detail_latitude'], pub[0]['detail_longitude'])
+
+    map = map_create(pub[0]['detail_latitude'], pub[0]['detail_longitude'], 15)
+
+    marker_add_summary(map, pub[0]['detail_latitude'], pub[0]['detail_longitude'])
+
+}

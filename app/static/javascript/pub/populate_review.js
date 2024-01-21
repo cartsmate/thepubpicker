@@ -8,15 +8,19 @@ function populate_review(pub, theme){
                     document.getElementById(review_list[i] + '_check').checked = true;
                     document.getElementById(review_list[i] + '_col').style.opacity = "1.0";
                     //document.getElementById(review_list[i] + '_col').style.background = "coral";
-                    document.getElementById(review_list[i] + '_face').style.background = theme;
+                    //document.getElementById(review_list[i] + '_face').style.background = theme;
                     document.getElementById(review_list[i] + '_caption').style.color = "white";
+                    current_carousel = document.getElementById(review_list[i] + "_face")
+                    current_carousel.classList.add('carousel_on')
                 } else {
                     console.log('inside FALSE')
                     document.getElementById(review_list[i] + '_check').checked = false;
                     document.getElementById(review_list[i] + '_col').style.opacity = "0.5";
                     //document.getElementById(review_list[i] + '_col').style.background = "white";
-                    document.getElementById(review_list[i] + '_face').style.background = "white";
+                    //document.getElementById(review_list[i] + '_face').style.background = "white";
                     document.getElementById(review_list[i] + '_caption').style.color = "black";
+                    current_carousel = document.getElementById(review_list[i] + "_face")
+                    current_carousel.classList.add('carousel_off')
                 }
             } else {
                 document.getElementById(review_list[i] + '_check').value = pub[0][review_list[i]]

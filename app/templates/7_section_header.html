@@ -1,0 +1,26 @@
+<style>
+.heading {
+    background-color: var(--theme);
+    //background-color: #808000;
+    color: white;
+    padding: 5px;
+}
+.heading_title {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+</style>
+
+<div class="row pink heading" >
+    <div class="col-2">
+        {% block back %}{% endblock %}
+    </div>
+    <div class="col-8" align="center">
+        {% block header %}{% endblock %}
+    </div>
+    <div class="col-2"></div>
+</div>

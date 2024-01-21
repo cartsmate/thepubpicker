@@ -1,4 +1,4 @@
-function toggle_diary() {
+function toggle_reset() {
     var button_reset = document.getElementById('button_reset')
 
     button_reset.addEventListener("click", function() {

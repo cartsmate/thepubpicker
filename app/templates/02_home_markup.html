@@ -1,43 +1,43 @@
-</head>
-
-<body id="body" onload="onload_new(theme='{{model_formats['theme']}}')" class="page-background" data-value={{model_formats['theme']}}>
+<body id="body" onload="onload_new()" class="page-background" data-color={{model_formats['theme']}} data-reviews={{model_formats['icon_list'].length}}>
     <div class="container-fluid screen-reactor" style="background-color:grey;">
         <div class="row orange" id="template_title">
             <div class="col black">
-                {% include "7_title_section.html" %}
+                {% include "7_section_title_home.html" %}
             </div>
         </div>
         <div class="row orange" id="template_search">
             <div class="col black">
-                {% include "7_search_section.html" %}
+                {% include "7_section_search.html" %}
             </div>
         </div>
         <div class="row orange" id="template_header" style="display: none;">
             <div class="col black" >
-                {% include "7_results_section.html" %}
+                {% include "7_section_results_header.html" %}
             </div>
         </div>
         <div class="row orange" id="template_map" style="display: none;">
             <div class="col black" >
                 <div class="row pink">
-                    {% include "9_map_double.html" %}
+                    {% include "9_map.html" %}
                 </div>
             </div>
         </div>
         <div class="row orange" id="template_list" style="display: none;">
             <div class="col black" >
                 <div class="row pink">
-                    {% include "9_list.html" %}
+                    {% include "7_section_list.html" %}
                 </div>
             </div>
         </div>
         <div class="row orange" id="template_summary">
             <div class="col black" >
-                {% include "7_featured_section.html" %}
+                {% include "7_section_featured_pub.html" %}
+            </div>
+        </div>
+        <div class="row orange" id="template_counter">
+            <div class="col black" style="display: grid; justify-content: center;">
+                {% include "9_counter.html" %}
             </div>
         </div>
     </div>
-
 </body>
-
-</html>

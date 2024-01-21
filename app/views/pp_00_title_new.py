@@ -4,10 +4,12 @@ from app import app
 import pandas as pd
 from flask import render_template, request
 from app.static.pythonscripts.objects import Objects
+from app.static.pythonscripts.s3 import S3
 from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
+from app.models.review.review import Review
 from app.models.photo.photo import Photo
 from config import Configurations
 
@@ -16,8 +18,7 @@ from config import Configurations
 @app.route("/new/", methods=['GET'])
 def new():
     print('start TITLE NEW')
-    # theme = 'coral'
-    theme = '#808000'
+
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
@@ -38,6 +39,16 @@ def new():
 
     # # # GET URL ATTRIBUTES
     filters = request.args.get('filters')
+
+    # # # GET COUNTER
+    if env_vars['source'] == 'csv':
+        counter = Csv().go_get_counter()
+    else:
+        counter = S3().go_get_counter('counter', ['pub_counter'])
+    counter6 = str(counter).zfill(6)
+
+    no_of_reviews = len(model_formats['icon_list'])
+    print(no_of_reviews)
     print('end TITLE')
 
     return render_template('02_home_.html',
@@ -46,8 +57,11 @@ def new():
                            alias=alias,
                            daily_id=daily_id,
                            pub=pub_json,
+                           review=Review(),
                            photos_list=photos_list,
                            filters=filters,
                            directions_list=directions_list,
                            stations_directions_list=stations_directions_list,
+                           counter=counter6,
+                           no_of_review=no_of_reviews
                            )

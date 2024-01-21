@@ -60,7 +60,7 @@ def edit():
 
     photos_list = CsvSingle().go_get_1_photo_request(pub_id, env_vars)
     print('end EDIT')
-    return render_template('05_edit.html',
+    return render_template('05_edit_.html',
                            pub=pub_json,
                            photos_list=photos_list,
                            # daily_id=daily_id,

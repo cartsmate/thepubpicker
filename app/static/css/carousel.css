@@ -10,95 +10,131 @@
 * .. dont get confused !cause
 * ☺(the backface shows the "frontface")
 */
-
+:root {
+    //--degree_increm: calc(360 / var(--no_of_reviews))
+    --degree_increm: 30;
+}
 
 .f_ {
+  transform: rotate(0deg)
+  translateZ(var(--translateZ));
+}
+.f_0 {
+  transform: rotateY(calc(0deg))
+  translateZ(var(--translateZ));
+}
+.f_n0 {
+  transform: rotateY(calc(30 * 0deg))
+  translateZ(var(--translateZ));
+}
+.f_n1 {
+  transform: rotateY(calc(30 * 1deg))
+  translateZ(var(--translateZ));
+}
+.f_n2 {
+  transform: rotateY(calc(30 * 2deg))
+  translateZ(var(--translateZ));
+}
+.f_n3 {
+  transform: rotateY(calc(30deg * 3))
+  translateZ(var(--translateZ));
+}
+.f_n4, .back_05 {
+  transform: rotateY(calc(30deg * 4))
+  translateZ(var(--translateZ));
+}
+.f_n5, .back_06 {
+  transform: rotateY(calc(150deg))
+  translateZ(var(--translateZ));
+}
+.f_n6, .back_07 {
+  transform: rotateY(calc(180deg))
+  translateZ(var(--translateZ));
+}
+.f_n7, .back_08 {
+  transform: rotateY(calc(210deg))
+  translateZ(var(--translateZ));
+}
+.f_n8, .back_09 {
+  transform: rotateY(calc(240deg))
+  translateZ(var(--translateZ));
+}
+.f_n9, .back_10 {
+  transform: rotateY(calc(270deg))
+  translateZ(var(--translateZ));
+}
+.f_n10, .back_11 {
+  transform: rotateY(calc(300deg))
+  translateZ(var(--translateZ));
+}
+.f_n11, .back_12{
+  transform: rotateY(calc(330deg))
+  translateZ(var(--translateZ));
+}
+
+.f_0, .back_01{
   transform: rotateY(0deg)
   translateZ(var(--translateZ));
 }
-.f_01, .back_01{
-  transform:
-  rotateY(0deg)
+
+.f_1, .back_02{
+  transform: rotateY(30deg)
   translateZ(var(--translateZ));
 }
 
-.f_02, .back_02{
-  transform:
-  rotateY(30deg)
+.f_2, .back_03{
+  transform: rotateY(60deg)
   translateZ(var(--translateZ));
 }
 
-.f_03, .back_03{
-  transform:
-  rotateY(60deg)
+.f_3, .back_04{
+  transform: rotateY(90deg)
   translateZ(var(--translateZ));
 }
 
-.f_04, .back_04{
-  transform:
-  rotateY(90deg)
+.f_4, .back_05{
+  transform: rotateY(120deg)
+  translateZ(var(--translateZ));
+}
+.back_5{ background-color: rgb(235, 235, 235); }
+
+.f_5, .back_06{
+  transform: rotateY(150deg)
   translateZ(var(--translateZ));
 }
 
-.f_05, .back_05{
-  transform:
-  rotateY(120deg)
-  translateZ(var(--translateZ));
-}
-.back_05{
-  //background-color: rgb(255, 113, 255);
-  background-color: rgb(235, 235, 235);
-}
-
-.f_06, .back_06{
-  transform:
-  rotateY(150deg)
+.f_6, .back_07{
+  transform: rotateY(180deg)
   translateZ(var(--translateZ));
 }
 
-.f_07, .back_07{
-  transform:
-  rotateY(180deg)
+.f_7, .back_08{
+  transform: rotateY(210deg)
   translateZ(var(--translateZ));
 }
 
-.f_08, .back_08{
-  transform:
-  rotateY(210deg)
+.f_8, .back_09{
+  transform: rotateY(240deg)
   translateZ(var(--translateZ));
 }
 
-.f_09, .back_09{
-  transform:
-  rotateY(240deg)
+.f_9, .back_10{
+  transform: rotateY(270deg)
   translateZ(var(--translateZ));
 }
 
-.f_10, .back_10{
-  transform:
-  rotateY(270deg)
+.f_10, .back_11{
+  transform: rotateY(300deg)
   translateZ(var(--translateZ));
 }
 
-.f_11, .back_11{
-  transform:
-  rotateY(300deg)
+.f_11, .back_12{
+  transform: rotateY(330deg)
   translateZ(var(--translateZ));
-}
-.back_11{
-  //background-color: rgb(255, 112, 245);
-  background-color: rgb(235, 235, 235);
 }
 
-.f_12, .back_12{
-  transform:
-  rotateY(330deg)
-  translateZ(var(--translateZ));
-}
-.back_12{
-  //background-color: rgb(112, 205, 255);
-  background-color: rgb(235, 235, 235);
-}
+.back_11 { background-color: rgb(235, 235, 235); }
+.back_12 { background-color: rgb(235, 235, 235);}
 
 .button_wrapL{
     position: relative;

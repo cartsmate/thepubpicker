@@ -1,239 +1,26 @@
-<style>
-*{margin: 0; padding: 0; box-sizing: border-box;}
-
-:root{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 100%;
-  --translateZ: 130px;
-  --faceWidth: 60px;
-}
-
-#template_spinner{
-  display: relative;
-}
-
-.carousel_scene{
-    position: absolute;
-    width: 60px;
-    top: 60%;
-    perspective: 640px;
-}
-
-._carousel{
-  position: relative;
-  width: 100%
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: 0.5s;
-}
-
-.face{
-    position:absolute;
-    height: 60px;
-    width: var(--faceWidth);
-
-    text-align: center;
-    font-size: 4.4rem;
-    //text-shadow:
-    //0em 0.01em 0.6rem black;
-
-    border-radius: 1.2rem;
-    border-style: solid;
-    border-color: {{model_formats['theme']}};
-    border-width: thin;
-    /* optional: backface-visibility: hidden; */
-    background-color: black;
-    box-shadow: inset
-}
-
-.backface{
-  backface-visibility: hidden;
-  background-color: white;
-}
-/*
-@media only screen
-    and (width: 375px)
-    and (height: 812px)
-    and (-webkit-device-pixel-ratio: 3)
-{
-    #the_carousel{
-      position: relative;
-      top: 10px;
-      left: 120px;
-      margin-bottom: 80px;
-      }
-}
---IPAD--
-@media only screen
-    and (width: 768px)
-    and (height: 1024px)
-    and (-webkit-device-pixel-ratio: 3)
-{
-#the_carousel{
-      position: relative;
-      top: 10px;
-      left: 135px;
-      margin-bottom: 80px;
-      }
-}
-*/
-#the_carousel{
-      position: relative;
-      top: 10px;
-      left: 125px;
-      margin-bottom: 80px;
-      }
-.icon_style {
-    position: relative;
-    top: -32px;
-    height: 30px;
-    width: 30px;
-}
-.icon_word {
-    position: relative;
-    top: -55px;
-    font-size: 8px;
-    font-weight: bold;
-}
-.icon_word span {
-    display: block;
-}
-div.box {
-    width: 30em;
-    height: 3em;
-    background-color: #108040;
-}
-div.box.swipeleft {
-    background-color: #7ACEF4;
-}
-.card-title {
-    font-size: 10px;
-    }
-.card {
-    height: 100px;
-    }
-</style>
 <div id="template_spinner" >
     <div class="carousel_scene" id="the_carousel" >
         <div class="_carousel" >
-            <div class="face f_01" id="brunch_carousel" style="background-color: white;" ><div><img class="icon_style" id="brunch_icon" src="/static/icons/features/brunch.png"><div class="icon_word" id="brunch_word">Bottomless Brunch</div></div></div>
-
-            <div class="face f_02" id="dart_carousel" style="background-color: white;"><div><img class="icon_style" id="dart_icon" src="/static/icons/features/dart.png"><div class="icon_word" id="dart_word">Dart<span>Board</span></div></div></div>
-
-            <div class="face f_03" id="entertain_carousel" style="background-color: white;"><div><img class="icon_style" id="entertain_icon" src="/static/icons/features/entertain.png"><div class="icon_word" id="entertain_word">Entertaining<span>Extras</span></div></div></div>
-
-            <div class="face f_04" id="favourite_carousel" style="background-color: white;"><div><img class="icon_style" id="favourite_icon" src="/static/icons/features/favourite.png"><div class="icon_word" id="favourite_word">Our<span>Favourites</span></div></div></div>
-
-            <div class="face f_05" id="garden_carousel" style="background-color: white;"><div><img class="icon_style" id="garden_icon" src="/static/icons/features/garden.png"><div class="icon_word" id="garden_word">Beer<span>Garden</span></div></div></div>
-
-            <div class="face f_06" id="history_carousel" style="background-color: white;"><div><img class="icon_style" id="history_icon" src="/static/icons/features/history.png"><div class="icon_word" id="history_word">Historic<span>Pub</span></div></div></div>
-
-            <div class="face f_07" id="late_carousel" style="background-color: white;"><div><img class="icon_style" id="late_icon" src="/static/icons/features/late.png"><div class="icon_word" id="late_word">Opens<span>Late</span></div></div></div>
-
-            <div class="face f_08" id="music_carousel" style="background-color: white;"><div><img class="icon_style" id="music_icon" src="/static/icons/features/music.png"><div class="icon_word" id="music_word">Live<span>Music</span></div></div></div>
-
-            <div class="face f_09" id="pool_carousel" style="background-color: white;"><div><img class="icon_style" id="pool_icon" src="/static/icons/features/pool.png"><div class="icon_word" id="pool_word">Pool<span>Table</span></div></div></div>
-
-            <div class="face f_10" id="quiz_carousel" style="background-color: white;"><div><img class="icon_style" id="quiz_icon" src="/static/icons/features/quiz.png"><div class="icon_word" id="quiz_word">Quiz<span>Night</span></div></div></div>
-
-            <div class="face f_11" id="roast_carousel" style="background-color: white;"><div><img class="icon_style" id="roast_icon" src="/static/icons/features/roast.png"><div class="icon_word" id="roast_word">Sunday<span>Roast</span></div></div></div>
-
-            <div class="face f_12" id="sport_carousel" style="background-color: white;"><div><img class="icon_style" id="sport_icon" src="/static/icons/features/sport.png"><div class="icon_word" id="sport_word">Sports<span>TV</span></div></div></div>
+            {% for k, field in review.__dict__.items() %}
+                {% if field.name != "pub_identity" %}
+                    {% if field.name in model_formats['icon_list'] %}
+                        {% if field.name != "nofeature" %}
+                            <div class="face f_n{{field.indx}} carousel_off" id="{{field.name}}_carousel">
+                                <div>
+                                    <img class="icon_style" id="{{field.name}}_icon" src="/static/icons/features/{{field.name}}.png">
+                                    <div class="icon_word" id="{{field.name}}_word">'{{field.alias}}'</div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
-    {% include "9_carousel_spinner_desktop_btns.html" %}
-
+{% include "9_carousel_spinner_desktop_btns.html" %}
 <div id="touchsurface_words"></div>
 
+<link rel="stylesheet" href="/static/css/carousel/carousel_spinner.css">
+
 <script src="/static/javascript/carousel/spinner.js"></script>
-
-<script>
-
-$(function(){
-  // Bind the swipeleftHandler callback function to the swipe event on div.box
-  $( "div.box" ).on( "swipeleft", swipeleftHandler );
-
-  // Callback function references the event target and adds the 'swipeleft' class to it
-  function swipeleftHandler( event ){
-    $( event.target ).addClass( "swipeleft" );
-  }
-});
-
-
-window.addEventListener('load', function(){
-
-    const carousel = document.querySelector('._carousel');
-
-    let faceCount = 12;
-    let stepCount = 360 / faceCount;
-    let count = 0;
-
-    function nextStep(x){
-        if(x <= 0){
-            x *= -1; //turn to positive number again
-            carousel.style.transform = `rotateY(${x}deg)`;
-        } else if( x >= 0){
-            carousel.style.transform = `rotateY(-${x}deg)`;
-        }
-    }
-
-    var touchsurface_words = document.getElementById('touchsurface_words');
-    var touchsurface = document.getElementById('the_carousel'),
-        startX,
-        startY,
-        dist,
-        threshold = 150, //required min distance traveled to be considered swipe
-        allowedTime = 200, // maximum time allowed to travel that distance
-        elapsedTime,
-        startTime
-
-    function handleswipe(isrightswipe, speed){
-        speed_abs = Math.abs(speed)
-        speed_pow = speed_abs * speed_abs
-        speed_round = Math.ceil(speed_pow)
-
-        movement = stepCount * speed_round
-        if (isrightswipe > 0) {
-
-            let stepReward = count -= movement;
-            nextStep(stepReward);
-            //touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round + "-" + movement
-            }
-        else{
-            let stepForward = count += movement;
-            nextStep(stepForward);
-            //touchsurface_words.innerHTML = speed + "-" + speed_abs + "-" + speed_pow + "-" + speed_round + "-" + movement
-        }
-    }
-
-    touchsurface.addEventListener('touchstart', function(e){
-        touchsurface_words.innerHTML = ''
-        var touchobj = e.changedTouches[0]
-        dist = 0
-        startX = touchobj.pageX
-        startY = touchobj.pageY
-        startTime = new Date().getTime() // record time when finger first makes contact with surface
-        e.preventDefault()
-    }, false)
-
-    touchsurface.addEventListener('touchmove', function(e){
-        e.preventDefault() // prevent scrolling when inside DIV
-    }, false)
-
-    touchsurface.addEventListener('touchend', function(e){
-        var touchobj = e.changedTouches[0]
-        dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
-        elapsedTime = new Date().getTime() - startTime // get time elapsed
-        // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
-        var swiperightBol = (elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchobj.pageY - startY) <= 100)
-        var speed = dist/elapsedTime
-        handleswipe(dist, speed)
-        e.preventDefault()
-    }, false)
-
-}, false) // end window.onload
-
-
-
-</script>

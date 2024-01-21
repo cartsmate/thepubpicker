@@ -1,6 +1,7 @@
 function toggle_diary() {
     // the selector will match all input controls of type :checkbox
     // and attach a click event handler
+    /*
     $("input:checkbox").on('click', function() {
         // in the handler, 'this' refers to the box clicked on
         var $box = $(this);
@@ -22,12 +23,11 @@ function toggle_diary() {
             list_setup_diary('none')
         }
     });
-
-    var button_diary = document.getElementById('button_diary2')
+    */
+    var button_diary = document.getElementById('button_diary')
     var content_direction = document.getElementById('content_direction')
     var content_station = document.getElementById('content_station')
-    //var content_diary = document.getElementById('content_diary')
-    var content_diary = document.getElementById('content_diary2')
+    var content_diary = document.getElementById('content_diary')
     var content_feature = document.getElementById('content_feature')
 
     button_diary.addEventListener("click", function() {
@@ -36,7 +36,6 @@ function toggle_diary() {
             content_direction.style.display = "none"
             content_station.style.display = "none"
             content_feature.style.display = "none"
-            //content_diary.style.display = "none"
         } else {
             content_diary.style.display = "none"
         }

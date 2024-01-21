@@ -1,5 +1,5 @@
-function redirect_reviews(id) {
-    console.log("redirect_reviews")
+function redirect_reviews_id(id) {
+    console.log("redirect_reviews_id")
 
     var base_url = window.location.hostname
     if (env_vars['env'] == 'qual') {
@@ -11,8 +11,8 @@ function redirect_reviews(id) {
     myUrlWithParams.searchParams.append('id', id);
     window.location.replace(myUrlWithParams.href);
 }
-function redirect_reviews2(url) {
-    console.log("redirect_reviews2")
+function redirect_reviews(url) {
+    console.log("redirect_reviews")
 
     window.open(url)
 }

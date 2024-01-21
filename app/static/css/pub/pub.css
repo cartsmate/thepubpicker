@@ -1,0 +1,18 @@
+:root {
+    --theme: var(--color)
+}
+.summary_extra {
+    padding: 0px 10px 0px 10px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    color: black;
+    font-size:12px;
+}
+.pub_headings {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: thin solid black;
+}

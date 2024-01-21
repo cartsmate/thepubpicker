@@ -1,22 +1,3 @@
-<script>directions_list = {{ directions_list | tojson}}</script>
-<script>stations_directions_list = {{ stations_directions_list | tojson}}</script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_clear.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/pre_populate.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_all_data.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_feature.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_station.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_by_direction.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/filter_reset.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_all_filters.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_feature.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_station.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_direction.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/collapse_section.js') }}"></script>
-
-<link rel="stylesheet" href="/static/css/filter/overlay_filter.css">
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/toggle_overlay.js') }}"></script>
-
 <div id="overlay" onclick="off()"></div>
 <div id="all_filters">
     <button type="button" onclick="on()" id="collapsible_filters" class="collapsible_filters btn">Filters
@@ -42,3 +23,7 @@
         </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="/static/css/filter/overlay_filter.css">
+{% include "9_filter_overlay_scripts.html" %}
+{% include "9_filter_overlay_variables.html" %}

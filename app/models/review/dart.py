@@ -2,7 +2,7 @@
 
 class Dart:
     def __init__(self, name='dart', alias="Darts", alias2="board", required='true', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="dart.png"):
+                 table_visible='false', value='0', control="check", icon="dart.png", indx='1'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -12,3 +12,4 @@ class Dart:
         self.value = value
         self.control = control
         self.icon = icon
+        self.indx = indx

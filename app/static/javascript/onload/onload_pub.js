@@ -1,9 +1,8 @@
-function onload_pub(theme) {
+function onload_pub() {
+    set_color_theme()
+    the_map = document.getElementById('new_map')
+    the_map.classList.add('map_on_pub')
     map_load_pub()
-    populate_title(pub[0]['pub_identity'])
-    populate_pub(pub, theme)
-    console.log('filters')
-    console.log(filters)
-    //populate_search_back(filters)
-    populate_photo_beta()
+    populate_pub(pub)
+    populate_photo_carousel()
 }

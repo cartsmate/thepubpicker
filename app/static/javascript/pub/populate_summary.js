@@ -8,12 +8,14 @@ function populate_summary(id) {
     document.getElementById('summary_extra').innerHTML = "<a>" + summary_pub[0]['extra'] + "</a>"
 }
 
-function populate_title(id) {
-    console.log('populate_summary')
+function populate_title(show_pub) {
+    console.log('populate_title')
+    /*
     let summary_pub = pub.filter((x) => {
         return x.pub_identity == id
     });
-    text_ref = summary_pub[0]['detail_name'].toString().substring(0,24)
-    document.getElementById('summary_name').innerHTML = "<a style='text-decoration: none; justify-content: center; font-size: 14px; font-weight: bold;'>" + text_ref + "</a>"
-    document.getElementById('summary_extra').innerHTML = "<a>" + summary_pub[0]['extra'] + "</a>"
+    */
+    text_ref = show_pub[0]['detail_name'].toString().substring(0,24)
+    document.getElementById('pub_header').textContent = text_ref
+    document.getElementById('summary_extra').innerHTML = "<a>" + show_pub[0]['extra'] + "</a>"
 }
