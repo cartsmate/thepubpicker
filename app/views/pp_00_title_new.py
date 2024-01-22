@@ -44,7 +44,7 @@ def new():
     # # # GET COUNTER
     if env_vars['env'] == 'qual':
         counter = Csv().go_get_counter()
-        new_counter = Csv().go_write_counter()
+        new_counter = Csv().go_write_counter(counter)
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
         new_counter = counter + 1
