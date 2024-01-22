@@ -37,7 +37,7 @@ class FilesPhoto:
 
     def update_photo_csv(self, df_updated_photos):
         print('updating photo csv')
-        print(df_updated_photos)
+        # print(df_updated_photos)
         df_updated_photos.to_csv(directory_path + '/files/photos.csv', index=False, sep=',', encoding='utf-8')
         print('csv updated')
         return df_updated_photos
