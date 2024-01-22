@@ -1,12 +1,13 @@
 /* :: >> pure css js carousel main_js << :: */
 
-function spinner_add_listener_swipe(number_review_attr) {
+//function spinner_add_listener_swipe(number_review_attr) {
+(function () {
     window.addEventListener('load', function(){
 
         const carousel = document.querySelector('._carousel');
 
-        //let faceCount = 12;
-        let faceCount = number_review_attr
+        let faceCount = 12;
+        //let faceCount = number_review_attr
         let stepCount = 360 / faceCount;
         let count = 0;
 
@@ -71,4 +72,4 @@ function spinner_add_listener_swipe(number_review_attr) {
         }, false)
 
     }, false) // end window.onload
-}
+)()}

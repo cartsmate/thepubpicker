@@ -36,9 +36,9 @@ function populate_feature(pub_filtered) {
             //console.log(model_formats['icon_list'][i] + ' <0')
             label.style.display = "none"
             if (icon_list[i] != 'nofeature') {
-                document.getElementById(icon_list[i] + '_carousel').style.opacity = '0.5'
-                document.getElementById(icon_list[i] + '_icon').style.opacity = '0.5'
-                document.getElementById(icon_list[i] + '_word').style.opacity = '0.5'
+                //document.getElementById(icon_list[i] + '_carousel').style.opacity = '0.5'
+                document.getElementById(icon_list[i] + '_icon').style.opacity = '0.25'
+                document.getElementById(icon_list[i] + '_word').style.opacity = '0.25'
             }
         }
         if (filtered_data.length == pub_filtered.length) {
