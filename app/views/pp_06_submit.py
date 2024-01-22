@@ -1,13 +1,13 @@
 from app import app
 from flask import render_template, request, redirect, url_for
 from app.static.pythonscripts.csv import Csv
-from app.models.review.review import Review
-from app.models.diary.diary import Diary
-from app.static.pythonscripts.csv_single import CsvSingle
-from app.static.pythonscripts.dataframes import Dataframes
-from app.static.pythonscripts.controls_list import ControlsList
-from app.static.pythonscripts.objects import Objects
-from app.static.pythonscripts.edit_detail import EditDetail
+# from app.models.review.review import Review
+# from app.models.diary.diary import Diary
+# from app.static.pythonscripts.csv_single import CsvSingle
+# from app.static.pythonscripts.dataframes import Dataframes
+# from app.static.pythonscripts.controls_list import ControlsList
+# from app.static.pythonscripts.objects import Objects
+# from app.static.pythonscripts.edit_detail import EditDetail
 from app.static.pythonscripts.files_detail import FilesDetail
 from app.static.pythonscripts.files_review import FilesReview
 from app.static.pythonscripts.files_diary import FilesDiary

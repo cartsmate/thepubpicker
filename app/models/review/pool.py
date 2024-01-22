@@ -1,10 +1,11 @@
 
 
 class Pool:
-    def __init__(self, name="pool", alias="Pool", alias2="table", required='true', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="pool.png", indx='8'):
+    def __init__(self, name="pool", alias="Pool", alias1="Table", alias2="Pool Table", required='true', form_visible='false',
+                 table_visible='false', value='0', control="check", icon="pool.png", indx='11'):
         self.name = name
         self.alias = alias
+        self.alias1 = alias1
         self.alias2 = alias2
         self.required = required
         self.form_visible = form_visible

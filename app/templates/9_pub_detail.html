@@ -36,7 +36,7 @@
     {% if name == "readonly" and field.name in model_formats['form_visible_list'] %}
         <div class="form-group row details" id=row_{{field.name}} >
             <div class="col col-diary-label">
-                <label class="col-form-label item-diary-label" for={{field.name}} >{{alias[field.name]}}</label>
+                <label class="col-form-label item-diary-label" for={{field.name}} >{{full_alias[field.name]}}</label>
             </div>
             <div class="col col-diary-item" align="left" id=div_{{field.name}} >
                 {% if field.name == 'website' %}

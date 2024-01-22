@@ -1,8 +1,6 @@
 //function pre_populate(feature, station, filters_str) {
 function pre_populate(filters_str) {
-    console.log('pre_populate')
-    console.log('filters_str')
-    console.log(filters_str)
+    console.log('-- pre_populate: ' + filters_str)
     if (filters_str != 'dl,sl,fl' && filters_str != null) {
         var filters_list = filters_str.split(',');
         d_list = []

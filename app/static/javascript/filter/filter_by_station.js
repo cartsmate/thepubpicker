@@ -1,5 +1,5 @@
 function filter_by_station(data) {
-    console.log('-- filter by station')
+    console.log('---- station: ' + data.length)
     //console.log('data in: ' + data.length)
     ticked_list = []
 

@@ -35,6 +35,7 @@ def pub():
 
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
+    full_alias = Objects().go_get_full_alias()
 
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
@@ -75,6 +76,7 @@ def pub():
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
+                           full_alias=full_alias,
                            detail=Detail(),
                            detail_list=detail_list,
                            review=Review(),

@@ -25,6 +25,7 @@ def new():
     # # # GET MODEL DISPLAY FORMATS
     model_formats = ControlsList().go_get_control_list()
     alias = Objects().go_get_alias()
+    full_alias = Objects().go_get_full_alias()
     stations_directions_list = Csv().go_get_stations_directions_list()
     directions_list = Csv().go_get_directions_list()
 
@@ -41,7 +42,7 @@ def new():
     filters = request.args.get('filters')
 
     # # # GET COUNTER
-    if env_vars['source'] == 'csv':
+    if env_vars['env'] == 'qual':
         counter = Csv().go_get_counter()
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
@@ -55,6 +56,7 @@ def new():
                            env_vars=env_vars,
                            model_formats=model_formats,
                            alias=alias,
+                           full_alias=full_alias,
                            daily_id=daily_id,
                            pub=pub_json,
                            review=Review(),

@@ -1,10 +1,11 @@
 
 
 class Beer:
-    def __init__(self, name="beer", alias="Beer", alias2="Craft Beer", required='false', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="beer.png", indx='12'):
+    def __init__(self, name="beer", alias="Craft", alias1="Beer", alias2="Craft Beer", required='false', form_visible='false',
+                 table_visible='false', value='0', control="check", icon="beer.png", indx='0'):
         self.name = name
         self.alias = alias
+        self.alias1 = alias1
         self.alias2 = alias2
         self.required = required
         self.form_visible = form_visible

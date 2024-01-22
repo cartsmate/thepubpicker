@@ -8,7 +8,12 @@
                             <div class="face carousel_off" id="{{field.name}}_carousel">
                                 <div>
                                     <img class="icon_style" id="{{field.name}}_icon" src="/static/icons/features/{{field.name}}.png">
-                                    <div class="icon_word" id="{{field.name}}_word">'{{field.alias}}'</div>
+                                    <div class="icon_word" id="{{field.name}}_word">
+                                        <p>
+                                            <span>{{field.alias}}</span>
+                                            <span>{{field.alias1}}</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         {% endif %}
@@ -23,4 +28,6 @@
 
 <link rel="stylesheet" href="/static/css/carousel/carousel_spinner.css">
 
-<script src="/static/javascript/carousel/spinner.js"></script>
+<script defer type="text/javascript" src="/static/javascript/carousel/spinner_add_listener_click_face.js"></script>
+<script defer type="text/javascript" src="/static/javascript/carousel/spinner_add_listener_click_btn.js"></script>
+<script defer type="text/javascript" src="/static/javascript/carousel/spinner_add_listener_swipe.js"></script>

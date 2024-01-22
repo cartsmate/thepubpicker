@@ -1,10 +1,11 @@
 
 
 class Quiz:
-    def __init__(self, name="quiz", alias="Quiz", alias2="night", required='true', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="quiz.png", indx='9'):
+    def __init__(self, name="quiz", alias="Quiz", alias1="Night", alias2="Quiz Night", required='true', form_visible='false',
+                 table_visible='false', value='0', control="check", icon="quiz.png", indx='12'):
         self.name = name
         self.alias = alias
+        self.alias1 = alias1
         self.alias2 = alias2
         self.required = required
         self.form_visible = form_visible

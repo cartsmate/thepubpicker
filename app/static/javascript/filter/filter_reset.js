@@ -37,7 +37,10 @@ function filter_reset() {
         document.getElementById(model_formats['icon_list'][i] + "_id").innerHTML = model_formats['icon_list'][i] + " (" + filtered_data.length + ")"
         if (model_formats['icon_list'][i] != 'nofeature') {
             document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "black"
-            document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
+            //document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
+            document.getElementById(model_formats['icon_list'][i] + "_carousel").classList.remove('carousel_on')
+            document.getElementById(model_formats['icon_list'][i] + "_carousel").classList.add('carousel_off')
+
         }
     }
     document.getElementById('search-input-navbar').value = ''

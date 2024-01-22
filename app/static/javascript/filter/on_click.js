@@ -43,13 +43,13 @@ function display_results(display) {
         document.getElementById('template_list').style.display = display
         document.getElementById('template_header').style.display = display
 }
-function on_click_feature(theme) {
+function on_click_feature() {
     console.log('USER INPUT - on click feature')
     for (i=0; i < model_formats['icon_list'].length; i++) {
         if (model_formats['icon_list'][i] != 'nofeature') {
             if (document.getElementById(model_formats['icon_list'][i] + "_filter").checked == true) {
                 document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "white"
-                document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = theme
+                document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = '#808000'
             } else {
                 document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "black"
                 document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"

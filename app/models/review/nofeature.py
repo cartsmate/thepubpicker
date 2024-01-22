@@ -1,7 +1,7 @@
 
 
 class NoFeature:
-    def __init__(self, name="nofeature", alias="None", alias2="", required='true', form_visible='false',
+    def __init__(self, name="nofeature", alias="None", alias2="None", required='true', form_visible='false',
                  table_visible='false', value='1', control="check", icon="nofeature.png"):
         self.name = name
         self.alias = alias

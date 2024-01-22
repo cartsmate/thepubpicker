@@ -1,11 +1,12 @@
 
 
-class Brunch:
-    def __init__(self, name="outdoor", alias="Outdoor", alias2="Outdoor Seating",  required='false',
+class Outdoor:
+    def __init__(self, name="outdoor", alias="Outdoor", alias1="Seating", alias2="Outdoor Seating",  required='false',
                  form_visible='false', table_visible='false', value='0', control="check", icon="outdoor.png",
-                 indx='14'):
+                 indx='10'):
         self.name = name
         self.alias = alias
+        self.alias1 = alias1
         self.alias2 = alias2
         self.required = required
         self.form_visible = form_visible

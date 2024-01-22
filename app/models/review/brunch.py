@@ -1,10 +1,11 @@
 
 
 class Brunch:
-    def __init__(self, name="brunch", alias="Brunch", alias2="bottomless",  required='false', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="brunch.png", indx='0'):
+    def __init__(self, name="brunch", alias="Bottomless", alias1="Brunch", alias2="Bottomless Brunch",  required='false', form_visible='false',
+                 table_visible='false', value='0', control="check", icon="brunch.png"):
         self.name = name
         self.alias = alias
+        self.alias1 = alias1
         self.alias2 = alias2
         self.required = required
         self.form_visible = form_visible
@@ -12,4 +13,3 @@ class Brunch:
         self.value = value
         self.control = control
         self.icon = icon
-        self.indx = indx

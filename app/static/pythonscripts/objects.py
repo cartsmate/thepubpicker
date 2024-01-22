@@ -52,10 +52,13 @@ class Objects:
         for k, v in inst_pub_review.__dict__.items():
             alias[k] = v.alias
 
-        # diary = Diary().__dict__.items()
-        # for k, v in diary:
-        #     alias[k] = k
-        # alias['distance'] = 'distance'
-        # print('alias')
-        # print(alias)
         return alias
+
+    def go_get_full_alias(self):
+        full_alias = {}
+        inst_pub_review = self.go_get_model_dict()
+
+        for k, v in inst_pub_review.__dict__.items():
+            full_alias[k] = v.alias2
+
+        return full_alias

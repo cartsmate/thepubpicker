@@ -44,7 +44,17 @@
                     <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display: none;" onclick="set_feature_icon_colour('{{field.name}}', '{{model_formats['theme']}}')">
                 {% endif %}
                 <label for="{{field.name}}_check" style="margin:0px; padding:0px" >
-                    <div class="face" id="{{field.name}}_face"><div><img class="icon_style" src="{{ url_for('static', filename='icons/features/' + field.icon ) }}" id="{{field.name}}_img" ><div class="icon_word" id="{{field.name}}_caption">{{field.alias}}</div></div></div>
+                    <div class="face" id="{{field.name}}_face">
+                        <div>
+                            <img class="icon_style" src="{{ url_for('static', filename='icons/features/' + field.icon ) }}" id="{{field.name}}_img" >
+                            <div class="icon_word" id="{{field.name}}_caption">
+                                <p>
+                                    <span>{{field.alias}}</span>
+                                    <span>{{field.alias1}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </label>
             </div>
         {% else %}
