@@ -46,6 +46,9 @@ def new():
         counter = Csv().go_get_counter()
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
+        data = {'pub_counter': counter + 1}
+        df_updated_counter = pd.Dataframe(data)
+        s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
     counter6 = str(counter).zfill(6)
 
     no_of_reviews = len(model_formats['icon_list'])

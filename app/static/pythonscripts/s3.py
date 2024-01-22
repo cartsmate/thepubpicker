@@ -130,5 +130,25 @@ class S3:
                 counter = obj_df["pub_counter"].values[0]
         else:
             obj_df = None
+            counter = 0
             print('error in processing')
         return counter
+
+
+    def go_write_counter(self, upload_object: object, s3_obj_name: object) -> object:
+        # client = None
+        env_vars = Configurations().get_config2()
+        client = boto3.client("s3", aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
+
+        with io.StringIO() as csv_buffer:
+            upload_object.to_csv(csv_buffer, index=False)
+            response = client.put_object(Bucket=env_vars['bucket_name'], Key=s3_obj_name, Body=csv_buffer.getvalue())
+            status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+            if status == 200:
+                print(f"Successful {s3_obj_name} S3 put_object response. Status - {status}")
+            else:
+                print(f"Unsuccessful {s3_obj_name}S3 put_object response. Status - {status}")
+
+        # s3_resp = client.head_object(Bucket=env_vars['bucket_name'], Key=s3_obj_name)
+
+        return status

@@ -17,7 +17,7 @@ function onload_new() {
 
     number_review_attr = get_no_reviews()
     spinner_set_css_classes(number_review_attr)
-    //spinner_add_listener_swipe(number_review_attr)
+    spinner_add_listener_swipe()
     spinner_add_listener_click_btn(number_review_attr)
     spinner_add_listener_click_face()
 

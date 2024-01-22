@@ -15,21 +15,21 @@ env_vars = Configurations().get_config2()
 
 class Csv:
 
-    def add_no_feature(self, df_data):
-        df_data['no_feature'] = np.where((df_data['brunch'] == 'true') | \
-                                        (df_data['dart'] == 'true') | \
-                                        (df_data['entertain'] == 'true') | \
-                                        (df_data['favourite'] == 'true') | \
-                                        (df_data['garden'] == 'true') | \
-                                        (df_data['history'] == 'true') | \
-                                        (df_data['late'] == 'true') | \
-                                        (df_data['music'] == 'true') | \
-                                        (df_data['pool'] == 'true') | \
-                                        (df_data['quiz'] == 'true') | \
-                                        (df_data['roast'] == 'true') | \
-                                        (df_data['sport'] == 'true') \
-                                        , 'false', 'true')
-        return df_data
+    # def add_no_feature(self, df_data):
+    #     df_data['no_feature'] = np.where((df_data['brunch'] == 'true') | \
+    #                                     (df_data['dart'] == 'true') | \
+    #                                     (df_data['entertain'] == 'true') | \
+    #                                     (df_data['favourite'] == 'true') | \
+    #                                     (df_data['garden'] == 'true') | \
+    #                                     (df_data['history'] == 'true') | \
+    #                                     (df_data['late'] == 'true') | \
+    #                                     (df_data['music'] == 'true') | \
+    #                                     (df_data['pool'] == 'true') | \
+    #                                     (df_data['quiz'] == 'true') | \
+    #                                     (df_data['roast'] == 'true') | \
+    #                                     (df_data['sport'] == 'true') \
+    #                                     , 'false', 'true')
+    #     return df_data
 
     def go_get_stations_directions(self):
         df_pub_with_station = pd.merge(self.go_get_details(), self.go_get_stations(), on='station_identity',
@@ -164,17 +164,32 @@ class Csv:
     def go_get_reviews(self):
         print('go get reviews')
         if env_vars['source'] == 'csv':
-            df_reviews = pd.read_csv(directory_path + '/files/reviews.csv', dtype={'review_identity': str, 'pub_identity':str,
-                'review_deletion': str, 'brunch': str,
-                                                                      'dart': str, 'entertain': str,
-                                                                      'favourite': str, 'garden': str,
-                                                                      'history': str, 'late': str,
-                                                                      'music': str, 'pool': str, 'quiz': str,
-                                                                      'roast': str, 'sport': str})
+            df_reviews = pd.read_csv(directory_path + '/files/reviews.csv',
+                                     dtype={'review_identity': str,
+                                            'pub_identity': str,
+                                            'review_deletion': str,
+                                            'beer': str,
+                                            'brunch': str,
+                                            'cocktail': str,
+                                            'dart': str,
+                                            'entertain': str,
+                                            'favourite': str,
+                                            'garden': str,
+                                            'history': str,
+                                            'late': str,
+                                            'music': str,
+                                            'outdoor': str,
+                                            'pool': str,
+                                            'quiz': str,
+                                            'restaurant': str,
+                                            'roast': str,
+                                            'sport': str,
+                                            'wine': str,
+                                            'nofeature': str})
         else:
-            attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'brunch', 'dart', 'entertain',
-                              'favourite', 'garden', 'history', 'late', 'music', 'pool', 'quiz', 'roast', 'sport',
-                              'no_feature']
+            attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'beer', 'brunch', 'cocktail',
+                              'dart', 'entertain', 'favourite', 'garden', 'history', 'late', 'music', 'outdoor', 'pool',
+                              'quiz', 'restaurant', 'roast', 'sport', 'no_feature']
             df_reviews = S3().s3_read('reviews', attribute_list)
 
         return df_reviews

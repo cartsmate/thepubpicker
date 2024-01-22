@@ -1,7 +1,7 @@
 /* :: >> pure css js carousel main_js << :: */
 
-//function spinner_add_listener_swipe(number_review_attr) {
-(function () {
+function spinner_add_listener_swipe() {
+//(function () {
     window.addEventListener('load', function(){
 
         const carousel = document.querySelector('._carousel');
@@ -72,4 +72,4 @@
         }, false)
 
     }, false) // end window.onload
-)()}
+}
