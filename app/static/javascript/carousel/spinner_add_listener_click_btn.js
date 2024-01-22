@@ -1,6 +1,7 @@
 /* :: >> pure css js carousel main_js << :: */
 
 function spinner_add_listener_click_btn(number_review_attr){
+    console.log('spinner add listener BTN CLICK added')
     //function spinner_add_listener_click_btn(){
 
     const carousel = document.querySelector('._carousel');

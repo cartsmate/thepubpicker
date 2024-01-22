@@ -1,5 +1,5 @@
 function spinner_add_listener_click_face() {
-    console.log('ADD LISTENERS spinner')
+    console.log('spinner add listener FACE CLICK added')
     model_format = model_formats['icon_list'].sort()
     for (field in model_format) {
         var marker = model_format[field]

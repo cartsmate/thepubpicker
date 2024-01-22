@@ -1,9 +1,10 @@
 /* :: >> pure css js carousel main_js << :: */
-
-function spinner_add_listener_swipe() {
 //(function () {
+function spinner_add_listener_swipe() {
+    console.log('spinner add listener SWIPE added')
+
     window.addEventListener('load', function(){
-        console.log('carousel SWIPE listener added')
+        console.log('carousel SWIPE listener ACTIVATED')
         const carousel = document.querySelector('._carousel');
 
         let faceCount = 12;
