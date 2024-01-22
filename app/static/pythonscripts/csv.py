@@ -242,17 +242,23 @@ class Csv:
 
     def go_get_counter(self):
         directory_path = config2['directory_path']
-        # if config2['env'] == 'prod':
         obj_df = pd.read_csv(directory_path + '/files/counter_qual.csv')
-        # else:
-        #     obj_df = pd.read_csv(directory_path + '/files/counter_qual.csv')
+
         obj_df["pub_counter"] = obj_df["pub_counter"] + 1
 
-        # if config2['env'] == 'prod':
-        obj_df.to_csv(directory_path + '/files/counter_qual.csv', sep=',', encoding='utf-8', index=False)
-        # else:
-        #     obj_df.to_csv(directory_path + '/files/counter_qual.csv', sep=',', encoding='utf-8', index=False)
         counter = obj_df["pub_counter"].values[0]
+        # counter6 = counter.zfill(6)
+
+        print('counter: ' + str(counter))
+        return counter
+
+    def go_write_counter(self, counter):
+        directory_path = config2['directory_path']
+        counter += 1
+        data = {'pub_counter': [counter]}
+        df_updated_counter = pd.DataFrame(data)
+        df_updated_counter.to_csv(directory_path + '/files/counter_qual.csv', sep=',', encoding='utf-8', index=False)
+        counter = df_updated_counter["pub_counter"].values[0]
         # counter6 = counter.zfill(6)
 
         print('counter: ' + str(counter))

@@ -44,17 +44,20 @@ def new():
     # # # GET COUNTER
     if env_vars['env'] == 'qual':
         counter = Csv().go_get_counter()
+        new_counter = Csv().go_write_counter()
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
-        print('counter: ' + counter)
         new_counter = counter + 1
-        print('new counter: ' + new_counter)
         data = {'pub_counter': [new_counter]}
         df_updated_counter = pd.DataFrame(data)
-        print('new dataframe')
+        print('df_updated_counter')
         print(df_updated_counter)
         s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
+
     counter6 = str(counter).zfill(6)
+    print('counter: ' + str(counter))
+    print('new_counter: ' + str(new_counter))
+    print('counter6: ' + counter6)
 
     no_of_reviews = len(model_formats['icon_list'])
     print(no_of_reviews)
