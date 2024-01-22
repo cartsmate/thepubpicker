@@ -3,7 +3,7 @@
 function spinner_add_listener_swipe() {
 //(function () {
     window.addEventListener('load', function(){
-
+        console.log('carousel SWIPE listener added')
         const carousel = document.querySelector('._carousel');
 
         let faceCount = 12;
@@ -12,6 +12,7 @@ function spinner_add_listener_swipe() {
         let count = 0;
 
         function nextStep(x){
+            console.log('carousel - ROTATE')
             if(x <= 0){
                 x *= -1; //turn to positive number again
                 carousel.style.transform = `rotateY(${x}deg)`;
@@ -47,6 +48,7 @@ function spinner_add_listener_swipe() {
         }
 
         touchsurface.addEventListener('touchstart', function(e){
+            console.log('touchSurface - START')
             touchsurface_words.innerHTML = ''
             var touchobj = e.changedTouches[0]
             dist = 0
@@ -61,6 +63,7 @@ function spinner_add_listener_swipe() {
         }, false)
 
         touchsurface.addEventListener('touchend', function(e){
+            console.log('touchSurface - END')
             var touchobj = e.changedTouches[0]
             dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
             elapsedTime = new Date().getTime() - startTime // get time elapsed

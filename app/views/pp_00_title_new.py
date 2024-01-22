@@ -46,8 +46,13 @@ def new():
         counter = Csv().go_get_counter()
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
-        data = {'pub_counter': [counter + 1]}
+        print('counter: ' + counter)
+        new_counter = counter + 1
+        print('new counter: ' + new_counter)
+        data = {'pub_counter': [new_counter]}
         df_updated_counter = pd.DataFrame(data)
+        print('new dataframe')
+        print(df_updated_counter)
         s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
     counter6 = str(counter).zfill(6)
 
