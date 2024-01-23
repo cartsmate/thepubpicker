@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, date
 import pandas as pd
 import numpy as np
 from app.static.pythonscripts.s3 import S3
+from app.static.pythonscripts.files_review import FilesReview
 from config import Configurations
 
 config = Configurations().get_config()
@@ -65,7 +66,7 @@ class Csv:
 
     def go_get_all(self):
         df_details = self.go_get_details()
-        df_reviews = self.go_get_reviews()
+        df_reviews = FilesReview().go_get_reviews_csv()
         df_reviews_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
         df_detail_reviews = pd.merge(df_details, df_reviews_no_dupes, on='pub_identity', how='left')
 
@@ -105,7 +106,7 @@ class Csv:
 
     def go_get_details_daily(self):
         print('go_get_details_daily')
-        if env_vars['source'] == 'csv':
+        if env_vars['env'] == 'qual':
             df_details_day = pd.read_csv(directory_path + '/files/featured.csv',
                                          dtype={'pub_identity': str, 'timestamp': str})
         else:
@@ -136,7 +137,7 @@ class Csv:
 
             df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
 
-            if env_vars['source'] == 'csv':
+            if env_vars['env'] == 'qual':
                 df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
             else:
                 s3_resp = S3().s3_write(df_appended, 'featured.csv')
@@ -161,38 +162,6 @@ class Csv:
 
         return df_details
 
-    def go_get_reviews(self):
-        print('go get reviews')
-        if env_vars['source'] == 'csv':
-            df_reviews = pd.read_csv(directory_path + '/files/reviews.csv',
-                                     dtype={'review_identity': str,
-                                            'pub_identity': str,
-                                            'review_deletion': str,
-                                            'beer': str,
-                                            'brunch': str,
-                                            'cocktail': str,
-                                            'dart': str,
-                                            'entertain': str,
-                                            'favourite': str,
-                                            'garden': str,
-                                            'history': str,
-                                            'late': str,
-                                            'music': str,
-                                            'outdoor': str,
-                                            'pool': str,
-                                            'quiz': str,
-                                            'restaurant': str,
-                                            'roast': str,
-                                            'sport': str,
-                                            'wine': str,
-                                            'nofeature': str})
-        else:
-            attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'beer', 'brunch', 'cocktail',
-                              'dart', 'entertain', 'favourite', 'garden', 'history', 'late', 'music', 'outdoor', 'pool',
-                              'quiz', 'restaurant', 'roast', 'sport', 'no_feature']
-            df_reviews = S3().s3_read('reviews', attribute_list)
-
-        return df_reviews
 
     def go_get_diarys(self):
         print('go get diarys')
@@ -247,19 +216,14 @@ class Csv:
         obj_df["pub_counter"] = obj_df["pub_counter"] + 1
 
         counter = obj_df["pub_counter"].values[0]
-        # counter6 = counter.zfill(6)
 
-        print('counter: ' + str(counter))
         return counter
 
-    def go_write_counter(self, counter):
+    def go_write_counter(self, new_counter):
         directory_path = config2['directory_path']
-        counter += 1
-        data = {'pub_counter': [counter]}
+        data = {'pub_counter': [new_counter]}
         df_updated_counter = pd.DataFrame(data)
         df_updated_counter.to_csv(directory_path + '/files/counter_qual.csv', sep=',', encoding='utf-8', index=False)
         counter = df_updated_counter["pub_counter"].values[0]
-        # counter6 = counter.zfill(6)
 
-        print('counter: ' + str(counter))
         return counter

@@ -3,7 +3,6 @@ import uuid
 import pandas as pd
 from flask import request
 from config import Configurations
-from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.s3 import S3
 from app.models.review.review import Review
 from app.models.review.review_deletion import ReviewDeletion
@@ -19,9 +18,11 @@ from app.models.review.music import Music
 from app.models.review.entertain import Entertain
 from app.models.review.outdoor import Outdoor
 from app.models.review.pool import Pool
+from app.models.review.private import Private
 from app.models.review.quiz import Quiz
 from app.models.review.restaurant import Restaurant
 from app.models.review.roast import Roast
+from app.models.review.scenic import Scenic
 from app.models.review.sport import Sport
 from app.models.review.wine import Wine
 from app.models.review.nofeature import NoFeature
@@ -41,17 +42,37 @@ env_vars = Configurations().get_config2()
 class FilesReview:
 
     def new_review(self, rev_id, pub_id):
+        # p = [Review().__dict__[keyitem].value for keyitem in Review().__dict__.keys()]
+        # print('p')
+        # print(p)
+        # new_review2 = Review(p)
+        # print('new_review2')
+        # print(new_review2.__dict__)
+        #
+        #
+        # for keyitem in Review().__dict__.keys():
+        #     # print(Review().__dict__[keyitem].control)
+        #     print(Review().__dict__[keyitem].value)
+        #
+
+
         new_review = Review(review_identity=rev_id, review_deletion=ReviewDeletion().value, pub_identity=pub_id,
                             beer=Beer().value, brunch=Brunch().value, cocktail=Cocktail().value, dart=Dart().value,
                             entertain=Entertain().value, favourite=Favourite().value, garden=Garden().value,
                             history=History().value, late=Late().value, music=Music().value, outdoor=Outdoor().value,
-                            pool=Pool().value, quiz=Quiz().value, roast=Roast().value, restaurant=Restaurant().value,
-                            sport=Sport().value, wine=Wine().value, nofeature=NoFeature().value)
+                            pool=Pool().value, private=Private().value, quiz=Quiz().value, roast=Roast().value, restaurant=Restaurant().value,
+                            sport=Sport().value, wine=Wine().value, scenic=Scenic().value, nofeature=NoFeature().value)
+        # print('new_review')
+        # print(new_review.__dict__)
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
 
     def form_review(self):
         print('get review form')
+        # for keyitem in Review().__dict__.keys():
+        #     print(Review().__dict__[keyitem].control)
+        #     dtype_str[keyitem] = Review().__dict__[keyitem].data_type
+        #
         new_review = Review(review_identity=UuidGenerator().get_new_uuid(),
                             review_deletion=request.form['review_deletion' + "_check"],
                             pub_identity=request.form['pub_identity'],
@@ -67,9 +88,11 @@ class FilesReview:
                             music='1' if request.form.get('music' + "_check") == 'on' else '0',
                             outdoor='1' if request.form.get('outdoor' + "_check") == 'on' else '0',
                             pool='1' if request.form.get('pool' + "_check") == 'on' else '0',
+                            private='1' if request.form.get('private' + "_check") == 'on' else '0',
                             quiz='1' if request.form.get('quiz' + "_check") == 'on' else '0',
                             restaurant='1' if request.form.get('restaurant' + "_check") == 'on' else '0',
                             roast='1' if request.form.get('roast' + "_check") == 'on' else '0',
+                            scenic='1' if request.form.get('scenic' + "_check") == 'on' else '0',
                             sport='1' if request.form.get('sport' + "_check") == 'on' else '0',
                             nofeature='1' if request.form.get('nofeature' + "_check") == 'on' else '0')
         df_new_review = pd.DataFrame([new_review.__dict__])
@@ -104,7 +127,7 @@ class FilesReview:
     def update_review_csv(self, df_updated_reviews, type):
         print('updating review csv')
         # print(df_updated_reviews)
-        df_reviews = Csv().go_get_reviews()
+        df_reviews = self.go_get_reviews_csv()
         print('pre_count: ' + str(df_reviews.shape[0]))
         print('post_count: ' + str(df_updated_reviews.shape[0]))
 
@@ -119,10 +142,6 @@ class FilesReview:
 
         if (df_updated_reviews.shape[0] == df_reviews.shape[0]) and (type == 'edit'):
             print('INSIDE REVIEW AND EDIT')
-            idid = 'd010138e-02c3-492d-ada2-df1478095d2d'
-            df2 = df_updated_reviews.loc[df_updated_reviews['pub_identity'] == idid]
-            print(df2.transpose())
-
             df_updated_reviews.to_csv(directory_path + '/files/reviews.csv', index=False, sep=',', encoding='utf-8')
             if env_vars['source'] == 'csv':
                 s3_resp = S3().s3_write(df_updated_reviews, 'reviews.csv')
@@ -132,3 +151,46 @@ class FilesReview:
             print('Review csv/s3 did not update')
 
         return df_updated_reviews
+
+    def go_get_reviews_csv(self):
+        print('go get reviews')
+        print('review')
+
+        dtype_str = {}
+        for keyitem in Review().__dict__.keys():
+            # print(Review().__dict__[keyitem].control)
+            dtype_str[keyitem] = Review().__dict__[keyitem].data_type
+
+        if env_vars['source'] == 'csv':
+            df_reviews = pd.read_csv(directory_path + '/files/reviews.csv',
+                                     dtype=dtype_str)
+            # df_reviews = pd.read_csv(directory_path + '/files/reviews.csv',
+            #                          dtype={'review_identity': str,
+            #                                 'pub_identity': str,
+            #                                 'review_deletion': str,
+            #                                 'beer': str,
+            #                                 'brunch': str,
+            #                                 'cocktail': str,
+            #                                 'dart': str,
+            #                                 'entertain': str,
+            #                                 'favourite': str,
+            #                                 'garden': str,
+            #                                 'history': str,
+            #                                 'late': str,
+            #                                 'music': str,
+            #                                 'outdoor': str,
+            #                                 'pool': str,
+            #                                 'quiz': str,
+            #                                 'restaurant': str,
+            #                                 'roast': str,
+            #                                 'sport': str,
+            #                                 'wine': str,
+            #                                 'nofeature': str})
+        else:
+            attribute_list = ['review_identity', 'review_deletion', 'pub_identity', 'beer', 'brunch', 'cocktail',
+                              'dart', 'entertain', 'favourite', 'garden', 'history', 'late', 'music', 'outdoor', 'pool',
+                              'quiz', 'restaurant', 'roast', 'sport', 'no_feature']
+            df_reviews = S3().s3_read('reviews', attribute_list)
+
+        return df_reviews
+

@@ -2,7 +2,7 @@
 
 class Quiz:
     def __init__(self, name="quiz", alias="Quiz", alias1="Night", alias2="Quiz Night", required='true', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="quiz.png", indx='12'):
+                 table_visible='false', value='0', control="check", icon="quiz.png", data_type='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
@@ -13,4 +13,4 @@ class Quiz:
         self.value = value
         self.control = control
         self.icon = icon
-        self.indx = indx
+        self.data_type = data_type

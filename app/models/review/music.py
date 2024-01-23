@@ -2,7 +2,7 @@
 
 class Music:
     def __init__(self, name="music", alias="Live", alias1="Music", alias2="Live Music", required='true', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="music.png", indx='9'):
+                 table_visible='false', value='0', control="check", icon="music.png", indx='9', data_type='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
@@ -14,3 +14,4 @@ class Music:
         self.control = control
         self.icon = icon
         self.indx = indx
+        self.data_type = data_type

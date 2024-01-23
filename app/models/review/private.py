@@ -1,8 +1,8 @@
 
 
-class Pool:
-    def __init__(self, name="pool", alias="Pool", alias1="Table", alias2="Pool Table", required='true', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="pool.png", data_type='str'):
+class Private:
+    def __init__(self, name="private", alias="Private", alias1="Members", alias2="Private Members", required='false', form_visible='false',
+                 table_visible='false', value='0', control="check", icon="private.png", data_type='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

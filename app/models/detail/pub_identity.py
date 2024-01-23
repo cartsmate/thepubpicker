@@ -2,7 +2,7 @@
 class PubIdentity:
 
     def __init__(self, name='pub_identity', alias="Pub Identity", alias2="", required='true', form_visible='false',
-                 table_visible='false', value='false', control='input', icon='none', rank=0):
+                 table_visible='false', value='false', control='input', icon='none', rank=0, data_type='str'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -13,3 +13,4 @@ class PubIdentity:
         self.control = control
         self.icon = icon
         self.rank = rank
+        self.data_type = data_type

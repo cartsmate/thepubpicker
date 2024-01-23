@@ -3,6 +3,8 @@ import pandas as pd
 import requests
 from config import Configurations
 from app.static.pythonscripts.csv import Csv
+from app.static.pythonscripts.files_review import FilesReview
+from urllib3.exceptions import NewConnectionError
 
 config = Configurations().get_config()
 config2 = Configurations().get_config2()
@@ -39,7 +41,7 @@ class CsvSingle:
 
     def go_get_1_review(self, pub_id):
         print('Go get 1 review')
-        df_reviews = Csv().go_get_reviews()
+        df_reviews = FilesReview().go_get_reviews_csv()
         df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
         df_1_review = df_rev_no_dupes.loc[df_rev_no_dupes['pub_identity'] == pub_id]
         return df_1_review
@@ -99,15 +101,30 @@ class CsvSingle:
         fields = 'name,photos'
 
         full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
-        print(full_url)
-
-        response = requests.get(full_url)
-        print(response.json())
+        # print(full_url)
         photo_list = []
         try:
-            photo_ids = response.json()['result']['photos']
-            for x in photo_ids:
-                photo_list.append(x['photo_reference'])
-        except KeyError:
+            response = requests.get(full_url)
+            print(response.json())
+            try:
+                photo_ids = response.json()['result']['photos']
+                for x in photo_ids:
+                    photo_list.append(x['photo_reference'])
+            except KeyError:
+                print('API call worked, but nothing useful returned')
+                pass
+
+        except ConnectionError as e:
+            print('API call failed')
             pass
+        except Exception as e:
+            print('API call - further errors occurred')
+
+        # except NewConnectionError as e:
+        #     print('API call failed')
+        #
+        # except MaxRetryError:
+        #     print('API call failed MAX number of times')
+        #     pass
+
         return photo_list

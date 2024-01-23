@@ -37,7 +37,7 @@ def submit():
     # print('current DETAIL')
     # print(df_detail_current.transpose())
 
-    df_reviews_current = Csv().go_get_reviews()
+    df_reviews_current = FilesReview().go_get_reviews_csv()
     df_review_current = df_reviews_current[df_reviews_current['pub_identity'] == pub_id]
     # print('current REVIEW')
     # print(df_review_current.transpose())

@@ -35,7 +35,11 @@ def new():
 
     # # # GET DAILY PUB
     daily_id = Csv().go_get_details_daily()
+    print('daily_id: ' + str(daily_id))
+    # print('env_vars')
+    # print(env_vars)
     photos_list = CsvSingle().go_get_1_photo_request(daily_id, env_vars)
+    print('photos list: ' + str(photos_list))
     # daily_id = df_details.iloc[0]['pub_identity']
 
     # # # GET URL ATTRIBUTES
@@ -44,7 +48,7 @@ def new():
     # # # GET COUNTER
     if env_vars['env'] == 'qual':
         counter = Csv().go_get_counter()
-        new_counter = Csv().go_write_counter(counter)
+        new_counter = Csv().go_write_counter(counter + 1)
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
         new_counter = counter + 1
@@ -54,13 +58,13 @@ def new():
         print(df_updated_counter)
         s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
 
-    counter6 = str(counter).zfill(6)
+    counter6 = str(new_counter).zfill(6)
     print('counter: ' + str(counter))
     print('new_counter: ' + str(new_counter))
     print('counter6: ' + counter6)
 
     no_of_reviews = len(model_formats['icon_list'])
-    print(no_of_reviews)
+    print('no_of_reviews: ' + str(no_of_reviews))
     print('end TITLE')
 
     return render_template('02_home_.html',
