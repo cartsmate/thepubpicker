@@ -1,6 +1,6 @@
 function update_results() {
     console.log('update result')
-        filtered_pubs = filter_all_data()
+    filtered_pubs = filter_all_data()
     var total_lat = 0
     var avg_lat = 0
     var total_lng = 0
@@ -14,7 +14,6 @@ function update_results() {
     map.setCenter({lat:avg_lat, lng:avg_lng});
 
     display_results('block')
-
 }
 function display_results(display) {
     document.getElementById('template_map').style.display = display
@@ -76,7 +75,7 @@ function on_click_feature() {
                 current_carousel.classList.add('carousel_off')
 
             }
-
+        }
     }
     update_results()
 }
