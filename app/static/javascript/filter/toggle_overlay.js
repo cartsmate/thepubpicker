@@ -16,6 +16,7 @@ function toggle_overlay() {
 function on() {
     console.log('ON')
     document.getElementById("overlay").style.display = "block";
+
 }
 
 function off() {
@@ -27,4 +28,5 @@ function off() {
     content_diary.style.display = "none"
     parent_btn = document.getElementById('content_filters')
     parent_btn.style.display = "none";
+
 }

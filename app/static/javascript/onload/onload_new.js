@@ -1,6 +1,10 @@
 
 function onload_new() {
-
+    console.log('pub')
+    console.log(pub)
+    filtered_pubs = pub
+    console.log('filtered_pubs')
+    console.log(filtered_pubs)
     if (isTouchDevice()) {
         document.getElementById('forwards').style.display = 'none'
         document.getElementById('rewards').style.display = 'none'

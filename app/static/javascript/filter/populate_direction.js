@@ -5,6 +5,7 @@ function populate_direction(pub_filtered) {
     var select= document.getElementById("direction");
     var option = document.createElement("option");
     filter_clear('checks_direction')
+
     for (i=0; i<directions_list.length; i++) (function(i, pub_filtered){
         var filtered_data = pub_filtered.filter(function(x) {
             return x.direction_identity == directions_list[i][0]

@@ -8,18 +8,25 @@ function spinner_add_listener_click_btn(number_review_attr){
     const btnFFWD = document.querySelector('#forwards');
     const btnRWD = document.querySelector('#rewards');
 
-//    let faceCount = 12;
-    let faceCount = number_review_attr
+    let faceCount = number_review_attr;
+//    let faceCount = number_review_attr
+
     let stepCount = 360 / faceCount;
     let count = 0;
 
     btnFFWD.addEventListener('click',()=>{
         let stepForward = count += stepCount;
+        carousel_position--
+        if (carousel_position < 0) { carousel_position = 6 }
+        console.log('carousel_position: ' + carousel_position)
         nextStep(stepForward);
     });
 
     btnRWD.addEventListener('click',()=>{
         let stepReward = count -= stepCount;
+        carousel_position++
+        if (carousel_position > 6) { carousel_position = 0 }
+        console.log('carousel_position: ' + carousel_position)
         nextStep(stepReward);
     });
 

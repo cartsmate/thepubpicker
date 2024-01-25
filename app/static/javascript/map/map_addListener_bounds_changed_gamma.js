@@ -1,13 +1,10 @@
 function map_addListener_bounds_changed_gamma(map) {
     console.log('map bounds changed listener GAMMA added')
+
     google.maps.event.addListener(map, 'bounds_changed', function() {
         console.log('map bounds are changed GAMMA')
 
         bounds = map.getBounds();
-        console.log('bounds')
-        console.log(bounds)
-        console.log('markersArray')
-        console.log(markersArray)
         let ne = bounds.getNorthEast(); // Coords of the northeast corner
         let sw = bounds.getSouthWest(); // Coords of the southwest corner
         let north_east = ne.toString().replace(/[()]/g, "");
@@ -20,25 +17,17 @@ function map_addListener_bounds_changed_gamma(map) {
         var west = south_west_str[1]
 
         marker_in_bounds = 0
-        for (i=0; i<markersArray.length; i++) {
-            //console.log(markersArray[i].position.lat())
-            /*
-            console.log('north: ' + north)
-            console.log('lat  : ' + markersArray[i].detail_latitude)
-            console.log('south: ' + south)
-
-            console.log('east: ' + east)
-            console.log('lng  : ' + markersArray[i].detail_longitude)
-            console.log('west: ' + west)
-            */
-            if (markersArray[i].position.lat() > south && markersArray[i].position.lat() < north && markersArray[i].position.lng() > west && markersArray[i].position.lng() < east) {
+        pubs_to_show = []
+        for (i=0; i<filtered_pubs.length; i++) {
+            if (filtered_pubs[i]['detail_latitude'] > south && filtered_pubs[i]['detail_latitude'] < north && filtered_pubs[i]['detail_longitude'] > west && filtered_pubs[i]['detail_longitude'] < east) {
                 marker_in_bounds ++
+                pubs_to_show.push(filtered_pubs[i])
+                marker_add(filtered_pubs[i])
             }
-
         }
-        console.log('marker_in_bounds')
-        console.log(marker_in_bounds)
-        //list_setup_beta(pubs_sorted)
+        mapped_pubs = pubs_to_show
+        populate_header()
+        list_setup_beta()
             /*
             searchBox.setBounds(map.getBounds());
             pubs_reviews = filter_all_data(pubs)

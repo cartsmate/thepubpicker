@@ -1,23 +1,38 @@
-<div id="template_spinner" >
-    <div class="carousel_scene" id="the_carousel" >
-        <div class="_carousel" >
-            {% for k, field in review.__dict__.items() %}
-                {% if field.name != "pub_identity" %}
-                    {% if field.name in model_formats['icon_list'] %}
-                        {% if field.name != "nofeature" %}
-                            <div class="face carousel_off" id="{{field.name}}_carousel">
-                                <div>
-                                    <img class="icon_style" id="{{field.name}}_icon" src="/static/icons/features/{{field.name}}.png">
-                                    <div class="icon_word" id="{{field.name}}_word">
-                                        <p>
-                                            <span>{{field.alias}}</span>
-                                            <span>{{field.alias1}}</span>
-                                        </p>
-                                    </div>
-                                </div>
+<style>
+
+.heading2 {
+    background-color: var(--theme);
+    color: white;
+    padding: 0px;
+    margin-top: 5px;
+    width: 200px;
+}
+.heading_title2 {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+</style>
+<div class="heading2"><div class="heading_title2">Quick Filters</div></div>
+<div id="template_spinner" style="margin-top: 0px; padding:0px;" >
+    <div class="carousel_scene" id="the_carousel" style="margin-top: 0px; padding:0px;" >
+        <div class="_carousel" id="test_carousel" style="margin-top: 0px; padding:0px;" >
+            {% for key, value in review.items() %}
+                {% if value.quick_filter == "yes" %}
+                    <div class="face carousel_off" id="{{value.name}}_carousel" style="margin-top: 0px; padding:0px;" >
+                        <div>
+                            <img class="icon_style" id="{{value.name}}_icon" src="/static/icons/features/{{value.name}}.png">
+                            <div class="icon_word" id="{{value.name}}_word">
+                                <p>
+                                    <span>{{value.alias}}</span>
+                                    <span>{{value.alias1}}</span>
+                                </p>
                             </div>
-                        {% endif %}
-                    {% endif %}
+                        </div>
+                    </div>
                 {% endif %}
             {% endfor %}
         </div>
@@ -40,7 +55,7 @@ window.addEventListener('load', function(){
     console.log('carousel SWIPE listener ACTIVATED')
     const carousel = document.querySelector('._carousel');
 
-    let faceCount = 12;
+    let faceCount = 6;
     //let faceCount = number_review_attr
     let stepCount = 360 / faceCount;
     let count = 0;

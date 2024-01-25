@@ -1,8 +1,9 @@
 
 
 class Wine:
-    def __init__(self, name="wine", alias="Wine", alias1="Bar", alias2="Wine Bar", required='false', form_visible='false',
-                 table_visible='false', value='0', control="check", icon="wine.png", data_type='str'):
+    def __init__(self, name="wine", alias="Wine", alias1="Bar", alias2="Wine Bar", required='false',
+                 form_visible='false', table_visible='false', value='0', control="check", icon="wine.png",
+                 data_type='str', filter='yes', quick_filter='no'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
@@ -14,3 +15,5 @@ class Wine:
         self.control = control
         self.icon = icon
         self.data_type = data_type
+        self.filter = filter
+        self.quick_filter = quick_filter

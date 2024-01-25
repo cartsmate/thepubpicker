@@ -1,13 +1,18 @@
 function spinner_add_listener_click_face() {
     console.log('spinner add listener FACE CLICK added')
-    model_format = model_formats['icon_list'].sort()
-    for (field in model_format) {
-        var marker = model_format[field]
-        if (marker != 'nofeature') {
-            var marker_id = model_format[field] + "_carousel"
-            document.getElementById(marker_id).addEventListener('click', (function (marker) {
+//    model_format = model_formats['icon_list'].sort()
+//    for (field in model_format) {
+    for (const [key, value] of Object.entries(review)) {
+        if (value.quick_filter == 'yes') {
+//        var marker = model_format[field]
+//        if (marker != 'nofeature') {
+//            var marker_id = model_format[field] + "_carousel"
+//            document.getElementById(marker_id).addEventListener('click', (function (marker) {
+            var marker = value.name
+            document.getElementById(value.name + "_carousel").addEventListener('click', (function (marker) {
                 return function () {
                     console.log('carousel spinner listener triggered')
+
                     if (document.getElementById(marker + '_carousel').style.opacity == '1') {
                         if (document.getElementById(marker + "_filter").checked == true){
                             console.log('already TRUE - blank out')
@@ -33,6 +38,7 @@ function spinner_add_listener_click_face() {
                         } else {
                             console.log(marker)
                             console.log(marker + ': was blank - make HIGHLIGHT')
+                            /*
                             for (i=0; i<model_formats['icon_list'].length; i++) {
                             //console.log(model_formats['icon_list'][i])
                                 if (model_formats['icon_list'][i] != 'nofeature') {
@@ -43,6 +49,16 @@ function spinner_add_listener_click_face() {
                                     //document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
 
                                     temp_carousel = document.getElementById(model_formats['icon_list'][i] + "_carousel")
+                                    temp_carousel.classList.remove('carousel_on')
+                                    temp_carousel.classList.add('carousel_off')
+                                }
+                            }
+                            */
+                            for (const [key, value] of Object.entries(review)) {
+                                if (value.quick_filter == 'yes') {
+                                    document.getElementById(value.name + "_filter").checked = false;
+                                    document.getElementById(value.name + "_word").style.color = "black"
+                                    temp_carousel = document.getElementById(value.name + "_carousel")
                                     temp_carousel.classList.remove('carousel_on')
                                     temp_carousel.classList.add('carousel_off')
                                 }

@@ -2,7 +2,8 @@
 
 class NoFeature:
     def __init__(self, name="nofeature", alias="None", alias2="None", required='true', form_visible='false',
-                 table_visible='false', value='1', control="check", icon="nofeature.png", data_type='str'):
+                 table_visible='false', value='1', control="check", icon="nofeature.png", data_type='str',
+                 filter='no', quick_filter='no'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -13,3 +14,5 @@ class NoFeature:
         self.control = control
         self.icon = icon
         self.data_type = data_type
+        self.filter = filter
+        self.quick_filter = quick_filter

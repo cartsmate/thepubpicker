@@ -1,7 +1,6 @@
-function list_create(pub_filtered) {
+function list_create() {
     console.log('LIST_CREATE')
-
-    // creates a <table> element and a <tbody> element
+    pubs_to_show = mapped_pubs
     var tbl = document.createElement("table");
     tbl.setAttribute("id", "pub_list");
     document.getElementById('pub_table').visible = false
@@ -11,100 +10,86 @@ function list_create(pub_filtered) {
 
     var tblHead = document.createElement("thead");
     var tblBody = document.createElement("tbody");
-
-    pub_attributes = []
-    a=0
-    for (var key in pub[0]) {
-        pub_attributes.push(key)
-        a++
-    }
-
-    console.log('alias')
-    console.log(alias)
-//    console.log({{alias['pub_identity']}})
     var row = document.createElement("tr");
 
-    b=0
-    for (let k = 0; k < pub_attributes.length; k++) {
-        const heading = document.createElement("td");
-        //td.width = "100px"
-        if (pub_attributes[k] == 'station_name') {
-            heading.width = "120px"
-        } else if (pub_attributes[k] == 'detail_name') {
-            heading.width = "120px"
-        } else if (pub_attributes[k] == 'rank') {
-            heading.width = "50px"
+    for (const [key, value] of Object.entries(pub_obj)) {
+        for (const [k, v] of Object.entries(value)) {
+            if (v.table_visible == 'true') {
+                const heading = document.createElement("td");
+                if (v.name == 'rank') {
+                    heading.width = "45px"
+                } else if (v.name == 'detail_name') {
+                    heading.width = "145px"
+                } else {
+                    heading.width = "110px"
+                }
+                heading.style.margin = "0px"
+                heading.style.padding = "0px"
+                heading.style.height = "40px"
+                heading.style.fontWeight = "bold"
+                heading.style.verticalAlign = "middle"
+                const headingText = document.createTextNode(v.alias)
+                heading.appendChild(headingText)
+                row.appendChild(heading);
+            }
         }
-        heading.style.margin = "0px"
-        heading.style.padding = "0px"
-        heading.style.height = "40px"
-        const headingText = document.createTextNode(alias[pub_attributes[k]])
-        heading.appendChild(headingText)
-        row.appendChild(heading);
-        b++
-        }
+    }
     tblHead.appendChild(row);
+    //console.log(tblHead)
     tbl.appendChild(tblHead);
 
-  // creating all cells
-    for (let i = 0; i < pub_filtered.length; i++) {
+    for (let i = 0; i < pubs_to_show.length; i++) {
         var row = document.createElement("tr");
-        for (let j = 0; j < pub_attributes.length; j++) {
-            const cell = document.createElement("td");
-            cell.style.margin = "0px"
-            cell.style.padding = "0px"
-            cell.style.height = "40px"
-            cell.style.color = "#0d6efd"
-            cell.style.verticalAlign = "middle"
-            const href = document.createElement("a");
-            href.setAttribute("style", "text-decoration: none; color: #0d6efd;")
-            if (pub_attributes[j] == 'station_name') {
-                cell.width = "110px"
-                href.setAttribute("href", "#");
-                //href.setAttribute("onclick", "redirect_station('" + pub_filtered[i]['station_identity'] + "', 'collection')");
-                href.setAttribute("onclick", "update_station('" + pub_filtered[i]['station_identity'] + "')");
-
-                text_ref = pub_filtered[i][pub_attributes[j]].toString().substring(0,17)
-                const cellText = document.createTextNode(text_ref);
-
-                href.appendChild(cellText);
-                cell.appendChild(href)
-                row.appendChild(cell);
-                } else if (pub_attributes[j] == 'detail_name') {
-                    cell.width = "150px"
-                    href.setAttribute("href", "#");
-
-                    href.setAttribute("onclick", "redirect_pub_search('" + pub_filtered[i]['pub_identity'] + "')");
-                    text_ref = pub_filtered[i][pub_attributes[j]].toString().substring(0,20)
-                    const cellText = document.createTextNode(text_ref);
-                    href.appendChild(cellText);
-                    cell.appendChild(href)
-                    row.appendChild(cell);
-                } else if (pub_attributes[j] == 'rank') {
-                    cell.width = "14px"
-                    const cellText = document.createTextNode(pub_filtered[i][pub_attributes[j]]);
-                    cell.appendChild(cellText)
-                    row.appendChild(cell);
-                } else {
-                    cell.width = "110px"
-                    const cellText = document.createTextNode(pub_filtered[i][pub_attributes[j]]);
-                    cell.appendChild(cellText)
-                    row.appendChild(cell);
+        for (const [key, value] of Object.entries(pub_obj)) {
+            for (const [k, v] of Object.entries(value)) {
+                if (v.table_visible == 'true') {
+                    const cell = document.createElement("td");
+                    cell.style.margin = "0px"
+                    cell.style.padding = "0px"
+                    cell.style.height = "40px"
+                    cell.style.color = "#0d6efd"
+                    cell.style.verticalAlign = "middle"
+                    const href = document.createElement("a");
+                    href.setAttribute("style", "text-decoration: none; color: #0d6efd;")
+                    if (v.name == 'station_name') {
+                        //cell.width = "135px"
+                        href.setAttribute("href", "#");
+                        href.setAttribute("onclick", "update_station('" + pubs_to_show[i]['station_identity'] + "')");
+                        const cellText = document.createTextNode(pubs_to_show[i][v.name].toString().substring(0,16));
+                        href.appendChild(cellText);
+                        cell.appendChild(href)
+                        row.appendChild(cell);
+                    } else if (v.name == 'detail_name') {
+                        //cell.width = "135px"
+                        href.setAttribute("href", "#");
+                        href.setAttribute("onclick", "redirect_pub_search('" + pubs_to_show[i]['pub_identity'] + "')");
+                        const cellText = document.createTextNode(pubs_to_show[i][v.name].toString().substring(0,19));
+                        href.appendChild(cellText);
+                        cell.appendChild(href)
+                        row.appendChild(cell);
+                    } else if (v.name == 'rank') {
+                        //cell.width = "30px"
+                        const cellText = document.createTextNode(pubs_to_show[i][v.name]);
+                        cell.appendChild(cellText)
+                        row.appendChild(cell);
+                    } else {
+                        //console.log(v.name)
+                        //cell.width = "135px"
+                        const cellText = document.createTextNode(pubs_to_show[i][v.name]);
+                        cell.appendChild(cellText)
+                        row.appendChild(cell);
+                    }
                 }
             }
-
-    // add the row to the end of the table body
-        tblBody.appendChild(row);
         }
-    //console.log(c)
-  // put the <tbody> in the <table>
+        tblBody.appendChild(row);
+    }
+    //console.log(tblBody)
+
     tbl.appendChild(tblBody);
-  // appends <table> into <body>
-  //document.body.appendChild(tbl);
 
     document.getElementById('pub_table').appendChild(tbl)
-  // sets the border attribute of tbl to '2'
+
     tbl.setAttribute("border", "2");
-//    console.log('tbl')
-//    console.log(tbl)
+
 }

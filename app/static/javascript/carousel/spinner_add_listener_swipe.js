@@ -40,10 +40,16 @@ function spinner_add_listener_swipe() {
             movement = stepCount * speed_round
             if (isrightswipe > 0) {
                 let stepReward = count -= movement;
+                central_carousel++
+                if (central_carousel > 6) { central_carousel = 0 }
+                console.log('central_carousel: ' + central_carousel)
                 nextStep(stepReward);
                 }
             else{
                 let stepForward = count += movement;
+                central_carousel--
+                if (central_carousel < 0) { central_carousel = 6 }
+                console.log('central_carousel: ' + central_carousel)
                 nextStep(stepForward);
             }
         }

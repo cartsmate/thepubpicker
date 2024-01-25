@@ -1,21 +1,6 @@
-//function list_filter(visible, order, asc_desc) {
 function list_filter_beta(visible, order, asc_desc) {
     console.log('list filter BETA')
-//    console.log('pub count: ' + pub.length)
-    //console.log('headers')
-    //console.log(headers)
 
-    /*
-    console.log('visible')
-    console.log(visible)
-    for (const key in visible) {
-        let trueStr = visible[key]
-        //console.log(typeof(trueStr) + " : " + trueStr)
-        trueStr = (trueStr === "true")
-        //console.log(typeof(trueStr) + " : " + trueStr)
-        visible[key] = trueStr
-    }
-    */
     $(document).ready(function () {
         $('#pub_list').DataTable({
             paging: true,
@@ -25,7 +10,6 @@ function list_filter_beta(visible, order, asc_desc) {
             searching: false
         });
     });
-    //console.log('end of filter table')
 }
 
 

@@ -29,9 +29,13 @@ function get_filter_values() {
     console.log(filter_list)
 
     feature_list = ['fl']
-    for (i=0; i<model_formats['icon_list'].length; i++) {
-        if (document.getElementById(model_formats['icon_list'][i] + "_filter").checked == true) {
-            feature_list.push(model_formats['icon_list'][i])
+//    for (i=0; i<model_formats['icon_list'].length; i++) {
+//        if (document.getElementById(model_formats['icon_list'][i] + "_filter").checked == true) {
+    for (const [key, value] of Object.entries(review)) {
+        if (value.filter == 'yes') {
+            if (document.getElementById(value.name + "_filter").checked == true) {
+                feature_list.push(value.name)
+            }
         }
     }
     console.log(feature_list)

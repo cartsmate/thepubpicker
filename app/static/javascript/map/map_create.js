@@ -8,8 +8,11 @@ function map_create(lat, lng, zoom) {
         zoom:zoom,
         zoomControl: true,
         //fullScreenControl: false,
-        controlSize: 25,
-        minZoom: 11
+        controlSize: 30,
+        streetViewControl: false,
+        minZoom: 11,
+
+        disableDefaultUI: true,
         }
     map = new google.maps.Map(document.getElementById('new_map'), map_prop)
     //bounds = map.getBounds()

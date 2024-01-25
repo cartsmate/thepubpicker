@@ -30,6 +30,9 @@ function populate_station(pub_filtered) {
         } else {
             label.style.display = "none"
         }
+        if (filtered_data.length == pub_filtered.length) {
+            input.checked = true
+        }
         label.appendChild(input)
     }
     if (station_options.length > 6) {

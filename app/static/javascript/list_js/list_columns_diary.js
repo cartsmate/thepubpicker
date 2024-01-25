@@ -1,6 +1,6 @@
 function list_columns_diary(clicked_day) {
     console.log('list columns diary')
-
+    /*
     pub_attributes = []
     visible = {}
     for (var key in pub[0]) {
@@ -14,6 +14,18 @@ function list_columns_diary(clicked_day) {
         visible[diary_headers[i]] = false
     }
     //console.log(clicked_day)
+    */
+    visible = {}
+    for (const [key, value] of Object.entries(pub_obj)) {
+        for (const [k, v] of Object.entries(value)) {
+            if (v.table_visible == 'true') {
+                visible[v.name] = false
+            }
+        }
+    }
+    visible['rank'] = true
+    visible['detail_name'] = true
+
     if (clicked_day == 'none') {
         visible['station_name'] = true
     } else {
@@ -29,13 +41,15 @@ function list_columns_diary(clicked_day) {
     }
     */
 
-    visible['rank'] = true
-    visible['detail_name'] = true
+//    visible['rank'] = true
+//    visible['detail_name'] = true
 
-    const isIndex = (element) => element == 'rank';
+//    const isIndex = (element) => element == 'rank';
+//    order = pub_attributes.findIndex(isIndex);
+//    asc_desc = 'desc'
 
-    order = pub_attributes.findIndex(isIndex);
     asc_desc = 'desc'
+    order = 1
 
     return [visible, order, asc_desc]
 }

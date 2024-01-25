@@ -3,8 +3,8 @@
 :root{
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
-  --translateZ: 130px;
-  --faceWidth: 60px;
+  --translateZ: 100px;
+  --faceWidth: 40px;
   //--theme: var(--color)
   --theme: #808000
 }
@@ -27,7 +27,8 @@
 
 ._carousel{
   position: relative;
-  width: 100%
+  //width: 100%
+  //width: 200px;
   height: 100%;
   transform-style: preserve-3d;
   transition: 0.5s;
@@ -85,8 +86,10 @@
 */
 #the_carousel{
       position: relative;
-      top: 10px;
-      left: 125px;
+      top: 2px;
+      //left: 105px;
+      //left: 300px;
+      left: 127px;
       margin-bottom: 80px;
       }
 .icon_style {
@@ -132,7 +135,7 @@ div.box.swipeleft {
     left: 135px;
 }
 .button{
-    top: -65px;
+    top: -70px;
     //margin-bottom: 40px;
     cursor: pointer;
     width: 25px;

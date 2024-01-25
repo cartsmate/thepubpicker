@@ -23,7 +23,9 @@
 }
 #collapsible_filters {
     width: 95px;
+    height: 40px;
     margin-top: 3px;
+    margin-right: 3px;
     font-size:12px;
     color: black;
     background-color: white;
@@ -55,4 +57,28 @@
     text-align: center;
     background-color: var(--theme);
     border: thin solid white;
+}
+.filters_on {
+    text-align: left;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.0;
+}
+.filters_off {
+    text-align: center;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.0;
+}
+.filters_span_on {
+    display: block;
+}
+.filters_span_off {
+    display: in-line;
+}
+.child {
+    display: inline-block;
+    vertical-align: middle;
 }

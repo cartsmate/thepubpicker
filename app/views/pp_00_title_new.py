@@ -1,6 +1,7 @@
 
 import random
 from app import app
+import json
 import pandas as pd
 from flask import render_template, request
 from app.static.pythonscripts.objects import Objects
@@ -10,6 +11,7 @@ from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.controls_list import ControlsList
 from app.models.review.review import Review
+from app.models.pub.pub import Pub
 from app.models.photo.photo import Photo
 from config import Configurations
 
@@ -59,14 +61,18 @@ def new():
         s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
 
     counter6 = str(new_counter).zfill(6)
-    print('counter: ' + str(counter))
-    print('new_counter: ' + str(new_counter))
-    print('counter6: ' + counter6)
 
     no_of_reviews = len(model_formats['icon_list'])
     print('no_of_reviews: ' + str(no_of_reviews))
     print('end TITLE')
 
+    # review_json = json.dumps(Review().__dict__)
+    review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
+    print('review_json')
+    print(review_json)
+    pub_obj_json = json.loads(json.dumps(Pub().__dict__, default=lambda o: o.__dict__))
+    print('pub_obj_json')
+    print(json.dumps(pub_obj_json, indent=4))
     return render_template('02_home_.html',
                            env_vars=env_vars,
                            model_formats=model_formats,
@@ -74,7 +80,8 @@ def new():
                            full_alias=full_alias,
                            daily_id=daily_id,
                            pub=pub_json,
-                           review=Review(),
+                           review=review_json,
+                           pub_obj=pub_obj_json,
                            photos_list=photos_list,
                            filters=filters,
                            directions_list=directions_list,
