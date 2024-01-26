@@ -10,6 +10,7 @@ from app.models.detail.place import Place
 from app.models.detail.rank import Rank
 from app.models.detail.colour import Colour
 from app.models.detail.extra import Extra
+from app.models.detail.ordering import Ordering
 from app.models.detail.website import Website
 from app.models.detail.url import Url
 from app.models.station.station_identity import StationIdentity
@@ -19,8 +20,8 @@ from app.models.photo.photo_identity import PhotoIdentity
 class Detail:
     def __init__(self, pub_identity=PubIdentity(), station_identity=StationIdentity(), detail_name=DetailName(),
                  address=Address(), category=Category(), colour=Colour(), detail_deletion=DetailDeletion(),
-                 detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(), place=Place(),
-                 rank=Rank(), website=Website(), url=Url()):
+                 detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(),
+                 ordering=Ordering(), place=Place(), rank=Rank(), website=Website(), url=Url()):
         self.pub_identity = pub_identity
         self.station_identity = station_identity
         self.detail_name = detail_name
@@ -31,6 +32,7 @@ class Detail:
         self.detail_latitude = detail_latitude
         self.detail_longitude = detail_longitude
         self.extra = extra
+        # self.ordering = ordering
         self.place = place
         self.rank = rank
         self.website = website
