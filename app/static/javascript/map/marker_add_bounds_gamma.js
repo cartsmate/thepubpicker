@@ -8,7 +8,7 @@ function clearOverlays() {
 //function marker_add_bounds_beta(map, bounds, data) {
 function marker_add_bounds_gamma(data) {
     console.log('add markers inside bounds GAMMA')
-    console.log('data in: ' + data.length)
+    //console.log('data in: ' + data.length)
     //clearOverlays();
 //    map_elem = document.getElementById('msg_map');
 //    map_elem.innerHTML = '';
@@ -23,8 +23,8 @@ function marker_add_bounds_gamma(data) {
 
     var bounds = new google.maps.LatLngBounds();
     //bounds = map.getBounds()
-    console.log('bounds')
-    console.log(bounds)
+    //console.log('bounds')
+    //console.log(bounds)
     let ne = bounds.getNorthEast(); // Coords of the northeast corner
     let sw = bounds.getSouthWest(); // Coords of the southwest corner
     let north_east = ne.toString().replace(/[()]/g, "");
@@ -50,8 +50,8 @@ function marker_add_bounds_gamma(data) {
 //    map2 = new google.maps.Map(document.getElementById('new_map'), map_prop)
 
     //bounds = map.getBounds();
-    console.log('bounds')
-    console.log(bounds)
+    //console.log('bounds')
+    //console.log(bounds)
     for (var i = 0; i < data.length; i++) {
         //console.log(i)
 

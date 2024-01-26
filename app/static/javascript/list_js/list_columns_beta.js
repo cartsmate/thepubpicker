@@ -9,11 +9,12 @@ function list_columns_beta() {
             }
         }
     }
+    visible['order'] = true
     visible['station_name'] = true
     visible['rank'] = true
     visible['detail_name'] = true
 
-    asc_desc = 'desc'
-    order = 1
+    asc_desc = 'asc'
+    order = 0
     return [visible, order, asc_desc]
 }

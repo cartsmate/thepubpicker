@@ -1,4 +1,4 @@
-function list_setup_beta(pubs_to_show) {
+function list_setup_beta() {
     console.log('list setup')
 
     list_delete()

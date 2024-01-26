@@ -1,13 +1,15 @@
 
 function onload_new() {
-    console.log('pub')
-    console.log(pub)
+    console.log('onload - HOME')
     filtered_pubs = pub
-    console.log('filtered_pubs')
-    console.log(filtered_pubs)
     if (isTouchDevice()) {
+        console.log('TOUCH SCREEN device in operation')
         document.getElementById('forwards').style.display = 'none'
         document.getElementById('rewards').style.display = 'none'
+        console.log('inside IS TOUCH')
+        spinner_add_listener_swipe()
+    } else {
+        console.log('NO-TOUCH screen device in operation')
     }
     set_color_theme()
     display_counter(counter)
@@ -18,10 +20,9 @@ function onload_new() {
     setup_filters()
     pub_filtered = setup_filters_populate()
 
-
     number_review_attr = get_no_reviews()
     spinner_set_css_classes(number_review_attr)
-    spinner_add_listener_swipe()
+//    spinner_add_listener_swipe()
     spinner_add_listener_click_btn(number_review_attr)
     spinner_add_listener_click_face()
 
@@ -30,7 +31,10 @@ function onload_new() {
 
     map_load_gamma()
 
-    if (pub_filtered.length < pub.length) {
+    if (filtered_pubs.length == pub.length) {
+        console.log('on-load: filters CLEAR')
+    } else {
+        console.log('on-load: filters PRE-SET')
         list_setup_beta(pub_filtered)
         populate_header(pub_filtered.length)
         document.getElementById('template_map').style.display = "block"

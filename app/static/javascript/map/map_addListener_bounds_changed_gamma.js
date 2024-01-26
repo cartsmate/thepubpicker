@@ -22,7 +22,7 @@ function map_addListener_bounds_changed_gamma(map) {
             if (filtered_pubs[i]['detail_latitude'] > south && filtered_pubs[i]['detail_latitude'] < north && filtered_pubs[i]['detail_longitude'] > west && filtered_pubs[i]['detail_longitude'] < east) {
                 marker_in_bounds ++
                 pubs_to_show.push(filtered_pubs[i])
-                marker_add(filtered_pubs[i])
+                marker_add(filtered_pubs[i], i)
             }
         }
         mapped_pubs = pubs_to_show

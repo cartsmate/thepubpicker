@@ -7,7 +7,7 @@ function spinner_add_listener_swipe() {
         console.log('carousel SWIPE listener ACTIVATED')
         const carousel = document.querySelector('._carousel');
 
-        let faceCount = 12;
+        let faceCount = 7;
         //let faceCount = number_review_attr
         let stepCount = 360 / faceCount;
         let count = 0;

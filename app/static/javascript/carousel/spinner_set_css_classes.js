@@ -1,4 +1,5 @@
 function spinner_set_css_classes(number_of_review_attributes) {
+    console.log('spinner_set_css_classes: ' + number_of_review_attributes)
     carousel_position = 0
     //console.log('set spinner classes for: ' + number_of_review_attributes + " attributes")
     //icon_list = model_formats['icon_list'].sort()

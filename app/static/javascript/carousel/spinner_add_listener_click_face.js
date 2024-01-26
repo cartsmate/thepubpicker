@@ -1,13 +1,7 @@
 function spinner_add_listener_click_face() {
     console.log('spinner add listener FACE CLICK added')
-//    model_format = model_formats['icon_list'].sort()
-//    for (field in model_format) {
     for (const [key, value] of Object.entries(review)) {
         if (value.quick_filter == 'yes') {
-//        var marker = model_format[field]
-//        if (marker != 'nofeature') {
-//            var marker_id = model_format[field] + "_carousel"
-//            document.getElementById(marker_id).addEventListener('click', (function (marker) {
             var marker = value.name
             document.getElementById(value.name + "_carousel").addEventListener('click', (function (marker) {
                 return function () {
@@ -16,44 +10,14 @@ function spinner_add_listener_click_face() {
                     if (document.getElementById(marker + '_carousel').style.opacity == '1') {
                         if (document.getElementById(marker + "_filter").checked == true){
                             console.log('already TRUE - blank out')
-                            //icon_list = model_formats['icon_list'].sort()
                             document.getElementById(marker + "_filter").checked = false;
                             document.getElementById(marker + "_word").style.color = "black"
                             current_carousel = document.getElementById(marker + "_carousel")
                             current_carousel.classList.remove('carousel_on')
                             current_carousel.classList.add('carousel_off')
-                            //for (i=0; i<model_formats['icon_list'].length; i++) {
-                            /*
-                            for (i=0; i<icon_list.length; i++) {
-                                if (icon_list[i] != 'nofeature') {
-                                    document.getElementById(icon_list[i] + "_filter").checked = false;
-                                    document.getElementById(icon_list[i] + "_word").style.color = "black"
-                                    current_carousel = document.getElementById(marker + "_carousel")
-                                    current_carousel.classList.remove('carousel_on')
-                                    current_carousel.classList.add('carousel_off')
-                                }
-                            }
-                            */
                             update_results()
                         } else {
-                            console.log(marker)
                             console.log(marker + ': was blank - make HIGHLIGHT')
-                            /*
-                            for (i=0; i<model_formats['icon_list'].length; i++) {
-                            //console.log(model_formats['icon_list'][i])
-                                if (model_formats['icon_list'][i] != 'nofeature') {
-                                    //console.log(model_formats['icon_list'][i])
-                                    document.getElementById(model_formats['icon_list'][i] + "_filter").checked = false;
-                                    document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "black"
-
-                                    //document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
-
-                                    temp_carousel = document.getElementById(model_formats['icon_list'][i] + "_carousel")
-                                    temp_carousel.classList.remove('carousel_on')
-                                    temp_carousel.classList.add('carousel_off')
-                                }
-                            }
-                            */
                             for (const [key, value] of Object.entries(review)) {
                                 if (value.quick_filter == 'yes') {
                                     document.getElementById(value.name + "_filter").checked = false;
@@ -71,7 +35,6 @@ function spinner_add_listener_click_face() {
                             update_results()
                         }
                     }
-
                 }
             })(marker))
         }

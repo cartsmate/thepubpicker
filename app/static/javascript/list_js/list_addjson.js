@@ -1,7 +1,8 @@
 function list_addjson(visible) {
     console.log('list_addjson')
     json_list = []
-    i=0
+    json_list.push({target: 0, visible: true, searchable: false, orderable: false})
+    i=1
     for (const [key, value] of Object.entries(pub_obj)) {
         for (const [k, v] of Object.entries(value)) {
             if (v.table_visible == 'true') {
