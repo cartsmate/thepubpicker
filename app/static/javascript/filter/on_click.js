@@ -18,7 +18,7 @@ function update_results_final() {
     map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
     display_results('block')
 }
-function update_results(central_obj) {
+function update_results() {
     console.log('update result')
 
     filtered_pubs = filter_all_data()
@@ -50,6 +50,7 @@ function display_results(display) {
 }
 function on_click_feature() {
     console.log('USER INPUT - on click feature')
+
     for (const [key, value] of Object.entries(review)) {
         if (value.quick_filter == 'yes') {
             if (document.getElementById(value.name + "_filter").checked == true) {
@@ -94,13 +95,21 @@ function on_click_feature() {
             }
         }
     }
-    update_results()
+    if (document.getElementById('search-input-navbar').value != '') {
+        update_results_search()
+    } else {
+        update_results()
+    }
 }
 function on_click_station() {
     console.log('USER INPUT - on click station')
 //    filtered_pubs = filter_all_data(pub)
 //    populate_all_filters(filtered_pubs)
-    update_results('block')
+    if (document.getElementById('search-input-navbar').value != '') {
+        update_results_search()
+    } else {
+        update_results()
+    }
 }
 
 function on_click_direction() {
@@ -108,6 +117,10 @@ function on_click_direction() {
 
 //    filtered_pubs = filter_all_data(pub)
 //    populate_all_filters(filtered_pubs)
-    update_results('block')
+    if (document.getElementById('search-input-navbar').value != '') {
+        update_results_search()
+    } else {
+        update_results()
+    }
 
 }

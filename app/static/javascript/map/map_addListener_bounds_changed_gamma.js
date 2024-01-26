@@ -29,7 +29,9 @@ function map_addListener_bounds_changed_gamma(map) {
         }
         mapped_pubs = pubs_to_show
         populate_header()
+        document.getElementById('template_list').style.display = 'none'
         list_setup_beta()
+        document.getElementById('template_list').style.display = 'block'
             /*
             searchBox.setBounds(map.getBounds());
             pubs_reviews = filter_all_data(pubs)
