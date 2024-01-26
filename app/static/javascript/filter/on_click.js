@@ -1,7 +1,26 @@
 //const delay = ms => new Promise(res => setTimeout(res, ms));
-
-function update_results() {
+function update_results_search(central_obj) {
+    console.log('update result search')
+    for (i=0; i < filtered_pubs.length; i++) {
+        lat_diff = Math.abs(filtered_pubs[i]['detail_latitude'] - central_obj.lat)
+        lng_diff = Math.abs(filtered_pubs[i]['detail_longitude'] - central_obj.lng)
+        tot_diff = lat_diff + lng_diff
+        filtered_pubs[i]['distance'] = tot_diff
+    }
+    update_results_final()
+}
+function update_results_final() {
+    filtered_pubs = filtered_pubs.sort((a, b) => {
+        if (a.distance < b.distance) {
+            return -1;
+        }
+    });
+    map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
+    display_results('block')
+}
+function update_results(central_obj) {
     console.log('update result')
+
     filtered_pubs = filter_all_data()
     populate_all_filters(filtered_pubs)
 
@@ -21,14 +40,8 @@ function update_results() {
         tot_diff = lat_diff + lng_diff
         filtered_pubs[i]['distance'] = tot_diff
     }
-    filtered_pubs = filtered_pubs.sort((a, b) => {
-        if (a.distance < b.distance) {
-            return -1;
-        }
-    });
-    map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
+    update_results_final()
 
-    display_results('block')
 }
 function display_results(display) {
     document.getElementById('template_map').style.display = display

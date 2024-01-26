@@ -3,7 +3,7 @@ function map_addListener_bounds_changed_gamma(map) {
 
     google.maps.event.addListener(map, 'bounds_changed', function() {
         console.log('map bounds are changed GAMMA')
-        clearOverlays()
+        //clearOverlays()
         bounds = map.getBounds();
         let ne = bounds.getNorthEast(); // Coords of the northeast corner
         let sw = bounds.getSouthWest(); // Coords of the southwest corner

@@ -22,6 +22,7 @@
         <div class="_carousel" id="test_carousel" style="margin-top: 0px; padding:0px;" >
             {% for key, value in review.items() %}
                 {% if value.quick_filter == "yes" %}
+                    <script>console.log('spinner face added for: ' + '{{value.name}}')</script>
                     <div class="face carousel_off" id="{{value.name}}_carousel" style="margin-top: 0px; padding:0px;" >
                         <div>
                             <img class="icon_style" id="{{value.name}}_icon" src="/static/icons/features/{{value.name}}.png">
