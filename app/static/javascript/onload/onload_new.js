@@ -4,8 +4,8 @@ function onload_new() {
     filtered_pubs = pub
     if (isTouchDevice()) {
         console.log('TOUCH SCREEN device in operation')
-        document.getElementById('forwards').style.display = 'none'
-        document.getElementById('rewards').style.display = 'none'
+//        document.getElementById('forwards').style.display = 'none'
+//        document.getElementById('rewards').style.display = 'none'
         console.log('inside IS TOUCH')
         spinner_add_listener_swipe()
     } else {
