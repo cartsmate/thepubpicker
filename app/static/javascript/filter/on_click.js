@@ -10,7 +10,18 @@ function update_results_search(central_obj) {
     update_results_final()
 }
 function update_results_final() {
-    if (filtered_pubs.length != pub.length) {
+    console.log('update_results_final')
+    populate_header()
+    if (filtered_pubs.length == pub.length) {
+        console.log('filtered pub: ' + filtered_pubs.length + " is same as pub: " + pub.length)
+        if ((document.getElementById('search-input-navbar').value = '') || (document.getElementById('search-input-navbar').value = 'Search')) {
+            console.log('search box content is empty: ' + document.getElementById('search-input-navbar').value)
+            display_results('none')
+        } else {
+            console.log('search box content has content: ' + document.getElementById('search-input-navbar').value)
+            display_results('block')
+        }
+    } else {
         console.log('filtered pub: ' + filtered_pubs.length + " is less than pub: " + pub.length)
         filtered_pubs = filtered_pubs.sort((a, b) => {
             if (a.distance < b.distance) {
@@ -19,10 +30,6 @@ function update_results_final() {
         });
         map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
         display_results('block')
-
-    } else {
-        console.log('filtered pub: ' + filtered_pubs.length + " is same as pub: " + pub.length)
-        display_results('none')
     }
 
 }
