@@ -7,7 +7,7 @@ function onload_new() {
 //        document.getElementById('forwards').style.display = 'none'
 //        document.getElementById('rewards').style.display = 'none'
         console.log('inside IS TOUCH')
-        spinner_add_listener_swipe()
+        //spinner_add_listener_swipe()
     } else {
         console.log('NO-TOUCH screen device in operation')
     }
@@ -22,7 +22,7 @@ function onload_new() {
 
     number_review_attr = get_no_reviews()
     spinner_set_css_classes(number_review_attr)
-//    spinner_add_listener_swipe()
+    spinner_add_listener_swipe()
     spinner_add_listener_click_btn(number_review_attr)
     spinner_add_listener_click_face()
 
