@@ -15,10 +15,6 @@
     font-weight: bold;
     color: white;
 }
-.flat_face {
-    background-color: white;
-    color: black;
-}
 .flat_face:hover {
     background-color: #808000;
     color: white;
@@ -28,7 +24,7 @@
 <div style="display:flex; margin-left: 10px; margin-right: 10px;">
     {% for key, value in review.items() %}
         {% if value.quick_filter == "yes" %}
-            <div class="flat_face" id="{{value.name}}_carousel" style="margin: 2.5px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
+            <div class="flat_face carousel_off" id="{{value.name}}_carousel" style="margin: 2.5px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
                 <img id="{{value.name}}_icon" style="padding: 5px;" height=30 width=30 src="/static/icons/features/{{value.name}}.png">
                 <div>
                     <p class="word_face" id="{{value.name}}_word" style="font-size: 8px; font-weight: bold;"><span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
