@@ -10,13 +10,21 @@ function update_results_search(central_obj) {
     update_results_final()
 }
 function update_results_final() {
-    filtered_pubs = filtered_pubs.sort((a, b) => {
-        if (a.distance < b.distance) {
-            return -1;
-        }
-    });
-    map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
-    display_results('block')
+    if (filtered_pubs.length != pub.length) {
+        console.log('filtered pub: ' + filtered_pubs.length + " is less than pub: " + pub.length)
+        filtered_pubs = filtered_pubs.sort((a, b) => {
+            if (a.distance < b.distance) {
+                return -1;
+            }
+        });
+        map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
+        display_results('block')
+
+    } else {
+        console.log('filtered pub: ' + filtered_pubs.length + " is same as pub: " + pub.length)
+        display_results('none')
+    }
+
 }
 function update_results() {
     console.log('update result')
