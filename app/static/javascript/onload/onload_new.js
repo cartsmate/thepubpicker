@@ -21,9 +21,10 @@ function onload_new() {
     pub_filtered = setup_filters_populate()
 
     number_review_attr = get_no_reviews()
-    spinner_set_css_classes(number_review_attr)
-    spinner_add_listener_swipe()
-    spinner_add_listener_click_btn(number_review_attr)
+    //spinner_set_css_classes_flat(number_review_attr)
+    //spinner_set_css_classes(number_review_attr)
+    //spinner_add_listener_swipe()
+    //spinner_add_listener_click_btn(number_review_attr)
     spinner_add_listener_click_face()
 
     populate_summary(daily_id)

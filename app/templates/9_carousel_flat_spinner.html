@@ -5,7 +5,7 @@
     color: white;
     padding: 0px;
     margin-top: 5px;
-    width: 200px;
+    width: 300px;
 }
 .heading_title2 {
     font-family: Verdana, sans-serif;
@@ -15,22 +15,28 @@
     font-weight: bold;
     color: white;
 }
+.flat_face {
+    background-color: white;
+    color: black;
+}
+.flat_face:hover {
+    background-color: #808000;
+    color: white;
+}
 </style>
 <div class="heading2"><div class="heading_title2">Quick Filters</div></div>
-<div id="template_spinner" style="margin-top: 0px; padding:0px;" >
+<div style="display:flex; margin-left: 10px; margin-right: 10px;">
     {% for key, value in review.items() %}
         {% if value.quick_filter == "yes" %}
-            <div class="face carousel_off" id="{{value.name}}_flat" style="margin-top: 0px; padding:0px;" >
+            <div class="flat_face" id="{{value.name}}_carousel" style="margin: 2.5px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
+                <img id="{{value.name}}_icon" style="padding: 5px;" height=30 width=30 src="/static/icons/features/{{value.name}}.png">
                 <div>
-                    <img class="icon_style" id="{{value.name}}_icon" src="/static/icons/features/{{value.name}}.png">
-                    <div class="icon_word" id="{{value.name}}_word">
-                        <p>
-                            <span>{{value.alias}}</span>
-                            <span>{{value.alias1}}</span>
-                        </p>
-                    </div>
+                    <p class="word_face" id="{{value.name}}_word" style="font-size: 8px; font-weight: bold;"><span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
                 </div>
             </div>
         {% endif %}
     {% endfor %}
 </div>
+
+<link rel="stylesheet" href="/static/css/carousel/carousel_spinner.css">
+<script defer type="text/javascript" src="/static/javascript/carousel/spinner_add_listener_click_face.js"></script>
