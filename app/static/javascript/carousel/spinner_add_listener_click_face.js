@@ -17,7 +17,7 @@ function spinner_add_listener_click_face() {
                             current_carousel = document.getElementById(marker + "_carousel")
                             current_carousel.classList.remove('carousel_on')
                             current_carousel.classList.add('carousel_off')
-                            update_results()
+
                         } else {
                             console.log(marker + ': was blank - make HIGHLIGHT')
                             for (const [key, value] of Object.entries(review)) {
@@ -34,8 +34,9 @@ function spinner_add_listener_click_face() {
                             current_carousel = document.getElementById(marker + "_carousel")
                             current_carousel.classList.remove('carousel_off')
                             current_carousel.classList.add('carousel_on')
-                            update_results()
                         }
+                        update_filters()
+                        center_map()
                     }
                 }
             })(marker))

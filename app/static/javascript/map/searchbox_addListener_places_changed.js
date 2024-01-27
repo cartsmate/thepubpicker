@@ -36,10 +36,13 @@ function searchbox_addListener_places_changed(map, searchBox) {
             }
         });
 
-//        map.setCenter({lat:lat1, lng:lng1});
-//        display_results('block')
-        var central_obj = { 'lat': lat1, 'lng': lng1}
-        update_results_search(central_obj)
+        map.setCenter({lat:lat1, lng:lng1});
+        central_obj = map.getCenter()
+        search_string = places
+        console.log('places')
+        console.log(places)
+
+        center_map()
 
 
         /*

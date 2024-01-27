@@ -30,7 +30,7 @@ function marker_add(the_pub, pub_rank) {
         icon: markerImage,
         label: {color: 'white', fontSize: '10px', text: pub_rank.toString()}
     })
-
+    markersArray.push(marker)
     google.maps.event.addListener(marker, 'click', (function (marker) {
             return function () {
                 infowindow.x = the_pub.detail_name;
