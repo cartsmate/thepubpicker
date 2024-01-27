@@ -35,18 +35,7 @@ function map_addListener_bounds_changed_gamma(map) {
             }
         }
         mapped_pubs = pubs_to_show
-        populate_header()
-        document.getElementById('template_list').style.display = 'none'
         list_setup_beta()
-        document.getElementById('template_list').style.display = 'block'
-            /*
-            searchBox.setBounds(map.getBounds());
-            pubs_reviews = filter_all_data(pubs)
-            pubs_sorted = sort_by_distance(pubs_reviews, map)
-            marker_add_bounds_gamma(pubs_sorted, theme)
-            list_setup_beta(pubs_sorted)
-            populate_header(pubs_sorted.length)
-            */
     });
 //    return bounds
 }

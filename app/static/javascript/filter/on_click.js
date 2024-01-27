@@ -63,18 +63,17 @@ function finalise_results() {
     } else if ((search_string != '') && (filtered_pubs.length == pub.length)) {
         console.log('Search string filled - No filters')
         filtered_pubs = filtered_pubs.slice(0,99)
+        populate_header()
         display_results('block')
     } else {
         console.log('Search string filled - Some filters')
+        populate_header()
         display_results('block')
     }
 
 }
 function display_results(display) {
-    console.log('display_results')
-    if (display == 'block') {
-        populate_header()
-    }
+    console.log('display_results: ' + display)
     document.getElementById('template_map').style.display = display
     document.getElementById('template_list').style.display = display
     document.getElementById('template_header').style.display = display
@@ -102,17 +101,12 @@ function on_click_feature() {
 }
 function on_click_station() {
     console.log('USER INPUT - on click station')
-//    filtered_pubs = filter_all_data(pub)
-//    populate_all_filters(filtered_pubs)
     update_filters()
     center_map()
 }
 
 function on_click_direction() {
     console.log('USER INPUT - on click direction COLLECTION')
-
-//    filtered_pubs = filter_all_data(pub)
-//    populate_all_filters(filtered_pubs)
     update_filters()
     center_map()
 
