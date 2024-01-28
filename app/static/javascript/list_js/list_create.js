@@ -1,5 +1,5 @@
 function list_create() {
-    console.log('LIST_CREATE')
+    console.log('-- list_create')
     pubs_to_show = mapped_pubs
     var tbl = document.createElement("table");
     tbl.setAttribute("id", "pub_list");

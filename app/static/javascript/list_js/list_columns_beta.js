@@ -1,5 +1,5 @@
 function list_columns_beta() {
-    console.log('list columns BETA')
+    console.log('-- list_columns_beta')
 
     visible = {}
     for (const [key, value] of Object.entries(pub_obj)) {

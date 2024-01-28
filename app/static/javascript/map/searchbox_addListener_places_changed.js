@@ -22,36 +22,52 @@ function searchbox_addListener_places_changed(map, searchBox) {
         const bounds = new google.maps.LatLngBounds();
 
         //get lat/lng for each place
-        places.forEach((place) => {
-            if (!place.geometry || !place.geometry.location) {
-                console.log("returned place contains no geometry");
-                return
-            }
-            lat1 = place.geometry.location.lat()
-            lng1 = place.geometry.location.lng();
-            if (place.geometry.viewpoint) {
-                bounds.union(place.geometry.viewpoint);
-            } else {
-                bounds.extend(place.geometry.location);
-            }
+//        places.forEach((place) => {
+//            if (!place.geometry || !place.geometry.location) {
+//                console.log("returned place contains no geometry");
+//                return
+//            }
+//            lat1 = place.geometry.location.lat()
+//            lng1 = place.geometry.location.lng();
+//            if (place.geometry.viewpoint) {
+//                bounds.union(place.geometry.viewpoint);
+//            } else {
+//                bounds.extend(place.geometry.location);
+//            }
+//            var newArray = pub.filter(function (el) {
+//                return el.place == place.place_id
+//            });
+//            console.log(newArray)
+//            if (newArray.length != 0) {
+//                console.log('found place')
+//                console.log(newArray[0]['pub_identity'])
+//                redirect_pub_search(newArray[0]['pub_identity'])
+//            }
+//        });
+        if (!places[0].geometry || !places[0].geometry.location) {
+            console.log("returned place contains no geometry");
+            return
+        }
+        lat1 = places[0].geometry.location.lat()
+        lng1 = places[0].geometry.location.lng();
+        if (places[0].geometry.viewpoint) {
+            bounds.union(places[0].geometry.viewpoint);
+        } else {
+            bounds.extend(places[0].geometry.location);
+        }
+        var newArray = pub.filter(function (el) {
+            return el.place == places[0].place_id
         });
-
-        map.setCenter({lat:lat1, lng:lng1});
-        central_obj = map.getCenter()
-        search_string = places
-        console.log('places')
-        console.log(places)
-
-        center_map()
-
-
-        /*
-        console.log('listener center')
-        console.log('lat: ' + lat1, 'lng: ' + lng1)
-        map.setZoom(15)
-
-        update_results()
-        */
-
+        console.log(newArray)
+        if (newArray.length != 0) {
+            console.log('found place')
+            console.log(newArray[0]['pub_identity'])
+            redirect_pub_search(newArray[0]['pub_identity'])
+        } else {
+            map.setCenter({lat:lat1, lng:lng1});
+            central_obj = map.getCenter()
+            search_string = places
+            center_map()
+        }
     });
 }

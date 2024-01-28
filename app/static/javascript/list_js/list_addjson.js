@@ -1,5 +1,5 @@
 function list_addjson(visible) {
-    console.log('list_addjson')
+    console.log('-- list_addjson')
     json_list = []
     //json_list.push({target: 0, visible: true, searchable: false, orderable: false})
     i=0

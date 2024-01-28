@@ -1,5 +1,5 @@
 function list_setup_beta() {
-    console.log('list setup')
+    console.log('LIST SETUP BETA')
 
     list_delete()
 
