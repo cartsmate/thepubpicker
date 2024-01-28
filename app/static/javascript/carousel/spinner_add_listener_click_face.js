@@ -4,7 +4,7 @@ function spinner_add_listener_click_face() {
         if (value.quick_filter == 'yes') {
 
             var marker = value.name
-            console.log('spinner click listener added for : ' + marker)
+            //console.log('spinner click listener added for : ' + marker)
             document.getElementById(value.name + "_carousel").addEventListener('click', (function (marker) {
                 return function () {
                     console.log('carousel spinner listener triggered')

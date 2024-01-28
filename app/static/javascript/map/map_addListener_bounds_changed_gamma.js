@@ -10,6 +10,7 @@ function map_addListener_bounds_changed_gamma(map) {
 
     google.maps.event.addListener(map, 'bounds_changed', function() {
         console.log('map bounds are changed GAMMA')
+
         clearOverlays()
         bounds = map.getBounds();
         let ne = bounds.getNorthEast(); // Coords of the northeast corner
@@ -28,9 +29,10 @@ function map_addListener_bounds_changed_gamma(map) {
         for (i=0; i<filtered_pubs.length; i++) {
             if (filtered_pubs[i]['detail_latitude'] > south && filtered_pubs[i]['detail_latitude'] < north && filtered_pubs[i]['detail_longitude'] > west && filtered_pubs[i]['detail_longitude'] < east) {
                 marker_in_bounds ++
-                //filtered_pubs[i]['ordering'] = i
+                filtered_pubs[i]['ordering'] = i
                 pubs_to_show.push(filtered_pubs[i])
-                marker_add(filtered_pubs[i], i)
+//                marker_add(filtered_pubs[i], i)
+                marker_add(filtered_pubs[i])
 
             }
         }

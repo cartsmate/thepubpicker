@@ -12,22 +12,25 @@ function list_create() {
     var tblBody = document.createElement("tbody");
     var row = document.createElement("tr");
 
-    const heading_0 = document.createElement("td")
-    heading_0.width = "30px"
-    heading_0.style.margin = "0px"
-    heading_0.style.padding = "0px"
-    heading_0.style.height = "40px"
-    heading_0.style.fontWeight = "bold"
-    heading_0.style.verticalAlign = "middle"
-    const headingText_0 = document.createTextNode('#')
-    heading_0.appendChild(headingText_0)
-    row.appendChild(heading_0);
+//    const heading_0 = document.createElement("td")
+//    heading_0.width = "30px"
+//    heading_0.style.margin = "0px"
+//    heading_0.style.padding = "0px"
+//    heading_0.style.height = "40px"
+//    heading_0.style.fontWeight = "bold"
+//    heading_0.style.verticalAlign = "middle"
+//    const headingText_0 = document.createTextNode('#')
+//    heading_0.appendChild(headingText_0)
+//    row.appendChild(heading_0);
     for (const [key, value] of Object.entries(pub_obj)) {
         for (const [k, v] of Object.entries(value)) {
+            //console.log(v.name)
             if (v.table_visible == 'true') {
                 const heading = document.createElement("td");
-                if (v.name == 'rank') {
-                    heading.width = "45px"
+                if (v.name == 'ordering') {
+                    heading.width = "30px"
+                } else if (v.name == 'rank') {
+                    heading.width = "50px"
                 } else if (v.name == 'detail_name') {
                     heading.width = "145px"
                 } else {
@@ -50,17 +53,17 @@ function list_create() {
 
     for (let i = 0; i < pubs_to_show.length; i++) {
         var row = document.createElement("tr");
-        const cell_0 = document.createElement("td");
-        cell_0.style.margin = "0px"
-        cell_0.style.padding = "0px"
-        cell_0.style.height = "40px"
-        cell_0.style.color = "#0d6efd"
-        cell_0.style.verticalAlign = "middle"
-        const href = document.createElement("a");
-        href.setAttribute("style", "text-decoration: none; color: #0d6efd;")
-        const cellText_0 = document.createTextNode(i)
-        cell_0.appendChild(cellText_0)
-        row.appendChild(cell_0);
+//        const cell_0 = document.createElement("td");
+//        cell_0.style.margin = "0px"
+//        cell_0.style.padding = "0px"
+//        cell_0.style.height = "40px"
+//        cell_0.style.color = "#0d6efd"
+//        cell_0.style.verticalAlign = "middle"
+//        const href = document.createElement("a");
+//        href.setAttribute("style", "text-decoration: none; color: #0d6efd;")
+//        const cellText_0 = document.createTextNode(i)
+//        cell_0.appendChild(cellText_0)
+//        row.appendChild(cell_0);
         for (const [key, value] of Object.entries(pub_obj)) {
             for (const [k, v] of Object.entries(value)) {
                 if (v.table_visible == 'true') {

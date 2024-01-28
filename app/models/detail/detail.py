@@ -21,7 +21,7 @@ class Detail:
     def __init__(self, pub_identity=PubIdentity(), station_identity=StationIdentity(), detail_name=DetailName(),
                  address=Address(), category=Category(), colour=Colour(), detail_deletion=DetailDeletion(),
                  detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(),
-                 ordering=Ordering(), place=Place(), rank=Rank(), website=Website(), url=Url()):
+                 place=Place(), rank=Rank(), website=Website(), url=Url()):
         self.pub_identity = pub_identity
         self.station_identity = station_identity
         self.detail_name = detail_name
@@ -32,7 +32,6 @@ class Detail:
         self.detail_latitude = detail_latitude
         self.detail_longitude = detail_longitude
         self.extra = extra
-        # self.ordering = ordering
         self.place = place
         self.rank = rank
         self.website = website

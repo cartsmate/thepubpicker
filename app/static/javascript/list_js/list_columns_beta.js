@@ -9,7 +9,7 @@ function list_columns_beta() {
             }
         }
     }
-    visible['order'] = true
+    visible['ordering'] = true
     visible['station_name'] = true
     visible['rank'] = true
     visible['detail_name'] = true
