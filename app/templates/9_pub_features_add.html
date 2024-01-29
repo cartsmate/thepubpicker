@@ -32,40 +32,34 @@
     width: 30px;
 }
 </style>
+
 <script>console.log('CREATING REVIEW FIELDS')</script>
 <div id="home_features" style="display:flex; flex-wrap: wrap; ">
-{% for k, field in review.__dict__.items() %}
-    {% if field.name != "pub_identity" %}
-        {% if field.name in model_formats['icon_list'] %}
-            <div style="opacity: 0.5; text-align:center; margin:0px; padding:0px;" id="{{field.name}}_col">
-                {% if name == "readonly" %}
-                    <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display: none;">
-                {% else %}
-                    <input type="checkbox" id="{{field.name}}_check" name="{{field.name}}_check" style="display: none;" onclick="set_feature_icon_colour('{{field.name}}', '{{model_formats['theme']}}')">
-                {% endif %}
-                <label for="{{field.name}}_check" style="margin:0px; padding:0px" >
-                    <div class="face" id="{{field.name}}_face">
-                        <div>
-                            <img class="icon_style" src="{{ url_for('static', filename='icons/features/' + field.icon ) }}" id="{{field.name}}_img" >
-                            <div class="icon_word" id="{{field.name}}_caption">
-                                <p>
-                                    <span>{{field.alias}}</span>
-                                    <span>{{field.alias1}}</span>
-                                </p>
-                            </div>
-                        </div>
+{% for key, value in review.items() %}
+    {% if value.menu_filter == "yes" %}
+        <div style="opacity: 0.5; text-align:center; margin:0px; padding:0px;" id="{{value.name}}_col">
+            {% if name == "readonly" %}
+                <input type="checkbox" id="{{value.name}}_check" name="{{value.name}}_check" style="display: none;">
+            {% else %}
+                <input type="checkbox" id="{{value.name}}_check" name="{{value.name}}_check" style="display: none;" onclick="set_feature_icon_colour('{{value.name}}')">
+            {% endif %}
+            <label for="{{value.name}}_check" style="margin:0px; padding:0px" >
+                <div id="{{value.name}}_face" style="opacity: 1; margin: 1px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
+                    <img height=35 width=35 src="/static/icons/features/{{value.name}}.png" id="{{value.name}}_img" >
+                    <div class="icon_word" id="{{value.name}}_caption">
+                        <span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
                     </div>
-                </label>
-            </div>
-        {% else %}
-            <div style="display: none;" id="{{field.name}}_col">
-                <div>
-                    <label class="col-form-label" for="{{field.name}}_check"></label>
-                    <input class="form-control" type='text' name="{{field.name}}_check" id="{{field.name}}_check">
-                    <div class="caption" id="{{field.name}}_caption" ></div>
                 </div>
+            </label>
+        </div>
+    {% else %}
+        <div style="display: none;" id="{{value.name}}_col">
+            <div>
+                <label class="col-form-label" for="{{value.name}}_check"></label>
+                <input class="form-control" type='text' name="{{value.name}}_check" id="{{value.name}}_check">
+                <div class="caption" id="{{value.name}}_caption" ></div>
             </div>
-        {% endif %}
+        </div>
     {% endif %}
 {% endfor %}
 </div>

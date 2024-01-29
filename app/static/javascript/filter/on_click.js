@@ -78,6 +78,26 @@ function display_results(display) {
     document.getElementById('template_list').style.display = display
     document.getElementById('template_header').style.display = display
 }
+function on_click_event() {
+    console.log('USER INPUT - on click event')
+    for (const [key, value] of Object.entries(review)) {
+        if (value.quick_filter == 'yes') {
+            if (document.getElementById(value.name + "_filter").checked == true) {
+                document.getElementById(value.name + "_word").style.color = "white"
+                current_carousel = document.getElementById(value.name + "_carousel")
+                current_carousel.classList.remove('carousel_off')
+                current_carousel.classList.add('carousel_on')
+            } else {
+                document.getElementById(value.name + "_word").style.color = "black"
+                current_carousel = document.getElementById(value.name + "_carousel")
+                current_carousel.classList.remove('carousel_on')
+                current_carousel.classList.add('carousel_off')
+            }
+        }
+    }
+    update_filters()
+    center_map()
+}
 function on_click_feature() {
     console.log('USER INPUT - on click feature')
     for (const [key, value] of Object.entries(review)) {

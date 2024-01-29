@@ -32,38 +32,38 @@
     }
 </style>
 <script>console.log('CREATING DIRECTION FIELDS')</script>
-{% for k, field in direction.__dict__.items() %}
-    {% if field.name in model_formats['form_visible_list'] %}
-        <div class="form-group row details" id=row_{{field.name}} >
-            <script>console.log('field AGAIN: ' + '{{field.name}}')</script>
+{% for key, value in direction.items() %}
+    {% if name == "readonly" and value.form_visible == "true" %}
+        <div class="form-group row details" id=row_{{value.name}} >
+            <script>console.log('field AGAIN: ' + '{{value.name}}')</script>
             <div class="col col-diary-label" >
-                <label class="item-diary-label" for={{field.name}} >{{alias[field.name]}}</label>
+                <label class="item-diary-label" for={{value.name}} >{{value.alias}}</label>
             </div>
-            <div class="col-diary-item" id=div_{{field.name}} >
-                {% if field.name in model_formats['dropdown_list'] %}
+            <div class="col-diary-item" id=div_{{value.name}} >
+                {% if value.control == 'dropdown' %}
                     {% include "control_dropdown.html" %}
-                {% elif field.name in model_formats['star_list'] %}
+                {% elif value.control == 'star' %}
                     {% include "9_stars.html" %}
-                {% elif field.name in model_formats['slider_list'] %}
+                {% elif value.control == 'slider' %}
                     {% include "control_slider.html" %}
-                {% elif field.name in model_formats['date_list'] %}
+                {% elif value.control == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control item-diary-input" type='textarea' name={{field.name}} id={{field.name}} readonly>
+                    <input class="form-control item-diary-input" type='textarea' name={{value.name}} id={{value.name}} readonly>
                 {% endif %}
-                {% if field.name in model_formats['required_list'] %}
-                    <script>document.getElementById("{{field.name}}").required = true</script>
+                {% if value.required == 'yes' %}
+                    <script>document.getElementById("{{value.name}}").required = true</script>
                 {% endif %}
             </div>
 
         </div>
     {% else %}
-        <div class="form-group row no-show" id=row_{{field.name}}>
+        <div class="form-group row no-show" id=row_{{value.name}}>
             <div class="col">
-                <label class="col-form-label no-show" for={{field.name}}></label>
+                <label class="col-form-label no-show" for={{value.name}}></label>
             </div>
-            <div class="col" id=div_{{field.name}}>
-                <input class="form-control no-show" type='text' name={{field.name}} id={{field.name}}>
+            <div class="col" id=div_{{value.name}}>
+                <input class="form-control no-show" type='text' name={{value.name}} id={{value.name}}>
             </div>
         </div>
     {% endif %}

@@ -1,0 +1,43 @@
+<body id="body" onload="onload_events()" class="page-background" data-color={{color_theme}}>
+    <div class="container-fluid screen-reactor" style="background-color:grey;">
+        <div class="row orange" id="template_title">
+            <div class="col black">
+                {% include "7_section_title_home.html" %}
+            </div>
+        </div>
+        <div class="row orange" id="template_intro">
+            <div class="col black">
+                <p style="margin-bottom: 0px; text-align: center; font-size: 12px; margin: 0px 25px; line-height: 1.0;">
+                    The best place to find your perfect London pub.
+                    <span style="display: block;">Search venues by your preferred location, features or events.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row orange" id="template_search">
+            <div class="col black">
+                {% include "7_section_search_events.html" %}
+            </div>
+        </div>
+        <div class="row orange" id="template_header" style="display: none;">
+            <div class="col black" >
+                {% include "7_section_results_header.html" %}
+            </div>
+        </div>
+        <div class="row orange" id="template_map" style="display: none;">
+            <div class="col black" >
+                <div class="row pink">
+                    {% include "9_map.html" %}
+                </div>
+            </div>
+        </div>
+        <div class="row orange" id="template_list" style="display: none;">
+            <div class="col black" >
+                <div class="row pink">
+                    {% include "7_section_list.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/onload/onload_events.js') }}"></script>

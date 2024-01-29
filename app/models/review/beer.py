@@ -1,9 +1,8 @@
 
-
 class Beer:
     def __init__(self, name="beer", alias="Craft", alias1="Beer", alias2="Craft Beer", required='false',
                  form_visible='false', table_visible='false', value='0', control="check", icon="beer.png",
-                 data_type='str', filter='yes', quick_filter='no'):
+                 data_type='str', menu_filter='yes', quick_filter='no', event_filter='no'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
@@ -15,5 +14,6 @@ class Beer:
         self.control = control
         self.icon = icon
         self.data_type = data_type
-        self.filter = filter
+        self.menu_filter = menu_filter
         self.quick_filter = quick_filter
+        self.event_filter = event_filter

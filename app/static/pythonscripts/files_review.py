@@ -28,18 +28,25 @@ from app.models.review.wine import Wine
 from app.models.review.nofeature import NoFeature
 from app.models.review.review_identity import ReviewIdentity
 from app.models.detail.pub_identity import PubIdentity
-from app.static.pythonscripts.controls_list import ControlsList
+# from app.static.pythonscripts.controls_list import ControlsList
 from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
-model_formats = ControlsList().go_get_control_list()
+# model_formats = ControlsList().go_get_control_list()
 env_vars = Configurations().get_config2()
 
 
 class FilesReview:
+
+    def go_get_1_review(self, pub_id):
+        print('Go get 1 review')
+        df_reviews = FilesReview().go_get_reviews_csv()
+        df_rev_no_dupes = df_reviews.drop_duplicates(subset='pub_identity', keep="last")
+        df_1_review = df_rev_no_dupes.loc[df_rev_no_dupes['pub_identity'] == pub_id]
+        return df_1_review
 
     def new_review(self, rev_id, pub_id):
         # p = [Review().__dict__[keyitem].value for keyitem in Review().__dict__.keys()]
@@ -102,17 +109,18 @@ class FilesReview:
         print('UPDATE edit review')
         for review in list(Review().__dict__.keys()):
             print(review)
-            if review != 'pub_identity':
-                if review in model_formats['icon_list']:
-                    print('if')
-                    print(review + ' : ' + str(request.form.get(review + "_check")))
-                    df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = '1' \
-                        if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == 'true')\
-                        else '0'
-                else:
-                    print('else')
-                    print(review + ' : ' + str(request.form.get(review + "_check")))
-                    df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = request.form[review + "_check"]
+            if review.filter == 'yes':
+            # if review != 'pub_identity':
+            #     if review in model_formats['icon_list']:
+                print('if')
+                print(review + ' : ' + str(request.form.get(review + "_check")))
+                df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = '1' \
+                    if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == 'true')\
+                    else '0'
+            else:
+                print('else')
+                print(review + ' : ' + str(request.form.get(review + "_check")))
+                df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = request.form[review + "_check"]
         print('df_reviews')
         df2 = df_reviews.loc[df_reviews['pub_identity'] == pub_id]
         print(df2.transpose())

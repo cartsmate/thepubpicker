@@ -18,7 +18,7 @@ function onload_new() {
     the_map.classList.add('map_on_home')
 
     setup_filters()
-    pub_filtered = setup_filters_populate()
+    pub_filtered = setup_filters_populate(pub)
 
     number_review_attr = get_no_reviews()
     //spinner_set_css_classes_flat(number_review_attr)
@@ -36,8 +36,8 @@ function onload_new() {
         console.log('on-load: filters CLEAR')
     } else {
         console.log('on-load: filters PRE-SET')
-        list_setup_beta(pub_filtered)
-        populate_header(pub_filtered.length)
+        list_setup_beta()
+        populate_header()
         document.getElementById('template_map').style.display = "block"
         document.getElementById('template_list').style.display = "block"
         document.getElementById('template_header').style.display = "block"

@@ -16,7 +16,7 @@ from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.files_detail import FilesDetail
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.dataframes import Dataframes
-from app.static.pythonscripts.controls_list import ControlsList
+# from app.static.pythonscripts.controls_list import ControlsList
 from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
@@ -30,7 +30,7 @@ def add():
     env_vars = Configurations().get_config2()
 
     # # # GET MODEL DISPLAY FORMATS
-    model_formats = ControlsList().go_get_control_list()
+    # model_formats = ControlsList().go_get_control_list()
 
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()

@@ -11,7 +11,7 @@ from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.csv_single_feature import CsvFeature
 from app.static.pythonscripts.s3 import S3
 from app.static.pythonscripts.objects import Objects
-from app.static.pythonscripts.controls_list import ControlsList
+# from app.static.pythonscripts.controls_list import ControlsList
 from app.static.pythonscripts.compress import Compress
 from app.models.review.review import Review
 
@@ -28,7 +28,7 @@ def search():
     env_vars = Configurations().get_config2()
 
     # # # GET MODEL DISPLAY FORMATS
-    model_formats = ControlsList().go_get_control_list()
+    # model_formats = ControlsList().go_get_control_list()
 
     # # # GET DAILY PUB
     df_details = Csv().go_get_details_daily()
@@ -73,7 +73,7 @@ def search():
                            pub=pub_json,
                            # daily_id=daily_id,
                            env_vars=env_vars,
-                           model_formats=model_formats,
+                           # model_formats=model_formats,
                            alias=alias,
                            visible=visible,
                            feature=feature,

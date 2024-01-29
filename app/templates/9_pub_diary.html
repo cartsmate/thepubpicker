@@ -32,17 +32,17 @@
     }
 </style>
 <script>console.log('CREATING DIARY FIELDS')</script>
-{% for key, field in diary.__dict__.items() %}
-    {% if key != "pub_identity" %}
-        <div class="form-group row details" id="row_{{field.name}}">
+{% for key, value in diary.items() %}
+    {% if value.form_visible == 'true' %}
+        <div class="form-group row details" id="row_{{value.name}}">
             <div class="col col-diary-label" >
-                <label class="col-form-label item-diary-label" for="{{key}}">{{field.alias}}</label>
+                <label class="col-form-label item-diary-label" for="{{value.name}}">{{value.alias}}</label>
             </div>
-            <div class="col col-diary-item" id="div_{{key}}" >
+            <div class="col col-diary-item" id="div_{{value.name}}" >
                 {% if name == "readonly" %}
-                    <input class="form-control item-diary-input" type='textarea' name="{{key}}" id="{{key}}" readonly>
+                    <input class="form-control item-diary-input" type='textarea' name="{{value.name}}" id="{{value.name}}" readonly>
                 {% else %}
-                    <input class="form-control item-diary-input" type='textarea' name="{{key}}" id="{{key}}" >
+                    <input class="form-control item-diary-input" type='textarea' name="{{value.name}}" id="{{value.name}}" >
                 {% endif %}
             </div>
         </div>

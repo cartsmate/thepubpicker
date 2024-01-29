@@ -4,6 +4,7 @@ function setup_filters() {
     toggle_direction()
     toggle_station()
     toggle_features()
+    toggle_events()
     //toggle_diary()
     toggle_reset()
 }

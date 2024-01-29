@@ -21,6 +21,22 @@ function map_load_add() {
 
     //map_init_none()
 }
+function map_load_gamma_events() {
+    console.log('map load GAMMA events')
+    var js = document.createElement("script");
+    js.type = "text/javascript";
+    console.log('internet connection status: ' + window.navigator.onLine)
+    if (window.navigator.onLine == true) {
+        console.log('on-line')
+        js.setAttribute("defer", "defer");
+        js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=map_init_gamma_events'
+        document.head.appendChild(js)
+    } else {
+        console.log('off-line')
+        console.log('no map')
+        map_init_none()
+    }
+}
 function map_load_gamma() {
     console.log('map load GAMMA')
     var js = document.createElement("script");

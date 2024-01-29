@@ -1,9 +1,39 @@
 function populate_diary(show_pub){
     console.log('POPULATE_DIARY')
-        for (i=0; i < diary_list.length; i++) {
-
-        document.getElementById(diary_list[i]).value = show_pub[0][diary_list[i]];
+    console.log('show_pub[0]')
+    console.log(show_pub[0])
+    console.log('events')
+    console.log(events)
+    for (var [key, value] of Object.entries(diary)) {
+        for (i=0; i<events.length; i++) {
+            //console.log(events[i]['event_day'])
+//            var whole-name = value.name
+//            var first_char = whole-name.charAt(0)
+//            console.log(value.name.charAt(0).toUpperCase() + value.name.substring(1,3))
+//            console.log(events[0]['event_day'])
+            if (value.name.charAt(0).toUpperCase() + value.name.substring(1,3) == events[i]['event_day']) {
+                console.log('Diary entry: ' + value.name)
+                console.log('Event: ' + events[i]['event_type'] + " @ " + events[i]['event_detail'])
+                document.getElementById(value.name).value = events[i]['event_type'] + " - " + events[i]['event_detail']
+                break;
+            }
+//            for (var [key, value] of Object.entries(event)) {
+//                console.log(events[i][value.name])
+//            }
+        }
     }
+//        document.getElementById(diary_list[i]).value = show_pub[0][diary_list[i]];
+//    for (i=0; i<events.length; i++) {
+//        console.log(events[i])
+//
+//    }
+
+
+
+//        if (value.name == x.event_day){
+//            document.getElementById(value.name).value = events[value.name];
+//        }
+
 }
 /*
     //console.log(pub)

@@ -32,7 +32,7 @@ def submit():
     print('id from url: ' + pub_id)
     # df_pub = CsvSingle().go_get_1_pub(pub_id)
 
-    df_details_current = Csv().go_get_details()
+    df_details_current = FilesDetail().go_get_details()
     df_detail_current = df_details_current[df_details_current['pub_identity'] == pub_id]
     # print('current DETAIL')
     # print(df_detail_current.transpose())
@@ -42,7 +42,7 @@ def submit():
     # print('current REVIEW')
     # print(df_review_current.transpose())
 
-    df_diarys_current = Csv().go_get_diarys()
+    df_diarys_current = FilesDiary().go_get_diarys()
     df_diary_current = df_diarys_current[df_diarys_current['pub_identity'] == pub_id]
     # print('current DIARY')
     # print(df_diary_current.transpose())

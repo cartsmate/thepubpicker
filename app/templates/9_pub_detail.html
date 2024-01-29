@@ -32,60 +32,60 @@
     }
 </style>
 <script>console.log('CREATING DETAIL FIELDS')</script>
-{% for k, field in detail.__dict__.items() %}
-    {% if name == "readonly" and field.name in model_formats['form_visible_list'] %}
-        <div class="form-group row details" id=row_{{field.name}} >
+{% for key, value in detail.items() %}
+    {% if value.form_visible == "true" %}
+        <div class="form-group row details" id=row_{{value.name}} >
             <div class="col col-diary-label">
-                <label class="col-form-label item-diary-label" for={{field.name}} >{{full_alias[field.name]}}</label>
+                <label class="col-form-label item-diary-label" for={{value.name}} >{{value.alias}}</label>
             </div>
-            <div class="col col-diary-item" align="left" id=div_{{field.name}} >
-                {% if field.name == 'website' %}
-                    <input class="form-control item-diary-input" type='url' name={{field.name}} id={{field.name}} readonly>
-                {% elif field.name in model_formats['dropdown_list'] %}
+            <div class="col col-diary-item" align="left" id=div_{{value.name}} >
+                {% if value.name == 'website' %}
+                    <input class="form-control item-diary-input" type='url' name={{value.name}} id={{value.name}} readonly>
+                {% elif value.control == 'dropdown' %}
                     {% include "control_dropdown.html" %}
-                {% elif field.name in model_formats['star_list'] %}
+                {% elif value.control == 'star' %}
                     {% include "9_stars_add.html" %}
-                {% elif field.name in model_formats['slider_list'] %}
+                {% elif value.control == 'slider' %}
                     {% include "control_slider.html" %}
-                {% elif field.name in model_formats['date_list'] %}
+                {% elif value.control == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control item-diary-input" type='textarea' name={{field.name}} id={{field.name}} readonly>
+                    <input class="form-control item-diary-input" type='textarea' name={{value.name}} id={{value.name}} readonly>
                 {% endif %}
-                {% if field.name in model_formats['required_list'] %}
+                {% if value.required  == 'yes' %}
                     <script>document.getElementById("{{field.name}}").required = true</script>
                 {% endif %}
             </div>
         </div>
-    {% elif name != "readonly" and ((field.name in model_formats['form_visible_list']) or (field.name == 'detail_name') or (field.name == 'extra')) %}
-        <div class="form-group row details" id=row_{{field.name}} >
+    {% elif name != "readonly" and ((value.form_visible == 'yes') or (value.name == 'detail_name') or (value.name == 'extra')) %}
+        <div class="form-group row details" id=row_{{value.name}} >
             <div class="col details-label" >
-                <label class="col-form-label label" for={{field.name}} >{{alias[field.name]}}</label>
+                <label class="col-form-label label" for={{value.name}} >{{value.alias}}</label>
             </div>
-            <div class="col details-data" id=div_{{field.name}} >
-                {% if field.name in model_formats['dropdown_list'] %}
+            <div class="col details-data" id=div_{{value.name}} >
+                {% if value.control == 'dropdown' %}
                     {% include "control_dropdown.html" %}
-                {% elif field.name in model_formats['star_list'] %}
+                {% elif value.control == 'star' %}
                     {% include "9_stars.html" %}
-                {% elif field.name in model_formats['slider_list'] %}
+                {% elif value.name == 'slider' %}
                     {% include "control_slider.html" %}
-                {% elif field.name in model_formats['date_list'] %}
+                {% elif value.name == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control details-input" type='textarea' name={{field.name}} id={{field.name}}>
+                    <input class="form-control details-input" type='textarea' name={{value.name}} id={{value.name}}>
                 {% endif %}
-                {% if field.name in model_formats['required_list'] %}
-                    <script>document.getElementById("{{field.name}}").required = true</script>
+                {% if value.required == 'yes' %}
+                    <script>document.getElementById("{{value.name}}").required = true</script>
                 {% endif %}
             </div>
         </div>
     {% else %}
-        <div class="form-group row no-show" id=row_{{field.name}}>
+        <div class="form-group row no-show" id=row_{{value.name}}>
             <div class="col">
-                <label class="col-form-label no-show" for={{field.name}}></label>
+                <label class="col-form-label no-show" for={{value.name}}></label>
             </div>
-            <div class="col" id=div_{{field.name}}>
-                <input class="form-control no-show" type='text' name={{field.name}} id={{field.name}}>
+            <div class="col" id=div_{{value.name}}>
+                <input class="form-control no-show" type='text' name={{value.name}} id={{value.name}}>
             </div>
         </div>
     {% endif %}

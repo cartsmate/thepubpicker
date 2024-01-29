@@ -1,5 +1,5 @@
 function filter_by_station(data) {
-    console.log('---- station: ' + data.length)
+    console.log('---- station-in: ' + data.length)
     //console.log('data in: ' + data.length)
     ticked_list = []
 
@@ -23,5 +23,6 @@ function filter_by_station(data) {
         ticked_data = data
     }
     //console.log(ticked_data)
+    console.log('---- station-out: ' + ticked_data.length)
     return ticked_data
 }

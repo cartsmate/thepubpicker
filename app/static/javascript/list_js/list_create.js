@@ -31,11 +31,16 @@ function list_create() {
                     heading.width = "30px"
                 } else if (v.name == 'rank') {
                     heading.width = "50px"
+                } else if (v.name == 'detail_day') {
+                    heading.width = "40px"
                 } else if (v.name == 'detail_name') {
                     heading.width = "145px"
-                } else {
+                } else if (v.name == 'station_name') {
                     heading.width = "110px"
                 }
+//                else {
+//                    heading.width = "110px"
+//                }
                 heading.style.margin = "0px"
                 heading.style.padding = "0px"
                 heading.style.height = "40px"

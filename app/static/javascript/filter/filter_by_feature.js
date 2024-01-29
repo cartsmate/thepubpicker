@@ -1,8 +1,8 @@
 function filter_by_feature(filtered_data) {
-    console.log('---- feature: ' + filtered_data.length)
+    console.log('---- feature-in: ' + filtered_data.length)
 
     for (const [key, value] of Object.entries(review)) {
-        if (value.filter == 'yes') {
+        if (value.menu_filter == 'yes' & value.event_filter == 'no') {
             //console.log('feature: ' + value.name)
             //console.log(document.getElementById(value.name + "_filter").checked)
             if (document.getElementById(value.name + "_filter").checked) {
@@ -17,5 +17,6 @@ function filter_by_feature(filtered_data) {
         }
 
     }
+    console.log('---- feature-out: ' + filtered_data.length)
     return filtered_data
 }

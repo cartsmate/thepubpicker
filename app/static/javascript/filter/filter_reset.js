@@ -28,7 +28,7 @@ function filter_reset() {
 
 //    for (i=0; i<model_formats['icon_list'].length; i++) {
     for (const [key, value] of Object.entries(review)) {
-        if (value.filter == 'yes') {
+        if (value.menu_filter == 'yes') {
             var filtered_data = all_data.filter(function(pub) {
                 return pub[value.name] == 'true'
             })

@@ -1,0 +1,39 @@
+<style>
+
+.heading2 {
+    background-color: var(--theme);
+    color: white;
+    padding: 0px;
+    margin-top: 5px;
+    width: 300px;
+}
+.heading_title2 {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+.flat_face:hover {
+    background-color: #808000;
+    color: white;
+}
+</style>
+<div class="heading2"><div class="heading_title2">Quick Filters</div></div>
+<div style="display:flex; margin-left: 10px; margin-right: 10px;">
+    {% for key, value in review.items() %}
+        {% if value.event_filter == "yes" %}
+            <div class="carousel_off" id="{{value.name}}_carousel" style="margin: 1px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
+                <input type="checkbox" id="{{value.name}}_event">
+                <img id="{{value.name}}_icon" style="margin-top: 5px; padding: 1px;" height=35 width=35 src="/static/icons/features/{{value.name}}.png">
+                <div>
+                    <p class="word_face" id="{{value.name}}_word" style="margin-top: 2.5px; font-size: 9px; font-weight: bold;"><span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<link rel="stylesheet" href="/static/css/carousel/carousel_spinner.css">
+<script defer type="text/javascript" src="/static/javascript/carousel/spinner_add_listener_click_face.js"></script>

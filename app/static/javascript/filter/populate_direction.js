@@ -1,5 +1,5 @@
 function populate_direction(pub_filtered) {
-    console.log('---- direction: ' + pub_filtered.length)
+    console.log('---- populate_direction: ' + pub_filtered.length)
 
     //document.getElementById('button_direction').innerHTML = '<a>by area (' + pub_filtered.length + ')</a>'
     var select= document.getElementById("direction");

@@ -3,7 +3,7 @@ import uuid
 import pandas as pd
 from flask import request
 from config import Configurations
-from app.static.pythonscripts.csv import Csv
+# from app.static.pythonscripts.csv import Csv
 from app.static.pythonscripts.s3 import S3
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
@@ -19,17 +19,41 @@ from app.models.detail.detail_latitude import DetailLatitude
 from app.models.detail.extra import Extra
 from app.models.detail.address import Address
 from app.models.station.station_identity import StationIdentity
-from app.static.pythonscripts.controls_list import ControlsList
+# from app.static.pythonscripts.controls_list import ControlsList
 from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
-model_formats = ControlsList().go_get_control_list()
+# model_formats = ControlsList().go_get_control_list()
 env_vars = Configurations().get_config2()
 
+
 class FilesDiary:
+
+    def go_get_diarys(self):
+        # new_diary = Diary()
+        # df_diary = pd.DataFrame([new_diary.__dict__])
+        # return df_diary
+        #
+        print('go get diary')
+        if env_vars['source'] == 'csv':
+            df_diarys = pd.read_csv(directory_path + '/files/diary.csv', dtype={'pub_identity': str, 'monday': str,
+                                                                           'tuesday': str, 'wednesday': str,
+                                                                           'thursday': str, 'friday': str,
+                                                                           'saturday': str, 'sunday': str})
+        else:
+            attribute_list = ['pub_identity', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
+                              'sunday']
+            df_diarys = S3().s3_read('diary', attribute_list)
+        return df_diarys
+
+    def go_get_1_diary(self, pub_id):
+        print('Go get 1 diary')
+        df_diarys = self.go_get_diarys()
+        df_1_diary = df_diarys.loc[df_diarys['pub_identity'] == pub_id]
+        return df_1_diary
 
     def new_diary(self, pub_id):
         new_diary = Diary(pub_identity=pub_id, monday="", tuesday="", wednesday="", thursday="", friday="",
