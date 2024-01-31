@@ -5,28 +5,10 @@ function filter_reset() {
     document.getElementById('template_map').style.display = "none"
     document.getElementById('template_list').style.display = "none"
     document.getElementById('template_header').style.display = "none"
-//    col_map
-    for (i=0; i<directions_list.length; i++) {
-        console.log('-- reset directions')
-        var filtered_data = all_data.filter(function(pub) {
-            return pub.direction_identity == directions_list[i][0]
-        })
-        document.getElementById(directions_list[i][0] + "_filter").style.display = 'block'
-        document.getElementById(directions_list[i][0] + "_filter").checked = false
-        document.getElementById(directions_list[i][0] + "_id").style.display = 'block'
-        document.getElementById(directions_list[i][0] + "_id").innerHTML = directions_list[i][1] + " (" + filtered_data.length + ")"
-    }
 
-    for (i=0; i<stations_directions_list.length; i++) {
-        console.log('-- reset station')
-        var filtered_data = all_data.filter(function(pub) {
-            return pub.station_identity == stations_directions_list[i][0]
-        })
-        document.getElementById(stations_directions_list[i][0] + "_filter").style.display = 'block'
-        document.getElementById(stations_directions_list[i][0] + "_filter").checked = false
-        document.getElementById(stations_directions_list[i][0] + "_id").style.display = 'block'
-        document.getElementById(stations_directions_list[i][0] + "_id").innerHTML = stations_directions_list[i][1] + " (" + filtered_data.length + ")"
-    }
+    populate_direction(pub)
+
+    populate_station(pub)
 
     for (const [key, value] of Object.entries(review)) {
         console.log('-- reset features')
@@ -54,12 +36,15 @@ function filter_reset() {
         }
     }
 
+    //populate_diary(pub)
+
     for (const [key, value] of Object.entries(diary)) {
         console.log('--reset diary')
         if (value.menu_filter) {
             document.getElementById(value.name + "_filter").checked = false
         }
     }
+
     document.getElementById('search-input-navbar').value = ''
     document.getElementById('active_filter_count').value = '0'
     document.getElementById('active_filter_count').style.display = "none"
@@ -73,5 +58,5 @@ function filter_reset() {
         document.getElementById("filter_overlay_span").classList.add('filters_span_off')
     }
 
-    off()
+    hide_filters()
 }
