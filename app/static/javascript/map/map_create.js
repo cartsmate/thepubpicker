@@ -10,7 +10,7 @@ function map_create(lat, lng, zoom) {
         //fullScreenControl: false,
         controlSize: 30,
         streetViewControl: false,
-        minZoom: 11,
+        //minZoom: 11,
 
         disableDefaultUI: true,
         }
