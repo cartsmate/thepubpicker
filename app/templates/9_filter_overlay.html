@@ -1,13 +1,16 @@
-<div id="overlay" onclick="off()"></div>
+<div id="overlay" onclick="hide_filters()"></div>
 <div id="all_filters">
-    <button type="button" style="margin: 5px 0px 0px 0xp; padding: 0px;" onclick="on()" id="collapsible_filters" class="collapsible_filters btn">
-        <div class="parent">
+    <button type="button" style="margin: 5px 0px 0px 0xp; padding: 0px;" onclick="show_filters()"
+            id="collapsible_filters" class="collapsible_filters btn">
+        <div class="parent" >
             <div class="child">
                 <p id="filter_overlay_btn" class="filters_off">
-                    More <span id="filter_overlay_span" class="filters_span_off">Filters</span>
+                    <div style="display:none">More</div>
+                    <span style="display: none;" id="filter_overlay_span" class="filters_span_off">Filters</span>
+                    <img height="25" width="30" src="/static/icons/buttons/filter.png" style="margin-top: 5px; background:white;">
                 </p>
             </div>
-            <div class="child" style="text-align: right;">
+            <div class="child" style="padding-bottom: 10px;text-align: right;">
                 <span id="active_filter_count" style="margin:0px; padding: 0px; display: none;"></span>
             </div>
         </div>

@@ -13,14 +13,14 @@ function toggle_overlay() {
         })
     }
 }
-function on() {
-    console.log('ON')
+function show_filters() {
+    console.log('show_filters')
     document.getElementById("overlay").style.display = "block";
-
+    document.getElementById("collapsible_filters").style.width = "95px";
 }
 
-function off() {
-    console.log('OFF')
+function hide_filters() {
+    console.log('hide_filter')
     document.getElementById("overlay").style.display = "none";
     content_direction.style.display = "none"
     content_station.style.display = "none"

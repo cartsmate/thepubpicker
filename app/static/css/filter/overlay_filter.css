@@ -29,17 +29,17 @@
     font-size:12px;
     color: black;
     background-color: white;
-    border-left: 5px solid var(--theme);
-    border-bottom: 5px solid var(--theme);
-    border-right: 5px solid white;
-    border-top: 5px solid white;
+    border-left: 2px solid var(--theme);
+    border-bottom: 2px solid var(--theme);
+    border-right: 2px solid white;
+    border-top: 2px solid white;
 }
 #collapsible_filters:hover{
     background-color: var(--theme);
-    border-left: 5px solid white;
-    border-bottom: 5px solid white;
-    border-right: 5px solid black;
-    border-top: 5px solid black;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
     color: white;
 }
 
