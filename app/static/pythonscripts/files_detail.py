@@ -79,10 +79,11 @@ class FilesDetail:
         else:
             # # # GET RANDOM PUB
             df_details = self.go_get_details()
+            df_best = df_details.loc[(df_details['rank'] > 4) & (df_details['rank'] < 5)]
 
-            no_of_details = df_details.shape[0]
+            no_of_details = df_best.shape[0]
             random_index = random.randrange(0, no_of_details)
-            df_random_pub = df_details.iloc[random_index]
+            df_random_pub = df_best.iloc[random_index]
             random_pub_id = df_random_pub['pub_identity']
             data = {'pub_identity': [random_pub_id], 'timestamp': [new_timestamp_str]}
 
