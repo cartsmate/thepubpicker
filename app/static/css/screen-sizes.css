@@ -48,8 +48,8 @@
 }
 @media screen and (max-width:395px) and (min-width:371px) {
     .screen-reactor {
-        width:370px;
-        background: #808000;
+        width:375px;
+        background: white;
         }
     #col_map {
         width: 315px;
