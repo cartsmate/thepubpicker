@@ -22,13 +22,13 @@ function spinner_add_listener_click_face() {
                         } else {
                             console.log(marker + ': was blank - make HIGHLIGHT')
                             for (const [key, value] of Object.entries(review)) {
-//                                if (value.quick_filter == 'yes') {
-//                                    document.getElementById(value.name + "_filter").checked = false;
-//                                    document.getElementById(value.name + "_word").style.color = "black"
-//                                    temp_carousel = document.getElementById(value.name + "_carousel")
-//                                    temp_carousel.classList.remove('carousel_on')
-//                                    temp_carousel.classList.add('carousel_off')
-//                                }
+                                if (value.quick_filter) {
+                                    document.getElementById(value.name + "_filter").checked = false;
+                                    //document.getElementById(value.name + "_word").style.color = "black"
+                                    temp_carousel = document.getElementById(value.name + "_carousel")
+                                    temp_carousel.classList.remove('carousel_on')
+                                    temp_carousel.classList.add('carousel_off')
+                                }
                             }
                             console.log(marker + ' : true')
                             document.getElementById(marker + "_filter").checked = true;
