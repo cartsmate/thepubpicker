@@ -1,9 +1,9 @@
 
 
 class Roast:
-    def __init__(self, name="roast", alias="Sunday", alias1="Roasts", alias2="Sunday Roasts", required='true',
-                 form_visible='false', table_visible='false', value='0', control="check", icon="roast.png",
-                 data_type='str', menu_filter='yes', quick_filter='yes', event_filter='no'):
+    def __init__(self, name="roast", alias="Sunday", alias1="Roasts", alias2="Sunday Roasts", required=True,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="roast.png",
+                 data_type='str', menu_filter=True, quick_filter=True, event_filter=False):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

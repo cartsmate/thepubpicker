@@ -1,6 +1,6 @@
 class Extra:
-    def __init__(self, name="extra", alias="Extra", alias2="", required='false', form_visible='false',
-                 table_visible='false', value="TBC", control="input", icon='none', rank=3):
+    def __init__(self, name="extra", alias="Extra", alias2="", required=False, form_visible=False,
+                 table_visible=False, value="TBC", control="input", icon='none', rank=3):
         self.name = name
         self.alias = alias
         self.alias2 = alias2

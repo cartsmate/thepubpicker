@@ -15,7 +15,7 @@
 }
 #content_filters{
     position: absolute;
-    top: 130px;
+    top: 150px;
     left: 47px;
     z-index: 2;
     transform: translate(-50%,-50%);

@@ -7,7 +7,8 @@ function list_filter_beta(visible, order, asc_desc) {
             info: false,
             order: [[order, asc_desc]],
             columnDefs: list_addjson(visible),
-            searching: false
+            searching: false,
+            bDestroy: true
         });
     });
 }

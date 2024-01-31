@@ -7,6 +7,7 @@ function filter_reset() {
     document.getElementById('template_header').style.display = "none"
 //    col_map
     for (i=0; i<directions_list.length; i++) {
+        console.log('-- reset directions')
         var filtered_data = all_data.filter(function(pub) {
             return pub.direction_identity == directions_list[i][0]
         })
@@ -17,6 +18,7 @@ function filter_reset() {
     }
 
     for (i=0; i<stations_directions_list.length; i++) {
+        console.log('-- reset station')
         var filtered_data = all_data.filter(function(pub) {
             return pub.station_identity == stations_directions_list[i][0]
         })
@@ -26,44 +28,36 @@ function filter_reset() {
         document.getElementById(stations_directions_list[i][0] + "_id").innerHTML = stations_directions_list[i][1] + " (" + filtered_data.length + ")"
     }
 
-//    for (i=0; i<model_formats['icon_list'].length; i++) {
     for (const [key, value] of Object.entries(review)) {
-        if (value.menu_filter == 'yes') {
+        console.log('-- reset features')
+        if (value.menu_filter) {
             var filtered_data = all_data.filter(function(pub) {
                 return pub[value.name] == 'true'
             })
-            console.log(value.name)
+            //console.log(value.name)
             document.getElementById(value.name + "_filter").style.display = 'block'
             document.getElementById(value.name + "_filter").checked = false
             document.getElementById(value.name + "_id").style.display = 'block'
             document.getElementById(value.name + "_id").innerHTML = value.name + " (" + filtered_data.length + ")"
-            if (value.quick_filter == 'yes') {
-                console.log('quick filter')
-                document.getElementById(value.name + "_word").style.color = "black"
+            if (value.quick_filter) {
+                //console.log('quick filter')
+                //document.getElementById(value.name + "_word").style.color = "black"
                 //document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
                 if (document.getElementById(value.name + "_carousel").classList.contains('carousel_on')) {
-                    console.log('carousel on')
+                    //console.log('carousel on')
                     document.getElementById(value.name + "_carousel").classList.remove('carousel_on')
                     document.getElementById(value.name + "_carousel").classList.add('carousel_off')
                 }
 
             }
-//            var filtered_data = all_data.filter(function(pub) {
-//              return pub[model_formats['icon_list'][i]] == 'true'
-//            })
-//            console.log(model_formats['icon_list'][i])
-//            document.getElementById(model_formats['icon_list'][i] + "_filter").style.display = 'block'
-//            document.getElementById(model_formats['icon_list'][i] + "_filter").checked = false
-//            document.getElementById(model_formats['icon_list'][i] + "_id").style.display = 'block'
-//            document.getElementById(model_formats['icon_list'][i] + "_id").innerHTML = model_formats['icon_list'][i] + " (" + filtered_data.length + ")"
-//            if (model_formats['icon_list'][i] != 'nofeature') {
-//                document.getElementById(model_formats['icon_list'][i] + "_word").style.color = "black"
-//                //document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
-//                document.getElementById(model_formats['icon_list'][i] + "_carousel").classList.remove('carousel_on')
-//                document.getElementById(model_formats['icon_list'][i] + "_carousel").classList.add('carousel_off')
-//
-//            }
 
+        }
+    }
+
+    for (const [key, value] of Object.entries(diary)) {
+        console.log('--reset diary')
+        if (value.menu_filter) {
+            document.getElementById(value.name + "_filter").checked = false
         }
     }
     document.getElementById('search-input-navbar').value = ''

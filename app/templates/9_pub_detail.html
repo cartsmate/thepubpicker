@@ -33,7 +33,7 @@
 </style>
 <script>console.log('CREATING DETAIL FIELDS')</script>
 {% for key, value in detail.items() %}
-    {% if value.form_visible == "true" %}
+    {% if (value.form_visible) %}
         <div class="form-group row details" id=row_{{value.name}} >
             <div class="col col-diary-label">
                 <label class="col-form-label item-diary-label" for={{value.name}} >{{value.alias}}</label>
@@ -52,12 +52,12 @@
                 {% else %}
                     <input class="form-control item-diary-input" type='textarea' name={{value.name}} id={{value.name}} readonly>
                 {% endif %}
-                {% if value.required  == 'yes' %}
-                    <script>document.getElementById("{{field.name}}").required = true</script>
+                {% if (value.required) %}
+                    <script>document.getElementById("{{value.name}}").required = true</script>
                 {% endif %}
             </div>
         </div>
-    {% elif name != "readonly" and ((value.form_visible == 'yes') or (value.name == 'detail_name') or (value.name == 'extra')) %}
+    {% elif name != "readonly" and ((value.form_visible) or (value.name == 'detail_name') or (value.name == 'extra')) %}
         <div class="form-group row details" id=row_{{value.name}} >
             <div class="col details-label" >
                 <label class="col-form-label label" for={{value.name}} >{{value.alias}}</label>
@@ -74,7 +74,7 @@
                 {% else %}
                     <input class="form-control details-input" type='textarea' name={{value.name}} id={{value.name}}>
                 {% endif %}
-                {% if value.required == 'yes' %}
+                {% if (value.required) %}
                     <script>document.getElementById("{{value.name}}").required = true</script>
                 {% endif %}
             </div>

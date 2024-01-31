@@ -33,7 +33,7 @@
 </style>
 <script>console.log('CREATING STATION FIELDS')</script>
 {% for key, value in station.items() %}
-    {% if name == "readonly" and value.form_visible == "true" %}
+    {% if name == "readonly" and value.form_visible %}
         <div class="form-group row details" id=row_{{value.name}} >
             <div class="col col-diary-label" >
                 <label class="col-form-label item-diary-label" for={{value.name}} >{{value.alias}}</label>

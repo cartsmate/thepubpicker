@@ -1,32 +1,23 @@
 function populate_event(pub_filtered) {
-    console.log('---- populate_event: ' + pub_filtered.length)
-    console.log(pub_filtered[0])
+    console.log('---- populate_event, in: ' + pub_filtered.length)
     filter_clear('checks_event')
 
     for (const [key, value] of Object.entries(review)) {
-        if (value.event_filter == 'yes') {
-            console.log(value.name)
-
-//            var filtered_data = pub_filtered.filter(function(x) {
-//                return x[value.name] == '1'
-//            })
+        if (value.event_filter) {
 
             var filtered_data = pub_filtered.filter(function(x) {
                 return x['event_type'] == value.name
             })
-
+            console.log(filtered_data.length)
 //            filtered_data = pub_filtered
             record = document.createElement("div")
             record.className = 'row'
             checks_feature = document.getElementById("checks_event")
 
             label = document.createElement("div")
-            label.style.width = "230px"
-            label.style.font = "8px"
-//            label.id = model_formats['icon_list'][i] + "_id"
             label.id = value.name + "_id"
-//            label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + full_alias[icon_list[i]] + " (" + filtered_data.length + ") " + "</a>"
-            label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + value.alias2 + " (" + filtered_data.length + ") " + "</a>"
+            label.className = 'check_label'
+            label.textContent = value.alias2 + " (" + filtered_data.length + ") "
             record.appendChild(label)
             checks_feature.appendChild(record)
 
@@ -37,12 +28,13 @@ function populate_event(pub_filtered) {
             input.name = "fooay[1][]"
             //console.log('id: ' + value.name)
             input.id = value.name + "_filter"
-            //input.onclick = function() { on_click_event() }
-            if (filtered_data.length > 0) {
-                label.style.display = "block"
-            } else {
-                label.style.display = "none"
-            }
+            input.onclick = function() { on_click_event() }
+
+            //if (filtered_data.length > 0) {
+            label.style.display = "block"
+            //} else {
+            //    label.style.display = "none"
+            //}
             if (filtered_data.length == pub_filtered.length) {
                 input.checked = true
             }
@@ -64,6 +56,8 @@ function populate_event(pub_filtered) {
 
         }
     }
+
+
     // the selector will match all input controls of type :checkbox
     // and attach a click event handler
     $("input:checkbox").on('click', function() {
@@ -82,11 +76,11 @@ function populate_event(pub_filtered) {
             // and the current value is retrieved using .prop() method
             $(group).prop("checked", false);
             $box.prop("checked", true);
-            on_click_event()
+            //on_click_event()
         } else {
             console.log('INSIDE is UNchecked')
             $box.prop("checked", false);
-            list_setup_event('none')
+            //list_setup_event('none')
         }
     });
 

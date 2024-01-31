@@ -1,6 +1,6 @@
 
 class DirectionIdentity:
-    def __init__(self, name='direction_identity', required='false', form_visible='false', table_visible='false',
+    def __init__(self, name='direction_identity', required=False, form_visible=False, table_visible=False,
                  alias='Direction Identity', alias2="", value="dddddddd-dddd-dddd-dddd-dddddddddddd", control='input'):
         self.name = name
         self.required = required

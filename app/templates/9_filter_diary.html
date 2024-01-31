@@ -1,29 +1,161 @@
 <button type="button" id="button_diary" class="collapsible_diary btn click text-left">by day</button>
+
 <div class="content_diary" id="content_diary" style="display: none; background: #F5F5F5;" >
-    <div class="col">
-        <div class="row"><label id="monday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Monday<input id="filter_monday" type="checkbox" class="radio" value="monday" name="fooby[1][]" /></label></div>
-        <div class="row"><label id="tuesday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Tuesday<input id="tuesday_filter" type="checkbox" class="radio" value="tuesday" name="fooby[1][]" /></label></div>
-        <div class="row"><label id="wednesday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Wednesday<input id="wednesday_filter" type="checkbox" class="radio" value="wednesday" name="fooby[1][]" /></label></div>
-        <div class="row"><label id="thursday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Thursday<input id="thursday_filter" type="checkbox" class="radio" value="thursday" name="fooby[1][]" /></label></div>
-        <div class="row"><label id="friday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Friday<input id="friday_filter" type="checkbox" class="radio" value="friday" name="fooby[1][]" /></label></div>
-        <div class="row"><label id="saturday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Saturday<input id="saturday_filter" type="checkbox" class="radio" value="saturday" name="fooby[1][]" /></label></div>
-        <div class="row"><label id="sunday_filter_label" class="diary_row" style="background-color: white; width: 200px; font-size: 12px; padding: 0px; margin: 0px;">Sunday<input id="sunday_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" /></label></div>
+    <div class="col" style="width: 250px; background-color: #F5F5F5; margin-left: 0px;">
+        <div class="row">
+            <div style="display:flex; margin-top: 10px; margin-left: 5px; margin-right: 10px;">
+                <label class="check_face carousel_off" style="visibility: hidden;">
+                    <input type="checkbox" />
+                    <img style="background-color: white;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span style="font-size: 9px; font-weight: bold;"></span>
+                </label>
+                <label class="check_face carousel_off" id="sunday_face">
+                    <input style="display: none;" id="sunday_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day">SUN</span>
+                    <span class="caption_count" id="sunday_count" ></span>
+                </label>
+                <label class="check_face carousel_off" style="visibility: hidden;">>
+                    <input type="checkbox" />
+                    <img style="background-color: white;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span style="display: hidden; font-size: 9px; font-weight: bold;"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="display:flex; margin-left: 5px; margin-right: 10px;">
+                <label class="check_face carousel_off" id="monday_face">
+                    <input style="display: none;" id="monday_filter" type="checkbox" class="radio" value="monday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day">MON</span>
+                    <span class="caption_count" id="monday_count" ></span>
+                </label>
+                <label class="check_face carousel_off" id="tuesday_face">
+                    <input style="display: none;" id="tuesday_filter" type="checkbox" class="radio" value="tuesday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day">TUE</span>
+                    <span class="caption_count" id="tuesday_count" ></span>
+                </label>
+                <label class="check_face carousel_off" id="wednesday_face">
+                    <input style="display: none;" id="wednesday_filter" type="checkbox" class="radio" value="wednesday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day">WED</span>
+                    <span class="caption_count" id="wednesday_count" ></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 10px;">
+            <div style="display:flex; margin-left: 5px; margin-right: 10px;">
+                <label class="check_face carousel_off" id="thursday_face" >
+                    <input style="display: none;" id="thursday_filter" type="checkbox" class="radio" value="thursday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day">THU</span>
+                    <span class="caption_count" id="thursday_count" ></span>
+                </label>
+                <label class="check_face carousel_off" id="friday_face">
+                    <input style="display: none;" id="friday_filter" type="checkbox" class="radio" value="friday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day">FRI</span>
+                    <span class="caption_count" id="friday_count" ></span>
+                </label>
+                <label class="check_face carousel_off" id="saturday_face">
+                    <input style="display: none;"  id="saturday_filter" type="checkbox" class="radio" value="saturday" name="fooby[1][]" />
+                    <img style="background-color: white; margin-top:5px;" height=35 width=35 src="/static/icons/diary/cal.png">
+                    <span class="caption_day" >SAT</span>
+                    <span class="caption_count" id="saturday_count" ></span>
+                </label>
+            </div>
+        </div>
     </div>
 </div>
-
 <link rel="stylesheet" href="/static/css/filter/diary_filter.css">
+<style>
+
+.caption_count {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    font-color: black;
+}
+.caption_day {
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    font-color: black;
+}
+.check_face {
+    opacity: 1;
+    //margin-top: 5px;
+    padding: 2.5px;
+    width: 45px;
+    text-align: center;
+    border: thin solid #808000;
+    border-radius: 1.2rem;
+}
+.check_face:hover {
+    background-color: #808000;
+    color: white;
+}
+
+</style>
 
 <script>
+<!--
+    function olive_background(element_clicked) {
+        console.log('olive background')
+        console.log('element_clicked: ' + element_clicked)
+        current_carousel = document.getElementById(element_clicked + "_face")
+        if (current_carousel.classList.contains('carousel_off')) {
+            if (document.getElementById('monday_face').classList.contains('carousel_on')) {
+                document.getElementById('monday_face').classList.remove('carousel_on')
+                document.getElementById('monday_face').classList.add('carousel_off')
+            }
+            if (document.getElementById('tuesday_face').classList.contains('carousel_on')) {
+                document.getElementById('tuesday_face').classList.remove('carousel_on')
+                document.getElementById('tuesday_face').classList.add('carousel_off')
+            }
+            if (document.getElementById('wednesday_face').classList.contains('carousel_on')) {
+                document.getElementById('wednesday_face').classList.remove('carousel_on')
+                document.getElementById('wednesday_face').classList.add('carousel_off')
+            }
+            if (document.getElementById('thursday_face').classList.contains('carousel_on')) {
+                document.getElementById('thursday_face').classList.remove('carousel_on')
+                document.getElementById('thursday_face').classList.add('carousel_off')
+            }
+            if (document.getElementById('friday_face').classList.contains('carousel_on')) {
+                document.getElementById('friday_face').classList.remove('carousel_on')
+                document.getElementById('friday_face').classList.add('carousel_off')
+            }
+            if (document.getElementById('saturday_face').classList.contains('carousel_on')) {
+                document.getElementById('saturday_face').classList.remove('carousel_on')
+                document.getElementById('saturday_face').classList.add('carousel_off')
+            }
+            if (document.getElementById('sunday_face').classList.contains('carousel_on')) {
+                document.getElementById('sunday_face').classList.remove('carousel_on')
+                document.getElementById('sunday_face').classList.add('carousel_off')
+            }
+            current_carousel.classList.remove('carousel_off')
+            current_carousel.classList.add('carousel_on')
+        } else {
+            current_carousel.classList.remove('carousel_on')
+            current_carousel.classList.add('carousel_off')
+        }
+    }
+-->
     // the selector will match all input controls of type :checkbox
     // and attach a click event handler
     $("input:checkbox").on('click', function() {
         // in the handler, 'this' refers to the box clicked on
         var $box = $(this);
         if ($box.is(":checked")) {
-            console.log('INSIDE is CHECKED')
+            console.log('INSIDE is diary CHECKED')
             console.log($box.attr("name"))
             console.log($box.attr("value"))
-            list_setup_diary($box.attr("value"))
+            //olive_background($box.attr("value"))
             // the name of the box is retrieved using the .attr() method
             // as it is assumed and expected to be immutable
             var group = "input:checkbox[name='" + $box.attr("name") + "']";
@@ -31,11 +163,16 @@
             // and the current value is retrieved using .prop() method
             $(group).prop("checked", false);
             $box.prop("checked", true);
+
         } else {
-            console.log('INSIDE is UNchecked')
+            //white_background($box.attr("value"))
+            console.log('INSIDE is diary UNchecked')
             $box.prop("checked", false);
-            list_setup_diary('none')
+            //list_setup_diary('none')
+            //olive_background($box.attr("value"))
         }
+        console.log('day of the week clicked')
+        center_map()
     });
 
     var button_diary = document.getElementById('button_diary')
@@ -43,13 +180,14 @@
     var content_station = document.getElementById('content_station')
     var content_diary = document.getElementById('content_diary')
     var content_feature = document.getElementById('content_feature')
+    var content_event = document.getElementById('content_event')
     button_diary.addEventListener("click", function() {
         if (content_diary.style.display === "none") {
             content_diary.style.display = "flex";
             content_direction.style.display = "none"
             content_station.style.display = "none"
             content_feature.style.display = "none"
-            //content_diary.style.display = "none"
+            content_event.style.display = "none"
         } else {
             content_diary.style.display = "none"
         }

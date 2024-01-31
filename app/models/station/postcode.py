@@ -1,6 +1,6 @@
 
 class Postcode:
-    def __init__(self, name='postcode', required='false', form_visible='false', table_visible='false',
+    def __init__(self, name='postcode', required=False, form_visible=False, table_visible=False,
                  alias='Station Postcode', alias2="", value="", control='none'):
         self.name = name
         self.required = required

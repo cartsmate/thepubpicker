@@ -33,7 +33,7 @@
 </style>
 <script>console.log('CREATING DIRECTION FIELDS')</script>
 {% for key, value in direction.items() %}
-    {% if name == "readonly" and value.form_visible == "true" %}
+    {% if name == "readonly" and value.form_visible %}
         <div class="form-group row details" id=row_{{value.name}} >
             <script>console.log('field AGAIN: ' + '{{value.name}}')</script>
             <div class="col col-diary-label" >

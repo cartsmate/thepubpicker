@@ -1,7 +1,7 @@
 
 class Url:
-    def __init__(self, name='url', alias="Url", alias2="", required='false', form_visible='false',
-                 table_visible='false', value="", control='false', rank=0):
+    def __init__(self, name='url', alias="Url", alias2="", required=False, form_visible=False,
+                 table_visible=False, value="", control=False, rank=0):
         self.name = name
         self.alias = alias
         self.alias2 = alias2

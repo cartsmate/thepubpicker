@@ -33,7 +33,7 @@
 </style>
 <script>console.log('CREATING DIARY FIELDS')</script>
 {% for key, value in diary.items() %}
-    {% if value.form_visible == 'true' %}
+    {% if (value.form_visible) %}
         <div class="form-group row details" id="row_{{value.name}}">
             <div class="col col-diary-label" >
                 <label class="col-form-label item-diary-label" for="{{value.name}}">{{value.alias}}</label>

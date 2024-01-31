@@ -1,9 +1,9 @@
 
 
 class Garden:
-    def __init__(self, name="garden", alias="Beer", alias1="Garden", alias2="Beer Garden", required='true',
-                 form_visible='false', table_visible='false', value='0', control="check", icon="garden.png",
-                 data_type='str', menu_filter='yes', quick_filter='yes', event_filter='no'):
+    def __init__(self, name="garden", alias="Beer", alias1="Garden", alias2="Beer Garden", required=True,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="garden.png",
+                 data_type='str', menu_filter=True, quick_filter=True, event_filter=False):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

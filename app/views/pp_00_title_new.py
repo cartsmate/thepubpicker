@@ -12,6 +12,7 @@ from app.static.pythonscripts.dataframes import Dataframes
 # from app.static.pythonscripts.controls_list import ControlsList
 from app.static.pythonscripts.files_detail import FilesDetail
 from app.models.review.review import Review
+from app.models.diary.diary import Diary
 from app.models.pub.pub import Pub
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
@@ -85,6 +86,7 @@ def new():
 
     # review_json = json.dumps(Review().__dict__)
     review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
+    diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
     # print('review_json')
     # print(review_json)
     pub_obj_json = json.loads(json.dumps(Pub().__dict__, default=lambda o: o.__dict__))
@@ -102,6 +104,7 @@ def new():
                            pub=pub_ent_json,
                            event=event_json,
                            review=review_json,
+                           diary=diary_json,
                            pub_obj=pub_obj_json,
                            photos_list=photos_list,
                            filters=filters,

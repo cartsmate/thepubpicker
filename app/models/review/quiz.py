@@ -1,9 +1,9 @@
 
 
 class Quiz:
-    def __init__(self, name="quiz", alias="Quiz", alias1="Night", alias2="Quiz Night", required='true',
-                 form_visible='false', table_visible='false', value='0', control="check", icon="quiz.png",
-                 data_type='str', menu_filter='yes', quick_filter='yes', event_filter='yes'):
+    def __init__(self, name="quiz", alias="Quiz", alias1="Night", alias2="Quiz Night", required=True,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="quiz.png",
+                 data_type='str', menu_filter=True, quick_filter=True, event_filter=True):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

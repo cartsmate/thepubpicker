@@ -1,9 +1,9 @@
 
 
 class Late:
-    def __init__(self, name="late", alias="Opens", alias1="Late", alias2="Opens Late", required='true',
-                 form_visible='false', table_visible='false', value='0', control="check", icon="late.png",
-                 data_type='str', menu_filter='yes', quick_filter='no', event_filter='no'):
+    def __init__(self, name="late", alias="Opens", alias1="Late", alias2="Opens Late", required=True,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="late.png",
+                 data_type='str', menu_filter=True, quick_filter=False, event_filter=False):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

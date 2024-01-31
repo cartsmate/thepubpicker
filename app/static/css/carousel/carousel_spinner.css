@@ -9,10 +9,12 @@
   --theme: #808000
 }
 .carousel_off {
-    background-color: white;
+    background-color: #f5f5f5;
+    color: black;
 }
 .carousel_on {
-    background-color: var(--theme);
+    background-color: #808000;
+    color: white;
 }
 #template_spinner{
   display: relative;

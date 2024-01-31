@@ -19,3 +19,9 @@
     border-right: 5px solid var(--theme);
     border-top: 5px solid var(--theme);
 }
+.check_label {
+    width: 230px;
+    font-size: 12px;
+    padding-top: 2px;
+    margin-top: 2px;
+}

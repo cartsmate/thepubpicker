@@ -8,9 +8,9 @@ function list_columns_beta() {
         for (const [k, v] of Object.entries(value)) {
 //            console.log('k, v')
 //            console.log(k, v)
-            if (v.table_visible == 'true') {
-                console.log('visible')
-                console.log(v)
+            if (v.table_visible) {
+                //console.log('visible')
+                //console.log(v)
                 visible[v.name] = false
             }
         }
@@ -19,7 +19,12 @@ function list_columns_beta() {
     visible['ordering'] = true
     visible['detail_name'] = true
 
-    if (document.getElementById('quiz_filter').checked || document.getElementById('brunch_filter').checked || document.getElementById('music_filter').checked || document.getElementById('entertain_filter').checked) {
+    if (document.getElementById('quiz_filter').checked || document.getElementById('brunch_filter').checked ||
+        document.getElementById('music_filter').checked || document.getElementById('entertain_filter').checked ||
+        document.getElementById('monday_filter').checked || document.getElementById('tuesday_filter').checked ||
+        document.getElementById('wednesday_filter').checked || document.getElementById('thursday_filter').checked ||
+        document.getElementById('friday_filter').checked || document.getElementById('saturday_filter').checked ||
+        document.getElementById('sunday_filter').checked) {
         visible['event_day'] = true
         visible['event_detail'] = true
     } else {

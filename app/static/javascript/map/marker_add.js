@@ -40,5 +40,5 @@ function marker_add(the_pub) {
                 infowindow.open(map, marker);
             }
         })(marker));
-
+    return marker
 }

@@ -1,7 +1,7 @@
 function spinner_add_listener_click_face() {
     console.log('spinner add listener FACE CLICK added')
     for (const [key, value] of Object.entries(review)) {
-        if (value.quick_filter == 'yes') {
+        if (value.quick_filter) {
 
             var marker = value.name
             //console.log('spinner click listener added for : ' + marker)
@@ -14,7 +14,7 @@ function spinner_add_listener_click_face() {
                         if (document.getElementById(marker + "_filter").checked == true){
                             console.log('already TRUE - blank out')
                             document.getElementById(marker + "_filter").checked = false;
-                            document.getElementById(marker + "_word").style.color = "black"
+                            //document.getElementById(marker + "_word").style.color = "black"
                             current_carousel = document.getElementById(marker + "_carousel")
                             current_carousel.classList.remove('carousel_on')
                             current_carousel.classList.add('carousel_off')
@@ -32,12 +32,12 @@ function spinner_add_listener_click_face() {
                             }
                             console.log(marker + ' : true')
                             document.getElementById(marker + "_filter").checked = true;
-                            document.getElementById(marker + "_word").style.color = "white"
+                            //document.getElementById(marker + "_word").style.color = "white"
                             current_carousel = document.getElementById(marker + "_carousel")
                             current_carousel.classList.remove('carousel_off')
                             current_carousel.classList.add('carousel_on')
                         }
-                        update_filters()
+                        //filtered_pubs = update_filters()
                         center_map()
                     } else {
                         console.log('opacity=0')

@@ -1,6 +1,6 @@
 
 class StationDeletion:
-    def __init__(self, name='station_deletion', required='false', form_visible='false', table_visible='false',
+    def __init__(self, name='station_deletion', required=False, form_visible=False, table_visible=False,
                  alias='Station Deletion', alias2="", value=0, control='none'):
         self.name = name
         self.required = required

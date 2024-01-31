@@ -1,9 +1,9 @@
 
 
 class Cocktail:
-    def __init__(self, name="cocktail", alias="Cocktail", alias1="Bar", alias2="Cocktail Bar", required='false',
-                 form_visible='false', table_visible='false', value='0', control="check", icon="cocktail.png",
-                 data_type='str', menu_filter='yes', quick_filter='no', event_filter='no'):
+    def __init__(self, name="cocktail", alias="Cocktail", alias1="Bar", alias2="Cocktail Bar", required=False,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="cocktail.png",
+                 data_type='str', menu_filter=True, quick_filter=False, event_filter=False):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

@@ -1,0 +1,117 @@
+<button type="button" id="button_event" class="collapsible btn click text-right" >by event</button>
+
+<div class="content_event" id="content_event" style="display: none; background: #F5F5F5;">
+    <div class="col" id="checks_event" style="background-color: #F5F5F5; width: 250px;">
+        <div class="row">
+            <label>
+                Bottomless Brunch
+                <span style="font-size: 9px; font-weight: bold;"></span>
+                <input style="display: none;" id="brunch_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" />
+            </label>
+        <div>
+        <div class="row">
+            <label>
+                Entertainment
+                <span class="caption_count" id="entertain_count" ></span>
+                <input style="display: none;" id="entertain_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" />
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                Live Music
+                <span class="caption_count" id="music_count"></span>
+                <input style="display: none;" id="music_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" />
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                Quiz Night
+                <span class="caption_count" id="quiz_count"></span>
+                <input style="display: none;" id="quiz_filter" type="checkbox" class="radio" value="sunday" name="fooby[1][]" />
+            </label>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="/static/css/filter/events_filter.css">
+
+<style>
+
+.caption_count {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    font-color: black;
+}
+.caption_event {
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    font-color: black;
+}
+.check_face {
+    opacity: 1;
+    //margin-top: 5px;
+    padding: 2.5px;
+    width: 45px;
+    text-align: center;
+    border: thin solid #808000;
+    border-radius: 1.2rem;
+}
+.check_face:hover {
+    background-color: #808000;
+    color: white;
+}
+
+</style>
+<script>
+
+    // the selector will match all input controls of type :checkbox
+    // and attach a click event handler
+    $("input:checkbox").on('click', function() {
+        // in the handler, 'this' refers to the box clicked on
+        var $box = $(this);
+        if ($box.is(":checked")) {
+            console.log('INSIDE is diary CHECKED')
+            console.log($box.attr("name"))
+            console.log($box.attr("value"))
+            //olive_background($box.attr("value"))
+            // the name of the box is retrieved using the .attr() method
+            // as it is assumed and expected to be immutable
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            // the checked state of the group/box on the other hand will change
+            // and the current value is retrieved using .prop() method
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+
+        } else {
+            //white_background($box.attr("value"))
+            console.log('INSIDE is diary UNchecked')
+            $box.prop("checked", false);
+            //list_setup_diary('none')
+            //olive_background($box.attr("value"))
+        }
+        console.log('day of the week clicked')
+        center_map()
+    });
+
+    var button_event = document.getElementById('button_event')
+    var content_direction = document.getElementById('content_direction')
+    var content_station = document.getElementById('content_station')
+    var content_diary = document.getElementById('content_diary')
+    var content_feature = document.getElementById('content_feature')
+    var content_event = document.getElementById('content_event')
+    button_event.addEventListener("click", function() {
+        if (content_event.style.display === "none") {
+            content_event.style.display = "flex";
+            content_direction.style.display = "none"
+            content_station.style.display = "none"
+            content_feature.style.display = "none"
+            content_diary.style.display = "none"
+        } else {
+            content_event.style.display = "none"
+        }
+    })
+</script>

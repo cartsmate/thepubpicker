@@ -1,7 +1,7 @@
 
 class DetailDeletion:
-    def __init__(self, name='detail_deletion', alias="Detail Deletion", alias2="", required='false', form_visible='false',
-                 table_visible='false', value='false', control='false', rank=0):
+    def __init__(self, name='detail_deletion', alias="Detail Deletion", alias2="", required=False, form_visible=False,
+                 table_visible=False, value=False, control=False, rank=0):
         self.name = name
         self.alias = alias
         self.alias2 = alias2

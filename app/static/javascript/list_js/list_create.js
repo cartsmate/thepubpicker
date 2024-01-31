@@ -25,13 +25,13 @@ function list_create() {
     for (const [key, value] of Object.entries(pub_obj)) {
         for (const [k, v] of Object.entries(value)) {
             //console.log(v.name)
-            if (v.table_visible == 'true') {
+            if (v.table_visible) {
                 const heading = document.createElement("td");
                 if (v.name == 'ordering') {
                     heading.width = "30px"
                 } else if (v.name == 'rank') {
                     heading.width = "50px"
-                } else if (v.name == 'detail_day') {
+                } else if (v.name == 'event_day') {
                     heading.width = "40px"
                 } else if (v.name == 'detail_name') {
                     heading.width = "145px"
@@ -71,7 +71,7 @@ function list_create() {
 //        row.appendChild(cell_0);
         for (const [key, value] of Object.entries(pub_obj)) {
             for (const [k, v] of Object.entries(value)) {
-                if (v.table_visible == 'true') {
+                if (v.table_visible) {
                     const cell = document.createElement("td");
                     cell.style.margin = "0px"
                     cell.style.padding = "0px"

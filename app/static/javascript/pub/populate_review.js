@@ -3,10 +3,11 @@ function populate_review(pub){
     for (const [key, value] of Object.entries(review)) {
 //    for (i=0; i < review_list.length; i++) {
 //        if (review_list[i] != "pub_identity") {
-        if (value.menu_filter == 'yes') {
+        if (value.menu_filter) {
 //            if (model_formats['icon_list'].includes (review_list[i])) {
 //                if ((pub[0][review_list[i]] == 'true') || (pub[0][review_list[i]] == true)) {
-                if ((pub[0][value.name] == 'true') || (pub[0][value.name] == true) || (pub[0][value.name] == '1' || (pub[0][value.name] == 1))) {
+                //if ((pub[0][value.name] == 'true') || (pub[0][value.name] == true) || (pub[0][value.name] == '1' || (pub[0][value.name] == 1))) {
+                if (pub[0][value.name] == '1') {
                     console.log('inside TRUE')
                     document.getElementById(value.name + '_check').checked = true;
                     document.getElementById(value.name + '_col').style.opacity = "1.0";

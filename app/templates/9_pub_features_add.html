@@ -36,7 +36,7 @@
 <script>console.log('CREATING REVIEW FIELDS')</script>
 <div id="home_features" style="display:flex; flex-wrap: wrap; ">
 {% for key, value in review.items() %}
-    {% if value.menu_filter == "yes" %}
+    {% if (value.menu_filter) %}
         <div style="opacity: 0.5; text-align:center; margin:0px; padding:0px;" id="{{value.name}}_col">
             {% if name == "readonly" %}
                 <input type="checkbox" id="{{value.name}}_check" name="{{value.name}}_check" style="display: none;">

@@ -4,7 +4,7 @@ function populate_feature(pub_filtered) {
     filter_clear('checks_feature')
 
     for (const [key, value] of Object.entries(review)) {
-        if (value.menu_filter == 'yes' && value.event_filter == 'no') {
+        if (value.menu_filter && !value.event_filter) {
             //console.log(key, value.quick_filter)
 
             var filtered_data = pub_filtered.filter(function(x) {

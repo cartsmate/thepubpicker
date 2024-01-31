@@ -4,4 +4,5 @@ function populate_all_filters(pub_filtered) {
     populate_station(pub_filtered)
     populate_feature(pub_filtered)
     populate_event(pub_filtered)
+    populate_diary(pub_filtered)
 }
