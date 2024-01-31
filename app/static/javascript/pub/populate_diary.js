@@ -1,9 +1,12 @@
 function populate_diary(show_pub){
     console.log('POPULATE_DIARY')
+    console.log('review')
+    console.log(review['quiz']['alias2'])
     console.log('show_pub[0]')
     console.log(show_pub[0])
     console.log('events')
     console.log(events)
+
     for (var [key, value] of Object.entries(diary)) {
         for (i=0; i<events.length; i++) {
             //console.log(events[i]['event_day'])
@@ -14,7 +17,7 @@ function populate_diary(show_pub){
             if (value.name.charAt(0).toUpperCase() + value.name.substring(1,3) == events[i]['event_day']) {
                 console.log('Diary entry: ' + value.name)
                 console.log('Event: ' + events[i]['event_type'] + " @ " + events[i]['event_detail'])
-                document.getElementById(value.name).value = events[i]['event_type'] + " - " + events[i]['event_detail']
+                document.getElementById(value.name).value = review[events[i]['event_type']]['alias2'] + " - " + events[i]['event_detail']
                 break;
             }
 //            for (var [key, value] of Object.entries(event)) {
