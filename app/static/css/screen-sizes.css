@@ -1,0 +1,39 @@
+
+/* the main css for the site */
+.screen-reactor {
+    width:360px;
+    background: white;
+    }
+
+/* the css adjustment for the site between two widths */
+@media screen and (max-width:1800px) and (min-width:1025px) {
+    .screen-reactor {
+        width:500px;
+        background: red;
+        }
+}
+@media screen and (max-width:1024x) and (min-width:431px) {
+    .screen-reactor {
+        width:500px;
+        background: green;
+        }
+}
+@media screen and (max-width:430px) and (min-width:391px) {
+    .screen-reactor {
+        width:500px;
+        background: black;
+        }
+}
+@media screen and (max-width:390px) and (min-width:376px) {
+    .screen-reactor {
+        width:380px;
+        background: blue;
+        }
+}
+/* the css adjustment for the site with a max-width of 270px */
+@media screen and (max-width:375px) {
+    .screen-reactor {
+        width:250px;
+        background: yellow;
+        }
+}
