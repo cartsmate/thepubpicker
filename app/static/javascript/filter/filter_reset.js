@@ -14,7 +14,7 @@ function filter_reset() {
         console.log('-- reset features')
         if (value.menu_filter) {
             var filtered_data = all_data.filter(function(pub) {
-                return pub[value.name] == 'true'
+                return pub[value.name] == '1'
             })
             //console.log(value.name)
             document.getElementById(value.name + "_filter").style.display = 'block'
