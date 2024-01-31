@@ -33,7 +33,7 @@
 /* the css adjustment for the site with a max-width of 270px */
 @media screen and (max-width:375px) {
     .screen-reactor {
-        width:250px;
+        width:365px;
         background: yellow;
         }
 }
