@@ -21,7 +21,7 @@
 //}
 </style>
 <div class="heading2"><div class="heading_title2">Quick Filters</div></div>
-<div style="display:flex; margin-left: 10px; margin-right: 10px;">
+<div class="col d-flex justify-content-center" style="display:flex; margin-left: 10px; margin-right: 10px;">
     {% for key, value in review.items() %}
         {% if value.quick_filter %}
             <div class="flat_face carousel_off" id="{{value.name}}_carousel" style="opacity: 1; margin: 1px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">

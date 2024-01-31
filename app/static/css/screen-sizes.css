@@ -1,5 +1,8 @@
 
 /* the main css for the site */
+#col_map {
+    width: 310px;
+}
 .screen-reactor {
     width:365px;
     background: white;
@@ -11,24 +14,36 @@
         width:500px;
         background: red;
         }
+    #col_map {
+        width: 450px;
+        }
 }
 @media screen and (max-width:1024x) and (min-width:431px) {
     .screen-reactor {
-        width:400px;
+        width:425px;
         background: green;
+        }
+    #col_map {
+        width: 375px;
         }
 }
 
 @media screen and (max-width:430px) and (min-width:425px) {
     .screen-reactor {
         width:420px;
-        background: black;
+            background: black;
+        }
+    #col_map {
+        width: 370px;
         }
 }
 @media screen and (max-width:424px) and (min-width:391px) {
     .screen-reactor {
         width:385px;
-        background: blue;
+            background: blue;
+        }
+    #col_map {
+        width: 325px;
         }
 }
 @media screen and (max-width:395px) and (min-width:371px) {
@@ -36,17 +51,26 @@
         width:365px;
         background: blue;
         }
+    #col_map {
+        width: 315px;
+        }
 }
 @media screen and (max-width:370x) and (min-width:321px) {
     .screen-reactor {
         width:315px;
-        background: blue;
+            background: blue;
+        }
+    #col_map {
+        width: 265px;
         }
 }
 /* the css adjustment for the site with a max-width of 270px */
 @media screen and (max-width:320px) {
     .screen-reactor {
         width:315px;
-        background: yellow;
+            background: yellow;
+        }
+    #col_map {
+        width: 265px;
         }
 }
