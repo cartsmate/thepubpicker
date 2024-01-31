@@ -1,7 +1,7 @@
 
 /* the main css for the site */
 .screen-reactor {
-    width:360px;
+    width:365px;
     background: white;
     }
 
@@ -14,26 +14,39 @@
 }
 @media screen and (max-width:1024x) and (min-width:431px) {
     .screen-reactor {
-        width:500px;
+        width:400px;
         background: green;
         }
 }
-@media screen and (max-width:430px) and (min-width:391px) {
+
+@media screen and (max-width:430px) and (min-width:425px) {
     .screen-reactor {
-        width:500px;
+        width:420px;
         background: black;
         }
 }
-@media screen and (max-width:390px) and (min-width:376px) {
+@media screen and (max-width:424px) and (min-width:391px) {
     .screen-reactor {
-        width:380px;
+        width:385px;
+        background: blue;
+        }
+}
+@media screen and (max-width:395px) and (min-width:371px) {
+    .screen-reactor {
+        width:365px;
+        background: blue;
+        }
+}
+@media screen and (max-width:370x) and (min-width:321px) {
+    .screen-reactor {
+        width:315px;
         background: blue;
         }
 }
 /* the css adjustment for the site with a max-width of 270px */
-@media screen and (max-width:375px) {
+@media screen and (max-width:320px) {
     .screen-reactor {
-        width:365px;
+        width:315px;
         background: yellow;
         }
 }
