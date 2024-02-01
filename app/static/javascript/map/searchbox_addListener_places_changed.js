@@ -65,6 +65,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
             redirect_pub_search(newArray[0]['pub_identity'])
         } else {
             map.setCenter({lat:lat1, lng:lng1});
+            map.setZoom(19)
             central_obj = map.getCenter()
             search_string = places
             center_map()

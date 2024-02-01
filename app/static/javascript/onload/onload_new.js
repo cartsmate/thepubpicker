@@ -3,15 +3,12 @@ function onload_new() {
     console.log('onload - HOME')
 
     filtered_pubs = pub
-    if (isTouchDevice()) {
-        console.log('TOUCH SCREEN device in operation')
-//        document.getElementById('forwards').style.display = 'none'
-//        document.getElementById('rewards').style.display = 'none'
-        console.log('inside IS TOUCH')
-        //spinner_add_listener_swipe()
-    } else {
-        console.log('NO-TOUCH screen device in operation')
-    }
+//    if (isTouchDevice()) {
+//        console.log('TOUCH SCREEN device in operation')
+//    } else {
+//        console.log('NO-TOUCH screen device in operation')
+//        addCss("/static/css/carousel/carousel_flat_spinner.css");
+//    }
     set_color_theme()
     display_counter(counter)
 
@@ -47,3 +44,13 @@ function onload_new() {
     }
 
 }
+
+function addCss(fileName) {
+   var link = $("<link />",{
+     rel: "stylesheet",
+     type: "text/css",
+     href: fileName
+   })
+   $('head').append(link);
+}
+

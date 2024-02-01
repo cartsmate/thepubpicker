@@ -1,3 +1,14 @@
+<script>
+<!--$(document).ready(function(){-->
+<!--    populate_photo_carousel()-->
+<!--})-->
+    if (isTouchDevice()) {
+        console.log('TOUCH SCREEN device in operation')
+    } else {
+        console.log('NO-TOUCH screen device in operation')
+        addCss("/static/css/carousel/carousel_flat_spinner.css");
+    }
+</script>
 <body id="body" class="page-background" data-color={{color_theme}}>
     <div class="container-fluid screen-reactor">
         <div class="row orange" id="template_title">
@@ -50,11 +61,3 @@
     </div>
     <script type="text/javascript">onload_new();</script>
 </body>
-
-
-//<script>
-//$(document).ready(function(){
-//    populate_photo_carousel()
-//})
-//</script>
-

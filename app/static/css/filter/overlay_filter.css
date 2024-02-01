@@ -47,14 +47,6 @@
     border-right: thin solid white;
     border-top: thin solid white;
 }
-//#collapsible_filters:hover{
-//    background-color: var(--theme);
-//    border-left: 2px solid white;
-//    border-bottom: 2px solid white;
-//    border-right: 2px solid black;
-//   border-top: 2px solid black;
-//    color: white;
-//}
 
 #all_filters{
     position: relative;

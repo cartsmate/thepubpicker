@@ -1,18 +1,8 @@
     :root {
     --theme: var(--color)
 }
-#button_reset:hover{
-    background-color: var(--theme);
-}
 #button_reset{
     width: 95px;
     height: 35px;
 }
-#button_reset:hover{
-    background-color: var(--theme);
-    color: white;
-    border-left: 5px solid var(--theme);
-    border-bottom: 5px solid var(--theme);
-    border-right: 5px solid var(--theme);
-    border-top: 5px solid var(--theme);
-}
+

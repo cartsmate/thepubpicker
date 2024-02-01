@@ -24,31 +24,23 @@ from config import Configurations
 @app.route("/add/", methods=['GET', 'POST'])
 def add():
     print('START add')
-    back = request.args.get('back')
-    if back == None: back = 'none'
+    # back = request.args.get('back')
+    # if back == None: back = 'none'
+
+    place_id = request.args.get('place_id')
+
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
-
-    # # # GET MODEL DISPLAY FORMATS
-    # model_formats = ControlsList().go_get_control_list()
 
     # # # GET MODEL DISPLAY NAMES
     alias = Objects().go_get_alias()
 
     # # # GET ALL PUBS
-    df_data = Csv().go_get_all()
+    df_data = FilesPub().go_get_pubs()
     pub_json = Dataframes().df_to_dict(df_data)
 
-    # # # GET DAILY PUB
-    # df_details = Csv().go_get_details_daily()
-    # daily_id = df_details.iloc[0]['pub_identity']
-
     df_new_pub = FilesPub().go_new_pub()
-    # print(df_new_pub.transpose())
-    # # # GET REQUESTED PUB (from place id)
-    place_id = request.args.get('place_id')
-    print('place_id')
-    print(place_id)
+
     if place_id is not None:
         print('call places api to get details from place_id')
         places_facits = CsvSingle().go_get_places(place_id, env_vars)
