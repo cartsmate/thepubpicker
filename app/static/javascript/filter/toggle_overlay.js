@@ -16,11 +16,12 @@ function toggle_overlay() {
 function show_filters() {
     console.log('show_filters')
     document.getElementById("overlay").style.display = "block";
-    document.getElementById("collapsible_filters").style.width = "95px";
+    document.getElementById("collapsible_filters_sm").style.width = "95px";
 }
 
 function hide_filters() {
     console.log('hide_filter')
+    document.getElementById("collapsible_filters_sm").style.width = "60px";
     document.getElementById("overlay").style.display = "none";
     content_direction.style.display = "none"
     content_station.style.display = "none"
