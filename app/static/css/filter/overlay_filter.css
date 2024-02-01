@@ -25,7 +25,7 @@
     width: 95px;
     height: 40px;
     margin-top: 3px;
-    margin-right: 3px;
+    //margin-right: 3px;
     font-size:12px;
     color: black;
     background-color: white;
@@ -45,7 +45,7 @@
 
 #all_filters{
     position: relative;
-    right: 5px;
+    //right: 5px;
 }
 #active_filter_count {
     width: 25px;
