@@ -14,9 +14,10 @@ function populate_photo_carousel() {
         img_element.classList.add("d-block")
         img_element.classList.add("w-100")
         */
+        document.getElementById("photo_" + i).alt = photos_list[i]
         api_call_text = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=' + photos_list[i] + '&key=' + env_vars['places_key']
         document.getElementById("photo_" + i).src = api_call_text
-        //document.getElementById("photo_" + i).alt = photos_list[i]
+
 
         //div_element.appendChild(img_element)
 
