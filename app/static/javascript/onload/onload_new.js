@@ -28,7 +28,7 @@ function onload_new() {
     spinner_add_listener_click_face()
 
     populate_summary(daily_id)
-    populate_photo_carousel()
+    //populate_photo_carousel()
 
     map_load_gamma()
 
