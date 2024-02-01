@@ -29,10 +29,10 @@
     font-size:12px;
     color: black;
     background-color: white;
-    border-left: 2px solid var(--theme);
-    border-bottom: 2px solid var(--theme);
-    border-right: 2px solid white;
-    border-top: 2px solid white;
+    border-left: thin solid grey;
+    border-bottom: thin solid grey;
+    border-right: thin solid white;
+    border-top: thin solid white;
 }
 //#collapsible_filters:hover{
 //    background-color: var(--theme);
