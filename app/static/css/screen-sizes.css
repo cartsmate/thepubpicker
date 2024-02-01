@@ -3,6 +3,9 @@
 #col_map {
     width: 310px;
 }
+#search-input-navbar {
+    width: 250px;
+}
 .screen-reactor {
     width:365px;
     background: white;
