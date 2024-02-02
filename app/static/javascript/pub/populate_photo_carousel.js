@@ -6,7 +6,7 @@ function populate_photo_carousel() {
     console.log(images)
 
     //for (i = 0; i < photos_list.length; i++) {
-    for (i = 0; i < images.length; i++) {
+    for (i = 0; i < photos_list.length; i++) {
         /*
         var div_element = document.createElement("div")
         div_element.classList.add("carousel-item");
@@ -18,10 +18,6 @@ function populate_photo_carousel() {
         img_element.classList.add("d-block")
         img_element.classList.add("w-100")
         */
-        console.log('photo: ' + i)
-        document.getElementById("photo_" + i).alt = photos_list[i]
-        document.getElementById("photo_caption_" + i).color = "white"
-        document.getElementById("photo_caption_" + i).textContent = i
         api_call_text = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=' + photos_list[i] + '&key=' + env_vars['places_key']
         document.getElementById("photo_" + i).src = api_call_text
         //document.getElementById("photo_" + i).src = images[i]
