@@ -6,7 +6,6 @@ function list_create() {
     document.getElementById('pub_table').visible = false
     tbl.style.cssText = 'font-size:12px;'
     tbl.className = "table table-striped";
-    tbl.width = "320px"
 
     var tblHead = document.createElement("thead");
     var tblBody = document.createElement("tbody");
@@ -28,19 +27,25 @@ function list_create() {
             if (v.table_visible) {
                 const heading = document.createElement("td");
                 if (v.name == 'ordering') {
-                    heading.width = "30px"
+                    //heading.width = "30px"
+                    heading.classList.add("tbl_ordering")
                 } else if (v.name == 'rank') {
-                    heading.width = "50px"
+                    //heading.width = "50px"
+                    heading.classList.add("tbl_rank")
                 } else if (v.name == 'event_day') {
-                    heading.width = "40px"
+                    //heading.width = "40px"
+                    heading.classList.add("tbl_event_day")
                 } else if (v.name == 'detail_name') {
-                    heading.width = "145px"
+                    //heading.width = "145px"
+                    heading.classList.add("tbl_detail_name")
                 } else if (v.name == 'station_name') {
-                    heading.width = "110px"
+                    //heading.width = "110px"
+                    heading.classList.add("tbl_station_name")
                 }
 //                else {
 //                    heading.width = "110px"
 //                }
+
                 heading.style.margin = "0px"
                 heading.style.padding = "0px"
                 heading.style.height = "40px"

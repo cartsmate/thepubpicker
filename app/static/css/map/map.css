@@ -1,10 +1,14 @@
 .map_on_pub {
     height:200px;
-    width:320px;
+    width: 100%px;
     border: thin solid #808000
+    margin: 0px;
+    padding: 0px;
 }
 .map_on_home {
     height:400px;
-    width:320px;
+    width: 100%;
     border: thin solid #808000
+    margin: 0px;
+    padding: 0px;
 }

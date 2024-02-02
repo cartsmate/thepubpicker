@@ -24,7 +24,7 @@ def pub():
     print('START pub')
 
     filters = request.args.get('filters')
-    print('filters: ' + filters)
+    print('filters: ' + str(filters))
 
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()

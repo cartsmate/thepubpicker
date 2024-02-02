@@ -17,11 +17,11 @@ function populate_pub_edit(show_pub){
     populate_direction(show_pub);
 }
 //function populate_pub_add_beta(show_pub){
-function populate_pub_add_beta(show_pub, theme){
+function populate_pub_add_beta(show_pub){
     console.log('POPULATE_PUB add BETA')
     //populate_detail(show_pub);
     populate_detail(show_pub);
-    populate_review(show_pub, theme);
+    populate_review(show_pub);
     //populate_diary(show_pub);
     populate_diary(show_pub);
     //populate_station(show_pub);

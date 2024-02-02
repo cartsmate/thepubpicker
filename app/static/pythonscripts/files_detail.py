@@ -23,6 +23,7 @@ from app.models.detail.address import Address
 from app.models.detail.url import Url
 from app.models.detail.website import Website
 from app.models.station.station_identity import StationIdentity
+
 # from app.static.pythonscripts.controls_list import ControlsList
 from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
@@ -158,7 +159,7 @@ class FilesDetail:
     def update_detail_csv(self, df_updated_details, type):
         print('updating detail csv')
         # print(df_updated_details)
-        df_details = Csv().go_get_details()
+        df_details = self.go_get_details()
 
         print('pre_count: ' + str(df_details.shape[0]))
         print('post_count: ' + str(df_updated_details.shape[0]))

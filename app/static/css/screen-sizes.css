@@ -1,7 +1,7 @@
 
 /* the main css for the site */
 #col_map {
-    width: 310px;
+    width: 345px;
 }
 #search-input-navbar {
     width: 250px;
@@ -18,7 +18,7 @@
         background: white;
         }
     #col_map {
-        width: 450px;
+        width: 480px;
         }
 }
 @media screen and (max-width:1024x) and (min-width:431px) {
@@ -27,18 +27,34 @@
         background: white;
         }
     #col_map {
-        width: 375px;
+        width: 410px;
         }
 }
 
 @media screen and (max-width:430px) and (min-width:425px) {
     .screen-reactor {
         width:424px;
-        background: white;
+        background: #808000;
         }
     #col_map {
-        width: 370px;
+        width: 404px;
         }
+    .tbl_ordering {
+        width: 30px;
+    }
+    .tbl_rank {
+        width: 50px;
+    }
+    .tbl_event_day {
+        width: 40px;
+    }
+    .tbl_detail_name {
+        width: 145px;
+    }
+    .tbl_station_name {
+        width: 110px;
+    }
+
 }
 @media screen and (max-width:424px) and (min-width:391px) {
     .screen-reactor {
@@ -46,7 +62,7 @@
         background: white;
         }
     #col_map {
-        width: 325px;
+        width: 370px;
         }
 }
 @media screen and (max-width:395px) and (min-width:371px) {
@@ -55,7 +71,7 @@
         background: white;
         }
     #col_map {
-        width: 315px;
+        width: 355px;
         }
 }
 @media screen and (max-width:370x) and (min-width:321px) {
@@ -64,7 +80,7 @@
         background: white;
         }
     #col_map {
-        width: 265px;
+        width: 295px;
         }
 }
 /* the css adjustment for the site with a max-width of 270px */
@@ -74,6 +90,6 @@
         background: white;
         }
     #col_map {
-        width: 265px;
+        width: 295px;
         }
 }

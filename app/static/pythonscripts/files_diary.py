@@ -100,7 +100,7 @@ class FilesDiary:
     def update_diary_csv(self, df_updated_diary, type):
         print('updating diary csv')
         # print(df_updated_diary)
-        df_diarys = Csv().go_get_diarys()
+        df_diarys = self.go_get_diarys()
         print('pre_count: ' + str(df_diarys.shape[0]))
         print('post_count: ' + str(df_updated_diary.shape[0]))
         if (df_updated_diary.shape[0] == df_diarys.shape[0] + 1) and (type == 'add'):

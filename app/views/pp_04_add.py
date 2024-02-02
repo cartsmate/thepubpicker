@@ -1,5 +1,6 @@
 from app import app
 import uuid
+import json
 import pandas as pd
 from flask import render_template, request
 from app.static.pythonscripts.csv import Csv
@@ -10,10 +11,13 @@ from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.station.station import Station
 from app.models.direction.direction import Direction
+from app.models.event.event import Event
 from app.models.photo.photo import Photo
 from app.static.pythonscripts.csv_single import CsvSingle
 # from app.static.pythonscripts.new_pub import NewPub
 from app.static.pythonscripts.files_detail import FilesDetail
+from app.static.pythonscripts.files_events import FilesEvent
+from app.static.pythonscripts.files_station import FilesStation
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.dataframes import Dataframes
 # from app.static.pythonscripts.controls_list import ControlsList
@@ -88,7 +92,7 @@ def add():
     else:
         # # # GET NEW BLANK PUB TEMPLATE
         print('get empty new pub')
-        df_detail_all = Csv().go_get_details()
+        df_detail_all = FilesDetail().go_get_details()
         avg_latitude = df_detail_all.loc[:, 'detail_latitude'].mean()
         avg_longitude = df_detail_all.loc[:, 'detail_longitude'].mean()
         df_new_pub['detail_latitude'] = avg_latitude
@@ -98,48 +102,36 @@ def add():
     pub_new_json = Dataframes().df_to_dict(df_new_pub)
 
     # # # GET LIST OF STATIONS
-    df_stations = Csv().go_get_stations()
+    df_stations = FilesStation().go_get_stations()
     stations_json = Dataframes().df_to_dict(df_stations)
 
-    # # # FOR TESTING PURPOSES ONLY
-    newdf = df_new_pub.transpose()
-    print(newdf)
-    detail_list = []
-    review_list = []
-    diary_list = []
-    station_list = []
-    direction_list = []
-    for k, v in Detail().__dict__.items():
-        detail_list.append(v.name)
-    for k, v in Review().__dict__.items():
-        review_list.append(v.name)
-    for k, v in Diary().__dict__.items():
-        diary_list.append(v.name)
-    for k, v in Station().__dict__.items():
-        station_list.append(v.name)
-    for k, v in Direction().__dict__.items():
-        direction_list.append(v.name)
+    pub_id = df_new_pub['pub_identity'].values[0]
+    print('pub_id')
+    print(pub_id)
+    df_1_event = FilesEvent().go_get_1_event(pub_id)
+    df_1_event_list_json = df_1_event.to_json(orient='records')
+    json_loads = json.loads(df_1_event_list_json)
+
+    detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
+    review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
+    diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
+    station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
+    direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
+    event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
 
     print('END add')
 
     return render_template('04_add.html',
                            pub=pub_json,
                            pub_new=pub_new_json,
-                           # daily_id=daily_id,
                            env_vars=env_vars,
-                           model_formats=model_formats,
                            alias=alias,
-                           detail=Detail(),
-                           review=Review(),
-                           diary=Diary(),
-                           station=Station(),
-                           direction=Direction(),
                            photo=Photo(),
                            stations=stations_json,
-                           back=back,
-detail_list=detail_list,
-                           review_list=review_list,
-                           diary_list=diary_list,
-                           station_list=station_list,
-                           direction_list=direction_list,
-)
+                           station=station_json,
+                           direction=direction_json,
+                           detail=detail_json,
+                           review=review_json,
+                           diary=diary_json,
+                           events=json_loads,
+                           )
