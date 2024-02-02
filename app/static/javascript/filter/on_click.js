@@ -90,12 +90,12 @@ function on_click_event() {
     for (const [key, value] of Object.entries(review)) {
         if (value.quick_filter) {
             if (document.getElementById(value.name + "_filter").checked == true) {
-                document.getElementById(value.name + "_word").style.color = "white"
+                //document.getElementById(value.name + "_word").style.color = "white"
                 current_carousel = document.getElementById(value.name + "_carousel")
                 current_carousel.classList.remove('carousel_off')
                 current_carousel.classList.add('carousel_on')
             } else {
-                document.getElementById(value.name + "_word").style.color = "black"
+                //document.getElementById(value.name + "_word").style.color = "black"
                 current_carousel = document.getElementById(value.name + "_carousel")
                 current_carousel.classList.remove('carousel_on')
                 current_carousel.classList.add('carousel_off')

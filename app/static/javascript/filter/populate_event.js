@@ -23,10 +23,10 @@ function populate_event(pub_filtered) {
 
             input = document.createElement("input")
             input.type = "checkbox"
-            input.class = "radio"
-            input.value = value.name
-            input.name = "fooay[1][]"
-            //console.log('id: ' + value.name)
+            //input.class = "radio"
+            //input.value = value.name
+            //input.name = "fooay[1][]"
+
             input.id = value.name + "_filter"
             input.onclick = function() { on_click_event() }
 
