@@ -1,17 +1,17 @@
-//function populate_pub(show_pub){
 function populate_pub(show_pub){
     console.log('POPULATE_PUB')
     populate_title(show_pub);
     populate_detail(show_pub);
-    populate_review(show_pub);
+    populate_review(show_pub, 'pub');
     populate_diary(show_pub);
     populate_station(show_pub);
     populate_direction(show_pub);
 }
 function populate_pub_edit(show_pub){
     console.log('POPULATE_PUB edit')
+    populate_title(show_pub);
     populate_detail(show_pub);
-    populate_review_edit(show_pub);
+    populate_review_edit(show_pub, 'edit');
     populate_diary(show_pub);
     populate_station(show_pub);
     populate_direction(show_pub);

@@ -64,10 +64,10 @@ function finalise_results(filtered_pubs) {
     console.log('finalise_results')
     console.log('search_string: ' + search_string)
     console.log('filtered_pubs: ' + filtered_pubs.length)
-    if ((search_string == '') && (filtered_pubs.length == pub.length)) {
+    if ((search_string == '') && (filtered_pubs.length == pub_all.length)) {
         console.log('No search string - No filters')
         display_results('none')
-    } else if ((search_string != '') && (filtered_pubs.length == pub.length)) {
+    } else if ((search_string != '') && (filtered_pubs.length == pub_all.length)) {
         console.log('Search string filled - No filters')
         filtered_pubs = filtered_pubs.slice(0,99)
         populate_header()

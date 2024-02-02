@@ -55,7 +55,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
         } else {
             bounds.extend(places[0].geometry.location);
         }
-        var newArray = pub.filter(function (el) {
+        var newArray = pub_all.filter(function (el) {
             return el.place == places[0].place_id
         });
         console.log(newArray)

@@ -120,10 +120,10 @@ def add():
     event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
 
     print('END add')
-
+    page = "add"
     return render_template('04_add_.html',
-                           pub=pub_json,
-                           pub_new=pub_new_json,
+                           pub_all=pub_json,
+                           pub_1=pub_new_json,
                            env_vars=env_vars,
                            alias=alias,
                            photo=Photo(),
@@ -134,4 +134,5 @@ def add():
                            review=review_json,
                            diary=diary_json,
                            events=json_loads,
+                           page=page
                            )

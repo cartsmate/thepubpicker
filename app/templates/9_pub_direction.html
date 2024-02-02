@@ -33,9 +33,10 @@
 </style>
 <script>console.log('CREATING DIRECTION FIELDS')</script>
 {% for key, value in direction.items() %}
-    {% if name == "readonly" and value.form_visible %}
+    {% if value.form_visible %}
+        <script>console.log('visible: ' + '{{value.name}}' + " : " + '{{value.form_visible}}')</script>
         <div class="form-group row details" id=row_{{value.name}} >
-            <script>console.log('field AGAIN: ' + '{{value.name}}')</script>
+
             <div class="col col-diary-label" >
                 <label class="item-diary-label" for={{value.name}} >{{value.alias}}</label>
             </div>
@@ -58,6 +59,7 @@
 
         </div>
     {% else %}
+        <script>console.log('IN-visible: ' + '{{value.name}}')</script>
         <div class="form-group row no-show" id=row_{{value.name}}>
             <div class="col">
                 <label class="col-form-label no-show" for={{value.name}}></label>

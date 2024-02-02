@@ -1,15 +1,10 @@
 function onload_edit() {
-    console.log('onload edit pub')
+    console.log('onload pub - edit')
     set_color_theme()
-//    populate_pub()
-//    populate_detail();
-//    populate_review();
-//    populate_diary();
-//    populate_station();
-//    populate_direction();
-    populate_pub_edit(pub)
-    populate_photo_carousel()
+    filtered_pubs = pub_1
+    populate_pub_edit(pub_1)
     the_map = document.getElementById('new_map')
     the_map.classList.add('map_on_pub')
-    map_load('pub')
+    map_load('edit')
+    populate_photo_carousel()
 }

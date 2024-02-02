@@ -1,26 +1,4 @@
-<style>
-
-.heading2 {
-    background-color: var(--theme);
-    color: white;
-    padding: 0px;
-    margin-top: 5px;
-    width: 325px;
-}
-.heading_title2 {
-    font-family: Verdana, sans-serif;
-    text-align: center;
-    text-decoration: none;
-    font-size: 10px;
-    font-weight: bold;
-    color: white;
-}
-//.flat_face:hover {
-  //  background-color: #808000;
-    //color: white;
-//}
-</style>
-
+<script>console.log('CREATING REVIEW FIELDS - edit')</script>
 <div class="col d-flex justify-content-center" style="display:flex; flex-wrap: wrap; margin-left: 10px; margin-right: 10px;">
     {% for key, value in review.items() %}
         {% if value.menu_filter %}
@@ -36,6 +14,7 @@
                 </label>
             </div>
         {% else %}
+            <script>console.log('no menu filter')</script>
             <div style="display: none;" id="{{value.name}}_col">
                 <div>
                     <label class="col-form-label" for="{{value.name}}_check"></label>

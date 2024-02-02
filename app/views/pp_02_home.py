@@ -22,17 +22,14 @@ from config import Configurations
 
 
 @app.route("/", methods=['GET'])
-@app.route("/new/", methods=['GET'])
-def new():
-    print('start TITLE NEW')
+@app.route("/home/", methods=['GET'])
+def home():
+    print('start HOME')
 
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
     # # # GET MODEL DISPLAY FORMATS
-    # model_formats = ControlsList().go_get_control_list()
-    alias = Objects().go_get_alias()
-    full_alias = Objects().go_get_full_alias()
     stations_directions_list = Dataframes().go_get_stations_directions_list()
     directions_list = Dataframes().go_get_directions_list()
 
@@ -48,6 +45,9 @@ def new():
 
     # # # GET DAILY PUB
     daily_id = FilesDetail().go_get_details_daily()
+    df_pub_1 = FilesPub().go_get_1_pub(daily_id)
+    # df_pub_1 = FilesDetail().go_get_1_detail(daily_id)
+    pub_1_json = Dataframes().df_to_dict(df_pub_1)
 
     df_sample = df_data.loc[df_data['pub_identity'] == daily_id]
     # sample_json = Dataframes().df_to_dict(df_sample)
@@ -97,11 +97,9 @@ def new():
     return render_template('02_home_.html',
                            env_vars=env_vars,
                            color_theme='#808000',
-                           # model_formats=model_formats,
-                           alias=alias,
-                           full_alias=full_alias,
                            daily_id=daily_id,
-                           pub=pub_ent_json,
+                           pub_1=pub_1_json,
+                           pub_all=pub_ent_json,
                            event=event_json,
                            review=review_json,
                            diary=diary_json,
@@ -111,5 +109,6 @@ def new():
                            directions_list=directions_list,
                            stations_directions_list=stations_directions_list,
                            counter=counter6,
+
                            # no_of_review=no_of_reviews
                            )

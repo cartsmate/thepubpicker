@@ -29,10 +29,6 @@ def pub():
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
-    # # # GET MODEL DISPLAY NAMES
-    alias = Objects().go_get_alias()
-    full_alias = Objects().go_get_full_alias()
-
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
     df_1_pub = FilesPub().go_get_1_pub(pub_id)
@@ -57,32 +53,23 @@ def pub():
     # print(newdf)
     print('END pub')
     name = "readonly"
-
+    page = "pub"
     stations_directions_list = Dataframes().go_get_stations_directions_list()
     directions_list = Dataframes().go_get_directions_list()
     return render_template('03_pub_.html',
-                           pub=pub_json,
+                           pub_1=pub_json,
                            events=json_loads,
                            event=event_json,
                            photos_list=photos_list,
-                           # daily_id=daily_id,
                            env_vars=env_vars,
-                           # model_formats=model_formats,
-                           alias=alias,
-                           full_alias=full_alias,
                            detail=detail_json,
-                           # detail_list=detail_list,
                            review=review_json,
-                           # review_list=review_list,
                            diary=diary_json,
-                           # diary_list=diary_list,
                            station=station_json,
-                           # station_list=station_list,
                            direction=direction_json,
-                           # direction_list=direction_list,
                            directions_list=directions_list,
                            stations_directions_list=stations_directions_list,
                            photo=Photo(),
                            name=name,
-                           # back=back,
-                           filters=filters)
+                           filters=filters,
+                           page=page)

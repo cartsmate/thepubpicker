@@ -1,10 +1,10 @@
 function filter_all_data() {
-    console.log('-- filter by all data')
+    console.log('-- filter by all data: ' + pub_all.length)
     var filter_count = 0
-    data = pub
-    console.log('unfiltered data: ' + data.length)
-    data_by_direction = filter_by_direction(data)
-    if (data_by_direction.length < pub.length) { filter_count ++}
+//    data = pub_all
+
+    data_by_direction = filter_by_direction(pub_all)
+    if (data_by_direction.length < pub_all.length) { filter_count ++}
     data_by_station = filter_by_station(data_by_direction)
     if (data_by_station.length < data_by_direction.length) { filter_count ++}
     data_by_feature = filter_by_feature(data_by_station)

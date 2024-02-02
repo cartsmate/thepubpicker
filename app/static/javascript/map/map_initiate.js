@@ -7,7 +7,7 @@ function clearOverlays() {
 }
 function map_init_gamma() {
     console.log('map init GAMMA')
-    map = map_create(pub[0].detail_latitude, pub[0].detail_longitude, 14)
+    map = map_create(pub_all[0].detail_latitude, pub_all[0].detail_longitude, 14)
     const input = document.getElementById("search-input-navbar");
     const searchBox = new google.maps.places.SearchBox(input);
     // Bias the SearchBox results towards current map's viewport.
@@ -20,21 +20,27 @@ function map_init_gamma() {
 }
 function map_init_pub() {
     console.log('MAP INIT PUB')
-    console.log(pub[0]['detail_latitude'], pub[0]['detail_longitude'])
-    map = map_create(pub[0]['detail_latitude'], pub[0]['detail_longitude'], 15)
+    console.log(pub_1[0]['detail_latitude'], pub_1[0]['detail_longitude'])
+    map = map_create(pub_1[0]['detail_latitude'], pub_1[0]['detail_longitude'], 15)
     map_addListener_bounds_changed_gamma(map, 'pub');
     //marker_add_summary(map, pub[0]['detail_latitude'], pub[0]['detail_longitude'])
 }
 function map_init_add() {
     console.log('MAP INIT ADD')
-    map = map_create(pub_new[0].detail_latitude, pub_new[0].detail_longitude, 22)
+    map = map_create(pub_1[0].detail_latitude, pub_1[0].detail_longitude, 22)
     const input = document.getElementById("search-input-navbar");
     const searchBox = new google.maps.places.SearchBox(input);
     searchbox_addListener_places_changed(map, searchBox);
     //map_addListener_bounds_changed_beta_add(map, pub, searchBox);
     map_addListener_click_add(map)
 }
-
+function map_init_edit() {
+    console.log('MAP INIT EDIT')
+    console.log(pub_1[0]['detail_latitude'], pub_1[0]['detail_longitude'])
+    map = map_create(pub_1[0]['detail_latitude'], pub_1[0]['detail_longitude'], 15)
+    map_addListener_bounds_changed_gamma(map, 'pub');
+    //marker_add_summary(map, pub[0]['detail_latitude'], pub[0]['detail_longitude'])
+}
 /*
 function map_repopulate() {
     console.log('map_repopulate')

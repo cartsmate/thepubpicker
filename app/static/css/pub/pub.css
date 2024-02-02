@@ -16,3 +16,7 @@
     margin-bottom: 5px;
     border-bottom: thin solid black;
 }
+.btn-primary {
+    background-color: #808000;
+    border: thin solid #808000;
+}

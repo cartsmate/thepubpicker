@@ -1,11 +1,13 @@
-function populate_summary(id) {
+function populate_summary() {
     console.log('populate_summary')
-    let summary_pub = pub.filter((x) => {
-        return x.pub_identity == id
-    });
-    text_ref = summary_pub[0]['detail_name'].toString().substring(0,22)  + " | " + summary_pub[0]['station_name'].toString().substring(0,18)
+    console.log(pub_1)
+//    let summary_pub = pub.filter((x) => {
+//        return x.pub_identity == id
+//    });
+    //text_ref = summary_pub[0]['detail_name'].toString().substring(0,22)  + " | " + summary_pub[0]['station_name'].toString().substring(0,18)
+    text_ref = pub_1[0]['detail_name'].toString().substring(0,22)  + " | " + pub_1[0]['station_name'].toString().substring(0,18)
     document.getElementById('summary_name').innerHTML = "<a style='text-decoration: none; justify-content: center; font-size: 14px; font-weight: bold;'>" + text_ref + "</a>"
-    document.getElementById('summary_extra').innerHTML = "<a>" + summary_pub[0]['extra'] + "</a>"
+    document.getElementById('summary_extra').innerHTML = "<a>" + pub_1['extra'] + "</a>"
 }
 
 function populate_title(show_pub) {

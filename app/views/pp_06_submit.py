@@ -33,7 +33,10 @@ def submit():
     # df_pub = CsvSingle().go_get_1_pub(pub_id)
 
     df_details_current = FilesDetail().go_get_details()
-    df_detail_current = df_details_current[df_details_current['pub_identity'] == pub_id]
+    # df_detail_current = df_details_current[df_details_current['pub_identity'] == pub_id]
+    df_detail_current = FilesDetail().go_get_1_detail(pub_id)
+    df_new = df_detail_current.transpose()
+    print(df_new)
     # print('current DETAIL')
     # print(df_detail_current.transpose())
 

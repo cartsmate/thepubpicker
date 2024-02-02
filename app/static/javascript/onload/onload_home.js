@@ -1,27 +1,25 @@
 
-function onload_new() {
+function onload_home() {
     console.log('onload - HOME')
 
-    filtered_pubs = pub
+    filtered_pubs = pub_all
 
     set_color_theme()
     display_counter(counter)
 
-
-
     setup_filters()
-    pub_filtered = setup_filters_populate(pub)
+    pub_filtered = setup_filters_populate(pub_all)
     number_review_attr = get_no_reviews()
     spinner_add_listener_click_face()
 
-    populate_summary(daily_id)
+    populate_summary(pub_1)
     //populate_photo_carousel()
 
     the_map = document.getElementById('new_map')
     the_map.classList.add('map_on_home')
     map_load('home')
 
-    if (filtered_pubs.length == pub.length) {
+    if (filtered_pubs.length == pub_all.length) {
         console.log('on-load: filters CLEAR')
     } else {
         console.log('on-load: filters PRE-SET')

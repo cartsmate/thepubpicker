@@ -101,6 +101,7 @@ class FilesReview:
                             roast='1' if request.form.get('roast' + "_check") == 'on' else '0',
                             scenic='1' if request.form.get('scenic' + "_check") == 'on' else '0',
                             sport='1' if request.form.get('sport' + "_check") == 'on' else '0',
+                            wine='1' if request.form.get('wine' + "_check") == 'on' else '0',
                             nofeature='1' if request.form.get('nofeature' + "_check") == 'on' else '0')
         df_new_review = pd.DataFrame([new_review.__dict__])
         return df_new_review
@@ -110,8 +111,6 @@ class FilesReview:
         for key, value in list(Review().__dict__.items()):
             print(value)
             if value.menu_filter:
-            # if review != 'pub_identity':
-            #     if review in model_formats['icon_list']:
                 print('if')
                 print(value.name + ' : ' + str(request.form.get(value.name + "_check")))
                 df_reviews.loc[df_reviews['pub_identity'] == pub_id, value.name] = '1' \

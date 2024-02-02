@@ -13,6 +13,9 @@ function map_load(page) {
             case 'add':
                 map_initiator = 'map_init_add'
                 break;
+            case 'edit':
+                map_initiator = 'map_init_edit'
+                break;
             default:
                 map_initiator = 'map_init_gamma'
             }

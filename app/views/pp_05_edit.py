@@ -54,8 +54,9 @@ def edit():
     stations_directions_list = Dataframes().go_get_stations_directions_list()
     directions_list = Dataframes().go_get_directions_list()
     print('end EDIT')
+    page = "edit"
     return render_template('05_edit_.html',
-                           pub=pub_json,
+                           pub_1=pub_json,
                            events=json_loads,
                            photos_list=photos_list,
                            # daily_id=daily_id,
@@ -66,5 +67,6 @@ def edit():
                            detail=detail_json,
                            review=review_json,
                            diary=diary_json,
-                           filters=filters
+                           filters=filters,
+                           page=page
                            )

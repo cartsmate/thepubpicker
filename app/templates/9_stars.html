@@ -35,29 +35,29 @@
     overflow: hidden;
 }
 </style>
-<div class="all_stars pointer" onclick="redirect_reviews('{{pub[0]['url']}}')" >
+<div class="all_stars pointer" onclick="redirect_reviews('{{pub_1[0]['url']}}')" >
     <a class="google_reviews">Google Reviews</a>
     <div id="div_rank1" class="stars" >
         <div class="star">
             &bigstar;
-            {% if ( pub[0]['rank'] <= 0): %}
+            {% if ( pub_1[0]['rank'] <= 0): %}
                 <div class="no_star" id="img_rank1">&bigstar;</div>
-            {% elif ( pub[0]['rank'] > 1): %}
+            {% elif ( pub_1[0]['rank'] > 1): %}
                 <div class="full_star" id="img_rank1">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank1" style="width:{{15*(pub[0]['rank'])}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank1" style="width:{{15*(pub_1[0]['rank'])}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
     <div id="div_rank2" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub[0]['rank'] <= 1): %}
+            {% if ( pub_1[0]['rank'] <= 1): %}
                 <div class="no_star" id="img_rank2">&bigstar;</div>
-            {% elif ( pub[0]['rank'] > 2): %}
+            {% elif ( pub_1[0]['rank'] > 2): %}
                 <div class="full_star" id="img_rank2">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank2" style="width:{{15*(pub[0]['rank']-1)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank2" style="width:{{15*(pub_1[0]['rank']-1)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
@@ -65,12 +65,12 @@
     <div id="div_rank3" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub[0]['rank'] <= 2): %}
+            {% if ( pub_1[0]['rank'] <= 2): %}
                 <div class="no_star" id="img_rank3">&bigstar;</div>
-            {% elif ( pub[0]['rank'] > 3): %}
+            {% elif ( pub_1[0]['rank'] > 3): %}
                 <div class="full_star" id="img_rank3">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank3" style="width:{{15*(pub[0]['rank']-2)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank3" style="width:{{15*(pub_1[0]['rank']-2)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
@@ -78,29 +78,29 @@
     <div id="div_rank4" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub[0]['rank'] <= 3): %}
+            {% if ( pub_1[0]['rank'] <= 3): %}
                 <div class="no_star" id="img_rank4">&bigstar;</div>
-            {% elif ( pub[0]['rank'] > 4): %}
+            {% elif ( pub_1[0]['rank'] > 4): %}
                 <div class="full_star" id="img_rank4">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank4" style="width:{{15*(pub[0]['rank']-3)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank4" style="width:{{15*(pub_1[0]['rank']-3)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
     <div id="div_rank5" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub[0]['rank'] <=4): %}
+            {% if ( pub_1[0]['rank'] <=4): %}
                 <div class="no_star" id="img_rank5">&bigstar;</div>
-            {% elif ( pub[0]['rank'] >= 5): %}
+            {% elif ( pub_1[0]['rank'] >= 5): %}
                 <div class="full_star" id="img_rank5">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank5" style="width:{{15*(pub[0]['rank']-4)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank5" style="width:{{15*(pub_1[0]['rank']-4)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
 
-<div style="color: black; font-size: 14px;">{{pub[0]['rank']}}</div>
+<div style="color: black; font-size: 14px;">{{pub_1[0]['rank']}}</div>
 </div>
 
 <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_reviews.js') }}"></script>
