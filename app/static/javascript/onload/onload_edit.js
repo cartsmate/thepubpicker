@@ -1,4 +1,4 @@
-function onload_edit(theme) {
+function onload_edit() {
     console.log('onload edit pub')
     set_color_theme()
 //    populate_pub()
@@ -9,5 +9,7 @@ function onload_edit(theme) {
 //    populate_direction();
     populate_pub_edit(pub)
     populate_photo_carousel()
-    map_load_pub()
+    the_map = document.getElementById('new_map')
+    the_map.classList.add('map_on_pub')
+    map_load('pub')
 }

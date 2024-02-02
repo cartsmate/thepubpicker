@@ -15,7 +15,10 @@ function populate_diary(show_pub){
 //            console.log(value.name.charAt(0).toUpperCase() + value.name.substring(1,3))
 //            console.log(events[0]['event_day'])
             if (value.name.charAt(0).toUpperCase() + value.name.substring(1,3) == events[i]['event_day']) {
-                //console.log('Diary entry: ' + value.name)
+                console.log(i)
+                console.log(value.name)
+                console.log(review)
+                console.log(events[i])
                 //console.log('Event: ' + events[i]['event_type'] + " @ " + events[i]['event_detail'])
                 document.getElementById(value.name).value = review[events[i]['event_type']]['alias2'] + " - " + events[i]['event_detail']
                 break;

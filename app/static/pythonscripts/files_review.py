@@ -107,20 +107,20 @@ class FilesReview:
 
     def update_review_df(self, df_reviews, pub_id):
         print('UPDATE edit review')
-        for review in list(Review().__dict__.keys()):
-            print(review)
-            if review.filter == 'yes':
+        for key, value in list(Review().__dict__.items()):
+            print(value)
+            if value.menu_filter:
             # if review != 'pub_identity':
             #     if review in model_formats['icon_list']:
                 print('if')
-                print(review + ' : ' + str(request.form.get(review + "_check")))
-                df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = '1' \
-                    if (request.form.get(review + "_check") == 'on' or request.form.get(review + "_check") == 'true')\
+                print(value.name + ' : ' + str(request.form.get(value.name + "_check")))
+                df_reviews.loc[df_reviews['pub_identity'] == pub_id, value.name] = '1' \
+                    if (request.form.get(value.name + "_check") == 'on' or request.form.get(value.name + "_check") == 'true')\
                     else '0'
             else:
                 print('else')
-                print(review + ' : ' + str(request.form.get(review + "_check")))
-                df_reviews.loc[df_reviews['pub_identity'] == pub_id, review] = request.form[review + "_check"]
+                print(value.name + ' : ' + str(request.form.get(value.name + "_check")))
+                df_reviews.loc[df_reviews['pub_identity'] == pub_id, value.name] = request.form[value.name + "_check"]
         print('df_reviews')
         df2 = df_reviews.loc[df_reviews['pub_identity'] == pub_id]
         print(df2.transpose())

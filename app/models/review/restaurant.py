@@ -1,7 +1,7 @@
 
 
 class Restaurant:
-    def __init__(self, name="restaurant", alias="Restaurant", alias1="Food", alias2="Restaurant Food", required=False,
+    def __init__(self, name="restaurant", alias="Fine", alias1="Dining", alias2="Restaurant Food", required=False,
                  form_visible=False, table_visible=False, value='0', control="check", icon="restaurant.png",
                  data_type='str', menu_filter=True, quick_filter=False, event_filter=False):
         self.name = name

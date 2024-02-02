@@ -5,7 +5,7 @@ function clearOverlays() {
   }
   markersArray.length = 0;
 }
-function map_addListener_bounds_changed_gamma(map) {
+function map_addListener_bounds_changed_gamma(map, page) {
     console.log('map bounds changed listener GAMMA added')
 
     google.maps.event.addListener(map, 'bounds_changed', function() {
@@ -55,6 +55,7 @@ function map_addListener_bounds_changed_gamma(map) {
             const pubs_east= filtered_pubs.reduce(function(prev, current) {
                 return (prev && prev.detail_longitude < current.detail_longitude) ? prev : current
             })
+            /*
             console.log('pubs_north')
             console.log(pubs_north)
             console.log('pubs_south')
@@ -64,7 +65,7 @@ function map_addListener_bounds_changed_gamma(map) {
             console.log(pubs_west)
             console.log('pubs_east')
             console.log(pubs_east)
-
+            */
             var inbounds = true
             /*
             for (i=0; i<filtered_pubs.length; i++) {
@@ -95,10 +96,13 @@ function map_addListener_bounds_changed_gamma(map) {
             }
 
         }
-
-        mapped_pubs = pubs_to_show
-
-        list_setup_beta()
+        if (page == 'home') {
+            mapped_pubs = pubs_to_show
+            list_setup_beta()
+//        } else {
+//            document.getElementById('template_map').style.display = 'block'
+        }
+        console.log('pubs to show: ' + pubs_to_show.length)
 
     });
 //    return bounds

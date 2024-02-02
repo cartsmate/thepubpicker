@@ -1,6 +1,7 @@
 
 function map_create(lat, lng, zoom) {
     console.log("map create");
+    console.log('zoom level: ' + zoom)
 //    console.log('lat: ' + lat)
 //    console.log('lng: ' + lng)
     var map_prop = {

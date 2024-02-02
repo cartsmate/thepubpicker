@@ -1,11 +1,5 @@
 <style>
-
-.carousel_off {
-    background-color: white;
-}
-.carousel_on {
-    background-color: #808000;
-}
+/*
 .face{
 
   height: 55px;
@@ -31,6 +25,7 @@
     height: 30px;
     width: 30px;
 }
+/*
 </style>
 
 <script>console.log('CREATING REVIEW FIELDS')</script>
@@ -44,10 +39,10 @@
                 <input type="checkbox" id="{{value.name}}_check" name="{{value.name}}_check" style="display: none;" onclick="set_feature_icon_colour('{{value.name}}')">
             {% endif %}
             <label for="{{value.name}}_check" style="margin:0px; padding:0px" >
-                <div id="{{value.name}}_face" style="opacity: 1; margin: 1px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
-                    <img height=35 width=35 src="/static/icons/features/{{value.name}}.png" id="{{value.name}}_img" >
+                <div class="flat_face carousel_off" id="{{value.name}}_face" style="opacity: 1; margin: 1px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
+                    <img style="margin-top: 5px; padding: 1px;" height=35 width=35 src="/static/icons/features/{{value.name}}.png" id="{{value.name}}_img" >
                     <div class="icon_word" id="{{value.name}}_caption">
-                        <span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
+                        <p class="word_face" style="margin-top: 2.5px; font-size: 9px; font-weight: bold;"><span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
                     </div>
                 </div>
             </label>
@@ -63,3 +58,5 @@
     {% endif %}
 {% endfor %}
 </div>
+
+<link rel="stylesheet" href="/static/css/carousel/carousel_spinner.css">

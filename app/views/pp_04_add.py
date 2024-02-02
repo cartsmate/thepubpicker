@@ -121,7 +121,7 @@ def add():
 
     print('END add')
 
-    return render_template('04_add.html',
+    return render_template('04_add_.html',
                            pub=pub_json,
                            pub_new=pub_new_json,
                            env_vars=env_vars,
