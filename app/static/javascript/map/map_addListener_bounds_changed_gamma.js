@@ -55,27 +55,9 @@ function map_addListener_bounds_changed_gamma(map, page) {
             const pubs_east= filtered_pubs.reduce(function(prev, current) {
                 return (prev && prev.detail_longitude < current.detail_longitude) ? prev : current
             })
-            /*
-            console.log('pubs_north')
-            console.log(pubs_north)
-            console.log('pubs_south')
-            console.log(pubs_south)
 
-            console.log('pubs_west')
-            console.log(pubs_west)
-            console.log('pubs_east')
-            console.log(pubs_east)
-            */
             var inbounds = true
-            /*
-            for (i=0; i<filtered_pubs.length; i++) {
-                if (filtered_pubs[i]['detail_latitude'] > south || filtered_pubs[i]['detail_latitude'] < north || filtered_pubs[i]['detail_longitide'] > west || filtered_pubs[i]['detail_longitide'] < east) {
-                    inbounds = false
-                }
-            }
-            console.log('inbounds')
-            console.log(inbounds)
-            */
+
             if (inbounds) {
                 for (i=0; i<filtered_pubs.length; i++) {
                     marker_in_bounds ++
@@ -105,8 +87,9 @@ function map_addListener_bounds_changed_gamma(map, page) {
         console.log('pubs to show: ' + pubs_to_show.length)
 
     });
-//    return bounds
+
 }
+
 //function fit_all_markers() {
 //    console.log('fit_all_markers')
 //    console.log('bounds')
