@@ -1,20 +1,20 @@
 function filter_reset() {
-    console.log('FILTER_RESET')
-    //console.log('pub count: ' + pub.length)
-    all_data = pub
+    console.log('FILTER_RESET: ' + pub_all.length)
+
+    all_data = pub_all
     document.getElementById('template_map').style.display = "none"
     document.getElementById('template_list').style.display = "none"
     document.getElementById('template_header').style.display = "none"
 
-    populate_direction(pub)
+    populate_direction(pub_all)
 
-    populate_station(pub)
+    populate_station(pub_all)
 
     for (const [key, value] of Object.entries(review)) {
         console.log('-- reset features')
         if (value.menu_filter) {
-            var filtered_data = all_data.filter(function(pub) {
-                return pub[value.name] == '1'
+            var filtered_data = all_data.filter(function(x) {
+                return x[value.name] == '1'
             })
             //console.log(value.name)
             document.getElementById(value.name + "_filter").style.display = 'block'

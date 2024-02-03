@@ -5,11 +5,11 @@ function toggle_reset() {
 
         filter_reset()
         console.log('USER INPUT: reset click')
-        console.log('pub length: ' + pub.length)
+        console.log('pub length: ' + pub_all.length)
         //pub_filtered = pub
         //list_setup_beta(pub_filtered)
         //populate_review(pub_filtered)
-        populate_all_filters(pub)
+        populate_all_filters(pub_all)
         //populate_header(pub_filtered.length)
         //map_load_collection(pub_filtered)
         document.getElementById('template_map').style.display = 'none'
