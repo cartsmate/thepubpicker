@@ -17,7 +17,7 @@ function map_load(page) {
                 map_initiator = 'map_init_edit'
                 break;
             default:
-                map_initiator = 'map_init_gamma'
+                map_initiator = 'map_init_home'
             }
         js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=' + map_initiator
         document.head.appendChild(js)

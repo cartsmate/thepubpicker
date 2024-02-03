@@ -5,7 +5,7 @@ function clearOverlays() {
   }
   markersArray.length = 0;
 }
-function map_addListener_bounds_changed_gamma(map, page) {
+function map_addListener_bounds_changed(map, page) {
     console.log('map bounds changed listener GAMMA added')
 
     google.maps.event.addListener(map, 'bounds_changed', function() {

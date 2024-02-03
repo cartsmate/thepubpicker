@@ -19,6 +19,7 @@ function onload_home() {
 
     setup_filters()
     pub_filtered = setup_filters_populate(pub_all)
+//    check/remove duplicates
     number_review_attr = get_no_reviews()
     spinner_add_listener_click_face()
 
