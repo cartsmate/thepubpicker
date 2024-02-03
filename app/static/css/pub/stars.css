@@ -1,0 +1,35 @@
+.all_stars {
+    margin:0px;
+    padding: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.google_reviews {
+    font-family: Verdana sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+}
+.star {
+    color: #A9A9A9;
+    position: relative;
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+.half_star, .full_star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    color: black;
+    overflow: hidden;
+}
+.no_star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    color: black;
+    overflow: hidden;
+}

@@ -1,63 +1,26 @@
-<style>
-.all_stars {
-    margin:0px;
-    padding: 0px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-}
-.google_reviews {
-    font-family: Verdana sans-serif;
-    font-size: 10px;
-    text-decoration: none;
-}
-.star {
-    color: #A9A9A9;
-    position: relative;
-    font-size: 15px;
-    margin: 0px;
-    padding: 0px;
-}
-.half_star, .full_star {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    color: black;
-    overflow: hidden;
-}
-.no_star {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0px;
-    color: black;
-    overflow: hidden;
-}
-</style>
 <div class="all_stars pointer" onclick="redirect_reviews('{{pub_1[0]['url']}}')" >
     <a class="google_reviews">Google Reviews</a>
     <div id="div_rank1" class="stars" >
         <div class="star">
             &bigstar;
-            {% if ( pub_1[0]['rank'] <= 0): %}
+            {% if pub_1[0]['rank']|int <= 0 %}
                 <div class="no_star" id="img_rank1">&bigstar;</div>
-            {% elif ( pub_1[0]['rank'] > 1): %}
+            {% elif pub_1[0]['rank']|int > 1 %}
                 <div class="full_star" id="img_rank1">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank1" style="width:{{15*(pub_1[0]['rank'])}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank1" style="width:{{15*(pub_1[0]['rank']|int)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
     <div id="div_rank2" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub_1[0]['rank'] <= 1): %}
+            {% if pub_1[0]['rank']|int <= 1 %}
                 <div class="no_star" id="img_rank2">&bigstar;</div>
-            {% elif ( pub_1[0]['rank'] > 2): %}
+            {% elif pub_1[0]['rank']|int > 2 %}
                 <div class="full_star" id="img_rank2">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank2" style="width:{{15*(pub_1[0]['rank']-1)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank2" style="width:{{15*(pub_1[0]['rank']|int-1)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
@@ -65,12 +28,12 @@
     <div id="div_rank3" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub_1[0]['rank'] <= 2): %}
+            {% if pub_1[0]['rank']|int <= 2 %}
                 <div class="no_star" id="img_rank3">&bigstar;</div>
-            {% elif ( pub_1[0]['rank'] > 3): %}
+            {% elif pub_1[0]['rank']|int > 3 %}
                 <div class="full_star" id="img_rank3">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank3" style="width:{{15*(pub_1[0]['rank']-2)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank3" style="width:{{15*(pub_1[0]['rank']|int-2)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
@@ -78,29 +41,31 @@
     <div id="div_rank4" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub_1[0]['rank'] <= 3): %}
+            {% if pub_1[0]['rank']|int <= 3 %}
                 <div class="no_star" id="img_rank4">&bigstar;</div>
-            {% elif ( pub_1[0]['rank'] > 4): %}
+            {% elif pub_1[0]['rank']|int > 4 %}
                 <div class="full_star" id="img_rank4">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank4" style="width:{{15*(pub_1[0]['rank']-3)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank4" style="width:{{15*(pub_1[0]['rank']|int-3)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
     <div id="div_rank5" class="stars">
         <div class="star">
             &bigstar;
-            {% if ( pub_1[0]['rank'] <=4): %}
+            {% if pub_1[0]['rank']|int <=4 %}
                 <div class="no_star" id="img_rank5">&bigstar;</div>
-            {% elif ( pub_1[0]['rank'] >= 5): %}
+            {% elif pub_1[0]['rank']|int >= 5 %}
                 <div class="full_star" id="img_rank5">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank5" style="width:{{15*(pub_1[0]['rank']-4)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank5" style="width:{{15*(pub_1[0]['rank']|int-4)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
 
 <div style="color: black; font-size: 14px;">{{pub_1[0]['rank']}}</div>
 </div>
+
+<link rel="stylesheet" href="/static/css/pub/stars.css">
 
 <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/redirect/redirect_reviews.js') }}"></script>
