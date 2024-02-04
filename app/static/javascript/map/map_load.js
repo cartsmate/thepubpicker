@@ -6,6 +6,8 @@ function map_load(page) {
     if (window.navigator.onLine == true) {
         console.log('on-line')
         js.setAttribute("defer", "defer");
+        map_initiator = 'map_init'
+        /*
         switch(page) {
             case 'pub':
                 map_initiator = 'map_init_pub'
@@ -19,6 +21,7 @@ function map_load(page) {
             default:
                 map_initiator = 'map_init_home'
             }
+            */
         js.src = 'https://maps.googleapis.com/maps/api/js?key=' + env_vars['google_key'] + '&libraries=places&callback=' + map_initiator
         document.head.appendChild(js)
     } else {

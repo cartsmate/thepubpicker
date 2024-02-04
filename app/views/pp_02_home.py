@@ -109,6 +109,7 @@ def home():
                            directions_list=directions_list,
                            stations_directions_list=stations_directions_list,
                            counter=counter6,
+                           page='home'
 
                            # no_of_review=no_of_reviews
                            )

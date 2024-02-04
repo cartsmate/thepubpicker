@@ -6,10 +6,10 @@ function clearOverlays() {
   markersArray.length = 0;
 }
 function map_addListener_bounds_changed(map, page) {
-    console.log('map bounds changed listener GAMMA added')
+    console.log('map_addListener_bounds_changed ADDED')
 
     google.maps.event.addListener(map, 'bounds_changed', function() {
-        console.log('map bounds are changed GAMMA')
+        console.log('map_addListener - BOUNDS CHANGED')
 
         clearOverlays()
         console.log('filtered_pubs: ' + filtered_pubs.length)

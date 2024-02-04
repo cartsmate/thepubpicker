@@ -1,5 +1,20 @@
-function populate_pub(show_pub){
-    console.log('POPULATE_PUB')
+function populate_pub(show_pub, page) {
+    console.log('POPULATE_PUB consolidated')
+    if (page != 'add') {
+        populate_title(show_pub);
+    }
+    if (page == 'pub') {
+        populate_summary(show_pub);
+    }
+    populate_detail(show_pub);
+    populate_review(show_pub, page);
+    populate_diary(show_pub);
+    populate_station(show_pub);
+    populate_direction(show_pub);
+}
+/*
+function populate_pub_pub(show_pub){
+    console.log('POPULATE_PUB pub')
     populate_title(show_pub);
     populate_detail(show_pub);
     populate_review(show_pub, 'pub');
@@ -17,8 +32,8 @@ function populate_pub_edit(show_pub){
     populate_direction(show_pub);
 }
 //function populate_pub_add_beta(show_pub){
-function populate_pub_add_beta(show_pub){
-    console.log('POPULATE_PUB add BETA')
+function populate_pub_add(show_pub){
+    console.log('POPULATE_PUB add')
     //populate_detail(show_pub);
     populate_detail(show_pub);
     populate_review(show_pub);
@@ -30,6 +45,7 @@ function populate_pub_add_beta(show_pub){
     populate_direction(show_pub);
     //populate_photo();
 }
+*/
 /*
     //console.log(pub)
     for (i = 0; i < model_formats['fields_list'].length; i++) {
