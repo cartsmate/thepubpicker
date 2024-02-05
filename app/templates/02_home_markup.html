@@ -1,4 +1,4 @@
-<body id="body" class="page-background" data-color={{color_theme}}>
+<body id="body" class="page-background disable-dbl-tap-zoom" data-color={{color_theme}} onClick="{e => e.preventDefault()}" >
     <div class="container-fluid screen-reactor">
         <div class="row orange" id="template_title">
             <div class="col black">
@@ -7,7 +7,7 @@
         </div>
         <div class="row orange" id="template_intro">
             <div class="col black">
-                <p onClick="{e => e.preventDefault()}" class="disable-dbl-tap-zoom" style="margin-bottom: 0px; text-align: center; font-size: 12px; margin: 0px 25px; line-height: 1.0;">
+                <p style="margin-bottom: 0px; text-align: center; font-size: 12px; margin: 0px 25px; line-height: 1.0;">
                     The London Pub Picker is your best place to find London's perfect pub.
                     Search for venues by your preferred location, features or events.
                 </p>
