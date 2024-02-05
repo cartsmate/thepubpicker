@@ -12,7 +12,10 @@ function map_create(lat, lng, zoom) {
         controlSize: 30,
         streetViewControl: false,
         //minZoom: 11,
-
+        restriction: {
+            latLngBounds: get_london_bounds(),
+            strictBounds: true,
+        },
         disableDefaultUI: true,
         }
     map = new google.maps.Map(document.getElementById('new_map'), map_prop)

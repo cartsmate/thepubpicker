@@ -8,7 +8,7 @@ function set_feature_icon_colour(check_item, theme) {
     var checkFace = document.getElementById(check_item + "_face");
     var checkCarousel = document.getElementById(check_item + "_carousel");
     if (checkBox.checked == true) {
-        console.log('checkbox is true')
+        //console.log('checkbox is true')
         checkCol.style.opacity = "1.0"
         checkCarousel.classList.add("carousel_on")
         //caption.style.opacity = "1.0"
@@ -19,7 +19,7 @@ function set_feature_icon_colour(check_item, theme) {
         //checkCol.style.border = "thin solid coral";
         checkBox.value = true
     } else {
-        console.log('checkbox is false')
+        //console.log('checkbox is false')
         checkCol.style.opacity = "0.5"
         checkCarousel.classList.add("carousel_off")
         //caption.style.opacity = "0.5"

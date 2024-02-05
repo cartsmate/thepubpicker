@@ -8,7 +8,7 @@ function spinner_add_listener_click_face() {
             document.getElementById(value.name + "_carousel").addEventListener('click', (function (marker) {
                 return function () {
                     console.log('carousel spinner listener triggered')
-                    console.log(marker)
+                    //console.log(marker)
                     if (document.getElementById(marker + '_carousel').style.opacity == '1') {
                         console.log('opacity=1')
                         if (document.getElementById(marker + "_filter").checked == true){
@@ -30,7 +30,7 @@ function spinner_add_listener_click_face() {
                                     temp_carousel.classList.add('carousel_off')
                                 }
                             }
-                            console.log(marker + ' : true')
+                            //console.log(marker + ' : true')
                             document.getElementById(marker + "_filter").checked = true;
                             //document.getElementById(marker + "_word").style.color = "white"
                             current_carousel = document.getElementById(marker + "_carousel")
@@ -38,7 +38,10 @@ function spinner_add_listener_click_face() {
                             current_carousel.classList.add('carousel_on')
                         }
                         //filtered_pubs = update_filters()
+                        //filter_all_data()
                         center_map()
+
+
                     } else {
                         console.log('opacity=0')
                     }

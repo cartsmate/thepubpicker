@@ -71,91 +71,15 @@
     </div>
 </div>
 <link rel="stylesheet" href="/static/css/filter/diary_filter.css">
-<style>
 
-.caption_count {
-    margin: 0px;
-    padding: 0px;
-    font-size: 10px;
-    font-weight: bold;
-    font-color: black;
-}
-.caption_day {
-    margin: 0px;
-    padding: 0px;
-    font-size: 11px;
-    font-weight: bold;
-    font-color: black;
-}
-.check_face {
-    opacity: 1;
-    //margin-top: 5px;
-    padding: 2.5px;
-    width: 45px;
-    text-align: center;
-    border: thin solid #808000;
-    border-radius: 1.2rem;
-}
-.check_face:hover {
-    background-color: #808000;
-    color: white;
-}
-
-</style>
 
 <script>
-<!--
-    function olive_background(element_clicked) {
-        console.log('olive background')
-        console.log('element_clicked: ' + element_clicked)
-        current_carousel = document.getElementById(element_clicked + "_face")
-        if (current_carousel.classList.contains('carousel_off')) {
-            if (document.getElementById('monday_face').classList.contains('carousel_on')) {
-                document.getElementById('monday_face').classList.remove('carousel_on')
-                document.getElementById('monday_face').classList.add('carousel_off')
-            }
-            if (document.getElementById('tuesday_face').classList.contains('carousel_on')) {
-                document.getElementById('tuesday_face').classList.remove('carousel_on')
-                document.getElementById('tuesday_face').classList.add('carousel_off')
-            }
-            if (document.getElementById('wednesday_face').classList.contains('carousel_on')) {
-                document.getElementById('wednesday_face').classList.remove('carousel_on')
-                document.getElementById('wednesday_face').classList.add('carousel_off')
-            }
-            if (document.getElementById('thursday_face').classList.contains('carousel_on')) {
-                document.getElementById('thursday_face').classList.remove('carousel_on')
-                document.getElementById('thursday_face').classList.add('carousel_off')
-            }
-            if (document.getElementById('friday_face').classList.contains('carousel_on')) {
-                document.getElementById('friday_face').classList.remove('carousel_on')
-                document.getElementById('friday_face').classList.add('carousel_off')
-            }
-            if (document.getElementById('saturday_face').classList.contains('carousel_on')) {
-                document.getElementById('saturday_face').classList.remove('carousel_on')
-                document.getElementById('saturday_face').classList.add('carousel_off')
-            }
-            if (document.getElementById('sunday_face').classList.contains('carousel_on')) {
-                document.getElementById('sunday_face').classList.remove('carousel_on')
-                document.getElementById('sunday_face').classList.add('carousel_off')
-            }
-            current_carousel.classList.remove('carousel_off')
-            current_carousel.classList.add('carousel_on')
-        } else {
-            current_carousel.classList.remove('carousel_on')
-            current_carousel.classList.add('carousel_off')
-        }
-    }
--->
     // the selector will match all input controls of type :checkbox
     // and attach a click event handler
     $("input:checkbox").on('click', function() {
         // in the handler, 'this' refers to the box clicked on
         var $box = $(this);
         if ($box.is(":checked")) {
-            console.log('INSIDE is diary CHECKED')
-            console.log($box.attr("name"))
-            console.log($box.attr("value"))
-            //olive_background($box.attr("value"))
             // the name of the box is retrieved using the .attr() method
             // as it is assumed and expected to be immutable
             var group = "input:checkbox[name='" + $box.attr("name") + "']";
@@ -165,13 +89,8 @@
             $box.prop("checked", true);
 
         } else {
-            //white_background($box.attr("value"))
-            console.log('INSIDE is diary UNchecked')
             $box.prop("checked", false);
-            //list_setup_diary('none')
-            //olive_background($box.attr("value"))
         }
-        console.log('day of the week clicked')
         center_map()
     });
 

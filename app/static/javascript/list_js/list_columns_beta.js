@@ -19,9 +19,7 @@ function list_columns_beta() {
     visible['ordering'] = true
     visible['detail_name'] = true
 
-    if (document.getElementById('quiz_filter').checked || document.getElementById('brunch_filter').checked ||
-        document.getElementById('music_filter').checked || document.getElementById('entertain_filter').checked ||
-        document.getElementById('monday_filter').checked || document.getElementById('tuesday_filter').checked ||
+    if (document.getElementById('monday_filter').checked || document.getElementById('tuesday_filter').checked ||
         document.getElementById('wednesday_filter').checked || document.getElementById('thursday_filter').checked ||
         document.getElementById('friday_filter').checked || document.getElementById('saturday_filter').checked ||
         document.getElementById('sunday_filter').checked) {

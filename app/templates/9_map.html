@@ -1,15 +1,27 @@
-<div class="col d-flex justify-content-center" id="col_map" style="margin: 0px; padding: 0px; border: thin solid #808000;">
-    <div id="new_map"></div>
-    <div class="map_words" id="msg_map"></div>
+<div class="col justify-content-center map_box" >
+    <div class="row map_border_row">
+        <div class="col"></div>
+        <div class="col"><p class="notes_text ns" id="north_note">NORTH</p></div>
+        <div class="col"></div>
+    </div>
+    <div class="row" style="margin:auto; width: 100%; height: 440px;">
+        <div class="map_border_col"><p class="notes_text ew rotate_lr" id="west_note">WEST</p></div>
+        <div id="new_map"></div>
+        <div class="map_border_col"><p class="notes_text ew rotate_rl" id="east_note">EAST</p></div>
+    </div>
+    <div class="row map_border_row">
+        <div class="col"></div>
+        <div class="col"><p class="notes_text ns" id="south_note">SOUTH</p></div>
+        <div class="col"></div>
+    </div>
+    <div class="row map_words" id="msg_map" style="display:none;"></div>
 </div>
-
 <link rel="stylesheet" href="/static/css/map/map.css">
 
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_create.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_load.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add_bounds_beta.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_addListener_click.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_center.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/searchbox_addListener_places_changed.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/sort_by_distance.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/map/map_initiate.js') }}"></script>

@@ -43,6 +43,9 @@ class FilesEvent:
     def go_get_events(self):
         print('go_get_events')
         df_events = pd.read_csv(directory_path + '/files/events.csv')
+        # print(df_events)
+        df_events.event_detail = df_events.event_detail.fillna('')
+        # print(df_events)
         return df_events
 
     def go_get_1_event(self, pub_id):
@@ -51,7 +54,7 @@ class FilesEvent:
         df_1_event = df_events.loc[df_events['pub_identity'] == pub_id]
         # print('df_1_event')
         df_list = df_1_event.values.tolist()
-        print(df_list)
+        # print(df_list)
         # print(json.loads(df_list))
         # print(json.dumps(df_list))
         # print(json.loads(json.dumps(df_list)))

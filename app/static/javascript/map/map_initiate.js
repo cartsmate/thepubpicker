@@ -15,7 +15,7 @@ function map_init() {
     if (page == 'add'){
         var zoom = 22
     } else {
-        var zoom = 15
+        var zoom = 13
     }
     map = map_create(display_pub[0].detail_latitude, display_pub[0].detail_longitude, zoom)
     if (page == 'home'){
@@ -63,17 +63,22 @@ function map_init_edit() {
 */
 function setup_searchbox() {
     const input = document.getElementById("search-input-navbar");
-    var northEast = new google.maps.LatLng(52, 0.3);
-    var southWest = new google.maps.LatLng(51.2, -0.56);
-    var GreaterLondon = new google.maps.LatLngBounds(southWest, northEast);
+//    var northEast = new google.maps.LatLng(52, 0.3);
+//    var southWest = new google.maps.LatLng(51.2, -0.56);
+//    var GreaterLondon = new google.maps.LatLngBounds(southWest, northEast);
     var options = {
-        bounds: GreaterLondon,
+        bounds: get_london_bounds(),
         componentRestrictions: {country: 'uk'}
     };
     var searchBox = new google.maps.places.Autocomplete(input, options);
     searchbox_addListener_places_changed(map, searchBox);
 }
-
+function get_london_bounds() {
+    var northEast = new google.maps.LatLng(52, 0.3);
+    var southWest = new google.maps.LatLng(51.2, -0.56);
+    var GreaterLondon = new google.maps.LatLngBounds(southWest, northEast);
+    return GreaterLondon
+}
 /*
 function map_repopulate() {
     console.log('map_repopulate')

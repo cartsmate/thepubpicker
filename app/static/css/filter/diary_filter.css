@@ -24,3 +24,31 @@
     padding: 0px;
     margin: 5px 0px
 }
+
+.caption_count {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    font-color: black;
+}
+.caption_day {
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    font-color: black;
+}
+.check_face {
+    opacity: 1;
+    //margin-top: 5px;
+    padding: 2.5px;
+    width: 45px;
+    text-align: center;
+    border: thin solid #808000;
+    border-radius: 1.2rem;
+}
+.check_face:hover {
+    background-color: #808000;
+    color: white;
+}

@@ -10,25 +10,44 @@
     width:365px;
     background: white;
     }
-
+.tbl_ordering {
+        width: 30px;
+    }
+.tbl_rank {
+    width: 50px;
+}
+.tbl_event_day {
+    width: 40px;
+}
+.tbl_detail_name {
+    width: 145px;
+}
+.tbl_station_name {
+    width: 110px;
+}
 /* the css adjustment for the site between two widths */
 @media screen and (max-width:1800px) and (min-width:1025px) {
     .screen-reactor {
         width:500px;
         background: white;
         }
-    #col_map {
-        width: 480px;
-        }
+    #new_map {
+        width: 434px;
+        height: 436px;
+    }
 }
 @media screen and (max-width:1024x) and (min-width:431px) {
     .screen-reactor {
         width:430px;
         background: white;
         }
-    #col_map {
-        width: 410px;
-        }
+    //#col_map {
+     //   width: 410px;
+      //  }
+    #new_map {
+        width: 361px;
+        height: 361px;
+    }
 }
 
 @media screen and (max-width:430px) and (min-width:425px) {
@@ -36,23 +55,12 @@
         width:424px;
         background: #808000;
         }
-    #col_map {
-        width: 404px;
-        }
-    .tbl_ordering {
-        width: 30px;
-    }
-    .tbl_rank {
-        width: 50px;
-    }
-    .tbl_event_day {
-        width: 40px;
-    }
-    .tbl_detail_name {
-        width: 145px;
-    }
-    .tbl_station_name {
-        width: 110px;
+    //#col_map {
+    //    width: 404px;
+    //    }
+    #new_map {
+        width: 355px;
+        height: 355px;
     }
 
 }
@@ -61,27 +69,39 @@
         width:390px;
         background: white;
         }
-    #col_map {
-        width: 370px;
-        }
+    //#col_map {
+    //    width: 370px;
+    //    }
+    #new_map {
+        width: 321px;
+        height: 321px;
+    }
 }
 @media screen and (max-width:395px) and (min-width:371px) {
     .screen-reactor {
         width:375px;
         background: white;
         }
-    #col_map {
-        width: 355px;
-        }
+    //#col_map {
+    //    width: 355px;
+    //    }
+    #new_map {
+        width: 301px;
+        height: 301px;
+    }
 }
 @media screen and (max-width:370x) and (min-width:321px) {
     .screen-reactor {
         width:315px;
         background: white;
         }
-    #col_map {
-        width: 295px;
-        }
+    //#col_map {
+    //    width: 295px;
+     //   }
+    #new_map {
+        width: 251px;
+        height: 251px;
+    }
 }
 /* the css adjustment for the site with a max-width of 270px */
 @media screen and (max-width:320px) {
@@ -89,7 +109,11 @@
         width:315px;
         background: white;
         }
-    #col_map {
-        width: 295px;
-        }
+    //#col_map {
+    //    width: 295px;
+    //    }
+    #new_map {
+        width: 250px;
+        height: 250px;
+    }
 }

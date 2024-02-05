@@ -34,5 +34,6 @@ function filter_all_data() {
         document.getElementById("search-input-navbar").style.width = "285px";
     }
     console.log('---- pub selection: ' + data_by_feature.length)
-    return data_by_diary
+    filtered_pubs = data_by_diary
+    return filtered_pubs
 }

@@ -3,7 +3,7 @@ function filter_by_event(filtered_data) {
 
     for (const [key, value] of Object.entries(review)) {
         if (value.event_filter) {
-            console.log('event: ' + value.name)
+            //console.log('event: ' + value.name)
             //console.log(document.getElementById(value.name + "_filter").checked)
             if (document.getElementById(value.name + "_filter").checked) {
                 //console.log('filter checked')

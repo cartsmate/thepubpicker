@@ -12,7 +12,7 @@ function get_filter_values() {
     }
     console.log(direction_list)
     filter_list.push(direction_list)
-    console.log(filter_list)
+    //console.log(filter_list)
 
     station_list = ['sl']
     for (i=0; i<stations_directions_list.length; i++) {
@@ -24,9 +24,9 @@ function get_filter_values() {
             console.log(stations_directions_list[i][0] + " : is NOT clicked")
         }
     }
-    console.log(station_list)
+    //console.log(station_list)
     filter_list.push(station_list)
-    console.log(filter_list)
+    //console.log(filter_list)
 
     feature_list = ['fl']
 //    for (i=0; i<model_formats['icon_list'].length; i++) {

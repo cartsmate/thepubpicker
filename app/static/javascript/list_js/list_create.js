@@ -1,6 +1,8 @@
-function list_create() {
+function list_create(mapped_pubs) {
     console.log('-- list_create')
     pubs_to_show = mapped_pubs
+    console.log('pubs_to_show')
+    console.log(pubs_to_show)
     var tbl = document.createElement("table");
     tbl.setAttribute("id", "pub_list");
     document.getElementById('pub_table').visible = false

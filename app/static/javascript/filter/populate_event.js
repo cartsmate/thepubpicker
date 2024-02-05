@@ -8,7 +8,7 @@ function populate_event(pub_filtered) {
             var filtered_data = pub_filtered.filter(function(x) {
                 return x['event_type'] == value.name
             })
-            console.log(filtered_data.length)
+            //console.log(filtered_data.length)
 //            filtered_data = pub_filtered
             record = document.createElement("div")
             record.className = 'row'
@@ -64,9 +64,9 @@ function populate_event(pub_filtered) {
         // in the handler, 'this' refers to the box clicked on
         var $box = $(this);
         if ($box.is(":checked")) {
-            console.log('INSIDE is CHECKED')
-            console.log($box.attr("name"))
-            console.log($box.attr("value"))
+            //console.log('INSIDE is CHECKED')
+            //console.log($box.attr("name"))
+            //console.log($box.attr("value"))
 //            list_setup_event($box.attr("value"))
 //            document.getElementById('template_list').display = "block"
             // the name of the box is retrieved using the .attr() method
@@ -78,7 +78,7 @@ function populate_event(pub_filtered) {
             $box.prop("checked", true);
             //on_click_event()
         } else {
-            console.log('INSIDE is UNchecked')
+            //console.log('INSIDE is UNchecked')
             $box.prop("checked", false);
             //list_setup_event('none')
         }
