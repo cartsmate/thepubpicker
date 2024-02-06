@@ -1,5 +1,5 @@
 function filter_by_feature(filtered_data) {
-    console.log('---- feature-in: ' + filtered_data.length)
+    //console.log('---- feature-in: ' + filtered_data.length)
 
     for (const [key, value] of Object.entries(review)) {
         if (value.menu_filter & !value.event_filter) {

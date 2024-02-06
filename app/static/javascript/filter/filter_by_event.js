@@ -1,5 +1,5 @@
 function filter_by_event(filtered_data) {
-    console.log('---- event-in: ' + filtered_data.length)
+    //console.log('---- event-in: ' + filtered_data.length)
 
     for (const [key, value] of Object.entries(review)) {
         if (value.event_filter) {

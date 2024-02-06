@@ -44,7 +44,7 @@
      //   width: 410px;
       //  }
     #new_map {
-        width: 370px;
+        width: 368px;
     }
 }
 
@@ -57,7 +57,7 @@
     //    width: 404px;
     //    }
     #new_map {
-        width: 364px;
+        width: 362px;
     }
 
 }
@@ -70,7 +70,7 @@
     //    width: 370px;
     //    }
     #new_map {
-        width: 330px;
+        width: 328px;
     }
 }
 @media screen and (max-width:395px) and (min-width:371px) {
@@ -82,7 +82,7 @@
     //    width: 355px;
     //    }
     #new_map {
-        width: 310px;
+        width: 308px;
     }
 }
 @media screen and (max-width:370x) and (min-width:321px) {
@@ -94,7 +94,7 @@
     //    width: 295px;
      //   }
     #new_map {
-        width: 260px;
+        width: 258px;
     }
 }
 /* the css adjustment for the site with a max-width of 270px */
@@ -107,6 +107,6 @@
     //    width: 295px;
     //    }
     #new_map {
-        width: 260px;
+        width: 258px;
     }
 }
