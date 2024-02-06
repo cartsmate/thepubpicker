@@ -33,7 +33,6 @@
         }
     #new_map {
         width: 434px;
-        height: 436px;
     }
 }
 @media screen and (max-width:1024x) and (min-width:431px) {
@@ -45,8 +44,7 @@
      //   width: 410px;
       //  }
     #new_map {
-        width: 361px;
-        height: 361px;
+        width: 371px;
     }
 }
 
@@ -59,8 +57,7 @@
     //    width: 404px;
     //    }
     #new_map {
-        width: 355px;
-        height: 355px;
+        width: 365px;
     }
 
 }
@@ -73,8 +70,7 @@
     //    width: 370px;
     //    }
     #new_map {
-        width: 321px;
-        height: 321px;
+        width: 331px;
     }
 }
 @media screen and (max-width:395px) and (min-width:371px) {
@@ -86,8 +82,7 @@
     //    width: 355px;
     //    }
     #new_map {
-        width: 301px;
-        height: 301px;
+        width: 311px;
     }
 }
 @media screen and (max-width:370x) and (min-width:321px) {
@@ -99,8 +94,7 @@
     //    width: 295px;
      //   }
     #new_map {
-        width: 251px;
-        height: 251px;
+        width: 261px;
     }
 }
 /* the css adjustment for the site with a max-width of 270px */
@@ -113,7 +107,6 @@
     //    width: 295px;
     //    }
     #new_map {
-        width: 250px;
-        height: 250px;
+        width: 260px;
     }
 }
