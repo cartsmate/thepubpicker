@@ -4,9 +4,7 @@ function filter_by_station(data) {
     ticked_list = []
 
     for (i=0; i<stations_directions_list.length; i++) {
-//        console.log('out: ' + stations_directions_list[i][0])
         if (document.getElementById(stations_directions_list[i][0] + "_filter").checked) {
-            //console.log('in: ' + stations_directions_list[i])
             ticked_list.push(stations_directions_list[i][0])
         }
     }

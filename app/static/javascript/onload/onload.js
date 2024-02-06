@@ -11,43 +11,31 @@ function start_up(page) {
 }
 function onload_home() {
     console.log('onload - HOME')
-
     start_up('home')
-
     display_counter(counter)
-
     setup_filters()
     filtered_pubs = setup_filters_populate(pub_all)
     populate_summary(pub_1)
-
     show_results()
-
-
 }
 function onload_pub() {
     console.log('onload pub')
     start_up('pub')
-//    set_color_theme()
-    filtered_pubs = pub_1
+    filtered_pubs = unique_data = pub_1
     populate_pub(pub_1, 'pub')
-
     populate_photo_carousel()
-
 }
 function onload_add() {
     console.log('onload_add pub: ' + pub_1)
     start_up('add')
     populate_pub(pub_1, 'add')
-    //populate_pub_add_beta(pub_1)
 }
 function onload_edit() {
     console.log('onload pub - edit')
     start_up('edit')
-    filtered_pubs = pub_1
-    //populate_pub_edit(pub_1)
+    filtered_pubs = unique_data = pub_1
     populate_pub(pub_1, 'edit')
     populate_photo_carousel()
-
 }
 function addCss(fileName) {
    var link = $("<link />",{

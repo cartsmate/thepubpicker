@@ -19,7 +19,10 @@ ul.ui-autocomplete {
 .page-background {
     background-color:grey;
 }
-
+.btn-primary {
+    background-color: #808000;
+    border: thin solid #808000;
+}
 
 .top-buffer {
     margin: 5px 0px 0px 0px;

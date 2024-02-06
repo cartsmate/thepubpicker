@@ -86,7 +86,9 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         mapped_pubs = pubs_to_show
         console.log('mapped_pubs')
         console.log(mapped_pubs)
-        list_setup_beta(mapped_pubs)
+        if (page == 'home') {
+            list_setup_beta(mapped_pubs)
+            }
 
 
     });

@@ -62,13 +62,13 @@ class FilesReview:
         #     print(Review().__dict__[keyitem].value)
         #
 
-
         new_review = Review(review_identity=rev_id, review_deletion=ReviewDeletion().value, pub_identity=pub_id,
                             beer=Beer().value, brunch=Brunch().value, cocktail=Cocktail().value, dart=Dart().value,
                             entertain=Entertain().value, favourite=Favourite().value, garden=Garden().value,
                             history=History().value, late=Late().value, music=Music().value, outdoor=Outdoor().value,
-                            pool=Pool().value, private=Private().value, quiz=Quiz().value, roast=Roast().value, restaurant=Restaurant().value,
-                            sport=Sport().value, wine=Wine().value, scenic=Scenic().value, nofeature=NoFeature().value)
+                            pool=Pool().value, private=Private().value, quiz=Quiz().value, roast=Roast().value,
+                            restaurant=Restaurant().value, sport=Sport().value, wine=Wine().value,
+                            scenic=Scenic().value, nofeature=NoFeature().value)
         # print('new_review')
         # print(new_review.__dict__)
         df_new_review = pd.DataFrame([new_review.__dict__])

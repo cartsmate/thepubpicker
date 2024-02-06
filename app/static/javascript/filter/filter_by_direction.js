@@ -2,26 +2,17 @@ function filter_by_direction(data) {
     //console.log('---- direction-in: ' + data.length)
 
     ticked_list = []
-    //var filtered_data = {{ all_data | tojson }}
     for (i=0; i<directions_list.length; i++) {
-        //console.log('inside loop: ' + directions_list[i][1])
         if (document.getElementById(directions_list[i][0] + "_filter") !== null) {
-            //console.log('not null: ' + directions_list[i])
             if (document.getElementById(directions_list[i][0] + "_filter").checked) {
-                //console.log('checked at: ' + directions_list[i][1])
                 ticked_list.push(directions_list[i][0])
-            } else {
-                //console.log('not checked at: ' + directions_list[i][1])
             }
-        } else {
-            //console.log('null: ' + directions_list[i])
         }
     }
 
     ticked_data = []
     if (ticked_list.length > 0) {
         for (j=0; j<ticked_list.length; j++) {
-            //filtered_data = {{ all_data | tojson }}
             var filtered_data = data.filter(function(item) {
                 return item.direction_identity == ticked_list[j]
             })

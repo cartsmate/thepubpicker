@@ -1,7 +1,12 @@
+<style>
+    .btn_primary {
+        background-color: #808000;
+    }
+</style>
 {% include "9_header_pub.html" %}
 
 <div class="col black">
-    <form action="/submit/?id={{pub_1['pub_identity']}}&filters={{filters}}" method="post">
+    <form action="/submit/?id={{pub_1[0]['pub_identity']}}&filters={{filters}}" method="post">
         <div style="font-size: 12px; font-weight: bold">What it's about ... </div>
         <div class="row pink">{% include "9_pub_detail.html" %}</div>
         <div class="row pink">{% include "9_carousel_flat_spinner_edit.html" %}</div>
