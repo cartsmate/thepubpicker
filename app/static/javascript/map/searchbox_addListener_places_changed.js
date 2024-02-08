@@ -92,7 +92,7 @@ function searchbox_addListener_places_changed(map, searchBox) {
             if (place.types.includes('bar') || place.types.includes('restaurant')) {
                 map.setZoom(22)
             } else {
-                map.setZoom(19)
+                map.setZoom(13)
             }
 //            map.setZoom(19)
             central_obj = map.getCenter()

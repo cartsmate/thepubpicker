@@ -1,7 +1,7 @@
 
 class StationName:
     def __init__(self, name='station_name', required=False, form_visible=True, table_visible=True,
-                 alias="Station", alias2="", value="", control='input', rank=2):
+                 alias="Station", alias2="", value="", control='input', rank=2, datatype='str'):
         self.name = name
         self.required = required
         self.form_visible = form_visible
@@ -11,3 +11,4 @@ class StationName:
         self.value = value
         self.control = control
         self.rank = rank
+        self.datatype = datatype

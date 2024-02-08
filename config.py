@@ -6,11 +6,11 @@ from configparser import ConfigParser
 
 
 class Configurations:
-    def get_config(self):
-        directory_path = os.getcwd()
-        with open(directory_path + '/config_s.json') as file:  # Opening JSON file
-            config = json.load(file)  # returns JSON object as a dictionary
-        return config
+    # def get_config(self):
+    #     directory_path = os.getcwd()
+    #     with open(directory_path + '/config_s.json') as file:  # Opening JSON file
+    #         config = json.load(file)  # returns JSON object as a dictionary
+    #     return config
 
     def get_config2(self):
         # try:

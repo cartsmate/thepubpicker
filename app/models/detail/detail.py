@@ -18,6 +18,9 @@ from app.models.photo.photo_identity import PhotoIdentity
 
 
 class Detail:
+
+    filename = 'detail'
+
     def __init__(self, pub_identity=PubIdentity(), station_identity=StationIdentity(), detail_name=DetailName(),
                  address=Address(), category=Category(), colour=Colour(), detail_deletion=DetailDeletion(),
                  detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(),

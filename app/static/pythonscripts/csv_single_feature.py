@@ -1,9 +1,9 @@
 import os
 import pandas as pd
 from config import Configurations
-from app.static.pythonscripts.csv import Csv
+# from app.static.pythonscripts.csv import Csv
 
-config = Configurations().get_config()
+# config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
 

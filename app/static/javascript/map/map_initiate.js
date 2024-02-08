@@ -17,6 +17,7 @@ function map_init() {
     } else {
         var zoom = 13
     }
+
     map = map_create(display_pub[0].detail_latitude, display_pub[0].detail_longitude, zoom)
     if (page == 'home'){
         setup_searchbox()

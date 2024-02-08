@@ -2,7 +2,8 @@
 
 class StationIdentity:
     def __init__(self, name='station_identity', alias="Station Identity", alias2="", required=False, form_visible=False,
-                 table_visible=False, value='ssssssss-ssss-ssss-ssss-ssssssssssss', control='none'):
+                 table_visible=False, value='ssssssss-ssss-ssss-ssss-ssssssssssss', control='none', datatype='str',
+                 places_field=None):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -12,3 +13,5 @@ class StationIdentity:
         self.alias = alias
         self.value = value
         self.control = control
+        self.datatype = datatype
+        self.places_field = places_field

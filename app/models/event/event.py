@@ -6,6 +6,9 @@ from app.models.detail.pub_identity import PubIdentity
 
 
 class Event:
+
+    filename = 'event'
+
     def __init__(self, pub_identity=PubIdentity(), event_identity=EventIdentity(), event_day=EventDay(),
                  event_detail=EventDetail(), event_type=EventType()):
         self.pub_identity = pub_identity

@@ -3,7 +3,7 @@
 class Music:
     def __init__(self, name="music", alias="Live", alias1="Music", alias2="Live Music", required=True,
                  form_visible=False, table_visible=False, value='0', control="check", icon="music.png",
-                 data_type='str', menu_filter=True, quick_filter=True, event_filter=True):
+                 data_type='str', menu_filter=True, quick_filter=True, event_filter=True, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
@@ -18,3 +18,4 @@ class Music:
         self.menu_filter = menu_filter
         self.quick_filter = quick_filter
         self.event_filter = event_filter
+        self.datatype = datatype

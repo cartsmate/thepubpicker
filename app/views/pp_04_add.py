@@ -3,9 +3,7 @@ import uuid
 import json
 import pandas as pd
 from flask import render_template, request
-from app.static.pythonscripts.csv import Csv
-from app.models.detail.extra import Extra
-from app.models.detail.rank import Rank
+
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
@@ -13,103 +11,70 @@ from app.models.station.station import Station
 from app.models.direction.direction import Direction
 from app.models.event.event import Event
 from app.models.photo.photo import Photo
-from app.static.pythonscripts.csv_single import CsvSingle
-# from app.static.pythonscripts.new_pub import NewPub
-from app.static.pythonscripts.files_detail import FilesDetail
-from app.static.pythonscripts.files_events import FilesEvent
-from app.static.pythonscripts.files_station import FilesStation
+
 from app.static.pythonscripts.files_pub import FilesPub
-from app.static.pythonscripts.dataframes import Dataframes
-# from app.static.pythonscripts.controls_list import ControlsList
-from app.static.pythonscripts.objects import Objects
+from app.static.pythonscripts.pub_add import AddPub
+from app.static.pythonscripts.external_requests import ExternalRequests
+from app.static.pythonscripts.pub_get import GetPub
+
 from config import Configurations
 
 
 @app.route("/add/", methods=['GET', 'POST'])
 def add():
     print('START add')
-    # back = request.args.get('back')
-    # if back == None: back = 'none'
-
     place_id = request.args.get('place_id')
 
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
-    # # # GET MODEL DISPLAY NAMES
-    alias = Objects().go_get_alias()
-
     # # # GET ALL PUBS
-    df_data = FilesPub().go_get_pubs()
-    pub_json = Dataframes().df_to_dict(df_data)
+    df_pub_all = FilesPub().get_pub_all()
+    pub_json = df_pub_all.to_dict(orient='records')
 
-    df_new_pub = FilesPub().go_new_pub()
+    df_new_pub = FilesPub().new_pub()
+    # print('df_new_pub')
+    # print(df_new_pub.T)
 
     if place_id is not None:
+        # # # populate pub data from GOOGLE PLACES API # # #
         print('call places api to get details from place_id')
-        places_facits = CsvSingle().go_get_places(place_id, env_vars)
+        places_response = ExternalRequests().go_get_places(place_id, env_vars)
+        places_response
+        # df_place = pd.json_normalize(places_response, max_level=1)
+
+        for key, value in Detail().__dict__.items():
+            if value.places_field is not None:
+                try:
+                    df_new_pub[value.name] = places_response[value.places_field]
+                except:
+                    df_new_pub[value.name] = ""
         try:
-            df_new_pub['detail_name'] = places_facits['name']
+            df_new_pub['extra'] = places_response['editorial_summary']['overview']
         except:
-            df_new_pub['detail_name'] = ""
-        try:
-            df_new_pub['website'] = places_facits['website']
-        except:
-            df_new_pub['website'] = ""
-        try:
-            df_new_pub['url'] = places_facits['url']
-        except:
-            df_new_pub['url'] = ""
-        try:
-            df_new_pub['address'] = places_facits['formatted_address']
-        except:
-            df_new_pub['address'] = ""
-        try:
-            df_new_pub['extra'] = places_facits['editorial_summary']['overview']
-        except:
-            df_new_pub['extra'] = ""
-        try:
-            df_new_pub['rank'] = places_facits['rating']
-        except:
-            df_new_pub['rank'] = ""
-        try:
-            df_new_pub['detail_latitude'] = places_facits['geometry']['location']['lat']
-        except:
-            df_new_pub['detail_latitude'] = 0
-        try:
-            df_new_pub['detail_longitude'] = places_facits['geometry']['location']['lng']
-        except:
-            df_new_pub['detail_longitude'] = 0
-        try:
-            if 'bar' in places_facits['types']:
-                df_new_pub['category'] = 'bar'
-            elif 'restaurant' in places_facits['types']:
-                df_new_pub['category'] = 'restaurant'
-            else:
-                df_new_pub['category'] = 'other'
-        except:
-            df_new_pub['category'] = ""
+            df_new_pub['extra'] = " "
+        df_new_pub['detail_latitude'] = places_response['geometry']['location']['lat']
+        df_new_pub['detail_longitude'] = places_response['geometry']['location']['lng']
     else:
-        # # # GET NEW BLANK PUB TEMPLATE
-        print('get empty new pub')
-        df_detail_all = FilesDetail().go_get_details()
+        # # # populate with lat/lng averages and empty pub template # # #
+
+        df_detail_all = GetPub().get_all(Detail())
         avg_latitude = df_detail_all.loc[:, 'detail_latitude'].mean()
         avg_longitude = df_detail_all.loc[:, 'detail_longitude'].mean()
         df_new_pub['detail_latitude'] = avg_latitude
         df_new_pub['detail_longitude'] = avg_longitude
 
+    # df_new_diary = AddPub().add_pub(Diary(), pub_id)
+    # df_pub_with_event = pd.merge(df_new_pub, df_new_diary, on='pub_identity', how='left')
+
     print(df_new_pub.transpose())
-    pub_new_json = Dataframes().df_to_dict(df_new_pub)
+    pub_new_json = df_new_pub.to_dict(orient='records')
 
     # # # GET LIST OF STATIONS
-    df_stations = FilesStation().go_get_stations()
-    stations_json = Dataframes().df_to_dict(df_stations)
+    stations_json = GetPub().get_all(Station()).to_dict(orient='records')
 
-    pub_id = df_new_pub['pub_identity'].values[0]
-    print('pub_id')
-    print(pub_id)
-    df_1_event = FilesEvent().go_get_1_event(pub_id)
-    df_1_event_list_json = df_1_event.to_json(orient='records')
+    pub_id = df_new_pub.iloc[0]['pub_identity']
+    df_1_event_list_json = GetPub().get_1(Event(), pub_id).to_json(orient='records')
     json_loads = json.loads(df_1_event_list_json)
 
     detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
@@ -122,11 +87,11 @@ def add():
     print('END add')
     page = "add"
     return render_template('04_add_.html',
-                           pub_all=pub_json,
+                           # pub_all=pub_json,
                            pub_1=pub_new_json,
                            env_vars=env_vars,
-                           alias=alias,
-                           photo=Photo(),
+                           # alias=alias,
+                           # photo=Photo(),
                            stations=stations_json,
                            station=station_json,
                            direction=direction_json,

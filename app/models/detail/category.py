@@ -1,7 +1,7 @@
 
 class Category:
     def __init__(self, name='category', alias="Style", alias2="Style", required=False, form_visible=True,
-                 table_visible=False, value="", control="input", rank=0):
+                 table_visible=False, value="", control="input", rank=0, datatype='str', places_field='types'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -11,3 +11,5 @@ class Category:
         self.value = value
         self.control = control
         self.rank = rank
+        self.datatype = datatype
+        self.places_field = places_field

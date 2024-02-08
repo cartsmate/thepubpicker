@@ -1,7 +1,7 @@
 
 class DetailName:
     def __init__(self, name='detail_name', alias="Name", alias2="", required=True, form_visible=False,
-                 table_visible=True, value="", control='input', rank=0):
+                 table_visible=True, value="", control='input', rank=0, datatype='str', places_field='name'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -11,3 +11,5 @@ class DetailName:
         self.value = value
         self.control = control
         self.rank = rank
+        self.datatype = datatype
+        self.places_field = places_field

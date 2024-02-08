@@ -5,7 +5,7 @@ import pandas as pd
 from flask import request
 from config import Configurations
 # from app.static.pythonscripts.csv import Csv
-from app.static.pythonscripts.files_detail import FilesDetail
+from app.static.pythonscripts.pub_get import GetPub
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.detail.rank import Rank
@@ -24,7 +24,7 @@ from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
-config = Configurations().get_config()
+# config = Configurations().get_config()
 config2 = Configurations().get_config2()
 directory_path = config2['directory_path']
 # model_formats = ControlsList().go_get_control_list()
@@ -48,8 +48,8 @@ class FilesPhoto:
     #     return df_1_photo
     def go_get_place_id(self, pub_id):
         print('go_get_place_id')
-        df_detail = FilesDetail().go_get_1_detail(pub_id)
-        df_place_id = df_detail.iloc[0]['place']
+
+        df_place_id = GetPub().get_1(Detail(), pub_id).iloc[0]['place']
         return df_place_id
 
     def go_get_1_photo_request(self, pub_id, env_vars):
@@ -89,15 +89,15 @@ class FilesPhoto:
 
         return photo_list
 
-    def add_photo_df(self, df_photos, df_new):
-        print('ADD new detail')
-        df_appended = pd.concat([df_photos, df_new], ignore_index=True)
-        # df_full = pd.merge(df_details, df_new, on='pub_identity')
-        return df_appended
+    # def add_photo_df(self, df_photos, df_new):
+    #     print('ADD new detail')
+    #     df_appended = pd.concat([df_photos, df_new], ignore_index=True)
+    #     # df_full = pd.merge(df_details, df_new, on='pub_identity')
+    #     return df_appended
 
-    def update_photo_csv(self, df_updated_photos):
-        print('updating photo csv')
-        # print(df_updated_photos)
-        df_updated_photos.to_csv(directory_path + '/files/photos.csv', index=False, sep=',', encoding='utf-8')
-        print('csv updated')
-        return df_updated_photos
+    # def update_photo_csv(self, df_updated_photos):
+    #     print('updating photo csv')
+    #     # print(df_updated_photos)
+    #     df_updated_photos.to_csv(directory_path + '/files/photos.csv', index=False, sep=',', encoding='utf-8')
+    #     print('csv updated')
+    #     return df_updated_photos

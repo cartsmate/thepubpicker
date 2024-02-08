@@ -9,6 +9,9 @@ from app.models.direction.direction_identity import DirectionIdentity
 
 
 class Station:
+
+    filename = 'station'
+
     def __init__(self, station_deletion=StationDeletion(), station_name=StationName(),
                  station_latitude=StationLatitude(), station_longitude=StationLongitude(), zone=Zone(),
                  postcode=Postcode(), direction_identity=DirectionIdentity(), station_identity=StationIdentity()):

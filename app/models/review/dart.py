@@ -3,7 +3,7 @@
 class Dart:
     def __init__(self, name='dart', alias="Dart", alias1="Board", alias2="Dart Board", required=True,
                  form_visible=False, table_visible=False, value='0', control="check", icon="dart.png",
-                 data_type='str', menu_filter=True, quick_filter=False, event_filter=False):
+                 data_type='str', menu_filter=True, quick_filter=False, event_filter=False, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
@@ -18,3 +18,4 @@ class Dart:
         self.menu_filter = menu_filter
         self.quick_filter = quick_filter
         self.event_filter = event_filter
+        self.datatype = datatype

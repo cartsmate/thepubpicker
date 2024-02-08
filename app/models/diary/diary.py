@@ -11,6 +11,8 @@ from app.models.detail.pub_identity import PubIdentity
 
 class Diary:
 
+    filename = 'diary'
+
     def __init__(self, pub_identity=PubIdentity(), monday=Monday(), tuesday=Tuesday(), wednesday=Wednesday(),
                  thursday=Thursday(), friday=Friday(), saturday=Saturday(), sunday=Sunday()):
         self.pub_identity = pub_identity

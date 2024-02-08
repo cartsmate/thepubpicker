@@ -4,20 +4,21 @@ from app import app
 import json
 import pandas as pd
 from flask import render_template, request
-from app.static.pythonscripts.objects import Objects
+
 from app.static.pythonscripts.s3 import S3
-from app.static.pythonscripts.csv import Csv
-from app.static.pythonscripts.csv_single import CsvSingle
+
 from app.static.pythonscripts.dataframes import Dataframes
-# from app.static.pythonscripts.controls_list import ControlsList
-from app.static.pythonscripts.files_detail import FilesDetail
+
+from app.static.pythonscripts.files_daily import FilesDaily
+
+from app.static.pythonscripts.files_counter import FilesCounter
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.pub.pub import Pub
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
 from app.static.pythonscripts.files_events import FilesEvent
-from app.models.photo.photo import Photo
+
 from config import Configurations
 
 
@@ -25,73 +26,61 @@ from config import Configurations
 @app.route("/home/", methods=['GET'])
 def home():
     print('start HOME')
+    print('')
 
-    # # # GET ENVIRONMENTAL VARIABLES
+    print('# # # GET FILTERS # # #')
+    filters = request.args.get('filters')
+    print('# # # END OF FILTERS # # #')
+    print('')
+
+    print('# # # GET ENVIRONMENTAL VARIABLES')
     env_vars = Configurations().get_config2()
+    print('# # # END OF ENVIRONMENTAL VARIABLES # # #')
+    print('')
 
-    # # # GET MODEL DISPLAY FORMATS
+    print('# # # GET MODEL DISPLAY FORMATS # # #')
     stations_directions_list = Dataframes().go_get_stations_directions_list()
     directions_list = Dataframes().go_get_directions_list()
+    print('# # # END OF MODEL DISPLAY FORMATS # # #')
+    print('')
 
-    # # # GET ALL PUBS
-    df_data = FilesPub().go_get_pubs()
-    pub_json = Dataframes().df_to_dict(df_data)
+    print('# # # GET ALL PUBS # # #')
+    df_pub = FilesPub().get_pub_all()
+    df_event = FilesEvent().get_event_all()
+    df_pub_with_event = pd.merge(df_pub, df_event, on='pub_identity', how='left')
+    pub_ent_json = df_pub_with_event.to_dict(orient='records')
+    print('# # # END OF GET ALL PUBS # # #')
+    print('')
 
-    df_events = FilesEvent().go_get_events()
-    event_json = Dataframes().df_to_dict(df_events)
-
-    df_pub_ent = pd.merge(df_data, df_events, on='pub_identity', how='left')
-    pub_ent_json = Dataframes().df_to_dict(df_pub_ent)
-
-    # # # GET DAILY PUB
-    daily_id = FilesDetail().go_get_details_daily()
-    df_pub_1 = FilesPub().go_get_1_pub(daily_id)
-    # df_pub_1 = FilesDetail().go_get_1_detail(daily_id)
-    pub_1_json = Dataframes().df_to_dict(df_pub_1)
-
-    df_sample = df_data.loc[df_data['pub_identity'] == daily_id]
-    # sample_json = Dataframes().df_to_dict(df_sample)
-    # print(sample_json)
-    # print(json.dumps(sample_json, indent=4))
-    df_sample_T = df_sample.transpose()
-    print('df_sample transposed')
-    print(df_sample_T)
-    # print('daily_id: ' + str(daily_id))
-    # print('env_vars')
-    # print(env_vars)
+    print('# # # GET DAILY PUB # # #')
+    daily_id = FilesDaily().go_get_details_daily()
+    df_pub_1 = FilesPub().get_pub_1(daily_id)
+    pub_1_json = df_pub_1.to_dict(orient='records')
     photos_list = FilesPhoto().go_get_1_photo_request(daily_id, env_vars)
-    # print('photos list: ' + str(photos_list))
-    # daily_id = df_details.iloc[0]['pub_identity']
+    print(photos_list)
+    print('# # # END OF GET DAILY PUB # # #')
+    print('')
 
-    # # # GET URL ATTRIBUTES
-    filters = request.args.get('filters')
-
-    # # # GET COUNTER
+    print('# # # GET COUNTER # # #')
     if env_vars['env'] == 'qual':
-        counter = Csv().go_get_counter()
-        new_counter = Csv().go_write_counter(counter + 1)
+        counter = FilesCounter().go_get_counter()
+        new_counter = FilesCounter().go_write_counter(counter + 1)
     else:
         counter = S3().go_get_counter('counter', ['pub_counter'])
         new_counter = counter + 1
         data = {'pub_counter': [new_counter]}
         df_updated_counter = pd.DataFrame(data)
-        # print('df_updated_counter')
-        # print(df_updated_counter)
         s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
-
     counter6 = str(new_counter).zfill(6)
+    print('# # # END OF GET COUNTER # # #')
+    print('')
 
-    # no_of_reviews = len(model_formats['icon_list'])
-    # print('no_of_reviews: ' + str(no_of_reviews))
-
-    # review_json = json.dumps(Review().__dict__)
+    print('# # # GET MODEL OBJECTS # # #')
     review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
     diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
-    # print('review_json')
-    # print(review_json)
     pub_obj_json = json.loads(json.dumps(Pub().__dict__, default=lambda o: o.__dict__))
-    # print('pub_obj_json')
-    # print(json.dumps(pub_obj_json, indent=4))
+    print('# # # END OF GET MODEL OBJECTS # # #')
+    print('')
 
     print('end HOME')
     return render_template('02_home_.html',
@@ -100,7 +89,7 @@ def home():
                            daily_id=daily_id,
                            pub_1=pub_1_json,
                            pub_all=pub_ent_json,
-                           event=event_json,
+                           # event=event_json,
                            review=review_json,
                            diary=diary_json,
                            pub_obj=pub_obj_json,

@@ -4,6 +4,8 @@ function map_addListener_click_placeid(map) {
     map.addListener('click', function (event) {
         // If the event is a POI
         console.log('event')
+        event.stop();
+        infowindow.close();
         console.log(JSON.stringify(event))
         if (event.placeId) {
             console.log('USER INPUT - place id clicked')
@@ -78,19 +80,19 @@ function map_addListener_click_add(map) {
                     //console.log(place.editorial_summary)
                     console.log('place response')
                     console.log(place)
-                    document.getElementById("detail_name").value = place.name
-                    document.getElementById("address").value = place.formatted_address
-                    if(place.hasOwnProperty('editorial_summary')){
-                        document.getElementById("extra").value = place.editorial_summary.overview
-                        } else {
-                        document.getElementById("extra").value = 'No detail available'
-                        }
-                    if(place.hasOwnProperty('website')){
-                        document.getElementById("website").value = place.website
-                        }
-                    if(place.hasOwnProperty('url')){
-                        document.getElementById("url").value = place.url
-                        }
+//                    document.getElementById("detail_name").value = place.name
+//                    document.getElementById("address").value = place.formatted_address
+//                    if(place.hasOwnProperty('editorial_summary')){
+//                        document.getElementById("extra").value = place.editorial_summary.overview
+//                        } else {
+//                        document.getElementById("extra").value = 'No detail available'
+//                        }
+//                    if(place.hasOwnProperty('website')){
+//                        document.getElementById("website").value = place.website
+//                        }
+//                    if(place.hasOwnProperty('url')){
+//                        document.getElementById("url").value = place.url
+//                        }
 
                     //populate_stars('rank', ranking, 'map')
                     place_text = String(place.types)
@@ -119,6 +121,9 @@ function map_addListener_click_add(map) {
             var lat_lng_obj = JSON.parse(lat_lng_json);
             document.getElementById("detail_latitude").value = lat_lng_obj.lat;
             document.getElementById("detail_longitude").value = lat_lng_obj.lng;
+
+            console.log('after map tick')
+            console.log(lat_lng_obj.lat, lat_lng_obj.lng)
 
             nearest_station(place, lat_lng_obj)
 

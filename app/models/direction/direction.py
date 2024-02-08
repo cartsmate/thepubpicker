@@ -6,6 +6,8 @@ from app.models.direction.direction_deletion import DirectionDeletion
 
 class Direction:
 
+    filename = 'direction'
+
     def __init__(self, direction_identity=DirectionIdentity(), direction_name=DirectionName(),
                  direction_deletion=DirectionDeletion()):
         self.direction_identity = direction_identity

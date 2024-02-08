@@ -2,7 +2,8 @@ import json
 from app import app
 
 from flask import render_template, request
-from app.static.pythonscripts.csv import Csv
+# from app.static.pythonscripts.csv import Csv
+from app.models.pub.pub import Pub
 from app.models.detail.detail import Detail
 from app.models.direction.direction import Direction
 from app.models.station.station import Station
@@ -13,10 +14,11 @@ from app.models.event.event import Event
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
 from app.static.pythonscripts.files_events import FilesEvent
-from app.static.pythonscripts.csv_single import CsvSingle
+from app.static.pythonscripts.pub_get import GetPub
+# from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 # from app.static.pythonscripts.controls_list import ControlsList
-from app.static.pythonscripts.objects import Objects
+# from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
 
@@ -24,24 +26,21 @@ from config import Configurations
 def edit():
     print('start EDIT')
 
+    # # # GET REQUESTED PUB
+    pub_id = request.args.get('id')
     filters = request.args.get('filters')
 
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
-    # # # GET REQUESTED PUB
-    pub_id = request.args.get('id')
-    df_pub = FilesPub().go_get_1_pub(pub_id)
-    print(df_pub.transpose())
-    pub_json = Dataframes().df_to_dict(df_pub)
+    df_pub = FilesPub().get_pub_1(pub_id)
+    # df_pub = GetPub().get_1(Pub(), pub_id)
+    pub_json = df_pub.to_dict(orient='records')
 
-    df_1_event = FilesEvent().go_get_1_event(pub_id)
+    # df_1_event = FilesEvent().get_event_1(pub_id)
+    df_1_event = GetPub().get_1(Event(), pub_id)
     df_1_event_list_json = df_1_event.to_json(orient='records')
     json_loads = json.loads(df_1_event_list_json)
-
-    # # # FOR TESTING PURPOSES ONLY
-    newdf = df_pub.transpose()
-    # print(newdf)
 
     detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
     review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
@@ -51,8 +50,7 @@ def edit():
     event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
 
     photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
-    stations_directions_list = Dataframes().go_get_stations_directions_list()
-    directions_list = Dataframes().go_get_directions_list()
+
     print('end EDIT')
     page = "edit"
     return render_template('05_edit_.html',

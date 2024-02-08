@@ -1,7 +1,7 @@
 
 class Website:
     def __init__(self, name='website', alias="Web", alias2="Website", required=False, form_visible=True,
-                 table_visible=True, value="", control=False, rank=0):
+                 table_visible=True, value="", control=False, rank=0, datatype='str', places_field='website'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -11,3 +11,5 @@ class Website:
         self.value = value
         self.control = control
         self.rank = rank
+        self.datatype = datatype
+        self.places_field = places_field

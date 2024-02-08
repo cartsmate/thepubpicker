@@ -25,6 +25,8 @@ from app.models.review.nofeature import NoFeature
 
 class Review:
 
+    filename = 'review'
+
     def __init__(self, review_deletion=ReviewDeletion(), scenic=Scenic(), sport=Sport(), garden=Garden(), music=Music(), roast=Roast(),
                  brunch=Brunch(), late=Late(), quiz=Quiz(), pool=Pool(), dart=Dart(), entertain=Entertain(),
                  history=History(), favourite=Favourite(), pub_identity=PubIdentity(),

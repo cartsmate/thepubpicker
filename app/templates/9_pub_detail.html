@@ -7,7 +7,7 @@
             </div>
             <div class="col col-diary-item" align="left" id=div_{{value.name}} >
                 {% if value.name == 'website' %}
-                    <input class="form-control item-diary-input" type='url' name={{value.name}} id={{value.name}} readonly>
+                    <input class="form-control item-diary-input" type='url' name={{value.name}} id={{value.name}}>
                 {% elif value.control == 'dropdown' %}
                     {% include "control_dropdown.html" %}
                 {% elif value.control == 'star' %}
@@ -17,7 +17,7 @@
                 {% elif value.control == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control item-diary-input" type='textarea' name={{value.name}} id={{value.name}} readonly>
+                    <input class="form-control item-diary-input" type='text' name={{value.name}} id={{value.name}}>
                 {% endif %}
                 {% if (value.required) %}
                     <script>document.getElementById("{{value.name}}").required = true</script>

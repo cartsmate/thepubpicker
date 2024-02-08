@@ -1,7 +1,7 @@
 
 class Ordering:
     def __init__(self, name='ordering', alias="#", alias2="", required='false', form_visible='false',
-                 table_visible='true', value="", control='input', rank=0):
+                 table_visible='true', value="", control='input', rank=0, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
@@ -11,3 +11,4 @@ class Ordering:
         self.value = value
         self.control = control
         self.rank = rank
+        self.datatype = datatype

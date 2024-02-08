@@ -5,19 +5,25 @@
     padding: 0px;
 }
 .col-diary-item {
-    width: 200px;
+    width: 130px;
     margin: 0px;
     margin-right: 10px;
     padding: 0px;
 }
-.item-diary-label {
+.col-event-item {
+    width: 130px;
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px;
+}
+.label-diary-item {
     width:75px;
     padding:0px;
     margin:0px;
     height: 30px;
     font-size:12px;
 }
-.item-diary-input {
+.input-diary-item {
     margin:0px;
     padding: 0px;
     font-size:12px;
@@ -27,5 +33,17 @@
     text-align:left;
     visibility:visible;
     display:block;
-    width:200px;
+    width:130px;
+}
+.input-event-item {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    min-height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:130px;
 }

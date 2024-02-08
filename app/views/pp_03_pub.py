@@ -1,7 +1,7 @@
 import json
 from app import app
 from flask import render_template, request
-from app.static.pythonscripts.csv import Csv
+# from app.static.pythonscripts.csv import Csv
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
@@ -12,10 +12,10 @@ from app.models.photo.photo import Photo
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
 from app.static.pythonscripts.files_events import FilesEvent
-from app.static.pythonscripts.csv_single import CsvSingle
+# from app.static.pythonscripts.csv_single import CsvSingle
 from app.static.pythonscripts.dataframes import Dataframes
 # from app.static.pythonscripts.controls_list import ControlsList
-from app.static.pythonscripts.objects import Objects
+# from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
 
@@ -24,21 +24,21 @@ def pub():
     print('START pub')
 
     filters = request.args.get('filters')
-    print('filters: ' + str(filters))
 
     # # # GET ENVIRONMENTAL VARIABLES
     env_vars = Configurations().get_config2()
 
     # # # GET REQUESTED PUB
     pub_id = request.args.get('id')
-    df_1_pub = FilesPub().go_get_1_pub(pub_id)
-    pub_json = Dataframes().df_to_dict(df_1_pub)
-    df_1_event = FilesEvent().go_get_1_event(pub_id)
+    df_1_pub = FilesPub().get_pub_1(pub_id)
+    pub_json = df_1_pub.to_dict(orient='records')
+    print(pub_json)
+
+    df_1_event = FilesEvent().get_event_1(pub_id)
     df_1_event_list_json = df_1_event.to_json(orient='records')
     json_loads = json.loads(df_1_event_list_json)
+    print(json_loads)
 
-    # df_photo = CsvSingle().go_get_1_photo(pub_id)
-    # photo_json = Dataframes().df_to_dict(df_photo)
     photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
 
     detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
@@ -47,10 +47,7 @@ def pub():
     station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
     direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
     event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
-    # print(photos_list)
-    # # # FOR TESTING PURPOSES ONLY
-    # newdf = df_pub.transpose()
-    # print(newdf)
+
     print('END pub')
     name = "readonly"
     page = "pub"

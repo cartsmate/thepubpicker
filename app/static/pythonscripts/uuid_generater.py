@@ -1,7 +1,7 @@
 import uuid
 from config import Configurations
 
-config = Configurations().get_config()
+# config = Configurations().get_config()
 
 
 class UuidGenerator:

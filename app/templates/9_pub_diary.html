@@ -12,6 +12,16 @@
                     <input class="form-control item-diary-input" type='textarea' name="{{value.name}}" id="{{value.name}}" >
                 {% endif %}
             </div>
+            <div class="col col-event-item" id="div_col_event_type">
+                <select class="input-event-item" name="{{value.name}}event_type" id="{{value.name}}_event_type">
+                    <option value="blank"></option>
+                    {% for key, value in review.items() %}
+                        {% if (value.event_filter) %}
+                            <option value=value.name>{{value.name}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
         </div>
     {% endif %}
 {% endfor %}
