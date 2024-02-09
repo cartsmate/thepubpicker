@@ -13,12 +13,22 @@
                 </label>
             </div>
         {% else %}
-            <div style="display: none;" id="{{value.name}}_col">
-                <div>
-                    <label class="col-form-label" for="{{value.name}}"></label>
-                    <input class="form-control" type='text' name="{{value.name}}" id="{{value.name}}">
+            <script>console.log('no menu filter')</script>
+            {% if (value.form_visible) %}
+                <div style="display: block;" id="{{value.name}}_col">
+                    <div>
+                        <label class="col-form-label" for="{{value.name}}"></label>
+                        <input class="form-control" type='text' name="{{value.name}}" id="{{value.name}}">
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div style="display: none;" id="{{value.name}}_col">
+                    <div>
+                        <label class="col-form-label" for="{{value.name}}"></label>
+                        <input class="form-control" type='text' name="{{value.name}}" id="{{value.name}}">
+                    </div>
+                </div>
+            {% endif%}
         {% endif%}
     {% endfor %}
 </div>

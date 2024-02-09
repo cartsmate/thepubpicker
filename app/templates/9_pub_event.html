@@ -1,0 +1,31 @@
+<script>console.log('CREATING EVENT FIELDS')</script>
+{% for key, value in event.items() %}
+    {% if (value.form_visible) %}
+        <div class="col col-diary-item" align="left" id=div_{{value.name}} >
+            {% if value.control == 'dropdown' %}
+                <select class="input-event-item" name="{{value.name}}" id="{{value.name}}">
+                    <option value="blank"></option>
+                    {% for key, value in review.items() %}
+                        {% if (value.event_filter) %}
+                            <option value="{{value.name}}">{{value.alias2}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            {% else %}
+                <input class="form-control item-diary-input" type='text' name={{value.name}} id={{value.name}}>
+            {% endif %}
+            {% if (name == "readonly") %}
+                <script>document.getElementById("{{value.name}}").readOnly = true</script>
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="form-group row no-show" id=row_{{value.name}}>
+            <div class="col">
+                <label class="col-form-label no-show" for={{value.name}}></label>
+            </div>
+            <div class="col" id=div_{{value.name}}>
+                <input class="form-control no-show" type='text' name={{value.name}} id={{value.name}}>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

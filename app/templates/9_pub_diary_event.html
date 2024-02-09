@@ -1,0 +1,73 @@
+<script>console.log('CREATING DIARY FIELDS')</script>
+{% for key, value in diary.items() %}
+    {% if (value.form_visible) %}
+        <div class="form-group row details" id="row_{{value.name}}">
+            <div class="col-diary-label" >
+                <label class="col-form-label item-diary-label">{{value.alias}}</label>
+            </div>
+            <div class="no-show" align="left" id=div_{{value.name}} >
+                <input class="form-control item-diary-input no-show" type='text' name={{value.name}} id={{value.name}}>
+            </div>
+            <script>console.log('CREATING EVENT FIELDS')</script>
+            {% for e_key, e_value in event.items() %}
+                {% if ((e_value.form_visible) and (value.form_visible)) %}
+                    <div class="col col-event-item" align="right" id={{value.name}}_div_{{e_value.name}} >
+                        {% if e_value.control == 'dropdown' %}
+                            <select onchange="jsFunction('{{value.name}}', this.value);" class="input-event-item" name="{{value.name}}_{{e_value.name}}" id="{{value.name}}_{{e_value.name}}">
+                                <option value=""></option>
+                                {% for r_key, r_value in review.items() %}
+                                    {% if (r_value.event_filter) %}
+                                        <option value="{{r_value.name}}">{{r_value.alias2}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                            {% if (name == "readonly") %}
+                                <script>document.getElementById("{{value.name}}_{{e_value.name}}").disabled = true</script>
+                            {% endif %}
+                        {% else %}
+                            <input class="form-control item-diary-input" type='text' name={{value.name}}_{{e_value.name}} id={{value.name}}_{{e_value.name}}>
+                            {% if (name == "readonly") %}
+                                <script>document.getElementById("{{value.name}}_{{e_value.name}}").readOnly = true</script>
+                            {% endif %}
+                        {% endif %}
+
+                    </div>
+                {% else %}
+                    <div class="form-group no-show" id=row_{{e_value.name}}>
+                        <div class="col">
+                            <label class="col-form-label no-show" for={{value.name}}_{{e_value.name}}></label>
+                        </div>
+                        <div class="col" id={{value.name}}_div_{{e_value.name}}>
+                            <input class="form-control no-show" type='text' name={{value.name}}_{{e_value.name}} id={{value.name}}_{{e_value.name}}>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="form-group row details no-show" id="row_{{value.name}}">
+            <div class="col col-diary-label no-show" >
+                <label class="col-form-label item-diary-label no-show">{{value.alias}}</label>
+            </div>
+            <div class="col col-diary-item no-show" align="left" id=div_{{value.name}} >
+                <input class="form-control item-diary-input no-show" type='text' name={{value.name}} id={{value.name}}>
+            </div>
+        </div>
+    {% endif %}
+
+{% endfor %}
+
+<link rel="stylesheet" href="/static/css/pub/diary.css">
+
+<script>
+    function jsFunction(day, event_type) {
+        console.log(day + " | " + event_type)
+        if (event_type != '') {
+            document.getElementById(day + "_event_day").value = day;
+        } else {
+            //document.getElementById(day + "_event_identity").value = '';
+            document.getElementById(day + "_event_detail").value = '';
+        }
+    }
+
+</script>

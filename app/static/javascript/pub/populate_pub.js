@@ -8,9 +8,9 @@ function populate_pub(show_pub, page) {
     }
     populate_detail(show_pub);
     populate_review(show_pub, page);
-    populate_diary(show_pub);
     populate_station(show_pub);
     populate_direction(show_pub);
+//    populate_diary(show_pub)
 }
 /*
 function populate_pub_pub(show_pub){

@@ -4,6 +4,7 @@ from app import app
 from flask import render_template, request
 # from app.static.pythonscripts.csv import Csv
 from app.models.pub.pub import Pub
+
 from app.models.detail.detail import Detail
 from app.models.direction.direction import Direction
 from app.models.station.station import Station
@@ -11,14 +12,12 @@ from app.models.review.review import Review
 from app.models.photo.photo import Photo
 from app.models.diary.diary import Diary
 from app.models.event.event import Event
+
+from app.static.pythonscripts.uuid_generater import UuidGenerator
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
-from app.static.pythonscripts.files_events import FilesEvent
+# from app.static.pythonscripts.files_events import FilesEvent
 from app.static.pythonscripts.pub_get import GetPub
-# from app.static.pythonscripts.csv_single import CsvSingle
-from app.static.pythonscripts.dataframes import Dataframes
-# from app.static.pythonscripts.controls_list import ControlsList
-# from app.static.pythonscripts.objects import Objects
 from config import Configurations
 
 
@@ -39,8 +38,22 @@ def edit():
 
     # df_1_event = FilesEvent().get_event_1(pub_id)
     df_1_event = GetPub().get_1(Event(), pub_id)
+
+    # days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    # for day in days:
+    #     df = df_1_event[df_1_event['event_day'] == day]
+    #     if df.empty:
+    #         new_row = {'event_identity': UuidGenerator().get_new_uuid(), 'pub_identity': pub_id, 'event_day': day,
+    #                    'event_detail': '', 'event_type': ''}
+    #         df_1_event = df_1_event.append(new_row, ignore_index=True)
+
+    print('df_1_event')
+    print(df_1_event)
+
     df_1_event_list_json = df_1_event.to_json(orient='records')
     json_loads = json.loads(df_1_event_list_json)
+    print('json_loads')
+    print(json_loads)
 
     detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
     review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
@@ -65,6 +78,7 @@ def edit():
                            detail=detail_json,
                            review=review_json,
                            diary=diary_json,
+                           event=event_json,
                            filters=filters,
                            page=page
                            )

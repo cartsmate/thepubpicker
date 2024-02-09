@@ -42,30 +42,30 @@ directory_path = config2['directory_path']
 env_vars = Configurations().get_config2()
 
 
-class FilesEvent:
+# class FilesEvent:
 
-    def get_event_all(self):
-        df_events = GetPub().get_all(Event())
-        # print('go_get_events')
-        # df_events = pd.read_csv(directory_path + '/files/events.csv')
-        # print(df_events)
-        df_events.event_detail = df_events.event_detail.fillna('')
-        # print(df_events)
-        return df_events
+    # def get_event_all(self):
+    #     df_events = GetPub().get_all(Event())
+    #     # print('go_get_events')
+    #     # df_events = pd.read_csv(directory_path + '/files/events.csv')
+    #     # print(df_events)
+    #     df_events.event_detail = df_events.event_detail.fillna('')
+    #     # print(df_events)
+    #     return df_events
 
-    def get_event_1(self, pub_id):
-        df_1_event = GetPub().get_1(Event(), pub_id)
-        # print('go_get_1_event')
-        # df_events = self.go_get_events()
-        # df_1_event = df_events.loc[df_events['pub_identity'] == pub_id]
-        # print('df_1_event')
-        # df_list = df_1_event.values.tolist()
-        # print(df_list)
-        # print(json.loads(df_list))
-        # print(json.dumps(df_list))
-        # print(json.loads(json.dumps(df_list)))
-        # print(df_1_event.to_json(orient='records'))
-        return df_1_event
+    # def get_event_1(self, pub_id):
+    #     df_1_event = GetPub().get_1(Event(), pub_id)
+    #     # print('go_get_1_event')
+    #     # df_events = self.go_get_events()
+    #     # df_1_event = df_events.loc[df_events['pub_identity'] == pub_id]
+    #     # print('df_1_event')
+    #     # df_list = df_1_event.values.tolist()
+    #     # print(df_list)
+    #     # print(json.loads(df_list))
+    #     # print(json.dumps(df_list))
+    #     # print(json.loads(json.dumps(df_list)))
+    #     # print(df_1_event.to_json(orient='records'))
+    #     return df_1_event
 
     # def add_event(self, pub_id, event_id):
     #     df_event = AddPub().add_pub(Event(), pub_id)

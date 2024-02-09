@@ -14,10 +14,12 @@ from app.static.pythonscripts.files_daily import FilesDaily
 from app.static.pythonscripts.files_counter import FilesCounter
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
+from app.models.event.event import Event
 from app.models.pub.pub import Pub
+from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
-from app.static.pythonscripts.files_events import FilesEvent
+# from app.static.pythonscripts.files_events import FilesEvent
 
 from config import Configurations
 
@@ -46,7 +48,8 @@ def home():
 
     print('# # # GET ALL PUBS # # #')
     df_pub = FilesPub().get_pub_all()
-    df_event = FilesEvent().get_event_all()
+    # df_event = FilesEvent().get_event_all()
+    df_event = GetPub().get_all(Event())
     df_pub_with_event = pd.merge(df_pub, df_event, on='pub_identity', how='left')
     pub_ent_json = df_pub_with_event.to_dict(orient='records')
     print('# # # END OF GET ALL PUBS # # #')

@@ -22,6 +22,9 @@
                 {% if (value.required) %}
                     <script>document.getElementById("{{value.name}}").required = true</script>
                 {% endif %}
+                {% if (name == "readonly") %}
+                    <script>document.getElementById("{{value.name}}").readOnly = true</script>
+                {% endif %}
             </div>
         </div>
     {% elif name != "readonly" and ((value.form_visible) or (value.name == 'detail_name') or (value.name == 'extra')) %}

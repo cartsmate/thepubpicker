@@ -5,7 +5,6 @@
 </style>
 {% include "9_header_pub.html" %}
 
-<div class="col black">
     <form action="/submit/?id={{pub_1[0]['pub_identity']}}&filters={{filters}}" method="post">
         <div style="font-size: 12px; font-weight: bold">What it's about ... </div>
         <div class="row pink">{% include "9_pub_detail.html" %}</div>
@@ -17,11 +16,10 @@
         <div class="row pink">{% include "9_map.html" %}</div>
 
         <div style="font-size: 12px; font-weight: bold">What's going on ...</div>
-        <div class="row pink">{% include "9_pub_diary.html" %}</div>
+        <div class="row pink">{% include "9_pub_diary_event.html" %}</div>
 
         <div style="font-size: 12px; font-weight: bold; padding-top:5px;">What it looks like ... ?</div>
         <div class="row pink"  style="margin-bottom: 50px;">{% include "9_carousel_photo.html" %}</div>
 
         <button id="submit" type="submit" class="btn btn-primary btn-block" name="submit" value="submit">Submit</button>
     </form>
-</div>

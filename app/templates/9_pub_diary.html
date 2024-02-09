@@ -3,25 +3,12 @@
     {% if (value.form_visible) %}
         <div class="form-group row details" id="row_{{value.name}}">
             <div class="col col-diary-label" >
-                <label class="col-form-label item-diary-label" for="{{value.name}}">{{value.alias}}</label>
+                <label class="col-form-label item-diary-label">{{value.alias}}</label>
             </div>
-            <div class="col col-diary-item" id="div_{{value.name}}" >
-                {% if name == "readonly" %}
-                    <input class="form-control item-diary-input" type='textarea' name="{{value.name}}" id="{{value.name}}" readonly>
-                {% else %}
-                    <input class="form-control item-diary-input" type='textarea' name="{{value.name}}" id="{{value.name}}" >
-                {% endif %}
+            <div class="col col-diary-item" align="left" id=div_{{value.name}} >
+                <input class="form-control item-diary-input" type='text' name={{value.name}} id={{value.name}}>
             </div>
-            <div class="col col-event-item" id="div_col_event_type">
-                <select class="input-event-item" name="{{value.name}}event_type" id="{{value.name}}_event_type">
-                    <option value="blank"></option>
-                    {% for key, value in review.items() %}
-                        {% if (value.event_filter) %}
-                            <option value=value.name>{{value.name}}</option>
-                        {% endif %}
-                    {% endfor %}
-                </select>
-            </div>
+            {% include "9_pub_event.html" %}
         </div>
     {% endif %}
 {% endfor %}

@@ -23,18 +23,21 @@ function onload_pub() {
     start_up('pub')
     filtered_pubs = unique_data = pub_1
     populate_pub(pub_1, 'pub')
+    populate_events(events);
     populate_photo_carousel()
 }
 function onload_add() {
     console.log('onload_add pub: ' + pub_1)
     start_up('add')
     populate_pub(pub_1, 'add')
+
 }
 function onload_edit() {
     console.log('onload pub - edit')
     start_up('edit')
     filtered_pubs = unique_data = pub_1
     populate_pub(pub_1, 'edit')
+    populate_events(events);
     populate_photo_carousel()
 }
 function addCss(fileName) {

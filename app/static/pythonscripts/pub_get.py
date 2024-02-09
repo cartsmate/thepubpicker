@@ -16,6 +16,7 @@ class GetPub:
             for key, value in model.__dict__.items():
                 dtype_obj[value.name] = value.datatype
             df = pd.read_csv(directory_path + '/files/' + model.filename + '.csv', dtype=dtype_obj)
+            df = df.fillna('')
         else:
             attribute_list = []
             for key, value in model.__dict__.items():

@@ -1,7 +1,7 @@
 
 class EventType:
-    def __init__(self, name='event_type', alias="Event Type", alias2="", required=False, form_visible=False,
-                 table_visible=True, value="", control='input', rank=0, datatype='str'):
+    def __init__(self, name='event_type', alias="Event Type", alias2="", required=False, form_visible=True,
+                 table_visible=True, value="", control='dropdown', rank=0, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias2 = alias2
