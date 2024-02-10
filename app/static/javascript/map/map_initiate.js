@@ -32,6 +32,10 @@ function map_init() {
         map_addListener_click_add(map)
     }
 }
+function map_init_none() {
+    console.log("INIT MAP NONE");
+    //runner()
+}
 /*
 function map_init_home() {
     console.log('map init HOME')

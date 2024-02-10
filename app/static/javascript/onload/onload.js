@@ -15,6 +15,8 @@ function onload_home() {
     display_counter(counter)
     setup_filters()
     filtered_pubs = setup_filters_populate(pub_all)
+    console.log('filtered_pubs')
+    console.log(filtered_pubs)
     populate_summary(pub_1)
     show_results()
 }

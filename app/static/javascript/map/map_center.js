@@ -6,6 +6,8 @@ function center_map() {
 
     if (search_string == '') {
         filtered_pubs = map_center_from_pubs(filtered_pubs)
+        console.log('filtered_pubs')
+        console.log(filtered_pubs)
         map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
     } else {
         filtered_pubs = map_center_from_searchbox(filtered_pubs)
