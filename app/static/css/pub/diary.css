@@ -42,3 +42,9 @@
     display:block;
     width:130px;
 }
+.col-diary-label {
+    width: 100px;
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+}

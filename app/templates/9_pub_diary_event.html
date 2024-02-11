@@ -2,7 +2,7 @@
 {% for key, value in diary.items() %}
     {% if (value.form_visible) %}
         <div class="form-group row details" id="row_{{value.name}}">
-            <div class="col col-diary-label" >
+            <div class="col-2" >
                 <!-- 'col-form-label' is from BOOTSTRAP -->
                 <label class="col-form-label diary-label">{{value.alias}}</label>
             </div>
@@ -12,7 +12,7 @@
             <script>console.log('CREATING EVENT FIELDS')</script>
             {% for e_key, e_value in event.items() %}
                 {% if ((e_value.form_visible) and (value.form_visible)) %}
-                    <div class="col" align="right" id={{value.name}}_div_{{e_value.name}} >
+                    <div class="col-5" align="right" id={{value.name}}_div_{{e_value.name}} >
                         {% if e_value.control == 'dropdown' %}
                             <select onchange="jsFunction('{{value.name}}', this.value);" class="dropdown-event" name="{{value.name}}_{{e_value.name}}" id="{{value.name}}_{{e_value.name}}">
                                 <option value=""></option>
