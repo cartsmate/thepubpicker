@@ -1,4 +1,4 @@
-.detail-text {
+.text-event {
     margin:0px;
     padding: 0px;
     font-size:12px;
@@ -8,59 +8,46 @@
     text-align:left;
     visibility:visible;
     display:block;
-    width:200px;
-    }
-.detail-url {
-    margin:0px;
-    padding: 0px;
-    font-size:12px;
-    overflow-y: scroll;
-    resize: none;
-    height: 30px;
-    text-align:left;
-    visibility:visible;
-    display:block;
-    width:200px;
-    }
-
-.detail-label {
-    font-size: 12px;
+    width:180px;
 }
-.col-diary-label {
+
+.col-event-label {
     width: 100px;
     margin: 0px;
     margin-left: 10px;
     padding: 0px;
 }
-.col-diary-item {
-    width: 130px;
-    margin: 0px;
-    margin-right: 10px;
-    padding: 0px;
-}
 .col-event-item {
-    width: 130px;
+    width: 100px;
     margin: 0px;
     margin-right: 10px;
     padding: 0px;
 }
-.label-diary-item {
+.label-event-item {
     width:100px;
     padding:0px;
     margin:0px;
     height: 30px;
     font-size:12px;
 }
-.input-diary-item {
+.item-event-label {
+    width:75px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
+.dropdown-event {
     margin:0px;
     padding: 0px;
     font-size:12px;
     overflow-y: scroll;
     resize: none;
-    height: 30px;
     text-align:left;
     visibility:visible;
     display:block;
-    width:130px;
+    width:100px;
 }
-
+select {
+    height: 100%;
+}

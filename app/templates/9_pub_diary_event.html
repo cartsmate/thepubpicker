@@ -3,7 +3,8 @@
     {% if (value.form_visible) %}
         <div class="form-group row details" id="row_{{value.name}}">
             <div class="col-diary-label" >
-                <label class="col-form-label item-diary-label">{{value.alias}}</label>
+                <!-- 'col-form-label' is from BOOTSTRAP -->
+                <label class="col-form-label diary-label">{{value.alias}}</label>
             </div>
             <div class="no-show" align="left" id=div_{{value.name}} >
                 <input class="form-control item-diary-input no-show" type='text' name={{value.name}} id={{value.name}}>
@@ -11,9 +12,9 @@
             <script>console.log('CREATING EVENT FIELDS')</script>
             {% for e_key, e_value in event.items() %}
                 {% if ((e_value.form_visible) and (value.form_visible)) %}
-                    <div class="col col-event-item" align="right" id={{value.name}}_div_{{e_value.name}} >
+                    <div class="col" align="right" id={{value.name}}_div_{{e_value.name}} >
                         {% if e_value.control == 'dropdown' %}
-                            <select onchange="jsFunction('{{value.name}}', this.value);" class="input-event-item" name="{{value.name}}_{{e_value.name}}" id="{{value.name}}_{{e_value.name}}">
+                            <select onchange="jsFunction('{{value.name}}', this.value);" class="dropdown-event" name="{{value.name}}_{{e_value.name}}" id="{{value.name}}_{{e_value.name}}">
                                 <option value=""></option>
                                 {% for r_key, r_value in review.items() %}
                                     {% if (r_value.event_filter) %}
@@ -25,7 +26,7 @@
                                 <script>document.getElementById("{{value.name}}_{{e_value.name}}").disabled = true</script>
                             {% endif %}
                         {% else %}
-                            <input class="form-control item-diary-input" type='text' name={{value.name}}_{{e_value.name}} id={{value.name}}_{{e_value.name}}>
+                            <input class="form-control text-event" type='text' name={{value.name}}_{{e_value.name}} id={{value.name}}_{{e_value.name}}>
                             {% if (name == "readonly") %}
                                 <script>document.getElementById("{{value.name}}_{{e_value.name}}").readOnly = true</script>
                             {% endif %}
@@ -58,6 +59,7 @@
 {% endfor %}
 
 <link rel="stylesheet" href="/static/css/pub/diary.css">
+<link rel="stylesheet" href="/static/css/pub/event.css">
 
 <script>
     function jsFunction(day, event_type) {

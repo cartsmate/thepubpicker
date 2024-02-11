@@ -1,3 +1,10 @@
+.diary-label {
+    width:75px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
 .col-diary-label {
     width: 100px;
     margin: 0px;
@@ -30,18 +37,6 @@
     overflow-y: scroll;
     resize: none;
     height: 30px;
-    text-align:left;
-    visibility:visible;
-    display:block;
-    width:130px;
-}
-.input-event-item {
-    margin:0px;
-    padding: 0px;
-    font-size:12px;
-    overflow-y: scroll;
-    resize: none;
-    min-height: 30px;
     text-align:left;
     visibility:visible;
     display:block;

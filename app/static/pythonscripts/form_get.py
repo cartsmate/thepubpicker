@@ -1,6 +1,7 @@
 import pandas as pd
 from flask import request
 from config import Configurations
+from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.event.event import Event
 from app.models.detail.detail import Detail
@@ -17,12 +18,12 @@ class GetForm:
         print('get_form: ' + model.__str__())
         new_model = model
         for key, value in model.__dict__.items():
-            # if model == Diary():
-            #     print(key, value)
-            #     print(value.name)
+            if model == Review():
+                print(key, value)
+                print(value.name)
             if value.control == 'check':
-                # if model == Diary():
-                #     print("check")
+                if model == Review():
+                    print("check")
                 if request.form.get(value.name) == 'on' or request.form.get(value.name) == 'true':
                     setattr(new_model, value.name, '1')
                 else:

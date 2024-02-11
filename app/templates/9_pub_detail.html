@@ -2,12 +2,12 @@
 {% for key, value in detail.items() %}
     {% if (value.form_visible) %}
         <div class="form-group row details" id=row_{{value.name}} >
-            <div class="col col-diary-label">
-                <label class="col-form-label item-diary-label" for={{value.name}} >{{value.alias}}</label>
+            <div class="col">
+                <label class="col-form-label detail-label" for={{value.name}} >{{value.alias}}</label>
             </div>
-            <div class="col col-diary-item" align="left" id=div_{{value.name}} >
+            <div class="col" align="left" id=div_{{value.name}} >
                 {% if value.name == 'website' %}
-                    <input class="form-control item-diary-input" type='url' name={{value.name}} id={{value.name}}>
+                    <input class="form-control detail-url" type='url' name={{value.name}} id={{value.name}}>
                 {% elif value.control == 'dropdown' %}
                     {% include "control_dropdown.html" %}
                 {% elif value.control == 'star' %}
@@ -17,7 +17,7 @@
                 {% elif value.control == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control item-diary-input" type='text' name={{value.name}} id={{value.name}}>
+                    <input class="form-control detail-text" type='text' name={{value.name}} id={{value.name}}>
                 {% endif %}
                 {% if (value.required) %}
                     <script>document.getElementById("{{value.name}}").required = true</script>
