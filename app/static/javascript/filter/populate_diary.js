@@ -25,8 +25,12 @@ function populate_diary(pub_filtered) {
 
         if (filtered_data.length > 0) {
             document.getElementById(days_of_the_week[i][1] + '_count').textContent = "(" + filtered_data.length + ")"
+            document.getElementById(days_of_the_week[i][1] + '_face').style.opacity = '1.0'
+            document.getElementById(days_of_the_week[i][1] + '_filter').disabled = false
         } else {
             document.getElementById(days_of_the_week[i][1] + '_count').textContent = ''
+            document.getElementById(days_of_the_week[i][1] + '_face').style.opacity = '0.5'
+            document.getElementById(days_of_the_week[i][1] + '_filter').disabled = true
         }
 
         if (document.getElementById(days_of_the_week[i][1] + '_filter').checked) {

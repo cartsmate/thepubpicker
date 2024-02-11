@@ -28,13 +28,19 @@ function populate_event(pub_filtered) {
             //input.name = "fooay[1][]"
 
             input.id = value.name + "_filter"
-            input.onclick = function() { on_click_event() }
+            if (filtered_data.length > 0 ) {
+                input.onclick = function() { on_click_event() }
+            } else {
+//                document.getElementById(value.name + "_filter").disabled = true
+                input.onclick = function() { return false }
+            }
 
-            //if (filtered_data.length > 0) {
-            label.style.display = "block"
-            //} else {
-            //    label.style.display = "none"
-            //}
+
+            if (filtered_data.length > 0) {
+                label.style.display = "block"
+            } else {
+                label.style.display = "none"
+            }
             if (filtered_data.length == pub_filtered.length) {
                 input.checked = true
             }
@@ -46,11 +52,14 @@ function populate_event(pub_filtered) {
                     document.getElementById(value.name + '_carousel').style.opacity = '1.0'
                     document.getElementById(value.name + '_icon').style.opacity = '1.0'
                     document.getElementById(value.name + '_word').style.opacity = '1.0'
+//                    input.onclick = function() { on_click_event() }
+
                 } else {
                     label.style.display = "none"
                     document.getElementById(value.name + '_carousel').style.opacity = '0.25'
                     document.getElementById(value.name + '_icon').style.opacity = '0.25'
                     document.getElementById(value.name + '_word').style.opacity = '0.25'
+//                    input.onclick = function() { return false }
                 }
             }
 

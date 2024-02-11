@@ -2,6 +2,7 @@ from app.models.review.beer import Beer
 from app.models.review.brunch import Brunch
 from app.models.review.cocktail import Cocktail
 from app.models.review.dart import Dart
+from app.models.review.dj import Dj
 from app.models.review.garden import Garden
 from app.models.review.entertain import Entertain
 from app.models.review.favourite import Favourite
@@ -27,11 +28,11 @@ class Review:
 
     filename = 'review'
 
-    def __init__(self, review_deletion=ReviewDeletion(), scenic=Scenic(), sport=Sport(), garden=Garden(), music=Music(), roast=Roast(),
-                 brunch=Brunch(), late=Late(), quiz=Quiz(), pool=Pool(), dart=Dart(), entertain=Entertain(),
-                 history=History(), favourite=Favourite(), pub_identity=PubIdentity(),
-                 review_identity=ReviewIdentity(), cocktail=Cocktail(), beer=Beer(),
-                 wine=Wine(), outdoor=Outdoor(), restaurant=Restaurant(), nofeature=NoFeature(), private=Private()):
+    def __init__(self, review_deletion=ReviewDeletion(), scenic=Scenic(), sport=Sport(), garden=Garden(), music=Music(),
+                 roast=Roast(), brunch=Brunch(), late=Late(), quiz=Quiz(), pool=Pool(), dart=Dart(),
+                 entertain=Entertain(), history=History(), favourite=Favourite(), pub_identity=PubIdentity(),
+                 review_identity=ReviewIdentity(), cocktail=Cocktail(), beer=Beer(), wine=Wine(), outdoor=Outdoor(),
+                 restaurant=Restaurant(), nofeature=NoFeature(), private=Private(), dj=Dj()):
         self.review_identity = review_identity
         self.review_deletion = review_deletion
         self.pub_identity = pub_identity
@@ -39,6 +40,7 @@ class Review:
         self.brunch = brunch
         self.cocktail = cocktail
         self.dart = dart
+        self.dj = dj
         self.entertain = entertain
         self.favourite = favourite
         self.garden = garden

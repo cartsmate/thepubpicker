@@ -4,31 +4,31 @@ function filter_by_diary(filtered_data) {
     for (const [key, value] of Object.entries(review)) {
         if (document.getElementById('monday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'monday')
+                return (pub['event_day'] == 'monday' && pub['event_type'] != 'hours')
             })
         } else if (document.getElementById('tuesday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'tuesday')
+                return (pub['event_day'] == 'tuesday' && pub['event_type'] != 'hours')
             })
         } else if (document.getElementById('wednesday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'wednesday')
+                return (pub['event_day'] == 'wednesday' && pub['event_type'] != 'hours')
             })
         } else if (document.getElementById('thursday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'thursday')
+                return (pub['event_day'] == 'thursday' && pub['event_type'] != 'hours')
             })
         } else if (document.getElementById('friday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'friday')
+                return (pub['event_day'] == 'friday' && pub['event_type'] != 'hours')
             })
         } else if (document.getElementById('saturday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'saturday')
+                return (pub['event_day'] == 'saturday' && pub['event_type'] != 'hours')
             })
         } else if (document.getElementById('sunday_filter').checked) {
             var filtered_data = filtered_data.filter(function(pub) {
-                return (pub['event_day'] == 'sunday')
+                return (pub['event_day'] == 'sunday' && pub['event_type'] != 'hours')
             })
         } else {
             var filtered_data = filtered_data

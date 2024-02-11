@@ -22,20 +22,13 @@ function filter_reset() {
             document.getElementById(value.name + "_id").style.display = 'block'
             document.getElementById(value.name + "_id").innerHTML = value.name + " (" + filtered_data.length + ")"
             if (value.quick_filter) {
-                //console.log('quick filter')
-                //document.getElementById(value.name + "_word").style.color = "black"
-                //document.getElementById(model_formats['icon_list'][i] + "_carousel").style.backgroundColor = "white"
                 if (document.getElementById(value.name + "_carousel").classList.contains('carousel_on')) {
-                    //console.log('carousel on')
                     document.getElementById(value.name + "_carousel").classList.remove('carousel_on')
                     document.getElementById(value.name + "_carousel").classList.add('carousel_off')
                 }
-
             }
-
         }
     }
-
     //populate_diary(pub)
 
     for (const [key, value] of Object.entries(diary)) {
@@ -57,6 +50,12 @@ function filter_reset() {
         document.getElementById("filter_overlay_span").classList.remove('filters_span_on')
         document.getElementById("filter_overlay_span").classList.add('filters_span_off')
     }
+
+    document.getElementById('button_direction').style.fontWeight = 'normal'
+    document.getElementById('button_station').style.fontWeight = 'normal'
+    document.getElementById('button_feature').style.fontWeight = 'normal'
+    document.getElementById('button_event').style.fontWeight = 'normal'
+    document.getElementById('button_diary').style.fontWeight = 'normal'
 
     hide_filters()
 }

@@ -1,9 +1,8 @@
 
-
-class NoFeature:
-    def __init__(self, name="nofeature", alias="None", alias1='.', alias2="No Features.", required=True,
-                 form_visible=False, table_visible=False, value='1', control="check", icon="nofeature.png",
-                 data_type='str', menu_filter=True, quick_filter=False, event_filter=False, datatype='str'):
+class Dj:
+    def __init__(self, name="dj", alias="DJs", alias1=".", alias2="DJs", required=True,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="dj.png",
+                 data_type='str', menu_filter=True, quick_filter=False, event_filter=True, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1
