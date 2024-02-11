@@ -28,9 +28,9 @@
             </div>
         </div>
     {% elif name != "readonly" and ((value.form_visible) or (value.name == 'detail_name') or (value.name == 'extra')) %}
-        <div class="form-group row details" id=row_{{value.name}} >
+        <div class="form-group row" id=row_{{value.name}} >
             <div class="col details-label" >
-                <label class="col-form-label label" for={{value.name}} >{{value.alias}}</label>
+                <label class="col-form-label" for={{value.name}} >{{value.alias}}</label>
             </div>
             <div class="col details-data" id=div_{{value.name}} >
                 {% if value.control == 'dropdown' %}

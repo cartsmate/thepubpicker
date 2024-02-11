@@ -2,7 +2,7 @@
 {% for key, value in diary.items() %}
     {% if (value.form_visible) %}
         <div class="form-group row details" id="row_{{value.name}}">
-            <div class="col-diary-label" >
+            <div class="col col-diary-label" >
                 <!-- 'col-form-label' is from BOOTSTRAP -->
                 <label class="col-form-label diary-label">{{value.alias}}</label>
             </div>
