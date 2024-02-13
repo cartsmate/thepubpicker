@@ -13,9 +13,9 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         console.log('map_addListener - BOUNDS CHANGED')
 
         clearOverlays()
-        console.log('filtered_pubs: ' + filtered_pubs.length)
-        console.log('mapped_pubs: ' + mapped_pubs.length)
-        console.log('unique_data: ' + unique_data.length)
+//        console.log('filtered_pubs: ' + filtered_pubs.length)
+//        console.log('mapped_pubs: ' + mapped_pubs.length)
+//        console.log('unique_data: ' + unique_data.length)
 
         marker_in_bounds = 0
         pubs_to_show = []

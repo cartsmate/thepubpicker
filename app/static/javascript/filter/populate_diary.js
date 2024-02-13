@@ -16,12 +16,12 @@ function populate_diary(pub_filtered) {
         //console.log(days_of_the_week[i])
         //console.log(days_of_the_week[i][0])
         //console.log(days_of_the_week[i][1])
-        console.log('pub_filtered.length')
-        console.log(pub_filtered.length)
+//        console.log('pub_filtered.length')
+//        console.log(pub_filtered.length)
         var filtered_data = pub_filtered.filter(function(pub) {
             return (pub['event_day'] == days_of_the_week[i][1])
         })
-        console.log('filtered: ' + days_of_the_week[i] + " : " + filtered_data.length)
+//        console.log('filtered: ' + days_of_the_week[i] + " : " + filtered_data.length)
 
         if (filtered_data.length > 0) {
             document.getElementById(days_of_the_week[i][1] + '_count').textContent = "(" + filtered_data.length + ")"

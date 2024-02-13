@@ -48,6 +48,8 @@ def home():
 
     print('# # # GET ALL PUBS # # #')
     df_pub = FilesPub().get_pub_all()
+    print('df_pub')
+    print(df_pub)
     # df_event = FilesEvent().get_event_all()
     df_event = GetPub().get_all(Event())
     df_pub_with_event = pd.merge(df_pub, df_event, on='pub_identity', how='left')
@@ -62,6 +64,24 @@ def home():
     photos_list = FilesPhoto().go_get_1_photo_request(daily_id, env_vars)
     print(photos_list)
     print('# # # END OF GET DAILY PUB # # #')
+    print('')
+
+    print('# # # GET TIMEOUT LIST # # #')
+    timeout_list = FilesDaily().get_timeout()
+    print('timeout_list')
+    print(timeout_list)
+    print('df_pub')
+    print(df_pub)
+    # df_timeout = pd.merge(df_pub, df_timeout_list, on='pub_identity', how='inner')
+    df_timeout = df_pub[df_pub['pub_identity'].isin(timeout_list)]
+    # df_timeout = df_pub[df_pub['pub_identity'].isin(['7092252a-1dbb-435b-a339-aff889c58267'])]
+    print('df_timeout')
+    print(df_timeout)
+    timeout_json = df_timeout.to_dict(orient='records')
+    print('timeout_json')
+    print(timeout_json)
+
+    print('# # # END OF GET TIMEOUT LIST # # #')
     print('')
 
     print('# # # GET COUNTER # # #')
@@ -101,7 +121,8 @@ def home():
                            directions_list=directions_list,
                            stations_directions_list=stations_directions_list,
                            counter=counter6,
-                           page='home'
+                           page='home',
+                           timeout_pubs=timeout_json
 
                            # no_of_review=no_of_reviews
                            )

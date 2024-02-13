@@ -13,6 +13,12 @@ directory_path = config2['directory_path']
 
 class FilesDaily:
 
+    def get_timeout(self):
+        # timeout_list = pd.read_csv(directory_path + '/files/timeout.csv', dtype={'pub_identity': str})
+        with open(directory_path + '/files/timeout.csv', 'r') as fil:
+            timeout_list = fil.read().split('\n')
+        return timeout_list
+
     def go_get_details_daily(self):
         print('go_get_details_daily')
         if env_vars['env'] == 'qual':

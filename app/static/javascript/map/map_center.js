@@ -1,15 +1,12 @@
 function center_map() {
     console.log('center_map')
 
-        filtered_pubs = filter_all_data()
-        console.log('filtered_pubs: ' + filtered_pubs.length)
+    filtered_pubs = filter_all_data()
+    populate_all_filters(filtered_pubs)
 
-        populate_all_filters(filtered_pubs)
     if (window.navigator.onLine == true) {
         if (search_string == '') {
             filtered_pubs = map_center_from_pubs(filtered_pubs)
-            console.log('filtered_pubs')
-            console.log(filtered_pubs)
             map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
         } else {
             filtered_pubs = map_center_from_searchbox(filtered_pubs)
@@ -19,26 +16,10 @@ function center_map() {
             && document.getElementById('friday_filter').checked == false && document.getElementById('thursday_filter').checked == false
             && document.getElementById('wednesday_filter').checked == false && document.getElementById('tuesday_filter').checked == false
             && document.getElementById('monday_filter').checked == false) {
-            console.log('no day picked')
-            console.log(filtered_pubs)
-            /*
-            less_events_array = filtered_pubs
-            console.log('less_events_array - PRE')
-            console.log(less_events_array)
-            less_events_array.forEach(a => delete a.event_day);
-            less_events_array.forEach(a => delete a.event_detail);
-            less_events_array.forEach(a => delete a.event_identity);
-            less_events_array.forEach(a => delete a.event_type);
-            console.log('less_events_array - POST')
-            console.log(less_events_array)
-            //const o = { lastName: 'foo' }
-            //filtered_pubs.hasOwnProperty('event_day') // true
 
-            const unique_data = [...new Set(less_events_array.map(item => item.pub_identity))];
-            //o.hasOwnProperty('lastName') // false
-    //        console.log('unique_data')
-    //        console.log(unique_data)
-            */
+            unique_data = get_unique_list(filtered_pubs)
+
+            /*
             unique_data = filtered_pubs.filter(function (a) {
                 var key = a.pub_identity
                 if (!this[key]) {
@@ -46,24 +27,18 @@ function center_map() {
                     return true;
                 }
             }, Object.create(null));
-
-            console.log('unique_data');
-            console.log(unique_data);
-
+            */
 
         } else {
             console.log('DAY selected')
             unique_data = filtered_pubs
         }
         var central_map = map.getCenter();
-        console.log(central_map)
         map.panTo(central_map);
     } else {
         list_setup_beta(filtered_pubs)
     }
     finalise_results(filtered_pubs)
-
-
 }
 
 function map_center_from_searchbox(filtered_pubs) {

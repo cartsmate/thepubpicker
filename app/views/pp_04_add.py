@@ -98,6 +98,7 @@ def add():
                            detail=detail_json,
                            review=review_json,
                            diary=diary_json,
+                           event=event_json,
                            events=json_loads,
                            page=page
                            )
