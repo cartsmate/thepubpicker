@@ -18,20 +18,18 @@ class GetForm:
         print('get_form: ' + model.__str__())
         new_model = model
         for key, value in model.__dict__.items():
-            if model == Review():
-                print(key, value)
-                print(value.name)
+            print(key, value)
+            print(value.name)
             if value.control == 'check':
-                if model == Review():
-                    print("check")
+                print("check")
                 if request.form.get(value.name) == 'on' or request.form.get(value.name) == 'true':
                     setattr(new_model, value.name, '1')
                 else:
                     setattr(new_model, value.name, '0')
             else:
-                # if model == Diary():
-                #     print("else")
-                #     print(request.form[value.name])
+                print("NOT check")
+                print(value.name)
+                print(request.form[value.name])
                 setattr(new_model, value.name, request.form[value.name])
         df = pd.DataFrame([new_model.__dict__])
         return df
@@ -42,19 +40,19 @@ class GetForm:
 
         for key, value in Diary().__dict__.items():
             if value.menu_filter:
-                print(value.name)
+                # print(value.name)
                 new_model = Event()
                 for evnt_key, evnt_value in Event().__dict__.items():
-                    print(evnt_value.name)
+                    # print(evnt_value.name)
                     if value.control == 'check':
-                        print("check")
+                        # print("check")
                         if request.form.get(value.name) == 'on' or request.form.get(value.name) == 'true':
                             setattr(new_model, value.name, '1')
                         else:
                             setattr(new_model, value.name, '0')
                     else:
-                        print('non-check')
-                        print(value.name + '_' + evnt_value.name)
+                        # print('non-check')
+                        # print(value.name + '_' + evnt_value.name)
                         # print(request.form[value.name + "_" + evnt_value.name])
                         try:
                             setattr(new_model, evnt_value.name, request.form[value.name + "_" + evnt_value.name])

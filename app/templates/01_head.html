@@ -30,18 +30,7 @@
 <script defer type="text/javascript" src="{{ url_for('static', filename='javascript/map/marker_add.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/html/is_touch.js') }}"></script>
 
-<script>
-    console.log('internet connection status: ' + window.navigator.onLine)
-    if (window.navigator.onLine == true) {
-        console.log('ON-LINE')
-        } else {
-        console.log('OFF-LINE')
-        add_offine_js("static/jquery/js/jquery.dataTables.min.js");
-        add_offine_js("static/jquery/js/jquery-3.6.3.min.js");
 
-
-        }
-</script>
 <script>
 function add_offine_css(fileName) {
    var link = $("<link />",{
@@ -58,6 +47,18 @@ function add_offine_js(fileName) {
    })
    $('head').append(link);
 }
+</script>
+<script>
+    console.log('internet connection status: ' + window.navigator.onLine)
+    if (window.navigator.onLine == true) {
+        console.log('ON-LINE')
+        } else {
+        console.log('OFF-LINE')
+        add_offine_js("static/jquery/js/jquery.dataTables.min.js");
+        add_offine_js("static/jquery/js/jquery-3.6.3.min.js");
+
+
+        }
 </script>
 <script>
     var map;

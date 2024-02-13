@@ -1,8 +1,7 @@
 
-
-class NoFeature:
-    def __init__(self, name="nofeature", alias="None", alias1='.', alias2="No Features", required=True,
-                 form_visible=False, table_visible=False, value='1', control="check", icon="nofeature.png",
+class Rainbow:
+    def __init__(self, name="rainbow", alias="Rainbow", alias1="Bar", alias2="Rainbow Bar", required=False,
+                 form_visible=False, table_visible=False, value='0', control="check", icon="rainbow.png",
                  data_type='str', menu_filter=True, quick_filter=False, event_filter=False, datatype='str'):
         self.name = name
         self.alias = alias

@@ -21,6 +21,7 @@
                                         <option value="{{r_value.name}}">{{r_value.alias2}}</option>
                                     {% endif %}
                                 {% endfor %}
+                                <option value="hours">hours</option>
                             </select>
                             {% if (name == "readonly") %}
                                 <script>document.getElementById("{{value.name}}_{{e_value.name}}").disabled = true</script>
