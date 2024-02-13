@@ -16,8 +16,3 @@ function redirect_reviews(url) {
 
     window.open(url)
 }
-function redirect_website(website) {
-    console.log("redirect_website")
-
-    window.open(website)
-}
