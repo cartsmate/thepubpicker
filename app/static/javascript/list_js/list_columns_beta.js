@@ -52,7 +52,7 @@ function list_columns_beta() {
         console.log('diary on')
         if (filter_selection['diary'] == 'on') {
             visible['event_day'] = false
-            visible['rank'] = true
+            visible['detail'] = true
         } else {
             visible['rank'] = false
             visible['event_day'] = true
