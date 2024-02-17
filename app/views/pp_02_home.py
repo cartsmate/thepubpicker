@@ -48,9 +48,6 @@ def home():
 
     print('# # # GET ALL PUBS # # #')
     df_pub = FilesPub().get_pub_all()
-    print('df_pub')
-    print(df_pub)
-    # df_event = FilesEvent().get_event_all()
     df_event = GetPub().get_all(Event())
     df_pub_with_event = pd.merge(df_pub, df_event, on='pub_identity', how='left')
     pub_ent_json = df_pub_with_event.to_dict(orient='records')
@@ -68,19 +65,8 @@ def home():
 
     print('# # # GET TIMEOUT LIST # # #')
     timeout_list = FilesDaily().get_timeout()
-    print('timeout_list - length')
-    print(len(timeout_list))
-    # print('df_pub')
-    # print(df_pub)
-    # df_timeout = pd.merge(df_pub, df_timeout_list, on='pub_identity', how='inner')
-
     df_timeout = df_pub[df_pub['pub_identity'].isin(timeout_list)]
-    print('df_timeout - length')
-    print(df_timeout.shape[0])
     timeout_json = df_timeout.to_dict(orient='records')
-    # print('timeout_json')
-    # print(timeout_json)
-
     print('# # # END OF GET TIMEOUT LIST # # #')
     print('')
 
