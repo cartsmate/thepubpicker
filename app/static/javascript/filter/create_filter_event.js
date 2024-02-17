@@ -1,6 +1,7 @@
-function populate_event(pub_filtered) {
-    console.log('---- populate_event, in: ' + pub_filtered.length)
-    filter_clear('checks_event')
+function create_filter_event(pub_filtered) {
+    console.log('---- create_filter_event, in: ' + pub_filtered.length)
+
+    clear_filter('checks_event')
 
     for (const [key, value] of Object.entries(review)) {
         if (value.event_filter) {

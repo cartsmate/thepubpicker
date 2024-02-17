@@ -6,7 +6,7 @@ function toggle_reset() {
         filter_reset()
         console.log('USER INPUT: reset click')
         console.log('pub length: ' + pub_all.length)
-        populate_all_filters(pub_all)
+        create_filter_(pub_all)
         document.getElementById('template_map').style.display = 'none'
         document.getElementById('template_list').style.display = 'none'
         document.getElementById('template_header').style.display = 'none'

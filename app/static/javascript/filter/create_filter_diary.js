@@ -1,5 +1,5 @@
-function populate_diary(pub_filtered) {
-    console.log('---- populate_diary:in ' + pub_filtered.length)
+function create_filter_diary(pub_filtered) {
+    console.log('---- create_filter_diary:in ' + pub_filtered.length)
     //filter_clear('checks_diary')
 
     days_of_the_week = [

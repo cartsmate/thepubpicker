@@ -1,7 +1,7 @@
-function populate_feature(pub_filtered) {
-    console.log('---- populate_feature: ' + pub_filtered.length)
+function create_filter_feature(pub_filtered) {
+    console.log('---- create_filter_feature: ' + pub_filtered.length)
 
-    filter_clear('checks_feature')
+    clear_filter('checks_feature')
 
     for (const [key, value] of Object.entries(review)) {
         if (value.menu_filter && !value.event_filter) {

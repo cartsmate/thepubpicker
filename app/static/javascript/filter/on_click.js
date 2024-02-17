@@ -67,32 +67,7 @@ function on_click_direction() {
     center_map()
 
 }
-//function check_tot_shown() {
-//    console.log('check_tot_shown')
-//    var current_zoom = map.getZoom()
-//    console.log('current_zoom: ' + current_zoom)
-//    console.log('mapped pubs: ' + mapped_pubs.length)
-//
-//    if (mapped_pubs.length < filtered_pubs.length && mapped_pubs.length < 10) {
-//        var new_zoom = current_zoom - 1
-//        console.log('new_zoom: ' + new_zoom)
-//        map.setZoom(new_zoom)
-//    } else {
-//        var final_zoom = map.getZoom()
-//        console.log('final_zoom: ' + final_zoom)
-//    }
-//}
-//function update_filters() {
-//    console.log('update_filters')
-//    filtered_pubs = filter_all_data(pub)
-//    if (document.getElementById('filter_monday').checked == true) {
-//        var filtered_pubs = filtered_pubs.filter(function(pub) {
-//            return (pub['event_day'] == 'Mon')
-//        })
-//    }
-//    console.log('filtered_pubs: ' + filtered_pubs.length)
-//    populate_all_filters(filtered_pubs)
-//}
+
 function on_click_days(clicked_day) {
     console.log('USER INPUT - on_click_days')
     var words = clicked_day + "_filter"

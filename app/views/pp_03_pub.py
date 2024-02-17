@@ -65,6 +65,7 @@ def pub():
     page = "pub"
     stations_directions_list = Dataframes().go_get_stations_directions_list()
     directions_list = Dataframes().go_get_directions_list()
+
     return render_template('03_pub_.html',
                            pub_1=pub_json,
                            events=json_loads,

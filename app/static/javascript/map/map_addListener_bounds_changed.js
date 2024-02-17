@@ -42,7 +42,9 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         }
         */
         var pubs_north = pubs_south = pubs_east = pubs_west = 0
-        for (i=0; i<unique_data.length; i++) {
+//        for (i=0; i<unique_data.length; i++) {
+        for (i=0; i<Math.min(unique_data.length, 100); i++) {
+            console.log(unique_data[i])
             if (unique_data[i]['detail_latitude'] > south && unique_data[i]['detail_latitude'] < north && unique_data[i]['detail_longitude'] > west && unique_data[i]['detail_longitude'] < east) {
                 marker_in_bounds ++
                 unique_data[i]['ordering'] = i

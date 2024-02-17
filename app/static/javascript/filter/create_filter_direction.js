@@ -1,10 +1,11 @@
-function populate_direction(pub_filtered) {
-    console.log('---- populate_direction: ' + pub_filtered.length)
+function create_filter_direction(pub_filtered) {
+    console.log('---- create_filter_direction: ' + pub_filtered.length)
 
     //document.getElementById('button_direction').innerHTML = '<a>by area (' + pub_filtered.length + ')</a>'
     var select= document.getElementById("direction");
     var option = document.createElement("option");
-    filter_clear('checks_direction')
+
+    clear_filter('checks_direction')
 
     for (i=0; i<directions_list.length; i++) (function(i, pub_filtered){
         var filtered_data = pub_filtered.filter(function(x) {

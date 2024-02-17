@@ -1,0 +1,13 @@
+:root {
+    --theme: var(--color)
+}
+#content_pub_identity{
+    position: absolute;
+    left: -250px;
+    background-color: #F5F5F5;
+    border: 5px solid var(--theme);
+}
+#button_pub_identity {
+    width: 95px;
+    height: 35px;
+}

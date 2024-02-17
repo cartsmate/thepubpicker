@@ -6,9 +6,9 @@ function filter_reset() {
     document.getElementById('template_list').style.display = "none"
     document.getElementById('template_header').style.display = "none"
 
-    populate_direction(pub_all)
+    create_filter_direction(pub_all)
 
-    populate_station(pub_all)
+    create_filter_station(pub_all)
 
     for (const [key, value] of Object.entries(review)) {
         console.log('-- reset features')
@@ -38,6 +38,11 @@ function filter_reset() {
         }
     }
 
+    console.log('--reset pub identity')
+    for (i=0; i<pub_all.length; i++) {
+//        console.log(timeout_list[i])
+        document.getElementById(pub_all[i]['pub_identity'] + "_filter").checked = false;
+    }
     document.getElementById('search-input-navbar').value = ''
     document.getElementById('active_filter_count').value = '0'
     document.getElementById('active_filter_count').style.display = "none"

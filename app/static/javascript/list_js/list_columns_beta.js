@@ -19,16 +19,67 @@ function list_columns_beta() {
     visible['ordering'] = true
     visible['detail_name'] = true
 
-//    if (document.getElementById('monday_filter').checked || document.getElementById('tuesday_filter').checked ||
-//        document.getElementById('wednesday_filter').checked || document.getElementById('thursday_filter').checked ||
-//        document.getElementById('friday_filter').checked || document.getElementById('saturday_filter').checked ||
-//        document.getElementById('sunday_filter').checked) {
+    var e = filter_selection['event']
+    var s = filter_selection['station']
+    var d = filter_selection['diary']
 
-    visible['rank'] = true
-    visible['station_name'] = true
-
-    console.log('filter_selection')
-    console.log(filter_selection)
+    if ((e=='on') && (s=='on') && (d=='on')) {
+        visible['station_name'] = false
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = true
+        visible['rank'] = true
+    }
+    if ((e=='on') && (s=='on') && (d=='off')) {
+        visible['station_name'] = false
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = true
+        visible['rank'] = true
+    }
+    if ((e=='on') && (s=='off') && (d=='on')) {
+        visible['station_name'] = true
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = true
+        visible['rank'] = false
+    }
+    if ((e=='off') && (s=='on') && (d=='on')) {
+        visible['station_name'] = false
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = false
+        visible['rank'] = true
+    }
+    if ((e=='on') && (s=='off') && (d=='off')) {
+        visible['station_name'] = true
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = false
+        visible['rank'] = true
+    }
+    if ((e=='off') && (s=='on') && (d=='off')) {
+        visible['station_name'] = false
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = false
+        visible['rank'] = true
+    }
+    if ((e=='off') && (s=='off') && (d=='on')) {
+        visible['station_name'] = true
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = false
+        visible['rank'] = true
+    }
+    if ((e=='off') && (s=='off') && (d=='off')) {
+        visible['station_name'] = true
+        visible['event_day'] = false
+        visible['event_type'] = false
+        visible['event_detail'] = false
+        visible['rank'] = true
+    }
+    /*
     if (filter_selection['event'] == 'on') {
         console.log('diary on')
         visible['rank'] = false
@@ -60,7 +111,6 @@ function list_columns_beta() {
         visible['event_type'] = false
         visible['station_name'] = true
         }
-        /*
     } else if (filter_selection['diary'] == 'on') {
         visible['event_event'] = true
         visible['event_detail'] = true {

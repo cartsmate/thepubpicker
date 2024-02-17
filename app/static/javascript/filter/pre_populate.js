@@ -1,7 +1,15 @@
 //function pre_populate(feature, station, filters_str) {
 function pre_populate(filters_str) {
     console.log('-- pre_populate: ' + filters_str)
+//    if (filters_str == 'timeout-top-50') {
+//        console.log('pre-populate timeout list: ' + timeout_list.length)
+//        for (i=0; i < timeout_list.length; i++) {
+//            print(timeout_list[i])
+//            document.getElementById(timeout_list[i] + "_filter").checked = true
+//        }
+//    }
     if (filters_str != 'dl,sl,fl' && filters_str != 'null' && filters_str != null && filters_str == '') {
+        console.log('pre-populate filters')
         var filters_list = filters_str.split(',');
         d_list = []
         d_obj = {}

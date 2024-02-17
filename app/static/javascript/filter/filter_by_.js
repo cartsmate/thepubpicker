@@ -1,5 +1,5 @@
-function filter_all_data() {
-    console.log('-- filter by all data: ' + pub_all.length)
+function filter_by_() {
+    console.log('-- filter by all data: IN: ' + pub_all.length)
     var filter_count = 0
 //    data = pub_all
     filter_selection['direction'] = 'off';
@@ -42,6 +42,7 @@ function filter_all_data() {
         filter_selection['diary'] = 'on';
         document.getElementById('button_diary').style.fontWeight = 'bold'
         }
+    data_by_pub_identity = filter_by_pub_identity(data_by_diary)
 
     if (filter_count > 0) {
         document.getElementById('active_filter_count').textContent = filter_count
@@ -62,7 +63,7 @@ function filter_all_data() {
         document.getElementById("collapsible_filters_sm").style.width = "60px";
         document.getElementById("search-input-navbar").style.width = "285px";
     }
-    console.log('---- pub selection: ' + data_by_feature.length)
-    filtered_pubs = data_by_diary
+    console.log('---- filter by all data: OUT: ' + data_by_pub_identity.length)
+    filtered_pubs = data_by_pub_identity
     return filtered_pubs
 }

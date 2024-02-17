@@ -1,9 +1,9 @@
-function populate_station(pub_filtered) {
-    console.log('---- populate_station: ' + pub_filtered.length)
+function create_filter_station(pub_filtered) {
+    console.log('---- create_filter_station: ' + pub_filtered.length)
 
     var select= document.getElementById("station");
     var option = document.createElement("option");
-    filter_clear('checks_station')
+    clear_filter('checks_station')
     var station_options = 0
     for (i=0; i<stations_directions_list.length; i++) {
         var filtered_data = pub_filtered.filter(function(x) {

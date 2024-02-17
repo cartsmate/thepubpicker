@@ -1,8 +1,12 @@
 function center_map() {
     console.log('center_map')
 
-    filtered_pubs = filter_all_data()
-    populate_all_filters(filtered_pubs)
+    filtered_pubs = filter_by_()
+
+    console.log('filtered_pubs')
+    console.log(filtered_pubs)
+
+    create_filter_(filtered_pubs)
 
     if (window.navigator.onLine == true) {
         if (search_string == '') {
@@ -33,6 +37,8 @@ function center_map() {
             console.log('DAY selected')
             unique_data = filtered_pubs
         }
+        console.log('unique_data')
+        console.log(unique_data)
         var central_map = map.getCenter();
         map.panTo(central_map);
     } else {
@@ -73,6 +79,7 @@ function map_center_from_pubs(filtered_pubs) {
     console.log(avg_lng)
     console.log('PRE-DISTANCE CALC: filtered_pubs')
     console.log(filtered_pubs)
+    filtered_pubs = get_unique_list(filtered_pubs)
     for (i=0; i < filtered_pubs.length; i++) {
         lat_diff = Math.abs(filtered_pubs[i]['detail_latitude'] - avg_lat)
         lng_diff = Math.abs(filtered_pubs[i]['detail_longitude'] - avg_lng)
