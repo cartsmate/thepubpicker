@@ -7,7 +7,7 @@ function filter_by_event(filtered_data) {
             //console.log(document.getElementById(value.name + "_filter").checked)
             if (document.getElementById(value.name + "_filter").checked) {
                 //console.log('filter checked')
-                var filtered_data = data_in.filter(function(pub) {
+                var filtered_data = filtered_data.filter(function(pub) {
                     return (pub['event_type'] == value.name)
                     })
             } else {
