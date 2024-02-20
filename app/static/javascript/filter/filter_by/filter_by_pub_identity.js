@@ -2,9 +2,9 @@ function filter_by_pub_identity(data_in) {
     console.log('filter by pub identity: ' + data_in.length)
     ticked_list = []
 //    for (i=0; i<pub_all.length; i++) {
-    for (i=0; i<data_in.length; i++) {
+    for (i=0; i<pub_all.length; i++) {
         if (document.getElementById(pub_all[i]['pub_identity'] + "_filter").checked) {
-            ticked_list.push(data_in[i]['pub_identity'])
+            ticked_list.push(pub_all[i]['pub_identity'])
         }
     }
 

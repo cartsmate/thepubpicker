@@ -38,16 +38,16 @@ function create_filter_feature(pub_filtered) {
             }
             label.appendChild(input)
 
-            if (value.quick_filter == 'yes') {
+            if (value.quick_filter) {
                 if (filtered_data.length > 0) {
                     label.style.display = "block"
-                    //console.log(value.name)
+                    console.log(value.name + " > 0")
                     document.getElementById(value.name + '_carousel').style.opacity = '1.0'
                     document.getElementById(value.name + '_icon').style.opacity = '1.0'
                     document.getElementById(value.name + '_word').style.opacity = '1.0'
                 } else {
-                    label.style.display = "none"
-                    //console.log(value.name)
+                    label.style.display = "block"
+                    console.log(value.name + " == 0")
                     document.getElementById(value.name + '_carousel').style.opacity = '0.25'
                     document.getElementById(value.name + '_icon').style.opacity = '0.25'
                     document.getElementById(value.name + '_word').style.opacity = '0.25'

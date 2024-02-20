@@ -48,7 +48,7 @@ function create_filter_event(pub_filtered) {
             }
             label.appendChild(input)
 
-            if (value.quick_filter == 'yes') {
+            if (value.quick_filter) {
                 if (filtered_data.length > 0) {
                     label.style.display = "block"
                     document.getElementById(value.name + '_carousel').style.opacity = '1.0'

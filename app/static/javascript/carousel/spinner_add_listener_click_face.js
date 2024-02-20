@@ -27,6 +27,7 @@ function spinner_add_listener_click_face() {
 }
 
 function update_carousel(feature, status) {
+    console.log('status: ' + status)
     document.getElementById(feature + "_filter").checked = status;
     current_carousel = document.getElementById(feature + "_carousel")
     if (status) {
