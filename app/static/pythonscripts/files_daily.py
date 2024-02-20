@@ -17,6 +17,8 @@ class FilesDaily:
         # timeout_list = pd.read_csv(directory_path + '/files/timeout.csv', dtype={'pub_identity': str})
         with open(directory_path + '/files/timeout.csv', 'r') as fil:
             timeout_list = fil.read().split('\n')
+        # df_details = GetPub().get_all()
+        # df_timeout = df_details.loc[df_details['shortcut'] == 'timeout']
         return timeout_list
 
     def go_get_details_daily(self):

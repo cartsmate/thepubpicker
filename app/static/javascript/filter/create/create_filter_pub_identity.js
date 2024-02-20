@@ -2,15 +2,13 @@ function create_filter_pub_identity(pub_filtered) {
     console.log('---- create_filter_pub_identity: ' + pub_filtered.length)
 
     clear_filter('checks_pub_identity')
-    //for (i=0; i<pub_filtered.length; i++) {
-
 
     for (i=0; i<pub_all.length; i++) {
 
         var filtered_data = pub_filtered.filter(function(x) {
             return x['pub_identity'] == pub_all[i]['pub_identity']
         })
-
+        var unique_filter = get_unique_list(filtered_data)
         record = document.createElement("div")
         record.className = 'row'
         checks_area = document.getElementById('checks_pub_identity')
@@ -19,7 +17,7 @@ function create_filter_pub_identity(pub_filtered) {
         label = document.createElement("div")
         label.style.width = "230px"
         label.id = pub_all[i]['pub_identity'] + "_id"
-        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + pub_all[i]['pub_identity'] + " (" + filtered_data.length + ") " + "</a>"
+        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + pub_all[i]['pub_identity'] + " (" + unique_filter.length + ") " + "</a>"
         //label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + pub_filtered[i]['pub_identity'] + "</a>"
         record.appendChild(label)
 
@@ -32,7 +30,7 @@ function create_filter_pub_identity(pub_filtered) {
             label.style.display = "block"
             input.checked = true
         } else {
-            label.style.display = "none"
+            label.style.display = "block"
             input.checked = false
         }
 

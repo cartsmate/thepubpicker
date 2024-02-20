@@ -1,5 +1,5 @@
 function create_filter_event(pub_filtered) {
-    console.log('---- create_filter_event, in: ' + pub_filtered.length)
+    console.log('---- create_filter_event: ' + pub_filtered.length)
 
     clear_filter('checks_event')
 
@@ -9,6 +9,7 @@ function create_filter_event(pub_filtered) {
             var filtered_data = pub_filtered.filter(function(x) {
                 return x['event_type'] == value.name
             })
+            var unique_filter = get_unique_list(filtered_data)
             //console.log(filtered_data.length)
 //            filtered_data = pub_filtered
             record = document.createElement("div")
@@ -18,7 +19,7 @@ function create_filter_event(pub_filtered) {
             label = document.createElement("div")
             label.id = value.name + "_id"
             label.className = 'check_label'
-            label.textContent = value.alias2 + " (" + filtered_data.length + ") "
+            label.textContent = value.alias2 + " (" + unique_filter.length + ") "
             record.appendChild(label)
             checks_feature.appendChild(record)
 

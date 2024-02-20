@@ -1,10 +1,6 @@
 function center_map() {
-    console.log('center_map')
-
-    filtered_pubs = filter_by_()
-
-    console.log('filtered_pubs')
-    console.log(filtered_pubs)
+    filtered_pubs = update_filters()
+    console.log('center_map: ' + filtered_pubs.length)
 
     create_filter_(filtered_pubs)
 
@@ -23,22 +19,11 @@ function center_map() {
 
             unique_data = get_unique_list(filtered_pubs)
 
-            /*
-            unique_data = filtered_pubs.filter(function (a) {
-                var key = a.pub_identity
-                if (!this[key]) {
-                    this[key] = true;
-                    return true;
-                }
-            }, Object.create(null));
-            */
-
         } else {
             console.log('DAY selected')
             unique_data = filtered_pubs
         }
-        console.log('unique_data')
-        console.log(unique_data)
+
         var central_map = map.getCenter();
         map.panTo(central_map);
     } else {
@@ -61,6 +46,7 @@ function map_center_from_searchbox(filtered_pubs) {
         }
     });
     return filtered_pubs
+
 }
 function map_center_from_pubs(filtered_pubs) {
     console.log('map_center_from_pubs')
@@ -75,10 +61,7 @@ function map_center_from_pubs(filtered_pubs) {
     }
     avg_lat = total_lat/filtered_pubs.length
     avg_lng = total_lng/filtered_pubs.length
-    console.log(avg_lat)
-    console.log(avg_lng)
-    console.log('PRE-DISTANCE CALC: filtered_pubs')
-    console.log(filtered_pubs)
+
     filtered_pubs = get_unique_list(filtered_pubs)
     for (i=0; i < filtered_pubs.length; i++) {
         lat_diff = Math.abs(filtered_pubs[i]['detail_latitude'] - avg_lat)
@@ -86,14 +69,10 @@ function map_center_from_pubs(filtered_pubs) {
         tot_diff = lat_diff + lng_diff
         filtered_pubs[i]['distance'] = tot_diff
     }
-    console.log('PRE-filtered_pubs')
-    console.log(filtered_pubs)
     filtered_pubs = filtered_pubs.sort((a, b) => {
         if (a.distance < b.distance) {
             return -1;
         }
     });
-    console.log('POST-filtered_pubs')
-    console.log(filtered_pubs)
     return filtered_pubs
 }

@@ -9,6 +9,7 @@ function create_filter_station(pub_filtered) {
         var filtered_data = pub_filtered.filter(function(x) {
             return x.station_identity == stations_directions_list[i][0]
         })
+        var unique_filter = get_unique_list(filtered_data)
         record = document.createElement("div")
         record.className = 'row'
         checks_area = document.getElementById('checks_station')
@@ -17,7 +18,7 @@ function create_filter_station(pub_filtered) {
         label = document.createElement("div")
         label.style.width = "230px"
         label.id = stations_directions_list[i][0] + "_id"
-        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + stations_directions_list[i][1] + " (" + filtered_data.length + ") " + "</a>"
+        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + stations_directions_list[i][1] + " (" + unique_filter.length + ") " + "</a>"
         record.appendChild(label)
 
         input = document.createElement("input")

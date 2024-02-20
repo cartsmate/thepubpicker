@@ -1,12 +1,14 @@
 from app.models.review.beer import Beer
 from app.models.review.brunch import Brunch
 from app.models.review.cocktail import Cocktail
+from app.models.review.comedy import Comedy
 from app.models.review.dart import Dart
 from app.models.review.dj import Dj
 from app.models.review.garden import Garden
 from app.models.review.entertain import Entertain
 from app.models.review.favourite import Favourite
 from app.models.review.history import History
+from app.models.review.karaoke import Karaoke
 from app.models.review.late import Late
 from app.models.review.music import Music
 from app.models.review.outdoor import Outdoor
@@ -32,7 +34,8 @@ class Review:
                  roast=Roast(), brunch=Brunch(), late=Late(), quiz=Quiz(), pool=Pool(), dart=Dart(),
                  entertain=Entertain(), history=History(), favourite=Favourite(), pub_identity=PubIdentity(),
                  review_identity=ReviewIdentity(), cocktail=Cocktail(), beer=Beer(), wine=Wine(), outdoor=Outdoor(),
-                 restaurant=Restaurant(), nofeature=NoFeature(), private=Private(), dj=Dj()):
+                 restaurant=Restaurant(), nofeature=NoFeature(), private=Private(), dj=Dj(), comedy=Comedy(),
+                 karaoke=Karaoke()):
         self.review_identity = review_identity
         self.review_deletion = review_deletion
         self.pub_identity = pub_identity
@@ -57,3 +60,5 @@ class Review:
         self.sport = sport
         self.wine = wine
         self.nofeature = nofeature
+        self.comedy = comedy
+        self.karaoke = karaoke

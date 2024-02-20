@@ -1,7 +1,6 @@
 function filter_by_() {
     console.log('-- filter by all data: IN: ' + pub_all.length)
     var filter_count = 0
-//    data = pub_all
     filter_selection['direction'] = 'off';
     filter_selection['station'] = 'off';
     filter_selection['feature'] = 'off';
@@ -63,7 +62,6 @@ function filter_by_() {
         document.getElementById("collapsible_filters_sm").style.width = "60px";
         document.getElementById("search-input-navbar").style.width = "285px";
     }
-    console.log('---- filter by all data: OUT: ' + data_by_pub_identity.length)
     filtered_pubs = data_by_pub_identity
     return filtered_pubs
 }

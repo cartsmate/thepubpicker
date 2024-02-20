@@ -10,7 +10,7 @@ function create_filter_feature(pub_filtered) {
             var filtered_data = pub_filtered.filter(function(x) {
                 return x[value.name] == '1'
             })
-
+            var unique_filter = get_unique_list(filtered_data)
             record = document.createElement("div")
             record.className = 'row'
             checks_feature = document.getElementById("checks_feature")
@@ -19,7 +19,7 @@ function create_filter_feature(pub_filtered) {
             label.style.width = "230px"
             label.style.font = "8px"
             label.id = value.name + "_id"
-            label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + value.alias2 + " (" + filtered_data.length + ") " + "</a>"
+            label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + value.alias2 + " (" + unique_filter.length + ") " + "</a>"
             record.appendChild(label)
             checks_feature.appendChild(record)
 

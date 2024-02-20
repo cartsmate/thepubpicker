@@ -1,17 +1,12 @@
 function finalise_results() {
     console.log('finalise_results')
-    console.log('search_string: ' + search_string)
-    console.log('filtered_pubs: ' + filtered_pubs.length)
     if ((search_string == '') && (filtered_pubs.length == pub_all.length)) {
-        console.log('No search string - No filters')
         display_results('none')
     } else if ((search_string != '') && (filtered_pubs.length == pub_all.length)) {
-        console.log('Search string filled - No filters')
         filtered_pubs = filtered_pubs.slice(0,99)
         populate_header()
         display_results('block')
     } else {
-        console.log('Search string filled - Some filters')
         populate_header()
         display_results('block')
     }
@@ -22,6 +17,12 @@ function display_results(display) {
     document.getElementById('template_map').style.display = display
     document.getElementById('template_list').style.display = display
     document.getElementById('template_header').style.display = display
+}
+function update_filters() {
+    filtered_pubs = filter_by_()
+    var unique_filter = get_unique_list(filtered_pubs)
+    console.log('unique_filter: ' + unique_filter.length)
+    return filtered_pubs
 }
 function on_click_event() {
     console.log('USER INPUT - on click event')
@@ -38,6 +39,8 @@ function on_click_event() {
             }
         }
     }
+//    filtered_pubs = update_filters()
+//    center_map(filtered_pubs)
     center_map()
 }
 function on_click_feature() {
@@ -55,17 +58,22 @@ function on_click_feature() {
             }
         }
     }
+//    filtered_pubs = update_filters()
+//    center_map(filtered_pubs)
     center_map()
 }
 function on_click_station() {
     console.log('USER INPUT - on click station')
+//    filtered_pubs = update_filters()
+//    center_map(filtered_pubs)
     center_map()
 }
 
-function on_click_direction() {
-    console.log('USER INPUT - on click direction COLLECTION')
+function on_click_direction(clicked_value) {
+    console.log('USER INPUT - on click direction')
+//    filtered_pubs = update_filters()
+//    center_map(filtered_pubs)
     center_map()
-
 }
 
 function on_click_days(clicked_day) {
@@ -81,5 +89,7 @@ function on_click_days(clicked_day) {
         document.getElementById(clicked_day + "_face").style.background = "#808000"
         document.getElementById(clicked_day + "_caption").style.color = "white"
     }
+//    filtered_pubs = update_filters()
+//    center_map(filtered_pubs)
     center_map()
 }

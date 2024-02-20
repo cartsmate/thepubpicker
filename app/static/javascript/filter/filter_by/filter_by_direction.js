@@ -1,4 +1,4 @@
-function filter_by_direction(data) {
+function filter_by_direction(data_in) {
     //console.log('---- direction-in: ' + data.length)
 
     ticked_list = []
@@ -13,14 +13,14 @@ function filter_by_direction(data) {
     ticked_data = []
     if (ticked_list.length > 0) {
         for (j=0; j<ticked_list.length; j++) {
-            var filtered_data = data.filter(function(item) {
+            var filtered_data = data_in.filter(function(item) {
                 return item.direction_identity == ticked_list[j]
             })
             ticked_data = ticked_data.concat(filtered_data)
         }
     } else {
-        ticked_data = data
+        ticked_data = data_in
     }
-    console.log('---- direction-out: ' + ticked_data.length)
+    console.log('---- direction OUT: ' + ticked_data.length)
     return ticked_data
 }

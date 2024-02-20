@@ -34,6 +34,6 @@ function filter_by_diary(filtered_data) {
             var filtered_data = filtered_data
         }
     }
-    console.log('---- diary-out: ' + filtered_data.length)
+    console.log('---- diary OUT: ' + filtered_data.length)
     return filtered_data
 }

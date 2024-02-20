@@ -7,6 +7,7 @@
             </div>
             <div class="col" align="left" id=div_{{value.name}} >
                 {% if value.name == 'website' %}
+                    <!--<a id="{{value.name}}" target="_blank" class="website">Link to pub website</a>-->
                     <input class="form-control detail-url" type='url' name={{value.name}} id={{value.name}}>
                 {% elif value.control == 'dropdown' %}
                     {% include "control_dropdown.html" %}

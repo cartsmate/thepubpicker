@@ -7,7 +7,7 @@ function filter_by_event(filtered_data) {
             //console.log(document.getElementById(value.name + "_filter").checked)
             if (document.getElementById(value.name + "_filter").checked) {
                 //console.log('filter checked')
-                var filtered_data = filtered_data.filter(function(pub) {
+                var filtered_data = data_in.filter(function(pub) {
                     return (pub['event_type'] == value.name)
                     })
             } else {
@@ -17,6 +17,6 @@ function filter_by_event(filtered_data) {
         }
 
     }
-    console.log('---- event-out: ' + filtered_data.length)
+    console.log('---- event OUT: ' + filtered_data.length)
     return filtered_data
 }

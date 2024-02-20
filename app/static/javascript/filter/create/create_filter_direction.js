@@ -11,6 +11,8 @@ function create_filter_direction(pub_filtered) {
         var filtered_data = pub_filtered.filter(function(x) {
             return x.direction_identity == directions_list[i][0]
         })
+        var unique_filter = get_unique_list(filtered_data)
+
         record = document.createElement("div")
         record.className = "row"
         checks_direction = document.getElementById('checks_direction')
@@ -19,14 +21,14 @@ function create_filter_direction(pub_filtered) {
         label.style.width = "230px"
         label.style.font = "8px"
         label.id = directions_list[i][0] + "_id"
-        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + filtered_data.length + ") " + "</a>"
+        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + unique_filter.length + ") " + "</a>"
         record.appendChild(label)
         checks_direction.appendChild(record)
 
         input = document.createElement("input")
         input.type = "checkbox"
         input.id = directions_list[i][0] + "_filter"
-        input.onclick = function() { on_click_direction() }
+        input.onclick = function() { on_click_direction(this.value) }
 
         if (filtered_data.length > 0) {
             label.style.display = "block"
@@ -40,19 +42,3 @@ function create_filter_direction(pub_filtered) {
         label.appendChild(input)
     })(i, pub_filtered)
 }
-
-//function on_click_direction() {
-//    console.log('USER INPUT - on click direction COLLECTION')
-//
-//    pub_filtered = filter_all_data(pub)
-//    console.log(pub_filtered.length)
-//    list_setup(pub_filtered)
-//
-//    populate_station(pub_filtered)
-//    populate_feature(pub_filtered)
-//
-//    populate_header(pub_filtered.length)
-//
-//    map_load_collection(pub_filtered)
-//
-//}

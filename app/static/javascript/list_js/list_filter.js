@@ -1,5 +1,5 @@
-function list_filter_beta(visible, order, asc_desc) {
-    console.log('-- list_ filter_beta')
+function list_filter(visible, order, asc_desc) {
+    console.log('-- list_filter')
 
     $(document).ready(function () {
         $('#pub_list').DataTable({
