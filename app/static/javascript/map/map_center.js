@@ -26,6 +26,12 @@ function center_map() {
 
         var central_map = map.getCenter();
         map.panTo(central_map);
+
+        for (i=0; i<unique_data.length; i++) {
+            unique_data[i]['ordering'] = i
+            marker_add(unique_data[i])
+        }
+
     } else {
         list_setup_beta(filtered_pubs)
     }

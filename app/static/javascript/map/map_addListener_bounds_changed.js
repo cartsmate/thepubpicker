@@ -2,9 +2,10 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
     console.log('map_addListener_bounds_changed ADDED')
 
     google.maps.event.addListener(map, 'bounds_changed', function() {
+
         console.log('map_addListener - BOUNDS CHANGED')
 
-        clearOverlays()
+        //clearOverlays()
 
         marker_in_bounds = 0
         pubs_to_show = []
@@ -24,12 +25,13 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
            "west": { "name": "WEST", "html_name": "west_note", "bounds_value": south_west_str[1], "extra_pubs": 0 }
         };
 
-        for (i=0; i<Math.min(unique_data.length, 100); i++) {
+//        for (i=0; i<Math.min(unique_data.length, 100); i++) {
+        for (i=0; i<unique_data.length; i++) {
             if (unique_data[i]['detail_latitude'] > direction['south'].bounds_value && unique_data[i]['detail_latitude'] < direction['north'].bounds_value && unique_data[i]['detail_longitude'] > direction['west'].bounds_value && unique_data[i]['detail_longitude'] < direction['east'].bounds_value) {
                 marker_in_bounds ++
-                unique_data[i]['ordering'] = i
+                //unique_data[i]['ordering'] = i
                 pubs_to_show.push(unique_data[i])
-                marker_add(unique_data[i])
+                //marker_add(unique_data[i])
             }
             if (unique_data[i]['detail_latitude'] < direction['south'].bounds_value) { direction['south'].extra_pubs ++ }
             if (unique_data[i]['detail_latitude'] > direction['north'].bounds_value) { direction['north'].extra_pubs ++ }
@@ -49,6 +51,7 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         if (page == 'home') {
             list_setup(mapped_pubs)
             }
+
     });
 }
 
