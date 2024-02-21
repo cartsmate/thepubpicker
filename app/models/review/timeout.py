@@ -1,9 +1,9 @@
 
 
 class Timeout:
-    def __init__(self, name="timeout", alias="None", alias1='.', alias2="Timeout", required=False,
-                 form_visible=True, table_visible=False, value='1', control="check", icon="timeout.png",
-                 data_type='str', menu_filter=False, quick_filter=False, event_filter=False, datatype='str'):
+    def __init__(self, name="timeout", alias="Timeout", alias1='.', alias2="Timeout", required=False,
+                 form_visible=True, table_visible=False, value='0', control="check", icon="timeout.png",
+                 data_type='str', menu_filter=True, quick_filter=False, event_filter=False, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

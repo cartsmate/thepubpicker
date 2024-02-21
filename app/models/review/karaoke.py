@@ -1,7 +1,7 @@
 
 
 class Karaoke:
-    def __init__(self, name="karaoke", alias="Karaoke", alias1="", alias2="Karaoke", required=True,
+    def __init__(self, name="karaoke", alias="Karaoke", alias1=".", alias2="Karaoke", required=True,
                  form_visible=False, table_visible='false', value='0', control="check", icon="karaoke.png",
                  data_type='str', menu_filter=True, quick_filter=False, event_filter=True, datatype='str'):
         self.name = name

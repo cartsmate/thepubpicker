@@ -1,7 +1,7 @@
 
 
 class Comedy:
-    def __init__(self, name="comedy", alias="Comedy", alias1="", alias2="Comedy", required=True,
+    def __init__(self, name="comedy", alias="Comedy", alias1=".", alias2="Comedy", required=True,
                  form_visible=False, table_visible='false', value='0', control="check", icon="comedy.png",
                  data_type='str', menu_filter=True, quick_filter=False, event_filter=True, datatype='str'):
         self.name = name

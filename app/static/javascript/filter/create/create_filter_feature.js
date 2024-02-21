@@ -28,7 +28,7 @@ function create_filter_feature(pub_filtered) {
             //console.log('id: ' + value.name)
             input.id = value.name + "_filter"
             input.onclick = function() { on_click_feature() }
-            if (filtered_data.length > 0) {
+            if (filtered_data.length > 0 && value.name != 'timeout'){
                 label.style.display = "block"
             } else {
                 label.style.display = "none"

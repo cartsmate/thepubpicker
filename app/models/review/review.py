@@ -43,12 +43,14 @@ class Review:
         self.beer = beer
         self.brunch = brunch
         self.cocktail = cocktail
+        self.comedy = comedy
         self.dart = dart
         self.dj = dj
         self.entertain = entertain
         self.favourite = favourite
         self.garden = garden
         self.history = history
+        self.karaoke = karaoke
         self.late = late
         self.music = music
         self.outdoor = outdoor
@@ -60,7 +62,5 @@ class Review:
         self.scenic = scenic
         self.sport = sport
         self.wine = wine
-        self.nofeature = nofeature
-        self.comedy = comedy
-        self.karaoke = karaoke
         self.timeout = timeout
+        self.nofeature = nofeature
