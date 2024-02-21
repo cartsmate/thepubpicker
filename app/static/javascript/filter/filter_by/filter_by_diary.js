@@ -1,5 +1,5 @@
 function filter_by_diary(filtered_data) {
-    //console.log('---- diary-in: ' + filtered_data.length)
+    console.log('---- diary-in: ' + filtered_data.length)
 
     for (const [key, value] of Object.entries(review)) {
         if (document.getElementById('monday_filter').checked) {

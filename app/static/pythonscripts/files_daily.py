@@ -5,6 +5,7 @@ from app.models.detail.detail import Detail
 from app.static.pythonscripts.s3 import S3
 from datetime import datetime, timedelta, date
 from app.static.pythonscripts.pub_get import GetPub
+from app.static.pythonscripts.files_pub import FilesPub
 
 env_vars = Configurations().get_config2()
 config2 = Configurations().get_config2()
@@ -14,12 +15,12 @@ directory_path = config2['directory_path']
 class FilesDaily:
 
     def get_timeout(self):
+        # with open(directory_path + '/files/timeout.csv', 'r') as fil:
+        #     timeout_list = fil.read().split('\n')
         # timeout_list = pd.read_csv(directory_path + '/files/timeout.csv', dtype={'pub_identity': str})
-        with open(directory_path + '/files/timeout.csv', 'r') as fil:
-            timeout_list = fil.read().split('\n')
-        # df_details = GetPub().get_all()
-        # df_timeout = df_details.loc[df_details['shortcut'] == 'timeout']
-        return timeout_list
+        df_pubs = FilesPub().get_pub_all()
+        df_timeout = df_pubs.loc[df_pubs['timeout'] == '1']
+        return df_timeout
 
     def go_get_details_daily(self):
         print('go_get_details_daily')

@@ -64,9 +64,9 @@ def home():
     print('')
 
     print('# # # GET TIMEOUT LIST # # #')
-    # df_timeout = FilesDaily().get_timeout()
-    timeout_list = FilesDaily().get_timeout()
-    df_timeout = df_pub[df_pub['pub_identity'].isin(timeout_list)]
+    df_timeout = FilesDaily().get_timeout()
+    # timeout_list = FilesDaily().get_timeout()
+    # df_timeout = df_pub[df_pub['pub_identity'].isin(timeout_list)]
     timeout_json = df_timeout.to_dict(orient='records')
     print('# # # END OF GET TIMEOUT LIST # # #')
     print('')
@@ -109,7 +109,7 @@ def home():
                            stations_directions_list=stations_directions_list,
                            counter=counter6,
                            page='home',
-                           timeout_list=timeout_list,
+                           # timeout_list=timeout_list,
                            timeout_pubs=timeout_json
 
                            # no_of_review=no_of_reviews

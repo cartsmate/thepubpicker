@@ -5,5 +5,5 @@ function create_filter_(data_in) {
     create_filter_feature(data_in)
     create_filter_diary(data_in)
     create_filter_event(data_in)
-    create_filter_pub_identity(data_in)
+//    create_filter_pub_identity(data_in)
 }

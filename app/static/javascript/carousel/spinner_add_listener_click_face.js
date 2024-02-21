@@ -12,6 +12,7 @@ function spinner_add_listener_click_face() {
                             for (const [key, value] of Object.entries(review)) {
                                 if (value.quick_filter) {
                                     update_carousel(value.name, false)
+                                    //document.getElementById(value.name + "_filter").checked = false
                                 }
                             }
                             update_carousel(marker, true)

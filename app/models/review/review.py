@@ -20,6 +20,7 @@ from app.models.review.roast import Roast
 from app.models.review.restaurant import Restaurant
 from app.models.review.scenic import Scenic
 from app.models.review.sport import Sport
+from app.models.review.timeout import Timeout
 from app.models.review.wine import Wine
 from app.models.review.review_identity import ReviewIdentity
 from app.models.detail.pub_identity import PubIdentity
@@ -35,7 +36,7 @@ class Review:
                  entertain=Entertain(), history=History(), favourite=Favourite(), pub_identity=PubIdentity(),
                  review_identity=ReviewIdentity(), cocktail=Cocktail(), beer=Beer(), wine=Wine(), outdoor=Outdoor(),
                  restaurant=Restaurant(), nofeature=NoFeature(), private=Private(), dj=Dj(), comedy=Comedy(),
-                 karaoke=Karaoke()):
+                 karaoke=Karaoke(), timeout=Timeout()):
         self.review_identity = review_identity
         self.review_deletion = review_deletion
         self.pub_identity = pub_identity
@@ -62,3 +63,4 @@ class Review:
         self.nofeature = nofeature
         self.comedy = comedy
         self.karaoke = karaoke
+        self.timeout = timeout

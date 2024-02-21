@@ -5,6 +5,7 @@ function redirect_timeout(pubs) {
     document.getElementById('burger_toggle').checked = false
 
     filter_reset()
+//    document.getElementById('timeout_filter').checked = true
     create_filter_(pubs)
     center_map()
 

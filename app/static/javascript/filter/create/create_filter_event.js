@@ -48,6 +48,7 @@ function create_filter_event(pub_filtered) {
             }
             label.appendChild(input)
 
+            /*
             if (value.quick_filter) {
                 if (filtered_data.length > 0) {
                     label.style.display = "block"
@@ -64,7 +65,7 @@ function create_filter_event(pub_filtered) {
 //                    input.onclick = function() { return false }
                 }
             }
-
+            */
         }
     }
 

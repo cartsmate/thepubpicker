@@ -38,6 +38,7 @@ function create_filter_feature(pub_filtered) {
             }
             label.appendChild(input)
 
+            /*
             if (value.quick_filter) {
                 if (filtered_data.length > 0) {
                     label.style.display = "block"
@@ -53,6 +54,7 @@ function create_filter_feature(pub_filtered) {
                     document.getElementById(value.name + '_word').style.opacity = '0.25'
                 }
             }
+            */
         }
     }
 }

@@ -1,5 +1,5 @@
 function center_map() {
-    filtered_pubs = update_filters()
+    filtered_pubs = filter_by_()
     console.log('center_map: ' + filtered_pubs.length)
 
     create_filter_(filtered_pubs)
