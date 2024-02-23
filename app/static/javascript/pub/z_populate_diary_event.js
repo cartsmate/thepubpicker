@@ -1,7 +1,9 @@
 //function populate_diary_event(show_pub, show_events) {
 function populate_diary_event(show_events) {
     console.log('POPULATE EVENTS')
-
+    console.log(show_events)
+    console.log('review')
+    console.log(review)
     for (const [key, value] of Object.entries(diary)) {
         for (i=0; i<show_events.length; i++) {
             if (show_events[i]['event_day'] == value.name) {

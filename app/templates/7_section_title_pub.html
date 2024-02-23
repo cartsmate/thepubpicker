@@ -1,4 +1,6 @@
 <div class="row pink">
     {% include "9_title_left_middle.html" %}
-    <div class="col-2">{% include "9_icon_edit.html" %}</div>
+    {% if env_vars['env'] == 'qual' %}
+        <div class="col-2">{% include "9_icon_edit.html" %}</div>
+    {% endif %}
 </div>

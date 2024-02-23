@@ -1,9 +1,9 @@
 
 
-class Music:
-    def __init__(self, name="music", alias="Live", alias1="Music", alias2=" Live Music", required=True,
-                 form_visible=False, table_visible=False, value='0', control="check", icon="music.png",
-                 data_type='str', menu_filter=True, quick_filter=True, event_filter=True, datatype='str'):
+class Hours:
+    def __init__(self, name="hours", alias="", alias1="", alias2="", required=False,
+                 form_visible=False, table_visible=False, value='0', control="none", icon="none",
+                 data_type='str', menu_filter=False, quick_filter=False, event_filter=False, datatype='str'):
         self.name = name
         self.alias = alias
         self.alias1 = alias1

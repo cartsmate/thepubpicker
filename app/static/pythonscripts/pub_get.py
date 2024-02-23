@@ -14,6 +14,7 @@ class GetPub:
         if env_vars['source'] == 'csv':
             dtype_obj = {}
             for key, value in model.__dict__.items():
+                print(value)
                 dtype_obj[value.name] = value.datatype
             df = pd.read_csv(directory_path + '/files/' + model.filename + '.csv', dtype=dtype_obj)
             df = df.fillna('')

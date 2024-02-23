@@ -9,13 +9,23 @@ function populate_events(show_events) {
         });
         if (dayRecord.length > 0) {
             document.getElementById(days[i]).value = dayRecord[0]['event_identity']
+            console.log('dayRecord')
             console.log(dayRecord)
+            console.log(dayRecord[0]['event_type'])
+            console.log('review')
+            console.log(review)
+            console.log(review[dayRecord[0]['event_type']])
+            console.log(review[dayRecord[0]['event_type']]['alias2'])
             for (const [key, value] of Object.entries(event)) {
                 console.log("days[i] + '_' + value.name")
                 console.log(days[i] + "_" + value.name)
                 console.log(dayRecord[0][value.name])
                 inbox_item = document.getElementById(days[i] + "_" + value.name)
-                inbox_item.value = dayRecord[0][value.name]
+                if (value.name != 'event_type') {
+                    inbox_item.value = dayRecord[0][value.name]
+                } else {
+                    inbox_item.value = review[dayRecord[0]['event_type']]['alias2'] + " " + dayRecord[0]['event_detail']
+                }
             }
         }
 

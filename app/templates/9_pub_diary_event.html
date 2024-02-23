@@ -12,8 +12,8 @@
             <script>console.log('CREATING EVENT FIELDS')</script>
             {% for e_key, e_value in event.items() %}
                 {% if ((e_value.form_visible) and (value.form_visible)) %}
-                    <div class="col-5" align="right" id={{value.name}}_div_{{e_value.name}} >
-                        {% if e_value.control == 'dropdown' %}
+                    <div class="col-10" align="right" id={{value.name}}_div_{{e_value.name}} >
+                        {% if ((e_value.control == 'dropdown') and (page == 'edit')) %}
                             <select onchange="jsFunction('{{value.name}}', this.value);" class="dropdown-event" name="{{value.name}}_{{e_value.name}}" id="{{value.name}}_{{e_value.name}}">
                                 <option value=""></option>
                                 {% for r_key, r_value in review.items() %}
