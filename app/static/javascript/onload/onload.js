@@ -61,7 +61,7 @@ function show_results() {
         console.log('on-load: filters CLEAR')
     } else {
         console.log('on-load: filters PRE-SET')
-        list_setup_beta()
+        list_setup()
         populate_header()
         document.getElementById('template_map').style.display = "block"
         document.getElementById('template_list').style.display = "block"
