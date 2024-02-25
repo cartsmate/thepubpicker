@@ -11,6 +11,8 @@ env_vars = Configurations().get_config2()
 class GetPub:
 
     def get_all(self, model):
+        print('model')
+        print(model.__class__.__name__)
         if env_vars['source'] == 'csv':
             dtype_obj = {}
             for key, value in model.__dict__.items():
@@ -22,7 +24,9 @@ class GetPub:
             attribute_list = []
             for key, value in model.__dict__.items():
                 attribute_list.append(value.name)
-            df = S3().s3_read(model.s3_name, attribute_list)
+            # df = S3().s3_read(model.s3_name, attribute_list)
+            df = S3().s3_read(model.filename, attribute_list)
+            print(df.shape[0])
         return df
 
     def get_1(self, model, pub_id):
