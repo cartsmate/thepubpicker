@@ -19,14 +19,16 @@ body
 #menuToggle a
 {
   text-decoration: none;
-  color: #808000;
+  //color: #808000;
+  color: #A1BE95;
 
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: black;
+  //color: black;
+  color: F98866;
 }
 
 
@@ -58,7 +60,8 @@ body
   margin-bottom: 5px;
   position: relative;
 
-  background-color: #808000;
+  //background-color: #808000;
+  background-color: #A1BE95;
   border-radius: 3px;
 
   z-index: 1;
@@ -88,7 +91,9 @@ body
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background-color: #808000;
+  //background-color: #808000;
+  background-color: #A1BE95;
+
 }
 
 /*

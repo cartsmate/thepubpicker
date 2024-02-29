@@ -30,14 +30,16 @@
     padding: 0px;
     font-size: 10px;
     font-weight: bold;
-    font-color: black;
+    //font-color: black;
+    font-color: #F98866;
 }
 .caption_day {
     margin: 0px;
     padding: 0px;
     font-size: 11px;
     font-weight: bold;
-    font-color: black;
+    //font-color: black;
+    font-color: #F98866;
 }
 .check_face {
     opacity: 1;
@@ -45,10 +47,12 @@
     padding: 2.5px;
     width: 45px;
     text-align: center;
-    border: thin solid #808000;
+    //border: thin solid #808000;
+    border: thin solid #A1BE95;
     border-radius: 1.2rem;
 }
 .check_face:hover {
-    background-color: #808000;
+    //background-color: #808000;
+    background-color: #A1BE95;
     color: white;
 }

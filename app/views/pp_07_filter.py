@@ -85,7 +85,8 @@ def filter():
     print('end HOME')
     return render_template('02_home_.html',
                            env_vars=env_vars,
-                           color_theme='#808000',
+                           # color_theme='#808000',
+                           color_theme='#A1BE95',
                            pub_all=pub_ent_json,
                            # event=event_json,
                            review=review_json,

@@ -95,7 +95,8 @@ def home():
     print('end HOME')
     return render_template('02_home_.html',
                            env_vars=env_vars,
-                           color_theme='#808000',
+                           # color_theme='#808000',
+                           color_theme='#A1BE95',
                            daily_id=daily_id,
                            pub_1=pub_1_json,
                            pub_all=pub_ent_json,

@@ -1,5 +1,6 @@
 .flat_face:hover {
-    background-color: #808000;
+    //background-color: #808000;
+    background-color: #A1BE95;
     color: white;
 }
 #search-input-navbar:hover{

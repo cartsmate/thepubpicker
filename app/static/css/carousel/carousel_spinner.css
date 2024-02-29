@@ -6,15 +6,18 @@
   --translateZ: 100px;
   --faceWidth: 40px;
   //--theme: var(--color)
-  --theme: #808000
+  //--theme: #808000
+  --theme: #A1BE95;
 }
 .carousel_off {
     background-color: #f5f5f5;
     color: black;
 }
 .carousel_on {
-    background-color: #808000;
-    color: white;
+    //background-color: #808000;
+    background-color: #A1BE95;
+    //color: white;
+    color: #F98866
 }
 #template_spinner{
   display: relative;
@@ -61,7 +64,9 @@
 }
 .heading2 {
     background-color: var(--theme);
-    color: white;
+    //color: white;
+    //color: #F98866;
+    color: black;
     padding: 0px;
     margin-top: 5px;
     width: 325px;
@@ -72,7 +77,9 @@
     text-decoration: none;
     font-size: 10px;
     font-weight: bold;
-    color: white;
+    //color: white;
+    //color: #F98866;
+    color: black;
 }
 /*
 @media only screen

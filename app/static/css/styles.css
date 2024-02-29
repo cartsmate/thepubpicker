@@ -22,8 +22,10 @@ ul.ui-autocomplete {
     background-color:grey;
 }
 .btn-primary {
-    background-color: #808000;
-    border: thin solid #808000;
+    //background-color: #808000;
+    //border: thin solid #808000;
+    background-color: #A1BE95;
+    border: thin solid #A1BE95;
 }
 
 .top-buffer {
@@ -70,7 +72,8 @@ ul.ui-autocomplete {
 }
 
 :root {
-  --brand_colour: #808000;
+  //--brand_colour: #808000;
+  --brand_colour: #A1BE95;
 }
 .click {
     //padding-left:10px;

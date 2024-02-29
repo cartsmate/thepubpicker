@@ -17,7 +17,8 @@
 .map_box {
     margin: 0px;
     padding: 0px;
-    border: thin solid #808000;
+    //border: thin solid #808000;
+    border: thin solid #A1BE95;
 }
 .notes_text {
     color: white;
@@ -49,12 +50,14 @@
     display: block;
     width: 100%;
     height: 20px;
-    background-color: #808000;
+    //background-color: #808000;
+    background-color: #A1BE95;
 }
 .map_border_col {
     width:20px;
     height:100%;
-    background-color: #808000;
+    //background-color: #808000;
+    background-color: #A1BE95;
     display: block;
     text-align:middle;
     margin: 0px;
