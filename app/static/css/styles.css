@@ -1,16 +1,4 @@
-.heading {
-    background-color: #808000;
-    color: black;
-    padding: 5px;
-}
-.heading_title {
-    font-family: Verdana, sans-serif;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-}
+
 
 .disable-dbl-tap-zoom {
   touch-action: manipulation;
