@@ -3,7 +3,7 @@
     {% for key, value in review.items() %}
         {% if value.menu_filter %}
             <div class="flat_face carousel_off" id="{{value.name}}_carousel" style="margin: 1px; padding: 2.5px; width: 45px; text-align: center; border: thin solid #808000; border-radius: 1.2rem;">
-                <img id="{{value.name}}_icon" style="margin-top: 5px; padding: 1px;" height=35 width=35 src="/static/icons/features/{{value.name}}.png">
+                <img id="{{value.name}}_icon" style="margin-top: 5px; padding: 1px;" height=35 width=35 src="/static/icons/features/{{value.name}}.png"  alt="{{value.name}} pub icon">
                 <div>
                     <p class="word_face" id="{{value.name}}_word" style="margin-top: 2.5px; font-size: 9px; font-weight: bold;"><span style="display: block;">{{value.alias}}</span><span style="display: block;">{{value.alias1}}</span></p>
                 </div>
