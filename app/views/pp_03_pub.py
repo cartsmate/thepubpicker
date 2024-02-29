@@ -33,7 +33,7 @@ def pub():
     pub_id = request.args.get('id')
     df_1_pub = FilesPub().get_pub_1(pub_id)
     pub_json = df_1_pub.to_dict(orient='records')
-    df_1_event = GetPub().get_1(Event(), pub_id)
+    df_1_event = GetPub().get_1(DailyEvent(), pub_id)
     df_1_event_list_json = df_1_event.to_json(orient='records')
     json_loads = json.loads(df_1_event_list_json)
     photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
@@ -43,7 +43,7 @@ def pub():
     diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
     station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
     direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
-    event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
+    event_json = json.loads(json.dumps(DailyEvent().__dict__, default=lambda o: o.__dict__))
 
     print('END pub')
     name = "readonly"
