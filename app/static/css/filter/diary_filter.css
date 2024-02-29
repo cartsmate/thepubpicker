@@ -30,8 +30,8 @@
     padding: 0px;
     font-size: 10px;
     font-weight: bold;
-    //font-color: black;
-    font-color: #F98866;
+    font-color: black;
+    //font-color: #F98866;
 }
 .caption_day {
     margin: 0px;
@@ -39,7 +39,8 @@
     font-size: 11px;
     font-weight: bold;
     //font-color: black;
-    font-color: #F98866;
+    //font-color: #F98866;
+    font-color: black;
 }
 .check_face {
     opacity: 1;
