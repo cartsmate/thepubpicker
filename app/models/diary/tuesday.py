@@ -1,4 +1,4 @@
-from app.models.event.event_identity import EventIdentity
+from app.models.daily_event.event_identity import EventIdentity
 
 
 class Tuesday:

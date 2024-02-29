@@ -22,11 +22,11 @@ from app.models.detail.address import Address
 from app.models.detail.url import Url
 from app.models.detail.website import Website
 from app.models.station.station_identity import StationIdentity
-from app.models.event.event import Event
-from app.models.event.event_day import EventDay
-from app.models.event.event_detail import EventDetail
-from app.models.event.event_type import EventType
-from app.models.event.event_identity import EventIdentity
+from app.models.daily_event.event import Event
+from app.models.daily_event.event_day import EventDay
+from app.models.daily_event.event_detail import EventDetail
+from app.models.daily_event.event_type import EventType
+from app.models.daily_event.event_identity import EventIdentity
 from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.pub_add import AddPub
 from app.static.pythonscripts.pub_edit import EditPub

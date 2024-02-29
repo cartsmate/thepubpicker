@@ -1,4 +1,6 @@
-station_identity,station_deletion,station_name,station_latitude,station_longitude,station_zone,postcode,direction_identity
+station_identity,station_deletion,station_name,station_latitude,station_longitude,zone,postcode,direction_identity
+ssssssss-ssss-ssss-ssss-ssssssssssss,false,No station,0,0,9,AB999XY,dddddddd-dddd-dddd-dddd-dddddddddddd
+3bd8363a-0105-4c08-9cff-28e42443edbb,false,Abbey Road,51.53195199547294,0.0037233710983363,3,E15 3NB,d760aad1-f5d3-476a-9030-9fb1c919b639
 f6338a9e-aea0-4e03-b144-d7f450944a7a,false,Abbey Wood,51.49078429543708,0.1202719706406512,4,SE2 9RH,4e8ce58e-daea-4d93-9490-11e0724e6445
 b0a41353-fd1b-4caf-9491-40a19f7e38cb,false,Acton Central,51.508757351253415,-0.2634301953256889,2,W3 6BH,095bb39d-fce2-48a9-a766-d2c297c55985
 e4801c01-89a1-4f0f-986d-2fee0a490dce,false,Acton Main Line,51.516886495162936,-0.2676899480142479,3,W3 9EH,095bb39d-fce2-48a9-a766-d2c297c55985

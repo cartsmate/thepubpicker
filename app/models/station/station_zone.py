@@ -1,7 +1,7 @@
 
-class Zone:
-    def __init__(self, name='zone', required=False, form_visible=False, table_visible=False, alias='Station Zone',
-                 alias2="", value=0, control='none', datatype='str'):
+class StationZone:
+    def __init__(self, name='station_zone', required=False, form_visible=False, table_visible=False,
+                 alias='Station Zone', alias2="", value=0, control='none', datatype='str'):
         self.name = name
         self.required = required
         self.form_visible = form_visible

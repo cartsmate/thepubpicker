@@ -2,7 +2,7 @@ import pandas as pd
 from flask import request
 from config import Configurations
 from app.models.diary.diary import Diary
-from app.models.event.event import Event
+from app.models.daily_event.daily_event import DailyEvent
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
 from app.static.pythonscripts.s3 import S3
@@ -31,7 +31,7 @@ class UpdatePub:
         return df_all
 
     def update_pub_events(self, pub_id, df_diary_all, df_event_all, df_update):
-        print('update_pub_events: ' + Event().__str__())
+        print('update_pub_events: ' + DailyEvent().__str__())
         # print(df_update)
         # print(len(df_event_all.axes[1]))
         # print(len(df_update.axes[1]))
@@ -84,7 +84,7 @@ class UpdatePub:
 
                 else:
                     # print('not empty and edit')
-                    for mod in Event().__dict__.keys():
+                    for mod in DailyEvent().__dict__.keys():
                         # print(evnt_id)
                         # print(df_event_all.loc[df_event_all['event_identity'] == evnt_id])
                         # print(mod)

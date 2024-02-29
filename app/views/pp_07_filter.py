@@ -14,7 +14,7 @@ from app.static.pythonscripts.files_daily import FilesDaily
 from app.static.pythonscripts.files_counter import FilesCounter
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
-from app.models.event.event import Event
+from app.models.daily_event.event import Event
 from app.models.pub.pub import Pub
 from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.files_pub import FilesPub

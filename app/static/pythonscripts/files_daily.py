@@ -43,7 +43,7 @@ class FilesDaily:
         else:
             # # # GET RANDOM PUB
             df_detail_all = GetPub().get_all(Detail())
-            df_best = df_detail_all.loc[(df_detail_all['rank'] > 4) & (df_detail_all['rank'] < 5) & (df_detail_all['extra'] != '')]
+            df_best = df_detail_all.loc[(df_detail_all['ranking'] > 4) & (df_detail_all['ranking'] < 5) & (df_detail_all['extra'] != '')]
 
             no_of_details = df_best.shape[0]
             random_index = random.randrange(0, no_of_details)

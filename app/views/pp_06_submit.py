@@ -5,7 +5,7 @@ from flask import render_template, request, redirect, url_for
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
-from app.models.event.event import Event
+from app.models.daily_event.daily_event import DailyEvent
 
 from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.pub_update import UpdatePub
@@ -25,7 +25,7 @@ def submit():
     df_detail_all = GetPub().get_all(Detail())
     df_review_all = GetPub().get_all(Review())
     df_diary_all = GetPub().get_all(Diary())
-    df_event_all = GetPub().get_all(Event())
+    df_event_all = GetPub().get_all(DailyEvent())
 
     if GetPub().get_1(Detail(), pub_id).empty:
         print('# # # ADD new pub # # #')

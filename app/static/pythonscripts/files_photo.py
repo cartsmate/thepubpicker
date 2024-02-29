@@ -8,7 +8,7 @@ from config import Configurations
 from app.static.pythonscripts.pub_get import GetPub
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
-from app.models.detail.rank import Rank
+# from app.models.detail.ranking import Ranking
 from app.models.detail.detail_deletion import DetailDeletion
 from app.models.detail.detail import Detail
 from app.models.detail.place import Place

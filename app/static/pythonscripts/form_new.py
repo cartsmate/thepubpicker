@@ -2,8 +2,8 @@ import pandas as pd
 from flask import request
 from config import Configurations
 from app.models.detail.detail import Detail
-from app.models.event.event import EventIdentity
-from app.models.event.event import Event
+from app.models.daily_event.event import EventIdentity
+from app.models.daily_event.event import Event
 from app.models.diary.diary import Diary
 from app.static.pythonscripts.s3 import S3
 

@@ -3,24 +3,24 @@
     <div id="div_rank1" class="stars" >
         <div class="star">
             &bigstar;
-            {% if pub_1[0]['rank']|int <= 0 %}
+            {% if pub_1[0]['ranking']|int <= 0 %}
                 <div class="no_star" id="img_rank1">&bigstar;</div>
-            {% elif pub_1[0]['rank']|int > 1 %}
+            {% elif pub_1[0]['ranking']|int > 1 %}
                 <div class="full_star" id="img_rank1">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank1" style="width:{{15*(pub_1[0]['rank']|int)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank1" style="width:{{15*(pub_1[0]['ranking']|int)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
     <div id="div_rank2" class="stars">
         <div class="star">
             &bigstar;
-            {% if pub_1[0]['rank']|int <= 1 %}
+            {% if pub_1[0]['ranking']|int <= 1 %}
                 <div class="no_star" id="img_rank2">&bigstar;</div>
-            {% elif pub_1[0]['rank']|int > 2 %}
+            {% elif pub_1[0]['ranking']|int > 2 %}
                 <div class="full_star" id="img_rank2">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank2" style="width:{{15*(pub_1[0]['rank']|int-1)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank2" style="width:{{15*(pub_1[0]['ranking']|int-1)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
@@ -28,12 +28,12 @@
     <div id="div_rank3" class="stars">
         <div class="star">
             &bigstar;
-            {% if pub_1[0]['rank']|int <= 2 %}
+            {% if pub_1[0]['ranking']|int <= 2 %}
                 <div class="no_star" id="img_rank3">&bigstar;</div>
-            {% elif pub_1[0]['rank']|int > 3 %}
+            {% elif pub_1[0]['ranking']|int > 3 %}
                 <div class="full_star" id="img_rank3">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank3" style="width:{{15*(pub_1[0]['rank']|int-2)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank3" style="width:{{15*(pub_1[0]['ranking']|int-2)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
@@ -41,29 +41,29 @@
     <div id="div_rank4" class="stars">
         <div class="star">
             &bigstar;
-            {% if pub_1[0]['rank']|int <= 3 %}
+            {% if pub_1[0]['ranking']|int <= 3 %}
                 <div class="no_star" id="img_rank4">&bigstar;</div>
-            {% elif pub_1[0]['rank']|int > 4 %}
+            {% elif pub_1[0]['ranking']|int > 4 %}
                 <div class="full_star" id="img_rank4">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank4" style="width:{{15*(pub_1[0]['rank']|int-3)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank4" style="width:{{15*(pub_1[0]['ranking']|int-3)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
     <div id="div_rank5" class="stars">
         <div class="star">
             &bigstar;
-            {% if pub_1[0]['rank']|int <=4 %}
+            {% if pub_1[0]['ranking']|int <=4 %}
                 <div class="no_star" id="img_rank5">&bigstar;</div>
-            {% elif pub_1[0]['rank']|int >= 5 %}
+            {% elif pub_1[0]['ranking']|int >= 5 %}
                 <div class="full_star" id="img_rank5">&bigstar;</div>
             {% else %}
-                <div class="half_star" id="img_rank5" style="width:{{15*(pub_1[0]['rank']|int-4)}}px">&bigstar;</div>
+                <div class="half_star" id="img_rank5" style="width:{{15*(pub_1[0]['ranking']|int-4)}}px">&bigstar;</div>
             {% endif %}
         </div>
     </div>
 
-<div style="color: black; font-size: 14px;">{{pub_1[0]['rank']}}</div>
+<div style="color: black; font-size: 14px;">{{pub_1[0]['ranking']}}</div>
 </div>
 
 <link rel="stylesheet" href="/static/css/pub/stars.css">

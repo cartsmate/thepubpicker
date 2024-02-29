@@ -11,7 +11,7 @@ from app.models.station.station import Station
 from app.models.review.review import Review
 from app.models.photo.photo import Photo
 from app.models.diary.diary import Diary
-from app.models.event.event import Event
+from app.models.daily_event.daily_event import DailyEvent
 
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 from app.static.pythonscripts.files_pub import FilesPub
@@ -37,7 +37,7 @@ def edit():
     pub_json = df_pub.to_dict(orient='records')
 
     # df_1_event = FilesEvent().get_event_1(pub_id)
-    df_1_event = GetPub().get_1(Event(), pub_id)
+    df_1_event = GetPub().get_1(DailyEvent(), pub_id)
 
     # days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     # for day in days:
@@ -60,7 +60,7 @@ def edit():
     diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
     station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
     direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
-    event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
+    event_json = json.loads(json.dumps(DailyEvent().__dict__, default=lambda o: o.__dict__))
 
     photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
 

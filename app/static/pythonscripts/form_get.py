@@ -3,7 +3,7 @@ from flask import request
 from config import Configurations
 from app.models.review.review import Review
 from app.models.diary.diary import Diary
-from app.models.event.event import Event
+from app.models.daily_event.daily_event import DailyEvent
 from app.models.detail.detail import Detail
 from app.static.pythonscripts.s3 import S3
 
@@ -35,14 +35,14 @@ class GetForm:
         return df
 
     def get_form_event(self):
-        print('get_form_event: ' + Event().__str__())
+        print('get_form_event: ' + DailyEvent().__str__())
         list_of_events = []
 
         for key, value in Diary().__dict__.items():
             if value.menu_filter:
                 # print(value.name)
-                new_model = Event()
-                for evnt_key, evnt_value in Event().__dict__.items():
+                new_model = DailyEvent()
+                for evnt_key, evnt_value in DailyEvent().__dict__.items():
                     # print(evnt_value.name)
                     if value.control == 'check':
                         # print("check")

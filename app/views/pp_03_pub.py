@@ -7,7 +7,7 @@ from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.station.station import Station
 from app.models.direction.direction import Direction
-from app.models.event.event import Event
+from app.models.daily_event.daily_event import DailyEvent
 from app.models.photo.photo import Photo
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto

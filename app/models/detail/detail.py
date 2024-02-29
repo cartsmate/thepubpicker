@@ -7,7 +7,7 @@ from app.models.detail.detail_latitude import DetailLatitude
 from app.models.detail.detail_longitude import DetailLongitude
 from app.models.detail.detail_name import DetailName
 from app.models.detail.place import Place
-from app.models.detail.rank import Rank
+from app.models.detail.ranking import Ranking
 from app.models.detail.colour import Colour
 from app.models.detail.extra import Extra
 from app.models.detail.ordering import Ordering
@@ -22,21 +22,20 @@ class Detail:
     filename = 'detail'
 
     def __init__(self, pub_identity=PubIdentity(), station_identity=StationIdentity(), detail_name=DetailName(),
-                 address=Address(), category=Category(), colour=Colour(), detail_deletion=DetailDeletion(),
+                 address=Address(), category=Category(), detail_deletion=DetailDeletion(),
                  detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(),
-                 place=Place(), rank=Rank(), website=Website(), url=Url()):
+                 place=Place(), ranking=Ranking(), website=Website(), url=Url()):
         self.pub_identity = pub_identity
         self.station_identity = station_identity
         self.detail_name = detail_name
         self.address = address
         self.category = category
-        self.colour = colour
         self.detail_deletion = detail_deletion
         self.detail_latitude = detail_latitude
         self.detail_longitude = detail_longitude
         self.extra = extra
         self.place = place
-        self.rank = rank
+        self.ranking = ranking
         self.website = website
         self.url = url
 

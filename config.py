@@ -12,7 +12,7 @@ class Configurations:
     #         config = json.load(file)  # returns JSON object as a dictionary
     #     return config
 
-    def get_config2(self):
+    # def get_ini(self):
         # try:
         #     directory_path = os.getcwd()
         #     constants = ConfigParser()
@@ -27,17 +27,19 @@ class Configurations:
         #         "env": "qual"
         #     }
         # except:
-        path = os.getcwd()
-        # print('path')
-        # print(path)
-        total_path = path + '/.env'
-        dotenv_path = Path(total_path)
-        load_dotenv(dotenv_path=dotenv_path)
         # load_dotenv()
         # GOOGLE_KEY = os.getenv("HEROKU_GOOGLE_API")
         # print('GOOGLE_KEY')
         # print(GOOGLE_KEY)
         # MY_ENV_VAR = os.getenv('MY_ENV_VAR')
+
+    def get_config2(self):
+
+        path = os.getcwd()
+        total_path = path + '/.env'
+        dotenv_path = Path(total_path)
+        load_dotenv(dotenv_path=dotenv_path)
+
         config2 = {
             "directory_path": os.getcwd(),
             "google_key": os.environ.get("HEROKU_GOOGLE_API"),
@@ -46,7 +48,12 @@ class Configurations:
             "access_key": os.environ.get("ACCESS_KEY"),
             "bucket_name": os.environ.get("BUCKET_NAME"),
             "source": os.environ.get("SOURCE"),
-            "env": os.environ.get("ENV")
+            "env": os.environ.get("ENV"),
+            "db_name": os.environ.get("DB_NAME"),
+            "db_user": os.environ.get("DB_USER"),
+            "db_password": os.environ.get("DB_PASSWORD"),
+            "db_host": os.environ.get("DB_HOST"),
+            "db_port": os.environ.get("DB_PORT")
         }
         # print('config2: ' + str(config2))
         return config2

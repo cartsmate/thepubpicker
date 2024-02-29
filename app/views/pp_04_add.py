@@ -9,7 +9,7 @@ from app.models.review.review import Review
 from app.models.diary.diary import Diary
 from app.models.station.station import Station
 from app.models.direction.direction import Direction
-from app.models.event.event import Event
+from app.models.daily_event.daily_event import DailyEvent
 from app.models.photo.photo import Photo
 
 from app.static.pythonscripts.files_pub import FilesPub
@@ -74,7 +74,7 @@ def add():
     stations_json = GetPub().get_all(Station()).to_dict(orient='records')
 
     pub_id = df_new_pub.iloc[0]['pub_identity']
-    df_1_event_list_json = GetPub().get_1(Event(), pub_id).to_json(orient='records')
+    df_1_event_list_json = GetPub().get_1(DailyEvent(), pub_id).to_json(orient='records')
     json_loads = json.loads(df_1_event_list_json)
 
     detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
@@ -82,7 +82,7 @@ def add():
     diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
     station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
     direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
-    event_json = json.loads(json.dumps(Event().__dict__, default=lambda o: o.__dict__))
+    event_json = json.loads(json.dumps(DailyEvent().__dict__, default=lambda o: o.__dict__))
 
     print('END add')
     page = "add"
