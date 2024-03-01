@@ -3,7 +3,7 @@ function populate_summary(show_pub) {
 
     //text_ref = summary_pub[0]['detail_name'].toString().substring(0,22)  + " | " + summary_pub[0]['station_name'].toString().substring(0,18)
     text_ref = show_pub[0]['detail_name'].toString().substring(0,22)  + " | " + show_pub[0]['station_name'].toString().substring(0,18)
-    document.getElementById('summary_name').innerHTML = "<div style='text-decoration: none; justify-content: center; font-size: 14px; font-weight: bold;'>" + text_ref + "</div>"
+    document.getElementById('summary_name').innerHTML = "<div style='text-decoration: none; justify-content: center; font-size: 14px; font-weight: 550;'>" + text_ref + "</div>"
     populate_extra(show_pub)
 }
 function populate_extra(show_pub) {
