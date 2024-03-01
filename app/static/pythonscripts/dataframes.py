@@ -12,6 +12,8 @@ config2 = Configurations().get_config2()
 
 class Dataframes:
 
+    env_vars = Configurations().get_config2()
+
     # def series_to_dict(self, series):
     #     series_dict = series.to_dict()
     #     return series_dict
@@ -40,6 +42,7 @@ class Dataframes:
 
     def go_get_stations_directions(self):
         df_station_all = GetPub().get_all(Station())
+
         df_pub_with_station = pd.merge(GetPub().get_all(Detail()), df_station_all, on='station_identity',
                                        how='left').sort_values(
                                        by='station_name')

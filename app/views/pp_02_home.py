@@ -1,8 +1,9 @@
-
-import random
+import logging
+from os import path
 from app import app
 import json
 import pandas as pd
+import logging.config
 from flask import render_template, request
 
 from app.static.pythonscripts.s3 import S3
@@ -19,7 +20,8 @@ from app.models.pub.pub import Pub
 from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
-# from app.static.pythonscripts.files_events import FilesEvent
+from app.static.pythonscripts.postgres import PostgresConnection
+from logger.logger import Logger
 
 from config import Configurations
 
@@ -30,21 +32,15 @@ def home():
     print('start HOME')
     print('')
 
-    print('# # # GET FILTERS # # #')
-    filters = request.args.get('filters')
-    print('# # # END OF FILTERS # # #')
-    print('')
-
     print('# # # GET ENVIRONMENTAL VARIABLES')
     env_vars = Configurations().get_config2()
     print('# # # END OF ENVIRONMENTAL VARIABLES # # #')
     print('')
 
-    print('# # # GET MODEL DISPLAY FORMATS # # #')
-    stations_directions_list = Dataframes().go_get_stations_directions_list()
-    directions_list = Dataframes().go_get_directions_list()
-    print('# # # END OF MODEL DISPLAY FORMATS # # #')
-    print('')
+    logger = Logger().create_logger()
+    log_str = 'this is a test......'
+    print(log_str)
+    logger.error(log_str)
 
     print('# # # GET ALL PUBS # # #')
     df_pub = FilesPub().get_pub_all()
@@ -80,7 +76,7 @@ def home():
         new_counter = counter + 1
         data = {'pub_counter': [new_counter]}
         df_updated_counter = pd.DataFrame(data)
-        s3_resp = S3().s3_write(df_updated_counter, 'counter_prod.csv')
+        S3().s3_write(df_updated_counter, 'counter_prod.csv')
     counter6 = str(new_counter).zfill(6)
     print('# # # END OF GET COUNTER # # #')
     print('')

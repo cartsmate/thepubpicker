@@ -25,9 +25,11 @@ class FilesDaily:
     def go_get_details_daily(self):
         print('go_get_details_daily')
         if env_vars['env'] == 'qual':
+            print('csv')
             df_details_day = pd.read_csv(directory_path + '/files/featured.csv',
                                          dtype={'pub_identity': str, 'timestamp': str})
         else:
+            print('s3')
             attribute_list = ['pub_identity', 'timestamp']
             df_details_day = S3().s3_read('featured', attribute_list)
 

@@ -10,6 +10,7 @@ from app.models.diary.diary import Diary
 from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
+from app.static.pythonscripts.postgres import PostgresConnection
 
 
 from app.static.pythonscripts.pub_get import GetPub
@@ -18,8 +19,8 @@ from app.models.review.review import Review
 
 
 # config = Configurations().get_config()
-config2 = Configurations().get_config2()
-directory_path = config2['directory_path']
+env_vars = Configurations().get_config2()
+directory_path = env_vars['directory_path']
 
 
 class FilesPub:
