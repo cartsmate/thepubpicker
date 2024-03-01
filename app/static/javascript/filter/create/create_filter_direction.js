@@ -1,7 +1,6 @@
 function create_filter_direction(pub_filtered) {
     console.log('---- create_filter_direction: ' + pub_filtered.length)
 
-    //document.getElementById('button_direction').innerHTML = '<a>by area (' + pub_filtered.length + ')</a>'
     var select= document.getElementById("direction");
     var option = document.createElement("option");
 
@@ -21,7 +20,7 @@ function create_filter_direction(pub_filtered) {
         label.style.width = "230px"
         label.style.font = "8px"
         label.id = directions_list[i][0] + "_id"
-        label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + unique_filter.length + ") " + "</a>"
+        label.innerHTML = "<div style='font-size: 12px; padding: 0px; margin: 0px;'>" + directions_list[i][1] + " (" + unique_filter.length + ") " + "</div>"
         record.appendChild(label)
         checks_direction.appendChild(record)
 

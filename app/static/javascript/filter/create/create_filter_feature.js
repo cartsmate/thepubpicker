@@ -19,7 +19,7 @@ function create_filter_feature(pub_filtered) {
             label.style.width = "230px"
             label.style.font = "8px"
             label.id = value.name + "_id"
-            label.innerHTML = "<a style='font-size: 12px; padding: 0px; margin: 0px;'>" + value.alias2 + " (" + unique_filter.length + ") " + "</a>"
+            label.innerHTML = "<div style='font-size: 12px; padding: 0px; margin: 0px;'>" + value.alias2 + " (" + unique_filter.length + ") " + "</div>"
             record.appendChild(label)
             checks_feature.appendChild(record)
 
