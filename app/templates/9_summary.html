@@ -1,8 +1,8 @@
 <div class="col black" id="pub_summary_test">
     {% include "9_header_featured.html" %}
-    <div class="row pink pointer" id="summary_name" onclick="redirect_pub(daily_id)" style="text-align: center; color: black; padding-top:5px;" ><a href="#" style="color: black;" ></a></div>
-    <div class="row pink" id="summary_rank"><a target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</a></div>
-    <div class="row pink pointer" id="summary_extra" onclick="redirect_pub(daily_id)" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; "><a href="#" style="color: black;"></a></div>
+    <div class="row pink pointer" id="summary_name" onclick="redirect_pub(daily_id)" style="text-align: center; color: black; padding-top:5px;" ></div>
+    <div class="row pink" id="summary_rank"><div target="_blank" rel="noopener noreferrer" onclick="redirect_reviews()">{% include "9_stars.html" %}</div></div>
+    <div class="row pink pointer" id="summary_extra" onclick="redirect_pub(daily_id)" style="padding: 0px 10px 0px 10px; justify-content: center; text-align: center; line-height: 1; color: black; font-size:12px; "></div>
 </div>
 
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/pub/populate_summary.js') }}"></script>
