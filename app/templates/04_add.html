@@ -42,8 +42,8 @@
 {% endblock %}
 
 {% block map %}
-{% include "9_map.html" %}
-<input id="search-input-navbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    {% include "9_map.html" %}
+    {% include "9_filter_search_box.html" %}
 {% endblock %}
 
 {% block pub %}{% include "9_pub_add.html" %}{% endblock %}
