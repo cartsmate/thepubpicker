@@ -1,36 +1,8 @@
-simpleLogger - INFO - 2024-03-02 08:53:42.138633 : home page OPEN
-simpleLogger - INFO - 2024-03-02 08:53:42.377700 : 0:00:00.238918 : get ALL pub data
-simpleLogger - INFO - 2024-03-02 08:53:42.523739 : 0:00:00.146029 : get FEATURED pub data
-simpleLogger - INFO - 2024-03-02 08:53:43.444243 : 0:00:00.920495 : home page LOADED
-simpleLogger - INFO - 2024-03-02 09:31:07.754842 : home page OPEN
-simpleLogger - INFO - 2024-03-02 09:31:07.868717 : 0:00:00.113267 : get ALL pub data
-simpleLogger - INFO - 2024-03-02 09:31:07.974007 : 0:00:00.105281 : get FEATURED pub data
-simpleLogger - INFO - 2024-03-02 09:31:08.942107 : 0:00:00.968067 : home page failed to load: get_pub_all() missing 5 required positional arguments: 'df_detail_all', 'df_review_all', 'df_diary_all', 'df_station_all', and 'df_direction_all'
-simpleLogger - INFO - 2024-03-02 09:33:58.005663 : home page OPEN
-simpleLogger - INFO - 2024-03-02 09:33:58.134324 : 0:00:00.128492 : get ALL pub data
-simpleLogger - INFO - 2024-03-02 09:33:58.235450 : 0:00:00.101117 : get FEATURED pub data
-simpleLogger - ERROR - 2024-03-02 09:33:59.136773 : 0:00:00.901284 : get_pub_all() missing 5 required positional arguments: 'df_detail_all', 'df_review_all', 'df_diary_all', 'df_station_all', and 'df_direction_all'
-Traceback (most recent call last):
-  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 74, in home
-    df_timeout = FilesDaily().get_timeout()
-  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/files_daily.py", line 21, in get_timeout
-    df_pubs = FilesPub().get_pub_all()
-TypeError: get_pub_all() missing 5 required positional arguments: 'df_detail_all', 'df_review_all', 'df_diary_all', 'df_station_all', and 'df_direction_all'
-simpleLogger - INFO - 2024-03-02 09:37:57.843131 : home page OPEN
-simpleLogger - INFO - 2024-03-02 09:37:57.933205 : 0:00:00.088264 : get ALL pub data
-simpleLogger - INFO - 2024-03-02 09:37:58.041618 : 0:00:00.108404 : get FEATURED pub data
-simpleLogger - INFO - 2024-03-02 09:37:58.454660 : 0:00:00.413024 : home page LOADED
 simpleLogger - INFO - 2024-03-02 09:40:49.767447 : home page OPEN
 simpleLogger - INFO - 2024-03-02 09:40:50.308500 : 0:00:00.540795 : home page LOADED
-simpleLogger - INFO - 2024-03-02 09:53:53.594955 : home page OPEN
-simpleLogger - ERROR - 2024-03-02 09:53:55.994213 : 0:00:02.398506 : dispose_engine() missing 1 required positional argument: 'engine'
-Traceback (most recent call last):
-  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 70, in home
-    PostgresConnection.dispose_engine(engine)
-TypeError: dispose_engine() missing 1 required positional argument: 'engine'
-simpleLogger - INFO - 2024-03-02 10:00:29.213825 : home page OPEN
-simpleLogger - ERROR - 2024-03-02 10:00:31.428836 : 0:00:02.214251 : dispose_engine() missing 1 required positional argument: 'engine'
-Traceback (most recent call last):
-  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 70, in home
-    PostgresConnection.dispose_engine(engine)
-TypeError: dispose_engine() missing 1 required positional argument: 'engine'
+simpleLogger - INFO - 2024-03-02 10:36:06.929156 : home page OPEN
+simpleLogger - INFO - 2024-03-02 10:36:09.659710 : 0:00:02.730235 : home page LOADED
+simpleLogger - INFO - 2024-03-02 10:42:26.068714 : home page OPEN
+simpleLogger - INFO - 2024-03-02 10:42:26.999784 : 0:00:00.930936 : home page LOADED
+simpleLogger - INFO - 2024-03-02 10:42:38.984351 : home page OPEN
+simpleLogger - INFO - 2024-03-02 10:42:39.717540 : 0:00:00.733170 : home page LOADED

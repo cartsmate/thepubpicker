@@ -54,8 +54,8 @@ def home():
             df_station_all = GetPub().get_all(Station())
             df_direction_all = GetPub().get_all(Direction())
         else:
-            engine = PostgresConnection().create_engine()
             try:
+                engine = PostgresConnection().create_engine()
                 df_detail_all = PostgresConnection().read_postgres('detail', engine)
                 df_review_all = PostgresConnection().read_postgres('review', engine)
                 df_daily_event_all = PostgresConnection().read_postgres('daily_event', engine)
@@ -67,7 +67,7 @@ def home():
                 t = datetime.datetime.now()
                 logger.error(f'{t} : {gap} : {e}', exc_info=True)
             finally:
-                PostgresConnection.dispose_engine(engine)
+                PostgresConnection().dispose_engine(engine)
 
         stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
         # stations_directions_list = Dataframes().go_get_stations_directions_list()
