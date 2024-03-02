@@ -14,7 +14,6 @@ class GetPub:
     def get_all(self, model):
         dtype_obj = {}
         for key, value in model.__dict__.items():
-            # print(value)
             dtype_obj[value.name] = value.datatype
         df = pd.read_csv(directory_path + '/files/' + model.filename + '.csv', dtype=dtype_obj)
         # else:
@@ -27,7 +26,7 @@ class GetPub:
         print(f'{model.__class__.__name__} | {df.shape[0]}')
         return df
 
-    def get_1(self, model, pub_id):
-        df = self.get_all(model)
+    def get_1(self, df, pub_id):
+        # df = self.get_all(model)
         df_1 = df.loc[df['pub_identity'] == pub_id]
         return df_1

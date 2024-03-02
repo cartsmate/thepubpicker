@@ -14,15 +14,15 @@ directory_path = config2['directory_path']
 
 class FilesDaily:
 
-    def get_timeout(self):
+    def get_timeout(self, df_pubs):
         # with open(directory_path + '/files/timeout.csv', 'r') as fil:
         #     timeout_list = fil.read().split('\n')
         # timeout_list = pd.read_csv(directory_path + '/files/timeout.csv', dtype={'pub_identity': str})
-        df_pubs = FilesPub().get_pub_all()
+        # df_pubs = FilesPub().get_pub_all(df_detail_all, df_review_all)
         df_timeout = df_pubs.loc[df_pubs['timeout'] == '1']
         return df_timeout
 
-    def go_get_details_daily(self):
+    def go_get_details_daily(self, df_detail_all):
         print('go_get_details_daily')
         if env_vars['env'] == 'qual':
             print('csv')
@@ -44,7 +44,7 @@ class FilesDaily:
             daily_id = df_lastline.iloc[0]['pub_identity']
         else:
             # # # GET RANDOM PUB
-            df_detail_all = GetPub().get_all(Detail())
+            # df_detail_all = GetPub().get_all(Detail())
             df_best = df_detail_all.loc[(df_detail_all['ranking'] > 4) & (df_detail_all['ranking'] < 5) & (df_detail_all['extra'] != '')]
 
             no_of_details = df_best.shape[0]

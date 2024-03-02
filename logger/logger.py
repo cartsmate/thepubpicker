@@ -11,7 +11,7 @@ class Logger:
         print(self.env_vars['directory_path'])
         logging.config.fileConfig(self.env_vars['directory_path'] + "/logger/log.config")
         new_logger = logging.getLogger('simpleLogger')
-        new_logger.debug('this is a debug message - to CONSOLE')
+        # new_logger.debug('this is a debug message - to CONSOLE')
 
         file_handler = logging.FileHandler(self.env_vars['directory_path'] + "/logger/logger_file.log")
         file_handler.setLevel(logging.INFO)

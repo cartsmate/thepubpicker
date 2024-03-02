@@ -46,15 +46,16 @@ class FilesPhoto:
     #     df_photos = Csv().go_get_photos()
     #     df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
     #     return df_1_photo
-    def go_get_place_id(self, pub_id):
+    def go_get_place_id(self, df, pub_id):
         print('go_get_place_id')
 
-        df_place_id = GetPub().get_1(Detail(), pub_id).iloc[0]['place']
+        df_place_id = GetPub().get_1(df, pub_id).iloc[0]['place']
         return df_place_id
 
-    def go_get_1_photo_request(self, pub_id, env_vars):
+    def go_get_1_photo_request(self, df, pub_id, env_vars):
         print('go_get_1_photo_request')
-        place_id = self.go_get_place_id(pub_id)
+        place_id = GetPub().get_1(df, pub_id).iloc[0]['place']
+        # place_id = self.go_get_place_id(pub_id)
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
 
         keyw = env_vars['places_key']

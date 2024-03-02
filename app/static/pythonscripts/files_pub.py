@@ -25,22 +25,22 @@ directory_path = env_vars['directory_path']
 
 class FilesPub:
 
-    def get_pub_all(self):
+    def get_pub_all(self, df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all):
         # get all pub REVIEWS
-        df_pub_all = GetPub().get_all(Review()).drop_duplicates(subset='pub_identity', keep="last")
+        df_pub_all = df_review_all.drop_duplicates(subset='pub_identity', keep="last")
         # merge with all pub DETAILS
-        df_pub_all = pd.merge(GetPub().get_all(Detail()), df_pub_all, on='pub_identity', how='left')
+        df_pub_all = pd.merge(df_detail_all, df_pub_all, on='pub_identity', how='left')
         # merge with all DIARY days
-        df_pub_all = pd.merge(df_pub_all, GetPub().get_all(Diary()), on='pub_identity', how='left')
+        df_pub_all = pd.merge(df_pub_all, df_diary_all, on='pub_identity', how='left')
         # merge with all STATIONS
-        df_pub_all = pd.merge(df_pub_all, GetPub().get_all(Station()), on='station_identity', how='left')
+        df_pub_all = pd.merge(df_pub_all, df_station_all, on='station_identity', how='left')
         # merge with all DIRECTIONS
-        df_pub_all = pd.merge(df_pub_all, GetPub().get_all(Direction()), on='direction_identity', how='left')
+        df_pub_all = pd.merge(df_pub_all, df_direction_all, on='direction_identity', how='left')
         return df_pub_all
 
-    def get_pub_1(self, pub_id):
+    def get_pub_1(self, df_pubs, pub_id):
         # get all PUBS
-        df_pubs = self.get_pub_all()
+        # df_pubs = self.get_pub_all()
         # filter to get single PUB
         df_1_pub = df_pubs.loc[(df_pubs['pub_identity'] == pub_id)]
         return df_1_pub
