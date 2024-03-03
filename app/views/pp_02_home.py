@@ -1,15 +1,13 @@
 import logging
 import time
 import datetime
+import functools
 from os import path
 from app import app
 import json
 import pandas as pd
 import logging.config
 from flask import render_template, request
-
-from app.static.pythonscripts.s3 import S3
-
 
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
@@ -21,21 +19,71 @@ from app.models.pub.pub import Pub
 
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.postgres import PostgresConnection
+from app.static.pythonscripts.s3 import S3
+
 from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
 from app.static.pythonscripts.files_daily import FilesDaily
 from app.static.pythonscripts.files_counter import FilesCounter
 
+from app.static.pythonscripts.multi_threading import MultiThreadingPub
 
 from logger.logger import Logger
-
-
 from config import Configurations
+
+
+class CountCalls:
+
+    def __init__(self, func):
+        self.func = func
+        self.num_calls = 0
+
+    def __call__(self, *args, **kwargs):
+        self.num_calls += 1
+        print(f'This is executed {self.num_calls} times')
+        return self.func(*args, **kwargs)
+
+
+@CountCalls
+def get_csv_data(model):
+    data = GetPub().get_all(model)
+    return data
+
+
+def debug(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        args_repr = [repr(a) for a in args]
+        kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]
+        signature = ", ".join(args_repr + kwargs_repr)
+        print(f'Calling {func.__name__} with {signature}')
+        result = func(*args, **kwargs)
+        print(f'Returning {func.__name__!r}')
+        # result {result!r}')
+        return result
+    return wrapper
+
+
+def my_decorator(statement):
+    def print_remarks(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            # PRE function
+            print(f'pre function decorator: {statement}')
+            # RUN function
+            result = func(*args, **kwargs)
+            # POST function
+            print(f'post function decorator: {statement}')
+            return result
+        return wrapper
+    return print_remarks
 
 
 @app.route("/", methods=['GET'])
 @app.route("/home/", methods=['GET'])
+@debug
+@my_decorator(statement = 'hello world')
 def home():
     logger = Logger().create_logger()
 
@@ -46,36 +94,44 @@ def home():
         env_vars = Configurations().get_config2()
         filters = request.args.get('filters')
 
-        if env_vars['source'] == 'csv':
-            df_detail_all = GetPub().get_all(Detail())
-            df_review_all = GetPub().get_all(Review())
-            df_daily_event_all = GetPub().get_all(DailyEvent())
-            df_diary_all = GetPub().get_all(Diary())
-            df_station_all = GetPub().get_all(Station())
-            df_direction_all = GetPub().get_all(Direction())
-        else:
-            try:
-                engine = PostgresConnection().create_engine()
-                df_detail_all = PostgresConnection().read_postgres('detail', engine)
-                df_review_all = PostgresConnection().read_postgres('review', engine)
-                df_daily_event_all = PostgresConnection().read_postgres('daily_event', engine)
-                df_diary_all = PostgresConnection().read_postgres('diary', engine)
-                df_station_all = PostgresConnection().read_postgres('station', engine)
-                df_direction_all = PostgresConnection().read_postgres('direction', engine)
-            except Exception as e:
-                gap = datetime.datetime.now() - t
-                t = datetime.datetime.now()
-                logger.error(f'{t} : {gap} : {e}', exc_info=True)
-            finally:
-                PostgresConnection().dispose_engine(engine)
+        df_dict = MultiThreadingPub().thread_caller()
+        # print("df_dict['df_detail']")
+        # print(df_dict['df_detail'])
+
+        df_detail_all = df_dict['df_detail']
+        df_review_all = df_dict['df_review']
+        df_daily_event_all = df_dict['df_daily_event']
+        df_diary_all = df_dict['df_diary']
+        df_station_all = df_dict['df_station']
+        df_direction_all = df_dict['df_direction']
+
+        # df_detail_all = get_csv_data(Detail())
+        # df_review_all = get_csv_data(Review())
+        # df_daily_event_all = get_csv_data(DailyEvent())
+        # df_diary_all = get_csv_data(Diary())
+        # df_station_all = get_csv_data(Station())
+        # df_direction_all = get_csv_data(Direction())
+
+            # try:
+            #     engine = PostgresConnection().create_engine()
+            #     df_detail_all = PostgresConnection().read_postgres('detail', engine)
+            #     df_review_all = PostgresConnection().read_postgres('review', engine)
+            #     df_daily_event_all = PostgresConnection().read_postgres('daily_event', engine)
+            #     df_diary_all = PostgresConnection().read_postgres('diary', engine)
+            #     df_station_all = PostgresConnection().read_postgres('station', engine)
+            #     df_direction_all = PostgresConnection().read_postgres('direction', engine)
+            # except Exception as e:
+            #     gap = datetime.datetime.now() - t
+            #     t = datetime.datetime.now()
+            #     logger.error(f'{t} : {gap} : {e}', exc_info=True)
+            # finally:
+            #     PostgresConnection().dispose_engine(engine)
 
         stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
-        # stations_directions_list = Dataframes().go_get_stations_directions_list()
         directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
 
         # # # GET ALL DATA # # #
         df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
-        # df_event = GetPub().get_all(DailyEvent())
         df_pub_with_event = pd.merge(df_pub, df_daily_event_all, on='pub_identity', how='left')
         pub_ent_json = df_pub_with_event.to_dict(orient='records')
 

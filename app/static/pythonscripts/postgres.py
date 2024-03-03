@@ -65,6 +65,7 @@ class PostgresConnection:
         conn.commit()
         return results
 
+    # @CountCalls
     def read_postgres(self, database, engine):
         sql_str = f'SELECT * from thepubpicker.{database}'
         df_alchemy = pd.DataFrame(engine.connect().execute(text(sql_str)))

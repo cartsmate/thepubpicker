@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
+        <title>pubpicker: 500 error</title>
+        {% include "01_head.html" %}
     </head>
-    <body>
-        <div>500</div>
+    <body id="body" class="page-background disable-dbl-tap-zoom" data-color={{color_theme}} >
+        <div class="container-fluid screen-reactor">
+            <div class="row orange" id="template_title">
+                <div class="col black">
+                    {% include "7_section_title_home.html" %}
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                <div class="col">
+                    <div style="margin-bottom: 0px; text-align: center; font-size: 14px; margin: 0px 25px; line-height: 1.0;">
+                        <div>Don't stress out ...</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col"><img width=100 src="/static/images/error/01_confused.jpg"></div>
+                        <div class="col"><img width=100 src="/static/images/error/02_embarrassed.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img width=100 src="/static/images/error/03_errored.jpg"></div>
+                        <div class="col"><img width=100 src="/static/images/error/04_worried.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
+                <div style="margin-bottom: 0px; text-align: center; font-size: 16px; margin: 0px 25px; line-height: 1.0;">
+                    <div>Oh no !! Something has gone terribly wrong !!!</div>
+                    <div style="margin-bottom: 0px; text-align: center; font-weight: bold; font-size: 32px; margin: 0px 25px; line-height: 1.0;">
+                        <div>500</div>
+                    </div>
+                    <div>Come back and try again a little later.</div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
+                <div class="col">
+                    <div class="row">
+                        <div class="col"><img width=100 src="/static/images/error/05_cooking.jpg"></div>
+                        <div class="col"><img width=100 src="/static/images/error/06_reading.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img width=100 src="/static/images/error/07_running.jpg"></div>
+                        <div class="col"><img width=100 src="/static/images/error/08_yoga.jpg"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="margin-bottom: 0px; text-align: center; font-size: 14px; margin: 0px 25px; line-height: 1.0;">
+                        <div>... go relax while we fix it</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
