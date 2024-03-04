@@ -183,3 +183,5 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'assets'.
 simpleLogger - INFO - 2024-03-04 23:19:22.377895 : home page OPEN
 simpleLogger - INFO - 2024-03-04 23:19:23.356213 : 0:00:00.978181 : home page LOADED
+simpleLogger - INFO - 2024-03-04 23:33:51.572548 : home page OPEN
+simpleLogger - INFO - 2024-03-04 23:33:52.633297 : 0:00:01.060618 : home page LOADED

@@ -84,10 +84,7 @@ def my_decorator(statement):
 @my_decorator(statement='hello world')
 def home():
     env_vars = Configurations().get_config2()
-    session['KEY_NAME'] = env_vars['session_key']
-    print('session')
-    print(session)
-    # 'k999-zzz-888-yyy'  # stores a key in the web-browser
+    # session['KEY_NAME'] = env_vars['session_key']
 
     logger = Logger().create_logger()
 
