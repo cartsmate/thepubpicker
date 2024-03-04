@@ -6,7 +6,7 @@ from .pp_05_edit import edit
 from .pp_06_submit import submit
 from app import app
 from flask import render_template, request
-from flask_assets import Bundle, Environment
+# from flask_assets import Bundle, Environment
 from config import Configurations
 import os
 
