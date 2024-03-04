@@ -53,7 +53,8 @@ class Configurations:
             "db_user": os.environ.get("DB_USER"),
             "db_password": os.environ.get("DB_PASSWORD"),
             "db_host": os.environ.get("DB_HOST"),
-            "db_port": os.environ.get("DB_PORT")
+            "db_port": os.environ.get("DB_PORT"),
+            "session_key": os.environ.get("SESSION_KEY")
         }
         # print('config2: ' + str(config2))
         return config2

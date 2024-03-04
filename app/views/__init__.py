@@ -6,6 +6,40 @@ from .pp_05_edit import edit
 from .pp_06_submit import submit
 from app import app
 from flask import render_template, request
+from flask_assets import Bundle, Environment
+from config import Configurations
+import os
+directory_path = Configurations().get_config2()['directory_path']
+
+app.config['SECRET_KEY'] = 'random_string_value'
+
+# directory = os.fsencode('/static/javascript/')
+directory = directory_path + "/app/static/javascript/filter/"
+print('directory')
+print(directory)
+js_files = []
+for file in os.listdir(directory):
+    filename = os.fsdecode(file)
+    if filename.endswith(".js"):
+        js_files.append(filename)
+        # print(os.path.join(directory, filename))
+        continue
+    else:
+        continue
+print('js_files')
+print(js_files)
+
+js = Bundle(js_files, output='gen/main.js', filters='jsmin')
+
+css = Bundle(['/static/css/filter/diary_filter.css',
+              '/static/css/filter/direction_filter.css',
+              '/static/css/filter/events_filter.css'],
+             output='gen/main.css', filters='cssmin')
+
+assets = Environment(app)
+
+assets.register('main.js', js)
+assets.register('main.css', css)
 
 
 @app.errorhandler(404)

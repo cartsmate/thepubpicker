@@ -7,7 +7,8 @@ from app import app
 import json
 import pandas as pd
 import logging.config
-from flask import render_template, request
+from flask import render_template, request, session
+# Flask-PyMongo, Flask-WTF, Flask-Mail, Flask-RestFul, Flask-Uploads, Flask-User, Flask-Login
 
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
@@ -83,21 +84,25 @@ def my_decorator(statement):
 @app.route("/", methods=['GET'])
 @app.route("/home/", methods=['GET'])
 @debug
-@my_decorator(statement = 'hello world')
+@my_decorator(statement='hello world')
 def home():
+    env_vars = Configurations().get_config2()
+    session['KEY_NAME'] = env_vars['session_key']
+    print('session')
+    print(session)
+    # 'k999-zzz-888-yyy'  # stores a key in the web-browser
+
     logger = Logger().create_logger()
 
     # # # GET CONFIG # # #
     try:
         t = datetime.datetime.now()
         logger.info(f'{t} : home page OPEN')
-        env_vars = Configurations().get_config2()
+
         filters = request.args.get('filters')
 
+        # GET DATA FROM DATABASE
         df_dict = MultiThreadingPub().thread_caller()
-        # print("df_dict['df_detail']")
-        # print(df_dict['df_detail'])
-
         df_detail_all = df_dict['df_detail']
         df_review_all = df_dict['df_review']
         df_daily_event_all = df_dict['df_daily_event']
@@ -105,27 +110,13 @@ def home():
         df_station_all = df_dict['df_station']
         df_direction_all = df_dict['df_direction']
 
+        # GET DATA FROM CSV
         # df_detail_all = get_csv_data(Detail())
         # df_review_all = get_csv_data(Review())
         # df_daily_event_all = get_csv_data(DailyEvent())
         # df_diary_all = get_csv_data(Diary())
         # df_station_all = get_csv_data(Station())
         # df_direction_all = get_csv_data(Direction())
-
-            # try:
-            #     engine = PostgresConnection().create_engine()
-            #     df_detail_all = PostgresConnection().read_postgres('detail', engine)
-            #     df_review_all = PostgresConnection().read_postgres('review', engine)
-            #     df_daily_event_all = PostgresConnection().read_postgres('daily_event', engine)
-            #     df_diary_all = PostgresConnection().read_postgres('diary', engine)
-            #     df_station_all = PostgresConnection().read_postgres('station', engine)
-            #     df_direction_all = PostgresConnection().read_postgres('direction', engine)
-            # except Exception as e:
-            #     gap = datetime.datetime.now() - t
-            #     t = datetime.datetime.now()
-            #     logger.error(f'{t} : {gap} : {e}', exc_info=True)
-            # finally:
-            #     PostgresConnection().dispose_engine(engine)
 
         stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
         directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)

@@ -1,6 +1,6 @@
 import json
 from app import app
-from flask import render_template, request
+from flask import render_template, request, session, redirect, url_for
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 from app.models.detail.detail import Detail
 from app.models.review.review import Review
@@ -17,54 +17,79 @@ from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.dataframes import Dataframes
 # from app.static.pythonscripts.controls_list import ControlsList
 # from app.static.pythonscripts.objects import Objects
+from app.static.pythonscripts.multi_threading import MultiThreadingPub
 from config import Configurations
 
 
 @app.route("/pub/", methods=['GET', 'POST'])
 def pub():
-    print('START pub')
+    print('session')
+    print(session)
+    print("Configurations().get_config2()['session_key']")
+    print(Configurations().get_config2()['session_key'])
+    if Configurations().get_config2()['session_key'] in session.values():
+        print('included')
 
-    filters = request.args.get('filters')
+        print('START pub')
 
-    # # # GET ENVIRONMENTAL VARIABLES
-    env_vars = Configurations().get_config2()
+        filters = request.args.get('filters')
 
-    # # # GET REQUESTED PUB
-    pub_id = request.args.get('id')
-    df_1_pub = FilesPub().get_pub_1(pub_id)
-    pub_json = df_1_pub.to_dict(orient='records')
-    df_1_event = GetPub().get_1(DailyEvent(), pub_id)
-    df_1_event_list_json = df_1_event.to_json(orient='records')
-    json_loads = json.loads(df_1_event_list_json)
-    photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
+        # # # GET ENVIRONMENTAL VARIABLES
+        env_vars = Configurations().get_config2()
 
-    detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
-    review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
-    diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
-    station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
-    direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
-    event_json = json.loads(json.dumps(DailyEvent().__dict__, default=lambda o: o.__dict__))
+        # # # GET REQUESTED PUB
+        pub_id = request.args.get('id')
 
-    print('END pub')
-    name = "readonly"
-    page = "pub"
-    stations_directions_list = Dataframes().go_get_stations_directions_list()
-    directions_list = Dataframes().go_get_directions_list()
+        df_dict = MultiThreadingPub().thread_caller()
+        # DATABASE FILES
+        df_detail_all = df_dict['df_detail']
+        df_review_all = df_dict['df_review']
+        df_daily_event_all = df_dict['df_daily_event']
+        df_diary_all = df_dict['df_diary']
+        df_station_all = df_dict['df_station']
+        df_direction_all = df_dict['df_direction']
+        df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
+        df_1_pub = FilesPub().get_pub_1(df_pub, pub_id)
+        pub_json = df_1_pub.to_dict(orient='records')
 
-    return render_template('03_pub_.html',
-                           pub_1=pub_json,
-                           events=json_loads,
-                           event=event_json,
-                           photos_list=photos_list,
-                           env_vars=env_vars,
-                           detail=detail_json,
-                           review=review_json,
-                           diary=diary_json,
-                           station=station_json,
-                           direction=direction_json,
-                           directions_list=directions_list,
-                           stations_directions_list=stations_directions_list,
-                           photo=Photo(),
-                           name=name,
-                           filters=filters,
-                           page=page,)
+        # CSV FILES
+        # df_1_event = GetPub().get_1(DailyEvent(), pub_id)
+        df_1_event = df_daily_event_all.loc[df_daily_event_all['pub_identity'] == pub_id]
+        df_1_event_list_json = df_1_event.to_json(orient='records')
+        json_loads = json.loads(df_1_event_list_json)
+
+        photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, pub_id, env_vars)
+
+        detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
+        review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
+        diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
+        station_json = json.loads(json.dumps(Station().__dict__, default=lambda o: o.__dict__))
+        direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
+        event_json = json.loads(json.dumps(DailyEvent().__dict__, default=lambda o: o.__dict__))
+
+        print('END pub')
+        name = "readonly"
+        page = "pub"
+        stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
+        directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
+
+        return render_template('03_pub_.html',
+                               pub_1=pub_json,
+                               events=json_loads,
+                               event=event_json,
+                               photos_list=photos_list,
+                               env_vars=env_vars,
+                               detail=detail_json,
+                               review=review_json,
+                               diary=diary_json,
+                               station=station_json,
+                               direction=direction_json,
+                               directions_list=directions_list,
+                               stations_directions_list=stations_directions_list,
+                               photo=Photo(),
+                               name=name,
+                               filters=filters,
+                               page=page,)
+    else:
+        # return render_template('02_home_.html')
+        return redirect(url_for('home'))
