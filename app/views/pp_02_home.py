@@ -1,12 +1,9 @@
-import logging
-import time
+import json
 import datetime
 import functools
-from os import path
-from app import app
-import json
 import pandas as pd
-import logging.config
+from app import app
+
 from flask import render_template, request, session
 # Flask-PyMongo, Flask-WTF, Flask-Mail, Flask-RestFul, Flask-Uploads, Flask-User, Flask-Login
 
@@ -111,7 +108,7 @@ def home():
         df_direction_all = df_dict['df_direction']
 
         # GET DATA FROM CSV
-        # df_detail_all = get_csv_data(Detail())
+        # df_detail_all = get_csv_data(Detail)
         # df_review_all = get_csv_data(Review())
         # df_daily_event_all = get_csv_data(DailyEvent())
         # df_diary_all = get_csv_data(Diary())
@@ -133,7 +130,7 @@ def home():
         photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, daily_id, env_vars)
 
         # # # GET TIMEOUT LIST # # #
-        df_timeout = FilesDaily().get_timeout(df_pub)
+        df_timeout = df_pub.loc[df_pub['timeout'] == '1']
         timeout_json = df_timeout.to_dict(orient='records')
 
         # # # GET COUNTER TALLY # # #
@@ -156,27 +153,27 @@ def home():
         gap = datetime.datetime.now() - t
         t = datetime.datetime.now()
         logger.info(f'{t} : {gap} : home page LOADED')
+        return render_template('02_home_.html',
+                               env_vars=env_vars,
+                               color_theme='#A1BE95',
+                               daily_id=daily_id,
+                               pub_1=pub_1_json,
+                               pub_all=pub_ent_json,
+                               review=review_json,
+                               diary=diary_json,
+                               pub_obj=pub_obj_json,
+                               photos_list=photos_list,
+                               filters=filters,
+                               directions_list=directions_list,
+                               stations_directions_list=stations_directions_list,
+                               counter=counter6,
+                               page='home',
+                               timeout_pubs=timeout_json
+
+                               # no_of_review=no_of_reviews
+                               )
     except Exception as e:
         gap = datetime.datetime.now() - t
         t = datetime.datetime.now()
         logger.error(f'{t} : {gap} : {e}', exc_info=True)
-
-    return render_template('02_home_.html',
-                           env_vars=env_vars,
-                           color_theme='#A1BE95',
-                           daily_id=daily_id,
-                           pub_1=pub_1_json,
-                           pub_all=pub_ent_json,
-                           review=review_json,
-                           diary=diary_json,
-                           pub_obj=pub_obj_json,
-                           photos_list=photos_list,
-                           filters=filters,
-                           directions_list=directions_list,
-                           stations_directions_list=stations_directions_list,
-                           counter=counter6,
-                           page='home',
-                           timeout_pubs=timeout_json
-
-                           # no_of_review=no_of_reviews
-                           )
+        return render_template('00_errorhandling_500.html')

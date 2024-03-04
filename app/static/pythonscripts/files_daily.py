@@ -7,26 +7,25 @@ from datetime import datetime, timedelta, date
 from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.files_pub import FilesPub
 
-env_vars = Configurations().get_config2()
-config2 = Configurations().get_config2()
-directory_path = config2['directory_path']
+# env_vars = Configurations().get_config2()
+# config2 = Configurations().get_config2()
+# directory_path = config2['directory_path']
 
 
 class FilesDaily:
 
-    def get_timeout(self, df_pubs):
-        # with open(directory_path + '/files/timeout.csv', 'r') as fil:
-        #     timeout_list = fil.read().split('\n')
-        # timeout_list = pd.read_csv(directory_path + '/files/timeout.csv', dtype={'pub_identity': str})
-        # df_pubs = FilesPub().get_pub_all(df_detail_all, df_review_all)
-        df_timeout = df_pubs.loc[df_pubs['timeout'] == '1']
-        return df_timeout
+    # def get_timeout(self, df_pubs):
+    #     df_timeout = df_pubs.loc[df_pubs['timeout'] == '1']
+    #     return df_timeout
+
+    env_vars = Configurations().get_config2()
+    directory_path = Configurations().get_config2()['directory_path']
 
     def go_get_details_daily(self, df_detail_all):
         print('go_get_details_daily')
-        if env_vars['env'] == 'qual':
+        if self.env_vars['env'] == 'qual':
             print('csv')
-            df_details_day = pd.read_csv(directory_path + '/files/featured.csv',
+            df_details_day = pd.read_csv(f"{self.directory_path}/files/featured.csv",
                                          dtype={'pub_identity': str, 'timestamp': str})
         else:
             print('s3')
@@ -34,10 +33,8 @@ class FilesDaily:
             df_details_day = S3().s3_read('featured', attribute_list)
 
         df_lastline = df_details_day.tail(1)
-
         previous_timestamp_str = df_lastline.iloc[0]['timestamp']
 
-        new_timestamp = datetime.now()
         new_timestamp_str = datetime.today().strftime('%Y-%m-%d')
 
         if new_timestamp_str == previous_timestamp_str:
@@ -57,8 +54,8 @@ class FilesDaily:
 
             df_appended = pd.concat([df_details_day, df_new], ignore_index=True)
 
-            if env_vars['env'] == 'qual':
-                df_appended.to_csv(directory_path + '/files/featured.csv', index=False, sep=',', encoding='utf-8')
+            if self.env_vars['env'] == 'qual':
+                df_appended.to_csv(f"{self.directory_path}/files/featured.csv", index=False, sep=',', encoding='utf-8')
             else:
                 s3_resp = S3().s3_write(df_appended, 'featured.csv')
                 print(s3_resp)

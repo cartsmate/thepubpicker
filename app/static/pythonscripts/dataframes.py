@@ -7,38 +7,12 @@ from app.models.direction.direction import Direction
 from app.static.pythonscripts.pub_get import GetPub
 
 # config = Configurations().get_config()
-config2 = Configurations().get_config2()
+# env_vars = Configurations().get_config2()
 
 
 class Dataframes:
 
     env_vars = Configurations().get_config2()
-
-    # def series_to_dict(self, series):
-    #     series_dict = series.to_dict()
-    #     return series_dict
-
-    # def df_to_dict(self, df):
-    #     df_dict = df.to_dict(orient='records')
-    #     return df_dict
-
-    # def merge_dfs(self, df_1, df_2):
-    #     print('Dataframe.merge_dfs')
-    #     df_merged = pd.merge(df_1, df_2, how='left', on='pub_identity')
-    #     return df_merged
-
-    # def append_df(self, _get, new_df):
-    #     print('Dataframe: append_df')
-    #     df_appended = pd.concat([_get, new_df], ignore_index=True)
-    #     return df_appended
-
-    # def to_csv(self, df_appended, key):
-    #     print('Dataframes: to_csv')
-    #     # directory_path = os.getcwd()
-    #     # directory_path = '/Users/andycarter/Documents/develop/thepubcrawls/'
-    #     directory_path = config2['directory_path']
-    #     # print(directory_path)
-    #     df_appended.to_csv(directory_path + '/files/' + config[key]['aws_key'], sep=',', encoding='utf-8', index=False)
 
     def go_get_stations_directions(self, df_detail_all, df_station_all, df_direction_all):
         # df_station_all = GetPub().get_all(Station())

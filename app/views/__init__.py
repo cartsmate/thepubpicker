@@ -14,7 +14,8 @@ directory_path = Configurations().get_config2()['directory_path']
 app.config['SECRET_KEY'] = 'random_string_value'
 
 # directory = os.fsencode('/static/javascript/')
-directory = directory_path + "/app/static/javascript/filter/"
+directory = directory_path
+# + "/app/static/javascript/filter/"
 print('directory')
 print(directory)
 js_files = []

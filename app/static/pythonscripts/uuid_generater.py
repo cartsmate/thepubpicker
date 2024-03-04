@@ -1,11 +1,9 @@
 import uuid
-from config import Configurations
-
-# config = Configurations().get_config()
 
 
 class UuidGenerator:
 
-    def get_new_uuid(self):
+    @staticmethod
+    def get_new_uuid():
         new_id = str(uuid.uuid4())
         return new_id

@@ -82,3 +82,77 @@ simpleLogger - INFO - 2024-03-04 11:23:35.602722 : home page OPEN
 simpleLogger - INFO - 2024-03-04 11:23:36.489157 : 0:00:00.886427 : home page LOADED
 simpleLogger - INFO - 2024-03-04 11:28:31.423282 : home page OPEN
 simpleLogger - INFO - 2024-03-04 11:28:32.506950 : 0:00:01.083543 : home page LOADED
+simpleLogger - INFO - 2024-03-04 11:31:02.550745 : home page OPEN
+simpleLogger - INFO - 2024-03-04 11:31:03.443872 : 0:00:00.893116 : home page LOADED
+simpleLogger - INFO - 2024-03-04 11:31:32.481672 : home page OPEN
+simpleLogger - INFO - 2024-03-04 11:31:33.527589 : 0:00:01.045908 : home page LOADED
+simpleLogger - INFO - 2024-03-04 15:13:48.478572 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 15:13:49.137406 : 0:00:00.658681 : go_get_directions_list() missing 1 required positional argument: 'df_direction_all'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 122, in home
+    directions_list = Dataframes.go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
+TypeError: go_get_directions_list() missing 1 required positional argument: 'df_direction_all'
+simpleLogger - INFO - 2024-03-04 15:15:07.153242 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 15:15:08.159530 : 0:00:01.006150 : get_pub_all() missing 1 required positional argument: 'df_direction_all'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 125, in home
+    df_pub = FilesPub.get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
+TypeError: get_pub_all() missing 1 required positional argument: 'df_direction_all'
+simpleLogger - INFO - 2024-03-04 15:15:59.317134 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 15:16:00.019919 : 0:00:00.702671 : 'FilesPub' object has no attribute 'get_pub_1'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 131, in home
+    df_pub_1 = FilesPub().get_pub_1(df_pub, daily_id)
+AttributeError: 'FilesPub' object has no attribute 'get_pub_1'
+simpleLogger - INFO - 2024-03-04 15:16:45.848569 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 15:16:46.563547 : 0:00:00.714842 : 'GetPub' object has no attribute 'get_1'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 133, in home
+    photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, daily_id, env_vars)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/files_photo.py", line 57, in go_get_1_photo_request
+    place_id = GetPub().get_1(df, pub_id).iloc[0]['place']
+AttributeError: 'GetPub' object has no attribute 'get_1'
+simpleLogger - INFO - 2024-03-04 15:17:31.387110 : home page OPEN
+simpleLogger - INFO - 2024-03-04 15:17:32.515479 : 0:00:01.128011 : home page LOADED
+simpleLogger - INFO - 2024-03-04 15:20:28.446049 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 15:20:28.447112 : 0:00:00.000931 : thread_caller() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 105, in home
+    df_dict = MultiThreadingPub.thread_caller()
+TypeError: thread_caller() missing 1 required positional argument: 'self'
+simpleLogger - INFO - 2024-03-04 15:26:02.451433 : home page OPEN
+simpleLogger - INFO - 2024-03-04 15:26:03.617536 : 0:00:01.165970 : home page LOADED
+simpleLogger - INFO - 2024-03-04 15:26:29.083604 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 15:26:29.084685 : 0:00:00.000934 : thread_caller() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 105, in home
+    df_dict = MultiThreadingPub.thread_caller()
+TypeError: thread_caller() missing 1 required positional argument: 'self'
+simpleLogger - INFO - 2024-03-04 15:26:52.453908 : home page OPEN
+simpleLogger - INFO - 2024-03-04 15:26:53.424700 : 0:00:00.970661 : home page LOADED
+simpleLogger - INFO - 2024-03-04 20:20:10.087417 : home page OPEN
+simpleLogger - ERROR - 2024-03-04 20:20:11.204302 : 0:00:01.116753 : [Errno 2] No such file or directory: '/Users/andycarter/Documents/develop/thepubpicker/files/counter_qualx.csv'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 141, in home
+    counter = FilesCounter().go_get_counter()
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/files_counter.py", line 10, in go_get_counter
+    obj_df = pd.read_csv(directory_path + '/files/counter_qualx.csv')
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/Users/andycarter/Documents/develop/thepubpicker/venv/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/andycarter/Documents/develop/thepubpicker/files/counter_qualx.csv'
+simpleLogger - INFO - 2024-03-04 21:16:01.506196 : home page OPEN
+simpleLogger - INFO - 2024-03-04 21:16:02.562140 : 0:00:01.055523 : home page LOADED
+simpleLogger - INFO - 2024-03-04 22:06:25.284684 : home page OPEN
+simpleLogger - INFO - 2024-03-04 22:06:26.234091 : 0:00:00.949283 : home page LOADED
