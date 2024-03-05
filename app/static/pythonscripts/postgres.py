@@ -4,32 +4,33 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
 from config import *
 
+env_vars = Configurations.get_config()
+
 
 class PostgresConnection:
 
-    env_vars = Configurations.get_config()
-
-    sql_get_all = f'''select * from thepubpicker.detail d 
-                        left join thepubpicker.review r on r.pub_identity = d.pub_identity 
-                        left join thepubpicker.station s on s.station_identity = d.station_identity 
-                        left join thepubpicker.direction dir on dir.direction_identity = s.direction_identity
-                        left join thepubpicker.daily_event evnt on evnt.pub_identity = d.pub_identity 
-                        '''
-
-    sql_count_all = f'''select count(*) from thepubpicker.detail d 
+    def __init__(self):
+        self.sql_get_all = f'''select * from thepubpicker.detail d 
                             left join thepubpicker.review r on r.pub_identity = d.pub_identity 
                             left join thepubpicker.station s on s.station_identity = d.station_identity 
                             left join thepubpicker.direction dir on dir.direction_identity = s.direction_identity
                             left join thepubpicker.daily_event evnt on evnt.pub_identity = d.pub_identity 
                             '''
 
+        self.sql_count_all = f'''select count(*) from thepubpicker.detail d 
+                                left join thepubpicker.review r on r.pub_identity = d.pub_identity 
+                                left join thepubpicker.station s on s.station_identity = d.station_identity 
+                                left join thepubpicker.direction dir on dir.direction_identity = s.direction_identity
+                                left join thepubpicker.daily_event evnt on evnt.pub_identity = d.pub_identity 
+                                '''
+
     def open_conection(self):
         conn = psycopg2.connect(
-            database=self.env_vars['db_name'],
-            user=self.env_vars['db_user'],
-            password=self.env_vars['db_password'],
-            host=self.env_vars['db_host'],
-            port=self.env_vars['db_port']
+            database=env_vars['db_name'],
+            user=env_vars['db_user'],
+            password=env_vars['db_password'],
+            host=env_vars['db_host'],
+            port=env_vars['db_port']
         )
         return conn
 
@@ -40,11 +41,11 @@ class PostgresConnection:
         # # # USING SQLALCHEMY # # #
         url = URL.create(
             drivername='postgresql',
-            database=self.env_vars['db_name'],
-            username=self.env_vars['db_user'],
-            password=self.env_vars['db_password'],
-            host=self.env_vars['db_host'],
-            port=self.env_vars['db_port']
+            database=env_vars['db_name'],
+            username=env_vars['db_user'],
+            password=env_vars['db_password'],
+            host=env_vars['db_host'],
+            port=env_vars['db_port']
         )
         engine = create_engine(url)
         return engine

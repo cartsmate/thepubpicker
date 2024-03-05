@@ -1,22 +1,12 @@
 import pandas as pd
-from config import Configurations
-from app.models.detail.detail import Detail
-from app.models.station.station import Station
 from app.models.direction.direction import Direction
-
 from app.static.pythonscripts.pub_get import GetPub
-
-# config = Configurations().get_config()
-# env_vars = Configurations().get_config2()
 
 
 class Dataframes:
 
-    # env_vars = Configurations().get_config2()
-
-    def go_get_stations_directions(self, df_detail_all, df_station_all, df_direction_all):
-        # df_station_all = GetPub().get_all(Station())
-
+    @staticmethod
+    def go_get_stations_directions( df_detail_all, df_station_all, df_direction_all):
         df_pub_with_station = pd.merge(df_detail_all, df_station_all, on='station_identity',
                                        how='left').sort_values(
                                        by='station_name')

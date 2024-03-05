@@ -1,13 +1,14 @@
 import csv
-from config import Configurations
+from config import *
 
-directory_path = Configurations().get_config2()['directory_path']
+directory_path = Configurations.get_config()['directory_path']
 
 
 class WriteSearch:
 
-    def write_to_search(self, filters_list):
-        outfile = open(directory_path + '/search.csv', 'w')
+    @staticmethod
+    def write_to_search(filters_list):
+        outfile = open(f"{directory_path}/search.csv", 'w')
         writer = csv.writer(outfile)
         for filters in filters_list:
             writer.writerows(filters)

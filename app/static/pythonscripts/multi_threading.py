@@ -13,21 +13,22 @@ class MultiThreadingPub:
     # # # # # # # # # # # # # # # # # # # # # # #
     # # # Threading with database queries # # #
     # # # # # # # # # # # # # # # # # # # # #
-    db_conn = psycopg2.connect(
-            database="deb2u2ehdm8ih3",
-            user="bjoonismanuyqb",
-            password="42c662ab36a741716575f3e0101741349280622fff71ce246b15410de5c460d6",
-            host="ec2-54-76-132-202.eu-west-1.compute.amazonaws.com",
-            port='5432'
-        )
-    url = URL.create(
-            drivername='postgresql',
-            database="deb2u2ehdm8ih3",
-            username="bjoonismanuyqb",
-            password="42c662ab36a741716575f3e0101741349280622fff71ce246b15410de5c460d6",
-            host="ec2-54-76-132-202.eu-west-1.compute.amazonaws.com",
-            port=5432
+    def __init__(self):
+        self.db_conn = psycopg2.connect(
+                database="deb2u2ehdm8ih3",
+                user="bjoonismanuyqb",
+                password="42c662ab36a741716575f3e0101741349280622fff71ce246b15410de5c460d6",
+                host="ec2-54-76-132-202.eu-west-1.compute.amazonaws.com",
+                port='5432'
             )
+        self.url = URL.create(
+                drivername='postgresql',
+                database="deb2u2ehdm8ih3",
+                username="bjoonismanuyqb",
+                password="42c662ab36a741716575f3e0101741349280622fff71ce246b15410de5c460d6",
+                host="ec2-54-76-132-202.eu-west-1.compute.amazonaws.com",
+                port=5432
+                )
 
     def df_query_1(self):
         engine = create_engine(self.url)

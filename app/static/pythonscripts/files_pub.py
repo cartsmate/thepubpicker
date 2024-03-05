@@ -25,7 +25,8 @@ from app.models.review.review import Review
 
 class FilesPub:
 
-    def get_pub_all(self, df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all):
+    @staticmethod
+    def get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all):
         # get all pub REVIEWS
         df_pub_all = df_review_all.drop_duplicates(subset='pub_identity', keep="last")
         # merge with all pub DETAILS
@@ -38,14 +39,16 @@ class FilesPub:
         df_pub_all = pd.merge(df_pub_all, df_direction_all, on='direction_identity', how='left')
         return df_pub_all
 
-    def get_pub_1(self, df_pubs, pub_id):
+    @staticmethod
+    def get_pub_1(df_pubs, pub_id):
         # get all PUBS
         # df_pubs = self.get_pub_all()
         # filter to get single PUB
         df_1_pub = df_pubs.loc[(df_pubs['pub_identity'] == pub_id)]
         return df_1_pub
 
-    def new_pub(self):
+    @staticmethod
+    def new_pub():
         new_pub_id = UuidGenerator().get_new_uuid()
         print('new_pub_id: ' + new_pub_id)
         df_new_detail = NewPub().new_pub(Detail(), new_pub_id)

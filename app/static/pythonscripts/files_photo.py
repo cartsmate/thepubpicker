@@ -32,36 +32,23 @@ from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 class FilesPhoto:
 
-    # def go_get_photos(self):
-    #     print('go get photos')
-    #     if env_vars['source'] == 'csv':
-    #         df_photos = pd.read_csv(directory_path + '/files/photos_api.csv',
-    #                                 dtype={'photo_identity': str, 'photo_deletion': str, 'pub_identity': str})
-    #     else:
-    #         df_photos = None
-    #     return df_photos
-
-    # def go_get_1_photo(self, pub_id):
-    #     print('Go get 1 photo')
-    #     df_photos = Csv().go_get_photos()
-    #     df_1_photo = df_photos.loc[df_photos['pub_identity'] == pub_id]
-    #     return df_1_photo
-    def go_get_place_id(self, df, pub_id):
+    @staticmethod
+    def go_get_place_id(df, pub_id):
         print('go_get_place_id')
 
         df_place_id = GetPub().get_1(df, pub_id).iloc[0]['place']
         return df_place_id
 
-    def go_get_1_photo_request(self, df, pub_id, env_vars):
+    @staticmethod
+    def go_get_1_photo_request(df, pub_id, env_vars):
         print('go_get_1_photo_request')
         place_id = GetPub().get_1(df, pub_id).iloc[0]['place']
         # place_id = self.go_get_place_id(pub_id)
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
-
         keyw = env_vars['places_key']
         fields = 'name,photos'
 
-        full_url = base_url + "place_id=" + place_id + "&key=" + keyw + "&fields=" + fields
+        full_url = f"{base_url}place_id={place_id}&key={keyw}&fields={fields}"
         # print(full_url)
         photo_list = []
         try:

@@ -255,3 +255,7 @@ simpleLogger - INFO - 2024-03-05 10:40:57.748601 : home page OPEN
 simpleLogger - INFO - 2024-03-05 10:40:58.753039 : 0:00:01.004313 : home page LOADED
 simpleLogger - INFO - 2024-03-05 10:41:07.042295 : home page OPEN
 simpleLogger - INFO - 2024-03-05 10:41:07.899335 : 0:00:00.857032 : home page LOADED
+simpleLogger - INFO - 2024-03-05 11:17:10.146811 : home page OPEN
+simpleLogger - INFO - 2024-03-05 11:17:11.692513 : 0:00:01.545574 : home page LOADED
+simpleLogger - INFO - 2024-03-05 11:17:19.524523 : home page OPEN
+simpleLogger - INFO - 2024-03-05 11:17:20.667658 : 0:00:01.143127 : home page LOADED

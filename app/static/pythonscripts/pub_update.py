@@ -14,7 +14,8 @@ from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 class UpdatePub:
 
-    def update_pub(self, model, df_all, df_update):
+    @staticmethod
+    def update_pub(model, df_all, df_update):
         print('pub_update | update_pub | ' + model.__str__())
 
         print(len(df_all.axes[1]))

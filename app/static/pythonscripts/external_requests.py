@@ -4,7 +4,8 @@ import requests
 
 class ExternalRequests:
 
-    def go_get_places(self, place_id, env_vars):
+    @staticmethod
+    def go_get_places(place_id, env_vars):
         print('go_get_places')
         base_url = 'https://maps.googleapis.com/maps/api/place/details/json?'
         keyword = env_vars['places_key']
@@ -15,10 +16,8 @@ class ExternalRequests:
         for field in fields[1:]:
             field_list += '%2C' + field
 
-        # txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
-        full_url = "{base_url}fields={field_list}&place_id={place_id}&key={keyword}"\
-            .format(base_url=base_url, field_list=field_list, place_id=place_id, keyword=keyword)
-        # full_url = base_url + "fields=" + field_list + "&place_id=" + place_id + "&key=" + keyw
+        full_url = f"{base_url}fields={field_list}&place_id={place_id}&key={keyword}"
+            # .format(base_url=base_url, field_list=field_list, place_id=place_id, keyword=keyword)
         print(full_url)
 
         response = requests.get(full_url)

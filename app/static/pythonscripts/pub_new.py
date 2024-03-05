@@ -14,7 +14,8 @@ from app.static.pythonscripts.s3 import S3
 
 class NewPub:
 
-    def new_pub(self, model, pub_id):
+    @staticmethod
+    def new_pub(model, pub_id):
         new_model = model
         if model == Diary():
             for key, value in Diary().__dict__.items():
