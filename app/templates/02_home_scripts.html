@@ -1,11 +1,15 @@
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/html/display_counter.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/setup_filters.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/filter/setup_filters_populate.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/html/get_no_of_reviews.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='javascript/map/get_unique_list.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/urgent/display_counter.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/urgent/setup_filters.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/urgent/setup_filters_populate.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/urgent/get_no_of_reviews.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/urgent/get_unique_list.js') }}"></script>
 
-<script defer type="text/javascript" src="/static/javascript/carousel/spinner_set_css_classes.js"></script>
-<script defer type="text/javascript" src="/static/javascript/carousel/spinner_set_css_classes_flat.js"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/get_filter_values.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/on_click.js') }}"></script>
-<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/filter/populate_header.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/defer/spinner_set_css_classes.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/defer/spinner_set_css_classes_flat.js') }}"></script>
+<!--<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/defer/get_filter_values.js') }}"></script>-->
+<!--<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/defer/on_click.js') }}"></script>-->
+<!--<script defer type="text/javascript" src="{{ url_for('static', filename='javascript/defer/populate_header.js') }}"></script>-->
+
+{% assets "main.js" %}
+<script type="text/javscript" src="{{ASSET_URL}}"></script>
+{% endassets %}

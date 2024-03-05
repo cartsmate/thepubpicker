@@ -19,8 +19,8 @@ from app.models.review.review import Review
 
 
 # config = Configurations().get_config()
-env_vars = Configurations().get_config2()
-directory_path = env_vars['directory_path']
+# env_vars = Configurations().get_config2()
+# directory_path = env_vars['directory_path']
 
 
 class FilesPub:

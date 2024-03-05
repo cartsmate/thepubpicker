@@ -25,8 +25,8 @@ from app.models.photo.photo_identity import PhotoIdentity
 from app.static.pythonscripts.uuid_generater import UuidGenerator
 
 # config = Configurations().get_config()
-config2 = Configurations().get_config2()
-directory_path = config2['directory_path']
+# config2 = Configurations().get_config2()
+# directory_path = config2['directory_path']
 # model_formats = ControlsList().go_get_control_list()
 
 

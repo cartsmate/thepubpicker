@@ -8,8 +8,8 @@ from app.models.detail.detail import Detail
 from app.static.pythonscripts.s3 import S3
 
 # config2 = Configurations().get_config2()
-directory_path = Configurations().get_config2()['directory_path']
-env_vars = Configurations().get_config2()
+# directory_path = Configurations().get_config2()['directory_path']
+# env_vars = Configurations().get_config2()
 
 
 class GetForm:

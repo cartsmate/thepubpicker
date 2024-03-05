@@ -18,16 +18,19 @@ from app.static.pythonscripts.dataframes import Dataframes
 # from app.static.pythonscripts.controls_list import ControlsList
 # from app.static.pythonscripts.objects import Objects
 from app.static.pythonscripts.multi_threading import MultiThreadingPub
-from config import Configurations
+from config import *
 
 
 @app.route("/pub/", methods=['GET', 'POST'])
 def pub():
-    print('session')
-    print(session)
-    print("Configurations().get_config2()['session_key']")
-    print(Configurations().get_config2()['session_key'])
-    if Configurations().get_config2()['session_key'] in session.values():
+    # print('session')
+    # print(session)
+    # print("Configurations().get_config2()['session_key']")
+    # print(Configurations().get_config2()['session_key'])
+
+    env_vars = Configurations.get_config()
+
+    if env_vars['session_key'] in session.values():
         print('included')
 
         print('START pub')
@@ -35,7 +38,7 @@ def pub():
         filters = request.args.get('filters')
 
         # # # GET ENVIRONMENTAL VARIABLES
-        env_vars = Configurations().get_config2()
+        # env_vars = Configurations().get_config2()
 
         # # # GET REQUESTED PUB
         pub_id = request.args.get('id')

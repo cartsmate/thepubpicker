@@ -1,17 +1,12 @@
 import io
-from io import StringIO
-import sys
 import boto3
 import pandas as pd
 import numpy as np
-from config import Configurations
-
-# config = Configurations().get_config()
-config2 = Configurations().get_config2()
+from config import *
 
 
 class S3:
-
+    env_vars = Configurations.get_config()
     # def s3_read_new(self):
     #     print('s3 - s3 read new')
     #     env_vars = Configurations().get_config2()
@@ -47,9 +42,11 @@ class S3:
     #     # print(df)
 
     def s3_read(self, prefix, list_of_columns):
-        env_vars = Configurations().get_config2()
-        s3 = boto3.resource('s3', aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
-        my_bucket = s3.Bucket(env_vars['bucket_name'])
+        # env_vars = Configurations().get_config2()
+        s3 = boto3.resource('s3',
+                            aws_access_key_id=self.env_vars['access_id'],
+                            aws_secret_access_key=self.env_vars['access_key'])
+        my_bucket = s3.Bucket(self.env_vars['bucket_name'])
         bucket_list = []
 
         for obj in my_bucket.objects.filter(Prefix=prefix):  # .all():
@@ -58,7 +55,7 @@ class S3:
         if len(bucket_list) == 1:
             list_of_objects = []  # Initializing empty list of dataframes
             for bucket in bucket_list:  # pubs.csv
-                obj = s3.Object(env_vars['bucket_name'], bucket)
+                obj = s3.Object(self.env_vars['bucket_name'], bucket)
                 data = obj.get()['Body'].read()
                 list_of_objects.append(pd.read_csv(io.BytesIO(data), header=0, delimiter=",", low_memory=False))
             obj_df = pd.DataFrame(columns=list_of_columns)
@@ -72,12 +69,16 @@ class S3:
 
     def s3_write(self, upload_object: object, s3_obj_name: object) -> object:
         # client = None
-        env_vars = Configurations().get_config2()
-        client = boto3.client("s3", aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
+        # env_vars = Configurations().get_config2()
+        client = boto3.client("s3",
+                              aws_access_key_id=self.env_vars['access_id'],
+                              aws_secret_access_key=self.env_vars['access_key'])
 
         with io.StringIO() as csv_buffer:
             upload_object.to_csv(csv_buffer, index=False)
-            response = client.put_object(Bucket=env_vars['bucket_name'], Key=s3_obj_name, Body=csv_buffer.getvalue())
+            response = client.put_object(Bucket=self.env_vars['bucket_name'],
+                                         Key=s3_obj_name,
+                                         Body=csv_buffer.getvalue())
             status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
             if status == 200:
                 print(f"Successful {s3_obj_name} S3 put_object response. Status - {status}")
@@ -89,9 +90,11 @@ class S3:
         return status
 
     def go_get_counter(self, prefix, list_of_columns):
-        env_vars = Configurations().get_config2()
-        s3 = boto3.resource('s3', aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
-        my_bucket = s3.Bucket(env_vars['bucket_name'])
+        # env_vars = Configurations().get_config2()
+        s3 = boto3.resource('s3',
+                            aws_access_key_id=self.env_vars['access_id'],
+                            aws_secret_access_key=self.env_vars['access_key'])
+        my_bucket = s3.Bucket(self.env_vars['bucket_name'])
         bucket_list = []
         for obj in my_bucket.objects.filter(Prefix=prefix):  # .all():
             if obj.key.find(".csv") != -1:
@@ -99,7 +102,7 @@ class S3:
         if len(bucket_list) == 1:
             list_of_objects = []  # Initializing empty list of dataframes
             for bucket in bucket_list:  # pubs.csv
-                obj = s3.Object(env_vars['bucket_name'], bucket)
+                obj = s3.Object(self.env_vars['bucket_name'], bucket)
                 data = obj.get()['Body'].read()
                 list_of_objects.append(pd.read_csv(io.BytesIO(data), header=0, delimiter=",", low_memory=False))
             obj_df = pd.DataFrame(columns=list_of_columns)
@@ -118,12 +121,15 @@ class S3:
 
     def go_write_counter(self, upload_object: object, s3_obj_name: object) -> object:
         # client = None
-        env_vars = Configurations().get_config2()
-        client = boto3.client("s3", aws_access_key_id=env_vars['access_id'], aws_secret_access_key=env_vars['access_key'])
-
+        # env_vars = Configurations().get_config2()
+        client = boto3.client("s3",
+                              aws_access_key_id=self.env_vars['access_id'],
+                              aws_secret_access_key=self.env_vars['access_key'])
         with io.StringIO() as csv_buffer:
             upload_object.to_csv(csv_buffer, index=False)
-            response = client.put_object(Bucket=env_vars['bucket_name'], Key=s3_obj_name, Body=csv_buffer.getvalue())
+            response = client.put_object(Bucket=self.env_vars['bucket_name'],
+                                         Key=s3_obj_name,
+                                         Body=csv_buffer.getvalue())
             status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
             if status == 200:
                 print(f"Successful {s3_obj_name} S3 put_object response. Status - {status}")

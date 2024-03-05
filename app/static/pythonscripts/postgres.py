@@ -2,12 +2,12 @@ import psycopg2
 import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
-from config import Configurations
+from config import *
 
 
 class PostgresConnection:
 
-    env_vars = Configurations().get_config2()
+    env_vars = Configurations.get_config()
 
     sql_get_all = f'''select * from thepubpicker.detail d 
                         left join thepubpicker.review r on r.pub_identity = d.pub_identity 

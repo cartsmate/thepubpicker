@@ -17,7 +17,7 @@ from app.static.pythonscripts.pub_add import AddPub
 from app.static.pythonscripts.external_requests import ExternalRequests
 from app.static.pythonscripts.pub_get import GetPub
 
-from config import Configurations
+from config import *
 
 
 @app.route("/add/", methods=['GET', 'POST'])
@@ -26,7 +26,7 @@ def add():
     place_id = request.args.get('place_id')
 
     # # # GET ENVIRONMENTAL VARIABLES
-    env_vars = Configurations().get_config2()
+    env_vars = Configurations.get_config()
 
     # # # GET ALL PUBS
     df_pub_all = FilesPub().get_pub_all()
@@ -40,7 +40,7 @@ def add():
         # # # populate pub data from GOOGLE PLACES API # # #
         print('call places api to get details from place_id')
         places_response = ExternalRequests().go_get_places(place_id, env_vars)
-        places_response
+        # places_response
         # df_place = pd.json_normalize(places_response, max_level=1)
 
         for key, value in Detail().__dict__.items():

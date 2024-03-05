@@ -1,19 +1,19 @@
 import logging
 import logging.config
-from config import Configurations
+from config import *
 
 
 class Logger:
 
-    env_vars = Configurations().get_config2()
+    directory_path = Configurations.get_config()['directory_path']
 
     def create_logger(self):
-        print(self.env_vars['directory_path'])
-        logging.config.fileConfig(self.env_vars['directory_path'] + "/logger/log.config")
+        # print(self.env_vars['directory_path'])
+        logging.config.fileConfig(f"{self.directory_path}/logger/log.config")
         new_logger = logging.getLogger('simpleLogger')
         # new_logger.debug('this is a debug message - to CONSOLE')
 
-        file_handler = logging.FileHandler(self.env_vars['directory_path'] + "/logger/logger_file.log")
+        file_handler = logging.FileHandler(f"{self.directory_path}/logger/logger_file.log")
         file_handler.setLevel(logging.INFO)
         file_formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
         file_handler.setFormatter(file_formatter)

@@ -1,14 +1,16 @@
 import pandas as pd
-from config import Configurations
+from config import *
 from app.models.detail.detail import Detail
 from app.static.pythonscripts.s3 import S3
 
 # config2 = Configurations().get_config2()
-directory_path = Configurations().get_config2()['directory_path']
-env_vars = Configurations().get_config2()
+
+# env_vars = Configurations().get_config2()
 
 
 class WritePub:
+
+    directory_path = Configurations.get_config()['directory_path']
 
     def pre_write_check(self, filename, update_type, df_all, df_update):
         print('pre-write check: ' + filename)
@@ -26,7 +28,7 @@ class WritePub:
         try:
             # df_update = df_update.sort_values(['pub_identity', 'event_day'])
             if self.pre_write_check(filename, update_type, df_all, df_update):
-                df_update.to_csv(directory_path + '/files/' + filename + '.csv', index=False, sep=',', encoding='utf-8')
+                df_update.to_csv(f"{self.directory_path}/files/{filename}.csv", index=False, sep=',', encoding='utf-8')
                 return True
             else:
                 return False

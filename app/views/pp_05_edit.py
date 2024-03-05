@@ -18,7 +18,8 @@ from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
 # from app.static.pythonscripts.files_events import FilesEvent
 from app.static.pythonscripts.pub_get import GetPub
-from config import Configurations
+from app.static.pythonscripts.multi_threading import MultiThreadingPub
+from config import *
 
 
 @app.route("/edit/", methods=['GET'])
@@ -30,14 +31,23 @@ def edit():
     filters = request.args.get('filters')
 
     # # # GET ENVIRONMENTAL VARIABLES
-    env_vars = Configurations().get_config2()
+    env_vars = Configurations.get_config()
 
-    df_pub = FilesPub().get_pub_1(pub_id)
-    # df_pub = GetPub().get_1(Pub(), pub_id)
-    pub_json = df_pub.to_dict(orient='records')
+    df_dict = MultiThreadingPub().thread_caller()
+    # DATABASE FILES
+    df_detail_all = df_dict['df_detail']
+    df_review_all = df_dict['df_review']
+    df_daily_event_all = df_dict['df_daily_event']
+    df_diary_all = df_dict['df_diary']
+    df_station_all = df_dict['df_station']
+    df_direction_all = df_dict['df_direction']
+    df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
+    df_1_pub = FilesPub().get_pub_1(df_pub, pub_id)
+    pub_json = df_1_pub.to_dict(orient='records')
 
     # df_1_event = FilesEvent().get_event_1(pub_id)
-    df_1_event = GetPub().get_1(DailyEvent(), pub_id)
+    # df_1_event = GetPub().get_1(DailyEvent(), pub_id)
+    df_1_event = df_daily_event_all.loc[df_daily_event_all['pub_identity'] == pub_id]
 
     # days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     # for day in days:
@@ -62,7 +72,8 @@ def edit():
     direction_json = json.loads(json.dumps(Direction().__dict__, default=lambda o: o.__dict__))
     event_json = json.loads(json.dumps(DailyEvent().__dict__, default=lambda o: o.__dict__))
 
-    photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
+    # photos_list = FilesPhoto().go_get_1_photo_request(pub_id, env_vars)
+    photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, pub_id, env_vars)
 
     print('end EDIT')
     page = "edit"

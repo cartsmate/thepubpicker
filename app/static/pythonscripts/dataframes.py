@@ -12,7 +12,7 @@ from app.static.pythonscripts.pub_get import GetPub
 
 class Dataframes:
 
-    env_vars = Configurations().get_config2()
+    # env_vars = Configurations().get_config2()
 
     def go_get_stations_directions(self, df_detail_all, df_station_all, df_direction_all):
         # df_station_all = GetPub().get_all(Station())

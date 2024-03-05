@@ -1,12 +1,12 @@
 import datetime
 import pandas as pd
-from config import Configurations
-from logger.logger import Logger
+from config import *
+from logger.logger import *
 
 
 class FilesCounter:
 
-    counter_path = f"{Configurations().get_config2()['directory_path']}/files/counter_qual.csv"
+    counter_path = f"{Configurations.get_config()['directory_path']}/files/counter_qual.csv"
 
     def go_get_counter(self):
         logger = Logger().create_logger()

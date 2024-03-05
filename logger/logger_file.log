@@ -185,3 +185,73 @@ simpleLogger - INFO - 2024-03-04 23:19:22.377895 : home page OPEN
 simpleLogger - INFO - 2024-03-04 23:19:23.356213 : 0:00:00.978181 : home page LOADED
 simpleLogger - INFO - 2024-03-04 23:33:51.572548 : home page OPEN
 simpleLogger - INFO - 2024-03-04 23:33:52.633297 : 0:00:01.060618 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:09:00.252375 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:09:01.486016 : 0:00:01.233509 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:10:57.582996 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:10:58.649775 : 0:00:01.066645 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:21:12.001617 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:21:13.200621 : 0:00:01.198863 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:32:37.824809 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:32:39.050215 : 0:00:01.225269 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:42:13.859481 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:42:14.909285 : 0:00:01.049671 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:44:19.772735 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:44:20.801412 : 0:00:01.028540 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:47:10.445370 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:47:12.139380 : 0:00:01.693877 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:49:58.465768 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:49:59.531910 : 0:00:01.066004 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:56:39.830414 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:56:40.971525 : 0:00:01.140965 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:58:42.902067 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:58:43.848630 : 0:00:00.946435 : home page LOADED
+simpleLogger - INFO - 2024-03-05 08:59:57.096178 : home page OPEN
+simpleLogger - INFO - 2024-03-05 08:59:58.054122 : 0:00:00.957811 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:01:35.995001 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:01:37.544641 : 0:00:01.549500 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:02:45.774419 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:02:46.971262 : 0:00:01.196717 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:06:54.580384 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:06:55.572788 : 0:00:00.992275 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:08:40.138451 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:08:41.196279 : 0:00:01.057699 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:12:45.047316 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:12:46.119981 : 0:00:01.072514 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:14:20.519370 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:14:21.676146 : 0:00:01.156643 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:16:29.235131 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:16:30.253952 : 0:00:01.018683 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:18:35.369135 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:18:36.302940 : 0:00:00.933677 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:19:34.737141 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:19:35.986604 : 0:00:01.249184 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:23:37.492590 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:23:38.443392 : 0:00:00.950583 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:24:43.163437 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:24:44.267098 : 0:00:01.103526 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:25:29.310452 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:25:30.298068 : 0:00:00.987490 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:26:04.872425 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:26:05.812253 : 0:00:00.939823 : home page LOADED
+simpleLogger - INFO - 2024-03-05 09:28:31.683527 : home page OPEN
+simpleLogger - INFO - 2024-03-05 09:28:32.693468 : 0:00:01.009771 : home page LOADED
+simpleLogger - INFO - 2024-03-05 10:37:00.192743 : home page OPEN
+simpleLogger - ERROR - 2024-03-05 10:37:01.165676 : 0:00:00.972738 : 'FilesDaily' object has no attribute 'env_vars'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 124, in home
+    daily_id = FilesDaily().go_get_details_daily(df_detail_all)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/files_daily.py", line 26, in go_get_details_daily
+    if self.env_vars['env'] == 'qual':
+AttributeError: 'FilesDaily' object has no attribute 'env_vars'
+simpleLogger - INFO - 2024-03-05 10:38:24.642025 : home page OPEN
+simpleLogger - ERROR - 2024-03-05 10:38:25.800980 : 0:00:01.158593 : create_logger() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 135, in home
+    counter = FilesCounter().go_get_counter()
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/files_counter.py", line 12, in go_get_counter
+    logger = Logger.create_logger()
+TypeError: create_logger() missing 1 required positional argument: 'self'
+simpleLogger - INFO - 2024-03-05 10:40:57.748601 : home page OPEN
+simpleLogger - INFO - 2024-03-05 10:40:58.753039 : 0:00:01.004313 : home page LOADED
+simpleLogger - INFO - 2024-03-05 10:41:07.042295 : home page OPEN
+simpleLogger - INFO - 2024-03-05 10:41:07.899335 : 0:00:00.857032 : home page LOADED

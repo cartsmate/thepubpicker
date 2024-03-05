@@ -28,7 +28,7 @@ from app.static.pythonscripts.files_counter import FilesCounter
 from app.static.pythonscripts.multi_threading import MultiThreadingPub
 
 from logger.logger import Logger
-from config import Configurations
+from config import *
 
 
 class CountCalls:
@@ -83,7 +83,7 @@ def my_decorator(statement):
 @debug
 @my_decorator(statement='hello world')
 def home():
-    env_vars = Configurations().get_config2()
+    env_vars = Configurations.get_config()
     session['KEY_NAME'] = env_vars['session_key']
 
     logger = Logger().create_logger()
