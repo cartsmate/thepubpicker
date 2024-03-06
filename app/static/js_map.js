@@ -1,98 +1,135 @@
-function list_addjson(visible){console.log('-- list_addjson')
-json_list=[]
-i=0
-for(const[key,value]of Object.entries(pub_obj)){for(const[k,v]of Object.entries(value)){if(v.table_visible){json_list.push({target:i,visible:visible[v.name],})
-i++}}}
-return json_list}
-function list_columns(){console.log('-- list_columns')
-visible={}
-for(const[key,value]of Object.entries(pub_obj)){for(const[k,v]of Object.entries(value)){if(v.table_visible){visible[v.name]=false}}}
-visible['ordering']=true
-visible['detail_name']=true
-var e=filter_selection['event']
-var s=filter_selection['station']
-var d=filter_selection['diary']
-if((e=='on')&&(s=='on')&&(d=='on')){visible['station_name']=false
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=true
-visible['rank']=true}
-if((e=='on')&&(s=='on')&&(d=='off')){visible['station_name']=false
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=true
-visible['rank']=true}
-if((e=='on')&&(s=='off')&&(d=='on')){visible['station_name']=true
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=true
-visible['rank']=false}
-if((e=='off')&&(s=='on')&&(d=='on')){visible['station_name']=false
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=false
-visible['rank']=true}
-if((e=='on')&&(s=='off')&&(d=='off')){visible['station_name']=true
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=false
-visible['rank']=true}
-if((e=='off')&&(s=='on')&&(d=='off')){visible['station_name']=false
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=false
-visible['rank']=true}
-if((e=='off')&&(s=='off')&&(d=='on')){visible['station_name']=true
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=false
-visible['rank']=true}
-if((e=='off')&&(s=='off')&&(d=='off')){visible['station_name']=true
-visible['event_day']=false
-visible['event_type']=false
-visible['event_detail']=false
-visible['rank']=true}
-asc_desc='asc'
-order=0
-return[visible,order,asc_desc]}
-function list_create(mapped_pubs){console.log('-- list_create: mapped_pubs: '+mapped_pubs.length)
-pubs_to_show=mapped_pubs
-var tbl=document.createElement("table");tbl.setAttribute("id","pub_list");document.getElementById('pub_table').visible=false
-tbl.style.cssText='font-size:12px;'
-tbl.className="table table-striped";var tblHead=document.createElement("thead");var tblBody=document.createElement("tbody");var row=document.createElement("tr");for(const[key,value]of Object.entries(pub_obj)){for(const[k,v]of Object.entries(value)){if(v.table_visible){const heading=document.createElement("td");if(v.name=='ordering'){heading.classList.add("tbl_ordering")}
-else if(v.name=='rank'){heading.classList.add("tbl_rank")}
-else if(v.name=='event_day'){heading.classList.add("tbl_event_day")}
-else if(v.name=='detail_name'){heading.classList.add("tbl_detail_name")}
-else if(v.name=='station_name'){heading.classList.add("tbl_station_name")}
-heading.style.margin="0px"
-heading.style.padding="0px"
-heading.style.height="40px"
-heading.style.fontWeight="bold"
-heading.style.verticalAlign="middle"
-const headingText=document.createTextNode(v.alias)
-heading.appendChild(headingText)
-row.appendChild(heading);}}}
-tblHead.appendChild(row);tbl.appendChild(tblHead);for(let i=0;i<pubs_to_show.length;i++){var row=document.createElement("tr");for(const[key,value]of Object.entries(pub_obj)){for(const[k,v]of Object.entries(value)){if(v.table_visible){const cell=document.createElement("td");cell.style.margin="0px"
-cell.style.padding="0px"
-cell.style.height="40px"
-cell.style.color="#0d6efd"
-cell.style.verticalAlign="middle"
-const href=document.createElement("a");href.setAttribute("style","text-decoration: none; color: #0d6efd;")
-if(v.name=='station_name'){href.setAttribute("href","#");href.setAttribute("onclick","update_station('"+pubs_to_show[i]['station_identity']+"')");const cellText=document.createTextNode(pubs_to_show[i][v.name].toString().substring(0,16));href.appendChild(cellText);cell.appendChild(href)
-row.appendChild(cell);}else if(v.name=='detail_name'){href.setAttribute("href","#");href.setAttribute("onclick","redirect_pub_search('"+pubs_to_show[i]['pub_identity']+"')");const cellText=document.createTextNode(pubs_to_show[i][v.name].toString().substring(0,19));href.appendChild(cellText);cell.appendChild(href)
-row.appendChild(cell);}else if(v.name=='rank'){const cellText=document.createTextNode(pubs_to_show[i][v.name]);cell.appendChild(cellText)
-row.appendChild(cell);}else{const cellText=document.createTextNode(pubs_to_show[i][v.name]);cell.appendChild(cellText)
-row.appendChild(cell);}}}}
-tblBody.appendChild(row);}
-tbl.appendChild(tblBody);document.getElementById('pub_table').appendChild(tbl)
-tbl.setAttribute("border","2");}
-function list_delete(){console.log('-- list_delete')
-$('#pub_list').DataTable().destroy();$("#pub_list").remove();}
-function list_filter(visible,order,asc_desc){console.log('-- list_filter')
-$(document).ready(function(){$('#pub_list').DataTable({paging:true,info:false,order:[[order,asc_desc]],columnDefs:list_addjson(visible),searching:false,bDestroy:true});});}
-function Reset(){window.location="/pub/list";}
-function list_setup(mapped_pubs){console.log('LIST SETUP')
-list_delete()
-list_create(mapped_pubs)
-const[new_visible,new_order,new_asc_desc]=list_columns()
-list_filter(new_visible,new_order,new_asc_desc)}
+function map_addListener_bounds_changed(map,mapped_pubs){console.log('map_addListener_bounds_changed ADDED')
+google.maps.event.addListener(map,'bounds_changed',function(){console.log('map_addListener - BOUNDS CHANGED')
+marker_in_bounds=0
+pubs_to_show=[]
+bounds=map.getBounds();let ne=bounds.getNorthEast();let sw=bounds.getSouthWest();let north_east=ne.toString().replace(/[()]/g,"");var north_east_str=north_east.toString().split(',');let south_west=sw.toString().replace(/[()]/g,"");var south_west_str=south_west.toString().split(',');let direction={"north":{"name":"NORTH","html_name":"north_note","bounds_value":north_east_str[0],"extra_pubs":0},"south":{"name":"SOUTH","html_name":"south_note","bounds_value":south_west_str[0],"extra_pubs":0},"east":{"name":"EAST","html_name":"east_note","bounds_value":north_east_str[1],"extra_pubs":0},"west":{"name":"WEST","html_name":"west_note","bounds_value":south_west_str[1],"extra_pubs":0}};for(i=0;i<Math.min(unique_data.length,100);i++){if(unique_data[i]['detail_latitude']>direction['south'].bounds_value&&unique_data[i]['detail_latitude']<direction['north'].bounds_value&&unique_data[i]['detail_longitude']>direction['west'].bounds_value&&unique_data[i]['detail_longitude']<direction['east'].bounds_value){marker_in_bounds++
+pubs_to_show.push(unique_data[i])
+}
+if(unique_data[i]['detail_latitude']<direction['south'].bounds_value){direction['south'].extra_pubs++}
+if(unique_data[i]['detail_latitude']>direction['north'].bounds_value){direction['north'].extra_pubs++}
+if(unique_data[i]['detail_longitude']<direction['west'].bounds_value){direction['west'].extra_pubs++}
+if(unique_data[i]['detail_longitude']>direction['east'].bounds_value){direction['east'].extra_pubs++}}
+for(let i in direction){if(direction[i].extra_pubs>0){document.getElementById(direction[i].html_name).textContent=direction[i].extra_pubs+" more pubs due "+direction[i].name}else{document.getElementById(direction[i].html_name).textContent=''}}
+mapped_pubs=pubs_to_show
+if(page=='home'){list_setup(mapped_pubs)}});}
+var markersArray=[];function clearOverlays(){for(var i=0;i<markersArray.length;i++){markersArray[i].setMap(null);}
+markersArray.length=0;}
+function map_addListener_click_placeid(map){console.log('map click listener added')
+var infowindow=new google.maps.InfoWindow();map.addListener('click',function(event){console.log('event')
+event.stop();infowindow.close();console.log(JSON.stringify(event))
+if(event.placeId){console.log('USER INPUT - place id clicked')
+var request={placeId:event.placeId,};var find_request={placeId:event.placeId,};var service=new google.maps.places.PlacesService(map);service.getDetails(request,function(place,status){if(status===google.maps.places.PlacesServiceStatus.OK){console.log('place')
+console.log(place)
+event.stop();infowindow.close();infowindow.setPosition(event.latLng);infowindow.setContent("<p>"+place.name+"</p><p><b><a href='/add/?place_id="+event.placeId+"'>Add Venue</a></b></p>")
+infowindow.open(map);}});}})}
+function map_addListener_click_add(map){console.log('map addListener click')
+map.addListener('click',function(event){if(event.placeId){console.log('placeId: '+event.placeId)
+var request={placeId:event.placeId,};var find_request={placeId:event.placeId,};var service=new google.maps.places.PlacesService(map);service.getDetails(request,function(place,status){if(status===google.maps.places.PlacesServiceStatus.OK){console.log(place)
+var reviews=place.reviews;if(place.rating===undefined){console.log('undefined')
+var ranking=0}else{console.log(place.rating)
+var ranking=place.rating}
+document.getElementById("rank").value=ranking
+console.log('place response')
+console.log(place)
+place_text=String(place.types)
+var array2=place_text.split(",")
+var text;var place_set=false;var myStringArray=array2;var arrayLength=myStringArray.length;for(var i=0;i<arrayLength;i++){if(myStringArray[i]=="bar"||myStringArray[i]=="restaurant"){text=myStringArray[i].charAt(0).toUpperCase()+myStringArray[i].slice(1);place_set=true;break;}}
+if(place_set==false){text='Other'}
+document.getElementById("category").value=text;}});event.stop();document.getElementById("place").value=event.placeId;console.log('event: '+JSON.stringify(event))
+lat_lng_json=JSON.stringify(event.latLng.toJSON());var lat_lng_obj=JSON.parse(lat_lng_json);document.getElementById("detail_latitude").value=lat_lng_obj.lat;document.getElementById("detail_longitude").value=lat_lng_obj.lng;console.log('after map tick')
+console.log(lat_lng_obj.lat,lat_lng_obj.lng)
+nearest_station(place,lat_lng_obj)
+pinColor="#808000";var labelOriginHole=new google.maps.Point(12,15);var pinSVGHole="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z";var markerImage2={path:pinSVGHole,anchor:new google.maps.Point(12,17),fillOpacity:1,fillColor:pinColor,strokeWeight:2,strokeColor:"white",scale:2,labelOrigin:labelOriginHole};marker=new google.maps.Marker({position:new google.maps.LatLng(lat_lng_obj.lat,lat_lng_obj.lng),map:map,icon:markerImage2,})
+const center=new google.maps.LatLng(lat_lng_obj.lat,lat_lng_obj.lng);window.map.panTo(center);}})}
+function center_map(){filtered_pubs=filter_by_()
+console.log('center_map: '+filtered_pubs.length)
+create_filter_(filtered_pubs)
+if(window.navigator.onLine==true){if(search_string==''){filtered_pubs=map_center_from_pubs(filtered_pubs)
+map.setCenter({lat:filtered_pubs[0]['detail_latitude'],lng:filtered_pubs[0]['detail_longitude']});}else{filtered_pubs=map_center_from_searchbox(filtered_pubs)}
+if(document.getElementById('sunday_filter').checked==false&&document.getElementById('saturday_filter').checked==false&&document.getElementById('friday_filter').checked==false&&document.getElementById('thursday_filter').checked==false&&document.getElementById('wednesday_filter').checked==false&&document.getElementById('tuesday_filter').checked==false&&document.getElementById('monday_filter').checked==false){unique_data=get_unique_list(filtered_pubs)}else{console.log('DAY selected')
+unique_data=filtered_pubs}
+var central_map=map.getCenter();map.panTo(central_map);clearOverlays()
+for(i=0;i<Math.min(unique_data.length,100);i++){unique_data[i]['ordering']=i
+marker_add(unique_data[i])}}else{list_setup_beta(filtered_pubs)}
+finalise_results(filtered_pubs)}
+function map_center_from_searchbox(filtered_pubs){console.log('map_center_from_searchbox')
+for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(filtered_pubs[i]['detail_latitude']-central_obj.lat())
+lng_diff=Math.abs(filtered_pubs[i]['detail_longitude']-central_obj.lng())
+tot_diff=lat_diff+lng_diff
+filtered_pubs[i]['distance']=tot_diff}
+filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});return filtered_pubs}
+function map_center_from_pubs(filtered_pubs){console.log('map_center_from_pubs')
+var total_lat=0
+var avg_lat=0
+var total_lng=0
+var avg_lng=0
+for(i=0;i<filtered_pubs.length;i++){total_lat+=filtered_pubs[i]['detail_latitude']
+total_lng+=filtered_pubs[i]['detail_longitude']}
+avg_lat=total_lat/filtered_pubs.length
+avg_lng=total_lng/filtered_pubs.length
+filtered_pubs=get_unique_list(filtered_pubs)
+for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(filtered_pubs[i]['detail_latitude']-avg_lat)
+lng_diff=Math.abs(filtered_pubs[i]['detail_longitude']-avg_lng)
+tot_diff=lat_diff+lng_diff
+filtered_pubs[i]['distance']=tot_diff}
+filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});return filtered_pubs}
+function map_create(lat,lng,zoom){console.log("map create: lat: "+lat+'| lng: '+lng+' | zoom: '+zoom);var map_prop={center:new google.maps.LatLng(lat,lng),zoom:zoom,zoomControl:true,controlSize:30,streetViewControl:false,restriction:{latLngBounds:get_london_bounds(),strictBounds:true,},disableDefaultUI:true,}
+map=new google.maps.Map(document.getElementById('new_map'),map_prop)
+return map}
+var markersArray=[];function clearOverlays(){for(var i=0;i<markersArray.length;i++){markersArray[i].setMap(null);}
+markersArray.length=0;}
+function map_init(){console.log('map init: '+page)
+if(page=='home'){var display_pub=pub_all}else{var display_pub=pub_1}
+if(page=='add'){var zoom=22}else{var zoom=13}
+map=map_create(display_pub[0].detail_latitude,display_pub[0].detail_longitude,zoom)
+if(page=='home'){setup_searchbox()}
+if(page!='add'){map_addListener_bounds_changed(map,page);}
+if(page=='home'){map_addListener_click_placeid(map)}else if(page=='add'){map_addListener_click_add(map)}}
+function map_init_none(){console.log("INIT MAP NONE");}
+function setup_searchbox(){const input=document.getElementById("search-input-navbar");var options={bounds:get_london_bounds(),componentRestrictions:{country:'uk'}};var searchBox=new google.maps.places.Autocomplete(input,options);searchbox_addListener_places_changed(map,searchBox);}
+function get_london_bounds(){var northEast=new google.maps.LatLng(52,0.3);var southWest=new google.maps.LatLng(51.2,-0.56);var GreaterLondon=new google.maps.LatLngBounds(southWest,northEast);return GreaterLondon}
+function map_load(page){console.log('map load on '+page+' | on-line?: '+window.navigator.onLine)
+var js=document.createElement("script");js.type="text/javascript";if(window.navigator.onLine==true){js.setAttribute("defer","defer");map_initiator='map_init'
+js.src='https://maps.googleapis.com/maps/api/js?key='+env_vars['google_key']+'&libraries=places&callback='+map_initiator
+document.head.appendChild(js)}else{map_init_none()}}
+function nearest_station(place,lat_lng_obj){console.log('nearest_station')
+records=[]
+for(let i=0;i<stations.length;i++){lat_diff=Math.abs(stations[i]['station_latitude']-lat_lng_obj.lat)
+lng_diff=Math.abs(stations[i]['station_longitude']-lat_lng_obj.lng)
+tot_diff=lat_diff+lng_diff
+var record={name:stations[i]['station_name'],id:stations[i]['station_identity'],distance:tot_diff}
+records.push(record);}
+records=records.sort((a,b)=>{if(a.distance<b.distance){return-1;}});document.getElementById("station_name").value=records[0]['name']
+document.getElementById("station_identity").value=records[0]['id']
+}
+function searchbox_addListener_places_changed(map,searchBox){console.log('searchbox addListener places changed ADDED')
+let markers=[];searchBox.addListener("place_changed",()=>{console.log('search box has changed place')
+const place=searchBox.getPlace();console.log('place')
+console.log(place)
+if(place.length==0){return;}
+markers.forEach((marker)=>{marker.setMap(null);});markers=[];const bounds=new google.maps.LatLngBounds();if(!place.geometry||!place.geometry.location){console.log("returned place contains no geometry");return}
+lat1=place.geometry.location.lat()
+lng1=place.geometry.location.lng();if(place.geometry.viewpoint){bounds.union(place.geometry.viewpoint);}else{bounds.extend(place.geometry.location);}
+var newArray=pub_all.filter(function(el){return el.place==place.place_id});console.log(newArray)
+if(newArray.length!=0){console.log('pub in DB found')
+console.log(newArray)
+console.log(newArray[0]['pub_identity'])
+redirect_pub_search(newArray[0]['pub_identity'])}else{console.log('NEW place')
+console.log(newArray)
+map.setCenter({lat:lat1,lng:lng1});if(place.types.includes('bar')||place.types.includes('restaurant')){map.setZoom(22)}else{map.setZoom(13)}
+central_obj=map.getCenter()
+search_string=place
+center_map()}});}
+function sort_by_distance(data,map){console.log('sort by distance')
+console.log('data in: '+data.length)
+console.log(data)
+for(var i=0;i<data.length;i++){records=[]
+latlng_center=map.getCenter();lat_diff=Math.abs(data[i]['detail_latitude']-latlng_center.lat())
+lng_diff=Math.abs(data[i]['detail_longitude']-latlng_center.lng())
+tot_diff=lat_diff+lng_diff
+data[i]['distance']=tot_diff
+}
+data=data.sort((a,b)=>{if(a.distance<b.distance){return-1;}});console.log('data out sorted: '+data.length)
+console.log(data)
+return data
+}
