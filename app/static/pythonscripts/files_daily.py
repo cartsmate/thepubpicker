@@ -1,28 +1,16 @@
 import random
 import pandas as pd
 from config import *
-from app.models.detail.detail import Detail
 from app.static.pythonscripts.s3 import S3
 from datetime import datetime, timedelta, date
-from app.static.pythonscripts.pub_get import GetPub
-from app.static.pythonscripts.files_pub import FilesPub
 
-# env_vars = Configurations().get_config2()
-# config2 = Configurations().get_config2()
-# directory_path = config2['directory_path']
 env_vars = Configurations.get_config()
 
 
 class FilesDaily:
 
-    # def get_timeout(self, df_pubs):
-    #     df_timeout = df_pubs.loc[df_pubs['timeout'] == '1']
-    #     return df_timeout
-
-
-    # directory_path = Configurations.get_config()['directory_path']
-
-    def go_get_details_daily(self, df_detail_all):
+    @staticmethod
+    def go_get_details_daily(df_detail_all):
         print('go_get_details_daily')
         if env_vars['env'] == 'qual':
             print('csv')

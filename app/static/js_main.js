@@ -39,3 +39,27 @@ function set_color_theme(){let root=document.documentElement;let color=document.
 root.style.setProperty('--color',color)
 console.log('set colour theme to: '+color)}
 function isTouchDevice(){return(('ontouchstart'in window)||(navigator.maxTouchPoints>0)||(navigator.msMaxTouchPoints>0));}
+function spinner_add_listener_click_face(){console.log('spinner_add_listener_click_face')
+for(const[key,value]of Object.entries(review)){if(value.quick_filter){var marker=value.name
+document.getElementById(value.name+"_carousel").addEventListener('click',(function(marker){return function(){if(document.getElementById(marker+'_carousel').style.opacity=='1'){if(document.getElementById(marker+"_filter").checked==true){update_carousel(marker,false)}else{for(const[key,value]of Object.entries(review)){if(value.quick_filter){update_carousel(value.name,false)
+}}
+update_carousel(marker,true)}
+center_map()}else{console.log('opacity=0')}}})(marker))}}}
+function update_carousel(feature,status){console.log('status: '+status)
+document.getElementById(feature+"_filter").checked=status;current_carousel=document.getElementById(feature+"_carousel")
+if(status){current_carousel.classList.remove('carousel_off')
+current_carousel.classList.add('carousel_on')}else{current_carousel.classList.remove('carousel_on')
+current_carousel.classList.add('carousel_off')}}
+function populate_summary(show_pub){console.log('populate_summary: show_pub: '+show_pub.length)
+text_ref=show_pub[0]['detail_name'].toString().substring(0,22)+" | "+show_pub[0]['station_name'].toString().substring(0,18)
+document.getElementById('summary_name').innerHTML="<div style='text-decoration: none; justify-content: center; font-size: 14px; font-weight: 550;'>"+text_ref+"</div>"
+populate_extra(show_pub)}
+function populate_extra(show_pub){console.log('populate_extra')
+document.getElementById('summary_extra').innerHTML="<div>"+show_pub[0]['extra']+"</div>"}
+function populate_title(show_pub){console.log('populate_title')
+text_ref=show_pub[0]['detail_name'].toString().substring(0,24)
+console.log('name of pub: '+text_ref)
+document.getElementById('pub_header').textContent=text_ref
+}
+function populate_photo_carousel(){for(i=0;i<photos_list.length;i++){api_call_text='https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference='+photos_list[i]+'&key='+env_vars['places_key']
+document.getElementById("photo_"+i).src=api_call_text}}
