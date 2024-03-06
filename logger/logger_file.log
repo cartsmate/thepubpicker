@@ -301,3 +301,9 @@ simpleLogger - INFO - 2024-03-06 10:21:12.470967 : home page OPEN
 simpleLogger - INFO - 2024-03-06 10:21:14.263299 : 0:00:01.792206 : home page LOADED
 simpleLogger - INFO - 2024-03-06 10:24:21.373933 : home page OPEN
 simpleLogger - INFO - 2024-03-06 10:24:22.676280 : 0:00:01.302216 : home page LOADED
+simpleLogger - INFO - 2024-03-06 16:18:04.813777 : home page OPEN
+simpleLogger - INFO - 2024-03-06 16:18:07.519101 : 0:00:02.705190 : home page LOADED
+simpleLogger - INFO - 2024-03-06 16:18:23.382736 : home page OPEN
+simpleLogger - INFO - 2024-03-06 16:18:24.872985 : 0:00:01.490238 : home page LOADED
+simpleLogger - INFO - 2024-03-06 16:20:15.658434 : home page OPEN
+simpleLogger - INFO - 2024-03-06 16:20:16.935479 : 0:00:01.276922 : home page LOADED
