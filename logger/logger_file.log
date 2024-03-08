@@ -581,3 +581,23 @@ simpleLogger - INFO - 2024-03-08 15:58:58.190822 : home page OPEN
 simpleLogger - INFO - 2024-03-08 15:58:59.664897 : 0:00:01.473918 : home page LOADED
 simpleLogger - INFO - 2024-03-08 15:59:23.635973 : home page OPEN
 simpleLogger - INFO - 2024-03-08 15:59:25.027405 : 0:00:01.391272 : home page LOADED
+simpleLogger - INFO - 2024-03-08 16:18:17.194687 : home page OPEN
+simpleLogger - INFO - 2024-03-08 16:18:19.213574 : 0:00:02.018877 : home page LOADED
+simpleLogger - INFO - 2024-03-08 16:20:42.378151 : home page OPEN
+simpleLogger - ERROR - 2024-03-08 16:20:43.783346 : 0:00:01.405062 : 'list' object has no attribute 'length'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 129, in home
+    print(photos_list.length)
+AttributeError: 'list' object has no attribute 'length'
+simpleLogger - INFO - 2024-03-08 16:20:48.198085 : home page OPEN
+simpleLogger - ERROR - 2024-03-08 16:20:49.365128 : 0:00:01.167031 : 'list' object has no attribute 'length'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 129, in home
+    print(photos_list.length)
+AttributeError: 'list' object has no attribute 'length'
+simpleLogger - INFO - 2024-03-08 16:21:18.525321 : home page OPEN
+simpleLogger - INFO - 2024-03-08 16:21:20.101916 : 0:00:01.576288 : home page LOADED
+simpleLogger - INFO - 2024-03-08 16:23:27.109841 : home page OPEN
+simpleLogger - INFO - 2024-03-08 16:23:28.443510 : 0:00:01.333544 : home page LOADED
+simpleLogger - INFO - 2024-03-08 16:40:12.073671 : home page OPEN
+simpleLogger - INFO - 2024-03-08 16:40:13.556882 : 0:00:01.482907 : home page LOADED
