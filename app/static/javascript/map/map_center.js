@@ -7,7 +7,7 @@ function center_map() {
     if (window.navigator.onLine == true) {
         if (search_string == '') {
             filtered_pubs = map_center_from_pubs(filtered_pubs)
-            map.setCenter({lat:filtered_pubs[0]['detail_latitude'], lng:filtered_pubs[0]['detail_longitude']});
+            map.setCenter({lat:parseFloat(filtered_pubs[0]['detail_latitude']), lng:parseFloat(filtered_pubs[0]['detail_longitude'])});
         } else {
             filtered_pubs = map_center_from_searchbox(filtered_pubs)
         }
@@ -36,7 +36,7 @@ function center_map() {
         }
 
     } else {
-        list_setup_beta(filtered_pubs)
+        list_setup(filtered_pubs)
     }
     finalise_results(filtered_pubs)
 }
@@ -44,8 +44,8 @@ function center_map() {
 function map_center_from_searchbox(filtered_pubs) {
     console.log('map_center_from_searchbox')
     for (i=0; i < filtered_pubs.length; i++) {
-        lat_diff = Math.abs(filtered_pubs[i]['detail_latitude'] - central_obj.lat())
-        lng_diff = Math.abs(filtered_pubs[i]['detail_longitude'] - central_obj.lng())
+        lat_diff = Math.abs(parseFloat(filtered_pubs[i]['detail_latitude']) - central_obj.lat())
+        lng_diff = Math.abs(parseFloat(filtered_pubs[i]['detail_longitude']) - central_obj.lng())
         tot_diff = lat_diff + lng_diff
         filtered_pubs[i]['distance'] = tot_diff
     }
@@ -58,23 +58,23 @@ function map_center_from_searchbox(filtered_pubs) {
 
 }
 function map_center_from_pubs(filtered_pubs) {
-    console.log('map_center_from_pubs')
-    //console.log('filtered_pubs: ' + filtered_pubs.length)
+    console.log('map_center_from_pubs: ' + filtered_pubs.length)
+    console.log(filtered_pubs)
     var total_lat = 0
     var avg_lat = 0
     var total_lng = 0
     var avg_lng = 0
     for (i=0; i<filtered_pubs.length; i++) {
-        total_lat += filtered_pubs[i]['detail_latitude']
-        total_lng += filtered_pubs[i]['detail_longitude']
+        total_lat += parseFloat(filtered_pubs[i]['detail_latitude'])
+        total_lng += parseFloat([i]['detail_longitude'])
     }
     avg_lat = total_lat/filtered_pubs.length
     avg_lng = total_lng/filtered_pubs.length
 
     filtered_pubs = get_unique_list(filtered_pubs)
     for (i=0; i < filtered_pubs.length; i++) {
-        lat_diff = Math.abs(filtered_pubs[i]['detail_latitude'] - avg_lat)
-        lng_diff = Math.abs(filtered_pubs[i]['detail_longitude'] - avg_lng)
+        lat_diff = Math.abs(parseFloat(filtered_pubs[i]['detail_latitude']) - avg_lat)
+        lng_diff = Math.abs(parseFloat(filtered_pubs[i]['detail_longitude']) - avg_lng)
         tot_diff = lat_diff + lng_diff
         filtered_pubs[i]['distance'] = tot_diff
     }

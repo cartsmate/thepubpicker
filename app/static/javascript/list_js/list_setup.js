@@ -1,5 +1,5 @@
 function list_setup(mapped_pubs) {
-    console.log('LIST SETUP')
+    console.log('LIST SETUP: ' + mapped_pubs.length)
 
     list_delete()
 

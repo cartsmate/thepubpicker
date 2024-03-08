@@ -1,17 +1,24 @@
 function map_addListener_bounds_changed(map,mapped_pubs){console.log('map_addListener_bounds_changed ADDED')
 google.maps.event.addListener(map,'bounds_changed',function(){console.log('map_addListener - BOUNDS CHANGED')
+console.log('unique_data')
+console.log(unique_data)
 marker_in_bounds=0
 pubs_to_show=[]
-bounds=map.getBounds();let ne=bounds.getNorthEast();let sw=bounds.getSouthWest();let north_east=ne.toString().replace(/[()]/g,"");var north_east_str=north_east.toString().split(',');let south_west=sw.toString().replace(/[()]/g,"");var south_west_str=south_west.toString().split(',');let direction={"north":{"name":"NORTH","html_name":"north_note","bounds_value":north_east_str[0],"extra_pubs":0},"south":{"name":"SOUTH","html_name":"south_note","bounds_value":south_west_str[0],"extra_pubs":0},"east":{"name":"EAST","html_name":"east_note","bounds_value":north_east_str[1],"extra_pubs":0},"west":{"name":"WEST","html_name":"west_note","bounds_value":south_west_str[1],"extra_pubs":0}};for(i=0;i<Math.min(unique_data.length,100);i++){if(unique_data[i]['detail_latitude']>direction['south'].bounds_value&&unique_data[i]['detail_latitude']<direction['north'].bounds_value&&unique_data[i]['detail_longitude']>direction['west'].bounds_value&&unique_data[i]['detail_longitude']<direction['east'].bounds_value){marker_in_bounds++
+bounds=map.getBounds();let ne=bounds.getNorthEast();let sw=bounds.getSouthWest();let north_east=ne.toString().replace(/[()]/g,"");var north_east_str=north_east.toString().split(',');let south_west=sw.toString().replace(/[()]/g,"");var south_west_str=south_west.toString().split(',');let direction={"north":{"name":"NORTH","html_name":"north_note","bounds_value":north_east_str[0],"extra_pubs":0},"south":{"name":"SOUTH","html_name":"south_note","bounds_value":south_west_str[0],"extra_pubs":0},"east":{"name":"EAST","html_name":"east_note","bounds_value":north_east_str[1],"extra_pubs":0},"west":{"name":"WEST","html_name":"west_note","bounds_value":south_west_str[1],"extra_pubs":0}};for(i=0;i<Math.min(unique_data.length,100);i++){console.log('inside < 100')
+if(unique_data[i]['detail_latitude']>direction['south'].bounds_value&&unique_data[i]['detail_latitude']<direction['north'].bounds_value&&unique_data[i]['detail_longitude']>direction['west'].bounds_value&&unique_data[i]['detail_longitude']<direction['east'].bounds_value){console.log('inside bounds')
+marker_in_bounds++
 pubs_to_show.push(unique_data[i])
 }
 if(unique_data[i]['detail_latitude']<direction['south'].bounds_value){direction['south'].extra_pubs++}
 if(unique_data[i]['detail_latitude']>direction['north'].bounds_value){direction['north'].extra_pubs++}
 if(unique_data[i]['detail_longitude']<direction['west'].bounds_value){direction['west'].extra_pubs++}
 if(unique_data[i]['detail_longitude']>direction['east'].bounds_value){direction['east'].extra_pubs++}}
-for(let i in direction){if(direction[i].extra_pubs>0){document.getElementById(direction[i].html_name).textContent=direction[i].extra_pubs+" more pubs due "+direction[i].name}else{document.getElementById(direction[i].html_name).textContent=''}}
+for(let i in direction){console.log(i)
+if(direction[i].extra_pubs>0){document.getElementById(direction[i].html_name).textContent=direction[i].extra_pubs+" more pubs due "+direction[i].name}else{document.getElementById(direction[i].html_name).textContent=''}}
+console.log('page: '+page)
 mapped_pubs=pubs_to_show
-if(page=='home'){list_setup(mapped_pubs)}});}
+console.log('mapped_pubs: '+mapped_pubs.length)
+if(page=='home'){list_setup(unique_data)}});}
 var markersArray=[];function clearOverlays(){for(var i=0;i<markersArray.length;i++){markersArray[i].setMap(null);}
 markersArray.length=0;}
 function map_addListener_click_placeid(map){console.log('map click listener added')
@@ -45,31 +52,32 @@ function center_map(){filtered_pubs=filter_by_()
 console.log('center_map: '+filtered_pubs.length)
 create_filter_(filtered_pubs)
 if(window.navigator.onLine==true){if(search_string==''){filtered_pubs=map_center_from_pubs(filtered_pubs)
-map.setCenter({lat:filtered_pubs[0]['detail_latitude'],lng:filtered_pubs[0]['detail_longitude']});}else{filtered_pubs=map_center_from_searchbox(filtered_pubs)}
+map.setCenter({lat:parseFloat(filtered_pubs[0]['detail_latitude']),lng:parseFloat(filtered_pubs[0]['detail_longitude'])});}else{filtered_pubs=map_center_from_searchbox(filtered_pubs)}
 if(document.getElementById('sunday_filter').checked==false&&document.getElementById('saturday_filter').checked==false&&document.getElementById('friday_filter').checked==false&&document.getElementById('thursday_filter').checked==false&&document.getElementById('wednesday_filter').checked==false&&document.getElementById('tuesday_filter').checked==false&&document.getElementById('monday_filter').checked==false){unique_data=get_unique_list(filtered_pubs)}else{console.log('DAY selected')
 unique_data=filtered_pubs}
 var central_map=map.getCenter();map.panTo(central_map);clearOverlays()
 for(i=0;i<Math.min(unique_data.length,100);i++){unique_data[i]['ordering']=i
-marker_add(unique_data[i])}}else{list_setup_beta(filtered_pubs)}
+marker_add(unique_data[i])}}else{list_setup(filtered_pubs)}
 finalise_results(filtered_pubs)}
 function map_center_from_searchbox(filtered_pubs){console.log('map_center_from_searchbox')
-for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(filtered_pubs[i]['detail_latitude']-central_obj.lat())
-lng_diff=Math.abs(filtered_pubs[i]['detail_longitude']-central_obj.lng())
+for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(parseFloat(filtered_pubs[i]['detail_latitude'])-central_obj.lat())
+lng_diff=Math.abs(parseFloat(filtered_pubs[i]['detail_longitude'])-central_obj.lng())
 tot_diff=lat_diff+lng_diff
 filtered_pubs[i]['distance']=tot_diff}
 filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});return filtered_pubs}
-function map_center_from_pubs(filtered_pubs){console.log('map_center_from_pubs')
+function map_center_from_pubs(filtered_pubs){console.log('map_center_from_pubs: '+filtered_pubs.length)
+console.log(filtered_pubs)
 var total_lat=0
 var avg_lat=0
 var total_lng=0
 var avg_lng=0
-for(i=0;i<filtered_pubs.length;i++){total_lat+=filtered_pubs[i]['detail_latitude']
-total_lng+=filtered_pubs[i]['detail_longitude']}
+for(i=0;i<filtered_pubs.length;i++){total_lat+=parseFloat(filtered_pubs[i]['detail_latitude'])
+total_lng+=parseFloat([i]['detail_longitude'])}
 avg_lat=total_lat/filtered_pubs.length
 avg_lng=total_lng/filtered_pubs.length
 filtered_pubs=get_unique_list(filtered_pubs)
-for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(filtered_pubs[i]['detail_latitude']-avg_lat)
-lng_diff=Math.abs(filtered_pubs[i]['detail_longitude']-avg_lng)
+for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(parseFloat(filtered_pubs[i]['detail_latitude'])-avg_lat)
+lng_diff=Math.abs(parseFloat(filtered_pubs[i]['detail_longitude'])-avg_lng)
 tot_diff=lat_diff+lng_diff
 filtered_pubs[i]['distance']=tot_diff}
 filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});return filtered_pubs}
@@ -92,6 +100,13 @@ function map_load(page){console.log('map load on '+page+' | on-line?: '+window.n
 var js=document.createElement("script");js.type="text/javascript";if(window.navigator.onLine==true){js.setAttribute("defer","defer");map_initiator='map_init'
 js.src='https://maps.googleapis.com/maps/api/js?key='+env_vars['google_key']+'&libraries=places&callback='+map_initiator
 document.head.appendChild(js)}else{map_init_none()}}
+function marker_add(the_pub){console.log('ADD MARKERS')
+var pinSVGHole="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z";var labelOriginHole=new google.maps.Point(12,15);var pinSVGFilled="M 12,2 C 8.1340068,2 5,5.1340068 5,9 c 0,5.25 7,13 7,13 0,0 7,-7.75 7,-13 0,-3.8659932 -3.134007,-7 -7,-7 z";var labelOriginFilled=new google.maps.Point(12,9);var infowindow=new google.maps.InfoWindow();var pinColor='#808000'
+var pin=pinSVGHole
+var markerImage={path:pinSVGFilled,anchor:new google.maps.Point(12,17),fillOpacity:1,fillColor:pinColor,strokeWeight:2,strokeColor:"white",scale:2,labelOrigin:labelOriginFilled,};marker=new google.maps.Marker({position:new google.maps.LatLng(the_pub['detail_latitude'],the_pub['detail_longitude']),map:map,icon:markerImage,label:{color:'white',fontSize:'10px',text:the_pub['ordering'].toString()}})
+markersArray.push(marker)
+google.maps.event.addListener(marker,'click',(function(marker){return function(){infowindow.x=the_pub.detail_name;infowindow.setContent("<p><b>"+the_pub.detail_name+"</b></p>"+
+"<a href='/pub/?id="+the_pub.pub_identity+"'>click for details</a>");infowindow.open(map,marker);}})(marker));return marker}
 function nearest_station(place,lat_lng_obj){console.log('nearest_station')
 records=[]
 for(let i=0;i<stations.length;i++){lat_diff=Math.abs(stations[i]['station_latitude']-lat_lng_obj.lat)

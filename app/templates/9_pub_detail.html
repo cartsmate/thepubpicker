@@ -18,7 +18,7 @@
                 {% elif value.control == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control detail-text" type='text' name={{value.name}} id={{value.name}}>
+                    <input class="form-control detail-input" type='text' name={{value.name}} id={{value.name}}>
                 {% endif %}
                 {% if (value.required) %}
                     <script>document.getElementById("{{value.name}}").required = true</script>
@@ -31,7 +31,7 @@
     {% elif name != "readonly" and ((value.form_visible) or (value.name == 'detail_name') or (value.name == 'extra')) %}
         <div class="form-group row" id=row_{{value.name}} >
             <div class="col details-label" >
-                <label class="col-form-label" for={{value.name}} >{{value.alias}}</label>
+                <label class="col-form-label detail-label" for={{value.name}} >{{value.alias}}</label>
             </div>
             <div class="col details-data" id=div_{{value.name}} >
                 {% if value.control == 'dropdown' %}
@@ -43,7 +43,7 @@
                 {% elif value.name == 'date' %}
                     {% include "control_date.html" %}
                 {% else %}
-                    <input class="form-control details-input" type='textarea' name={{value.name}} id={{value.name}}>
+                    <input class="form-control detail-input" type='textarea' name={{value.name}} id={{value.name}}>
                 {% endif %}
                 {% if (value.required) %}
                     <script>document.getElementById("{{value.name}}").required = true</script>
@@ -61,5 +61,3 @@
         </div>
     {% endif %}
 {% endfor %}
-
-<link rel="stylesheet" href="/static/css/pub/detail.css">

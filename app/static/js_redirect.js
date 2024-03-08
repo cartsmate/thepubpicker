@@ -38,19 +38,17 @@ function redirect_stations(back){console.log("redirect stations")
 var base_url=window.location.hostname
 if(env_vars['env']=='qual'){var url="http://"+base_url+":5000/collection/"}else{var url="http://"+base_url+"/collection/"}
 const myUrlWithParams=new URL(url);myUrlWithParams.searchParams.append('station_id',pub[0]['station_identity']);myUrlWithParams.searchParams.append('back',back);window.location.replace(myUrlWithParams.href);}
-function redirect_timeout(pubs){console.log('redirect_timeout')
-console.log(pubs.length)
+function redirect_timeout(timeout_pubs){console.log('redirect_timeout')
+console.log(timeout_pubs.length)
 console.log(document.getElementById('burger_toggle').checked)
 document.getElementById('burger_toggle').checked=false
 filter_reset()
-create_filter_(pubs)
+create_filter_(timeout_pubs)
 center_map()
 }
 function redirect_website(website){console.log("redirect_website")
 window.open(website)}
 function update_station(station_identity){document.getElementById(station_identity+"_filter").checked=true
-pub_filtered=filter_all_data(pub)
-list_setup_beta(pub_filtered)
-populate_feature(pub_filtered)
-populate_header(pub_filtered.length)
-map_load_collection()}
+pub_filtered=filter_by_(pub_all)
+center_map()
+}

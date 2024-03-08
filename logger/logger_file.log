@@ -311,3 +311,269 @@ simpleLogger - INFO - 2024-03-06 17:51:46.557124 : home page OPEN
 simpleLogger - INFO - 2024-03-06 17:51:48.628794 : 0:00:02.071357 : home page LOADED
 simpleLogger - INFO - 2024-03-06 18:06:40.647031 : home page OPEN
 simpleLogger - INFO - 2024-03-06 18:06:41.984690 : 0:00:01.337291 : home page LOADED
+simpleLogger - INFO - 2024-03-07 10:02:37.038939 : home page OPEN
+simpleLogger - INFO - 2024-03-07 10:02:38.631212 : 0:00:01.591952 : home page LOADED
+simpleLogger - INFO - 2024-03-07 10:08:34.668505 : home page OPEN
+simpleLogger - INFO - 2024-03-07 10:08:35.946750 : 0:00:01.277946 : home page LOADED
+simpleLogger - INFO - 2024-03-07 10:17:27.347137 : home page OPEN
+simpleLogger - INFO - 2024-03-07 10:17:28.889946 : 0:00:01.542678 : home page LOADED
+simpleLogger - INFO - 2024-03-07 10:19:00.468416 : home page OPEN
+simpleLogger - INFO - 2024-03-07 10:19:01.732081 : 0:00:01.263437 : home page LOADED
+simpleLogger - INFO - 2024-03-07 10:30:11.547030 : home page OPEN
+simpleLogger - INFO - 2024-03-07 10:30:12.923579 : 0:00:01.376237 : home page LOADED
+simpleLogger - INFO - 2024-03-07 15:19:31.103617 : home page OPEN
+simpleLogger - INFO - 2024-03-07 15:19:32.552797 : 0:00:01.448885 : home page LOADED
+simpleLogger - INFO - 2024-03-07 15:20:52.694513 : home page OPEN
+simpleLogger - INFO - 2024-03-07 15:20:54.125081 : 0:00:01.430263 : home page LOADED
+simpleLogger - INFO - 2024-03-07 15:41:36.392654 : home page OPEN
+simpleLogger - INFO - 2024-03-07 15:41:37.824955 : 0:00:01.431984 : home page LOADED
+simpleLogger - INFO - 2024-03-07 15:48:57.861960 : home page OPEN
+simpleLogger - INFO - 2024-03-07 15:48:59.387367 : 0:00:01.525094 : home page LOADED
+simpleLogger - INFO - 2024-03-07 19:04:27.439941 : home page OPEN
+simpleLogger - INFO - 2024-03-07 19:04:28.956177 : 0:00:01.516214 : home page LOADED
+simpleLogger - INFO - 2024-03-07 21:42:21.033049 : home page OPEN
+simpleLogger - INFO - 2024-03-07 21:42:22.304759 : 0:00:01.271478 : home page LOADED
+simpleLogger - INFO - 2024-03-07 21:44:52.790828 : home page OPEN
+simpleLogger - INFO - 2024-03-07 21:44:54.152621 : 0:00:01.361593 : home page LOADED
+simpleLogger - INFO - 2024-03-07 21:57:06.230480 : home page OPEN
+simpleLogger - INFO - 2024-03-07 21:57:07.550696 : 0:00:01.320015 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:02:31.582101 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:02:32.732144 : 0:00:01.149857 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:23:59.636033 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:24:00.846569 : 0:00:01.210323 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:24:35.138998 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:24:36.224914 : 0:00:01.085909 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:28:37.368502 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:28:38.576590 : 0:00:01.207893 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:32:03.063963 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:32:04.358992 : 0:00:01.294857 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:36:47.457019 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:36:48.672862 : 0:00:01.215829 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:38:14.925548 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:38:16.319846 : 0:00:01.394164 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:40:05.664093 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:40:06.742592 : 0:00:01.078331 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:42:28.363462 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:42:29.479429 : 0:00:01.115786 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:43:34.974287 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:43:36.190766 : 0:00:01.216467 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:54:43.686482 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:54:44.982905 : 0:00:01.296221 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:57:09.208736 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:57:10.588168 : 0:00:01.379308 : home page LOADED
+simpleLogger - INFO - 2024-03-07 22:57:41.299399 : home page OPEN
+simpleLogger - INFO - 2024-03-07 22:57:42.564549 : 0:00:01.265012 : home page LOADED
+simpleLogger - INFO - 2024-03-08 08:01:19.077989 : home page OPEN
+simpleLogger - INFO - 2024-03-08 08:01:20.592859 : 0:00:01.514845 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:34:30.726811 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:34:33.065330 : 0:00:02.338124 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:39:02.414838 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:39:03.735409 : 0:00:01.320552 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:40:45.895327 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:40:47.671707 : 0:00:01.776366 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:45:27.776904 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:45:29.272377 : 0:00:01.495171 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:49:05.344289 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:49:06.831814 : 0:00:01.487212 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:51:37.486708 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:51:38.751349 : 0:00:01.264500 : home page LOADED
+simpleLogger - INFO - 2024-03-08 09:52:36.082856 : home page OPEN
+simpleLogger - INFO - 2024-03-08 09:52:37.277556 : 0:00:01.194569 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:04:12.182787 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:04:13.483504 : 0:00:01.300557 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:04:53.937953 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:04:55.170235 : 0:00:01.231996 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:06:26.925364 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:06:28.186738 : 0:00:01.261239 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:11:11.525422 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:11:13.378479 : 0:00:01.852933 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:18:39.015889 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:18:40.474103 : 0:00:01.458087 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:21:12.703116 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:21:14.208973 : 0:00:01.505557 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:35:50.368873 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:35:51.686870 : 0:00:01.317699 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:37:31.184751 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:37:32.401556 : 0:00:01.216666 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:42:39.531075 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:42:40.849979 : 0:00:01.318710 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:44:18.131404 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:44:19.412316 : 0:00:01.280682 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:57:06.936633 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:57:08.236860 : 0:00:01.300072 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:57:28.323981 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:57:29.471476 : 0:00:01.147477 : home page LOADED
+simpleLogger - INFO - 2024-03-08 10:58:36.493624 : home page OPEN
+simpleLogger - INFO - 2024-03-08 10:58:37.667172 : 0:00:01.173323 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:02:53.259509 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:02:54.639463 : 0:00:01.379693 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:04:08.637307 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:04:10.079155 : 0:00:01.441682 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:07:56.145996 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:07:57.509864 : 0:00:01.363466 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:08:32.919097 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:08:34.242352 : 0:00:01.323026 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:11:41.237105 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:11:44.251119 : 0:00:03.013718 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:12:37.581039 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:12:38.870605 : 0:00:01.289293 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:15:27.039938 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:15:28.301669 : 0:00:01.261591 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:16:10.112801 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:16:11.338064 : 0:00:01.225130 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:17:37.103884 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:17:38.347927 : 0:00:01.243901 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:17:55.826028 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:17:57.136477 : 0:00:01.310194 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:19:38.408068 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:19:39.781059 : 0:00:01.372726 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:22:56.485011 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:22:57.988823 : 0:00:01.503471 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:23:24.034314 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:23:25.307193 : 0:00:01.272633 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:27:35.094091 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:27:36.565674 : 0:00:01.471451 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:27:58.143675 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:27:59.917031 : 0:00:01.773008 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:31:00.537548 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:31:04.189297 : 0:00:03.651414 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:32:09.000414 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:32:10.293390 : 0:00:01.292755 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:35:14.207509 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:35:15.600532 : 0:00:01.392657 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:35:51.122049 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:35:52.548121 : 0:00:01.425844 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:37:55.312130 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:37:56.639880 : 0:00:01.327396 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:39:01.911272 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:39:03.084065 : 0:00:01.172668 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:41:46.139735 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:41:47.862543 : 0:00:01.722440 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:43:49.391611 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:43:50.702190 : 0:00:01.310318 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:44:47.955735 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:44:49.293103 : 0:00:01.337132 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:46:24.461349 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:46:25.710523 : 0:00:01.248991 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:46:52.181131 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:46:53.541769 : 0:00:01.360362 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:47:12.866357 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:47:14.158312 : 0:00:01.291705 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:48:04.907827 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:48:06.199096 : 0:00:01.291043 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:48:38.967395 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:48:40.261164 : 0:00:01.293509 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:49:30.869162 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:49:32.168277 : 0:00:01.298893 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:50:14.298168 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:50:15.664703 : 0:00:01.366397 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:55:51.165606 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:55:52.465231 : 0:00:01.299494 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:56:36.545006 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:56:37.754900 : 0:00:01.209730 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:58:39.005176 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:58:40.403719 : 0:00:01.398366 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:59:03.178887 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:59:04.528907 : 0:00:01.349664 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:59:20.008475 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:59:21.326627 : 0:00:01.317916 : home page LOADED
+simpleLogger - INFO - 2024-03-08 11:59:32.766533 : home page OPEN
+simpleLogger - INFO - 2024-03-08 11:59:34.020845 : 0:00:01.254049 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:00:11.239305 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:00:12.736323 : 0:00:01.496780 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:00:32.725360 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:00:34.047578 : 0:00:01.321917 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:04:25.850787 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:04:27.120690 : 0:00:01.269722 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:07:27.939384 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:07:29.170665 : 0:00:01.231152 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:08:30.766864 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:08:32.001648 : 0:00:01.234544 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:09:07.794461 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:09:09.159101 : 0:00:01.364462 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:10:12.213771 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:10:13.483463 : 0:00:01.269547 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:10:36.153532 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:10:37.351391 : 0:00:01.196859 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:11:33.754508 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:11:35.012375 : 0:00:01.257589 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:17:10.452009 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:17:11.847222 : 0:00:01.395061 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:18:14.537202 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:18:15.914872 : 0:00:01.377521 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:19:07.238022 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:19:08.439820 : 0:00:01.201314 : home page LOADED
+simpleLogger - INFO - 2024-03-08 12:26:56.249837 : home page OPEN
+simpleLogger - INFO - 2024-03-08 12:26:57.529660 : 0:00:01.279686 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:30:10.897868 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:30:12.999962 : 0:00:02.101780 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:32:24.803485 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:32:26.171555 : 0:00:01.367765 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:35:14.322715 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:35:16.083114 : 0:00:01.760223 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:37:07.702024 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:37:08.961293 : 0:00:01.259136 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:38:57.587028 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:38:58.735287 : 0:00:01.148128 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:39:57.581596 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:39:58.869205 : 0:00:01.287362 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:41:11.094439 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:41:12.479591 : 0:00:01.384850 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:41:57.511191 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:42:02.011573 : 0:00:04.500145 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:53:51.288356 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:53:52.873826 : 0:00:01.585133 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:54:09.880286 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:54:11.429243 : 0:00:01.548596 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:55:34.301896 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:55:35.650727 : 0:00:01.348475 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:57:09.031534 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:57:10.401275 : 0:00:01.369437 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:57:23.303833 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:57:24.497321 : 0:00:01.193481 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:59:12.088392 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:59:13.443607 : 0:00:01.355204 : home page LOADED
+simpleLogger - INFO - 2024-03-08 13:59:36.386015 : home page OPEN
+simpleLogger - INFO - 2024-03-08 13:59:38.187613 : 0:00:01.801579 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:00:31.721053 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:00:33.027056 : 0:00:01.305867 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:01:12.077571 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:01:13.330776 : 0:00:01.253061 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:02:44.967049 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:02:46.208793 : 0:00:01.241536 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:07:39.099330 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:07:40.430376 : 0:00:01.330885 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:08:51.911649 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:08:53.317497 : 0:00:01.405717 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:12:29.714168 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:12:31.217546 : 0:00:01.503213 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:20:31.046837 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:20:32.519351 : 0:00:01.472348 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:21:16.587379 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:21:18.163149 : 0:00:01.575638 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:21:49.480966 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:21:50.969022 : 0:00:01.487920 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:35:34.836065 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:35:36.315007 : 0:00:01.478791 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:36:26.838749 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:36:28.260839 : 0:00:01.422081 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:37:04.725831 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:37:06.598750 : 0:00:01.872795 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:41:21.650087 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:41:23.633450 : 0:00:01.983226 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:45:55.144473 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:45:56.479428 : 0:00:01.334811 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:49:16.561329 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:49:18.136154 : 0:00:01.574704 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:57:13.147965 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:57:14.581938 : 0:00:01.433852 : home page LOADED
+simpleLogger - INFO - 2024-03-08 14:59:08.195187 : home page OPEN
+simpleLogger - INFO - 2024-03-08 14:59:10.787429 : 0:00:02.592229 : home page LOADED
+simpleLogger - INFO - 2024-03-08 15:09:20.434526 : home page OPEN
+simpleLogger - INFO - 2024-03-08 15:09:22.020211 : 0:00:01.585558 : home page LOADED
+simpleLogger - INFO - 2024-03-08 15:10:19.736142 : home page OPEN
+simpleLogger - INFO - 2024-03-08 15:10:21.174759 : 0:00:01.437508 : home page LOADED
+simpleLogger - INFO - 2024-03-08 15:14:59.157516 : home page OPEN
+simpleLogger - INFO - 2024-03-08 15:15:01.505740 : 0:00:02.348198 : home page LOADED
+simpleLogger - INFO - 2024-03-08 15:15:56.519552 : home page OPEN
+simpleLogger - INFO - 2024-03-08 15:15:59.850815 : 0:00:03.331246 : home page LOADED

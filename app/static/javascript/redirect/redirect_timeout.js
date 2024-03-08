@@ -1,12 +1,12 @@
-function redirect_timeout(pubs) {
+function redirect_timeout(timeout_pubs) {
     console.log('redirect_timeout')
-    console.log(pubs.length)
+    console.log(timeout_pubs.length)
     console.log(document.getElementById('burger_toggle').checked)
     document.getElementById('burger_toggle').checked = false
 
     filter_reset()
 //    document.getElementById('timeout_filter').checked = true
-    create_filter_(pubs)
+    create_filter_(timeout_pubs)
     center_map()
 
 //    for (i=0; i<timeout_list.length; i++) {

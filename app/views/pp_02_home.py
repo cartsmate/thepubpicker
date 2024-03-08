@@ -127,7 +127,11 @@ def home():
         photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, daily_id, env_vars)
 
         # # # GET TIMEOUT LIST # # #
-        df_timeout = df_pub.loc[df_pub['timeout'] == '1']
+        df_timeout = df_pub.loc[df_pub['timeout'] == True]
+        print('df_pub')
+        print(df_pub[['pub_identity', 'detail_name', 'timeout']].head(5))
+        print('df_timeout')
+        print(df_timeout)
         timeout_json = df_timeout.to_dict(orient='records')
 
         # # # GET COUNTER TALLY # # #

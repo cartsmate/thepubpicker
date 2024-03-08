@@ -4,7 +4,8 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
     google.maps.event.addListener(map, 'bounds_changed', function() {
 
         console.log('map_addListener - BOUNDS CHANGED')
-
+        console.log('unique_data')
+        console.log(unique_data)
         //clearOverlays()
 
         marker_in_bounds = 0
@@ -26,8 +27,10 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         };
 
         for (i=0; i<Math.min(unique_data.length, 100); i++) {
+            console.log('inside < 100')
 //        for (i=0; i<unique_data.length; i++) {
             if (unique_data[i]['detail_latitude'] > direction['south'].bounds_value && unique_data[i]['detail_latitude'] < direction['north'].bounds_value && unique_data[i]['detail_longitude'] > direction['west'].bounds_value && unique_data[i]['detail_longitude'] < direction['east'].bounds_value) {
+                console.log('inside bounds')
                 marker_in_bounds ++
                 //unique_data[i]['ordering'] = i
                 pubs_to_show.push(unique_data[i])
@@ -40,16 +43,19 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
 
         }
         for (let i in direction) {
+            console.log(i)
             if (direction[i].extra_pubs > 0) {
                 document.getElementById(direction[i].html_name).textContent = direction[i].extra_pubs + " more pubs due " + direction[i].name
             } else {
                 document.getElementById(direction[i].html_name).textContent = ''
             }
         }
-
+        console.log('page: ' + page)
         mapped_pubs = pubs_to_show
+        console.log('mapped_pubs: ' + mapped_pubs.length)
         if (page == 'home') {
-            list_setup(mapped_pubs)
+//            list_setup(mapped_pubs)
+            list_setup(unique_data)
             }
 
     });

@@ -1,0 +1,257 @@
+// FILTER_OVERLAY
+///////////////////////////////////////////////////////////////////////////////////////
+:root {
+    --theme: var(--color)
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  bottom: 0;
+  right: 0;
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#content_filters{
+    position: absolute;
+    top: 150px;
+    left: 47px;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+#collapsible_filters_sm {
+    width: 60px;
+    height: 40px;
+    margin-top: 4px;
+    //margin-right: 3px;
+    font-size:12px;
+    color: black;
+    background-color: white;
+    border-left: thin solid #b5b5b5;
+    border-bottom: thin solid #b5b5b5;
+    border-right: thin solid white;
+    border-top: thin solid white;
+}
+#collapsible_filters {
+    width: 95px;
+    height: 40px;
+    margin-top: 3px;
+    //margin-right: 3px;
+    font-size:12px;
+    color: black;
+    background-color: white;
+    border-left: thin solid #b5b5b5;
+    border-bottom: thin solid #b5b5b5;
+    border-right: thin solid white;
+    border-top: thin solid white;
+}
+
+#all_filters{
+    position: relative;
+    //right: 5px;
+}
+#active_filter_count {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--theme);
+    border: thin solid white;
+}
+.filters_on {
+    text-align: left;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.0;
+}
+.filters_off {
+    text-align: center;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.0;
+}
+.filters_span_on {
+    display: block;
+}
+.filters_span_off {
+    display: in-line;
+}
+.child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// FILTER DIARY
+///////////////////////////////////////////////////////////////////////////////////////
+:root {
+    --theme: var(--color)
+}
+#content_diary{
+    position: absolute;
+    //top: 50%;
+    //left: 50%;
+    //top: 75px;
+    left: -250px;
+    background-color: #F5F5F5;
+    border: 5px solid var(--theme);
+    //transform: translate(-50%,-50%);
+    //-ms-transform: translate(-50%,-50%);
+}
+#button_diary {
+    width: 95px;
+    height: 35px;
+}
+
+.diary_row {
+    background-color: white;
+    width: 200px;
+    font-size: 12px;
+    padding: 0px;
+    margin: 5px 0px
+}
+
+.caption_count {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    font-color: black;
+    //font-color: #F98866;
+}
+.caption_day {
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    //font-color: black;
+    //font-color: #F98866;
+    font-color: black;
+}
+.check_face {
+    opacity: 1;
+    //margin-top: 5px;
+    padding: 2.5px;
+    width: 45px;
+    text-align: center;
+    //border: thin solid #808000;
+    border: thin solid #A1BE95;
+    border-radius: 1.2rem;
+}
+.check_face:hover {
+    //background-color: #808000;
+    background-color: #A1BE95;
+    color: white;
+}
+
+// FILTER DIRECTION
+//////////////////////////////////////////////////////////////////////////////////////
+
+:root {
+    --theme: var(--color)
+}
+#content_direction{
+  position: absolute;
+  left: -250px;
+  background-color: #F5F5F5;
+  border: 5px solid var(--theme);
+  //transform: translate(-50%,-50%);
+  //-ms-transform: translate(-50%,-50%);
+}
+#button_direction {
+    width: 95px;
+    height: 35px;
+}
+
+// FILTER EVENTS
+///////////////////////////////////////////////////////////////////////////////////////
+
+:root {
+    --theme: var(--color)
+}
+#content_event{
+  position: absolute;
+  left: -250px;
+  background-color: #F5F5F5;
+  border: 5px solid var(--theme);
+}
+#button_event {
+    width: 95px;
+    height: 35px;
+}
+.check_label {
+    width: 230px;
+    font-size: 12px;
+    padding-top: 2px;
+    margin-top: 2px;
+}
+
+// FILTER FEATURES
+/////////////////////////////////////////////////////////////////////////////////////
+
+:root {
+    --theme: var(--color)
+}
+#content_feature{
+  position: absolute;
+  left: -250px;
+  background-color: #F5F5F5;
+  border: 5px solid var(--theme);
+}
+#button_feature {
+    width: 95px;
+    height: 35px;
+}
+
+// FILTER PUB IDENTITY
+////////////////////////////////////////////////////////////////////////////////////
+
+:root {
+    --theme: var(--color)
+}
+#content_pub_identity{
+    position: absolute;
+    left: -250px;
+    background-color: #F5F5F5;
+    border: 5px solid var(--theme);
+}
+#button_pub_identity {
+    width: 95px;
+    height: 35px;
+}
+
+// FILTER RESET
+//////////////////////////////////////////////////////////////////////////////////////
+
+    :root {
+    --theme: var(--color)
+}
+#button_reset{
+    width: 95px;
+    height: 35px;
+}
+
+// FILTER STATION
+/////////////////////////////////////////////////////////////////////////////////////
+
+:root {
+    --theme: var(--color)
+}
+#content_station{
+    position: absolute;
+    left: -250px;
+    background-color: #F5F5F5;
+    border: 5px solid var(--theme);
+}
+#button_station {
+    width: 95px;
+    height: 35px;
+}

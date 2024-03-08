@@ -1,0 +1,173 @@
+//POPULATE PUB
+////////////////////////////////////////////////////////////////////////////////////////
+:root {
+    --theme: var(--color)
+}
+.summary_extra {
+    padding: 0px 10px 0px 10px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    color: black;
+    font-size:12px;
+}
+.pub_headings {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-bottom: thin solid black;
+}
+
+//POPULATE DETAIL
+////////////////////////////////////////////////////////////////////////////////////////
+.detail-text {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:200px;
+    }
+.detail-url {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:200px;
+    }
+.detail-label {
+    font-size: 12px;
+}
+.detail-input {
+    font-size: 12px;
+}
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.website {
+    font-size: 12px;
+    width:200px;
+    display:block;
+    text-align:center;
+    padding:.5em;
+    background-color:#f3f3f3;
+    border-radius:4px;
+    text-decoration:none;
+    color:red;
+}
+
+// POPULATE EVENT
+////////////////////////////////////////////////////////////////////////////////////////
+.text-event {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:250px;
+}
+.col-diary-item {
+    width: 130px;
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px;
+}
+.col-diary-label {
+    width: 100px;
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+}
+.label-diary-item {
+    width:100px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
+.input-diary-item {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:130px;
+}
+.col-event-label {
+    width: 100px;
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+}
+.col-event-item {
+    width: 100px;
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px;
+}
+.item-diary-label {
+    width:75px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
+.item-diary-input {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    height: 30px;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:200px;
+}
+.label-event-item {
+    width:100px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
+.item-event-label {
+    width:75px;
+    padding:0px;
+    margin:0px;
+    height: 30px;
+    font-size:12px;
+}
+.dropdown-event {
+    margin:0px;
+    padding: 0px;
+    font-size:12px;
+    overflow-y: scroll;
+    resize: none;
+    text-align:left;
+    visibility:visible;
+    display:block;
+    width:100px;
+}
+select {
+    height: 100%;
+}

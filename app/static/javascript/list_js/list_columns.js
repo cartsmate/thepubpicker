@@ -22,58 +22,60 @@ function list_columns() {
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = true
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     if ((e=='on') && (s=='on') && (d=='off')) {
         visible['station_name'] = false
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = true
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     if ((e=='on') && (s=='off') && (d=='on')) {
         visible['station_name'] = true
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = true
-        visible['rank'] = false
+        visible['ranking'] = false
     }
     if ((e=='off') && (s=='on') && (d=='on')) {
         visible['station_name'] = false
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = false
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     if ((e=='on') && (s=='off') && (d=='off')) {
         visible['station_name'] = true
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = false
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     if ((e=='off') && (s=='on') && (d=='off')) {
         visible['station_name'] = false
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = false
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     if ((e=='off') && (s=='off') && (d=='on')) {
         visible['station_name'] = true
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = false
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     if ((e=='off') && (s=='off') && (d=='off')) {
         visible['station_name'] = true
         visible['event_day'] = false
         visible['event_type'] = false
         visible['event_detail'] = false
-        visible['rank'] = true
+        visible['ranking'] = true
     }
     asc_desc = 'asc'
     order = 0
+//    console.log('visible')
+//    console.log(visible)
     return [visible, order, asc_desc]
 }

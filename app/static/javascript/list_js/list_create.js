@@ -3,8 +3,8 @@ function list_create(mapped_pubs) {
     pubs_to_show = mapped_pubs
 
     var tbl = document.createElement("table");
-    tbl.setAttribute("id", "pub_list");
-    document.getElementById('pub_table').visible = false
+    tbl.setAttribute("id", "pub_table");
+    //document.getElementById('pub_table').visible = false
     tbl.style.cssText = 'font-size:12px;'
     tbl.className = "table table-striped";
 
@@ -81,7 +81,7 @@ function list_create(mapped_pubs) {
 
     tbl.appendChild(tblBody);
 
-    document.getElementById('pub_table').appendChild(tbl)
+    document.getElementById('pub_table_template').appendChild(tbl)
 
     tbl.setAttribute("border", "2");
 

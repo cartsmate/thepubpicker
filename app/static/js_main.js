@@ -28,7 +28,7 @@ populate_events(events);populate_photo_carousel()}
 function addCss(fileName){var link=$("<link />",{rel:"stylesheet",type:"text/css",href:fileName})
 $('head').append(link);}
 function add_css(){if(isTouchDevice()){console.log('TOUCH SCREEN device in operation')}else{console.log('NO-TOUCH screen device in operation')
-addCss("/static/css/carousel/carousel_flat_spinner.css");}}
+addCss("/static/css/carousel_flat_spinner.css");}}
 function show_results(){if(filtered_pubs.length==pub_all.length){console.log('on-load: filters CLEAR')}else{console.log('on-load: filters PRE-SET')
 list_setup()
 populate_header()
