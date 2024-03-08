@@ -27,9 +27,14 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         };
 
         for (i=0; i<Math.min(unique_data.length, 100); i++) {
+
             console.log('inside < 100')
+
 //        for (i=0; i<unique_data.length; i++) {
-            if (unique_data[i]['detail_latitude'] > direction['south'].bounds_value && unique_data[i]['detail_latitude'] < direction['north'].bounds_value && unique_data[i]['detail_longitude'] > direction['west'].bounds_value && unique_data[i]['detail_longitude'] < direction['east'].bounds_value) {
+            if (parseFloat(unique_data[i]['detail_latitude']) > direction['south'].bounds_value &&
+                parseFloat(unique_data[i]['detail_latitude']) < direction['north'].bounds_value &&
+                parseFloat(unique_data[i]['detail_longitude']) > direction['west'].bounds_value &&
+                parseFloat(unique_data[i]['detail_longitude']) < direction['east'].bounds_value) {
                 console.log('inside bounds')
                 marker_in_bounds ++
                 //unique_data[i]['ordering'] = i
@@ -52,13 +57,15 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         }
         console.log('page: ' + page)
         mapped_pubs = pubs_to_show
+        console.log('pubs_to_show')
+        console.log(pubs_to_show)
         console.log('mapped_pubs: ' + mapped_pubs.length)
         if (page == 'home') {
 //            list_setup(mapped_pubs)
-            if (unique_data.length > 100) {
-                list_setup(unique_data.slice(0,100))
+            if (pubs_to_show.length > 100) {
+                list_setup(pubs_to_show.slice(0,100))
             } else {
-                list_setup(unique_data)
+                list_setup(pubs_to_show)
             }
         }
     });
