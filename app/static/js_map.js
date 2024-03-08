@@ -20,7 +20,7 @@ mapped_pubs=pubs_to_show
 console.log('pubs_to_show')
 console.log(pubs_to_show)
 console.log('mapped_pubs: '+mapped_pubs.length)
-if(page=='home'){if(pubs_to_show.length>100){list_setup(pubs_to_show.slice(0,100))}else{list_setup(pubs_to_show)}}});}
+if(page=='home'){if(unique_data.length>100){list_setup(unique_data.slice(0,100))}else{list_setup(unique_data)}}});}
 var markersArray=[];function clearOverlays(){for(var i=0;i<markersArray.length;i++){markersArray[i].setMap(null);}
 markersArray.length=0;}
 function map_addListener_click_placeid(map){console.log('map click listener added')
