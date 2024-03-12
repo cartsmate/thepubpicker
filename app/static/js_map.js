@@ -20,7 +20,7 @@ mapped_pubs=pubs_to_show
 console.log('pubs_to_show')
 console.log(pubs_to_show)
 console.log('mapped_pubs: '+mapped_pubs.length)
-if(page=='home'){if(unique_data.length>100){list_setup(unique_data.slice(0,100))}else{list_setup(unique_data)}}});}
+if(page=='home'){if(mapped_pubs.length>100){list_setup(mapped_pubs.slice(0,100))}else{list_setup(mapped_pubs)}}});}
 var markersArray=[];function clearOverlays(){for(var i=0;i<markersArray.length;i++){markersArray[i].setMap(null);}
 markersArray.length=0;}
 function map_addListener_click_placeid(map){console.log('map click listener added')
@@ -68,21 +68,24 @@ tot_diff=lat_diff+lng_diff
 filtered_pubs[i]['distance']=tot_diff}
 filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});return filtered_pubs}
 function map_center_from_pubs(filtered_pubs){console.log('map_center_from_pubs: '+filtered_pubs.length)
-console.log(filtered_pubs)
 var total_lat=0
 var avg_lat=0
 var total_lng=0
 var avg_lng=0
 for(i=0;i<filtered_pubs.length;i++){total_lat+=parseFloat(filtered_pubs[i]['detail_latitude'])
-total_lng+=parseFloat([i]['detail_longitude'])}
+total_lng+=parseFloat(filtered_pubs[i]['detail_longitude'])}
 avg_lat=total_lat/filtered_pubs.length
+console.log('avg_lat',avg_lat)
 avg_lng=total_lng/filtered_pubs.length
+console.log('avg_lng',avg_lng)
 filtered_pubs=get_unique_list(filtered_pubs)
 for(i=0;i<filtered_pubs.length;i++){lat_diff=Math.abs(parseFloat(filtered_pubs[i]['detail_latitude'])-avg_lat)
 lng_diff=Math.abs(parseFloat(filtered_pubs[i]['detail_longitude'])-avg_lng)
 tot_diff=lat_diff+lng_diff
 filtered_pubs[i]['distance']=tot_diff}
-filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});return filtered_pubs}
+console.log(filtered_pubs)
+filtered_pubs=filtered_pubs.sort((a,b)=>{if(a.distance<b.distance){return-1;}});console.log(filtered_pubs)
+return filtered_pubs}
 function map_create(lat,lng,zoom){console.log("map create: lat: "+lat+'| lng: '+lng+' | zoom: '+zoom);var map_prop={center:new google.maps.LatLng(lat,lng),zoom:zoom,zoomControl:true,controlSize:30,streetViewControl:false,restriction:{latLngBounds:get_london_bounds(),strictBounds:true,},disableDefaultUI:true,}
 map=new google.maps.Map(document.getElementById('new_map'),map_prop)
 return map}
@@ -117,8 +120,7 @@ tot_diff=lat_diff+lng_diff
 var record={name:stations[i]['station_name'],id:stations[i]['station_identity'],distance:tot_diff}
 records.push(record);}
 records=records.sort((a,b)=>{if(a.distance<b.distance){return-1;}});document.getElementById("station_name").value=records[0]['name']
-document.getElementById("station_identity").value=records[0]['id']
-}
+document.getElementById("station_identity").value=records[0]['id']}
 function searchbox_addListener_places_changed(map,searchBox){console.log('searchbox addListener places changed ADDED')
 let markers=[];searchBox.addListener("place_changed",()=>{console.log('search box has changed place')
 const place=searchBox.getPlace();console.log('place')

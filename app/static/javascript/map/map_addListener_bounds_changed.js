@@ -62,10 +62,10 @@ function map_addListener_bounds_changed(map, mapped_pubs) {
         console.log('mapped_pubs: ' + mapped_pubs.length)
         if (page == 'home') {
 //            list_setup(mapped_pubs)
-            if (unique_data.length > 100) {
-                list_setup(unique_data.slice(0,100))
+            if (mapped_pubs.length > 100) {
+                list_setup(mapped_pubs.slice(0,100))
             } else {
-                list_setup(unique_data)
+                list_setup(mapped_pubs)
             }
         }
     });

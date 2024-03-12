@@ -59,29 +59,34 @@ function map_center_from_searchbox(filtered_pubs) {
 }
 function map_center_from_pubs(filtered_pubs) {
     console.log('map_center_from_pubs: ' + filtered_pubs.length)
-    console.log(filtered_pubs)
+
     var total_lat = 0
     var avg_lat = 0
     var total_lng = 0
     var avg_lng = 0
     for (i=0; i<filtered_pubs.length; i++) {
         total_lat += parseFloat(filtered_pubs[i]['detail_latitude'])
-        total_lng += parseFloat([i]['detail_longitude'])
+        total_lng += parseFloat(filtered_pubs[i]['detail_longitude'])
     }
     avg_lat = total_lat/filtered_pubs.length
+    console.log('avg_lat', avg_lat)
     avg_lng = total_lng/filtered_pubs.length
+    console.log('avg_lng', avg_lng)
 
     filtered_pubs = get_unique_list(filtered_pubs)
     for (i=0; i < filtered_pubs.length; i++) {
         lat_diff = Math.abs(parseFloat(filtered_pubs[i]['detail_latitude']) - avg_lat)
+
         lng_diff = Math.abs(parseFloat(filtered_pubs[i]['detail_longitude']) - avg_lng)
         tot_diff = lat_diff + lng_diff
         filtered_pubs[i]['distance'] = tot_diff
     }
+    console.log(filtered_pubs)
     filtered_pubs = filtered_pubs.sort((a, b) => {
         if (a.distance < b.distance) {
             return -1;
         }
     });
+    console.log(filtered_pubs)
     return filtered_pubs
 }
