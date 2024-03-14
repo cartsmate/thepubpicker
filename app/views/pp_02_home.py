@@ -95,22 +95,23 @@ def home():
 
         filters = request.args.get('filters')
 
-        # GET DATA FROM DATABASE
-        df_dict = MultiThreadingPub().thread_caller()
-        df_detail_all = df_dict['df_detail']
-        df_review_all = df_dict['df_review']
-        df_daily_event_all = df_dict['df_daily_event']
-        df_diary_all = df_dict['df_diary']
-        df_station_all = df_dict['df_station']
-        df_direction_all = df_dict['df_direction']
-
-        # GET DATA FROM CSV
-        # df_detail_all = get_csv_data(Detail)
-        # df_review_all = get_csv_data(Review())
-        # df_daily_event_all = get_csv_data(DailyEvent())
-        # df_diary_all = get_csv_data(Diary())
-        # df_station_all = get_csv_data(Station())
-        # df_direction_all = get_csv_data(Direction())
+        if env_vars['source'] == 'db':
+            # GET DATA FROM DATABASE
+            df_dict = MultiThreadingPub().thread_caller()
+            df_detail_all = df_dict['df_detail']
+            df_review_all = df_dict['df_review']
+            df_daily_event_all = df_dict['df_daily_event']
+            df_diary_all = df_dict['df_diary']
+            df_station_all = df_dict['df_station']
+            df_direction_all = df_dict['df_direction']
+        else:
+            # GET DATA FROM CSV
+            df_detail_all = get_csv_data(Detail)
+            df_review_all = get_csv_data(Review())
+            df_daily_event_all = get_csv_data(DailyEvent())
+            df_diary_all = get_csv_data(Diary())
+            df_station_all = get_csv_data(Station())
+            df_direction_all = get_csv_data(Direction())
 
         stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
         directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)

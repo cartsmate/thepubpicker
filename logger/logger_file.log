@@ -635,3 +635,89 @@ simpleLogger - INFO - 2024-03-14 21:04:09.853682 : home page OPEN
 simpleLogger - INFO - 2024-03-14 21:04:14.221266 : 0:00:04.367351 : home page LOADED
 simpleLogger - INFO - 2024-03-14 21:04:43.686398 : home page OPEN
 simpleLogger - INFO - 2024-03-14 21:04:46.547848 : 0:00:02.861435 : home page LOADED
+simpleLogger - INFO - 2024-03-14 22:28:16.101471 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:28:16.103161 : 0:00:00.001559 : 'str' object has no attribute 'datatype'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 19, in get_all
+    dtype_obj[value.name] = value.datatype
+AttributeError: 'str' object has no attribute 'datatype'
+simpleLogger - INFO - 2024-03-14 22:31:40.371115 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:31:40.380872 : 0:00:00.009620 : 'str' object has no attribute 'datatype'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 20, in get_all
+    dtype_obj[value.name] = value.datatype
+AttributeError: 'str' object has no attribute 'datatype'
+simpleLogger - INFO - 2024-03-14 22:33:40.296762 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:33:40.301969 : 0:00:00.005067 : 'str' object has no attribute 'datatype'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 21, in get_all
+    dtype_obj[value.name] = value.datatype
+AttributeError: 'str' object has no attribute 'datatype'
+simpleLogger - INFO - 2024-03-14 22:36:19.234740 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:36:19.235618 : 0:00:00.000732 : 'str' object has no attribute 'datatype'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 23, in get_all
+    dtype_obj[value.name] = value.datatype
+AttributeError: 'str' object has no attribute 'datatype'
+simpleLogger - INFO - 2024-03-14 22:37:47.329725 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:37:47.331471 : 0:00:00.001414 : 'str' object has no attribute 'datatype'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 26, in get_all
+    dtype_obj[value.name] = value.datatype
+AttributeError: 'str' object has no attribute 'datatype'
+simpleLogger - INFO - 2024-03-14 22:39:03.971421 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:39:03.975575 : 0:00:00.003697 : 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 21, in get_all
+    print(value.name)
+AttributeError: 'str' object has no attribute 'name'
+simpleLogger - INFO - 2024-03-14 22:39:55.587480 : home page OPEN
+simpleLogger - ERROR - 2024-03-14 22:39:55.588052 : 0:00:00.000445 : 'str' object has no attribute 'datatype'
+Traceback (most recent call last):
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 109, in home
+    df_detail_all = get_csv_data(Detail)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 43, in __call__
+    return self.func(*args, **kwargs)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/views/pp_02_home.py", line 48, in get_csv_data
+    data = GetPub().get_all(model)
+  File "/Users/andycarter/Documents/develop/thepubpicker/app/static/pythonscripts/pub_get.py", line 26, in get_all
+    dtype_obj[value.name] = value.datatype
+AttributeError: 'str' object has no attribute 'datatype'
+simpleLogger - INFO - 2024-03-14 22:41:24.889556 : home page OPEN
+simpleLogger - INFO - 2024-03-14 22:41:26.972066 : 0:00:02.082185 : home page LOADED
