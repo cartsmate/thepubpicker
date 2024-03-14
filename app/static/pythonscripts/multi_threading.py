@@ -44,6 +44,23 @@ class MultiThreadingPub:
         # df_alchemy = pd.DataFrame(engine.connect().execute(text(sql_str)))
         print(df)
 
+    def query_pub_record(self):
+        curs_obj = self.db_conn.cursor()
+        curs_obj.execute("""SELECT column_name  
+                                        FROM information_schema.columns 
+                                        WHERE table_schema = 'thepubpicker' 
+                                        AND
+                                        table_name = 'pub_record' """)
+        result = curs_obj.fetchall()
+        table_headers = []
+        for res in result:
+            table_headers.append(res[0])
+
+        curs_obj.execute("""select * from thepubpicker.pub_record d""")
+        result = curs_obj.fetchall()
+        global df_pub_record
+        df_pub_record = pd.DataFrame(result, columns=table_headers)
+
     def query_detail(self):
         curs_obj = self.db_conn.cursor()
         curs_obj.execute("""SELECT column_name  
@@ -151,8 +168,8 @@ class MultiThreadingPub:
         thread4 = Thread(target=self.query_station)
         thread5 = Thread(target=self.query_direction)
         thread6 = Thread(target=self.query_daily_event)
-        # thread1 = Thread(target=df_query_1)
-        # thread2 = Thread(target=df_query_2)
+        # thread6 = Thread(target=self.query_pub_record)
+
 
         thread1.start()
         thread2.start()
