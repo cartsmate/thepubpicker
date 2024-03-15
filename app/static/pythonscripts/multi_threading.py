@@ -165,33 +165,31 @@ class MultiThreadingPub:
         # thread1 = Thread(target=self.query_detail)
         # thread2 = Thread(target=self.query_review)
         # thread3 = Thread(target=self.query_diary)
-        # thread4 = Thread(target=self.query_station)
-        # thread5 = Thread(target=self.query_direction)
+        thread4 = Thread(target=self.query_station)
+        thread5 = Thread(target=self.query_direction)
         thread6 = Thread(target=self.query_daily_event)
         thread7 = Thread(target=self.query_pub_record)
 
         # thread1.start()
         # thread2.start()
         # thread3.start()
-        # thread4.start()
-        # thread5.start()
+        thread4.start()
+        thread5.start()
         thread6.start()
         thread7.start()
 
         # thread1.join()
         # thread2.join()
         # thread3.join()
-        # thread4.join()
-        # thread5.join()
+        thread4.join()
+        thread5.join()
         thread6.join()
         thread7.join()
 
-        df_dict = {"df_detail": df_detail, "df_review": df_review, "df_diary": df_diary, "df_station": df_station,
-                   "df_direction": df_direction, "df_daily_event": df_daily_event}
-
-        # df_pub = FilesPub().get_pub_all(df_detail, df_review, df_diary, df_station, df_direction)
-        # df_pub_with_event = pd.merge(df_pub, df_daily_event, on='pub_identity', how='left')
-        # print(df_pub_with_event.shape[0])
+        # df_dict = {"df_detail": df_detail, "df_review": df_review, "df_diary": df_diary, "df_station": df_station,
+        #            "df_direction": df_direction, "df_daily_event": df_daily_event}
+        df_dict = {"df_station": df_station, "df_direction": df_direction, "df_daily_event": df_daily_event,
+                   "df_pub_record": df_pub_record}
 
         print(time.process_time() - start)
 
