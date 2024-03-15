@@ -98,12 +98,23 @@ def home():
         if env_vars['source'] == 'db':
             # GET DATA FROM DATABASE
             df_dict = MultiThreadingPub().thread_caller()
-            df_detail_all = df_dict['df_detail']
-            df_review_all = df_dict['df_review']
+            # df_detail_all = df_dict['df_detail']
+            # df_review_all = df_dict['df_review']
             df_daily_event_all = df_dict['df_daily_event']
-            df_diary_all = df_dict['df_diary']
+            # df_diary_all = df_dict['df_diary']
             df_station_all = df_dict['df_station']
             df_direction_all = df_dict['df_direction']
+            df_pub_record_all = df_dict['df_pub_record']
+            stations_directions_list = Dataframes().go_get_stations_directions_list_flat(df_pub_record_all, df_station_all,
+                                                                                    df_direction_all)
+            directions_list = Dataframes().go_get_directions_list_flat(df_pub_record_all, df_station_all, df_direction_all)
+            # # # GET ALL DATA # # #
+            df_pub = df_pub_record_all
+            # # # GET FEATURED PUB # # #
+            daily_id = FilesDaily().go_get_details_daily(df_pub_record_all)
+            # # # GET FEATURED PUB PHOTOS # # #
+            photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, daily_id, env_vars)
+
         else:
             # GET DATA FROM CSV
             df_detail_all = get_csv_data(Detail)
@@ -112,28 +123,25 @@ def home():
             df_diary_all = get_csv_data(Diary())
             df_station_all = get_csv_data(Station())
             df_direction_all = get_csv_data(Direction())
+            stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all,
+                                                                                    df_direction_all)
+            directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
+            # # # GET ALL DATA # # #
+            df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
+            # # # GET FEATURED PUB # # #
+            daily_id = FilesDaily().go_get_details_daily(df_detail_all)
+            # # # GET FEATURED PUB PHOTOS # # #
+            photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, daily_id, env_vars)
 
-        stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
-        directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
-
-        # # # GET ALL DATA # # #
-        df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
         df_pub_with_event = pd.merge(df_pub, df_daily_event_all, on='pub_identity', how='left')
         pub_ent_json = df_pub_with_event.to_dict(orient='records')
 
-        # # # GET FEATURED PUB # # #
-        daily_id = FilesDaily().go_get_details_daily(df_detail_all)
+        # # # GET FEATURED PUB PHOTOS # # #
         df_pub_1 = FilesPub().get_pub_1(df_pub, daily_id)
         pub_1_json = df_pub_1.to_dict(orient='records')
-        photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, daily_id, env_vars)
-        print('photo')
-        print(len(photos_list))
+
         # # # GET TIMEOUT LIST # # #
         df_timeout = df_pub.loc[df_pub['timeout'] == True]
-        # print('df_pub')
-        # print(df_pub[['pub_identity', 'detail_name', 'timeout']].head(5))
-        # print('df_timeout')
-        # print(df_timeout)
         timeout_json = df_timeout.to_dict(orient='records')
 
         # # # GET COUNTER TALLY # # #

@@ -21,6 +21,11 @@ from app.static.pythonscripts.multi_threading import MultiThreadingPub
 from config import *
 
 
+def get_csv_data(model):
+    data = GetPub().get_all(model)
+    return data
+
+
 @app.route("/pub/", methods=['GET', 'POST'])
 def pub():
     # print('session')
@@ -45,12 +50,22 @@ def pub():
 
         df_dict = MultiThreadingPub().thread_caller()
         # DATABASE FILES
-        df_detail_all = df_dict['df_detail']
-        df_review_all = df_dict['df_review']
-        df_daily_event_all = df_dict['df_daily_event']
-        df_diary_all = df_dict['df_diary']
-        df_station_all = df_dict['df_station']
-        df_direction_all = df_dict['df_direction']
+        if env_vars['source'] == 'db':
+            df_detail_all = df_dict['df_detail']
+            df_review_all = df_dict['df_review']
+            df_daily_event_all = df_dict['df_daily_event']
+            df_diary_all = df_dict['df_diary']
+            df_station_all = df_dict['df_station']
+            df_direction_all = df_dict['df_direction']
+        else:
+            # GET DATA FROM CSV
+            df_detail_all = get_csv_data(Detail)
+            df_review_all = get_csv_data(Review())
+            df_daily_event_all = get_csv_data(DailyEvent())
+            df_diary_all = get_csv_data(Diary())
+            df_station_all = get_csv_data(Station())
+            df_direction_all = get_csv_data(Direction())
+
         df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
         df_1_pub = FilesPub().get_pub_1(df_pub, pub_id)
         pub_json = df_1_pub.to_dict(orient='records')
