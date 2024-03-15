@@ -8,7 +8,7 @@ from app.models.detail.detail_longitude import DetailLongitude
 from app.models.detail.detail_name import DetailName
 from app.models.detail.place import Place
 from app.models.detail.ranking import Ranking
-from app.models.detail.colour import Colour
+from app.models.detail.color import Color
 from app.models.detail.extra import Extra
 from app.models.detail.ordering import Ordering
 from app.models.detail.website import Website
@@ -58,7 +58,7 @@ class PubRecord:
 
     filename = 'combined'
 
-    def __init__(self, pub_identity=PubIdentity(), detail_name=DetailName(),
+    def __init__(self, pub_identity=PubIdentity(), detail_name=DetailName(), color=Color(),
                  address=Address(), detail_latitude=DetailLatitude(), detail_longitude=DetailLongitude(), extra=Extra(),
                  place=Place(), ranking=Ranking(), website=Website(), url=Url(),
                  beer=Beer(), brunch=Brunch(), cocktail=Cocktail(), comedy=Comedy(), dart=Dart(), dj=Dj(),
@@ -79,6 +79,7 @@ class PubRecord:
         self.ranking = ranking,
         self.website = website,
         self.url = url,
+        self.color = color,
 
         self.beer = beer,
         self.brunch = brunch,
