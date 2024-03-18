@@ -8,6 +8,7 @@ from app.models.diary.diary import Diary
 from app.models.station.station import Station
 from app.models.direction.direction import Direction
 from app.models.daily_event.daily_event import DailyEvent
+from app.models.pub_record.pub_record import PubRecord
 from app.models.photo.photo import Photo
 from app.static.pythonscripts.files_pub import FilesPub
 from app.static.pythonscripts.files_photo import FilesPhoto
@@ -48,15 +49,43 @@ def pub():
         # # # GET REQUESTED PUB
         pub_id = request.args.get('id')
 
-        df_dict = MultiThreadingPub().thread_caller()
-        # DATABASE FILES
         if env_vars['source'] == 'db':
-            df_detail_all = df_dict['df_detail']
-            df_review_all = df_dict['df_review']
+            df_dict = MultiThreadingPub().thread_caller()
+            # DATABASE FILES
             df_daily_event_all = df_dict['df_daily_event']
-            df_diary_all = df_dict['df_diary']
             df_station_all = df_dict['df_station']
             df_direction_all = df_dict['df_direction']
+            df_pub_record_all = df_dict['df_pub_record']
+            # df_detail_all = df_dict['df_detail']
+            # df_review_all = df_dict['df_review']
+            # df_daily_event_all = df_dict['df_daily_event']
+            # df_diary_all = df_dict['df_diary']
+            # df_station_all = df_dict['df_station']
+            # df_direction_all = df_dict['df_direction']
+            df_pub = df_pub_record_all
+            photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, pub_id, env_vars)
+            stations_directions_list = Dataframes().go_get_stations_directions_list_flat(df_pub_record_all,
+                                                                                         df_station_all,
+                                                                                         df_direction_all)
+            directions_list = Dataframes().go_get_directions_list_flat(df_pub_record_all, df_station_all,
+                                                                       df_direction_all)
+        elif env_vars['source'] == 'new_csv':
+            df_daily_event_all = get_csv_data(DailyEvent())
+            df_station_all = get_csv_data(Station())
+            df_direction_all = get_csv_data(Direction())
+            df_pub_record_all = get_csv_data(PubRecord())
+
+            stations_directions_list = Dataframes().go_get_stations_directions_list_flat(df_pub_record_all,
+                                                                                         df_station_all,
+                                                                                         df_direction_all)
+            directions_list = Dataframes().go_get_directions_list_flat(df_pub_record_all, df_station_all,
+                                                                       df_direction_all)
+            # # # GET ALL DATA # # #
+            df_pub = df_pub_record_all
+            # # # GET FEATURED PUB # # #
+            daily_id = FilesDaily().go_get_details_daily(df_pub_record_all)
+            # # # GET FEATURED PUB PHOTOS # # #
+            photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, daily_id, env_vars)
         else:
             # GET DATA FROM CSV
             df_detail_all = get_csv_data(Detail)
@@ -66,7 +95,13 @@ def pub():
             df_station_all = get_csv_data(Station())
             df_direction_all = get_csv_data(Direction())
 
-        df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
+            df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
+            photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, pub_id, env_vars)
+
+            stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all,
+                                                                                    df_direction_all)
+            directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
+
         df_1_pub = FilesPub().get_pub_1(df_pub, pub_id)
         pub_json = df_1_pub.to_dict(orient='records')
 
@@ -75,8 +110,6 @@ def pub():
         df_1_event = df_daily_event_all.loc[df_daily_event_all['pub_identity'] == pub_id]
         df_1_event_list_json = df_1_event.to_json(orient='records')
         json_loads = json.loads(df_1_event_list_json)
-
-        photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, pub_id, env_vars)
 
         detail_json = json.loads(json.dumps(Detail().__dict__, default=lambda o: o.__dict__))
         review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
@@ -88,8 +121,7 @@ def pub():
         print('END pub')
         name = "readonly"
         page = "pub"
-        stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all, df_direction_all)
-        directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
+
 
         return render_template('03_pub_.html',
                                pub_1=pub_json,

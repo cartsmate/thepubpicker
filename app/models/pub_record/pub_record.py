@@ -13,7 +13,6 @@ from app.models.detail.extra import Extra
 from app.models.detail.ordering import Ordering
 from app.models.detail.website import Website
 from app.models.detail.url import Url
-from app.models.station.station_identity import StationIdentity
 from app.models.photo.photo_identity import PhotoIdentity
 from app.models.review.beer import Beer
 from app.models.review.brunch import Brunch
@@ -51,7 +50,9 @@ from app.models.diary.saturday import Saturday
 from app.models.diary.sunday import Sunday
 
 from app.models.station.station_name import StationName
+from app.models.station.station_identity import StationIdentity
 from app.models.direction.direction import DirectionName
+from app.models.direction.direction_identity import DirectionIdentity
 
 
 class PubRecord:
@@ -68,7 +69,8 @@ class PubRecord:
                  scenic=Scenic(), sport=Sport(), timeout=Timeout(), wine=Wine(),
                  monday=Monday(), tuesday=Tuesday(), wednesday=Wednesday(), thursday=Thursday(), friday=Friday(),
                  saturday=Saturday(), sunday=Sunday(),
-                 station_name=StationName(), direction_name=DirectionName()):
+                 station_name=StationName(), station_identity=StationIdentity(),
+                 direction_name=DirectionName(), direction_identity=DirectionIdentity()):
         self.pub_identity = pub_identity,
         self.detail_name = detail_name,
         self.address = address,
@@ -115,4 +117,6 @@ class PubRecord:
         self.sunday = sunday,
 
         self.station_name = station_name,
-        self.direction_name = direction_name
+        self.station_identity = station_identity,
+        self.direction_name = direction_name,
+        self.direction_identity = direction_identity
