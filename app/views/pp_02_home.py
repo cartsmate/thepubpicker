@@ -14,6 +14,7 @@ from app.models.daily_event.daily_event import DailyEvent
 from app.models.station.station import Station
 from app.models.direction.direction import Direction
 from app.models.pub.pub import Pub
+from app.models.pub_record.pub_record import PubRecord
 
 from app.static.pythonscripts.dataframes import Dataframes
 from app.static.pythonscripts.postgres import PostgresConnection
@@ -114,7 +115,23 @@ def home():
             daily_id = FilesDaily().go_get_details_daily(df_pub_record_all)
             # # # GET FEATURED PUB PHOTOS # # #
             photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, daily_id, env_vars)
+        elif env_vars['source'] == 'new_csv':
+            df_daily_event_all = get_csv_data(DailyEvent())
+            df_station_all = get_csv_data(Station())
+            df_direction_all = get_csv_data(Direction())
+            df_pub_record_all = get_csv_data(PubRecord())
 
+            stations_directions_list = Dataframes().go_get_stations_directions_list_flat(df_pub_record_all,
+                                                                                         df_station_all,
+                                                                                         df_direction_all)
+            directions_list = Dataframes().go_get_directions_list_flat(df_pub_record_all, df_station_all,
+                                                                       df_direction_all)
+            # # # GET ALL DATA # # #
+            df_pub = df_pub_record_all
+            # # # GET FEATURED PUB # # #
+            daily_id = FilesDaily().go_get_details_daily(df_pub_record_all)
+            # # # GET FEATURED PUB PHOTOS # # #
+            photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, daily_id, env_vars)
         else:
             # GET DATA FROM CSV
             df_detail_all = get_csv_data(Detail)
@@ -126,6 +143,7 @@ def home():
             stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all,
                                                                                     df_direction_all)
             directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
+
             # # # GET ALL DATA # # #
             df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
             # # # GET FEATURED PUB # # #
@@ -135,7 +153,7 @@ def home():
 
         df_pub_with_event = pd.merge(df_pub, df_daily_event_all, on='pub_identity', how='left')
         pub_ent_json = df_pub_with_event.to_dict(orient='records')
-
+        print('df_pub_with_event', df_pub_with_event.shape[0])
         # # # GET FEATURED PUB PHOTOS # # #
         df_pub_1 = FilesPub().get_pub_1(df_pub, daily_id)
         pub_1_json = df_pub_1.to_dict(orient='records')
