@@ -1111,3 +1111,9 @@ simpleLogger - INFO - 2024-04-04 14:53:01.104744 : home page OPEN
 simpleLogger - INFO - 2024-04-04 14:53:02.514429 : 0:00:01.409685 : home page LOADED
 simpleLogger - INFO - 2024-04-04 14:53:08.704746 : home page OPEN
 simpleLogger - INFO - 2024-04-04 14:53:09.799459 : 0:00:01.094713 : home page LOADED
+simpleLogger - INFO - 2024-04-04 15:52:04.596082 : home page OPEN
+simpleLogger - INFO - 2024-04-04 15:52:06.225792 : 0:00:01.629710 : home page LOADED
+simpleLogger - INFO - 2024-04-04 15:52:22.361562 : home page OPEN
+simpleLogger - INFO - 2024-04-04 15:52:23.472727 : 0:00:01.111165 : home page LOADED
+simpleLogger - INFO - 2024-04-04 16:01:57.508513 : home page OPEN
+simpleLogger - INFO - 2024-04-04 16:01:58.944259 : 0:00:01.435746 : home page LOADED
