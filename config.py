@@ -6,31 +6,6 @@ from configparser import ConfigParser
 
 
 class Configurations:
-    # def get_config(self):
-    #     directory_path = os.getcwd()
-    #     with open(directory_path + '/config_s.json') as file:  # Opening JSON file
-    #         config = json.load(file)  # returns JSON object as a dictionary
-    #     return config
-    # def get_ini(self):
-        # try:
-        #     directory_path = os.getcwd()
-        #     constants = ConfigParser()
-        #     filepath = directory_path + "/constants_s.ini"
-        #     constants.read(filepath)
-        #     config2 = {
-        #         "directory_path": directory_path,
-        #         "google_key": constants.get('local', 'MAP'),
-        #         "access_id": constants.get('local', 'ID'),
-        #         "access_key": constants.get('local', 'KEY'),
-        #         "bucket_name": constants.get('local', 'BUCKET'),
-        #         "env": "qual"
-        #     }
-        # except:
-        # load_dotenv()
-        # GOOGLE_KEY = os.getenv("HEROKU_GOOGLE_API")
-        # print('GOOGLE_KEY')
-        # print(GOOGLE_KEY)
-        # MY_ENV_VAR = os.getenv('MY_ENV_VAR')
     @staticmethod
     def get_config():
         path = os.getcwd()
@@ -54,5 +29,35 @@ class Configurations:
             "db_port": os.environ.get("DB_PORT"),
             "session_key": os.environ.get("SESSION_KEY")
         }
-        # print('config2: ' + str(config2))
         return config
+
+   # # # # # OLD METHOD - GET VARIABLES FROM JSON FILE # # # # #
+
+   # def get_config(self):
+    #     directory_path = os.getcwd()
+    #     with open(directory_path + '/config_s.json') as file:  # Opening JSON file
+    #         config = json.load(file)  # returns JSON object as a dictionary
+    #     return config
+
+    # # # # # OLD METHOD - GET VARIABLES FROM INI FILE # # # # #
+
+    # def get_ini(self):
+        # try:
+        #     directory_path = os.getcwd()
+        #     constants = ConfigParser()
+        #     filepath = directory_path + "/constants_s.ini"
+        #     constants.read(filepath)
+        #     config2 = {
+        #         "directory_path": directory_path,
+        #         "google_key": constants.get('local', 'MAP'),
+        #         "access_id": constants.get('local', 'ID'),
+        #         "access_key": constants.get('local', 'KEY'),
+        #         "bucket_name": constants.get('local', 'BUCKET'),
+        #         "env": "qual"
+        #     }
+        # except:
+        # load_dotenv()
+        # GOOGLE_KEY = os.getenv("HEROKU_GOOGLE_API")
+        # print('GOOGLE_KEY')
+        # print(GOOGLE_KEY)
+        # MY_ENV_VAR = os.getenv('MY_ENV_VAR')

@@ -1049,3 +1049,65 @@ simpleLogger - INFO - 2024-04-04 09:02:44.274727 : home page OPEN
 simpleLogger - INFO - 2024-04-04 09:02:45.842945 : 0:00:01.568214 : home page LOADED
 simpleLogger - INFO - 2024-04-04 12:31:56.785675 : home page OPEN
 simpleLogger - INFO - 2024-04-04 12:31:58.216881 : 0:00:01.431200 : home page LOADED
+simpleLogger - INFO - 2024-04-04 12:52:20.458059 : home page OPEN
+simpleLogger - INFO - 2024-04-04 12:52:22.010680 : 0:00:01.552615 : home page LOADED
+simpleLogger - INFO - 2024-04-04 12:52:27.569922 : home page OPEN
+simpleLogger - INFO - 2024-04-04 12:52:29.101812 : 0:00:01.531884 : home page LOADED
+simpleLogger - INFO - 2024-04-04 12:54:31.742088 : home page OPEN
+simpleLogger - ERROR - 2024-04-04 12:54:33.008027 : 0:00:01.265926 : 'station_name'
+Traceback (most recent call last):
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/views/pp_02_home.py", line 154, in home
+    stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all,
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/static/pythonscripts/dataframes.py", line 62, in go_get_stations_directions_list
+    df_stations_directions = self.go_get_stations_directions(df_detail_all, df_station_all, df_direction_all)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/static/pythonscripts/dataframes.py", line 42, in go_get_stations_directions
+    how='left').sort_values(
+                ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 6912, in sort_values
+    k = self._get_label_or_level_values(by, axis=axis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/generic.py", line 1850, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'station_name'
+simpleLogger - INFO - 2024-04-04 12:55:49.251200 : home page OPEN
+simpleLogger - INFO - 2024-04-04 12:55:50.473508 : 0:00:01.222303 : home page LOADED
+simpleLogger - INFO - 2024-04-04 12:55:59.946921 : home page OPEN
+simpleLogger - INFO - 2024-04-04 12:56:01.119842 : 0:00:01.172914 : home page LOADED
+simpleLogger - INFO - 2024-04-04 14:20:37.537615 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:20:39.301591 : 0:00:01.763971 : home page LOADED
+simpleLogger - ERROR - 2024-04-04 14:20:39.301669 : 0:00:00.000077 : 'photos'
+Traceback (most recent call last):
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/views/pp_02_home.py", line 154, in home
+    photos_list=source_data['photos'],
+                ~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'photos'
+simpleLogger - INFO - 2024-04-04 14:21:03.651451 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:21:04.837136 : 0:00:01.185679 : home page LOADED
+simpleLogger - ERROR - 2024-04-04 14:21:04.837207 : 0:00:00.000070 : 'stations_directions_list'
+Traceback (most recent call last):
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/views/pp_02_home.py", line 157, in home
+    stations_directions_list=source_data['stations_directions_list'],
+                             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'stations_directions_list'
+simpleLogger - INFO - 2024-04-04 14:21:34.352373 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:21:35.619043 : 0:00:01.266664 : home page LOADED
+simpleLogger - INFO - 2024-04-04 14:21:40.466904 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:21:41.540885 : 0:00:01.073976 : home page LOADED
+simpleLogger - INFO - 2024-04-04 14:21:52.083005 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:21:53.220314 : 0:00:01.137303 : home page LOADED
+simpleLogger - INFO - 2024-04-04 14:48:40.459161 : home page OPEN
+simpleLogger - ERROR - 2024-04-04 14:48:40.459161 : 0:00:00.000472 : SourceData.get_source_data() missing 1 required positional argument: 'env_vars'
+Traceback (most recent call last):
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/views/pp_02_home.py", line 66, in home
+    source_data = SourceData.get_source_data(env_vars)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SourceData.get_source_data() missing 1 required positional argument: 'env_vars'
+simpleLogger - INFO - 2024-04-04 14:53:01.104744 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:53:02.514429 : 0:00:01.409685 : home page LOADED
+simpleLogger - INFO - 2024-04-04 14:53:08.704746 : home page OPEN
+simpleLogger - INFO - 2024-04-04 14:53:09.799459 : 0:00:01.094713 : home page LOADED

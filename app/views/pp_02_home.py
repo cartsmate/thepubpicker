@@ -1,55 +1,20 @@
-import json
+from app import app
+from flask import render_template, request, session
+
 import datetime
 import functools
 import pandas as pd
-from app import app
 
-from flask import render_template, request, session
-# Flask-PyMongo, Flask-WTF, Flask-Mail, Flask-RestFul, Flask-Uploads, Flask-User, Flask-Login
-
-from app.models.detail.detail import Detail
-from app.models.review.review import Review
-from app.models.diary.diary import Diary
-from app.models.daily_event.daily_event import DailyEvent
-from app.models.station.station import Station
-from app.models.direction.direction import Direction
-from app.models.pub.pub import Pub
-from app.models.pub_record.pub_record import PubRecord
-
-from app.static.pythonscripts.dataframes import Dataframes
-from app.static.pythonscripts.postgres import PostgresConnection
-from app.static.pythonscripts.s3 import S3
-
-from app.static.pythonscripts.pub_get import GetPub
 from app.static.pythonscripts.files_pub import FilesPub
-from app.static.pythonscripts.files_photo import FilesPhoto
-from app.static.pythonscripts.files_daily import FilesDaily
-from app.static.pythonscripts.files_counter import FilesCounter
+from app.static.pythonscripts.model_metadata import ModelMetadata
+from app.static.pythonscripts.source_data import SourceData
+from app.static.pythonscripts.visitor_counter import VisitorCounter
 
-from app.static.pythonscripts.multi_threading import MultiThreadingPub
-
-from logger.logger import Logger
 from config import *
+from logger.logger import Logger
 
 
-class CountCalls:
-
-    def __init__(self, func):
-        self.func = func
-        self.num_calls = 0
-
-    def __call__(self, *args, **kwargs):
-        self.num_calls += 1
-        print(f'This is executed {self.num_calls} times')
-        return self.func(*args, **kwargs)
-
-
-@CountCalls
-def get_csv_data(model):
-    data = GetPub().get_all(model)
-    return data
-
-
+# # # # # UNNECESSARY DECORATOR - PURELY FOR CODE PRACTICE # # # # #
 def debug(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -64,6 +29,7 @@ def debug(func):
     return wrapper
 
 
+# # # # # UNNECESSARY DECORATOR - PURELY FOR CODE PRACTICE # # # # #
 def my_decorator(statement):
     def print_remarks(func):
         @functools.wraps(func)
@@ -84,125 +50,60 @@ def my_decorator(statement):
 @debug
 @my_decorator(statement='hello world')
 def home():
+    # GET CONFIG
     env_vars = Configurations.get_config()
+
+    # SET SESSION KEY ON HOME PAGE
     session['KEY_NAME'] = env_vars['session_key']
 
     logger = Logger().create_logger()
-
-    # # # GET CONFIG # # #
+    t1 = datetime.datetime.now()
     try:
-        t = datetime.datetime.now()
-        logger.info(f'{t} : home page OPEN')
-
+        logger.info(f'{t1} : home page OPEN')
         filters = request.args.get('filters')
 
-        if env_vars['source'] == 'db':
-            # GET DATA FROM DATABASE
-            df_dict = MultiThreadingPub().thread_caller()
-            # df_detail_all = df_dict['df_detail']
-            # df_review_all = df_dict['df_review']
-            df_daily_event_all = df_dict['df_daily_event']
-            # df_diary_all = df_dict['df_diary']
-            df_station_all = df_dict['df_station']
-            df_direction_all = df_dict['df_direction']
-            df_pub_record_all = df_dict['df_pub_record']
-            stations_directions_list = Dataframes().go_get_stations_directions_list_flat(df_pub_record_all, df_station_all,
-                                                                                    df_direction_all)
-            directions_list = Dataframes().go_get_directions_list_flat(df_pub_record_all, df_station_all, df_direction_all)
-            # # # GET ALL DATA # # #
-            df_pub = df_pub_record_all
-            # # # GET FEATURED PUB # # #
-            daily_id = FilesDaily().go_get_details_daily(df_pub_record_all)
-            # # # GET FEATURED PUB PHOTOS # # #
-            photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, daily_id, env_vars)
-        elif env_vars['source'] == 'new_csv':
-            df_daily_event_all = get_csv_data(DailyEvent())
-            df_station_all = get_csv_data(Station())
-            df_direction_all = get_csv_data(Direction())
-            df_pub_record_all = get_csv_data(PubRecord())
+        # GET DATA FROM SOURCE (DETERMINED BY CONFIG)
+        source_data = SourceData().get_source_data(env_vars)
+        pub_ent_json = pd.merge(source_data['df_pub'],
+                                source_data['df_daily_event_all'],
+                                on='pub_identity', how='left').to_dict(orient='records')
 
-            stations_directions_list = Dataframes().go_get_stations_directions_list_flat(df_pub_record_all,
-                                                                                         df_station_all,
-                                                                                         df_direction_all)
-            directions_list = Dataframes().go_get_directions_list_flat(df_pub_record_all, df_station_all,
-                                                                       df_direction_all)
-            # # # GET ALL DATA # # #
-            df_pub = df_pub_record_all
-            # # # GET FEATURED PUB # # #
-            daily_id = FilesDaily().go_get_details_daily(df_pub_record_all)
-            # # # GET FEATURED PUB PHOTOS # # #
-            photos_list = FilesPhoto().go_get_1_photo_request(df_pub_record_all, daily_id, env_vars)
-        else:
-            # GET DATA FROM CSV
-            df_detail_all = get_csv_data(Detail)
-            df_review_all = get_csv_data(Review())
-            df_daily_event_all = get_csv_data(DailyEvent())
-            df_diary_all = get_csv_data(Diary())
-            df_station_all = get_csv_data(Station())
-            df_direction_all = get_csv_data(Direction())
-            stations_directions_list = Dataframes().go_get_stations_directions_list(df_detail_all, df_station_all,
-                                                                                    df_direction_all)
-            directions_list = Dataframes().go_get_directions_list(df_detail_all, df_station_all, df_direction_all)
-
-            # # # GET ALL DATA # # #
-            df_pub = FilesPub().get_pub_all(df_detail_all, df_review_all, df_diary_all, df_station_all, df_direction_all)
-            # # # GET FEATURED PUB # # #
-            daily_id = FilesDaily().go_get_details_daily(df_detail_all)
-            # # # GET FEATURED PUB PHOTOS # # #
-            photos_list = FilesPhoto().go_get_1_photo_request(df_detail_all, daily_id, env_vars)
-
-        df_pub_with_event = pd.merge(df_pub, df_daily_event_all, on='pub_identity', how='left')
-        pub_ent_json = df_pub_with_event.to_dict(orient='records')
-        print('df_pub_with_event', df_pub_with_event.shape[0])
         # # # GET FEATURED PUB PHOTOS # # #
-        df_pub_1 = FilesPub().get_pub_1(df_pub, daily_id)
-        pub_1_json = df_pub_1.to_dict(orient='records')
+        pub_1_json = (FilesPub().get_pub_1(source_data['df_pub'], source_data['daily_id'])
+                      .to_dict(orient='records'))
 
         # # # GET TIMEOUT LIST # # #
-        df_timeout = df_pub.loc[df_pub['timeout'] == True]
-        timeout_json = df_timeout.to_dict(orient='records')
+        timeout_json = (source_data['df_pub'].loc[source_data['df_pub']['timeout'] == True]
+                        .to_dict(orient='records'))
 
         # # # GET COUNTER TALLY # # #
-        if env_vars['env'] == 'qual':
-            counter = FilesCounter().go_get_counter()
-            new_counter = FilesCounter().go_write_counter(counter + 1)
-        else:
-            counter = S3().go_get_counter('counter', ['pub_counter'])
-            new_counter = counter + 1
-            data = {'pub_counter': [new_counter]}
-            df_updated_counter = pd.DataFrame(data)
-            S3().s3_write(df_updated_counter, 'counter_prod.csv')
-        counter6 = str(new_counter).zfill(6)
+        counter6 = VisitorCounter.get_counter(env_vars)
 
         # # # GET MODEL METADATA # # #
-        review_json = json.loads(json.dumps(Review().__dict__, default=lambda o: o.__dict__))
-        diary_json = json.loads(json.dumps(Diary().__dict__, default=lambda o: o.__dict__))
-        pub_obj_json = json.loads(json.dumps(Pub().__dict__, default=lambda o: o.__dict__))
+        models_json = ModelMetadata.get_model_metadata()
 
-        gap = datetime.datetime.now() - t
-        t = datetime.datetime.now()
-        logger.info(f'{t} : {gap} : home page LOADED')
+        # # # LOG DURATION TO GET DATA # # #
+        t2 = datetime.datetime.now()
+        logger.info(f'{t2} : {(t2 - t1)} : home page LOADED')
+
         return render_template('02_home_.html',
                                env_vars=env_vars,
                                color_theme='#A1BE95',
-                               daily_id=daily_id,
+                               daily_id=source_data['daily_id'],
                                pub_1=pub_1_json,
                                pub_all=pub_ent_json,
-                               review=review_json,
-                               diary=diary_json,
-                               pub_obj=pub_obj_json,
-                               photos_list=photos_list,
+                               review=models_json['review_json'],
+                               diary=models_json['diary_json'],
+                               pub_obj=models_json['pub_obj_json'],
+                               photos_list=source_data['photos_list'],
                                filters=filters,
-                               directions_list=directions_list,
-                               stations_directions_list=stations_directions_list,
+                               directions_list=source_data['directions_list'],
+                               stations_directions_list=source_data['stations_directions_list'],
                                counter=counter6,
                                page='home',
-                               timeout_pubs=timeout_json
-
-                               # no_of_review=no_of_reviews
-                               )
+                               timeout_pubs=timeout_json)
     except Exception as e:
-        gap = datetime.datetime.now() - t
-        t = datetime.datetime.now()
-        logger.error(f'{t} : {gap} : {e}', exc_info=True)
+        gap = datetime.datetime.now() - t1
+        t2 = datetime.datetime.now()
+        logger.error(f'{t1} : {gap} : {e}', exc_info=True)
         return render_template('00_errorhandling_500.html')

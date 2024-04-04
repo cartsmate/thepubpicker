@@ -13,20 +13,14 @@ directory_path = Configurations.get_config()['directory_path']
 class GetPub:
 
     @staticmethod
-    def get_all( model):
-        # dtype_obj = {}
-        # for key, value in model.__dict__.items():
-        #     dtype_obj[value.name] = value.datatype
+    def get_all(model):
         df = pd.read_csv(f"{directory_path}/files/{model.filename}.csv")
-        # , dtype=dtype_obj)
-
         df = df.fillna('')
         print(f'{model.__class__.__name__} | {df.shape[0]}')
         return df
 
     @staticmethod
     def get_1(df, pub_id):
-        # df = self.get_all(model)
         df_1 = df.loc[df['pub_identity'] == pub_id]
         return df_1
 
