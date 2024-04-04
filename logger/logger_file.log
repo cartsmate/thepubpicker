@@ -1045,3 +1045,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/boto3/resources/base.py", line 125, in __init__
     raise ValueError(f'Required parameter {identifier} not set')
 ValueError: Required parameter name not set
+simpleLogger - INFO - 2024-04-04 09:02:44.274727 : home page OPEN
+simpleLogger - INFO - 2024-04-04 09:02:45.842945 : 0:00:01.568214 : home page LOADED
+simpleLogger - INFO - 2024-04-04 12:31:56.785675 : home page OPEN
+simpleLogger - INFO - 2024-04-04 12:31:58.216881 : 0:00:01.431200 : home page LOADED

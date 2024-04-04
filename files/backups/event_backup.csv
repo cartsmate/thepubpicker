@@ -1,6 +1,6 @@
 event_identity,pub_identity,event_day,event_detail,event_type
 334b7c33-21e0-4e72-9bff-4963f076e3a3,0027d4bf-8c57-473e-aa7e-33a3b1b1d95b,thursday,7.30pm,quiz
-62902865-ec7a-465a-adf4-e5a6b588824a,0070a010-95c5-494b-878f-47bcae4be933,sunday,closed,hours
+62902865-ec7a-465a-adf4-e5a6b588824a,0070a010-95c5-494b-878f-47bcae4be933,sunday,Closed,hours
 fcb812ef-cc3a-4a1b-852f-65bd315f7ba1,008849b1-87fd-4453-90f8-9b0089e78063,friday,,
 346b7b0d-cffe-4445-81d8-325d3d979925,008849b1-87fd-4453-90f8-9b0089e78063,monday,Ukelele jamming,music
 c872c181-e9cf-469c-853a-169c4af0aaa3,008849b1-87fd-4453-90f8-9b0089e78063,saturday,,
@@ -22,16 +22,16 @@ e247c269-0d2f-470a-a1d1-faeed0d647e2,02d0238e-4c9e-4b8b-a3d7-75932572cd2b,monday
 4ead140d-fbcb-4b36-a5db-1ca0a57e9abd,030c2476-0498-4cdf-8368-5a55a1e8f902,friday,,music
 1eac0351-b72f-47a2-8463-21239eb34524,030c2476-0498-4cdf-8368-5a55a1e8f902,monday,Closed,hours
 03749296-3750-4939-9ca3-2a4b70b613c3,030c2476-0498-4cdf-8368-5a55a1e8f902,sunday,,music
-54e33f01-1d65-4f58-97c7-e54ad5370049,030c2476-0498-4cdf-8368-5a55a1e8f902,tuesday,closed,hours
+54e33f01-1d65-4f58-97c7-e54ad5370049,030c2476-0498-4cdf-8368-5a55a1e8f902,tuesday,Closed,hours
 9446f52f-f94d-4288-a96c-5b9201ac622d,030c2476-0498-4cdf-8368-5a55a1e8f902,wednesday,Closed,hours
 17f5f9bf-5eea-417f-b7b5-aabb93b80ed9,034f929e-3ec9-4e3d-b7aa-ecaf4ecab4a7,wednesday,7pm,quiz
 d4a0516f-8c21-4257-bd3a-f1f8da417056,038b9ae5-c670-4797-ae52-571c8eea95f1,monday,Closed,hours
 9e7e8ba0-8640-4ddb-9482-85cb056e1489,038b9ae5-c670-4797-ae52-571c8eea95f1,sunday,Closed,hours
 f87adf09-a766-4e80-afc3-5b343c6bd266,039eff8c-6227-49b2-be8a-36126274addf,thursday,8pm,quiz
-9a91c6c1-3783-4278-a5c6-ec90437cb315,04738700-75a2-4d5c-864d-de41c81995db,sunday,,live jazz
+9a91c6c1-3783-4278-a5c6-ec90437cb315,04738700-75a2-4d5c-864d-de41c81995db,sunday,Live jazz,music
 449aa555-1504-4558-a7e1-aba28a6721ec,04738700-75a2-4d5c-864d-de41c81995db,tuesday,7pm,quiz
-3b0efa92-4713-4bab-9b25-5837c2b7460f,04ea139a-05b9-42ee-8bd0-3f3271c750e1,monday,Bingo,Bingo
-b8917737-098c-4d26-bfee-88fcf9b9d17f,05493a89-5d8f-407c-b5ca-d269f6d5af55,saturday,Noon,Brunch
+3b0efa92-4713-4bab-9b25-5837c2b7460f,04ea139a-05b9-42ee-8bd0-3f3271c750e1,monday,Bingo,entertain
+b8917737-098c-4d26-bfee-88fcf9b9d17f,05493a89-5d8f-407c-b5ca-d269f6d5af55,saturday,Noon,brunch
 c2a1d999-5431-4bea-8541-edd97b8f928c,05f4d08e-e2cc-4597-9964-96bc3fd9c799,monday,Closed,hours
 43ab5a37-efa5-4735-b1fe-210d4fdcc141,05f4d08e-e2cc-4597-9964-96bc3fd9c799,saturday,,music
 e6ea86ea-aa69-4df0-97a3-f757d4e8b55f,060e9c82-2b9f-4547-bd1e-eb313934bc6b,thursday,7.30pm,quiz
@@ -39,67 +39,66 @@ b15cbdb6-75b0-4771-b4aa-b6c4c583fd12,06d84519-d68f-4037-a943-fb10361b023d,wednes
 18c50969-e63a-4f93-947a-6d37ac28fcc8,06e2e2ca-8d55-41ac-bf73-855d9019d6f1,monday,Closed,hours
 398c6cad-b94b-4725-ad42-bce6f6292ff3,06e2e2ca-8d55-41ac-bf73-855d9019d6f1,tuesday,Closed,hours
 98c71b65-c6e4-406d-8d3a-7ff4786498e1,0748c729-9d48-488a-b224-f6bcec262442,tuesday,8pm,quiz
-5fb15e13-cea8-4e35-9c11-30daa6dd5fa0,07cb0b23-2f4a-4ad6-9425-61afba597d59,monday,closed,hours
-e99d5fee-a871-430c-8d87-add83fe50f6d,07cb0b23-2f4a-4ad6-9425-61afba597d59,tuesday,closed,hours
-b8bf5621-ce94-4a1a-927d-cd8b9b51c4a4,07cb0b23-2f4a-4ad6-9425-61afba597d59,wednesday,closed,hours
-da8b2d0a-8483-41e5-b7e4-11a3205a14cb,09e133c1-5f81-4792-bbad-8cb3e30d75f7,monday,closed,hours
-36957e16-4718-49f4-9df8-9745f2b80aae,0a0b64ce-badb-49b7-b4e6-2a725d564598,friday,DJs,DJs
-efe7decb-8081-4536-bc0b-737b3e4ff350,0a0b64ce-badb-49b7-b4e6-2a725d564598,saturday,DJs,DJs
+5fb15e13-cea8-4e35-9c11-30daa6dd5fa0,07cb0b23-2f4a-4ad6-9425-61afba597d59,monday,Closed,hours
+e99d5fee-a871-430c-8d87-add83fe50f6d,07cb0b23-2f4a-4ad6-9425-61afba597d59,tuesday,Closed,hours
+b8bf5621-ce94-4a1a-927d-cd8b9b51c4a4,07cb0b23-2f4a-4ad6-9425-61afba597d59,wednesday,Closed,hours
+da8b2d0a-8483-41e5-b7e4-11a3205a14cb,09e133c1-5f81-4792-bbad-8cb3e30d75f7,monday,Closed,hours
+36957e16-4718-49f4-9df8-9745f2b80aae,0a0b64ce-badb-49b7-b4e6-2a725d564598,friday,DJs,dj
+efe7decb-8081-4536-bc0b-737b3e4ff350,0a0b64ce-badb-49b7-b4e6-2a725d564598,saturday,DJs,dj
 a190fb2a-957e-4a9c-919e-230e651a6496,0a0b64ce-badb-49b7-b4e6-2a725d564598,sunday,8pm,quiz
 deba1eb1-b6f7-4829-847d-5fa516abd56e,0a0b64ce-badb-49b7-b4e6-2a725d564598,tuesday,board games,entertain
 2506c1b4-57b4-4d45-805c-f29463b5e123,0a8a43f0-000e-4a88-9874-d13926e71eed,thursday,7.30pm,quiz
 1584ef21-c092-47f8-8c88-682a2189d509,0b1ef52c-4497-4de4-b606-305b2ee1911e,saturday,,music
 12546b06-bf04-4378-83cd-f88289e5a537,0b1ef52c-4497-4de4-b606-305b2ee1911e,wednesday,,quiz
-e025841a-c7c9-402b-809b-6992a019efaa,0d0566ca-beb3-41be-8a22-5415fcf79d43,saturday,,Comedy
-797a3efd-0fad-4f28-84cb-8cee84058d38,0d0566ca-beb3-41be-8a22-5415fcf79d43,sunday,,Comedy
-b839c4aa-63e4-4d76-8e1d-9fd0d4f259f8,0d0566ca-beb3-41be-8a22-5415fcf79d43,tuesday,,Comedy
+e025841a-c7c9-402b-809b-6992a019efaa,0d0566ca-beb3-41be-8a22-5415fcf79d43,saturday,comedy,comedy
+797a3efd-0fad-4f28-84cb-8cee84058d38,0d0566ca-beb3-41be-8a22-5415fcf79d43,sunday,comedy,comedy
+b839c4aa-63e4-4d76-8e1d-9fd0d4f259f8,0d0566ca-beb3-41be-8a22-5415fcf79d43,tuesday,comedy,comedy
 3fa63925-b21c-461f-9661-0b31a022af19,0d4dd558-590d-4046-a40d-87b1475fb44a,tuesday,7.30pm,quiz
 e5019441-cb0b-4fea-9daa-2897ceacda11,0f955e0b-e77a-4a59-8c8d-3297abca1313,sunday,,music
 cc9a81b6-4a0b-4035-ade0-feee7916e6a1,0f955e0b-e77a-4a59-8c8d-3297abca1313,tuesday,,quiz
-007360fd-1710-4e0c-947a-1a25a9f8b74e,111a75e9-2d09-486a-a54e-5992dbc2eca0,monday,closed,hours
-3467c824-bff9-4cd2-8c17-1c731ad32f4f,111a75e9-2d09-486a-a54e-5992dbc2eca0,tuesday,closed,hours
-50203933-01bf-4f98-8d24-8b89ea02c7c3,11e6a9b3-c9bb-4074-99b3-ac719ffcd1ff,monday,closed,hours
+007360fd-1710-4e0c-947a-1a25a9f8b74e,111a75e9-2d09-486a-a54e-5992dbc2eca0,monday,Closed,hours
+3467c824-bff9-4cd2-8c17-1c731ad32f4f,111a75e9-2d09-486a-a54e-5992dbc2eca0,tuesday,Closed,hours
+50203933-01bf-4f98-8d24-8b89ea02c7c3,11e6a9b3-c9bb-4074-99b3-ac719ffcd1ff,monday,Closed,hours
 cc8ba32d-ca19-4d60-9f68-b01f3beac62f,12a39cf2-449c-4e3e-b7ca-40622cf386aa,tuesday,7.30pm,quiz
-bae818c4-0518-4fe6-a766-5fa3b433d11e,12b05c98-b08f-4df2-850e-76180a358f48,thursday,,Steak night
-0c0cba6c-5021-4bb1-ae69-c82b54f0836e,13177ee7-67ff-42b4-8bd1-4c1f7a91598f,monday,,comedy
+bae818c4-0518-4fe6-a766-5fa3b433d11e,12b05c98-b08f-4df2-850e-76180a358f48,thursday,Steak night,entertain
+0c0cba6c-5021-4bb1-ae69-c82b54f0836e,13177ee7-67ff-42b4-8bd1-4c1f7a91598f,monday,comedy,comedy
 083c72e4-7887-4760-b127-dfe5f209e406,13177ee7-67ff-42b4-8bd1-4c1f7a91598f,wednesday,8pm,quiz
 f6c7929d-2b46-4176-8945-de6de82e9a85,143ea7fa-72e7-47a9-b034-8f95a5465e62,sunday,7.30pm,quiz
 73fdfef1-5da5-4a86-a717-1ab3f05ba109,144c41db-e6f0-4b3f-b6d1-5b6b5b2e5fcb,thursday,7.30pm,quiz
 ab365927-7698-4e51-872f-c4c893b71952,1496934f-16e7-4848-b686-504957119989,friday,,music
 0ccc0577-475f-487d-a327-fc2beb47f85b,1496934f-16e7-4848-b686-504957119989,saturday,,music
 0a2e84dc-5b82-4e34-81d7-66ea58925fd7,1496934f-16e7-4848-b686-504957119989,thursday,,music
-09020c5e-156b-4eb1-bfe1-c6840b971c91,15ea92fa-f9d6-43b6-b2aa-3d58139d18fe,sunday,closed,hours
-cb100b87-3202-4028-8b18-846195765a4b,1605a183-1c79-44a6-905a-aab6d109bfbf,monday,closed,hours
-ad3975ab-4ac4-4e63-ad27-4e086e7f3dfe,1605a183-1c79-44a6-905a-aab6d109bfbf,tuesday,closed,hours
+09020c5e-156b-4eb1-bfe1-c6840b971c91,15ea92fa-f9d6-43b6-b2aa-3d58139d18fe,sunday,Closed,hours
+cb100b87-3202-4028-8b18-846195765a4b,1605a183-1c79-44a6-905a-aab6d109bfbf,monday,Closed,hours
+ad3975ab-4ac4-4e63-ad27-4e086e7f3dfe,1605a183-1c79-44a6-905a-aab6d109bfbf,tuesday,Closed,hours
 7dba7385-9ba2-4eb6-993a-085b2382504b,162dd12d-330c-429f-a3e1-12661ebfb5c7,wednesday,8.30pm,quiz
 795e8c32-4042-487d-844a-309b3c06efac,1add98b7-8cca-4c6e-9a8a-a35e3b4e41ec,monday,8.30pm,quiz
-b89468f9-788e-4efc-bdf4-98161c370ab7,1b463e1c-9190-4275-a39c-d694eb42d636,sunday,closed,hours
+b89468f9-788e-4efc-bdf4-98161c370ab7,1b463e1c-9190-4275-a39c-d694eb42d636,sunday,Closed,hours
 6853b577-f215-4dea-a7b5-9423b6bad22f,1c199a57-3098-4df8-bdac-264d8eab6968,tuesday,,quiz
-1fa6d601-ae2b-4047-a8aa-7083d93f2e6c,1cd0e488-6da9-4d70-82b2-8078b23d674b,monday,closed,hours
-59a9f42e-ce2b-4166-a1bd-6cedfb066459,1f0559e7-d494-4404-8d53-e093ba2091b6,monday,closed,hours
+1fa6d601-ae2b-4047-a8aa-7083d93f2e6c,1cd0e488-6da9-4d70-82b2-8078b23d674b,monday,Closed,hours
+59a9f42e-ce2b-4166-a1bd-6cedfb066459,1f0559e7-d494-4404-8d53-e093ba2091b6,monday,Closed,hours
 df15f110-52e7-4b13-9a26-d1ad1a8ffac0,1f0559e7-d494-4404-8d53-e093ba2091b6,sunday,,music
 66f76615-579e-46e2-b6c2-9d5077de28db,20a2785f-94a0-474f-ac6b-284bd9366bf7,thursday,Bingo,entertain
 508630d1-1c55-4382-9e2a-b1a8c0638968,20a2785f-94a0-474f-ac6b-284bd9366bf7,wednesday,7.30pm,quiz
-5d411b30-ddbd-475c-830f-89b6694ccbbe,22646d9c-ddb7-4170-86d6-d54993e70a20,monday,closed,hours
+5d411b30-ddbd-475c-830f-89b6694ccbbe,22646d9c-ddb7-4170-86d6-d54993e70a20,monday,Closed,hours
 e90b707f-0569-4aa3-a12c-87ccc11a52c8,23a49eca-7ba3-4e8e-acc1-24a6ef5bb145,wednesday,7.30pm,quiz
 16b84ce3-0c68-4aa4-bd9a-f4735c42a2ac,24f5f284-5c7b-41cf-bcec-56e7db601464,wednesday,,quiz
 3e3f3959-44b9-4795-b31d-b7ed738330be,25778f10-deeb-4cbb-a724-52493a571301,tuesday,,quiz
-9b1a4f5b-e5f1-4a11-b710-5477380fad2b,25778f10-deeb-4cbb-a724-52493a571301,tuesday,,quiz
-e62060ab-0c02-486c-ab48-d68cae45ce8f,2690523e-72c8-42b2-be66-91a61c5ecdb8,friday,DJs,DJs
-22c572c8-86d9-4b3b-8393-a700cce427cd,2690523e-72c8-42b2-be66-91a61c5ecdb8,saturday,DJs,DJs
+e62060ab-0c02-486c-ab48-d68cae45ce8f,2690523e-72c8-42b2-be66-91a61c5ecdb8,friday,DJs,dj
+22c572c8-86d9-4b3b-8393-a700cce427cd,2690523e-72c8-42b2-be66-91a61c5ecdb8,saturday,DJs,dj
 c53b4fac-4ed9-445f-a726-904bf03b262e,2690523e-72c8-42b2-be66-91a61c5ecdb8,thursday,Cocktail class,entertain
-f2396847-1140-445f-9a9d-df8dfd30b46c,273730d6-1943-4988-a03c-636b744e477e,monday,closed,hours
-39d27bde-1c0b-43ef-b621-d91141fa3292,2adfb24e-f964-4a76-8c4f-799f7c704096,sunday,Open mic night,entertain
+f2396847-1140-445f-9a9d-df8dfd30b46c,273730d6-1943-4988-a03c-636b744e477e,monday,Closed,hours
+39d27bde-1c0b-43ef-b621-d91141fa3292,2adfb24e-f964-4a76-8c4f-799f7c704096,sunday,Open mic night,comedy
 638710de-7416-42b7-9615-df8ca21064b4,2b99f168-e63b-445e-a7dc-7f8bf76da331,sunday,7pm,quiz
 2c2dcbd8-f2ec-4187-9cd6-fb14194b5a80,2cd9035f-af04-41dd-b63c-f47b75c90a8f,wednesday,7.30pm,quiz
 b605b096-38d0-43f4-b19f-fdb8b949a389,2dbf12b8-120a-46fd-ab1a-d1bb0a6ea778,sunday,7.30pm,quiz
 4708fd3d-67d0-4247-87ae-741976209522,2ee54ca1-e1cf-4d1f-bc86-89c2136cbeae,tuesday,8pm,quiz
-72f9c28d-cce8-49d5-9f53-99e58471bb50,30076bbc-f118-4716-a74c-156b7ec256a5,friday, and DJs,music
+72f9c28d-cce8-49d5-9f53-99e58471bb50,30076bbc-f118-4716-a74c-156b7ec256a5,friday,,music
 9a129835-77ca-4362-86d9-b55d02ea7489,30076bbc-f118-4716-a74c-156b7ec256a5,monday,,quiz
-399d4970-e53e-4b1b-b904-95d1a9e23708,30076bbc-f118-4716-a74c-156b7ec256a5,saturday, and DJs,music
-b6f4c415-1a66-4c13-8b92-7373c28db5b0,30076bbc-f118-4716-a74c-156b7ec256a5,sunday, and DJs,music
-f3951a4d-caaa-4c8f-8cf4-3a4b4e7f1450,30076bbc-f118-4716-a74c-156b7ec256a5,thursday, and DJs,music
-ac29a7c1-f381-46db-afac-35f90e36dfee,30076bbc-f118-4716-a74c-156b7ec256a5,wednesday, and DJs,music
+399d4970-e53e-4b1b-b904-95d1a9e23708,30076bbc-f118-4716-a74c-156b7ec256a5,saturday,,music
+b6f4c415-1a66-4c13-8b92-7373c28db5b0,30076bbc-f118-4716-a74c-156b7ec256a5,sunday,,music
+f3951a4d-caaa-4c8f-8cf4-3a4b4e7f1450,30076bbc-f118-4716-a74c-156b7ec256a5,thursday,,music
+ac29a7c1-f381-46db-afac-35f90e36dfee,30076bbc-f118-4716-a74c-156b7ec256a5,wednesday,,music
 9929a83b-7457-459d-95c8-9c2a7f3a0a69,3058f233-ea9e-4eb7-98cb-68dda69d344d,tuesday,1st tuesday of the month,quiz
 a3e9e5ee-bc29-48cd-b280-2d9bdb685da6,31578bef-e1d2-4852-a548-beda55ab792c,monday,7.30pm,quiz
 4efb4251-6e3a-460f-8811-243a2feb6275,31578bef-e1d2-4852-a548-beda55ab792c,tuesday,board games,entertain
@@ -113,55 +112,55 @@ d090ed6b-5f33-4300-8642-cc5494760127,35ce64f3-76a5-4b65-a8a8-88324cbb95a0,saturd
 d1e2dd9a-2463-4026-ba70-4e6786a1d907,35ce64f3-76a5-4b65-a8a8-88324cbb95a0,thursday,,music
 735fe32f-64e3-4114-a7d4-e9d7c04b07ba,35ce64f3-76a5-4b65-a8a8-88324cbb95a0,tuesday,8.30pm,quiz
 0135136e-d48c-490b-a36c-ea59f8dedead,365a5ea5-03c6-4caa-8424-7a33339d0642,thursday,Jazz,music
-20d73d9e-abf3-451c-bbbb-c790c7cf77eb,36f830c1-9a7a-481a-a77e-18c2d9ee15ac,friday,Karaoke,entertain
+20d73d9e-abf3-451c-bbbb-c790c7cf77eb,36f830c1-9a7a-481a-a77e-18c2d9ee15ac,friday,Karaoke,karaoke
 c1dcfabe-c120-4210-9114-091e14ce3760,36f830c1-9a7a-481a-a77e-18c2d9ee15ac,sunday,Games night,entertain
 5316b08c-f792-491d-b381-442617735f35,36f830c1-9a7a-481a-a77e-18c2d9ee15ac,tuesday,Poker night,entertain
 3398dec7-e399-42f8-88de-b1a516c4d844,36f830c1-9a7a-481a-a77e-18c2d9ee15ac,wednesday,Darts competition,entertain
 aedba1dd-ec39-4df5-9c79-1c4e6c712b52,376cd451-32f0-4895-8f0e-ce61fb413b6d,monday,9pm,quiz
 d9d52d68-a99b-4660-89d0-1993393a320a,3993b00b-0847-4431-9392-ff60a69e1074,wednesday,7.30pm 1st/3rd wednesday of the month,quiz
-ecc92348-080a-4212-b39c-115305ddabde,3b57f89c-3f4b-4557-8410-ddaa82637220,friday, & DJs,music
-1fff233f-0aae-4515-940d-3037fe455415,3b57f89c-3f4b-4557-8410-ddaa82637220,saturday, & DJs,music
-d4560605-25dc-4dc4-b12b-bbddd74188ad,3b57f89c-3f4b-4557-8410-ddaa82637220,sunday,closed,hours
-71d5a4fb-8483-4928-930e-d7fe81487cf2,3c0e13d2-57f5-4e20-85da-8c49873b9224,friday,free beer,free beer
-d214146c-0b25-43ee-8377-8bafd0e1f222,3c0e13d2-57f5-4e20-85da-8c49873b9224,sunday,dog day,dog day
+ecc92348-080a-4212-b39c-115305ddabde,3b57f89c-3f4b-4557-8410-ddaa82637220,friday,,music
+1fff233f-0aae-4515-940d-3037fe455415,3b57f89c-3f4b-4557-8410-ddaa82637220,saturday,,music
+d4560605-25dc-4dc4-b12b-bbddd74188ad,3b57f89c-3f4b-4557-8410-ddaa82637220,sunday,Closed,hours
+71d5a4fb-8483-4928-930e-d7fe81487cf2,3c0e13d2-57f5-4e20-85da-8c49873b9224,friday,free beer,entertain
+d214146c-0b25-43ee-8377-8bafd0e1f222,3c0e13d2-57f5-4e20-85da-8c49873b9224,sunday,dog day,entertain
 6d4bb268-cced-4771-b10f-761102c8d6cc,3c0e13d2-57f5-4e20-85da-8c49873b9224,tuesday,7pm,quiz
 a2c04a5e-cca0-4e1f-b682-9685354888bc,3c5d3d3d-05d0-415e-8b19-9229f77932b1,tuesday,,quiz
-5ee852e7-0c4e-43b2-8171-a016a1de072d,3cacdc43-983d-4119-986a-1587674c025e,monday,closed,hours
-5426bfb8-0d3d-4741-b6c4-fc25d8e3d03a,3cacdc43-983d-4119-986a-1587674c025e,thursday,closed,hours
-6d2ccd89-20e0-4266-b2fd-45162aeb8f84,3cacdc43-983d-4119-986a-1587674c025e,tuesday,closed,hours
-b6e462d8-d316-4b6a-bff4-fb9f25799c76,3cacdc43-983d-4119-986a-1587674c025e,wednesday,closed,hours
-83e320d1-7626-4dc8-82b1-f8c3586a262f,3ce5eac8-17c9-4a33-aba1-c10f695660ef,monday,closed,hours
-86ede56b-08ae-45f8-bdf3-c0e731625d47,3ce5eac8-17c9-4a33-aba1-c10f695660ef,tuesday,closed,hours
-b57ad63c-9901-4ce8-8d43-82a050ff726d,3ce5eac8-17c9-4a33-aba1-c10f695660ef,wednesday,closed,hours
+5ee852e7-0c4e-43b2-8171-a016a1de072d,3cacdc43-983d-4119-986a-1587674c025e,monday,Closed,hours
+5426bfb8-0d3d-4741-b6c4-fc25d8e3d03a,3cacdc43-983d-4119-986a-1587674c025e,thursday,Closed,hours
+6d2ccd89-20e0-4266-b2fd-45162aeb8f84,3cacdc43-983d-4119-986a-1587674c025e,tuesday,Closed,hours
+b6e462d8-d316-4b6a-bff4-fb9f25799c76,3cacdc43-983d-4119-986a-1587674c025e,wednesday,Closed,hours
+83e320d1-7626-4dc8-82b1-f8c3586a262f,3ce5eac8-17c9-4a33-aba1-c10f695660ef,monday,Closed,hours
+86ede56b-08ae-45f8-bdf3-c0e731625d47,3ce5eac8-17c9-4a33-aba1-c10f695660ef,tuesday,Closed,hours
+b57ad63c-9901-4ce8-8d43-82a050ff726d,3ce5eac8-17c9-4a33-aba1-c10f695660ef,wednesday,Closed,hours
 431429d5-b0fb-451d-b200-c01d6353bd40,3e36642a-c63f-406b-9e10-b70b4ace2d69,sunday,Jazz last sunday of the month,music
 2def3c77-5a9b-4a4c-9425-cfb59b8575a4,3ec4f64f-6065-4e19-8b70-031605d30962,monday,,quiz
-617fcbc0-c472-4936-b6d5-2ccce14275f4,3fb949ca-cd80-45b2-b7c9-d450ee2f2c6d,saturday,closed,hours
-62464558-f7c2-48ed-bc53-046de160df4f,3fb949ca-cd80-45b2-b7c9-d450ee2f2c6d,sunday,closed,hours
+617fcbc0-c472-4936-b6d5-2ccce14275f4,3fb949ca-cd80-45b2-b7c9-d450ee2f2c6d,saturday,Closed,hours
+62464558-f7c2-48ed-bc53-046de160df4f,3fb949ca-cd80-45b2-b7c9-d450ee2f2c6d,sunday,Closed,hours
 bd553e50-01e8-4df6-b03e-e8d6225726b8,445269c4-b88d-4a1a-a51a-38556661f43c,saturday,,music
 cf6c1787-b2e5-43d8-a11c-015a7d686e47,445269c4-b88d-4a1a-a51a-38556661f43c,thursday,7pm,quiz
 0dbf055c-986a-4324-b732-f5edc6721681,445269c4-b88d-4a1a-a51a-38556661f43c,tuesday,Irish music,music
 96699d12-df17-4943-b353-82510c4da0b1,44f933f3-3089-4df8-b983-489565b2424b,wednesday,7.30pm,quiz
-0379d2d6-e48d-482d-95cb-2c6ced2790a4,45897c9f-51e7-43fa-91a0-e7e89e29590e,monday,closed,hours
+0379d2d6-e48d-482d-95cb-2c6ced2790a4,45897c9f-51e7-43fa-91a0-e7e89e29590e,monday,Closed,hours
 60b7898a-ef3f-4a6c-b1f1-c13c8cbde3c6,45897c9f-51e7-43fa-91a0-e7e89e29590e,saturday,,music
 b730328f-8603-4bae-a756-4902f32a7a7b,45897c9f-51e7-43fa-91a0-e7e89e29590e,sunday,,music
 3a931c20-727b-47ab-9bcf-ecf8ffc675de,45cb2079-73b3-494c-9438-bf437bd0cd3a,thursday,Fondue night,entertain
 ae391ebb-8e00-41a1-8f64-5f90fe3706e3,45cb2079-73b3-494c-9438-bf437bd0cd3a,wednesday,Fondue night,entertain
 b3d582e5-ca9e-4ff9-9c56-d825f23ca9d8,479223e8-2444-4c90-af1b-276047066bd7,wednesday,7pm,quiz
-a80e8c14-4ad3-4700-8420-84f5cf244634,4b4763d9-f1d4-4967-b6ff-f60295e0b08a,tuesday,Live music and open mic,entertain
+a80e8c14-4ad3-4700-8420-84f5cf244634,4b4763d9-f1d4-4967-b6ff-f60295e0b08a,tuesday,Live music and open mic,comedy
 b904a031-5a07-4a78-8c9b-fbb59620e830,4c0c6ec9-0e5a-4f30-840e-2a2d3fa0cec7,monday,8pm,quiz
 e4cff5bd-3257-4b61-8252-c0d727a75642,4d2b172a-3f76-4936-af1f-3a9fa3129835,monday,,music
-e4bdf9a3-8504-417b-b2e0-75f7208691d9,4d771274-5f0e-4df4-a0dd-728951e700dc,friday,Live music or disco karaoke,entertain
-e3d48067-8abb-44a2-aa20-8b7f86cde4b4,4d771274-5f0e-4df4-a0dd-728951e700dc,saturday,Live music or disco karaoke,entertain
-41cd8112-63df-4e9c-885f-bcd86587c4b8,4d771274-5f0e-4df4-a0dd-728951e700dc,sunday,closed,hours
+e4bdf9a3-8504-417b-b2e0-75f7208691d9,4d771274-5f0e-4df4-a0dd-728951e700dc,friday,Live music or disco karaoke,karaoke
+e3d48067-8abb-44a2-aa20-8b7f86cde4b4,4d771274-5f0e-4df4-a0dd-728951e700dc,saturday,Live music or disco karaoke,karaoke
+41cd8112-63df-4e9c-885f-bcd86587c4b8,4d771274-5f0e-4df4-a0dd-728951e700dc,sunday,Closed,hours
 3ad6c67d-d4e3-41c9-86dc-e7e07d64926c,4d8254ad-1246-42a6-bfb0-11b7e40e413b,monday,Game night,entertain
 bbdc174f-d5ad-405e-86c5-d8bc22bef9c6,4db0af7c-e9ca-4475-9d0f-0d7ca82d31e8,saturday,,music
 3f20a208-8621-4abf-8f39-d07ccabd022d,4db0af7c-e9ca-4475-9d0f-0d7ca82d31e8,sunday,,music
 f0b756ba-9984-4437-813a-9bb7fcfbee8c,4e657bd9-9975-4f07-be10-5f1fe5677501,friday,Traditional live Irish music,music
-133b8d79-c8cb-474d-91cd-dc016a41c221,4efe599e-daf0-4cd5-94b4-740242dba743,friday,Regular entertainment,entertain
+133b8d79-c8cb-474d-91cd-dc016a41c221,4efe599e-daf0-4cd5-94b4-740242dba743,friday,Regular entertainment,comedy
 ce37b7e4-93c4-4e77-b5df-536dc2f53f25,51735582-57d4-4609-9d86-1cda1d9e0e9a,friday,Drag bingo,entertain
-a7f7e718-3f7b-4c68-9a1f-08602e4227fc,51735582-57d4-4609-9d86-1cda1d9e0e9a,monday,closed,hours
-b408efb1-dad1-4d9f-8353-b12a0239ac83,51735582-57d4-4609-9d86-1cda1d9e0e9a,saturday,closed,hours
-fa129b54-93c2-4c01-b30c-de89df5f04bb,51735582-57d4-4609-9d86-1cda1d9e0e9a,sunday,closed,hours
+a7f7e718-3f7b-4c68-9a1f-08602e4227fc,51735582-57d4-4609-9d86-1cda1d9e0e9a,monday,Closed,hours
+b408efb1-dad1-4d9f-8353-b12a0239ac83,51735582-57d4-4609-9d86-1cda1d9e0e9a,saturday,Closed,hours
+fa129b54-93c2-4c01-b30c-de89df5f04bb,51735582-57d4-4609-9d86-1cda1d9e0e9a,sunday,Closed,hours
 13dfc513-a680-4632-af70-acde6a245fc4,51735582-57d4-4609-9d86-1cda1d9e0e9a,tuesday,,music
 7855ac90-2300-4fbd-9f7a-4299096c019a,525a8c71-6eb6-422a-870c-2f66d5d65808,sunday,7.30pm,quiz
 3a7eebe5-2c3c-46fa-8941-a2ad2f327f7f,540826ee-31c9-4644-bbbd-b3ef0d47b08b,tuesday,8pm,quiz
@@ -169,59 +168,59 @@ fa129b54-93c2-4c01-b30c-de89df5f04bb,51735582-57d4-4609-9d86-1cda1d9e0e9a,sunday
 d0fe55f1-daa8-4d4a-8924-60acf5f53f31,554bc650-de83-4db6-ad33-e74e8950d1e4,monday,Board games,entertain
 217d648b-ed0b-4645-9641-cb664838b094,5587d72c-15c0-4308-8f8b-9afe523627fb,tuesday,7pm,quiz
 6ac14e10-4c52-4645-bb54-125d2070fccc,55cfb269-6585-4ae1-bd89-8ef6cae6ea79,sunday,,music
-bce9a774-0c34-4e5d-9bb1-745e61394c08,55cfb269-6585-4ae1-bd89-8ef6cae6ea79,thursday,Comedy,entertain
+bce9a774-0c34-4e5d-9bb1-745e61394c08,55cfb269-6585-4ae1-bd89-8ef6cae6ea79,thursday,Comedy,comedy
 0b7d97d7-d6bd-4e86-9384-a8b38a58c120,55cfb269-6585-4ae1-bd89-8ef6cae6ea79,tuesday,8pm,quiz
 e7cd045e-33ec-4d3d-ad58-4860d76cde7d,55f393ed-9aa5-4bb1-96b1-1b940022e694,friday,,music
 0025b63a-0bf1-40a1-ac9d-cfa120d62caf,55f393ed-9aa5-4bb1-96b1-1b940022e694,saturday,,music
 e94ce090-032c-4313-8a26-cfbbeb9905e4,55f393ed-9aa5-4bb1-96b1-1b940022e694,sunday,8pm,quiz
 493ed58f-37ce-4b75-b792-76e730858d33,55f393ed-9aa5-4bb1-96b1-1b940022e694,wednesday,7.30pm,quiz
-76d14a97-c121-49fa-8213-715305ca8a39,569209fe-7b87-4d11-8d24-3525d6b8e560,monday,closed,hours
-67c8da48-5d9c-4fb3-98c8-b2ac5cf585d5,569209fe-7b87-4d11-8d24-3525d6b8e560,tuesday,closed,hours
-eff27728-b112-4229-88f2-7a4bc9ccfd64,5778512f-1a16-4a77-bd7e-ac430fedf578,tuesday,Live music and open mic,entertain
+76d14a97-c121-49fa-8213-715305ca8a39,569209fe-7b87-4d11-8d24-3525d6b8e560,monday,Closed,hours
+67c8da48-5d9c-4fb3-98c8-b2ac5cf585d5,569209fe-7b87-4d11-8d24-3525d6b8e560,tuesday,Closed,hours
+eff27728-b112-4229-88f2-7a4bc9ccfd64,5778512f-1a16-4a77-bd7e-ac430fedf578,tuesday,Live music and open mic,comedy
 39782391-ed4c-4bab-94c5-daf5d064a928,58d0c171-def5-4abf-8ae8-8d6b8dbea0de,tuesday,8pm,quiz
 b5dc830e-6f36-429b-bf94-a3a5625e7fb8,59789e1f-5ea2-4b87-901f-fbf69bd59701,sunday,4.30pm,music
 1b4b098c-0382-4ceb-8d67-f4f9ec87bd94,59b1023e-1eb6-453e-8036-668749bbf31a,wednesday,7.30pm,quiz
-5ad93187-805a-4b9e-8fa6-b9532ed3e1a4,5a3094e9-5f78-4caa-bc21-23cefc0d0afe,monday,6pm Karaoke,entertain
-8e455782-1da2-4e68-bf77-2346f08435af,5a3094e9-5f78-4caa-bc21-23cefc0d0afe,wednesday,6pm Karaoke,entertain
+5ad93187-805a-4b9e-8fa6-b9532ed3e1a4,5a3094e9-5f78-4caa-bc21-23cefc0d0afe,monday,6pm Karaoke,karaoke
+8e455782-1da2-4e68-bf77-2346f08435af,5a3094e9-5f78-4caa-bc21-23cefc0d0afe,wednesday,6pm Karaoke,karaoke
 a446ecbf-81da-4cf7-a31d-59b82ba2ebc8,5a5374a7-d466-45ef-86bc-efe0458af6ea,monday,,music
 67559e4c-4e3e-4a85-b07d-b8c691df597b,5a5374a7-d466-45ef-86bc-efe0458af6ea,saturday,,music
 a953587e-a48e-4b6d-9fe3-8db92bd0edbd,5a5374a7-d466-45ef-86bc-efe0458af6ea,sunday,,music
-40f2a022-5304-43ee-a9e3-1681bdf3b808,5a5374a7-d466-45ef-86bc-efe0458af6ea,tuesday,,music
+40f2a022-5304-43ee-a9e3-1681bdf3b808,5a5374a7-d466-45ef-86bc-efe0458af6ea,thursday,DJs,dj
 062a7922-4cb2-40d1-bbf1-db2ac9427c27,5b901c7f-6de6-4051-897b-d2366f5d92a6,monday,7.30pm,quiz
 77e3b280-faac-4a41-9d19-34abdebd8a71,5b901c7f-6de6-4051-897b-d2366f5d92a6,tuesday,8pm,quiz
 f67ba7c8-4154-47d0-a75e-c34e058127fa,5bed5842-4c53-4d3e-9d25-470516b5436c,tuesday,8pm,quiz
 82c3e074-742b-4faf-9f65-4844e4f871df,5c79ee71-6991-4aee-8e50-904de5486a4b,monday,8pm,quiz
 1c69c6b8-ab85-4baa-add6-1352008591f0,5e775625-fe5c-49b8-9648-d9f7929eb241,sunday,7pm,quiz
-f80b2fe6-907c-4b82-b3c1-2c229eacdb0a,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,friday,Comedy,entertain
-cf1c279b-176a-4968-85b4-39102c002ad3,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,monday,Comedy,entertain
-c6ed93d4-fc21-44e3-a706-7885120d4741,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,saturday,Comedy,entertain
-727e1d23-433d-471f-a035-638f87e6b943,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,thursday,Comedy,entertain
-da24afd5-3d19-412d-a367-f98800db817f,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,tuesday,Comedy,entertain
-6c170f7d-41d0-4d14-9478-49545e060902,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,wednesday,Comedy,entertain
-631ca554-2762-4e1e-819e-c602257a82e3,5f83fafd-cdaa-4b72-958d-ef6ac6c7c2f4,monday,closed,hours
-c62b5740-8610-455a-afee-eedd08ae4cd5,5f83fafd-cdaa-4b72-958d-ef6ac6c7c2f4,sunday,closed,hours
-9710fd51-9b19-4a28-a23f-a6fc507ca1ba,5f83fafd-cdaa-4b72-958d-ef6ac6c7c2f4,tuesday,closed,hours
+f80b2fe6-907c-4b82-b3c1-2c229eacdb0a,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,friday,Comedy,comedy
+cf1c279b-176a-4968-85b4-39102c002ad3,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,monday,Comedy,comedy
+c6ed93d4-fc21-44e3-a706-7885120d4741,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,saturday,Comedy,comedy
+727e1d23-433d-471f-a035-638f87e6b943,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,thursday,Comedy,comedy
+da24afd5-3d19-412d-a367-f98800db817f,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,tuesday,Comedy,comedy
+6c170f7d-41d0-4d14-9478-49545e060902,5f107b8f-94d2-4c95-b3e6-3a4bcc5183a9,wednesday,Comedy,comedy
+631ca554-2762-4e1e-819e-c602257a82e3,5f83fafd-cdaa-4b72-958d-ef6ac6c7c2f4,monday,Closed,hours
+c62b5740-8610-455a-afee-eedd08ae4cd5,5f83fafd-cdaa-4b72-958d-ef6ac6c7c2f4,sunday,Closed,hours
+9710fd51-9b19-4a28-a23f-a6fc507ca1ba,5f83fafd-cdaa-4b72-958d-ef6ac6c7c2f4,tuesday,Closed,hours
 dbe54f8d-9dfc-4953-baaa-bd9ca2b74e48,627185f0-212d-43d6-ad3c-8d0f1a5e6108,friday,9pm,music
 4609ea82-1d06-4494-adec-e7fb91d6f3aa,627185f0-212d-43d6-ad3c-8d0f1a5e6108,monday,7.45pm,quiz
 394d4524-fc6f-4107-b93d-b672c2dc4417,627185f0-212d-43d6-ad3c-8d0f1a5e6108,wednesday,8pm,quiz
 b4254b63-9ba9-4392-9a5d-177a84019c63,62d2a587-2e8c-41e0-8e7d-90737363d45e,monday,7.45pm,quiz
 ac3b3c64-e2cc-407f-b897-b70e111e127d,6338abc5-9a97-40c8-9e13-b7de1a2c5852,wednesday,8pm,quiz
 e2155c0e-8c45-4970-8dc5-411a26880089,637a0365-d079-44f4-aa73-b7c38098d64a,friday,,music
-2c9fa8f3-5715-4df9-9243-75a715f56399,66cd6c07-45d5-4a4a-b7fe-a171f5c6f3d1,monday,closed,hours
+2c9fa8f3-5715-4df9-9243-75a715f56399,66cd6c07-45d5-4a4a-b7fe-a171f5c6f3d1,monday,Closed,hours
 8f38807c-5220-4483-9d55-f6ba4153f571,6965daa1-882e-4361-8965-276a02cdd614,monday,,quiz
 3eeefaa6-d1cb-4eda-bdb6-f043a79c62b2,6b75d781-b8c3-490d-b586-116dd69cad7c,friday, ,music
 18375aba-2024-4d17-b953-13b697504fcd,6b75d781-b8c3-490d-b586-116dd69cad7c,monday,8pm,quiz
 7f03c8c2-af8c-488b-8898-72ff352e0d7b,6b75d781-b8c3-490d-b586-116dd69cad7c,saturday, ,music
 25c74236-b7d0-4c37-9d5e-d584c9e8f64a,6b75d781-b8c3-490d-b586-116dd69cad7c,thursday, ,music
 3f05d822-16c1-4d5e-ad9e-e11ab12a89a5,6b75d781-b8c3-490d-b586-116dd69cad7c,wednesday, ,music
-a14358c0-e8ba-4cab-a916-0acd2d1b8359,6d6a1450-94bb-43fe-9ba1-d517bc6f8f3e,sunday,closed,hours
+a14358c0-e8ba-4cab-a916-0acd2d1b8359,6d6a1450-94bb-43fe-9ba1-d517bc6f8f3e,sunday,Closed,hours
 1157372f-dae8-45d3-97af-b8f60a6dfeb3,6ddca2bf-663f-49bd-8a02-b21e9b7d192c,friday,,music
 d0c3320f-9654-488d-b559-39e9682ce272,6f052687-67ef-4ad9-8c6d-fe45670e166f,friday,,music
 314909f5-2374-4c07-b7eb-263627721a42,70382534-b8b7-4272-8471-32f7d6300b15,friday,,music
 2f41ed2a-051b-46db-8fee-8108d8658458,70382534-b8b7-4272-8471-32f7d6300b15,saturday,,music
-250d466e-d0cd-4663-8ddb-3b8be6f0ea44,70f8f3dd-6351-4c10-98a3-e32e2d28c1f6,monday,closed,hours
-48c38e00-acb1-4882-89a8-d22ce5ca1988,70f8f3dd-6351-4c10-98a3-e32e2d28c1f6,sunday,closed,hours
-bbb526ff-f1d7-4f11-82cd-c7ee6d5669e4,70f8f3dd-6351-4c10-98a3-e32e2d28c1f6,tuesday,closed,hours
+250d466e-d0cd-4663-8ddb-3b8be6f0ea44,70f8f3dd-6351-4c10-98a3-e32e2d28c1f6,monday,Closed,hours
+48c38e00-acb1-4882-89a8-d22ce5ca1988,70f8f3dd-6351-4c10-98a3-e32e2d28c1f6,sunday,Closed,hours
+bbb526ff-f1d7-4f11-82cd-c7ee6d5669e4,70f8f3dd-6351-4c10-98a3-e32e2d28c1f6,tuesday,Closed,hours
 af632bac-93c8-4c0b-aeeb-12f88d63e520,72debb8c-1ea0-453a-a93e-e127a262ea06,wednesday,7pm,quiz
 a8c0253a-d62b-49ee-9564-130901b09c01,735704b6-f5af-4d0c-a9d3-b670fe3c7f1a,wednesday,7.30pm,quiz
 121c61cf-d888-4660-9632-82b16e914373,740a2044-a117-4a58-96a4-6861ab0fc8aa,saturday,,music
@@ -234,22 +233,22 @@ da1f07e6-29a0-489b-998e-fc9bda322ea2,745707c2-e7a4-4b33-9f7a-f6dfc2d6a221,wednes
 15397365-478a-448b-a109-f841c321d862,753df00b-babe-4873-a8f2-8f4cd8e02749,friday,,music
 3d02a878-091e-4d20-81f9-a64ea66d8a36,753df00b-babe-4873-a8f2-8f4cd8e02749,saturday,,music
 cf18fb05-6277-4008-9237-776cdf51cbce,753df00b-babe-4873-a8f2-8f4cd8e02749,thursday,,music
-14e712f7-f5e9-4d29-a261-57d2f49f0b42,75965700-9d04-4f07-a637-abfdbb49266b,monday,closed,hours
+14e712f7-f5e9-4d29-a261-57d2f49f0b42,75965700-9d04-4f07-a637-abfdbb49266b,monday,Closed,hours
 0d2cc343-247c-4daa-95cc-4c6f53f96cef,76282d16-e2c6-40c8-96d1-92b81da07619,sunday,Live jazz,music
-2c400154-de77-4e19-8303-e7d9c4798cde,76282d16-e2c6-40c8-96d1-92b81da07619,thursday,Comedy,entertain
-4dbe3da9-778b-4142-8599-76712c8603a4,76fc0c90-f865-4cfe-bebe-21fa53717704,monday,closed,hours
-08d44714-3f94-4854-ada8-4f6cbc0b4082,76fc0c90-f865-4cfe-bebe-21fa53717704,sunday,closed,hours
-347c8a50-2139-47e9-b6f4-e99321f9ce9c,76fc0c90-f865-4cfe-bebe-21fa53717704,thursday,closed,hours
-811115aa-936f-404d-af47-5baf430407ad,76fc0c90-f865-4cfe-bebe-21fa53717704,tuesday,closed,hours
-07ea2208-ff59-4bb4-a815-101efec17d5e,76fc0c90-f865-4cfe-bebe-21fa53717704,wednesday,closed,hours
+2c400154-de77-4e19-8303-e7d9c4798cde,76282d16-e2c6-40c8-96d1-92b81da07619,thursday,Comedy,comedy
+4dbe3da9-778b-4142-8599-76712c8603a4,76fc0c90-f865-4cfe-bebe-21fa53717704,monday,Closed,hours
+08d44714-3f94-4854-ada8-4f6cbc0b4082,76fc0c90-f865-4cfe-bebe-21fa53717704,sunday,Closed,hours
+347c8a50-2139-47e9-b6f4-e99321f9ce9c,76fc0c90-f865-4cfe-bebe-21fa53717704,thursday,Closed,hours
+811115aa-936f-404d-af47-5baf430407ad,76fc0c90-f865-4cfe-bebe-21fa53717704,tuesday,Closed,hours
+07ea2208-ff59-4bb4-a815-101efec17d5e,76fc0c90-f865-4cfe-bebe-21fa53717704,wednesday,Closed,hours
 514af25d-9b07-49cc-b90d-f21544be5120,77b9faed-deb3-45be-b880-9d6ca3727a53,tuesday,7.30pm,quiz
 d0fe4e45-133d-4929-b978-543af5424915,781b0d4c-788a-4bcb-8cec-c4384c566b57,monday,8pm,quiz
 a1bd8117-9acb-4f53-9a6d-980f3191d6bc,781b0d4c-788a-4bcb-8cec-c4384c566b57,saturday,,music
 1bf1cb6e-16c6-4a19-aad4-3aea2a67d40c,781b0d4c-788a-4bcb-8cec-c4384c566b57,sunday,,music
 8bae9755-60cf-4918-af63-ef8f08628e11,78295944-cac8-4b2c-b9cb-0a439fef22b2,friday,,music
-73087b75-59e3-4971-9032-5bbb96f1d891,78295944-cac8-4b2c-b9cb-0a439fef22b2,monday,7pm,Comedy
+73087b75-59e3-4971-9032-5bbb96f1d891,78295944-cac8-4b2c-b9cb-0a439fef22b2,monday,7pm comedy,comedy
 52634199-9f59-4c5d-8245-a4a53f1abfac,78295944-cac8-4b2c-b9cb-0a439fef22b2,tuesday,quiz,quiz
-7c6464c2-3b5e-48e2-9393-83d86c0a1b50,78684f18-9f18-40ec-8737-2c89671fd73a,sunday,closed,hours
+7c6464c2-3b5e-48e2-9393-83d86c0a1b50,78684f18-9f18-40ec-8737-2c89671fd73a,sunday,Closed,hours
 2790578c-8fa0-4d3e-b6fa-6dd12bcf3ed9,7ac26e9b-a9c7-44db-ad5c-3a08f45f50ca,thursday,8pm,quiz
 49c7be36-c3ae-4ccb-957a-59e393bc0a8f,7ac26e9b-a9c7-44db-ad5c-3a08f45f50ca,tuesday,7pm,quiz
 201986c4-1e2f-4f16-b6aa-e93aa7dfef8b,7b3bfade-28f1-4919-84c3-446c6da70ba6,monday,Live piano,music
@@ -258,38 +257,38 @@ a1bd8117-9acb-4f53-9a6d-980f3191d6bc,781b0d4c-788a-4bcb-8cec-c4384c566b57,saturd
 ed99a0d1-f020-478a-80d7-012b8db92e6a,7edc3e66-7f68-4a09-a085-5bf2b778831c,saturday,Dinner with DJs,entertain
 371f6e1b-1a97-4a09-8e98-1e2e62919620,7edc3e66-7f68-4a09-a085-5bf2b778831c,sunday,Dinner with DJs,entertain
 d43d2d11-3f4d-4107-96fd-795665a84572,7edc3e66-7f68-4a09-a085-5bf2b778831c,tuesday,7pm,quiz
-75681bb3-df5e-4452-b97f-1970201fd4e8,7fee2378-ec80-4632-8309-b6dd60094fd8,monday,Comedy,entertain
-1beab580-0ac0-4200-83b8-d23c96173e14,7fee2378-ec80-4632-8309-b6dd60094fd8,tuesday,Comedy,entertain
-b34bfe2c-989d-4ba7-b774-75a4051982cc,7fee2378-ec80-4632-8309-b6dd60094fd8,wednesday,Comedy,entertain
-a0bf52f9-0b54-4bc4-8bef-fef1f8a2ad41,8256f638-00af-4f90-9fdb-aeebbf7986da,monday,closed,hours
-79ece5cf-b1fb-4661-b1d8-56708c2dbb70,8256f638-00af-4f90-9fdb-aeebbf7986da,tuesday,closed,hours
-86878011-8509-4f23-b0a0-f917a60a0b4c,8256f638-00af-4f90-9fdb-aeebbf7986da,wednesday,closed,hours
-e2c7c922-2de8-4776-820c-b4d68d9b2da4,83aeeb5f-1bfd-4372-b4bf-4d43b87c9601,saturday,DJs,DJs
+75681bb3-df5e-4452-b97f-1970201fd4e8,7fee2378-ec80-4632-8309-b6dd60094fd8,monday,Comedy,comedy
+1beab580-0ac0-4200-83b8-d23c96173e14,7fee2378-ec80-4632-8309-b6dd60094fd8,tuesday,Comedy,comedy
+b34bfe2c-989d-4ba7-b774-75a4051982cc,7fee2378-ec80-4632-8309-b6dd60094fd8,wednesday,Comedy,comedy
+a0bf52f9-0b54-4bc4-8bef-fef1f8a2ad41,8256f638-00af-4f90-9fdb-aeebbf7986da,monday,Closed,hours
+79ece5cf-b1fb-4661-b1d8-56708c2dbb70,8256f638-00af-4f90-9fdb-aeebbf7986da,tuesday,Closed,hours
+86878011-8509-4f23-b0a0-f917a60a0b4c,8256f638-00af-4f90-9fdb-aeebbf7986da,wednesday,Closed,hours
+e2c7c922-2de8-4776-820c-b4d68d9b2da4,83aeeb5f-1bfd-4372-b4bf-4d43b87c9601,saturday,DJs,dj
 4cbf4822-d95d-4ec6-a78f-2960b2c727c4,83aeeb5f-1bfd-4372-b4bf-4d43b87c9601,sunday,6pm,quiz
 bcdc6c81-a00b-4fd1-984f-6de3ca36ba4f,83aeeb5f-1bfd-4372-b4bf-4d43b87c9601,wednesday,7.30pm,quiz
-1f975f00-f564-4dcf-9b36-41b7cc8d857d,8418812c-6557-4877-acc4-d528d60d6720,monday,closed,hours
-6f15f927-cb22-4018-9ba0-c2445ae5cb87,8418812c-6557-4877-acc4-d528d60d6720,sunday,closed,hours
-dbf815d0-23df-46cd-baca-a155c4383575,85734c01-6261-4784-b024-637b12b8d4f4,saturday,closed,hours
-f3677861-59a3-4dc3-938a-13bc4977a682,85734c01-6261-4784-b024-637b12b8d4f4,sunday,closed,hours
-fd25f32d-9729-49cb-91ff-27c4a4ecf395,859eb4d9-ba6e-43d6-b14b-275cf2a0b5ad,monday,closed,hours
-36d488c1-f5b4-41e1-9a15-87762a3107c8,85c71873-b209-4b30-a592-5054413b6d84,monday,closed,hours
-f57c5f18-ec1c-485f-b327-22c87a301e17,85c71873-b209-4b30-a592-5054413b6d84,sunday,closed,hours
-3870d03b-aae8-4e6c-8c61-5c62fcb4213a,85c71873-b209-4b30-a592-5054413b6d84,tuesday,closed,hours
-213d6820-a491-4eb1-8597-c6b3daebae20,85f36fdf-63f5-4b98-ad76-21b2ba5ef8dd,friday,DJs,DJs
+1f975f00-f564-4dcf-9b36-41b7cc8d857d,8418812c-6557-4877-acc4-d528d60d6720,monday,Closed,hours
+6f15f927-cb22-4018-9ba0-c2445ae5cb87,8418812c-6557-4877-acc4-d528d60d6720,sunday,Closed,hours
+dbf815d0-23df-46cd-baca-a155c4383575,85734c01-6261-4784-b024-637b12b8d4f4,saturday,Closed,hours
+f3677861-59a3-4dc3-938a-13bc4977a682,85734c01-6261-4784-b024-637b12b8d4f4,sunday,Closed,hours
+fd25f32d-9729-49cb-91ff-27c4a4ecf395,859eb4d9-ba6e-43d6-b14b-275cf2a0b5ad,monday,Closed,hours
+36d488c1-f5b4-41e1-9a15-87762a3107c8,85c71873-b209-4b30-a592-5054413b6d84,monday,Closed,hours
+f57c5f18-ec1c-485f-b327-22c87a301e17,85c71873-b209-4b30-a592-5054413b6d84,sunday,Closed,hours
+3870d03b-aae8-4e6c-8c61-5c62fcb4213a,85c71873-b209-4b30-a592-5054413b6d84,tuesday,Closed,hours
+213d6820-a491-4eb1-8597-c6b3daebae20,85f36fdf-63f5-4b98-ad76-21b2ba5ef8dd,friday,DJs,dj
 bab84381-0a71-4fe3-b4bf-cd98f6dd15e7,85f36fdf-63f5-4b98-ad76-21b2ba5ef8dd,saturday,,music
 17007288-4eb3-4f89-9100-3b5121272e64,85f36fdf-63f5-4b98-ad76-21b2ba5ef8dd,sunday,7.30pm,quiz
 5d52ce45-df2a-49f2-ad56-3532abba5c05,863b8b33-da71-4a22-a68f-4a676e39cfbe,friday,Disco,entertain
 58c54890-8ba4-4335-9dc4-f17e06063263,863b8b33-da71-4a22-a68f-4a676e39cfbe,saturday,Disco,entertain
-02c9263a-c247-425f-992e-20cdabe647cf,863b8b33-da71-4a22-a68f-4a676e39cfbe,sunday,8pm,Live jazz music
+02c9263a-c247-425f-992e-20cdabe647cf,863b8b33-da71-4a22-a68f-4a676e39cfbe,sunday,8pm live jazz,music
 d1400ee3-8a88-46a5-8d2b-6cbb9bee4021,863b8b33-da71-4a22-a68f-4a676e39cfbe,thursday,1st thursday of the month,quiz
-a02d1de7-82bc-44dd-b57a-3ea40ef4e65e,86812052-266b-460c-92ff-f04233f4e8ae,thursday,Live jazz music,music
-ffd4c7ed-cc92-4e9f-bd24-35a5c81f9782,86812052-266b-460c-92ff-f04233f4e8ae,wednesday,Live piano music,music
+a02d1de7-82bc-44dd-b57a-3ea40ef4e65e,86812052-266b-460c-92ff-f04233f4e8ae,thursday,Live jazz,music
+ffd4c7ed-cc92-4e9f-bd24-35a5c81f9782,86812052-266b-460c-92ff-f04233f4e8ae,wednesday,Live piano,music
 397348d4-d506-4dc7-a887-e661111b20ed,86de190a-4e39-4e2c-add6-2ffa05d0f991,monday,7.30pm,music
 e6b15835-f8d4-4b86-bf49-25b02e4dc8e5,87582c9a-a4ff-4f8a-9c1f-1057c51a24ee,saturday,Wine pairing,entertain
-90d8e6fe-d090-4d58-b6a3-d2b5071d6bb8,882c60eb-2ae9-4c38-915f-92fa3394951e,monday,closed,hours
-0e4cb6fd-710d-4b74-b4a7-e211b7c7157f,882c60eb-2ae9-4c38-915f-92fa3394951e,tuesday,closed,hours
-c3e1d34e-565b-4ec6-b208-d250b4346ae8,882c60eb-2ae9-4c38-915f-92fa3394951e,wednesday,closed,hours
-e4c91f8a-bddb-46c5-bde5-dc23dfb1b792,88849456-c4ff-4c5a-8ba2-13e503983bcc,monday,closed,hours
+90d8e6fe-d090-4d58-b6a3-d2b5071d6bb8,882c60eb-2ae9-4c38-915f-92fa3394951e,monday,Closed,hours
+0e4cb6fd-710d-4b74-b4a7-e211b7c7157f,882c60eb-2ae9-4c38-915f-92fa3394951e,tuesday,Closed,hours
+c3e1d34e-565b-4ec6-b208-d250b4346ae8,882c60eb-2ae9-4c38-915f-92fa3394951e,wednesday,Closed,hours
+e4c91f8a-bddb-46c5-bde5-dc23dfb1b792,88849456-c4ff-4c5a-8ba2-13e503983bcc,monday,Closed,hours
 5cbbc310-0111-492c-b6b9-185c0e3e68aa,88e63ca8-64c5-4005-9fc4-ee53d5a0443a,sunday,7pm,quiz
 20a34e3d-7620-4480-b018-76369d46f507,88f4d7ea-101e-4faf-93ab-94215455a220,sunday,,music
 4cc6fae5-0e4d-43b2-9161-df640fd87e4d,88f4d7ea-101e-4faf-93ab-94215455a220,thursday,,music
@@ -304,40 +303,40 @@ f4ba6eed-6b78-4845-bd14-345fd17ab8bf,8d4e6681-dff8-4b38-955a-44fb6e2431cc,monday
 b73e61d7-43c7-4b3a-932a-c6d0af059559,8d4e6681-dff8-4b38-955a-44fb6e2431cc,sunday,,music
 11375326-90d1-4827-b213-568c38756882,8d4e6681-dff8-4b38-955a-44fb6e2431cc,thursday,,quiz
 b6103d53-a9f3-4319-92d6-cf7e403cc31d,8d4e6681-dff8-4b38-955a-44fb6e2431cc,wednesday,,music
-d1b2fee8-94c7-403a-b1dc-a31e049c64bf,8ec49adb-b36f-438f-98f9-4c0e495952b0,saturday,closed,hours
-b690c367-0994-4ff2-92f9-88f33d2482ea,8ec49adb-b36f-438f-98f9-4c0e495952b0,sunday,closed,hours
+d1b2fee8-94c7-403a-b1dc-a31e049c64bf,8ec49adb-b36f-438f-98f9-4c0e495952b0,saturday,Closed,hours
+b690c367-0994-4ff2-92f9-88f33d2482ea,8ec49adb-b36f-438f-98f9-4c0e495952b0,sunday,Closed,hours
 fd33cb37-d9f1-4572-ad27-881182efec01,8f54c7a5-ef71-44e0-9164-d8207652160d,tuesday,7pm,quiz
-ac941f11-01d0-49fe-b767-150734fb8a30,8f54c7a5-ef71-44e0-9164-d8207652160d,wednesday,6.30pm Open mic night,entertain
+ac941f11-01d0-49fe-b767-150734fb8a30,8f54c7a5-ef71-44e0-9164-d8207652160d,wednesday,6.30pm Open mic night,comedy
 c92d4401-2b9c-4e59-8cdf-5725a6fd0a9d,915508e0-ea3d-4082-9142-7b178298dded,thursday,,quiz
-28c84d7f-7350-4fee-b6ab-c48d8b2446b9,915d00c0-49dc-4036-ac5c-92153e281064,monday,Karaoke,entertain
+28c84d7f-7350-4fee-b6ab-c48d8b2446b9,915d00c0-49dc-4036-ac5c-92153e281064,monday,Karaoke,karaoke
 ed1beeff-52b1-4eb0-976c-6a7831e883d8,915d00c0-49dc-4036-ac5c-92153e281064,sunday,Live jazz,music
 0f0b0127-f284-418a-b37d-bc8af1dd47fe,915d00c0-49dc-4036-ac5c-92153e281064,tuesday,quiz,quiz
-cbe53e81-7f0c-40c9-98cb-c4abf844e0d1,915d00c0-49dc-4036-ac5c-92153e281064,wednesday,Comedy,entertain
+cbe53e81-7f0c-40c9-98cb-c4abf844e0d1,915d00c0-49dc-4036-ac5c-92153e281064,wednesday,Comedy,comedy
 ca092e91-affd-4f33-babd-09e07484391c,9231995a-345b-46a6-86e7-37642cf70e97,monday,7pm,quiz
 29942f5b-e629-454f-b031-01edc201b394,9321fedb-a70a-42a3-a59f-1ba4ca6621d6,wednesday,bi-weekly,quiz
-548b2b5f-e5ea-44de-aba3-c6c25a7595e3,938453ab-ad1f-4e95-9b52-7ee678665e4d,thursday,Karaoke,entertain
+548b2b5f-e5ea-44de-aba3-c6c25a7595e3,938453ab-ad1f-4e95-9b52-7ee678665e4d,thursday,Karaoke,karaoke
 87d86570-a526-4efa-a9ac-f36ed78d0adc,938453ab-ad1f-4e95-9b52-7ee678665e4d,wednesday,9pm,quiz
 69717d45-67fe-4a72-99c5-a369bd5df785,93ca1ef7-254a-40f8-b767-aab9beefbfc3,friday,,music
 25da5b18-b725-4a04-a80e-92ee26547e73,93ca1ef7-254a-40f8-b767-aab9beefbfc3,saturday,,music
 85020823-5ab9-4277-adce-36e4b0133f6f,93ca1ef7-254a-40f8-b767-aab9beefbfc3,sunday,Live jazz,music
-4850b2ab-f83f-4cd9-9652-93cdf5cfbea2,93ca1ef7-254a-40f8-b767-aab9beefbfc3,thursday,Open mic night,entertain
-5fb152e2-4ccd-4743-8448-d603b0572a5e,945c6336-6711-42b2-a240-01b1b9f403c6,friday,Karaoke,entertain
+4850b2ab-f83f-4cd9-9652-93cdf5cfbea2,93ca1ef7-254a-40f8-b767-aab9beefbfc3,thursday,Open mic night,comedy
+5fb152e2-4ccd-4743-8448-d603b0572a5e,945c6336-6711-42b2-a240-01b1b9f403c6,friday,Karaoke,karaoke
 8e333a16-4af4-4b5d-a97e-02f5099f9021,94788b05-bb7f-4428-9b59-93e2d3ce7183,friday,,music
 d92a4da4-ca39-4344-9fb8-10075c8456d4,94788b05-bb7f-4428-9b59-93e2d3ce7183,monday,8pm,quiz
-d152d9da-6443-4cb2-ab0c-d07b57dc1558,94d24fde-0b24-4bec-a05d-3c8ca530db55,thursday,comedy,comedy
+d152d9da-6443-4cb2-ab0c-d07b57dc1558,94d24fde-0b24-4bec-a05d-3c8ca530db55,thursday,Comedy,comedy
 a51628ab-06b4-4f19-9500-a6d00c398314,94d24fde-0b24-4bec-a05d-3c8ca530db55,tuesday,,quiz
 03a43aa1-9184-4a5c-8b04-aebffdcb762e,9599e4f0-ade0-4f0f-9474-79522540b795,tuesday,7.30pm,quiz
-7c0f1de6-74bf-4ad4-a92f-7d71425a1914,9665dbf0-9144-4a8a-a079-8d2411e5b6e0,friday,DJs,entertain
+7c0f1de6-74bf-4ad4-a92f-7d71425a1914,9665dbf0-9144-4a8a-a079-8d2411e5b6e0,friday,DJs,dj
 166ff34b-b594-402b-85bd-660c5b9efcc1,9665dbf0-9144-4a8a-a079-8d2411e5b6e0,monday,Board games,entertain
-75080b7b-ef67-4560-a26a-b1a275c2948b,9665dbf0-9144-4a8a-a079-8d2411e5b6e0,saturday,DJs,entertain
-991e8735-6124-41fd-a833-352534fb42f8,96ffc2fb-55cd-4c1b-a52c-707767216645,monday,closed,hours
-0f18330e-6de3-42f6-b7d8-10119420d7c8,96ffc2fb-55cd-4c1b-a52c-707767216645,saturday,closed,hours
-c62aaf66-70f2-45bc-8540-c4d5e8dbb941,96ffc2fb-55cd-4c1b-a52c-707767216645,sunday,closed,hours
+75080b7b-ef67-4560-a26a-b1a275c2948b,9665dbf0-9144-4a8a-a079-8d2411e5b6e0,saturday,DJs,dj
+991e8735-6124-41fd-a833-352534fb42f8,96ffc2fb-55cd-4c1b-a52c-707767216645,monday,Closed,hours
+0f18330e-6de3-42f6-b7d8-10119420d7c8,96ffc2fb-55cd-4c1b-a52c-707767216645,saturday,Closed,hours
+c62aaf66-70f2-45bc-8540-c4d5e8dbb941,96ffc2fb-55cd-4c1b-a52c-707767216645,sunday,Closed,hours
 dc09b346-8c82-4480-a15f-97c7cf2ccc90,96ffc2fb-55cd-4c1b-a52c-707767216645,tuesday,Beer pong,entertain
 96ad9b21-77f6-4be6-81d7-7b37e77d0ec0,97a112a9-31a7-4be6-bae9-0b828715e042,wednesday,7.30pm,quiz
-40b070bd-fa25-4c4d-973c-6b23551d2c53,97f2905d-f074-44a7-a26e-011599793af5,monday,closed,hours
-a188d406-26fc-464e-b9d7-c407610048c0,97f2905d-f074-44a7-a26e-011599793af5,tuesday,closed,hours
-8f9c5215-85a6-400b-baf3-e58d3ba7f225,99158172-b45e-4f12-ba5b-44a99db9a74f,monday,closed,hours
+40b070bd-fa25-4c4d-973c-6b23551d2c53,97f2905d-f074-44a7-a26e-011599793af5,monday,Closed,hours
+a188d406-26fc-464e-b9d7-c407610048c0,97f2905d-f074-44a7-a26e-011599793af5,tuesday,Closed,hours
+8f9c5215-85a6-400b-baf3-e58d3ba7f225,99158172-b45e-4f12-ba5b-44a99db9a74f,monday,Closed,hours
 2c31f925-469a-458d-937d-bf34059d3071,9a0fe706-c6f5-4caf-8916-9455700a81f6,wednesday,Bottomless bubbles,brunch
 c924886a-24ed-4c39-b156-ab79488aea51,9b132499-96eb-417c-af3d-9f364172ef33,friday,,music
 6c9380d5-3cc2-43fe-8f75-7cc385650c91,9b132499-96eb-417c-af3d-9f364172ef33,saturday,,music
@@ -350,19 +349,19 @@ e4100113-8eeb-48f2-87ec-cf843804b488,9bb7e86c-ca97-4f53-a349-ebf4a118342f,friday
 706161e1-6f24-444e-b89d-7f364966fbe3,9e6a558a-b9ba-49c4-ab9b-a15419070fde,sunday,7pm,quiz
 d99740fe-60ab-483d-882c-329162a6f193,a37b38ba-4deb-4930-beaf-e29d4faa1a8e,sunday,evening,music
 ad1cd938-443c-41ff-8016-f9f70584e201,a3a2ec56-acd3-45c6-9340-4dfacf8333cb,sunday,,music
-ae8c58d1-1c85-4c6c-b040-0eea89ba3313,a6c70aaa-c0c0-4548-9583-7cb454a56cdb,wednesday,Theatre,entertain
+ae8c58d1-1c85-4c6c-b040-0eea89ba3313,a6c70aaa-c0c0-4548-9583-7cb454a56cdb,wednesday,Theatre,comedy
 7d937b4d-9d31-4da5-8eee-50d6274bfbdc,a760c277-aa87-4a25-b811-a6476503acf6,tuesday,Steak night,entertain
 e3e5bce9-cc9c-4419-bfb3-dd01b679f5b0,a760c277-aa87-4a25-b811-a6476503acf6,wednesday,Unlimited wings,entertain
 01bd787e-8b8f-4b4a-a1c9-f680fb452d58,a81d00e5-7e30-4a8d-a012-acadc43c01b0,friday,,music
-ff70056c-518d-44c9-b471-293d1255369c,a81d00e5-7e30-4a8d-a012-acadc43c01b0,saturday,DJs,DJs
-82de3975-b1db-4dd1-bad1-49e2aab305dd,a81d00e5-7e30-4a8d-a012-acadc43c01b0,sunday,closed,hours
+ff70056c-518d-44c9-b471-293d1255369c,a81d00e5-7e30-4a8d-a012-acadc43c01b0,saturday,DJs,dj
+82de3975-b1db-4dd1-bad1-49e2aab305dd,a81d00e5-7e30-4a8d-a012-acadc43c01b0,sunday,Closed,hours
 b1951034-a789-498a-83b5-efc597844a2b,a869327b-e950-498e-8e26-2fd0a9bfcf5e,tuesday,7.30pm,quiz
 dc929199-bd99-47fa-925f-11d0f8ad94e8,a89e3f76-afa6-4c4a-96f4-2fbda8ffaa54,wednesday,8pm,quiz
-95d6472e-35b4-417e-9fa5-a1cd57a92a1b,a9f0a007-62eb-47ab-b1bc-b893208a1c06,thursday,Comedy,entertain
+95d6472e-35b4-417e-9fa5-a1cd57a92a1b,a9f0a007-62eb-47ab-b1bc-b893208a1c06,thursday,Comedy,comedy
 50a6a4e3-064b-4268-8e3c-fae6e7771e0d,a9f0a007-62eb-47ab-b1bc-b893208a1c06,wednesday,,quiz
-746c278a-7c8c-487b-b6d8-7cd0019bcc69,ad01716e-2623-4e4b-bcfe-ff91b14b2927,monday,Comedy,entertain
-3bffb645-42a8-402d-9b62-d748e7a9b4f5,ad01716e-2623-4e4b-bcfe-ff91b14b2927,sunday,Comedy,entertain
-195069c2-35e4-4ec5-b355-baf30f72d17d,ad01716e-2623-4e4b-bcfe-ff91b14b2927,thursday,Comedy,entertain
+746c278a-7c8c-487b-b6d8-7cd0019bcc69,ad01716e-2623-4e4b-bcfe-ff91b14b2927,monday,7.30pm Comedy,comedy
+3bffb645-42a8-402d-9b62-d748e7a9b4f5,ad01716e-2623-4e4b-bcfe-ff91b14b2927,sunday,7pm Comedy,comedy
+195069c2-35e4-4ec5-b355-baf30f72d17d,ad01716e-2623-4e4b-bcfe-ff91b14b2927,thursday,8pm Comedy,comedy
 4be17dad-2a2f-4585-9ef4-46a5ca99d27a,ad92a845-98eb-4307-b634-0352e47375bb,saturday,,music
 86205512-1e5a-4967-a436-2bbca459d9b8,ae3acdb6-5195-4db8-8ac8-0815234d7f33,friday,,music
 c563fc24-f617-4877-b5f3-7f81fc2dec6b,ae3acdb6-5195-4db8-8ac8-0815234d7f33,saturday,,music
@@ -371,48 +370,48 @@ aa336e6d-594b-4fdb-8787-7df8911c91c0,ae6dfbf2-a16e-40f6-9ff8-6133fa2f49ae,monday
 4a8df53e-39fd-487b-816a-5ec49a32eca7,afd355ac-6e0e-4a67-8e2d-18769b909abb,monday,7.30pm,quiz
 31edec5c-e57e-4de1-8d79-40670aa6b56c,b05dbaeb-9042-4ace-b990-4c50f72a3cfc,thursday,Drag bingo 2nd thursday of the month,entertain
 f99b68be-9446-48ba-832c-5effcdf57b1f,b05dbaeb-9042-4ace-b990-4c50f72a3cfc,tuesday,8pm,quiz
-fa40c0ab-7884-4ed2-953f-66cec8018180,b20e073f-f317-40d8-9bfc-6b873e64ed9d,sunday,closed,hours
+fa40c0ab-7884-4ed2-953f-66cec8018180,b20e073f-f317-40d8-9bfc-6b873e64ed9d,sunday,Closed,hours
 d9293958-b322-4fe5-922b-127fd05a9440,b29eb1ff-292d-425a-bdca-d017c819f7f8,sunday,8pm,quiz
 6598ffbd-5935-4a30-94a7-71658b4a65ed,b3535775-8013-4c4e-b5ff-a83d05668a2c,saturday,,music
 36451f35-8755-4530-8c99-fee56c6bbb31,b3535775-8013-4c4e-b5ff-a83d05668a2c,sunday,7pm,quiz
-189eb26b-0def-4607-8190-69aa19074d08,b3535775-8013-4c4e-b5ff-a83d05668a2c,thursday,Open mic night,entertain
-c6b92649-375a-41fc-a873-62ca39d166d9,b38678b1-85a6-418e-8741-4957ee3f7f5c,monday,closed,hours
-b3f75416-6a7c-4cdc-8e9a-919529652385,b38678b1-85a6-418e-8741-4957ee3f7f5c,tuesday,closed,hours
+189eb26b-0def-4607-8190-69aa19074d08,b3535775-8013-4c4e-b5ff-a83d05668a2c,thursday,Open mic night,comedy
+c6b92649-375a-41fc-a873-62ca39d166d9,b38678b1-85a6-418e-8741-4957ee3f7f5c,monday,Closed,hours
+b3f75416-6a7c-4cdc-8e9a-919529652385,b38678b1-85a6-418e-8741-4957ee3f7f5c,tuesday,Closed,hours
 e03a22e6-33ec-4aae-9214-691829dabfa1,b5a20b56-13dc-4707-a4b2-f381927d863b,sunday,7pm,quiz
 8f656969-838c-427c-b68e-16afdc9b6792,b661c685-8e84-46d3-8c88-4bebf01edacb,wednesday,7.30pm,quiz
-4b4c42d5-d1e1-471d-b44a-71db6cda4721,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,monday,closed,hours
+4b4c42d5-d1e1-471d-b44a-71db6cda4721,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,monday,Closed,hours
 d23f466e-834e-4938-9807-e0307bde6118,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,sunday,5pm,quiz
-917ef18d-2d48-47d1-81f8-f316503cc245,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,tuesday,closed,hours
-17420786-7655-457e-a22c-2e23f14dfa2c,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,wednesday,closed,hours
+917ef18d-2d48-47d1-81f8-f316503cc245,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,tuesday,Closed,hours
+17420786-7655-457e-a22c-2e23f14dfa2c,b7f16ea4-7f50-4d2c-bc48-46cddf0984c0,wednesday,Closed,hours
 ca0f1fdc-420d-4444-b04a-e2556a3e39db,b8008c1f-9c21-46e9-9d45-6ea226c5cedb,thursday,,music
 7ed14755-8721-4338-b666-e27deffa4bd0,b96faccc-34f7-4499-b3c4-9fc4b208ff34,thursday,Piano or jazz,music
 1f5c33d7-549d-48d5-9637-c771cdc21072,b97c49e9-c8a8-40f6-b7be-5604e201548a,monday,7pm,quiz
 4c13f35c-a9f4-48a2-9d2b-04141dd50610,b97c49e9-c8a8-40f6-b7be-5604e201548a,wednesday,8pm,quiz
-889af851-29b8-4ae4-8e3f-85027f917f33,bac90b1c-9d1f-444e-b04d-f4cc4e6c80ca,sunday,closed,hours
-ae0f0b99-2938-4228-baae-d1e8921b7abe,bc32e738-6d62-4be7-bf42-a447723bf076,friday,Karaoki,entertain
+889af851-29b8-4ae4-8e3f-85027f917f33,bac90b1c-9d1f-444e-b04d-f4cc4e6c80ca,sunday,Closed,hours
+ae0f0b99-2938-4228-baae-d1e8921b7abe,bc32e738-6d62-4be7-bf42-a447723bf076,friday,Karaoki,karaoke
 fd8dce01-c6e9-4b2a-b8ed-82f8ef3a0439,bc32e738-6d62-4be7-bf42-a447723bf076,thursday,8pm,quiz
 0f958927-f290-4f9e-a33f-748f5d6d14d1,bcb5569d-e16c-4959-985e-0e52ab7d293f,monday,7.45pm,quiz
 56eab5cb-e370-4e78-bc07-488e12bb98ac,bd3d76b8-8795-4321-85f9-39a8397e5fdb,sunday,7pm,quiz
 1bb0bd00-5e9b-439b-a09b-fdbeb45f216f,be392cbb-c520-4bf8-b2bc-af0185a610e1,monday,7pm,quiz
 7c1d2a95-e79f-4537-8df2-35eb0e0bfa9c,be442317-97c2-4b63-9acf-bdfd85f186a0,tuesday,Board games,entertain
 48c6f374-a3a0-4ee7-9ba2-dc413b71b388,be442317-97c2-4b63-9acf-bdfd85f186a0,wednesday,8pm,quiz
-de947664-d100-4904-8e46-a761b5f375e1,be73a1f9-62cc-470a-955b-094c4b734938,monday,closed,hours
-57009331-e59c-43d9-9cff-4ad5766e420e,be73a1f9-62cc-470a-955b-094c4b734938,tuesday,closed,hours
+de947664-d100-4904-8e46-a761b5f375e1,be73a1f9-62cc-470a-955b-094c4b734938,monday,Closed,hours
+57009331-e59c-43d9-9cff-4ad5766e420e,be73a1f9-62cc-470a-955b-094c4b734938,tuesday,Closed,hours
 922e2226-e9ba-4aaa-a591-0f490bc69537,bf525a4f-4c2f-42cb-9ecd-1513e1decf68,sunday,,music
 a90a32c0-690c-47cf-9ba3-79d1768e260b,bf525a4f-4c2f-42cb-9ecd-1513e1decf68,tuesday,Pottery,entertain
 2fde5aaa-02e5-473a-8d36-f34307ad6e43,bfe9cb5f-28a3-45b0-94dd-9e0a55860a1e,sunday,8pm,quiz
-5a941527-7fbb-4c46-9f68-75f4ab956e17,bfe9cb5f-28a3-45b0-94dd-9e0a55860a1e,tuesday,Open mic night,entertain
-778056e1-1b1b-4199-b73a-168f015a6aeb,c0120f51-ab4c-476d-bd91-4d5f246e9074,monday,closed,hours
-934733f9-d0e6-41b4-b50f-4f87f0d2c8e8,c0120f51-ab4c-476d-bd91-4d5f246e9074,sunday,closed,hours
-3d544317-dbb6-47ce-9744-13d67d57e15e,c0120f51-ab4c-476d-bd91-4d5f246e9074,tuesday,closed,hours
+5a941527-7fbb-4c46-9f68-75f4ab956e17,bfe9cb5f-28a3-45b0-94dd-9e0a55860a1e,tuesday,Open mic night,comedy
+778056e1-1b1b-4199-b73a-168f015a6aeb,c0120f51-ab4c-476d-bd91-4d5f246e9074,monday,Closed,hours
+934733f9-d0e6-41b4-b50f-4f87f0d2c8e8,c0120f51-ab4c-476d-bd91-4d5f246e9074,sunday,Closed,hours
+3d544317-dbb6-47ce-9744-13d67d57e15e,c0120f51-ab4c-476d-bd91-4d5f246e9074,tuesday,Closed,hours
 2c268864-b039-4aee-95f2-281c6923bbe4,c1044c8f-4f99-4056-8d6a-c0ada8f65bb8,saturday,,music
-f6b787cd-1db6-4d45-bca1-6be227385b0e,c1044c8f-4f99-4056-8d6a-c0ada8f65bb8,tuesday,Live jazz music,music
+f6b787cd-1db6-4d45-bca1-6be227385b0e,c1044c8f-4f99-4056-8d6a-c0ada8f65bb8,tuesday,Live jazz,music
 3dbd992d-eb0e-494b-8834-88bb40e5fb18,c26bd2e6-40d3-48c8-9d1e-9d4fd4af3231,monday,8pm,quiz
 972fb01a-0c98-41f4-895d-38f69e9ce706,c39dc71f-10e9-49de-8ee2-d4327dbf23e4,thursday,Sing-along,entertain
 e4f38090-3058-404a-99c6-8db36ece4261,c39e7404-5f5c-4ebf-adaa-3412cb3f1a61,wednesday,8pm,quiz
-77507d04-2876-4f33-bbaf-692b964f8f37,c5750a08-a2e0-4957-9628-b7425700ea90,monday,closed,hours
-0cce7a64-eaa8-4061-8610-826c593f5753,c5750a08-a2e0-4957-9628-b7425700ea90,tuesday,closed,hours
-ac4eacd9-1b97-4553-8f76-e89f8c63bc67,c5750a08-a2e0-4957-9628-b7425700ea90,wednesday,closed,hours
+77507d04-2876-4f33-bbaf-692b964f8f37,c5750a08-a2e0-4957-9628-b7425700ea90,monday,Closed,hours
+0cce7a64-eaa8-4061-8610-826c593f5753,c5750a08-a2e0-4957-9628-b7425700ea90,tuesday,Closed,hours
+ac4eacd9-1b97-4553-8f76-e89f8c63bc67,c5750a08-a2e0-4957-9628-b7425700ea90,wednesday,Closed,hours
 53d9572c-7539-4bca-8b0a-eeecd07c9b1e,c650c468-2d0a-4c47-910c-131f0ad077e9,thursday,9.30pm Jazz,music
 45264945-a0e0-4a4c-8b04-1929f886bc94,c650c468-2d0a-4c47-910c-131f0ad077e9,wednesday,9.30pm Jazz,music
 52eccf00-e623-4f53-8db1-e41221cab440,c6dc0911-17ad-48e9-8574-4aa107f434c4,sunday,,music
@@ -431,45 +430,45 @@ a44a4fef-7687-4ed8-8561-a2e69f15754b,c842ceb4-a74b-43d4-8441-3adbbd4daf8d,tuesda
 b380a6be-d0fd-4ce7-8b93-3df4ff621f49,c9cb2f10-838b-400b-aaa9-a2a2a4defe64,sunday,Jazz music,music
 4cf9c3b1-6c1f-4536-9f0c-44d5f5e7db02,c9cb2f10-838b-400b-aaa9-a2a2a4defe64,wednesday,8pm,quiz
 023da3e9-b981-4c8b-8b23-ade4e7ae002c,c9f7df01-abab-4555-a88e-26b323912bb7,monday,7.30pm,quiz
-245c3829-47f3-4678-88d4-dfdc17903e5c,cd2b49a2-048e-4ce7-abeb-df570f2320ec,thursday,Open mic night,entertain
-5f811f80-44cc-4b93-8382-bb028411a506,cd2b49a2-048e-4ce7-abeb-df570f2320ec,wednesday,Comedy or film night,entertain
-c7b53e66-8001-4d08-be3b-bb46aadd86ba,cda9928e-ee30-4c1d-a992-327d64725d81,thursday,Open mic night,entertain
-53b40c5d-3127-4c67-a661-b848e62e1bb0,cda9928e-ee30-4c1d-a992-327d64725d81,wednesday,Comedy or film night,entertain
-a6f2a191-35b5-41d2-a2b3-cb558bf8843a,cf3b7582-9056-4f63-8421-67ff8fc2f156,friday,Karaoke,entertain
+245c3829-47f3-4678-88d4-dfdc17903e5c,cd2b49a2-048e-4ce7-abeb-df570f2320ec,thursday,Open mic night,comedy
+5f811f80-44cc-4b93-8382-bb028411a506,cd2b49a2-048e-4ce7-abeb-df570f2320ec,wednesday,Comedy or film night,comedy
+c7b53e66-8001-4d08-be3b-bb46aadd86ba,cda9928e-ee30-4c1d-a992-327d64725d81,thursday,Open mic night,comedy
+53b40c5d-3127-4c67-a661-b848e62e1bb0,cda9928e-ee30-4c1d-a992-327d64725d81,wednesday,Comedy or film night,comedy
+a6f2a191-35b5-41d2-a2b3-cb558bf8843a,cf3b7582-9056-4f63-8421-67ff8fc2f156,friday,Karaoke,karaoke
 a3f771bc-7195-4927-a0b2-b9c9f8141167,d010138e-02c3-492d-ada2-df1478095d2d,monday,,music
 cb1e9cc9-9898-40f1-b27e-934399fa05c6,d010138e-02c3-492d-ada2-df1478095d2d,saturday,,music
 9de1c105-54f1-4785-b015-e07fc63f5b9d,d010138e-02c3-492d-ada2-df1478095d2d,sunday,,music
 46a13187-cc93-4475-a575-bf25afd010df,d010138e-02c3-492d-ada2-df1478095d2d,wednesday,,music
-43c48021-aba7-47f5-ab4f-9044faaf615e,d015539a-55fe-480f-b96d-156382cf87b5,friday,DJs,DJs
-114017ae-bf5c-4633-95a7-ee385b4626d6,d015539a-55fe-480f-b96d-156382cf87b5,saturday,DJs,DJs
+43c48021-aba7-47f5-ab4f-9044faaf615e,d015539a-55fe-480f-b96d-156382cf87b5,friday,DJs,dj
+114017ae-bf5c-4633-95a7-ee385b4626d6,d015539a-55fe-480f-b96d-156382cf87b5,saturday,DJs,dj
 d8355096-a64a-442d-be42-06342b39288f,d015539a-55fe-480f-b96d-156382cf87b5,tuesday,7.30pm,quiz
 039af6d0-26fd-4ac3-affa-25f51916f6c8,d0b56227-3c66-40d6-81d7-aa19c1f50dea,tuesday,8pm,quiz
-6d026810-07d2-4f54-bc90-79da2bb4c60e,d146e8d7-4e0f-4814-ac83-2b1b419e9ff6,monday,closed,hours
-ee809241-2c72-4dcf-9d1b-5cf673097a92,d146e8d7-4e0f-4814-ac83-2b1b419e9ff6,tuesday,closed,hours
-e5bb105c-7e5c-40ce-9253-e3b306eaafba,d146e8d7-4e0f-4814-ac83-2b1b419e9ff6,wednesday,closed,hours
+6d026810-07d2-4f54-bc90-79da2bb4c60e,d146e8d7-4e0f-4814-ac83-2b1b419e9ff6,monday,Closed,hours
+ee809241-2c72-4dcf-9d1b-5cf673097a92,d146e8d7-4e0f-4814-ac83-2b1b419e9ff6,tuesday,Closed,hours
+e5bb105c-7e5c-40ce-9253-e3b306eaafba,d146e8d7-4e0f-4814-ac83-2b1b419e9ff6,wednesday,Closed,hours
 8af91b3e-eadc-46e7-8d90-4d3f2c5e70a4,d16c1055-642f-4853-a97c-5c7ed1baf76b,monday,Live drawing,entertain
-baff6d98-65a1-4b4e-9fe6-1a917fbfca8c,d1cab6b6-3c33-4e23-a363-3e0a496ae2cf,monday,closed,hours
+baff6d98-65a1-4b4e-9fe6-1a917fbfca8c,d1cab6b6-3c33-4e23-a363-3e0a496ae2cf,monday,Closed,hours
 7eaea597-142b-4292-86ac-912fe6e665f1,d2197b2d-46ee-44dd-98f8-4ea345880c75,tuesday,7pm,quiz
 4af8eec1-25c2-4227-be9b-1394f420f08b,d324bef0-4d75-438b-8a2a-9be977c67942,thursday,Jazz 9.30pm,music
 cef2e991-7d94-46e1-ae57-ff53a44d31b8,d324bef0-4d75-438b-8a2a-9be977c67942,wednesday,Jazz 9.30pm,music
-1638dcd7-8563-4203-9421-89f773714f26,d32da59a-43c2-4478-a9a0-70e724acc75a,friday,Karaoke hire,entertain
-c9cd7e4a-b52e-4b78-a8d2-788b2c07187f,d32da59a-43c2-4478-a9a0-70e724acc75a,saturday,Karaoke hire,entertain
+1638dcd7-8563-4203-9421-89f773714f26,d32da59a-43c2-4478-a9a0-70e724acc75a,friday,Karaoke hire,karaoke
+c9cd7e4a-b52e-4b78-a8d2-788b2c07187f,d32da59a-43c2-4478-a9a0-70e724acc75a,saturday,Karaoke hire,karaoke
 b07096a7-da80-41bc-ba8a-7a8ba83d5031,d345a6b6-b95e-4f35-9cda-66e75badb7a9,friday,,music
-05aefeec-431a-49ec-ac75-1e164553e3d6,d345a6b6-b95e-4f35-9cda-66e75badb7a9,monday,Open mic night,entertain
+05aefeec-431a-49ec-ac75-1e164553e3d6,d345a6b6-b95e-4f35-9cda-66e75badb7a9,monday,Open mic night,comedy
 f93d504a-7965-44f1-950f-b0fcfd916604,d345a6b6-b95e-4f35-9cda-66e75badb7a9,saturday,,music
 460ba72f-335a-4acf-9fec-d7dca9a7dbc0,d345a6b6-b95e-4f35-9cda-66e75badb7a9,sunday,8.30pm,quiz
-017db11f-cea3-488d-8921-627d60caf49a,d345a6b6-b95e-4f35-9cda-66e75badb7a9,thursday,Karaoke,entertain
+017db11f-cea3-488d-8921-627d60caf49a,d345a6b6-b95e-4f35-9cda-66e75badb7a9,thursday,Karaoke,karaoke
 d9053861-423e-4480-9f1d-9d927213072d,d3b6ad54-f464-4c7c-ad22-703c699ae5ec,tuesday,7.30pm,quiz
 1406851d-56de-4bb0-ad72-60dc37ca9bb6,d4ea95cf-e3b8-488f-b3c5-160b4cd5d974,saturday,,music
 70b5a7da-c145-4678-a58f-a2fdaf7be301,d5518e94-d024-4dec-a5ae-7ce30ef25743,tuesday,,quiz
 6cae0563-5903-4eed-95f0-fb8712e9d5fd,d5ec18cc-ae6f-4138-a904-a0a68b98adf5,thursday,8pm,quiz
 205ca3bd-7cc5-4af6-9d4f-69f07938a749,d5ec18cc-ae6f-4138-a904-a0a68b98adf5,tuesday,Drag bingo last tuesday of the month,entertain
 59fa0ea5-a55b-4738-9fdc-e6a37cd8d2c7,d604559d-1c53-4314-b5d8-f8d24caf1c9d,sunday,8pm,quiz
-f2da3170-3a40-4fd7-82a5-78c9948348db,d6bce8f4-f1db-4b8b-8bcf-c12cb7581e81,monday,Open mic night,entertain
+f2da3170-3a40-4fd7-82a5-78c9948348db,d6bce8f4-f1db-4b8b-8bcf-c12cb7581e81,monday,Open mic night,comedy
 96c7eb8c-a2c3-4d46-9757-fe20f8180f66,d6bce8f4-f1db-4b8b-8bcf-c12cb7581e81,sunday,7.30pm,quiz
 d9ec405f-3de9-41cd-b48e-551266f6ae31,d8845018-5e5e-4ad1-8e81-b28760224920,sunday,,quiz
 26caa89e-e930-4f0f-86f2-87ddbe7a9c3d,d9eddec9-79ea-451a-8281-2633fa3e0d7f,sunday,7.30pm,quiz
-b0bd16cc-41cd-4e30-89e1-16dd186e740e,db9735e9-0aa8-4c6b-9ca7-96843efe0c93,thursday,Karaoke,entertain
+b0bd16cc-41cd-4e30-89e1-16dd186e740e,db9735e9-0aa8-4c6b-9ca7-96843efe0c93,thursday,Karaoke,karaoke
 f0d02e6b-2ada-4bb3-8b42-78df7c1df931,dbd26126-fc61-4fc9-9b3c-a62dc1032abb,thursday,8pm,quiz
 efc1b468-353b-4f79-bde7-2f312c896909,dbd26126-fc61-4fc9-9b3c-a62dc1032abb,tuesday,7.30pm Chess club,entertain
 cfa4de44-e4fe-4550-9c90-2ca0310baca1,dc337edd-d2e4-4886-89e7-a34ab1892ab9,sunday,Live jazz,music
@@ -479,61 +478,921 @@ e22474cc-42a1-4b71-bfac-496b299f60fa,dd064338-54da-4ff0-a621-4d49728f8236,monday
 7d11d02a-9898-4306-b1c3-e549379d1696,ddcba12b-1354-40cb-9164-d34884314057,wednesday,8pm,quiz
 dfd72465-39d9-4006-968c-df4fb847f5e0,df78699d-0f0f-4bef-bbc7-dcbcc926fcc2,tuesday,,quiz
 065d4807-4a5d-44b9-917e-59fb0c972f04,e11b2048-5a29-48e1-a059-a87797a18ebc,monday,8pm,quiz
-f84d8383-18b7-4870-9ae5-7d6876103b25,e47ad9d4-9124-4218-b2a8-eabf6a8f54d1,monday,closed,hours
-ee55210b-5df8-47c9-98e9-8fcb7407b02a,e47ad9d4-9124-4218-b2a8-eabf6a8f54d1,tuesday,closed,hours
+f84d8383-18b7-4870-9ae5-7d6876103b25,e47ad9d4-9124-4218-b2a8-eabf6a8f54d1,monday,Closed,hours
+ee55210b-5df8-47c9-98e9-8fcb7407b02a,e47ad9d4-9124-4218-b2a8-eabf6a8f54d1,tuesday,Closed,hours
 3f5248bc-2dcf-4736-ab3a-4a92721329ea,e4a67441-49af-40bd-ad4c-df88ba87f85e,saturday,,music
 da9d60fc-2815-49dd-b5ff-965b4daa633d,e4a67441-49af-40bd-ad4c-df88ba87f85e,sunday,,music
-1c159df7-91e6-41df-adfe-4e0fda60a389,e4a67441-49af-40bd-ad4c-df88ba87f85e,thursday,Karaoke,entertain
-d5269d54-3e49-4222-aeae-ef71afa22924,e5999686-9288-4e72-97ab-e6d40c91d8a8,monday,closed,hours
-c1ec6e9c-8ff1-4566-b9ec-a32b8c5e4f02,e742eaeb-ca3a-4b61-bf87-186aec8dd672,monday,closed,hours
+1c159df7-91e6-41df-adfe-4e0fda60a389,e4a67441-49af-40bd-ad4c-df88ba87f85e,thursday,Karaoke,karaoke
+d5269d54-3e49-4222-aeae-ef71afa22924,e5999686-9288-4e72-97ab-e6d40c91d8a8,monday,Closed,hours
+c1ec6e9c-8ff1-4566-b9ec-a32b8c5e4f02,e742eaeb-ca3a-4b61-bf87-186aec8dd672,monday,Closed,hours
 3ea51eb7-2885-4245-ad90-4253f5531a9f,e742eaeb-ca3a-4b61-bf87-186aec8dd672,sunday,7.30pm,quiz
-5abea0e0-f1f4-464d-8cd5-58d9504f19c0,e742eaeb-ca3a-4b61-bf87-186aec8dd672,thursday,closed,hours
-857b90b9-5d24-451d-bed1-84bf76accb79,e742eaeb-ca3a-4b61-bf87-186aec8dd672,tuesday,closed,hours
-2573faf6-39c3-40a4-a7f6-9734d3ffe3d8,e742eaeb-ca3a-4b61-bf87-186aec8dd672,wednesday,closed,hours
-21e5ece8-0652-4159-9468-90fcbd7c46ac,e8cbe945-648f-4a82-8e4b-8a6eb043af7f,monday,closed,hours
+5abea0e0-f1f4-464d-8cd5-58d9504f19c0,e742eaeb-ca3a-4b61-bf87-186aec8dd672,thursday,Closed,hours
+857b90b9-5d24-451d-bed1-84bf76accb79,e742eaeb-ca3a-4b61-bf87-186aec8dd672,tuesday,Closed,hours
+2573faf6-39c3-40a4-a7f6-9734d3ffe3d8,e742eaeb-ca3a-4b61-bf87-186aec8dd672,wednesday,Closed,hours
+21e5ece8-0652-4159-9468-90fcbd7c46ac,e8cbe945-648f-4a82-8e4b-8a6eb043af7f,monday,Closed,hours
 d217d0ec-f703-437a-9c4e-fd77b3a1a15a,e9ec51c9-fd81-4b03-b3b2-0a3b1f16bfc6,tuesday,7pm,quiz
 6d5aa07e-bfee-414f-9e84-8799c6c43ea0,eab9451c-265a-4d83-b539-e782c24bb490,thursday,8pm,quiz
 5c57d3c4-a855-451c-acf1-6efdd18f2369,eab9451c-265a-4d83-b539-e782c24bb490,tuesday,8pm,quiz
 23296c38-0030-4ce4-90ae-8a7bc7663bd1,ecefbb5e-f81c-4380-9c13-97f27c06954e,sunday,7.30pm,quiz
 6959ff7b-c82e-4f5a-89db-ada8fbca3017,ed530a98-058f-4b2d-afb1-2adc4916e305,monday,7pm,quiz
-7dea36cd-d04f-4837-81a6-e8617de8ff02,ee6111f6-779e-4e3a-b6f8-bbf26d0d53c2,monday,closed,hours
-ca4f66c5-2837-4ba2-8dd8-de9dc46db301,ee6111f6-779e-4e3a-b6f8-bbf26d0d53c2,sunday,closed,hours
-5f821673-8620-42bc-9623-e5022811025e,ee6111f6-779e-4e3a-b6f8-bbf26d0d53c2,tuesday,closed,hours
+7dea36cd-d04f-4837-81a6-e8617de8ff02,ee6111f6-779e-4e3a-b6f8-bbf26d0d53c2,monday,Closed,hours
+ca4f66c5-2837-4ba2-8dd8-de9dc46db301,ee6111f6-779e-4e3a-b6f8-bbf26d0d53c2,sunday,Closed,hours
+5f821673-8620-42bc-9623-e5022811025e,ee6111f6-779e-4e3a-b6f8-bbf26d0d53c2,tuesday,Closed,hours
 afacbf57-d7cd-4be6-9d88-97cddd30043a,eeb52bb4-449c-4b35-b25e-c9ff9795e4f0,monday,quiz,quiz
-ae9bd648-26f6-4173-8fa1-6fd965f95b01,eeb52bb4-449c-4b35-b25e-c9ff9795e4f0,thursday,Open mic nights 1st of the month,entertain
-3a5825c5-349d-4c5c-9b53-5890173188cd,eef15e99-0ec1-4296-85b6-530d218819d5,friday,DJs,DJs
+ae9bd648-26f6-4173-8fa1-6fd965f95b01,eeb52bb4-449c-4b35-b25e-c9ff9795e4f0,thursday,Open mic nights 1st of the month,comedy
+3a5825c5-349d-4c5c-9b53-5890173188cd,eef15e99-0ec1-4296-85b6-530d218819d5,friday,DJs,dj
 3d5d7e6d-fcb8-47ba-98db-e0e2c8ecbf74,eef15e99-0ec1-4296-85b6-530d218819d5,monday,7pm,quiz
-dd5a8ada-b05b-4e5c-9d4b-380033df1bd5,eef15e99-0ec1-4296-85b6-530d218819d5,saturday,DJs,DJs
+dd5a8ada-b05b-4e5c-9d4b-380033df1bd5,eef15e99-0ec1-4296-85b6-530d218819d5,saturday,DJs,dj
 640ac0e0-eb50-406e-9dcb-3e9866ac2e1e,eef15e99-0ec1-4296-85b6-530d218819d5,thursday,,music
 fb000b11-9ace-44e3-bcd2-bbe38cb415d1,f203b61c-9fbe-4ec0-ad8f-aed1da80d216,saturday,1pm Bingo brunch,entertain
 09a50e23-4a5f-4f86-9d71-211a1aaa5de7,f2a37e3c-43fc-4c7f-b62e-fa7e491f1625,monday,quiz bingo,entertain
-354ebb34-c7aa-4b97-8bda-61c24d20e60a,f2a37e3c-43fc-4c7f-b62e-fa7e491f1625,tuesday,Live jazz music,music
+354ebb34-c7aa-4b97-8bda-61c24d20e60a,f2a37e3c-43fc-4c7f-b62e-fa7e491f1625,tuesday,Live jazz,music
 af4cdcca-05d9-4e2b-84dc-5acce4c6fd05,f2fad9c5-2686-483e-83f1-977936d31f39,thursday,8pm,quiz
-27f6e1d1-aa62-436e-a3b9-3fc38290d665,f5e951e4-ab9a-4e8e-926e-94d26bcdc5cf,saturday,closed,hours
-1f44990f-aad5-4d88-804b-24734b55392e,f5e951e4-ab9a-4e8e-926e-94d26bcdc5cf,sunday,closed,hours
+27f6e1d1-aa62-436e-a3b9-3fc38290d665,f5e951e4-ab9a-4e8e-926e-94d26bcdc5cf,saturday,Closed,hours
+1f44990f-aad5-4d88-804b-24734b55392e,f5e951e4-ab9a-4e8e-926e-94d26bcdc5cf,sunday,Closed,hours
 107f1a5e-5d9a-4a01-a9cb-d692625fc7f8,f6d03468-da16-4961-b622-f907e1958ded,tuesday,8pm,quiz
-641360b9-9602-49af-b5b7-55d9c73cf5bb,f6e11b5c-cf77-4f39-81fa-6d3ff8bd9bdc,friday,Comedy,entertain
+641360b9-9602-49af-b5b7-55d9c73cf5bb,f6e11b5c-cf77-4f39-81fa-6d3ff8bd9bdc,friday,Comedy,comedy
 1ac61ddf-3d23-4c09-816b-6210271a36a0,f6e11b5c-cf77-4f39-81fa-6d3ff8bd9bdc,monday,Ukulele 1st monday of the month,music
 8cde118c-cd2d-4c3c-888a-18a0df873310,f6e11b5c-cf77-4f39-81fa-6d3ff8bd9bdc,thursday,8pm,quiz
 058ba43d-36eb-452b-8fec-58dc6f91460d,f739b77a-f490-46b9-8809-10b986844d8f,thursday,every 2nd of the month,entertain
 41008cec-1998-484d-81dd-c8abeba4d339,f739b77a-f490-46b9-8809-10b986844d8f,wednesday,7.30pm,quiz
-4a96d485-57dd-43ab-9174-015621bbef69,f74c12e3-3d4d-43c8-89a7-57431146438d,friday,Open mic night,entertain
+4a96d485-57dd-43ab-9174-015621bbef69,f74c12e3-3d4d-43c8-89a7-57431146438d,friday,Open mic night,comedy
 3f6e8c3b-31b4-4451-be0d-21a060fe2a98,f74c12e3-3d4d-43c8-89a7-57431146438d,sunday,Sing-a-long,entertain
-0d4f797b-9297-4523-8216-971e0d4c1c35,f7c8fe0f-e105-4225-830b-18b9c049b030,saturday,closed,hours
-5ac795dd-e0d0-4639-8447-3224369d6390,f7c8fe0f-e105-4225-830b-18b9c049b030,sunday,closed,hours
+0d4f797b-9297-4523-8216-971e0d4c1c35,f7c8fe0f-e105-4225-830b-18b9c049b030,saturday,Closed,hours
+5ac795dd-e0d0-4639-8447-3224369d6390,f7c8fe0f-e105-4225-830b-18b9c049b030,sunday,Closed,hours
 e5471b7f-3f19-434d-b749-6cedb447afc2,f86ba14f-22b0-4492-9aa4-6234cced8e8a,friday,,music
 28f0e05e-585e-4cd7-b3a1-f0937c917292,f86ba14f-22b0-4492-9aa4-6234cced8e8a,tuesday,1st of the month,quiz
-3dff771d-2d85-4a1f-a0dd-2201369ff577,f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,monday,closed,hours
-0ef1ea1c-2a52-425f-be85-792290dada1a,f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,sunday,closed,hours
-f9d03cea-f2b4-4d63-a940-e3d617805893,f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,tuesday,closed,hours
-a9766ef3-1aff-44f5-8f49-c341f3cc0e08,fa24fedf-0c19-4e57-8870-90101bc42aa1,monday,closed,hours
-80c7de42-fecf-4955-a962-2e9f6595adc2,fa24fedf-0c19-4e57-8870-90101bc42aa1,thursday,closed,hours
-fb4fd049-3761-4f6a-abec-1a9eaed769b2,fa24fedf-0c19-4e57-8870-90101bc42aa1,tuesday,closed,hours
-9f1e8cd2-9513-4f06-af92-f44a2c7c6c4e,fa24fedf-0c19-4e57-8870-90101bc42aa1,wednesday,closed,hours
+3dff771d-2d85-4a1f-a0dd-2201369ff577,f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,monday,Closed,hours
+0ef1ea1c-2a52-425f-be85-792290dada1a,f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,sunday,Closed,hours
+f9d03cea-f2b4-4d63-a940-e3d617805893,f90e7e08-a44f-48d4-ba4b-e71c2e42beb4,tuesday,Closed,hours
+a9766ef3-1aff-44f5-8f49-c341f3cc0e08,fa24fedf-0c19-4e57-8870-90101bc42aa1,monday,Closed,hours
+80c7de42-fecf-4955-a962-2e9f6595adc2,fa24fedf-0c19-4e57-8870-90101bc42aa1,thursday,Closed,hours
+fb4fd049-3761-4f6a-abec-1a9eaed769b2,fa24fedf-0c19-4e57-8870-90101bc42aa1,tuesday,Closed,hours
+9f1e8cd2-9513-4f06-af92-f44a2c7c6c4e,fa24fedf-0c19-4e57-8870-90101bc42aa1,wednesday,Closed,hours
 1546b34e-c968-4fcf-9fb2-a6b898e738ab,fb633682-9d29-47d1-81cd-a1848becebb0,monday,7.30pm every other,quiz
 4b6def54-9c08-4a2e-be99-b5e5ec76f5f1,fb633682-9d29-47d1-81cd-a1848becebb0,thursday,Live jazz music last of the month,music
 690aacbd-51d4-4270-8e17-5b15f74a00e2,fbfe14ab-a48b-424f-b09d-6c1478f0edcb,thursday,Race night,entertain
 d05d3ebc-6d86-415f-8e00-98452d18caf7,fbfe14ab-a48b-424f-b09d-6c1478f0edcb,tuesday,,quiz
-94ccdd8b-9468-4557-8eb3-e272f6251e9f,fbfe14ab-a48b-424f-b09d-6c1478f0edcb,wednesday,Karaoke,entertain
+94ccdd8b-9468-4557-8eb3-e272f6251e9f,fbfe14ab-a48b-424f-b09d-6c1478f0edcb,wednesday,Karaoke,karaoke
 3cf034aa-36e1-44b5-8ab2-bf1fae8496e2,fc458d09-1661-41da-bad9-867e49c720ce,sunday,7pm,quiz
 2ec7d47c-5c21-471e-9021-27e7f4c38135,ff1be3fe-9942-441e-a9e3-f329d0b65eb2,monday,8pm,quiz
+2f6e65bc-5e48-4cf9-a59e-5252864c63b2,2feac08a-c2fd-44a2-a9bb-51e86a61a458,monday,Karaoke,karaoke
+30335777-c081-4fcc-bef0-09f50dcdc341,2feac08a-c2fd-44a2-a9bb-51e86a61a458,tuesday,Karaoke,karaoke
+f710b7ee-9d19-4aaa-ad9d-372b9912b578,2feac08a-c2fd-44a2-a9bb-51e86a61a458,wednesday,Karaoke,karaoke
+f04598dc-532e-4b50-ac1b-c315afab3440,2feac08a-c2fd-44a2-a9bb-51e86a61a458,thursday,Karaoke,karaoke
+0c3b9353-259e-485f-ad75-8febb43efbaf,2feac08a-c2fd-44a2-a9bb-51e86a61a458,friday,Karaoke,karaoke
+5786d5e5-5673-437d-b504-efc2481c4454,2feac08a-c2fd-44a2-a9bb-51e86a61a458,saturday,Karaoke,karaoke
+85c12368-70b1-49e1-9eef-a5876704eeab,2feac08a-c2fd-44a2-a9bb-51e86a61a458,sunday,Closed,hours
+3b05d656-fae3-4303-8527-b3068b197f57,bed093a8-e23d-4839-8b2f-56a019fdbf5d,sunday,Closed,hours
+28b78760-8779-406a-818c-1d740d759736,299bdbfe-1c66-45ad-beb8-26938b81ba7d,saturday,Closed,hours
+d5145a80-f179-4224-8602-563664e38bb5,299bdbfe-1c66-45ad-beb8-26938b81ba7d,sunday,Closed,hours
+70ceebae-4876-4a01-ae4b-6a279e75bcf2,97e8d07b-3b68-4ffc-a2a2-6342d316341b,monday,Closed,hours
+3274bae0-5b81-4a51-9b7d-fbea3c98f6dc,97e8d07b-3b68-4ffc-a2a2-6342d316341b,tuesday,Closed,hours
+aefafac7-737d-4778-899e-b1a6e9b93727,97e8d07b-3b68-4ffc-a2a2-6342d316341b,wednesday,9pm-11.30pm,music
+bce45937-fae6-4537-912b-6ead00a3000d,97e8d07b-3b68-4ffc-a2a2-6342d316341b,thursday,9pm-11.30pm,music
+25e7d404-bd34-4c62-8515-278439c36f23,97e8d07b-3b68-4ffc-a2a2-6342d316341b,friday,9pm-11.30pm,music
+c11c0c16-75ec-45b0-a0f2-46065f963039,97e8d07b-3b68-4ffc-a2a2-6342d316341b,saturday,9pm-11.30pm,hours
+ac4cdc10-81a0-42ed-9863-67d7611406af,97e8d07b-3b68-4ffc-a2a2-6342d316341b,sunday,Closed,hours
+f56da963-845f-4f20-a1b0-40349613e3e4,16fa1ee3-3a28-4089-9866-030a4bcf87f1,monday,,
+22f0e1a1-d124-482f-bec8-e982272ab8e9,16fa1ee3-3a28-4089-9866-030a4bcf87f1,tuesday,,
+db6a88e7-5185-418f-87c4-51a7dcaa9d33,16fa1ee3-3a28-4089-9866-030a4bcf87f1,wednesday,,
+b4ef78c0-5b73-4f18-9deb-b6cc0ec9898e,16fa1ee3-3a28-4089-9866-030a4bcf87f1,thursday,,
+623aadcc-8a37-428f-b80b-f7b073826f86,16fa1ee3-3a28-4089-9866-030a4bcf87f1,friday,,
+e21b3b09-3024-41f0-90b0-d127aa4ad71d,16fa1ee3-3a28-4089-9866-030a4bcf87f1,saturday,1pm-3pm,brunch
+bf2a5d83-b0e3-49de-8a72-f62700422c6a,4e9ca3e2-09e3-4284-8bf8-db71b3bb3da0,monday,Closed,hours
+0d1d45f4-fd49-4e79-a5e5-111e47a412c2,4e9ca3e2-09e3-4284-8bf8-db71b3bb3da0,saturday,Oompah band,music
+5dc455a9-e731-44a3-b817-dd49be847f81,4e9ca3e2-09e3-4284-8bf8-db71b3bb3da0,sunday,Closed,hours
+22c9b7d3-6466-44c0-bfa3-0b0549a5cfd3,6f3cb94f-43fb-4e18-8c3c-b9e5137057e3,saturday,1pm - 5:30pm,brunch
+6484023f-1975-42ef-9a81-070659847364,0170f375-7864-41b7-847b-fac53c964f62,monday,noon-4pm,brunch
+ee60f291-6268-4bd6-a67e-7da380a807b3,0170f375-7864-41b7-847b-fac53c964f62,tuesday,noon-4pm,brunch
+3f9c6ff8-779e-4c14-95ee-b9f1db8ceb48,0170f375-7864-41b7-847b-fac53c964f62,wednesday,noon-4pm,brunch
+b934cfd6-704a-444b-a1c0-55f90e975716,0170f375-7864-41b7-847b-fac53c964f62,thursday,noon-4pm,brunch
+a176576c-3481-4e87-b9ec-84f9a34e0a42,0170f375-7864-41b7-847b-fac53c964f62,friday,noon-4pm,brunch
+1cf94a7b-a28d-42bd-be3a-4bea549825cd,0170f375-7864-41b7-847b-fac53c964f62,saturday,noon-4pm,brunch
+1fa9190c-2957-40ce-a9dd-e7a99f7d080a,0170f375-7864-41b7-847b-fac53c964f62,sunday, noon-4pm,brunch
+7d44f9ba-4135-4499-a039-d67b0fa2f699,039c8d15-0aeb-458d-83e1-d6028481601a,saturday,12.30pm-2.30pm,brunch
+7e5dd521-f4ea-40c7-9658-adf3515be463,85a4348f-fe66-4e94-a342-963f1ee8141d,monday,7pm Live Jazz ,music
+e4c18b8e-0635-4d27-9e82-57cb1078b41c,85a4348f-fe66-4e94-a342-963f1ee8141d,tuesday,7pm,quiz
+2ffea52f-308d-40c5-885c-ae7e6cc55495,85a4348f-fe66-4e94-a342-963f1ee8141d,wednesday,Live Jazz,music
+fe1f9afe-73b5-4f1f-bba7-dfbd7a34710a,85a4348f-fe66-4e94-a342-963f1ee8141d,thursday,6pm,music
+991ecb63-4af3-4672-aefd-065b4f0039b5,85a4348f-fe66-4e94-a342-963f1ee8141d,friday,7pm,music
+76db91d2-cc9a-44d0-b6dd-bd52951618d5,85a4348f-fe66-4e94-a342-963f1ee8141d,saturday,1pm - 4pm Funky soul,music
+5316fa75-60c9-4eac-998b-cfccf3838e6f,85a4348f-fe66-4e94-a342-963f1ee8141d,sunday,2pm - 5pm Jazz,music
+763c1dff-57b5-41c7-9b9b-f6a065193ffe,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,monday,Closed,hours
+bfb13846-6449-4708-a371-d6bbb4245451,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,tuesday,9pm-1.30am,music
+1a3df2c4-7a0b-4193-b852-a0c94144a105,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,wednesday,9pm-1.30am,music
+e9b2c7e8-39af-49c6-8734-fdad8bd95a65,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,thursday,9pm-1.30am,music
+7cf1cdf0-8db6-422f-9c79-53664a323061,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,friday,10.30pm-2.30am,music
+9a34b8c6-5ec1-43c0-a181-1243c8db796e,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,saturday,10.30pm-2.30am,music
+edfbf23c-65ce-4e00-b518-8fdf40fd9738,20a49b52-b5b6-48ca-8ff2-be44ea6be64c,sunday,Closed,hours
+ecd5d075-a675-4ddc-83e4-be03886a5e4c,c8a5f8ad-23ce-43cd-b1a8-ed0a70d858fd,wednesday,9pm,dj
+79a44dd5-f85d-490e-a87a-c62c25660202,c8a5f8ad-23ce-43cd-b1a8-ed0a70d858fd,thursday,9pm,dj
+2870b82a-9d03-4b20-9c86-ed20da1cf778,c8a5f8ad-23ce-43cd-b1a8-ed0a70d858fd,friday,9pm,dj
+b6c3995e-29a3-4db5-8679-1191389a83b7,c8a5f8ad-23ce-43cd-b1a8-ed0a70d858fd,saturday,9pm,dj
+1a8ad4f6-3920-4dca-be77-2d2e60b532c5,3880d37b-1e71-490f-873d-bf5833afe0b0,monday,Closed,hours
+a7ad409e-1c12-4f98-9f1a-fc8391e94618,3880d37b-1e71-490f-873d-bf5833afe0b0,wednesday,Comedy,comedy
+666ffe3a-a778-458f-8293-197bed3e3d7b,3880d37b-1e71-490f-873d-bf5833afe0b0,sunday,Closed,hours
+d678abae-76b7-476f-a860-42c207de47ce,ef742613-d249-4e01-ab42-b7af40eaedb9,monday,Jazz,music
+9c19b86d-2067-4b3e-b58a-bd018458ee1e,ef742613-d249-4e01-ab42-b7af40eaedb9,tuesday,Jazz,music
+513fabd7-52e8-4606-b51d-093530c5541b,ef742613-d249-4e01-ab42-b7af40eaedb9,wednesday,Jazz,music
+21275587-618b-4e82-9c59-572b4068b794,ef742613-d249-4e01-ab42-b7af40eaedb9,thursday,Jazz,music
+5db94c8c-4b0d-4611-861e-68cea45c2e5e,ef742613-d249-4e01-ab42-b7af40eaedb9,friday,Jazz,music
+e5a6ea04-139e-4f54-b942-9ba722a8cbe2,ef742613-d249-4e01-ab42-b7af40eaedb9,saturday,Jazz,music
+8b4fab90-4c01-4ffc-a085-6191d228091f,ef742613-d249-4e01-ab42-b7af40eaedb9,sunday,Jazz,music
+2bb2b917-5ff8-4413-a761-213620a8e5dd,6854afa6-5c72-434c-8192-ce7ed796352e,wednesday,Evening of magic,entertain
+90cc6867-a403-4718-8bc7-70df7f4e6359,6854afa6-5c72-434c-8192-ce7ed796352e,thursday,8pm Singalong,entertain
+8511f2b3-4a1a-456e-b1b8-8c78ff9c37d2,6854afa6-5c72-434c-8192-ce7ed796352e,friday,10pm DJs,dj
+52df48c8-2e73-4f45-9a49-9d8db11a32a1,6854afa6-5c72-434c-8192-ce7ed796352e,saturday,12noon live music,music
+8772d7fb-f07e-4ac6-b372-6cc78c3d333f,6854afa6-5c72-434c-8192-ce7ed796352e,sunday,7pm live music,music
+a2149e57-d64d-4047-baa7-36af5902f28b,515b0be2-21fb-49f6-b1bf-1d37ba802d30,sunday,Closed,hours
+d6ab6e62-0072-4e4a-b3da-3adb9c972f9c,a73c78ca-808d-43e2-86c5-dcbd81a7a06b,wednesday,9pm-1am Karaoke,karaoke
+41a0bea2-5920-48a7-912d-4a36d466aec3,b4ebb610-c3dd-49a4-bc22-9da8da88991f,monday,Cabaret,comedy
+d7dab51a-2bdb-46c3-b7c4-69bd66a5166d,b4ebb610-c3dd-49a4-bc22-9da8da88991f,tuesday,Cabaret,comedy
+4ea0107c-d733-4602-b056-164eac91882f,b4ebb610-c3dd-49a4-bc22-9da8da88991f,wednesday,Cabaret,comedy
+45254c42-9cf0-4e5c-8896-32dd29b5744e,c8edfe6a-386d-4074-a381-3fcbadf9377a,tuesday,6pm-8pm Live music,music
+299682aa-7e29-4106-9108-50ef2eab6d91,eccdb9d0-eddb-455c-a4e7-9d2a22c612b8,monday,Club night,dj
+2ca6bb7e-b20d-4391-be73-e36284acaa35,eccdb9d0-eddb-455c-a4e7-9d2a22c612b8,tuesday,Club night,dj
+93d605a6-cfd6-4625-95b8-c6eb8c97708a,eccdb9d0-eddb-455c-a4e7-9d2a22c612b8,wednesday,Club night,dj
+fc7beb12-a74c-45a8-b38f-4fb4485257ae,eccdb9d0-eddb-455c-a4e7-9d2a22c612b8,thursday,Club night,dj
+5dde7faf-b6e3-4b97-9299-29473c3dbb11,eccdb9d0-eddb-455c-a4e7-9d2a22c612b8,friday,Club night,dj
+c57a2e71-5d86-4c10-9731-47c8139c8fbc,eccdb9d0-eddb-455c-a4e7-9d2a22c612b8,saturday,Club night,dj
+9c27d564-4c2c-4f0f-a33a-855f8ad5e53d,8b5025cb-a6c5-4877-8f4b-21342eba8d15,monday,Closed,hours
+0cf2cf72-3d6c-498b-bbad-d26f119cfa1c,8b5025cb-a6c5-4877-8f4b-21342eba8d15,tuesday,Closed,hours
+cb45ac7a-f606-4a51-b25a-d9ce96f7c5bc,8b5025cb-a6c5-4877-8f4b-21342eba8d15,wednesday,Closed,hours
+15933c06-130f-4c26-95ef-46075837beb7,8b5025cb-a6c5-4877-8f4b-21342eba8d15,thursday,Closed,hours
+6ee6faef-4366-4a1f-a656-dc38a7efad0e,8b5025cb-a6c5-4877-8f4b-21342eba8d15,friday,Karaoke,karaoke
+d4a2f2f7-d5c1-4163-b190-baf095d684f9,8b5025cb-a6c5-4877-8f4b-21342eba8d15,saturday,Karaoke,karaoke
+292633db-dbc5-4540-b084-557d3375bea8,8b5025cb-a6c5-4877-8f4b-21342eba8d15,sunday,Closed,hours
+b00362c8-499b-470d-8984-cf8ad2677819,d630908a-0f94-4367-b7fb-1f8ef81525cb,tuesday,Closed,hours
+fb6cc39b-7ee1-4fb9-b590-e05cb702d8d3,d630908a-0f94-4367-b7fb-1f8ef81525cb,wednesday,Karaoke,karaoke
+b5bb3ab2-8e15-474e-bd76-fcb57bc34819,d630908a-0f94-4367-b7fb-1f8ef81525cb,thursday,DJs,dj
+07ba8b9c-6053-4edb-a6fe-60cb93232c01,d630908a-0f94-4367-b7fb-1f8ef81525cb,saturday,9pm-1am DJs,dj
+97d7a85d-8cbd-4ce7-8483-6e06814445eb,d630908a-0f94-4367-b7fb-1f8ef81525cb,sunday,9pm-1am DJs,dj
+a8f138b5-3239-4667-9507-4a62f2b5c4ef,8399903a-cb4d-4cd5-8de7-3557467f78ed,sunday,Closed,hours
+30cca449-42d4-489b-9b2d-9b1f234fd8d9,43f76889-2492-4bcc-9340-ebfa8b6b8738,wednesday,Singalong,entertain
+b6d981ee-cc69-4740-a89c-fc379e1ded6a,43f76889-2492-4bcc-9340-ebfa8b6b8738,saturday,Singalong,entertain
+e04245b9-381a-41f2-89c1-d6747bfa9095,feed57a8-f81a-4489-b3db-014ba2652642,monday,Closed,hours
+e76741e5-1ce9-4729-a45e-7d4cfc3d0686,feed57a8-f81a-4489-b3db-014ba2652642,saturday,Closed,hours
+b8b8767f-ce9f-4ba3-be64-bee94d000153,feed57a8-f81a-4489-b3db-014ba2652642,sunday,Closed,hours
+5986921b-a68a-458d-85fc-6384f38ff828,dbef1e36-fa59-4189-88b5-528d514a616c,saturday,3pm onwards,dj
+ba77b7e2-6176-4ec8-8f63-2d99f83f3f69,dbef1e36-fa59-4189-88b5-528d514a616c,sunday,Closed,hours
+b0b0ac99-e496-4993-8a99-2de47f32768c,70e1c16a-2845-4a06-bca3-4b4e9a92789b,tuesday,7.30pm,quiz
+2f221b70-a42a-462b-8a80-0462c6e8af38,70e1c16a-2845-4a06-bca3-4b4e9a92789b,friday,8.30pm-late,dj
+dc93d4b1-cbb1-421a-9060-834c3557cc94,70e1c16a-2845-4a06-bca3-4b4e9a92789b,saturday,8.30pm-late,dj
+8988abc3-5008-4443-9eca-95251c860b55,70e1c16a-2845-4a06-bca3-4b4e9a92789b,sunday,Karaoke,karaoke
+c4bf9265-08c9-4dd1-a464-ff3eb4706510,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,monday,Karaoke room available,karaoke
+2c8e015b-35b8-46ea-9e4a-e6ab79def546,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,tuesday,Karaoke room available,karaoke
+b24b6c3e-c5c9-4cec-94f7-e8c29ff2f434,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,wednesday,Karaoke room available,karaoke
+a15db418-5d22-4dab-b11b-eb178c921865,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,thursday,Karaoke room available,karaoke
+58ce2d0e-c72d-4c73-8f74-286198a592f0,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,friday,Karaoke room available,karaoke
+fdc9d514-1567-42db-a7a8-6b53b6d70203,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,saturday,Karaoke room available,karaoke
+3103b9fc-be33-4efb-9574-ab1216a38022,ac8b9581-9067-43ca-9f76-e8f0511fc0f5,sunday,Closed,hours
+ba3ab035-bd93-4d97-8d13-8b455a9b5769,297b603a-efff-4045-8979-9c49c4dc9f60,tuesday,7pm,quiz
+12e7cd91-d0d0-44dd-ba8d-223bf852e5ad,297b603a-efff-4045-8979-9c49c4dc9f60,wednesday,Cocktail masterclass,entertain
+fef19ae8-1d27-4f8a-b657-6621d76b67f5,297b603a-efff-4045-8979-9c49c4dc9f60,thursday,Cocktail masterclass,entertain
+6fd74466-6c7e-4d39-8492-6517da404e49,297b603a-efff-4045-8979-9c49c4dc9f60,friday,Cocktail masterclass,entertain
+b93a6da2-bc40-4088-be87-137ce065017d,297b603a-efff-4045-8979-9c49c4dc9f60,saturday,Cocktail masterclass,entertain
+58c790a6-be42-4364-8f67-4fb066bd9e18,297b603a-efff-4045-8979-9c49c4dc9f60,sunday,Closed,hours
+0392cda0-b40b-43de-a535-1b9ae5a8eaa2,eed15167-3e64-4cfc-9944-d1b758e12d74,monday,9pm Jazz,music
+5c895c5c-e742-48d9-aca8-7af3370a5392,eed15167-3e64-4cfc-9944-d1b758e12d74,tuesday,9pm Jazz,music
+310c1243-2e0a-4d6c-a139-d05ed97a94be,eed15167-3e64-4cfc-9944-d1b758e12d74,wednesday,9pm Jazz,music
+88842dc3-fbfa-489f-bb95-caad7c492f3b,eed15167-3e64-4cfc-9944-d1b758e12d74,thursday,9pm Jazz,music
+fbbc22c2-2ab9-4c94-8317-c447874899e3,eed15167-3e64-4cfc-9944-d1b758e12d74,friday,9pm Jazz,music
+93418072-d77b-4a1f-9c0d-c809e110466c,eed15167-3e64-4cfc-9944-d1b758e12d74,saturday,9pm Jazz,music
+b99bed34-96f1-4a41-9d31-18c7d266789b,eed15167-3e64-4cfc-9944-d1b758e12d74,sunday,7.30pm Jazz,music
+d89921c1-3023-4420-a264-415b26c031ba,b5a2c34a-55bc-4845-8a76-6e98db66aaf8,thursday,6pm-late,dj
+c208d6d5-36f2-4c83-ad4f-2da917dba433,b5a2c34a-55bc-4845-8a76-6e98db66aaf8,sunday,Closed,hours
+6e7d3795-abb3-410b-92ce-076e5a4b247e,74e4514f-40c5-4677-bc07-95a4f833e74b,saturday,Closed,hours
+89add3cd-8672-4c28-85fd-77b6a51c74a5,74e4514f-40c5-4677-bc07-95a4f833e74b,sunday,Closed,hours
+27cda52f-1a92-47d9-9909-96fbc58ccda5,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,monday,Theatre performances,comedy
+15d5cbaf-0a88-4aef-bb35-8e39a7e451ba,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,tuesday,Theatre performances,comedy
+bf304e40-7d10-4fe8-8316-52b0797b343a,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,wednesday,Theatre performances,comedy
+54e58257-2ab9-4046-b41a-48823a37e55d,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,thursday,Theatre performances,comedy
+e97d7219-de93-4532-a6cf-34b91f745533,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,friday,Theatre performances,comedy
+ccf2ffe3-f666-4021-bdf3-9a9f295256a2,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,saturday,Theatre performances,comedy
+fb177689-3923-4db7-a8fb-ca9422d7031a,8dfc6e35-72e1-4c2d-aaaf-66b3eabc50d4,sunday,Sunday,hours
+57a63316-63a1-4026-8994-ee5604d732f5,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,monday,Comedy,comedy
+a0a024ec-c622-4c4b-98e9-c83a914a37f2,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,tuesday,Comedy,comedy
+87274c49-d9d7-430d-814e-58bf0eaaeffd,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,wednesday,Comedy,comedy
+995825d1-2869-483c-b55e-40d02e8ad0e5,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,thursday,Comedy,comedy
+581c9087-5396-4db4-9066-1a9ff1266954,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,friday,Comedy,comedy
+8d5d3932-ae86-4256-be53-0c8082308ba1,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,saturday,Comedy,comedy
+a4bc8d5d-d192-476b-a641-27e1c46d0b9a,22afe14a-2b34-4e14-a7aa-fd51e1c688fe,sunday,Comedy,comedy
+ea23bc83-0f17-4568-8945-c606d8b531ea,63db7d07-1040-4ac9-8120-cced82dd13d3,sunday,Closed,hours
+ffae5774-8519-4db8-b6e3-8e01745975c4,716b0dc6-0fd6-4104-a2c6-b28b1ff9912a,friday,8pm-11pm DJ Nights,dj
+549d5fc3-4966-48cf-b291-44b0650b9723,cd9017ff-96ad-4c97-966f-00935c2f485f,monday,Karaoke,karaoke
+d94f0131-e234-43ab-af3c-0c027ccb2bfc,cd9017ff-96ad-4c97-966f-00935c2f485f,tuesday,Karaoke,karaoke
+57eedb63-d15a-4a94-8106-da8c69d14c44,cd9017ff-96ad-4c97-966f-00935c2f485f,wednesday,Karaoke,karaoke
+e2f8fad3-4a29-4ba3-ac7b-de2f02835f6e,cd9017ff-96ad-4c97-966f-00935c2f485f,thursday,Karaoke,karaoke
+0236e879-5ad2-499e-88f2-2e7d651a0fba,cd9017ff-96ad-4c97-966f-00935c2f485f,friday,Karaoke,karaoke
+d163b3d2-f690-4e4d-9c4f-49ca71f80263,cd9017ff-96ad-4c97-966f-00935c2f485f,saturday,Karaoke,karaoke
+6c0bcd79-1acc-4c29-9369-524e8e8f2a2d,cd9017ff-96ad-4c97-966f-00935c2f485f,sunday,Karaoke,karaoke
+d26480cf-ab7f-462a-93a5-a5efdb4c7c88,754d1275-2291-4700-8881-6c8cedb5a14b,sunday,Closed,hours
+f426834a-bdf9-4485-b9e9-798831feee61,3a5c1bf9-6e93-44d8-8b3f-3b25e7e8e155,sunday,Closed,hours
+66388b93-32c9-4c87-bf16-124285ada36a,eed724a2-d3ea-42b8-a5a0-586f5fc0eaf9,sunday,Closed,hours
+2188e304-2763-44c0-bee4-6cddcc69a1ad,9e8d9698-1f02-4bb3-8915-17b5a1c314a3,wednesday,6pm live music,music
+fd590f3c-9f55-4b49-ad30-9e64d9209bf1,82861b12-4ce4-4cea-91d2-3c8880938e0e,saturday,Closed,hours
+a2b22b7b-a290-44f9-80e3-d05cafd29ad8,82861b12-4ce4-4cea-91d2-3c8880938e0e,sunday,Closed,hours
+4ee26a9a-8b91-4037-881f-83d38f6a9ba0,b585f116-fc50-4377-b79f-167f5978d18c,saturday,Closed,hours
+d9d2cb68-a7d0-4773-9eaf-f8b501478e7b,b585f116-fc50-4377-b79f-167f5978d18c,sunday,Closed,hours
+f3465308-77d9-46d4-8747-61f4856fd9f7,d84795cf-702b-4939-8e21-7df948293eca,friday,8.30pm-onwards,music
+a7130293-c493-4be2-8470-e2e37b3f119c,d84795cf-702b-4939-8e21-7df948293eca,saturday,9.30pm-onwards,music
+d7688a2e-e8d3-45af-8382-04beb106765f,d84795cf-702b-4939-8e21-7df948293eca,sunday,8.30pm-11.30pm,music
+2b5bff9d-c4ee-40aa-a3e7-f51f1944d9de,51117de3-8dc0-44c8-b95a-ff3bf552ff6e,tuesday,9pm shows,comedy
+8dae4508-44d4-4bd6-b06d-e09fce2196e7,3c46fca0-48d5-4ef8-9d74-0d9077065937,saturday,Closed,hours
+bebd6cd1-02e3-442a-97fd-d47676ba11a9,3c46fca0-48d5-4ef8-9d74-0d9077065937,sunday,Closed,hours
+e214132b-6db2-4589-8f3e-56643fe5dba9,b59144de-3999-46d2-a96c-3a1d91881881,saturday,Closed,hours
+047adb35-2fb2-4543-b20f-97636a96bb5b,b59144de-3999-46d2-a96c-3a1d91881881,sunday,Closed,hours
+6d83d798-9f16-4146-99d4-c8d1cbbe4b24,55e2b172-737a-4db5-831a-236b57535801,monday,,
+1c32e5d4-4ce4-4d1e-92d3-55ff045de230,55e2b172-737a-4db5-831a-236b57535801,wednesday,,
+4b022bd3-2eb5-47ca-b8f8-bf7f2c4d6d8a,55e2b172-737a-4db5-831a-236b57535801,thursday,9pm Drag night,comedy
+14385486-c746-42c1-99eb-bc3f2927548d,55e2b172-737a-4db5-831a-236b57535801,friday,,
+26c25f80-052b-493f-b942-69c73f4d104b,84a4509f-a3f2-4f01-8e8d-899450bee2c3,tuesday,8pm Bingo,entertain
+b7cfae0e-9060-48b9-b86a-e3361f3bbcc2,84a4509f-a3f2-4f01-8e8d-899450bee2c3,wednesday,8pm,quiz
+f120e716-1304-4436-ba0b-d7315c6ab79a,75871063-b8a3-4630-8d60-4905192254e1,monday,7pm Comedy,comedy
+1bdb035d-74ab-4a32-8074-7dd397823972,75871063-b8a3-4630-8d60-4905192254e1,tuesday,7.30pm Live blues,music
+4c2fcc7a-fafe-4aee-81f8-6ae775636dc7,75871063-b8a3-4630-8d60-4905192254e1,wednesday,7pm Comedy,comedy
+20ab0bdd-36d5-445b-a9a0-f26ea22eeecc,75871063-b8a3-4630-8d60-4905192254e1,thursday,7pm Blues and jazz,music
+38fdd06c-0ec2-4672-bb75-d71a505a482e,75871063-b8a3-4630-8d60-4905192254e1,friday,7pm Live band,music
+d4b27fd2-20c8-4700-be2c-a20dc60affd8,75871063-b8a3-4630-8d60-4905192254e1,sunday,7pm Comedy,comedy
+fcf70b6e-5fa9-4a56-806f-eb6e08c8170b,4a468f6c-eb8a-4588-829b-14405beaef8d,monday,Closed,hours
+8a715f19-7245-4f07-9464-a3ba4d5456ee,8de2616f-c279-40ad-a852-78729adab93b,sunday,Closed,hours
+23000082-c206-494c-80af-29fb919e753a,11ba097c-4c04-4375-864f-ed8ca58062aa,sunday,7.30pm,quiz
+a40fa0cf-b481-4c53-ac36-9a398e772592,3eaee4db-c911-4541-a578-fa23b2edc86d,monday,12noon-onwards,brunch
+8d3417e8-11b5-4601-b590-b3312cdd00dc,3eaee4db-c911-4541-a578-fa23b2edc86d,tuesday,12noon-onwards,brunch
+b8d6fe11-4948-4e93-a1c0-99b0f74c4368,3eaee4db-c911-4541-a578-fa23b2edc86d,wednesday,12noon-onwards,brunch
+059b9647-3467-4d9d-b61f-91510b908cbf,3eaee4db-c911-4541-a578-fa23b2edc86d,thursday,12noon-onwards,brunch
+7e9b49e8-80cf-4abd-a082-51c39b20a9b7,3eaee4db-c911-4541-a578-fa23b2edc86d,friday,12noon-onwards,brunch
+b180b3d8-50ba-44a9-a23b-4ef7d4f344f7,3eaee4db-c911-4541-a578-fa23b2edc86d,saturday,12noon-onwards,brunch
+9ef4b82f-2644-46ce-8d55-c585b0b563e7,3eaee4db-c911-4541-a578-fa23b2edc86d,sunday,12noon-onwards,brunch
+0895c9f9-098c-433e-8583-a725dc9c8aba,78d9bb44-55bd-4e59-949d-c5c2e3839155,saturday,Closed,hours
+37f1874d-cd80-41a8-adf1-24ba8f8b84c5,78d9bb44-55bd-4e59-949d-c5c2e3839155,sunday,Closed,hours
+e6762bf3-4642-4086-8268-5a34befc8e0c,21c56eb9-26d1-4488-81ee-6b30ab2dd708,monday,Closed,hours
+97a5afe1-1ef0-4cd6-8e29-4f425765fbd8,21c56eb9-26d1-4488-81ee-6b30ab2dd708,friday,,dj
+0277162f-b627-47ff-9d6e-858fe46bdd98,21c56eb9-26d1-4488-81ee-6b30ab2dd708,saturday,,dj
+347f08be-e2ab-41bf-afb4-514acb61e810,21c56eb9-26d1-4488-81ee-6b30ab2dd708,sunday,Closed,hours
+ccc776fe-af72-4d3a-a9a4-6406746869b4,76429c60-b606-4327-a95c-4ed9a186aa16,monday,,brunch
+e41d898f-325c-4df1-b2c1-00241ea47340,76429c60-b606-4327-a95c-4ed9a186aa16,tuesday,,brunch
+365608f4-3024-4dee-91ba-2db617d50794,76429c60-b606-4327-a95c-4ed9a186aa16,wednesday,,brunch
+658b89f5-913e-46a5-a6f5-edaa6aff4ca6,76429c60-b606-4327-a95c-4ed9a186aa16,thursday,,brunch
+ba0b84c6-d2f8-43e0-86c3-506a5af3b6a2,76429c60-b606-4327-a95c-4ed9a186aa16,friday,,brunch
+94322532-59f8-4e8f-9bd0-cc64c8b4a9bd,76429c60-b606-4327-a95c-4ed9a186aa16,saturday,,brunch
+41594bf0-bebe-40de-9d8b-98d8553acffa,76429c60-b606-4327-a95c-4ed9a186aa16,sunday,Closed,hours
+79a3c1a6-c27f-4034-8bfa-318001dfbf51,c7076f68-7ad3-4e23-bfe4-dd4ea5e3070b,monday,Closed,hours
+898005b4-2e16-427b-b8cf-0fdb9629a05d,c7076f68-7ad3-4e23-bfe4-dd4ea5e3070b,tuesday,Closed,hours
+0ca5f93e-2de9-4980-a17e-92080ea27086,c7076f68-7ad3-4e23-bfe4-dd4ea5e3070b,sunday,Closed,hours
+1a7e6614-3ac6-4012-92e9-3828262fc420,34a55bd6-7504-4b6f-b07e-6ae25b6474bd,monday,Closed,hours
+cf8d8bd8-67db-4e16-b3a8-afcbb33292b9,34a55bd6-7504-4b6f-b07e-6ae25b6474bd,sunday,Closed,hours
+e8b59f74-d0fe-4191-8b96-ca441fba8a63,f10e599e-e3f9-4ed3-b9ac-de513217027b,saturday,Closed,hours
+3f1ad1dd-4b70-4ab9-9237-b60d81d4fab0,f10e599e-e3f9-4ed3-b9ac-de513217027b,sunday,Closed,hours
+2883535e-6884-41cd-a28d-f657a4dfb2a3,10851273-4eb6-430d-ac14-93936c243e8e,monday,Closed,hours
+297f7bcc-5f92-4887-bfd6-a7781c84048f,10851273-4eb6-430d-ac14-93936c243e8e,tuesday,Closed,hours
+4c789a80-9a5c-4c87-84e4-0bb7432992b9,10851273-4eb6-430d-ac14-93936c243e8e,saturday,Closed,hours
+1878e31b-b440-4be2-824e-9ff7dc90c8aa,10851273-4eb6-430d-ac14-93936c243e8e,sunday,Closed,hours
+ec8b825b-5d93-4270-a408-fa671a522007,c6840c35-6a69-4bf8-8fc5-e35736346ad0,saturday,Closed,hours
+bccecfb5-041b-4163-b91f-ea338956d044,1c36e680-5c0b-409d-8fc3-a2a125698b12,monday,Closed,hours
+aae846bb-4f6f-482f-b5a9-1ab6b0d99abc,1c36e680-5c0b-409d-8fc3-a2a125698b12,saturday,Closed,hours
+35b8f591-3a6d-45bf-a37d-270bb2dac4a1,1c36e680-5c0b-409d-8fc3-a2a125698b12,sunday,Closed,hours
+244855eb-a57d-46b5-b728-03e7fa2abc08,23f74f24-995b-406b-8d05-183d7f81ef94,sunday,Closed,hours
+d9fe3e1e-8256-4081-a431-27ec17ed2581,3c95ad0e-8717-4f52-bcd5-12e34ea421d8,saturday,Sunday,hours
+9f01feb1-1bff-411e-8234-83c6e995f4f6,0a5e3505-9065-465d-b2b2-7c3e3241bc65,monday,10am-onwards,brunch
+0a8e8575-6c28-4efe-b024-c4580a4d6de6,0a5e3505-9065-465d-b2b2-7c3e3241bc65,tuesday,10am-onwards,brunch
+df5bbf5c-f4ff-448d-9e3f-fc09cdc8ef2c,0a5e3505-9065-465d-b2b2-7c3e3241bc65,wednesday,10am-onwards,brunch
+d8f8b663-c498-4ca6-b5f9-8c1142f410e7,0a5e3505-9065-465d-b2b2-7c3e3241bc65,thursday,10am-onwards,brunch
+68bed841-2f1d-47f1-8f08-ca604aed7787,0a5e3505-9065-465d-b2b2-7c3e3241bc65,friday,10am-onwards,brunch
+b5374771-2883-4b81-b3b2-01cfa7f28e34,0a5e3505-9065-465d-b2b2-7c3e3241bc65,saturday,10am-onwards,brunch
+8ec901d2-76aa-4918-b279-ab083bd38b7d,0a5e3505-9065-465d-b2b2-7c3e3241bc65,sunday,10am-onwards,brunch
+9c6eae3e-2f4a-48c2-a320-dc677f4227fa,950e50bf-b57f-4615-adf1-040e48c3179f,sunday,Closed,hours
+8caba8ce-269a-4dc0-9559-2c62937539ac,950e50bf-b57f-4615-adf1-040e48c3179f,monday,10am-onwards,brunch
+fc96e22f-f691-48e9-b0f1-3ca887df8477,950e50bf-b57f-4615-adf1-040e48c3179f,tuesday,10am-onwards,brunch
+60ad0f67-d985-4301-9340-b93d1fdf628e,950e50bf-b57f-4615-adf1-040e48c3179f,wednesday,10am-onwards,brunch
+efa5b594-6787-4acd-8300-c21fc7c428d5,950e50bf-b57f-4615-adf1-040e48c3179f,thursday,10am-onwards,brunch
+41b6f565-fb77-48f1-b271-2881947c7cc5,950e50bf-b57f-4615-adf1-040e48c3179f,friday,10am-onwards,brunch
+d15c0207-f8c7-456c-9f75-5690c01a4373,950e50bf-b57f-4615-adf1-040e48c3179f,saturday,10am-onwards,brunch
+607ceef4-20a1-4528-9dd2-3f352e2d1e78,6c2685e9-a582-44ce-aa82-a506db4810a0,sunday,Closed,hours
+5ffd0cc2-953a-4406-8a02-c5f57f48c1b6,e644a849-ec07-4273-8277-4c92e91fa3fe,tuesday,7pm,quiz
+dbbe21b0-0db4-4066-9509-0231bd33953b,e644a849-ec07-4273-8277-4c92e91fa3fe,friday,DJs,dj
+d2007bd1-0dca-4dae-9aac-e892fb8a4742,e644a849-ec07-4273-8277-4c92e91fa3fe,saturday,Last of the month singing,music
+88f744e5-eb5f-436a-a108-434931fa5f63,e644a849-ec07-4273-8277-4c92e91fa3fe,sunday,Closed,hours
+31ffa568-12c7-4525-aa19-76d790b27a54,4f693f04-afe5-40e0-8e74-7bbd114bcccf,sunday,7.30pm-9.30pm,quiz
+43d1dbe7-fa75-4cd5-98f5-05501b25b393,bedb5f88-f233-497d-8e1c-f8e553a47d67,tuesday,8.30pm,quiz
+564ee6a2-41a7-4e27-8961-9990e6ecba8d,9c358db9-e0a2-4a20-ac97-7ce2a0ae52b5,wednesday,5pm live Irish music,music
+f8cba2c0-b819-4516-88b3-7a5bc9f4ea13,ce3d2f67-2973-4e0d-a619-1324db8d41dd,tuesday,Quiz night,quiz
+84c85018-87fc-4049-9897-b81a993efc7a,ce3d2f67-2973-4e0d-a619-1324db8d41dd,wednesday,Poker,entertain
+a9b03c69-de31-42b8-9247-8bb9add7681f,ce3d2f67-2973-4e0d-a619-1324db8d41dd,friday,Comedy,comedy
+63c06ab1-34e2-4cd7-9dfb-0f895b941163,ce3d2f67-2973-4e0d-a619-1324db8d41dd,saturday,Live bands,music
+01a15117-a3ef-444f-ab9b-4b002bf72f92,d40a0317-6def-4f7c-881b-9e74af53ae06,monday,Live bands,music
+8f76059b-1a55-4f27-a997-82cfc30b6f79,d40a0317-6def-4f7c-881b-9e74af53ae06,tuesday,Live bands,music
+5f3a0b91-6c0c-4512-995c-6606f7a08e21,d40a0317-6def-4f7c-881b-9e74af53ae06,wednesday,Live bands,music
+2f65f185-c8bc-4f3d-9036-661393340c29,d40a0317-6def-4f7c-881b-9e74af53ae06,thursday,Live bands,music
+eaa8a972-0734-4549-aed7-461e979ed18d,d40a0317-6def-4f7c-881b-9e74af53ae06,friday,Live bands,music
+216923eb-0f62-46fc-89f2-c63a2a5d1015,d40a0317-6def-4f7c-881b-9e74af53ae06,saturday,Live bands,music
+fce727d4-7e62-48c2-8851-d3b1448be4ce,d40a0317-6def-4f7c-881b-9e74af53ae06,sunday,Live bands,music
+0fc82145-9f67-450c-acd6-7197c58de009,01080028-12e5-4caf-90f0-63f5185e00e8,tuesday,8pm-10pm,quiz
+b1eabc80-0a3c-4726-90f7-1e269443c9f2,01080028-12e5-4caf-90f0-63f5185e00e8,thursday,7pm-9pm painting class,entertain
+7ff70862-fa50-4fe6-9c7b-a6aa1d50a0e0,01080028-12e5-4caf-90f0-63f5185e00e8,saturday,Live bands,music
+e46607d8-f8ed-433e-b4e0-630fe4720542,82ff609c-ae79-437f-8571-d6b7df29133f,monday,Immersive football games,entertain
+350783cc-3e33-44f3-9758-e92bc1e042d8,82ff609c-ae79-437f-8571-d6b7df29133f,tuesday,Immersive football games,entertain
+3f6152e1-95a9-4c45-ace4-72f4b13f1ae0,82ff609c-ae79-437f-8571-d6b7df29133f,wednesday,Immersive football games,entertain
+ae706128-c6ab-42cb-980c-d34a3b355ff7,82ff609c-ae79-437f-8571-d6b7df29133f,thursday,Immersive football games,entertain
+128df7bb-9034-4def-819f-5e3b793fdb30,82ff609c-ae79-437f-8571-d6b7df29133f,friday,Immersive football games,entertain
+c6ab8b70-45b1-4924-a092-6be8faac5717,82ff609c-ae79-437f-8571-d6b7df29133f,saturday,Immersive football games,entertain
+e06ecef6-715a-4302-858e-cba0307faf4d,82ff609c-ae79-437f-8571-d6b7df29133f,sunday,Immersive football games,entertain
+aefed5eb-240e-4c2d-9c58-cdbc49f649be,8c2866ff-54bf-49eb-9f1d-2c90145f3dcd,monday,Closed,hours
+848f4fbc-4976-4ae2-8786-7d726451bd71,8c2866ff-54bf-49eb-9f1d-2c90145f3dcd,tuesday,Closed,hours
+b6dbc676-376f-490b-95cc-f574615e5f98,8c2866ff-54bf-49eb-9f1d-2c90145f3dcd,wednesday,Closed,hours
+ddee05b7-f25c-4a3f-9f8e-1dc1a4231778,84ed35c7-864b-4898-807b-b3be559e0b09,friday,Live bands,music
+5b757423-6dde-4cb8-b13d-273d14340b94,84ed35c7-864b-4898-807b-b3be559e0b09,saturday,Live bands,music
+12649388-cf7f-4040-a000-5ffbced1cdbc,79b18c98-b48f-421e-adb7-6adcb52a03a7,sunday,Live music,music
+a044ae29-cc86-4f99-b6b0-a9467ceca688,bf678c39-88fd-4025-bab3-78b474a21965,monday,7.30pm,quiz
+fa6d75c7-7989-4a54-a83d-e82323cf0d4f,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,monday,Virtual clay pigeons,entertain
+0169d6e4-b18e-4674-bf95-8730f4872b34,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,tuesday,Virtual clay pigeons,entertain
+eeca6e26-1b3d-4c07-be25-238d1f418834,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,wednesday,Virtual clay pigeons,entertain
+93fa172b-e555-4098-b6fe-8657bcaa471c,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,thursday,Virtual clay pigeons,entertain
+c090133b-c47a-4a90-89a5-c891b549775c,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,friday,Virtual clay pigeons,entertain
+f2e9aea0-9539-4af1-9510-5d20e2d27b0a,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,saturday,Virtual clay pigeons,entertain
+e90e691a-9f4e-4cb2-8fe7-5fa54cd6e9f9,21bbc911-5d8f-424b-8d5d-4f6ec1d10864,sunday,Virtual clay pigeons,entertain
+5fcc4ba4-b1e9-4c73-9622-2ec2e733f935,de1e4131-5fec-4c30-bd4b-117a7051d254,saturday,Closed,hours
+a1707da4-27da-47a9-a222-bc90ea662c4c,de1e4131-5fec-4c30-bd4b-117a7051d254,sunday,Closed,hours
+6710eb6e-f20c-4436-b98e-494d4948a4bb,b7f789da-bb24-40d4-81a7-e641d35e7dd4,saturday,DJ club night,dj
+9d20a42d-8007-411c-a87e-3eee0144c251,b7f789da-bb24-40d4-81a7-e641d35e7dd4,sunday,DJ club night,dj
+7d2edd81-42aa-454a-a209-3f2feccf6b1f,8905f38f-5abe-4ff7-9b22-72ab50645c21,sunday,Closed,hours
+19edb505-0e04-4a05-803d-765eb9b002ba,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,monday,Closed,hours
+db80566d-2afc-422c-833d-23d09c18aa3d,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,tuesday,Mini golf,entertain
+c5fccec8-9cef-4dfd-a923-977b1e4da482,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,wednesday,Mini golf,entertain
+1d87e430-5e7d-4b8a-aafd-97c25824856e,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,thursday,Mini golf,entertain
+9c00f8b7-397c-4ae4-8038-d51419ae3d61,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,friday,Mini golf,entertain
+ff9ee2e2-653e-4aed-9b88-7c787369a8fe,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,saturday,Mini golf,entertain
+cfc9ce0e-39a3-47a3-bcb6-12c82663d0f5,5e7a2cf0-e9bc-4fc8-818b-763244375ebf,sunday,Mini golf,entertain
+c3742c3b-9084-414c-8dea-460bfd65d894,52c555f4-007f-4dd1-9d75-a0dfc38425ad,wednesday,,
+d8ba4fa9-8b5c-4974-8a77-beb8cf15f005,52c555f4-007f-4dd1-9d75-a0dfc38425ad,friday,8pm-11pm music and dance performances,comedy
+211c5e7e-b4d4-410a-9ac3-cdab3d1bbaf4,52c555f4-007f-4dd1-9d75-a0dfc38425ad,saturday,8pm-11pm music and dance performances,comedy
+54a042fb-00fd-4d8a-8983-f86ecd1f23ec,f39db520-b94f-49a5-8c56-e1afad69483d,monday,Shuffleboard / table football,entertain
+9c346272-97b0-441b-bb36-83d4781a88af,f39db520-b94f-49a5-8c56-e1afad69483d,tuesday,Shuffleboard / table football,entertain
+f45f557e-89fc-4cf5-9bbd-eb4ca4dd6c74,f39db520-b94f-49a5-8c56-e1afad69483d,wednesday,Shuffleboard / table football,entertain
+006a14ba-a952-4687-9947-558eff20ea29,f39db520-b94f-49a5-8c56-e1afad69483d,thursday,Shuffleboard / table football,entertain
+372b0d90-03e2-4c98-b1eb-6ddd654ca089,f39db520-b94f-49a5-8c56-e1afad69483d,friday,Shuffleboard / table football,entertain
+69cb64b0-3067-43ca-98a5-a5790bf0b315,f39db520-b94f-49a5-8c56-e1afad69483d,saturday,Shuffleboard / table football,entertain
+ebbdbbc3-e5f8-4ab3-9bf1-f2d2aa8bb9a9,f39db520-b94f-49a5-8c56-e1afad69483d,sunday,Shuffleboard / table football,entertain
+487fab18-0374-4f93-a0df-ce21905f95bf,3c88a054-9473-4368-b392-af38c73e9797,monday,7.30pm pop quiz,quiz
+73c0da4f-4305-4b9a-854f-c179abe95616,3c88a054-9473-4368-b392-af38c73e9797,tuesday,8pm live bands,music
+3102baf7-fcbd-4a94-966b-d918ebd4ec9a,3c88a054-9473-4368-b392-af38c73e9797,wednesday,8pm live bands,music
+ed843a8b-fdfd-45ef-86d1-7abbede74f92,3c88a054-9473-4368-b392-af38c73e9797,thursday,8pm live bands,music
+0bec4d72-a786-4cea-89ab-859134f782c0,3c88a054-9473-4368-b392-af38c73e9797,friday,8.30pm comedy,comedy
+47685516-1da6-4265-b311-a2c0952e4cdb,3c88a054-9473-4368-b392-af38c73e9797,saturday,8.30pm comedy,comedy
+9a9e208d-544e-41a5-8ee8-b8e4160fc62c,4b0f5199-a980-4d1b-b0df-15fd21df824c,monday,Petanque court,entertain
+9ea4a106-c686-4980-a749-f785df32ec19,4b0f5199-a980-4d1b-b0df-15fd21df824c,tuesday,Petanque court,entertain
+b840c15a-844f-4d4b-aec6-d90078d2c7be,4b0f5199-a980-4d1b-b0df-15fd21df824c,wednesday,Petanque court,entertain
+e163c692-7eaf-41fb-ba90-47c4ca233f4b,4b0f5199-a980-4d1b-b0df-15fd21df824c,thursday,Petanque court,entertain
+e52914ee-9456-49c9-a070-abe71a3cc6d2,4b0f5199-a980-4d1b-b0df-15fd21df824c,friday,Petanque court,entertain
+581ba10c-08e1-40fc-9224-5bb086e55221,4b0f5199-a980-4d1b-b0df-15fd21df824c,saturday,Petanque court,entertain
+9a446560-ac3f-476d-a7cb-c8cc126f9abd,4b0f5199-a980-4d1b-b0df-15fd21df824c,sunday,Petanque court,entertain
+32a85ecb-f859-4562-89b7-3b6900f8e592,2dc38644-2fce-446f-a813-a2ba3e18eedf,monday,Duckpin bowling,entertain
+ff222949-b25b-4b1c-b7a4-b9dec63c48a3,2dc38644-2fce-446f-a813-a2ba3e18eedf,tuesday,Quiz night,quiz
+b5347a04-bf27-4dec-a701-b6332108ba94,2dc38644-2fce-446f-a813-a2ba3e18eedf,wednesday,Duckpin bowling,entertain
+4121566d-91cc-4e75-ad37-d3076e65131e,2dc38644-2fce-446f-a813-a2ba3e18eedf,thursday,Duckpin bowling,entertain
+0c61ae1e-4b26-4ebe-b88f-8cf80e9ea261,2dc38644-2fce-446f-a813-a2ba3e18eedf,friday,Duckpin bowling,entertain
+e4e5fdcb-ace8-4fa5-8df5-d164cc292587,2dc38644-2fce-446f-a813-a2ba3e18eedf,saturday,Duckpin bowling,entertain
+08c7b24b-82f2-4132-a280-ab4bbe315a20,2dc38644-2fce-446f-a813-a2ba3e18eedf,sunday,Duckpin bowling,entertain
+7aa29189-1ac2-4fc0-bc5d-9236b465e442,0b938518-efd3-47e3-bdc8-5c276cf701ef,friday,Karaoke,karaoke
+59b88d89-593a-4101-8dd5-9d21ec340731,5e4874a1-4ac4-426d-92da-51c761d527cb,sunday,Bongo bingo brunch,entertain
+ace3c460-9257-4394-9a26-f1cb4c0d368a,d39aa0b0-e9c3-4146-9925-ca1c517d068a,sunday,8pm quiz,quiz
+92aa80d8-e839-470c-992f-3c63de4747f8,665a7faf-e518-4918-bdce-acb10e79dcf0,monday,Check website for listings,comedy
+056c8cf9-ad6d-4b42-b46c-3bd61af158f2,665a7faf-e518-4918-bdce-acb10e79dcf0,tuesday,Check website for listings,comedy
+6c0bc60c-2175-46f0-b136-4f5597a5f58e,665a7faf-e518-4918-bdce-acb10e79dcf0,wednesday,Check website for listings,comedy
+1a088a37-4cae-446c-ae73-df10ed7481b8,665a7faf-e518-4918-bdce-acb10e79dcf0,thursday,Check website for listings,comedy
+6f6cc1c1-4232-454b-97b3-2f00f604bd00,665a7faf-e518-4918-bdce-acb10e79dcf0,friday,Check website for listings,comedy
+a8409960-ac27-4055-8b52-a7d5a06ec30b,665a7faf-e518-4918-bdce-acb10e79dcf0,saturday,Check website for listings,comedy
+d53b9767-f131-4c3f-9ec1-83d16b348184,665a7faf-e518-4918-bdce-acb10e79dcf0,sunday,Check website for listings,comedy
+6138d24f-f0eb-4337-a77b-e58f957173c2,f62b6c54-6847-47f8-8112-f6269578125f,monday,7.30pm comedy club,comedy
+6ad25104-36b6-4038-affb-2ca10894e572,f62b6c54-6847-47f8-8112-f6269578125f,tuesday,7.30pm comedy club,comedy
+990c0668-5349-4ec2-b01c-b1bdaa4281f1,f62b6c54-6847-47f8-8112-f6269578125f,wednesday,7.30pm comedy club,comedy
+39ffa87d-c5b5-4557-95b9-10401152727e,f62b6c54-6847-47f8-8112-f6269578125f,thursday,7.30pm comedy club,comedy
+986f59c8-3329-4c11-9d78-a5708a27fbfe,f62b6c54-6847-47f8-8112-f6269578125f,friday,7.30pm comedy club,comedy
+a72fc0ca-bb8b-43ad-8657-0012dc2128b2,f62b6c54-6847-47f8-8112-f6269578125f,saturday,7.30pm comedy club,comedy
+9ab67f46-658e-4030-b936-fff72f509482,f62b6c54-6847-47f8-8112-f6269578125f,sunday,7.30pm comedy club,comedy
+8c485103-7e51-4a2e-ba7b-00c6b7456474,6ce3e404-091d-4e74-82cc-4649ed2c567e,monday,Closed,hours
+1326e686-ec14-4737-aa8e-6d98c6070def,6ce3e404-091d-4e74-82cc-4649ed2c567e,tuesday,Ball pit,entertain
+7808b791-ed18-42b4-be9e-b111d3263266,6ce3e404-091d-4e74-82cc-4649ed2c567e,wednesday,Ball pit,entertain
+ea1c2906-2221-4897-a161-b83aded8bf1e,6ce3e404-091d-4e74-82cc-4649ed2c567e,thursday,Ball pit,entertain
+f3d76237-c336-4514-9b14-19a794949303,6ce3e404-091d-4e74-82cc-4649ed2c567e,friday,Ball pit,entertain
+71d1d74e-9373-4079-9a79-28b0b9d75222,6ce3e404-091d-4e74-82cc-4649ed2c567e,saturday,Ball pit,entertain
+d5f649c1-a638-4ad3-aac9-a03888e76c38,6ce3e404-091d-4e74-82cc-4649ed2c567e,sunday,Ball pit,entertain
+a86e3205-291a-4ae7-b0d6-dd733208dd78,88b8f8e1-ab4c-4659-8c59-79fb38e29086,monday,Closed,hours
+9c805e79-f93b-4613-8362-27a0a6a6ecac,88b8f8e1-ab4c-4659-8c59-79fb38e29086,tuesday,Immersive experience bar,entertain
+96c59f6f-31c9-4ce4-80aa-4c71ec4b3382,88b8f8e1-ab4c-4659-8c59-79fb38e29086,wednesday,Immersive experience bar,entertain
+fae8e8eb-499d-42b6-a21c-c8b7738a72b1,88b8f8e1-ab4c-4659-8c59-79fb38e29086,thursday,Immersive experience bar,entertain
+22d3bcce-1ea5-471a-b5bf-f6331e2e14a5,88b8f8e1-ab4c-4659-8c59-79fb38e29086,friday,Immersive experience bar,entertain
+c05c47d5-a18f-4714-b685-ee2e81792707,88b8f8e1-ab4c-4659-8c59-79fb38e29086,saturday,Immersive experience bar,entertain
+0150843d-c725-45b1-9be8-3d2d20de1afa,88b8f8e1-ab4c-4659-8c59-79fb38e29086,sunday,Immersive experience bar,entertain
+6d4df9a3-445b-4fe0-b8f9-4c70a606ae3f,ad5b38ca-7444-4e94-8f17-93dd1826bec2,monday,Virtual reality experience,entertain
+07a45d1b-bb06-4e45-bb51-cabf39606feb,ad5b38ca-7444-4e94-8f17-93dd1826bec2,tuesday,Virtual reality experience,entertain
+a21b368a-951c-4841-a198-04f855fa8fb2,ad5b38ca-7444-4e94-8f17-93dd1826bec2,wednesday,Virtual reality experience,entertain
+3a9a3177-e923-40f3-acbb-7293335f995d,ad5b38ca-7444-4e94-8f17-93dd1826bec2,thursday,Virtual reality experience,entertain
+b76ef29d-e965-4b6e-b3ed-4afd502da4b3,ad5b38ca-7444-4e94-8f17-93dd1826bec2,friday,Virtual reality experience,entertain
+6bb5c143-a7c1-4040-b0aa-a5fdfba81853,ad5b38ca-7444-4e94-8f17-93dd1826bec2,saturday,Virtual reality experience,entertain
+88a8b249-137d-491c-88f8-98fe66e908fe,ad5b38ca-7444-4e94-8f17-93dd1826bec2,sunday,Virtual reality experience,entertain
+a1e030c2-ba0c-4b11-aeda-d38b4de74b28,f12f4cc5-27e9-4691-8dce-dba40040903f,wednesday,Check website for listings,comedy
+653f5c3a-4a6f-49bb-a6d3-784e9453d28e,f12f4cc5-27e9-4691-8dce-dba40040903f,thursday,Check website for listings,comedy
+676ba7d0-3940-462e-8abb-b7d11451a4d3,f12f4cc5-27e9-4691-8dce-dba40040903f,friday,Check website for listings,comedy
+e12ab7ac-341e-4494-8f57-9bc0ba9a9a57,f12f4cc5-27e9-4691-8dce-dba40040903f,saturday,Check website for listings,comedy
+e8b34781-4ee1-4ec6-b624-b59718cb5724,f12f4cc5-27e9-4691-8dce-dba40040903f,sunday,Check website for listings,comedy
+45f3458c-9ba1-4a90-93b5-eee046a1d708,40ec196c-cc92-497f-9a9a-4a7a43304c2b,monday,Computer game consoles,entertain
+4b4c8ecb-6c3c-4e33-a60e-20cd49e4bcee,40ec196c-cc92-497f-9a9a-4a7a43304c2b,tuesday,Computer game consoles,entertain
+409c5c45-dcc2-4d6b-8cc6-cfc56493bbb8,40ec196c-cc92-497f-9a9a-4a7a43304c2b,wednesday,Computer game consoles,entertain
+0060c1a0-903b-4711-91e8-f7355af859b1,40ec196c-cc92-497f-9a9a-4a7a43304c2b,thursday,Computer game consoles,entertain
+78c7abc0-6a90-4ac2-8c85-639daf06a1a7,40ec196c-cc92-497f-9a9a-4a7a43304c2b,friday,Computer game consoles,entertain
+eae82e99-5ea9-45ae-87f2-95f1e8a9e9e9,40ec196c-cc92-497f-9a9a-4a7a43304c2b,saturday,Computer game consoles,entertain
+84115b3c-0a10-4bf4-b9a9-2a4155dc46e4,40ec196c-cc92-497f-9a9a-4a7a43304c2b,sunday,Computer game consoles,entertain
+ad599e7e-2d88-49c7-bec5-1d2450711ad9,d234616f-b731-4b14-92cf-f4ba4f8109f5,sunday,Quiz night,quiz
+b1369f9b-f7de-42fb-85dc-18f8c21a5db3,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,monday,Computer games consoles,entertain
+33292599-2e35-4c8f-818c-6046398b1d03,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,tuesday,Computer games consoles,entertain
+0a70e9d0-8931-43f7-a768-22885421d2c7,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,wednesday,Computer games consoles,entertain
+a1d8ce7c-4484-48ed-b8f5-eb9483860310,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,thursday,Computer games consoles,entertain
+bb816e3a-2322-4f0a-bead-7e181ede75f0,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,friday,Computer games consoles,entertain
+65afd67b-8fcb-48ed-9f24-03b0d97983e4,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,saturday,Computer games consoles,entertain
+d3a430ff-1b14-4b48-9482-a639a60530ab,b088ce95-c5f2-4afe-a1d4-9245e5690ac6,sunday,Closed,hours
+a4a3fc58-b1ae-44c4-8343-cf41349e767d,083fcd78-e119-48ec-92c1-604a8645fb7c,tuesday,7pm-9.30pm quiz,quiz
+a8869810-3db9-4746-95ca-9226b2b1db35,c966c188-cb5e-4d6f-9e1a-c6e73f8dfbc5,monday,7.30pm quiz,quiz
+b1d5cf91-baaf-4766-873e-dadd1df8cb66,b04f1ea2-c615-4947-8641-9dabdf439140,monday,Closed,hours
+d6f6ef0f-47a4-4684-b6ad-87de8f40a6b3,b04f1ea2-c615-4947-8641-9dabdf439140,tuesday,Closed,hours
+84e291a2-8681-4fb6-b90a-0dae0a27ffaa,b04f1ea2-c615-4947-8641-9dabdf439140,sunday,Closed,hours
+caac9dea-f7d4-4574-bb6a-104b0a8d1d35,9d834e48-f83d-4419-9899-e4b3b9a3dc69,monday,8pm first of the month,music
+38f2c1d4-8b6a-4515-835a-5c462cd20cf2,9d834e48-f83d-4419-9899-e4b3b9a3dc69,thursday,8pm quiz,quiz
+8a0301e8-ea5d-4ea9-b918-e5705077c925,2b918e0e-447b-4939-97ae-023c542b46d2,monday,Ping pong tables,entertain
+5f090843-d519-4e56-ace6-187602cd8418,2b918e0e-447b-4939-97ae-023c542b46d2,tuesday,Ping pong tables,entertain
+19b74786-016b-415b-bd07-ba8806fcc6ce,2b918e0e-447b-4939-97ae-023c542b46d2,wednesday,Ping pong tables,entertain
+f834fa26-8782-43a7-9f0c-889930d50ce9,2b918e0e-447b-4939-97ae-023c542b46d2,thursday,Ping pong tables,entertain
+4c0f4f08-684e-412f-a581-d8671efa9553,2b918e0e-447b-4939-97ae-023c542b46d2,friday,Ping pong tables,entertain
+ee84bd1d-5570-4138-b26d-ed9efe14ac75,2b918e0e-447b-4939-97ae-023c542b46d2,saturday,Ping pong tables,entertain
+ab971bef-b8a3-42f0-9502-92df23737b90,2b918e0e-447b-4939-97ae-023c542b46d2,sunday,Ping pong tables,entertain
+48d5efd7-d7e3-4a9e-88e4-52a43ba19a1e,32db5c41-cb6f-4836-8db1-aa6824536274,monday,Electronic darts,entertain
+2de7c18e-b847-4dd6-ae54-280d393b70d2,32db5c41-cb6f-4836-8db1-aa6824536274,tuesday,Electronic darts,entertain
+b49b6526-efb3-47c9-af59-c5389e5ceecb,32db5c41-cb6f-4836-8db1-aa6824536274,wednesday,Electronic darts,entertain
+b01098f6-0f29-4de3-8903-7fa357623de3,32db5c41-cb6f-4836-8db1-aa6824536274,thursday,Electronic darts,entertain
+7f66f48f-65c7-4ca1-8dc5-0ec8f2a88acd,32db5c41-cb6f-4836-8db1-aa6824536274,friday,Electronic darts,entertain
+56894a0c-9aa1-4e74-9474-2e836a09b775,32db5c41-cb6f-4836-8db1-aa6824536274,saturday,Electronic darts,entertain
+a3790720-03d5-46e4-941b-dbdf76358ce3,32db5c41-cb6f-4836-8db1-aa6824536274,sunday,Electronic darts,entertain
+904ae5b3-b052-4662-b7aa-797bd1d268d5,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,monday,Electronic darts,entertain
+0d818633-97a7-431e-8f0e-4af018ed794a,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,tuesday,Electronic darts,entertain
+aebcd5c2-925b-4b82-be84-64707dda5350,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,wednesday,Electronic darts,entertain
+90090223-4cde-407b-955d-da44679a40dd,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,thursday,Electronic darts,entertain
+8ef6728e-5f51-4d36-9361-622935c018c3,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,friday,Electronic darts,entertain
+47feb269-f721-4a81-aed0-2a5be9ebd021,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,saturday,Electronic darts,entertain
+410b21e1-e7de-4642-b844-fa13e0cc6543,95ad4247-ce4d-49ed-bc46-c02cba8f72e4,sunday,Electronic darts,entertain
+3be98f24-d9d6-40c8-87de-2926458346eb,535a5085-154b-4050-a419-62b6a16b564f,monday,Electronic darts,entertain
+5d2e3ac6-59de-4bbd-992d-13b1ceac7789,535a5085-154b-4050-a419-62b6a16b564f,tuesday,Electronic darts,entertain
+462e5386-cc5d-41a5-b028-805ccb210341,535a5085-154b-4050-a419-62b6a16b564f,wednesday,Electronic darts,entertain
+9b292684-e1a4-480f-a331-17a595cbc74c,535a5085-154b-4050-a419-62b6a16b564f,thursday,Electronic darts,entertain
+c7faf1b6-ef18-4292-8b79-843009c93153,535a5085-154b-4050-a419-62b6a16b564f,friday,Electronic darts,entertain
+5841a2de-b6a6-402c-8dcc-895ee5d4579d,535a5085-154b-4050-a419-62b6a16b564f,saturday,Electronic darts,entertain
+5041e004-9772-48ac-8344-4e3dfe5fff12,535a5085-154b-4050-a419-62b6a16b564f,sunday,Electronic darts,entertain
+f45c4a33-b5ff-486c-bd7c-6a050348caf1,af0953b2-f0f8-4688-88ae-2eab8ee11748,monday,Ping pong tables,entertain
+87673836-7629-4d6d-ad64-466da654756e,af0953b2-f0f8-4688-88ae-2eab8ee11748,tuesday,Ping pong tables,entertain
+6c83e5ef-d59b-44ee-b44f-e5d09951e4c2,af0953b2-f0f8-4688-88ae-2eab8ee11748,wednesday,Ping pong tables,entertain
+c5d8d8dc-0241-4a56-901c-dcd288e080d3,af0953b2-f0f8-4688-88ae-2eab8ee11748,thursday,Ping pong tables,entertain
+85e750d8-d918-427a-8e0b-fd9fbf9efba4,af0953b2-f0f8-4688-88ae-2eab8ee11748,friday,Ping pong tables,entertain
+de65c124-3fc7-4ab0-906f-c37678941537,af0953b2-f0f8-4688-88ae-2eab8ee11748,saturday,Ping pong tables,entertain
+93ca07d5-e472-4e3a-ad97-ed5909be4640,af0953b2-f0f8-4688-88ae-2eab8ee11748,sunday,Ping pong tables,entertain
+9d285240-1c13-4c9f-80cf-15508ab9f5d5,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,monday,Virtual clay shooting,entertain
+31c2ea24-7f18-4d0b-bd26-902ba45e8f13,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,tuesday,Virtual clay shooting,entertain
+003513e3-0226-4825-aeed-248b58a4e7bc,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,wednesday,Virtual clay shooting,entertain
+89611288-d161-4b77-bb3a-34762c14bc05,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,thursday,Virtual clay shooting,entertain
+183bea58-80f6-4add-a416-9ca001935822,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,friday,Virtual clay shooting,entertain
+b9de4190-59ad-4e12-ae4b-a83ba438280e,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,saturday,Virtual clay shooting,entertain
+c5c5497c-41be-435c-afe4-907177d3b2f3,d23dc1c7-778d-45df-a78b-fb96bf7fbfec,sunday,Virtual clay shooting,entertain
+83a31c7f-b8c1-48c6-a53c-5f962d8ad92e,24011888-8956-4721-bd31-16e25befa503,monday,Closed,hours
+22c349b2-8e98-4c8f-8899-9aa6a9875f32,24011888-8956-4721-bd31-16e25befa503,thursday,7.30pm-11.30pm Live jazz,music
+6664260f-680e-4d92-acbb-244d5c077410,24011888-8956-4721-bd31-16e25befa503,saturday,7pm live bands,music
+77ec4fa6-9639-47f1-9ffa-8d7a774b3ef2,7a2f2062-ba1c-4d26-94db-a019a562211d,tuesday,Closed,hours
+7cbc3a58-a11e-431e-87d3-2608b2c7706d,9ed0b369-18f3-45e5-b53e-028a2747cfa8,monday,Closed,hours
+f0fd8e87-1a41-47e6-a766-485fa9118e02,9ed0b369-18f3-45e5-b53e-028a2747cfa8,tuesday,Immersive theatre dining,entertain
+8558fa26-f5bc-4d9b-9fd6-b60e86a3ee39,9ed0b369-18f3-45e5-b53e-028a2747cfa8,wednesday,Immersive theatre dining,entertain
+064583e6-bc95-4541-b9a7-cff78f99410d,9ed0b369-18f3-45e5-b53e-028a2747cfa8,thursday,Immersive theatre dining,entertain
+c339bfec-e300-4600-96b5-abfab0dd662a,9ed0b369-18f3-45e5-b53e-028a2747cfa8,friday,Immersive theatre dining,entertain
+ea833d46-fa95-48e3-9f62-a62143c6e836,9ed0b369-18f3-45e5-b53e-028a2747cfa8,saturday,Immersive theatre dining,entertain
+eff8d3e3-659e-47aa-8c27-f40d6b3c5c2f,9ed0b369-18f3-45e5-b53e-028a2747cfa8,sunday,Immersive theatre dining,entertain
+220d4c88-2156-4510-bcc2-7b4cb40dc799,0b077dca-28af-4973-88c4-39ffe0b4f2cf,wednesday,9pm quiz night,quiz
+ccf45b46-35d0-41b6-a2e5-29bf02e86932,0b077dca-28af-4973-88c4-39ffe0b4f2cf,saturday,Cabaret acts,comedy
+8d885d4f-46bb-4998-8db2-def70fccba27,0b077dca-28af-4973-88c4-39ffe0b4f2cf,sunday,Cabaret acts,comedy
+7baec755-9bf9-49c8-a103-56b477d24689,49e0632f-b944-4e35-a03d-b97b132e9b0f,monday,Electronic shuffle,entertain
+8d817d30-0608-4a4d-8b09-966966cd4b9a,49e0632f-b944-4e35-a03d-b97b132e9b0f,tuesday,Electronic shuffle,entertain
+904d28ea-8026-412d-8496-26577bf1e59b,49e0632f-b944-4e35-a03d-b97b132e9b0f,wednesday,Electronic shuffle,entertain
+c15ef3ec-6244-4ab6-a1fe-040e24f769e2,49e0632f-b944-4e35-a03d-b97b132e9b0f,thursday,Electronic shuffle,entertain
+59ee0db3-d233-4f98-8cbf-3f1810a60ab6,49e0632f-b944-4e35-a03d-b97b132e9b0f,friday,Electronic shuffle,entertain
+875d3ba7-d335-4a65-b906-a8b3dcef6d09,49e0632f-b944-4e35-a03d-b97b132e9b0f,saturday,Electronic shuffle,entertain
+c294acad-27ad-4479-9d99-6b91d2f3b198,49e0632f-b944-4e35-a03d-b97b132e9b0f,sunday,Electronic shuffle,entertain
+c01e267b-57b0-4d48-98b5-d6fe4b06e433,38d44e17-8ce7-4c52-a3fd-fa23fe26a942,monday,Closed,hours
+22a55e7b-ba56-4450-a486-ee4565444a1a,38d44e17-8ce7-4c52-a3fd-fa23fe26a942,saturday,11am-3pm,brunch
+5ea2af5f-4ed6-472d-b600-3672f80fe516,38d44e17-8ce7-4c52-a3fd-fa23fe26a942,sunday,11am-3pm,brunch
+0373cb6f-4d8a-46c8-b5a9-e1124b441e43,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,monday,Closed,hours
+b7080e6d-2d25-4f7d-a751-cc35ce8f82bf,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,tuesday,Karaoke,karaoke
+9b0b07ca-db51-4741-bc52-8f9ca5ebf340,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,wednesday,Karaoke,karaoke
+7ddd4db9-d0b3-4851-8af9-43889d7390d4,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,thursday,Karaoke,karaoke
+f56912f5-26b8-4556-bfe5-f9e7846a4568,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,friday,Karaoke,karaoke
+2ba93388-1a66-44c5-a67a-ddc35a21ba5c,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,saturday,Karaoke,karaoke
+44410abd-5592-40cb-9695-cc4e4043c67c,c898bd8c-d5b4-4bb5-819b-d80378ecbd70,sunday,Closed,hours
+1931a747-90e1-4a44-a56d-d9011979987d,f4c9d531-837c-4977-ab52-3201a9ce664f,monday,Closed,hours
+b8a4aae4-82eb-4876-9149-b09640491d5b,e2b92142-0b63-4f83-a618-3563253427b6,monday,Electronic darts,entertain
+fa0cf22c-7289-412a-9e8a-5f93254092cb,e2b92142-0b63-4f83-a618-3563253427b6,tuesday,Electronic darts,entertain
+bab90fd2-000d-4d59-814d-1442233479ff,e2b92142-0b63-4f83-a618-3563253427b6,wednesday,Electronic darts,entertain
+a9733321-d1f1-4506-9a02-a1d45bf40f7f,e2b92142-0b63-4f83-a618-3563253427b6,thursday,Electronic darts,entertain
+ac0af3b4-6c97-4f19-a97a-8b3391554d6d,e2b92142-0b63-4f83-a618-3563253427b6,friday,Electronic darts,entertain
+19cdbd57-9ad3-4b33-a59b-49bcb24f12b8,e2b92142-0b63-4f83-a618-3563253427b6,saturday,Electronic darts,entertain
+4d96f9dc-66c3-4c4b-a5bc-70858abb06eb,e2b92142-0b63-4f83-a618-3563253427b6,sunday,Electronic darts,entertain
+2082713e-c825-4903-9080-d758e8dc3fe5,895bdb92-cdf6-4eff-9619-835e481da4c9,monday,Karaoke,karaoke
+e6fc1a8c-ee73-4239-8af3-b3ce89c2d644,895bdb92-cdf6-4eff-9619-835e481da4c9,tuesday,Karaoke,karaoke
+b661a9c8-03fe-423a-888a-b65af425cfb3,895bdb92-cdf6-4eff-9619-835e481da4c9,wednesday,Karaoke,karaoke
+43ed1cd1-7dfa-4642-9ef5-53e626559b5f,895bdb92-cdf6-4eff-9619-835e481da4c9,thursday,Karaoke,karaoke
+c1845d50-2fec-4913-8225-6013ed7134ff,895bdb92-cdf6-4eff-9619-835e481da4c9,friday,Karaoke,karaoke
+21e4a63b-8512-4585-8dd3-e7dd17b4ba2a,895bdb92-cdf6-4eff-9619-835e481da4c9,saturday,Karaoke,karaoke
+8593c0db-ae3b-4865-9bb1-87c9b4a587ad,895bdb92-cdf6-4eff-9619-835e481da4c9,sunday,Karaoke,karaoke
+b0a3e5d0-746e-4f4a-8309-d70fbe3bf011,07ced535-706f-4e45-9cb9-26e0850855ed,monday,Check website for listings,comedy
+2dff1925-0f3f-455d-9dfc-d29ed8c3da76,07ced535-706f-4e45-9cb9-26e0850855ed,tuesday,Check website for listings,comedy
+1b31fa71-4172-4ea6-b5cf-f34ed1a0bd9d,07ced535-706f-4e45-9cb9-26e0850855ed,wednesday,Check website for listings,comedy
+4c95218d-50ee-4b8d-92e5-203cd0dddf52,07ced535-706f-4e45-9cb9-26e0850855ed,thursday,Check website for listings,comedy
+5f8c2195-fd31-4b40-a4c8-9a38b5248233,07ced535-706f-4e45-9cb9-26e0850855ed,friday,Check website for listings,comedy
+722e9614-b8b4-4640-8be2-1386ba829ff5,07ced535-706f-4e45-9cb9-26e0850855ed,saturday,Check website for listings,comedy
+44598b93-f658-470d-b39e-a99a3da03008,07ced535-706f-4e45-9cb9-26e0850855ed,sunday,Check website for listings,comedy
+2e323b9b-98ed-4e10-a9fa-46e8f20ed497,4e4e3842-c27a-4cbe-ad68-9e502c5dd11d,thursday,8pm quiz,quiz
+3011f022-3f81-4027-9f24-a7ab46ac4845,2ee6f921-269c-4977-a1d9-f59d1efb3871,monday,Closed,hours
+b503220a-411b-49d6-be1c-c1b0ff5ab1db,2ee6f921-269c-4977-a1d9-f59d1efb3871,tuesday,Indoor cricket experience,entertain
+9bd382c3-1c0f-4552-9d94-f13aa5456515,2ee6f921-269c-4977-a1d9-f59d1efb3871,wednesday,Indoor cricket experience,entertain
+5b7c7f5e-49c7-4237-96f4-c9db2b46e740,2ee6f921-269c-4977-a1d9-f59d1efb3871,thursday,Indoor cricket experience,entertain
+c4a3647c-670c-49c9-964f-2a1a0b85614f,2ee6f921-269c-4977-a1d9-f59d1efb3871,friday,Indoor cricket experience,entertain
+ab001840-8d46-4439-aa32-3f1076e274e2,2ee6f921-269c-4977-a1d9-f59d1efb3871,saturday,Indoor cricket experience,entertain
+e2d9e458-0108-4bd5-929b-51bbf7a67290,2ee6f921-269c-4977-a1d9-f59d1efb3871,sunday,Indoor cricket experience,entertain
+bbe2d5ff-9200-4fa2-ba10-0281b4eaef8f,cbf845e6-0b18-4153-a87c-a916cef54fab,monday,Closed,hours
+173551e3-7f4f-4537-8be4-ae4c39563f46,db5e405c-979d-447a-a5b7-62b48df4e576,wednesday,8pm quiz,quiz
+5ab370cb-61ff-49ba-aecf-d8e94649a4c1,db5e405c-979d-447a-a5b7-62b48df4e576,thursday,7.30pm live music,music
+70bb04dd-f465-4556-91a8-7d489b797ee6,db5e405c-979d-447a-a5b7-62b48df4e576,friday,7pm live bands,music
+8661c6a0-7b6a-4002-bddd-f4e3b2fddb51,db5e405c-979d-447a-a5b7-62b48df4e576,sunday,4pm-6pm live jazz,music
+2476e98b-4561-42ed-bd81-d2d28586e37b,5c623116-ab9e-4c38-80e3-7dc0ecc7913f,monday,Cabaret,comedy
+9fb5ddf5-26d3-4fc0-bdab-1efd4ac2609a,5c623116-ab9e-4c38-80e3-7dc0ecc7913f,wednesday,8.30pm DJs,dj
+71a41b26-e733-484d-b31b-ec64577f8808,5c623116-ab9e-4c38-80e3-7dc0ecc7913f,thursday,8pm DJs,dj
+16a396c6-ea46-401d-94b2-b91fc9825a63,5c623116-ab9e-4c38-80e3-7dc0ecc7913f,saturday,9pm DJs,dj
+eccba4dc-89ba-421a-80a9-d4347e20aa91,128ebbec-59a4-431c-9473-fc011f0210ca,monday,Check website listings,comedy
+7082754c-d48d-47bd-ae9a-76e7f02e11ac,128ebbec-59a4-431c-9473-fc011f0210ca,tuesday,Check website listings,comedy
+2323be1c-fd2a-4179-8fad-83bd5153b724,128ebbec-59a4-431c-9473-fc011f0210ca,wednesday,Check website listings,comedy
+1819e7f8-d9d9-46a7-ac15-db053f49ab2d,128ebbec-59a4-431c-9473-fc011f0210ca,thursday,Check website listings,comedy
+d60c747d-1efa-49b9-9341-4e36f3f38f7c,128ebbec-59a4-431c-9473-fc011f0210ca,friday,Check website listings,comedy
+eba9214d-63ac-4e8b-84b1-3e6b602bf2b2,128ebbec-59a4-431c-9473-fc011f0210ca,saturday,Check website listings,comedy
+13cfa780-f15b-42fb-86e2-2b2bb18f4094,128ebbec-59a4-431c-9473-fc011f0210ca,sunday,Check website listings,comedy
+ef9a251a-588a-4808-9a54-42171eedc4a1,7e16cbd6-a99a-47cf-80be-c703c8124708,sunday,Closed,hours
+5d59c736-71ff-4e5c-b710-70964fcdc6b7,9ef6ec94-22db-42f1-adec-3dbfa75ad592,monday,Karaoke,karaoke
+84ef4515-984f-4e77-b425-509b85219885,9ef6ec94-22db-42f1-adec-3dbfa75ad592,tuesday,Karaoke,karaoke
+150461a0-f935-4482-9203-9abafdb34d08,9ef6ec94-22db-42f1-adec-3dbfa75ad592,wednesday,Karaoke,karaoke
+dbe4f29d-aa5d-4367-848c-ae4b17ecd637,9ef6ec94-22db-42f1-adec-3dbfa75ad592,thursday,Karaoke,karaoke
+42a1560f-3775-48cf-bb64-03a060eb6720,9ef6ec94-22db-42f1-adec-3dbfa75ad592,friday,Karaoke,karaoke
+1d397b94-d732-4d31-b8c9-23a1602fb637,9ef6ec94-22db-42f1-adec-3dbfa75ad592,saturday,Karaoke,karaoke
+904a1e9a-8561-4a94-8a2c-28d565f09ef2,9ef6ec94-22db-42f1-adec-3dbfa75ad592,sunday,Karaoke,karaoke
+ebc5deed-1a26-4120-8e0d-3936c52aa2e8,975140ad-4162-4d88-9951-a5d17284eb9a,tuesday,Quiz night,quiz
+d9805fb1-946a-44a2-bf50-c511a86f6b70,ff20b3c0-b8ab-433e-9c1f-cfed10f20a3c,saturday,Closed,hours
+7ef1fb88-ace9-4157-8b3d-751699820ee4,ff20b3c0-b8ab-433e-9c1f-cfed10f20a3c,sunday,Closed,hours
+e11eb49b-78c4-4fba-aee6-b7293f4fa537,72f45121-bf7c-4972-b941-7ccdaa076356,monday,Closed,hours
+944277cb-930a-4df9-9dfc-201077c1e95f,72f45121-bf7c-4972-b941-7ccdaa076356,tuesday,Electronic fairground games,entertain
+dd532c69-9c39-4374-bd6e-5da054e7be0a,72f45121-bf7c-4972-b941-7ccdaa076356,wednesday,Electronic fairground games,entertain
+0c39daa3-e79c-4f23-ad18-71391479ce07,72f45121-bf7c-4972-b941-7ccdaa076356,thursday,Electronic fairground games,entertain
+59e297e5-6344-4a1f-bc82-2fa2c0c319ed,72f45121-bf7c-4972-b941-7ccdaa076356,friday,Electronic fairground games,entertain
+08f85e9c-962c-4e2a-8828-f9aa708b6e68,72f45121-bf7c-4972-b941-7ccdaa076356,saturday,Electronic fairground games,entertain
+bc6a2c45-9620-4a57-8ea0-c7343a3c5e00,72f45121-bf7c-4972-b941-7ccdaa076356,sunday,Electronic fairground games,entertain
+3c9a7631-1905-47f8-911e-df81c8669be3,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,monday,Electronic shuffleboard,entertain
+d83ee0d0-526a-4836-b151-b7a414b741d8,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,tuesday,Electronic shuffleboard,entertain
+6326dba3-c63a-4e6f-8b24-96af58b7f618,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,wednesday,Electronic shuffleboard,entertain
+88cf6690-b91d-4316-a49c-d91b2ae82384,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,thursday,Electronic shuffleboard,entertain
+3e257864-5c96-46aa-819d-cde7c9c8c612,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,friday,Electronic shuffleboard,entertain
+51c81824-d42e-4745-9adb-7c02ede983ed,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,saturday,Electronic shuffleboard,entertain
+620067fe-e3d4-4bc0-b2ae-330f377d77c0,e7a5873d-e2ce-45d0-bbd3-f3a37575a672,sunday,Electronic shuffleboard,entertain
+c5208543-331b-4009-87b0-09a9081a0956,6fe92b26-ef10-4919-bcff-4e47c5cf763c,monday,Poker night,entertain
+f5c51d5f-d6fb-47f0-ae7d-f40b3530f15b,6fe92b26-ef10-4919-bcff-4e47c5cf763c,sunday,8pm quiz,quiz
+d4f24c17-a3dd-4b13-8c7d-f99bfb38e0fd,d27344c5-c1f5-4d13-b79f-057b14a0a360,monday,8pm quiz,quiz
+615d7279-2c99-4df8-a184-57e3f7427a52,d27344c5-c1f5-4d13-b79f-057b14a0a360,wednesday,3rd wednesday of month,entertain
+a3d98793-2843-4999-8b7c-3c4c7ad1d6e4,d27344c5-c1f5-4d13-b79f-057b14a0a360,friday,7pm acousitc music,music
+9a2976e8-8b60-4d30-989a-838246c50bd5,d27344c5-c1f5-4d13-b79f-057b14a0a360,sunday,8pm live jazz,music
+266ca33b-986c-456c-b73e-5c7db4ba64b3,17ee2a1c-5789-46fb-86a6-6e248f4beba9,tuesday,Live jazz 1st of the month,music
+517db1d1-7766-4ddc-881e-1bcc262e46c1,17ee2a1c-5789-46fb-86a6-6e248f4beba9,sunday,8.30pm quiz,quiz
+38356d4e-2e61-49d6-8885-37c7011d66f9,f47dbe6b-1428-4bb8-a017-0a0062785ed9,monday,8pm quiz,quiz
+002f50ab-03c3-4235-97a8-91a09841b449,f47dbe6b-1428-4bb8-a017-0a0062785ed9,saturday,Live bands,music
+ac202a55-41c2-4541-acea-fa9e7755f51b,f47dbe6b-1428-4bb8-a017-0a0062785ed9,sunday,Open mic 1st of the month,comedy
+9897500f-4c44-42a8-b873-99104b37b2e4,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,monday,Closed,hours
+f544a0e2-dbf4-4c68-8018-88707bbd8770,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,tuesday,Retro arcade games,entertain
+2b583220-ed89-498e-a931-5f024f229bb8,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,wednesday,Retro arcade games,entertain
+aa3cf9c8-94be-4743-94a1-4801a92a8a39,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,thursday,Retro arcade games,entertain
+d57647c1-293d-4bb8-82ed-87a6602afa59,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,friday,Retro arcade games,entertain
+7a95d9f0-f9db-436c-9207-3b8b385887e2,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,saturday,Retro arcade games,entertain
+45bbf033-3a07-4dfb-91ba-2cfa4fe19a24,abf8bc80-06ed-4fbd-95f5-69aaea242fe5,sunday,Retro arcade games,entertain
+16c3c779-1237-4305-a2a2-b4c06b12bea7,a7006cf2-0f00-497c-a8dc-3d6729381820,monday,F1 arcade experience,entertain
+00f9a252-2994-4b8b-9d43-c28f8fa0ee69,a7006cf2-0f00-497c-a8dc-3d6729381820,tuesday,F1 arcade experience,entertain
+8a70ae4d-e5c3-4606-ae74-2813b8b9ee4f,a7006cf2-0f00-497c-a8dc-3d6729381820,wednesday,F1 arcade experience,entertain
+07e3a56c-e98d-4bc6-bcd1-de0e9699d785,a7006cf2-0f00-497c-a8dc-3d6729381820,thursday,F1 arcade experience,entertain
+e63d9d09-41c6-4eb2-ab3a-dca0c9685a47,a7006cf2-0f00-497c-a8dc-3d6729381820,friday,F1 arcade experience,entertain
+f39bc922-a642-4f67-a524-62d979537746,a7006cf2-0f00-497c-a8dc-3d6729381820,saturday,F1 arcade experience,entertain
+16969868-8387-4ac1-ba6d-1c49b0481d52,a7006cf2-0f00-497c-a8dc-3d6729381820,sunday,F1 arcade experience,entertain
+c574c598-b1a0-4b55-b282-b037aa888b23,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,monday,Closed,hours
+44f43d11-ccd2-49b1-be2d-d70659174eea,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,tuesday,Closed,hours
+9106da3f-57f3-4335-b084-5ae62db91c9a,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,wednesday,Closed,hours
+580229f2-8faf-45c5-83bc-4f2d690ba782,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,thursday,Closed,hours
+f4590d72-8a99-4a41-b625-b9d53b242835,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,friday,Canoe hire,entertain
+d35a89d6-0293-4d3c-a406-4ac40185689c,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,saturday,Canoe hire,entertain
+0a352b9b-7200-419d-874a-db48879a3167,ecd43a0d-0ceb-4e86-b9af-b408eee96b18,sunday,Canoe hire,entertain
+e5d5f6f0-7cf0-40c1-b902-47eca403b112,9a80a623-9382-462c-babf-009110a1d804,monday,Digital darts,entertain
+f991ce9e-8db3-47d3-9e8f-0e1951f2fcc0,9a80a623-9382-462c-babf-009110a1d804,tuesday,Digital darts,entertain
+44a31c91-75e2-4c23-8445-3fa785ed6905,9a80a623-9382-462c-babf-009110a1d804,wednesday,Digital darts,entertain
+43736c10-e487-4305-8b8a-876b67381003,9a80a623-9382-462c-babf-009110a1d804,thursday,Digital darts,entertain
+8ad87411-ba21-4ac1-8f1a-cf56d6bf06b8,9a80a623-9382-462c-babf-009110a1d804,friday,Digital darts,entertain
+6d762d32-2641-4fb1-ba3e-6c66a2f93d78,9a80a623-9382-462c-babf-009110a1d804,saturday,Digital darts,entertain
+50c9e55e-eb74-4b03-a2db-0a382637ba5b,9a80a623-9382-462c-babf-009110a1d804,sunday,Digital darts,entertain
+925705b3-6697-4b8a-861a-e3217f60f961,8a9a733c-f36b-49e9-8da7-aeb884293d92,sunday,Closed,hours
+a7ec5c90-b0e9-432b-9176-d3faf700df3c,e4c1e325-aaf0-4ea7-9447-174bc479c279,monday,Closed,hours
+93a818c6-78d3-4e2f-ac14-9861217667dc,e4c1e325-aaf0-4ea7-9447-174bc479c279,tuesday,Arcade car racing,entertain
+9845b40b-b27d-415b-b566-ddc28e88aa96,e4c1e325-aaf0-4ea7-9447-174bc479c279,wednesday,Arcade car racing,entertain
+e2132758-daf9-4661-9223-d2266936f4da,e4c1e325-aaf0-4ea7-9447-174bc479c279,thursday,Arcade car racing,entertain
+42fe437d-b385-41a0-890d-0315a3bff10a,e4c1e325-aaf0-4ea7-9447-174bc479c279,friday,Arcade car racing,entertain
+03414b00-b655-465e-941c-ec2b065edace,e4c1e325-aaf0-4ea7-9447-174bc479c279,saturday,Arcade car racing,entertain
+3769bd37-f1f9-4f8a-b7d4-d2b4bb83d6a5,e4c1e325-aaf0-4ea7-9447-174bc479c279,sunday,Closed,hours
+7a1545a3-c305-4007-a1a7-e4d1feac9eab,17168dd2-1b21-4175-a60f-ae9324c45d2c,monday,Closed,hours
+810ad57c-26da-4b65-a28e-63ff920b804c,17168dd2-1b21-4175-a60f-ae9324c45d2c,tuesday,Closed,hours
+afd3bffc-6781-4fe4-a99c-0eade2c20ddf,17168dd2-1b21-4175-a60f-ae9324c45d2c,wednesday,7.30pm comedy,comedy
+04b667e0-e52c-450d-af6b-99ece0bfc955,17168dd2-1b21-4175-a60f-ae9324c45d2c,friday,7pm comedy,comedy
+40fd41df-92d8-40ed-b21f-6c7ef1028802,17168dd2-1b21-4175-a60f-ae9324c45d2c,saturday,12noon-4pm,brunch
+979e6237-9a83-4a56-a768-95f63944f614,17168dd2-1b21-4175-a60f-ae9324c45d2c,sunday,Closed,hours
+aedb5f09-82d8-4394-9ff6-af4b778b4179,6324ea6d-4ca5-40e2-abc7-009cbf4f1a9e,wednesday,8pm quiz,quiz
+b65c52a4-8582-4498-b46f-e001f0da676b,0d2fa8e4-7e01-405e-91be-f59cfbd35277,monday,Closed,hours
+ebfaef6d-4d79-4373-ba37-3cd17f7da8bc,0d2fa8e4-7e01-405e-91be-f59cfbd35277,tuesday,Closed,hours
+0ac3ab9b-d962-4fcb-99ef-c9a477a58c3e,0d2fa8e4-7e01-405e-91be-f59cfbd35277,wednesday,Quiz night,quiz
+1769ea59-964a-4752-8272-4bbb5c252032,0d2fa8e4-7e01-405e-91be-f59cfbd35277,friday,DJs,dj
+81d2644f-fe1d-486f-8386-0a3a0e746dc0,0d2fa8e4-7e01-405e-91be-f59cfbd35277,saturday,DJs,dj
+d9772938-c318-4708-85a5-ab41c29d9c73,cd2277a1-8247-4dbd-90cb-8181ad7c70e3,monday,Closed,hours
+385ed55f-9340-4222-8dd8-fa9e0610613a,cd2277a1-8247-4dbd-90cb-8181ad7c70e3,thursday,Music bingo every other,entertain
+04317fe4-a5d2-4536-aadc-d473c9ec5141,cd2277a1-8247-4dbd-90cb-8181ad7c70e3,sunday,Drag show,comedy
+cc6582e7-8b24-43a9-885f-39666527f10a,5b81fa4e-a48e-45d6-b36e-c03be9dda42c,monday,Closed,hours
+b5bc46e9-c652-4033-a183-1191ac9502d2,5b81fa4e-a48e-45d6-b36e-c03be9dda42c,tuesday,Closed,hours
+e0145fda-b517-45a5-b2ae-886f9fbd8492,5b81fa4e-a48e-45d6-b36e-c03be9dda42c,wednesday,Closed,hours
+5750856f-48f9-4d76-9af0-b98b85806f67,5b81fa4e-a48e-45d6-b36e-c03be9dda42c,sunday,Closed,hours
+5667c8e1-9eae-4132-8cb6-233df1a3c3b2,64c16292-bc49-479e-acc9-51c102a221af,monday,Closed,hours
+65aed62c-4d12-4f7f-ba99-49ffc2426494,64c16292-bc49-479e-acc9-51c102a221af,wednesday,7.30pm quiz night,quiz
+7b33b0d8-aa40-4105-bec4-85181b5fd217,64c16292-bc49-479e-acc9-51c102a221af,thursday,8pm karaoke,karaoke
+3f3182f9-464c-46d3-8cbb-52c8897c46bc,64c16292-bc49-479e-acc9-51c102a221af,friday,8pm comedy,comedy
+2068705c-224d-438b-8720-bc13a199906a,4c256de3-62b7-4adf-809a-bdbb07b5e3bf,sunday,Closed,hours
+847b5fe9-d570-4a21-aa77-3119ef28d875,f72e5975-1802-4da8-99a4-a21cf3844766,monday,Arcade games,entertain
+47c1e5ad-e7ce-4d77-b5da-1423cb876b36,f72e5975-1802-4da8-99a4-a21cf3844766,tuesday,Arcade games,entertain
+21b68db5-a927-4018-ad59-549760634035,f72e5975-1802-4da8-99a4-a21cf3844766,wednesday,Arcade games,entertain
+459cf49c-63cf-4ea0-8036-43079b1b65da,f72e5975-1802-4da8-99a4-a21cf3844766,thursday,Arcade games,entertain
+8eff1e8c-966a-4d95-b233-7814c6ee16ba,f72e5975-1802-4da8-99a4-a21cf3844766,friday,Arcade games,entertain
+313fc470-5fea-4f3e-9eab-2dfa46e9e71c,f72e5975-1802-4da8-99a4-a21cf3844766,saturday,Arcade games,entertain
+e462d592-10c1-46ca-afdd-4f33077f8779,f72e5975-1802-4da8-99a4-a21cf3844766,sunday,Arcade games,entertain
+66509523-0eea-4443-a44e-21547ca5032c,304af74a-aa84-4a16-9a78-4e7f878f7749,monday,Karaoke,karaoke
+ef6692de-e945-411d-8954-6a97c0337c40,304af74a-aa84-4a16-9a78-4e7f878f7749,tuesday,Karaoke,karaoke
+0785b169-078e-4f74-bbf4-235f79bbb962,304af74a-aa84-4a16-9a78-4e7f878f7749,wednesday,Karaoke,karaoke
+734e8916-232f-49be-99e7-63466bad96b2,304af74a-aa84-4a16-9a78-4e7f878f7749,thursday,Karaoke,karaoke
+848eed76-ec5d-4d68-bc44-7b7766b3e150,304af74a-aa84-4a16-9a78-4e7f878f7749,friday,Karaoke,karaoke
+1e7064ff-d75c-437c-81e4-20660da5a2e9,304af74a-aa84-4a16-9a78-4e7f878f7749,saturday,Karaoke,karaoke
+68a0c43d-8b45-479d-a38b-3abce120ba5b,304af74a-aa84-4a16-9a78-4e7f878f7749,sunday,Karaoke,karaoke
+1e59c3c1-be66-4e6c-a775-5c4a2081d82c,f7eb4a49-1ccf-43d6-b0b6-c316f6f53d7f,sunday,Closed,hours
+decd7872-b606-441d-a28c-68d8ccc9e74a,9de235c6-7132-4fac-8c4c-5b7dc9bab383,monday,Karaoke,karaoke
+19f29b76-bc5a-45bd-b597-2559ab0d381f,9de235c6-7132-4fac-8c4c-5b7dc9bab383,tuesday,Karaoke,karaoke
+e13bf5e6-f2d7-46e4-a4bf-f5415fe3a61d,9de235c6-7132-4fac-8c4c-5b7dc9bab383,wednesday,Karaoke,karaoke
+3e9cec2e-f038-433b-b488-24892520b561,9de235c6-7132-4fac-8c4c-5b7dc9bab383,thursday,Karaoke,karaoke
+7d48fb9a-2c55-4d13-8c2f-4044d8a1a9ee,9de235c6-7132-4fac-8c4c-5b7dc9bab383,friday,Karaoke,karaoke
+ac4159e4-bf09-4ca5-8403-f498d683c487,9de235c6-7132-4fac-8c4c-5b7dc9bab383,saturday,Karaoke,karaoke
+ed2bf960-f138-4f0c-999f-fe474cc57d94,9de235c6-7132-4fac-8c4c-5b7dc9bab383,sunday,Karaoke,karaoke
+06cb6f99-0518-4d31-8387-da5d6ef535d4,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,monday,Various games,entertain
+4635e9cd-0794-49d6-ab8d-1bf339635a54,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,tuesday,Various games,entertain
+53daa1ff-f7de-451f-86c9-7a6b93a330cf,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,wednesday,Various games,entertain
+732d8023-9c7e-4261-8fe2-9bbbe951a3db,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,thursday,Various games,entertain
+3aa9469f-da4c-49a3-9836-a6edddbc8dbe,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,friday,Various games,entertain
+231cb2fa-9551-40e8-a25a-c3c5b84c8122,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,saturday,Various games,entertain
+b4f516b3-3702-49c4-8c70-1ba092ad58b3,b66d638d-fece-4d06-a2ea-d1b9ed0ced48,sunday,Various games,entertain
+c24fd1ca-3770-49cd-8fd4-2165488e7280,250497de-fcd2-497d-8a0e-52d9d1d8f94b,monday,Closed,hours
+108c747c-d405-457c-9431-91031cf8b908,250497de-fcd2-497d-8a0e-52d9d1d8f94b,tuesday,Indoor petanque,entertain
+8f65d8b2-78cc-43b5-8be6-ee91e57f6d84,250497de-fcd2-497d-8a0e-52d9d1d8f94b,wednesday,Indoor petanque,entertain
+a285fb9a-6386-4c53-8390-39d92ccbfdaa,250497de-fcd2-497d-8a0e-52d9d1d8f94b,thursday,Indoor petanque,entertain
+47f8f21b-a81c-4704-a32c-200c3c0d00d3,250497de-fcd2-497d-8a0e-52d9d1d8f94b,friday,Indoor petanque,entertain
+d9361018-cc3b-4750-876f-ce791e4f71e6,250497de-fcd2-497d-8a0e-52d9d1d8f94b,saturday,Closed,hours
+d52a60e8-17d3-4e38-8720-b03e6ed794be,250497de-fcd2-497d-8a0e-52d9d1d8f94b,sunday,Closed,hours
+68cbb026-584e-4f26-bae7-1b9145f287c3,259f5a96-e9c5-4501-a5fe-6692b622cd90,monday,Karaoke,karaoke
+72cfa42b-c333-4713-9cbc-8452498216f3,259f5a96-e9c5-4501-a5fe-6692b622cd90,tuesday,Karaoke,karaoke
+7dda086e-4b7a-4311-a03d-168b73722f38,259f5a96-e9c5-4501-a5fe-6692b622cd90,wednesday,Karaoke,karaoke
+8c8bfd2e-9b9f-4b37-9928-e72b35574014,259f5a96-e9c5-4501-a5fe-6692b622cd90,thursday,Karaoke,karaoke
+5c581089-d188-4275-9137-acd9fc22221e,259f5a96-e9c5-4501-a5fe-6692b622cd90,friday,Karaoke,karaoke
+31bc416e-d7bd-45cb-9ec7-f6436808d321,259f5a96-e9c5-4501-a5fe-6692b622cd90,saturday,Karaoke,karaoke
+4e73e2ab-f16d-4ac8-a857-e0f88b64328d,259f5a96-e9c5-4501-a5fe-6692b622cd90,sunday,Karaoke,karaoke
+5f92a237-7ea7-4727-953c-46836dedea8b,460871bd-d4ea-4e6d-bcea-1d490c790851,monday,Closed,hours
+f28bc3bb-1e12-4c26-855e-69e23bf4684f,460871bd-d4ea-4e6d-bcea-1d490c790851,tuesday,Mini golf,entertain
+7dc2d57b-3044-48ae-9a87-14324176a1af,460871bd-d4ea-4e6d-bcea-1d490c790851,wednesday,Mini golf,entertain
+e00e4c62-6791-4d3b-bd1d-a2f23b4fd2ed,460871bd-d4ea-4e6d-bcea-1d490c790851,thursday,Mini golf,entertain
+7d151fa2-04be-4cfe-b33c-91b665c95843,460871bd-d4ea-4e6d-bcea-1d490c790851,friday,Mini golf,entertain
+4111427e-ebfd-4f0e-a092-a4e884c31854,460871bd-d4ea-4e6d-bcea-1d490c790851,saturday,Mini golf,entertain
+88c6a869-e11c-4142-9d0c-c91affe7fc73,460871bd-d4ea-4e6d-bcea-1d490c790851,sunday,Mini golf,entertain
+504e38ca-e6b3-4d19-bdb7-1e726d042ffe,46cc368b-dacb-437b-97ea-bf1c28f5f28a,monday,Closed,hours
+4d5fd65e-c7e6-4b3f-a031-e72fde67d10f,93505b18-6fef-474b-81c0-bb7342491279,monday,Mini golf,entertain
+f9d1fbdd-6891-4f51-83a8-13e7bc014d7c,93505b18-6fef-474b-81c0-bb7342491279,tuesday,Mini golf,entertain
+ab3186e9-8930-44fb-9a12-1aa6c55a9276,93505b18-6fef-474b-81c0-bb7342491279,wednesday,Mini golf,entertain
+c66bf9cf-58d9-4435-bc7e-d14e0b9fa8de,93505b18-6fef-474b-81c0-bb7342491279,thursday,Mini golf,entertain
+d9e7c5a9-6bf5-4530-a979-4fd4c3f308d0,93505b18-6fef-474b-81c0-bb7342491279,friday,Mini golf,entertain
+2ab1312d-826f-4b22-839f-9adaa352294c,93505b18-6fef-474b-81c0-bb7342491279,saturday,Mini golf,entertain
+044cdbf1-cbcb-4c03-988a-003a20c15df0,93505b18-6fef-474b-81c0-bb7342491279,sunday,Mini golf,entertain
+033fdf30-c9e1-4a4e-9da5-bda82d73661d,e4f3286e-0aaa-458c-ad62-42d91da7136d,monday,Karaoke,karaoke
+ee16a17f-f241-4da7-ac8a-754b6b3af61e,e4f3286e-0aaa-458c-ad62-42d91da7136d,tuesday,Karaoke,karaoke
+fc852d47-04a4-48fe-8091-3b9572dea159,e4f3286e-0aaa-458c-ad62-42d91da7136d,wednesday,Karaoke,karaoke
+fd3d01b5-5571-4059-aead-17011bd5ce9e,e4f3286e-0aaa-458c-ad62-42d91da7136d,thursday,Karaoke,karaoke
+48bf782e-0921-4761-ba60-eebd7e2406aa,e4f3286e-0aaa-458c-ad62-42d91da7136d,friday,Karaoke,karaoke
+400d6203-4af0-48e3-9f09-7fa6f70ce8d8,e4f3286e-0aaa-458c-ad62-42d91da7136d,saturday,Karaoke,karaoke
+1c100e57-5b60-4720-93f8-72e5848be7b2,e4f3286e-0aaa-458c-ad62-42d91da7136d,sunday,Closed,hours
+7adf0107-b4e8-45a2-998e-adcefadc45cc,dbd13772-603d-48c9-b826-47847fd55fc9,monday,Check website listings,comedy
+055f6529-f21d-4d14-a82d-085251a9177d,dbd13772-603d-48c9-b826-47847fd55fc9,tuesday,Quiz night,quiz
+3e803747-9c84-4eee-987a-ac0ea9448ae2,dbd13772-603d-48c9-b826-47847fd55fc9,wednesday,Check website listings,comedy
+e553b792-bbb3-4a94-85ca-baa9b070a9dc,dbd13772-603d-48c9-b826-47847fd55fc9,thursday,Check website listings,comedy
+054bd274-5820-408a-9f35-6c54b4ddde17,dbd13772-603d-48c9-b826-47847fd55fc9,friday,Check website listings,comedy
+b8a1beab-8e30-49e1-8909-f7c764e34f7c,dbd13772-603d-48c9-b826-47847fd55fc9,saturday,Check website listings,comedy
+92e35d0c-6c31-40e1-88ed-734eac7c11e9,dbd13772-603d-48c9-b826-47847fd55fc9,sunday,Check website listings,comedy
+d3f4fd17-7e10-47fa-893a-ea13eddf34d8,30c6b140-6654-4068-8a92-249d42120e3c,friday,Live bands,music
+c8546133-f3d6-4251-bec8-d14bba944432,30c6b140-6654-4068-8a92-249d42120e3c,saturday,Live bands,music
+4809a791-cfdd-461a-a113-0d2636504053,30c6b140-6654-4068-8a92-249d42120e3c,sunday,Live bands,music
+80c49627-631c-4aca-b555-bb39e3e031cf,49e1ca62-3f10-415d-8542-ae86ac75e25e,monday,8pm-10pm open mic,comedy
+f1309561-0bbf-4ae6-83f4-d6a9665ff706,49e1ca62-3f10-415d-8542-ae86ac75e25e,tuesday,7.30pm-9.30pm book quiz,quiz
+68b92287-76d4-4afb-85b2-5a6516c219b4,49e1ca62-3f10-415d-8542-ae86ac75e25e,wednesday,Check website listings,comedy
+41471c8a-f568-49c7-94cd-900a8d3e7f25,49e1ca62-3f10-415d-8542-ae86ac75e25e,thursday,Check website listings,comedy
+25b8e30a-d31c-4e82-801b-cae0c0e3094d,49e1ca62-3f10-415d-8542-ae86ac75e25e,friday,Check website listings,comedy
+19eaf4d3-5437-44ff-8cda-258e35229f77,49e1ca62-3f10-415d-8542-ae86ac75e25e,saturday,Check website listings,comedy
+300db8f6-1639-42a5-a1f2-22d32255b9a6,49e1ca62-3f10-415d-8542-ae86ac75e25e,sunday,Check website listings,comedy
+354c48b4-8d96-45af-8b79-c5b5abcad89e,02d1aa16-9a0f-44ec-bf5e-cefe6a829ada,monday,8pm quiz,quiz
+26cb6cf3-7909-4ce6-b416-2c75e211ad9b,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,monday,Closed,hours
+b315166e-928c-4ef9-8de7-077d3706cead,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,tuesday,Karaoke,karaoke
+a5aa0860-5314-4c03-952e-bac62d680f25,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,wednesday,Karaoke,karaoke
+82b93631-37bd-40bb-a9bc-56c4648f759f,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,thursday,Karaoke,karaoke
+696e75cc-5957-4c04-ba48-40b6709ba49a,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,friday,Karaoke,karaoke
+11333f89-dab8-4f1a-8fc7-5f9e12fe9ea0,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,saturday,Brunch bingo,brunch
+53b80034-afb7-4a31-83f6-a8e0c8690574,b968f83e-5c3b-4e49-9e02-d6cf09f084c3,sunday,Closed,hours
+431b74d7-0f93-450c-9e1c-a79abaaaa3c9,e9f7ebba-7363-421e-ad46-4daf96b481b8,monday,Indoor games,entertain
+87a8a980-b6ec-44ad-b99f-18c18cfe203b,e9f7ebba-7363-421e-ad46-4daf96b481b8,tuesday,Indoor games,entertain
+6f61aca2-37a2-48d3-a390-d0093ac1797c,e9f7ebba-7363-421e-ad46-4daf96b481b8,wednesday,Indoor games,entertain
+63178f1e-4813-4a76-b4e0-d70d8ba6f664,e9f7ebba-7363-421e-ad46-4daf96b481b8,thursday,Indoor games,entertain
+b7c95b79-56aa-41c2-beb9-74f708f92b13,e9f7ebba-7363-421e-ad46-4daf96b481b8,friday,Indoor games,entertain
+a0dda1f1-07ec-42ba-9c59-9eb6368bee77,e9f7ebba-7363-421e-ad46-4daf96b481b8,saturday,Indoor games,entertain
+aee3c43c-f3a6-4252-8f4f-3378250b4b64,e9f7ebba-7363-421e-ad46-4daf96b481b8,sunday,Indoor games,entertain
+26492064-eb9c-4c43-8a19-95ec2abfe1ad,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,monday,Indoor games,entertain
+ca5dbdc6-586e-4f5c-bcaa-f02c1d5f8587,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,tuesday,Indoor games,entertain
+a0c9d4a4-f8c1-445d-bbe3-ec03f0a6b40f,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,wednesday,Indoor games,entertain
+4eff604b-6c1b-4ba3-ae5d-74a1c94d536b,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,thursday,Indoor games,entertain
+fc83d90d-d508-4d1f-9185-b31609d237a6,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,friday,Indoor games,entertain
+1451b806-8bff-4a03-a721-368790b3dbed,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,saturday,Indoor games,entertain
+25024d35-131c-41e5-ab3f-a2b220486975,5d366edc-fbd9-4e7c-8578-75c9d061c6ae,sunday,Indoor games,entertain
+06139666-59fb-4199-a987-e6e5a145da11,158e559e-c4c1-4257-868e-054caeb33c04,monday,Shuffleboard / foosball / ping pong,entertain
+dc821bef-83ef-4d70-b00b-cf0a8ee5581f,158e559e-c4c1-4257-868e-054caeb33c04,tuesday,Shuffleboard / foosball / ping pong,entertain
+fdf2dc5b-b719-4d9f-a935-649ebea74961,158e559e-c4c1-4257-868e-054caeb33c04,wednesday,Shuffleboard / foosball / ping pong,entertain
+ecd74f69-776c-4297-b29b-a3d4461fd772,158e559e-c4c1-4257-868e-054caeb33c04,thursday,Shuffleboard / foosball / ping pong,entertain
+52278dc3-7e30-4426-9086-f1de5c7eccf3,158e559e-c4c1-4257-868e-054caeb33c04,friday,Shuffleboard / foosball / ping pong,entertain
+c690bb9d-1eeb-4e37-a636-e448cb2c8877,158e559e-c4c1-4257-868e-054caeb33c04,saturday,Shuffleboard / foosball / ping pong,entertain
+9045511a-b564-42cc-8fbb-b5d3ca371831,158e559e-c4c1-4257-868e-054caeb33c04,sunday,Shuffleboard / foosball / ping pong,entertain
+6acebe7f-093b-420e-9ca0-ce1c35df0e18,8c98d06d-922d-48bb-9132-dcf423125413,monday,Foosball tables,entertain
+76bde08d-6fb0-46d7-b661-d8eb4071c19e,8c98d06d-922d-48bb-9132-dcf423125413,tuesday,Foosball tables,entertain
+48284db1-b563-4307-8bbc-f8fcaabcdde4,8c98d06d-922d-48bb-9132-dcf423125413,wednesday,Foosball tables,entertain
+493d383a-6ab1-42bb-9c04-844bf656b723,8c98d06d-922d-48bb-9132-dcf423125413,thursday,Foosball tables,entertain
+f1831913-fcca-4e88-91cb-bcbf99dd733d,8c98d06d-922d-48bb-9132-dcf423125413,friday,Foosball tables,entertain
+9cda4159-4210-45d6-9c6a-fc3594916dcd,8c98d06d-922d-48bb-9132-dcf423125413,saturday,Foosball tables,entertain
+e7e9e28e-c781-463a-a6ee-3bc990df83c5,8c98d06d-922d-48bb-9132-dcf423125413,sunday,Foosball tables,entertain
+d3e8c460-2207-45fa-8c81-093db4718694,ebc9e553-7f1b-4093-b637-6ea280981a86,tuesday,7pm quiz,quiz
+39bd5da8-0c93-4fa0-8c60-26d1ed7684db,ebc9e553-7f1b-4093-b637-6ea280981a86,friday,7.30pm bingo / gameshow,entertain
+b6d1eae4-f2d5-4ee6-beb2-d0117c03cc79,ebc9e553-7f1b-4093-b637-6ea280981a86,saturday,Karaoke,brunch
+e8fccbbd-1684-4d0f-a65f-4e897a0a2fee,947d55c3-3f2c-46a8-a4d9-bd553792c5de,thursday,Comedy nights,comedy
+b2b6cb3f-abc5-4bae-90d7-5a87df52ffac,947d55c3-3f2c-46a8-a4d9-bd553792c5de,sunday,Jazz 1st of the month,music
+76ee8772-8638-4c70-8fee-ed05f0a2a27a,4a645c2c-c00e-4488-bf7c-b19685fd80e5,monday,Arcade games,entertain
+90f3a6e6-1e89-4417-8c93-f28c109d16d1,4a645c2c-c00e-4488-bf7c-b19685fd80e5,tuesday,Arcade games,entertain
+3cd48f7c-d982-4689-8539-cc6d192a7ff4,4a645c2c-c00e-4488-bf7c-b19685fd80e5,wednesday,Arcade games,entertain
+fbdcabb9-9ab0-41a0-9666-b6f15f40416e,4a645c2c-c00e-4488-bf7c-b19685fd80e5,thursday,Arcade games,entertain
+c3623ebd-631a-427c-a5fa-259fdc6fd371,4a645c2c-c00e-4488-bf7c-b19685fd80e5,friday,Arcade games,entertain
+9511c6d9-da90-47f0-acb3-fd0ce1a39a3a,4a645c2c-c00e-4488-bf7c-b19685fd80e5,saturday,Arcade games,entertain
+f96a3697-3c77-4bf4-b0a9-3eb943ed5b88,4a645c2c-c00e-4488-bf7c-b19685fd80e5,sunday,Arcade games,entertain
+1a7dcb1e-cf7a-4f07-8cbe-d4c6a973deba,b478ce83-e04e-47e7-ba90-56345da9f3ea,monday,Closed,hours
+8ae2ac37-0335-4106-b76e-8b8a46282257,b478ce83-e04e-47e7-ba90-56345da9f3ea,tuesday,Closed,hours
+9a659f61-4fe0-471a-ba68-2ad93c422cba,b478ce83-e04e-47e7-ba90-56345da9f3ea,thursday,7pm organised run,entertain
+1c83e738-46b2-414f-8a76-b42b79a75204,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,monday,Check website listings,music
+98d34669-8140-432e-bad6-9cc1e99cc5ae,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,tuesday,Check website listings,music
+aefc7db2-fb15-4bcf-ab64-2c54054dc64f,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,wednesday,Check website listings,music
+bdc56b55-3c53-4d15-a532-aa67459b7f96,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,thursday,Check website listings,music
+3f97e4c9-d2fd-4702-8402-6cd5269a3316,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,friday,Check website listings,music
+c96f9f65-e72b-458b-832d-081f82a17877,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,saturday,Check website listings,music
+9c7691a9-bd17-4d95-a000-915c30f29e63,7e4125a6-b943-4bc7-a8dd-dc3a3127c2b6,sunday,Check website listings,music
+551b4927-547f-48ff-8458-2dbdc64d569e,610d6a7a-b922-4a4a-9302-6cdd869ce4f5,saturday,Live bands,music
+287e46ec-4a35-4fbe-9e83-c832d9f8b31d,610d6a7a-b922-4a4a-9302-6cdd869ce4f5,sunday,Live bands,music
+9267689a-59ef-40b9-bbfa-6990c6faead3,4f74f192-299e-4ef7-a3ca-28afb731cba9,wednesday,Check website listings,music
+75453726-18cb-458b-aa8b-41da82e20b86,4f74f192-299e-4ef7-a3ca-28afb731cba9,friday,Check website listings,music
+ccac7a61-6278-4d8e-9e2e-40ecb90ee6c2,4f74f192-299e-4ef7-a3ca-28afb731cba9,saturday,Check website listings,music
+a47337be-261f-41b0-a88a-02c95665db8b,4f74f192-299e-4ef7-a3ca-28afb731cba9,sunday,Check website listings,music
+50ee604c-9880-4fd7-b4b3-e0f202f52c33,66734d9a-3068-45b3-bf5a-b81cc4fc86fd,monday,Closed,hours
+98a5dca8-0b21-42d4-8141-edf649738a1c,66734d9a-3068-45b3-bf5a-b81cc4fc86fd,wednesday,Live jazz 1st/2nd of the month,music
+892f3439-31fd-4d10-9fc7-a28e0827a0bb,66734d9a-3068-45b3-bf5a-b81cc4fc86fd,thursday,Comedy 3rd of the month,comedy
+d47384b5-870c-4edb-bb04-109123c073b5,2961456c-0454-4a85-b613-d6c0700420dc,wednesday,Quiz night,quiz
+3ffeaf38-a912-4e3b-95f6-2f498be3c72a,2961456c-0454-4a85-b613-d6c0700420dc,saturday,Live music,music
+7fd69bed-b4ed-4e68-81bf-b38fffe6b761,8b68d62c-c5c2-4250-82f8-35422d176fcd,thursday,6.30pm live jazz,music
+b14ac42b-e9ef-43d5-9b31-da00337cf021,8b68d62c-c5c2-4250-82f8-35422d176fcd,saturday,Wine tours,entertain
+e8dedc4a-bac7-498e-8e90-fe5ba569dd6a,8ae5f684-6633-4825-8780-ddc00c5af109,tuesday,8pm quiz,quiz
+f546ce2a-f092-4a30-be48-5e47e8dab7a4,8ae5f684-6633-4825-8780-ddc00c5af109,thursday,Open mic: 1st of the month,comedy
+16bb2f31-ccf3-4ea6-a9ef-29453cfc0d96,8ae5f684-6633-4825-8780-ddc00c5af109,friday,7.30pm piano singalong,music
+7f8735a5-7c88-4ce1-a6c3-203e537e576f,cb8b3078-6cff-48dc-a629-5b562730874c,wednesday,Check website listings,music
+41d0573f-ac7e-4c96-b1f9-6fc4015b0016,cb8b3078-6cff-48dc-a629-5b562730874c,thursday,Check website listings,music
+dde52b20-2685-4ca2-99b6-012ff5f39cdd,cb8b3078-6cff-48dc-a629-5b562730874c,friday,Check website listings,music
+2e67300f-e71a-47bb-a065-ee17c9dab936,cb8b3078-6cff-48dc-a629-5b562730874c,saturday,Check website listings,music
+5086e253-d52b-4039-8233-8d7273ac5071,ef34d8b4-86aa-4b8b-bf5e-e00b75b6df86,wednesday,Check website listings,music
+8545f6f4-fdc6-4452-bf64-e385b8119e19,ef34d8b4-86aa-4b8b-bf5e-e00b75b6df86,thursday,Check website listings,music
+74057d0f-0b77-4b35-913f-9f0c23930da8,ef34d8b4-86aa-4b8b-bf5e-e00b75b6df86,friday,Check website listings,music
+edd4bd05-75da-4d0e-b86a-4e45bb78e795,ef34d8b4-86aa-4b8b-bf5e-e00b75b6df86,saturday,Check website listings,music
+8e163b68-8adc-4c13-91f0-23200c09d90c,33ed0695-3eaa-46b5-9edf-29531eb2952d,wednesday,Live heavy metal,music
+92b40716-eb32-4cdd-bdf4-02cdcddefee0,33ed0695-3eaa-46b5-9edf-29531eb2952d,thursday,Live heavy metal,music
+ed6f709d-7590-47b6-a97a-7244d7b8550f,33ed0695-3eaa-46b5-9edf-29531eb2952d,friday,Live heavy metal,music
+c85b7491-746e-4532-8606-1169bc6acaa4,33ed0695-3eaa-46b5-9edf-29531eb2952d,saturday,Live heavy metal,music
+fc6a4fad-067d-4bf9-b5cb-ff777a621dcd,b6b8e759-b519-43ee-9bdc-bebaa7bef1c8,monday,Quiz night,quiz
+84fb6960-6b2a-43fb-8f96-5d20b1df9147,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,monday,Cabaret,comedy
+aed84d89-fbd3-4879-8140-b96fcff22d8a,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,tuesday,Cabaret,comedy
+88b3ccff-ecb4-4344-b25d-660249f90c63,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,wednesday,Cabaret,comedy
+92214cd8-e929-4884-bf8c-2873920b05d1,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,thursday,Cabaret,comedy
+f9918f39-0d44-4cc8-9b03-4c0081bb817a,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,friday,Cabaret,comedy
+f84e0268-5ff3-4215-bdd2-c2c5496187bd,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,saturday,Cabaret,comedy
+28df0ae1-448e-4a97-a0ef-f1b1d1707ee8,5c5aa314-0ef0-4a92-9aa2-45e89bcd7f0c,sunday,Cabaret,comedy
+708e45a1-a7d1-4cb0-8868-2fb9b1a36da2,065b0d8b-4522-4144-a0ce-31f77280b102,saturday,Closed,hours
+ce56f105-cd67-4e8d-a6a5-38cc9cccc4cf,065b0d8b-4522-4144-a0ce-31f77280b102,sunday,Closed,hours
+b7f2bb30-5bb0-4046-8d95-dc645d4905b2,d2350898-7a77-410e-923b-968c3f064308,tuesday,Live music,music
+f972e468-43f7-4a59-aa03-5559d340abf9,d2350898-7a77-410e-923b-968c3f064308,wednesday,Live music,music
+b4062e70-f853-4102-8f22-8a59d37ab594,d2350898-7a77-410e-923b-968c3f064308,thursday,Live music,music
+fc1ecaef-7b52-4d81-bed1-d2aa613c7b58,d2350898-7a77-410e-923b-968c3f064308,friday,Live music,music
+395b58ab-5f0a-43aa-9a67-ef0f11aca615,d2350898-7a77-410e-923b-968c3f064308,saturday,Live music,music
+0c34bcfb-4971-4c3a-a20d-1a354b6b4770,d2350898-7a77-410e-923b-968c3f064308,sunday,Live music,music
+9c33f9b7-708a-4176-bd30-6f2d00e9bd76,88381d99-0c02-4f4a-bbd9-d0b2020e464f,saturday,7pm traditional Irish,music
+b91c48ab-18fa-4062-8b85-92f672597d4a,1524dcfa-ec35-4518-8373-45b6a1d702c8,monday,Closed,hours
+ff482dc4-95d8-4ec8-8cd9-3e569b2ac571,1524dcfa-ec35-4518-8373-45b6a1d702c8,tuesday,Live music,music
+df0f0be4-5088-407d-b19e-201931decacd,1524dcfa-ec35-4518-8373-45b6a1d702c8,wednesday,Live music,music
+05260862-061e-4f70-acb2-5c1becd58e9b,1524dcfa-ec35-4518-8373-45b6a1d702c8,thursday,Live music,music
+a487d2d6-32a1-42cc-98f6-bd48a2c650c8,1524dcfa-ec35-4518-8373-45b6a1d702c8,friday,Live music,music
+c4b1b7cf-be92-43b3-8703-891184d6a438,1524dcfa-ec35-4518-8373-45b6a1d702c8,saturday,DJ,dj
+a8c977df-de5e-4b85-9ec4-440300adad31,1524dcfa-ec35-4518-8373-45b6a1d702c8,sunday,Live jazz,music
+38616238-08b2-4ec2-98d1-e04be77ef76e,d98ef0a2-0fc2-4c9a-8a9c-852e306358c0,monday,Live piano player,music
+372490ea-b45b-48f4-9e67-5496d8278e25,d98ef0a2-0fc2-4c9a-8a9c-852e306358c0,sunday,Closed,hours
+49edb7b5-3327-4d16-bd34-ffe800f47b3d,fdfe103a-06d9-4636-b498-a9d698bfe538,monday,Check website/facebook listings,music
+baedd409-c9fb-44e5-8bee-51125beebf88,fdfe103a-06d9-4636-b498-a9d698bfe538,tuesday,Check website/facebook listings,music
+4cfd6d40-486d-43e0-a786-d36dbd327118,fdfe103a-06d9-4636-b498-a9d698bfe538,wednesday,Check website/facebook listings,music
+78a684dc-7e03-4c3b-b6ba-b7c9021f2dd0,fdfe103a-06d9-4636-b498-a9d698bfe538,thursday,Check website/facebook listings,music
+50d453a8-890e-4bcc-9271-3c4f215c87d5,fdfe103a-06d9-4636-b498-a9d698bfe538,friday,Check website/facebook listings,music
+19dda87f-2bca-4dee-a001-fd4060653303,fdfe103a-06d9-4636-b498-a9d698bfe538,saturday,Check website/facebook listings,music
+aa003338-6b9b-4ad5-a243-c9ad5cefd012,fdfe103a-06d9-4636-b498-a9d698bfe538,sunday,Check website/facebook listings,music
+1abb594c-af12-4853-9673-55303134c5e9,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,monday,Check Instagram listings,music
+29b06298-a0a6-45a9-88d9-40ec926f79ea,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,tuesday,Check Instagram listings,music
+d4cac79b-d559-4d6b-ac0c-addc87bd7c8a,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,wednesday,Check Instagram listings,music
+e6a23d1d-1654-4fba-9d14-a196983ed496,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,thursday,Check Instagram listings,music
+8c5d57ee-c571-4e55-8906-4eb998ecc477,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,friday,Check Instagram listings,music
+0ab68f29-c0b3-441c-926d-ac12a398240e,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,saturday,Check Instagram listings,music
+20a3a3df-a557-414d-aab3-4fa2e3dbef03,a8467bfa-1f5e-482c-96d3-0e2206aa81c2,sunday,Check Instagram listings,music
+ee46f90e-fb5d-491f-87b6-306c4e60095e,f2b74a89-ca18-4500-adf6-80d04d21fc35,sunday,Live jazz last of the month,music
+0f399132-2cce-4751-8e1b-7a82f6885971,83573cce-0fe4-4200-8119-aa22f0657622,tuesday,Check website listings,music
+6af1a9cc-09a7-493b-849d-f4307d6e2450,83573cce-0fe4-4200-8119-aa22f0657622,wednesday,Check website listings,music
+e3bf7e87-89d4-47a6-8c68-135877e23d13,83573cce-0fe4-4200-8119-aa22f0657622,thursday,Check website listings,music
+d0fa8bec-cc2d-4291-aab2-06972c3d7014,83573cce-0fe4-4200-8119-aa22f0657622,friday,Check website listings,music
+b2b90b1d-3cef-4ec3-bf18-d7ec91904dde,83573cce-0fe4-4200-8119-aa22f0657622,saturday,Check website listings,music
+db0d4291-0e74-47f4-85ed-456348d8f2a6,83573cce-0fe4-4200-8119-aa22f0657622,sunday,Check website listings,music
+8a65a001-1e1f-42a2-988f-303905a7a8ca,64a3a706-c4b2-4a1c-81fe-278ddc1fb014,monday,Closed,hours
+46f2d884-bf10-4a36-9605-119cb8892785,64a3a706-c4b2-4a1c-81fe-278ddc1fb014,saturday,DJs,dj
+2b990ec1-bbcd-46e1-849d-2976afadadb2,bd3e47c7-f76a-4998-9bbd-167e68d1ee42,monday,Live music,music
+56efa275-c297-4d3d-8383-2a17f6ee8147,bd3e47c7-f76a-4998-9bbd-167e68d1ee42,tuesday,Jazz club,music
+77b475bb-4fd0-4123-abb0-500251bf573c,bd3e47c7-f76a-4998-9bbd-167e68d1ee42,wednesday,Live music,music
+d5afbca6-ac5b-4005-be0e-9042b54b0d31,bd3e47c7-f76a-4998-9bbd-167e68d1ee42,thursday,DJ sets,dj
+05f4037c-933f-4ddf-8a8f-3926ce3cd6ab,bd3e47c7-f76a-4998-9bbd-167e68d1ee42,friday,DJ sets,dj
+507996b4-8953-4860-bedd-8e598a9b6e53,bd3e47c7-f76a-4998-9bbd-167e68d1ee42,saturday,DJ sets,dj
+8a9e312b-319e-46e9-8db8-f73f51a28935,0af16bd1-8915-44cd-bf76-4dea000d478f,saturday,Live music,music
+b6fc9192-9d51-4943-8971-a8d92028dfb3,0af16bd1-8915-44cd-bf76-4dea000d478f,sunday,Live music,music
+56a9c734-6080-46c2-965b-0fe80e4d74af,39be1804-889f-4c3a-8941-a8d050a75d21,monday,Closed,hours
+9a4651db-5f37-4f9a-93a0-6c5c9f77d055,39be1804-889f-4c3a-8941-a8d050a75d21,tuesday,Live piano,music
+27acd7cd-0234-4abf-b27d-cff73495982b,39be1804-889f-4c3a-8941-a8d050a75d21,wednesday,Live piano,music
+d5af7193-c688-4f0d-9c55-bf2476d163d8,39be1804-889f-4c3a-8941-a8d050a75d21,thursday,Live piano,music
+dff7c942-9beb-440b-9793-d089ca6737fe,39be1804-889f-4c3a-8941-a8d050a75d21,friday,Live piano,music
+e668fb56-72b4-4013-a09c-2c0ec1a82eb8,39be1804-889f-4c3a-8941-a8d050a75d21,saturday,Live piano,music
+89c9f6f9-5fff-4533-b6b4-775bb861121d,39be1804-889f-4c3a-8941-a8d050a75d21,sunday,Closed,hours
+54c1db59-ae05-4ef5-affe-2e217fe1c113,1b258b22-a853-4d64-947e-5ef4ade978be,wednesday,Quiz night,quiz
+f8599be5-fa8e-4ea5-9d25-2c49d714d20f,1b258b22-a853-4d64-947e-5ef4ade978be,friday,DJ set,dj
+53477d42-640d-4071-b802-2860d7183297,1b258b22-a853-4d64-947e-5ef4ade978be,saturday,Music quiz,quiz
+d354626d-3db3-47aa-bca5-9de68bb686e4,1b258b22-a853-4d64-947e-5ef4ade978be,sunday,Quiz night,quiz
+f5c146e4-e3bb-4bc2-b56a-643e5ec4ae2d,476cd8fd-ed9d-4192-b358-8078e492f39d,monday,Comedy,comedy
+a36e7cdc-3d61-4e41-9262-aa241669e8c4,476cd8fd-ed9d-4192-b358-8078e492f39d,sunday,Closed,hours
+eb7472f0-4903-4add-8c96-f5b540f54bb6,9a33073f-7e0f-42d8-95cc-8a24dbcbeb78,monday,Closed,hours
+25969eeb-67d6-4eac-ad8c-40d4fe89a859,9a33073f-7e0f-42d8-95cc-8a24dbcbeb78,tuesday,Closed,hours
+ae1fd270-8b48-41fe-bb71-affd4777cc04,9a33073f-7e0f-42d8-95cc-8a24dbcbeb78,saturday,Closed,hours
+adeb022a-9bfd-4417-962d-4489ae6efd01,9a33073f-7e0f-42d8-95cc-8a24dbcbeb78,sunday,Closed,hours
+761d8301-17a6-4209-b207-08db89c95262,a6051ad8-fefb-4d7e-925f-13cdcb16b73b,thursday,Check Facebook listings,music
+6a741221-a876-4167-b91b-4198eefe32e6,a6051ad8-fefb-4d7e-925f-13cdcb16b73b,friday,Check Facebook listings,music
+11b99ba6-57c4-4058-9ed0-4e531152d1bd,a6051ad8-fefb-4d7e-925f-13cdcb16b73b,saturday,Check Facebook listings,music
+b1b8a6e6-8c09-4575-a7d5-531377edbd3d,a28b9b6b-b92c-491c-b241-269104e4b20c,tuesday,Open mic,comedy
+4c2d9797-99df-4022-a39b-992be487dc84,a28b9b6b-b92c-491c-b241-269104e4b20c,thursday,Cabaret,comedy
+9726e457-1661-45ae-be62-f971d3296fe1,74b09557-7f64-4357-b20b-70869e7bb253,sunday,Live music,music
+69ab6c3b-561f-4640-bb27-f91e1758f4ea,ab382c1c-2aab-44fe-9f71-7a0aa26aed92,thursday,Live jazz,music
+3a20c60d-25dc-4490-89fd-a9db587ddb2d,ab382c1c-2aab-44fe-9f71-7a0aa26aed92,friday,Live jazz,music
+c03a522a-0444-487c-8543-dcde33e444e3,ab382c1c-2aab-44fe-9f71-7a0aa26aed92,saturday,Live jazz,music
+3de62cc9-a4bf-454c-b50c-34b4faf35fb0,b6522c7f-4f5c-4cfc-96e0-30a47fd15619,monday,Comedy,comedy
+13ba99d7-afac-4419-9a56-a71180c3bec8,f7ede4d2-d0a3-43eb-85be-c35ea589ea7f,monday,Closed,hours
+7bdde522-0d2f-4ba9-8944-0f7bfc92fcb1,e8387257-4edb-4cfe-b436-7c4e8b0d943e,tuesday,8pm quiz,quiz
+6d9688a6-7611-4ae4-991b-0126667d6c1c,79f92411-242e-40aa-b430-fa3c414c3e67,monday,Closed,hours
+1568bd46-fe38-4854-8c67-f3022f62d0ff,79f92411-242e-40aa-b430-fa3c414c3e67,tuesday,Live music,music
+46124565-e856-4e78-ace9-4717a71d3385,79f92411-242e-40aa-b430-fa3c414c3e67,wednesday,Live jazz,music
+e0b21944-d97a-42b1-bbe7-2770b9fd6940,79f92411-242e-40aa-b430-fa3c414c3e67,thursday,Live music,music
+5899c140-2515-467a-be7a-00cc3e056065,79f92411-242e-40aa-b430-fa3c414c3e67,friday,Live music,music
+69ea2479-e6fb-49ee-a806-acbc288ef65b,79f92411-242e-40aa-b430-fa3c414c3e67,saturday,Live music,music
+1c07db6e-01d1-4cf8-975b-8911fab02ef6,79f92411-242e-40aa-b430-fa3c414c3e67,sunday,Live music,music
+41ccfd19-49dc-4816-8d64-7a1cdf7cce64,56d385be-abf8-4bf1-9afd-8c57441333c7,saturday,Live music,music
