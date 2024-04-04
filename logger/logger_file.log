@@ -1027,3 +1027,21 @@ simpleLogger - INFO - 2024-03-18 13:39:17.060819 : home page OPEN
 simpleLogger - INFO - 2024-03-18 13:39:17.580710 : 0:00:00.519765 : home page LOADED
 simpleLogger - INFO - 2024-03-18 13:39:34.965853 : home page OPEN
 simpleLogger - INFO - 2024-03-18 13:39:37.582288 : 0:00:02.616313 : home page LOADED
+simpleLogger - INFO - 2024-04-03 14:37:09.428115 : home page OPEN
+simpleLogger - ERROR - 2024-04-03 14:37:11.839767 : 0:00:02.411645 : Required parameter name not set
+Traceback (most recent call last):
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/views/pp_02_home.py", line 150, in home
+    daily_id = FilesDaily().go_get_details_daily(df_detail_all)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/static/pythonscripts/files_daily.py", line 22, in go_get_details_daily
+    df_details_day = S3().s3_read('featured', attribute_list)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andycarter/develop/pycharm/flask_projects/thepubpicker/app/static/pythonscripts/s3.py", line 50, in s3_read
+    my_bucket = s3.Bucket(env_vars['bucket_name'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/boto3/resources/factory.py", line 527, in create_resource
+    return partial(
+           ^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/boto3/resources/base.py", line 125, in __init__
+    raise ValueError(f'Required parameter {identifier} not set')
+ValueError: Required parameter name not set
