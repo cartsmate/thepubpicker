@@ -1,9 +1,11 @@
+import os
 import time
 import psycopg2
 import pandas as pd
 from threading import Thread, Lock, current_thread
-from sqlalchemy import create_engine
-from sqlalchemy.engine import URL
+# from sqlalchemy import create_engine
+# from boto.s3.connection import S3Connection
+# from sqlalchemy.engine import URL
 from app.static.pythonscripts.files_pub import FilesPub
 from queue import Queue
 
@@ -13,36 +15,44 @@ class MultiThreadingPub:
     # # # # # # # # # # # # # # # # # # # # # # #
     # # # Threading with database queries # # #
     # # # # # # # # # # # # # # # # # # # # #
+    # db_name = S3Connection(os.environ['DB_NAME'])
+    # db_user = S3Connection(os.environ['DB_USER'])
+    # db_password = S3Connection(os.environ['DB_PASSWORD'])
+    # db_host = S3Connection(os.environ['DB_HOST'])
+
+    db_name = os.environ['DB_NAME']
+    db_user = os.environ['DB_USER']
+    db_password = os.environ['DB_PASSWORD']
+    db_host = os.environ['DB_HOST']
+
     def __init__(self):
         self.db_conn = psycopg2.connect(
-                database="deb2u2ehdm8ih3",
-                user="bjoonismanuyqb",
-                password="42c662ab36a741716575f3e0101741349280622fff71ce246b15410de5c460d6",
-                host="ec2-54-76-132-202.eu-west-1.compute.amazonaws.com",
+                database=self.db_name,
+                user=self.db_user,
+                password=self.db_password,
+                host=self.db_host,
                 port='5432'
             )
-        self.url = URL.create(
-                drivername='postgresql',
-                database="deb2u2ehdm8ih3",
-                username="bjoonismanuyqb",
-                password="42c662ab36a741716575f3e0101741349280622fff71ce246b15410de5c460d6",
-                host="ec2-54-76-132-202.eu-west-1.compute.amazonaws.com",
-                port=5432
-                )
+        # self.url = URL.create(
+        #         drivername='',
+        #         database="",
+        #         username="",
+        #         password="",
+        #         host="",
+        #         port=5432
+        #         )
 
-    def df_query_1(self):
-        engine = create_engine(self.url)
-        sql_str = """select * from thepubpicker.detail d limit 10"""
-        df = pd.read_sql_query(sql_str, con=engine)
-        # df_alchemy = pd.DataFrame(engine.connect().execute(text(sql_str)))
-        print(df)
+    # def df_query_1(self):
+    #     engine = create_engine(self.url)
+    #     sql_str = """select * from thepubpicker.detail d limit 10"""
+    #     df = pd.read_sql_query(sql_str, con=engine)
+    #     print(df)
 
-    def df_query_2(self):
-        engine = create_engine(self.url)
-        sql_str = """select * from thepubpicker.review r limit 10"""
-        df = pd.read_sql_query(sql_str, con=engine)
-        # df_alchemy = pd.DataFrame(engine.connect().execute(text(sql_str)))
-        print(df)
+    # def df_query_2(self):
+    #     engine = create_engine(self.url)
+    #     sql_str = """select * from thepubpicker.review r limit 10"""
+    #     df = pd.read_sql_query(sql_str, con=engine)
+    #     print(df)
 
     def query_pub_record(self):
         curs_obj = self.db_conn.cursor()
@@ -109,7 +119,6 @@ class MultiThreadingPub:
         result = curs_obj.fetchall()
         global df_diary
         df_diary = pd.DataFrame(result, columns=table_headers)
-
 
     def query_station(self):
         curs_obj = self.db_conn.cursor()

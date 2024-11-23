@@ -23,7 +23,7 @@ def submit():
     df_event_all = GetPub().get_all(DailyEvent())
 
     # # # CHECK IF NEW OR EXITING PUB RECORD
-    if GetPub().get_1(Detail(), pub_id).empty:
+    if GetPub().get_1(df_detail_all, pub_id).empty:
         # # NEW PUB - ADD ROW TO DATAFRAME
         PubSubmit.add_pub(df_detail_all, df_review_all)
     else:
